@@ -1,0 +1,11 @@
+{
+    "0": {
+        "name": "setMem",
+        "file": "core.cpp",
+        "fileloc": "31",
+        "instructions": "36",
+        "total_instructions": "36",
+        "calls": "",
+        "basicblocks": "1"
+    }
+}

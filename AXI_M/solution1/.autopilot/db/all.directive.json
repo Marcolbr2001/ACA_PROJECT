@@ -1,0 +1,44 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "setMem",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "setMem"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "setMem",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "setMem"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/csynth.tcl",
+    "sourceLine": 16,
+    "success": true
+  }
+]

@@ -1,0 +1,4 @@
+AXI_M/core.cpp:37:58: warning: unexpected pragma parameter 'depth' [-Winvalid-hls-pragmas]
+#pragma HLS INTERFACE mode = s_axilite port = op depth = 1
+                                                         ^
+1 warning generated.

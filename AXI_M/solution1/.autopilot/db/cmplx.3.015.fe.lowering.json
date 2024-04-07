@@ -1,0 +1,14 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 31,
+    "instructions": 25,
+    "loads": {
+      "T": 1
+    },
+    "name": "setMem",
+    "total_instructions": 25
+  }
+}

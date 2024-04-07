@@ -1,0 +1,8 @@
+set SynModuleInfo {
+  {SRCNAME setMem MODELNAME setMem RTLNAME setMem IS_TOP 1
+    SUBMODULES {
+      {MODELNAME setMem_gmem_m_axi RTLNAME setMem_gmem_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
+      {MODELNAME setMem_control_s_axi RTLNAME setMem_control_s_axi BINDTYPE interface TYPE interface_s_axilite}
+    }
+  }
+}

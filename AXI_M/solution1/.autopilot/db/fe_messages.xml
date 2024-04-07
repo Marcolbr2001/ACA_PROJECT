@@ -1,0 +1,24 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5565" msg_severity="WARNING" msg_loc="AXI_M/core.cpp:37:58" msg_body="unexpected pragma parameter 'depth'">
+        <args ClangWarningOption="invalid-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/csynth.tcl:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="setMem" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=setMem" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="setMem" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=setMem" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AXI_M/core.cpp:33:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="setMem" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port = a depth = 1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AXI_M/core.cpp:34:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="setMem" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port = b depth = 1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AXI_M/core.cpp:35:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="setMem" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port = c depth = 1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AXI_M/core.cpp:37:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="setMem" ARG_PragmaIsValid="0" ARG_PragmaOptions="mode = s_axilite port = op depth = 1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

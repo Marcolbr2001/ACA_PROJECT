@@ -1,0 +1,23 @@
+<dict>
+  <key>main-file</key>
+  <string>C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/.autopilot/db/core.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>AXI_M/core.cpp</string>
+      <key>line</key>
+      <integer>37</integer>
+      <key>column</key>
+      <integer>58</integer>
+      <key>message</key>
+      <string>unexpected pragma parameter &apos;depth&apos;</string>
+      <key>ID</key>
+      <integer>5565</integer>
+      <key>WarningOption</key>
+      <string>invalid-hls-pragmas</string>
+    </dict>
+  </array>
+</dict>
