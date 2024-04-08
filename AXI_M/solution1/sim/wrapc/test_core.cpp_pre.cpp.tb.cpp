@@ -945,15 +945,7 @@ extern "C" {
 
 
 # 18 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/test_core.cpp"
-
-#ifndef HLS_FASTSIM
-#ifdef __cplusplus
-extern "C"
-#endif
-void apatb_setMem_sw(volatile int *, volatile int *, volatile int *, volatile int *);
-#endif
-# 18 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/test_core.cpp"
-void setMem(volatile int* a, volatile int* b, volatile int* c, volatile int* op);
+void setMem(volatile int* a, volatile int* b, volatile int* c, int op);
 
 
 #ifndef HLS_FASTSIM
@@ -989,15 +981,7 @@ int main() {
 
 
 
-    
-#ifndef HLS_FASTSIM
-#define setMem apatb_setMem_sw
-#endif
-# 51 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/test_core.cpp"
-setMem(A, B, C, OP);
-#undef setMem
-# 51 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/test_core.cpp"
-
+    setMem(A, B, C, OP);
 
 
 

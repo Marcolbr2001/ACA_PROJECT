@@ -9,7 +9,6 @@
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/core.cpp"
-# 28 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/core.cpp"
 # 1 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/stdio.h" 1 3
 # 10 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/stdio.h" 3
 # 1 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/crtdefs.h" 1 3
@@ -941,7 +940,7 @@ extern "C" {
 
 # 1 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/_mingw_print_pop.h" 1 3
 # 1038 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/stdio.h" 2 3
-# 29 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/core.cpp" 2
+# 2 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/core.cpp" 2
 # 1 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/string.h" 1 3
 # 22 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/string.h" 3
 extern "C" {
@@ -1157,17 +1156,22 @@ extern "C" {
 
 }
 # 192 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/string.h" 2 3
-# 30 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/core.cpp" 2
+# 3 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/core.cpp" 2
 
 
-# 31 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/core.cpp"
-void setMem(volatile int* a, volatile int* b, volatile int* c, volatile int* op) {
+# 4 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/core.cpp"
+void setMem(volatile int* a, volatile int* b, volatile int* c, int op) {
 
-#pragma HLS INTERFACE m_axi port = a bundle = gmem0 depth = 1
-#pragma HLS INTERFACE m_axi port = b bundle = gmem1 depth = 1
-#pragma HLS INTERFACE m_axi port = c bundle = gmem2 depth = 1
+#pragma HLS INTERFACE mode=s_axilite bundle=control port=op
+#pragma HLS INTERFACE mode=s_axilite bundle=control port=a
+#pragma HLS INTERFACE mode=s_axilite bundle=control port=b
+#pragma HLS INTERFACE mode=s_axilite bundle=control port=c
 
-#pragma HLS INTERFACE s_axilite port = op bundle = operation depth = 1
+#pragma HLS INTERFACE mode=s_axilite bundle=control port=return
+
+#pragma HLS INTERFACE mode=m_axi port = a bundle = gmem0 depth = 1 offset=slave
+#pragma HLS INTERFACE mode=m_axi port = b bundle = gmem1 depth = 1 offset=slave
+#pragma HLS INTERFACE mode=m_axi port = c bundle = gmem2 depth = 1 offset=slave
 
 
     int i;
@@ -1209,11 +1213,11 @@ void setMem(volatile int* a, volatile int* b, volatile int* c, volatile int* op)
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_setMem_ir(volatile int *, volatile int *, volatile int *, volatile int *);
+void apatb_setMem_ir(volatile int *, volatile int *, volatile int *, int);
 #ifdef __cplusplus
 extern "C"
 #endif
-void setMem_hw_stub(volatile int *a, volatile int *b, volatile int *c, volatile int *op){
+void setMem_hw_stub(volatile int *a, volatile int *b, volatile int *c, int op){
 setMem(a, b, c, op);
 return ;
 }
@@ -1224,11 +1228,11 @@ void refine_signal_handler();
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_setMem_sw(volatile int *a, volatile int *b, volatile int *c, volatile int *op){
+void apatb_setMem_sw(volatile int *a, volatile int *b, volatile int *c, int op){
 refine_signal_handler();
 apatb_setMem_ir(a, b, c, op);
 return ;
 }
 #endif
-# 74 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/core.cpp"
+# 52 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/core.cpp"
 

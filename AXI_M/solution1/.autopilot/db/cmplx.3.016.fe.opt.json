@@ -3,8 +3,8 @@
     "basicblocks": 1,
     "calls": "",
     "file": "core.cpp",
-    "fileloc": 31,
-    "instructions": 30,
+    "fileloc": 4,
+    "instructions": 35,
     "loads": {
       "T": 3
     },
@@ -12,6 +12,6 @@
     "stores": {
       "T": 1
     },
-    "total_instructions": 30
+    "total_instructions": 35
   }
 }

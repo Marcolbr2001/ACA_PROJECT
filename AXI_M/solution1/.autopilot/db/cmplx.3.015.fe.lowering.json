@@ -3,12 +3,9 @@
     "basicblocks": 1,
     "calls": "",
     "file": "core.cpp",
-    "fileloc": 31,
-    "instructions": 29,
-    "loads": {
-      "T": 1
-    },
+    "fileloc": 4,
+    "instructions": 34,
     "name": "setMem",
-    "total_instructions": 29
+    "total_instructions": 34
   }
 }

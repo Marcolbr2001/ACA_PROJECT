@@ -9,15 +9,15 @@
       <key>filename</key>
       <string>AXI_M/core.cpp</string>
       <key>line</key>
-      <integer>37</integer>
+      <integer>34</integer>
       <key>column</key>
-      <integer>70</integer>
+      <integer>19</integer>
       <key>message</key>
-      <string>unexpected pragma parameter &apos;depth&apos;</string>
+      <string>cast to &apos;const int *&apos; from smaller integer type &apos;int&apos;</string>
       <key>ID</key>
-      <integer>5565</integer>
+      <integer>4934</integer>
       <key>WarningOption</key>
-      <string>invalid-hls-pragmas</string>
+      <string>int-to-pointer-cast</string>
     </dict>
   </array>
 </dict>

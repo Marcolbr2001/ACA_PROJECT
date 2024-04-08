@@ -1038,10 +1038,10 @@ namespace hls::sim
 
 
 extern "C"
-void setMem_hw_stub_wrapper(void*, void*, void*, void*);
+void setMem_hw_stub_wrapper(void*, void*, void*, hls::sim::Byte<4>);
 
 extern "C"
-void apatb_setMem_hw(void* __xlx_apatb_param_a, void* __xlx_apatb_param_b, void* __xlx_apatb_param_c, void* __xlx_apatb_param_op)
+void apatb_setMem_hw(void* __xlx_apatb_param_a, void* __xlx_apatb_param_b, void* __xlx_apatb_param_c, hls::sim::Byte<4> __xlx_apatb_param_op)
 {
   hls::sim::Byte<4> __xlx_offset_byte_param_a;
   static hls::sim::Register port0 {
@@ -1088,7 +1088,7 @@ void apatb_setMem_hw(void* __xlx_apatb_param_a, void* __xlx_apatb_param_b, void*
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_op),
 #endif
   };
-  port3.param = __xlx_apatb_param_op;
+  port3.param = &__xlx_apatb_param_op;
 
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port4 {
     .width = 32,
@@ -1096,15 +1096,16 @@ void apatb_setMem_hw(void* __xlx_apatb_param_a, void* __xlx_apatb_param_b, void*
     .hbm = false,
     .name = { "gmem0" },
 #ifdef POST_CHECK
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_gmem0),
 #else
-    .owriter = nullptr,
+    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_gmem0),
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_gmem0),
 #endif
   };
   port4.param = { __xlx_apatb_param_a };
   port4.nbytes = { 4 };
   port4.offset = {  };
-  port4.hasWrite = { false };
+  port4.hasWrite = { true };
 
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port5 {
     .width = 32,
@@ -1112,15 +1113,16 @@ void apatb_setMem_hw(void* __xlx_apatb_param_a, void* __xlx_apatb_param_b, void*
     .hbm = false,
     .name = { "gmem1" },
 #ifdef POST_CHECK
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_gmem1),
 #else
-    .owriter = nullptr,
+    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_gmem1),
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_gmem1),
 #endif
   };
   port5.param = { __xlx_apatb_param_b };
   port5.nbytes = { 4 };
   port5.offset = {  };
-  port5.hasWrite = { false };
+  port5.hasWrite = { true };
 
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port6 {
     .width = 32,
@@ -1142,6 +1144,8 @@ void apatb_setMem_hw(void* __xlx_apatb_param_a, void* __xlx_apatb_param_b, void*
   try {
 #ifdef POST_CHECK
     CodeState = ENTER_WRAPC_PC;
+    check(port4);
+    check(port5);
     check(port6);
 #else
     static hls::sim::RefTCL tcl("../tv/cdatafile/ref.tcl");
@@ -1163,6 +1167,8 @@ void apatb_setMem_hw(void* __xlx_apatb_param_a, void* __xlx_apatb_param_b, void*
     CodeState = CALL_C_DUT;
     setMem_hw_stub_wrapper(__xlx_apatb_param_a, __xlx_apatb_param_b, __xlx_apatb_param_c, __xlx_apatb_param_op);
     CodeState = DUMP_OUTPUTS;
+    dump(port4, port4.owriter, tcl.AESL_transaction);
+    dump(port5, port5.owriter, tcl.AESL_transaction);
     dump(port6, port6.owriter, tcl.AESL_transaction);
     tcl.AESL_transaction++;
 #endif

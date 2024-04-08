@@ -26,6 +26,20 @@ c {
 	offset 40
 	offset_end 51
 }
+op { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 52
+	offset_end 59
+}
+ap_start { }
+ap_done { }
+ap_ready { }
+ap_idle { }
+interrupt {
+}
 }
 dict set axilite_register_dict control $port_control
 

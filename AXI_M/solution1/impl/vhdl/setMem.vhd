@@ -48,10 +48,6 @@ generic (
 port (
     ap_clk : IN STD_LOGIC;
     ap_rst_n : IN STD_LOGIC;
-    ap_start : IN STD_LOGIC;
-    ap_done : OUT STD_LOGIC;
-    ap_idle : OUT STD_LOGIC;
-    ap_ready : OUT STD_LOGIC;
     m_axi_gmem0_AWVALID : OUT STD_LOGIC;
     m_axi_gmem0_AWREADY : IN STD_LOGIC;
     m_axi_gmem0_AWADDR : OUT STD_LOGIC_VECTOR (C_M_AXI_GMEM0_ADDR_WIDTH-1 downto 0);
@@ -187,7 +183,6 @@ port (
     m_axi_gmem2_BRESP : IN STD_LOGIC_VECTOR (1 downto 0);
     m_axi_gmem2_BID : IN STD_LOGIC_VECTOR (C_M_AXI_GMEM2_ID_WIDTH-1 downto 0);
     m_axi_gmem2_BUSER : IN STD_LOGIC_VECTOR (C_M_AXI_GMEM2_BUSER_WIDTH-1 downto 0);
-    op : IN STD_LOGIC_VECTOR (31 downto 0);
     s_axi_control_AWVALID : IN STD_LOGIC;
     s_axi_control_AWREADY : OUT STD_LOGIC;
     s_axi_control_AWADDR : IN STD_LOGIC_VECTOR (C_S_AXI_CONTROL_ADDR_WIDTH-1 downto 0);
@@ -204,86 +199,102 @@ port (
     s_axi_control_RRESP : OUT STD_LOGIC_VECTOR (1 downto 0);
     s_axi_control_BVALID : OUT STD_LOGIC;
     s_axi_control_BREADY : IN STD_LOGIC;
-    s_axi_control_BRESP : OUT STD_LOGIC_VECTOR (1 downto 0) );
+    s_axi_control_BRESP : OUT STD_LOGIC_VECTOR (1 downto 0);
+    interrupt : OUT STD_LOGIC );
 end;
 
 
 architecture behav of setMem is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "setMem_setMem,hls_ip_2023_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=16,HLS_SYN_TPT=none,HLS_SYN_MEM=12,HLS_SYN_DSP=0,HLS_SYN_FF=3035,HLS_SYN_LUT=2929,HLS_VERSION=2023_2}";
+    "setMem_setMem,hls_ip_2023_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=17,HLS_SYN_TPT=none,HLS_SYN_MEM=12,HLS_SYN_DSP=0,HLS_SYN_FF=3142,HLS_SYN_LUT=3013,HLS_VERSION=2023_2}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
-    constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (16 downto 0) := "00000000000000001";
-    constant ap_ST_fsm_state2 : STD_LOGIC_VECTOR (16 downto 0) := "00000000000000010";
-    constant ap_ST_fsm_state3 : STD_LOGIC_VECTOR (16 downto 0) := "00000000000000100";
-    constant ap_ST_fsm_state4 : STD_LOGIC_VECTOR (16 downto 0) := "00000000000001000";
-    constant ap_ST_fsm_state5 : STD_LOGIC_VECTOR (16 downto 0) := "00000000000010000";
-    constant ap_ST_fsm_state6 : STD_LOGIC_VECTOR (16 downto 0) := "00000000000100000";
-    constant ap_ST_fsm_state7 : STD_LOGIC_VECTOR (16 downto 0) := "00000000001000000";
-    constant ap_ST_fsm_state8 : STD_LOGIC_VECTOR (16 downto 0) := "00000000010000000";
-    constant ap_ST_fsm_state9 : STD_LOGIC_VECTOR (16 downto 0) := "00000000100000000";
-    constant ap_ST_fsm_state10 : STD_LOGIC_VECTOR (16 downto 0) := "00000001000000000";
-    constant ap_ST_fsm_state11 : STD_LOGIC_VECTOR (16 downto 0) := "00000010000000000";
-    constant ap_ST_fsm_state12 : STD_LOGIC_VECTOR (16 downto 0) := "00000100000000000";
-    constant ap_ST_fsm_state13 : STD_LOGIC_VECTOR (16 downto 0) := "00001000000000000";
-    constant ap_ST_fsm_state14 : STD_LOGIC_VECTOR (16 downto 0) := "00010000000000000";
-    constant ap_ST_fsm_state15 : STD_LOGIC_VECTOR (16 downto 0) := "00100000000000000";
-    constant ap_ST_fsm_state16 : STD_LOGIC_VECTOR (16 downto 0) := "01000000000000000";
-    constant ap_ST_fsm_state17 : STD_LOGIC_VECTOR (16 downto 0) := "10000000000000000";
+    constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (17 downto 0) := "000000000000000001";
+    constant ap_ST_fsm_state2 : STD_LOGIC_VECTOR (17 downto 0) := "000000000000000010";
+    constant ap_ST_fsm_state3 : STD_LOGIC_VECTOR (17 downto 0) := "000000000000000100";
+    constant ap_ST_fsm_state4 : STD_LOGIC_VECTOR (17 downto 0) := "000000000000001000";
+    constant ap_ST_fsm_state5 : STD_LOGIC_VECTOR (17 downto 0) := "000000000000010000";
+    constant ap_ST_fsm_state6 : STD_LOGIC_VECTOR (17 downto 0) := "000000000000100000";
+    constant ap_ST_fsm_state7 : STD_LOGIC_VECTOR (17 downto 0) := "000000000001000000";
+    constant ap_ST_fsm_state8 : STD_LOGIC_VECTOR (17 downto 0) := "000000000010000000";
+    constant ap_ST_fsm_state9 : STD_LOGIC_VECTOR (17 downto 0) := "000000000100000000";
+    constant ap_ST_fsm_state10 : STD_LOGIC_VECTOR (17 downto 0) := "000000001000000000";
+    constant ap_ST_fsm_state11 : STD_LOGIC_VECTOR (17 downto 0) := "000000010000000000";
+    constant ap_ST_fsm_state12 : STD_LOGIC_VECTOR (17 downto 0) := "000000100000000000";
+    constant ap_ST_fsm_state13 : STD_LOGIC_VECTOR (17 downto 0) := "000001000000000000";
+    constant ap_ST_fsm_state14 : STD_LOGIC_VECTOR (17 downto 0) := "000010000000000000";
+    constant ap_ST_fsm_state15 : STD_LOGIC_VECTOR (17 downto 0) := "000100000000000000";
+    constant ap_ST_fsm_state16 : STD_LOGIC_VECTOR (17 downto 0) := "001000000000000000";
+    constant ap_ST_fsm_state17 : STD_LOGIC_VECTOR (17 downto 0) := "010000000000000000";
+    constant ap_ST_fsm_state18 : STD_LOGIC_VECTOR (17 downto 0) := "100000000000000000";
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     constant ap_const_boolean_1 : BOOLEAN := true;
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
     constant ap_const_lv32_9 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001001";
-    constant ap_const_lv32_B : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001011";
-    constant ap_const_lv32_10 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010000";
+    constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
     constant ap_const_lv32_A : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001010";
+    constant ap_const_lv32_C : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001100";
+    constant ap_const_lv32_11 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010001";
+    constant ap_const_lv32_B : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001011";
     constant C_S_AXI_DATA_WIDTH : INTEGER := 32;
     constant C_M_AXI_DATA_WIDTH : INTEGER := 32;
     constant ap_const_boolean_0 : BOOLEAN := false;
     constant ap_const_lv4_0 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
     constant ap_const_lv4_F : STD_LOGIC_VECTOR (3 downto 0) := "1111";
-    constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
     constant ap_const_lv32_3F : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000111111";
+    constant ap_const_lv32_1F : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011111";
     constant ap_const_lv64_0 : STD_LOGIC_VECTOR (63 downto 0) := "0000000000000000000000000000000000000000000000000000000000000000";
 
     signal ap_rst_n_inv : STD_LOGIC;
-    signal ap_CS_fsm : STD_LOGIC_VECTOR (16 downto 0) := "00000000000000001";
+    signal ap_start : STD_LOGIC;
+    signal ap_done : STD_LOGIC;
+    signal ap_idle : STD_LOGIC;
+    signal ap_CS_fsm : STD_LOGIC_VECTOR (17 downto 0) := "000000000000000001";
     attribute fsm_encoding : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
+    signal ap_ready : STD_LOGIC;
     signal a : STD_LOGIC_VECTOR (63 downto 0);
     signal b : STD_LOGIC_VECTOR (63 downto 0);
     signal c : STD_LOGIC_VECTOR (63 downto 0);
+    signal op : STD_LOGIC_VECTOR (31 downto 0);
     signal gmem0_blk_n_AR : STD_LOGIC;
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
     signal gmem0_blk_n_R : STD_LOGIC;
     signal ap_CS_fsm_state10 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state10 : signal is "none";
+    signal ap_CS_fsm_state3 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
+    signal ap_CS_fsm_state11 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state11 : signal is "none";
     signal gmem1_blk_n_AR : STD_LOGIC;
     signal gmem1_blk_n_R : STD_LOGIC;
     signal gmem2_blk_n_AW : STD_LOGIC;
     signal gmem2_blk_n_W : STD_LOGIC;
+    signal ap_CS_fsm_state13 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state13 : signal is "none";
+    signal gmem2_blk_n_B : STD_LOGIC;
+    signal ap_CS_fsm_state18 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state18 : signal is "none";
+    signal gmem0_addr_reg_261 : STD_LOGIC_VECTOR (63 downto 0);
+    signal gmem1_addr_reg_267 : STD_LOGIC_VECTOR (63 downto 0);
+    signal p_cast2_reg_273 : STD_LOGIC_VECTOR (29 downto 0);
+    signal gmem2_addr_reg_278 : STD_LOGIC_VECTOR (63 downto 0);
+    signal gmem0_addr_read_reg_290 : STD_LOGIC_VECTOR (31 downto 0);
+    signal gmem1_addr_read_reg_296 : STD_LOGIC_VECTOR (31 downto 0);
+    signal gmem0_addr_1_read_reg_302 : STD_LOGIC_VECTOR (31 downto 0);
+    signal buff3_2_fu_253_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal buff3_2_reg_307 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_CS_fsm_state12 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state12 : signal is "none";
-    signal gmem2_blk_n_B : STD_LOGIC;
-    signal ap_CS_fsm_state17 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state17 : signal is "none";
-    signal gmem0_addr_reg_224 : STD_LOGIC_VECTOR (63 downto 0);
-    signal gmem1_addr_reg_230 : STD_LOGIC_VECTOR (63 downto 0);
-    signal gmem2_addr_reg_236 : STD_LOGIC_VECTOR (63 downto 0);
-    signal gmem0_addr_read_reg_242 : STD_LOGIC_VECTOR (31 downto 0);
-    signal gmem1_addr_read_reg_248 : STD_LOGIC_VECTOR (31 downto 0);
-    signal buff3_2_fu_216_p3 : STD_LOGIC_VECTOR (31 downto 0);
-    signal buff3_2_reg_254 : STD_LOGIC_VECTOR (31 downto 0);
-    signal ap_CS_fsm_state11 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state11 : signal is "none";
     signal gmem0_AWREADY : STD_LOGIC;
     signal gmem0_WREADY : STD_LOGIC;
     signal gmem0_ARVALID : STD_LOGIC;
     signal gmem0_ARREADY : STD_LOGIC;
+    signal gmem0_ARADDR : STD_LOGIC_VECTOR (63 downto 0);
     signal gmem0_RVALID : STD_LOGIC;
     signal gmem0_RREADY : STD_LOGIC;
     signal gmem0_RDATA : STD_LOGIC_VECTOR (31 downto 0);
@@ -308,18 +319,19 @@ architecture behav of setMem is
     signal gmem2_RFIFONUM : STD_LOGIC_VECTOR (8 downto 0);
     signal gmem2_BVALID : STD_LOGIC;
     signal gmem2_BREADY : STD_LOGIC;
-    signal p_cast_cast_fu_152_p1 : STD_LOGIC_VECTOR (63 downto 0);
-    signal p_cast1_cast_fu_172_p1 : STD_LOGIC_VECTOR (63 downto 0);
-    signal p_cast2_cast_fu_192_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal p_cast_cast_fu_170_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal p_cast1_cast_fu_190_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal p_cast3_cast_fu_220_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal p_cast2_cast_fu_230_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_block_state2_io : BOOLEAN;
     signal ap_block_state10 : BOOLEAN;
-    signal p_cast_fu_142_p4 : STD_LOGIC_VECTOR (61 downto 0);
-    signal p_cast1_fu_162_p4 : STD_LOGIC_VECTOR (61 downto 0);
-    signal p_cast2_fu_182_p4 : STD_LOGIC_VECTOR (61 downto 0);
-    signal icmp_ln60_fu_202_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal buff3_fu_208_p2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal buff3_1_fu_212_p2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal ap_NS_fsm : STD_LOGIC_VECTOR (16 downto 0);
+    signal p_cast_fu_160_p4 : STD_LOGIC_VECTOR (61 downto 0);
+    signal p_cast1_fu_180_p4 : STD_LOGIC_VECTOR (61 downto 0);
+    signal p_cast3_fu_210_p4 : STD_LOGIC_VECTOR (61 downto 0);
+    signal icmp_ln38_fu_240_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal buff3_fu_245_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal buff3_1_fu_249_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal ap_NS_fsm : STD_LOGIC_VECTOR (17 downto 0);
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
     signal ap_ST_fsm_state2_blk : STD_LOGIC;
     signal ap_ST_fsm_state3_blk : STD_LOGIC;
@@ -337,6 +349,7 @@ architecture behav of setMem is
     signal ap_ST_fsm_state15_blk : STD_LOGIC;
     signal ap_ST_fsm_state16_blk : STD_LOGIC;
     signal ap_ST_fsm_state17_blk : STD_LOGIC;
+    signal ap_ST_fsm_state18_blk : STD_LOGIC;
     signal ap_ce_reg : STD_LOGIC;
 
     component setMem_control_s_axi IS
@@ -366,7 +379,13 @@ architecture behav of setMem is
         ACLK_EN : IN STD_LOGIC;
         a : OUT STD_LOGIC_VECTOR (63 downto 0);
         b : OUT STD_LOGIC_VECTOR (63 downto 0);
-        c : OUT STD_LOGIC_VECTOR (63 downto 0) );
+        c : OUT STD_LOGIC_VECTOR (63 downto 0);
+        op : OUT STD_LOGIC_VECTOR (31 downto 0);
+        ap_start : OUT STD_LOGIC;
+        interrupt : OUT STD_LOGIC;
+        ap_ready : IN STD_LOGIC;
+        ap_done : IN STD_LOGIC;
+        ap_idle : IN STD_LOGIC );
     end component;
 
 
@@ -675,7 +694,13 @@ begin
         ACLK_EN => ap_const_logic_1,
         a => a,
         b => b,
-        c => c);
+        c => c,
+        op => op,
+        ap_start => ap_start,
+        interrupt => interrupt,
+        ap_ready => ap_ready,
+        ap_done => ap_done,
+        ap_idle => ap_idle);
 
     gmem0_m_axi_U : component setMem_gmem0_m_axi
     generic map (
@@ -750,7 +775,7 @@ begin
         ACLK_EN => ap_const_logic_1,
         I_ARVALID => gmem0_ARVALID,
         I_ARREADY => gmem0_ARREADY,
-        I_ARADDR => gmem0_addr_reg_224,
+        I_ARADDR => gmem0_ARADDR,
         I_ARLEN => ap_const_lv32_1,
         I_RVALID => gmem0_RVALID,
         I_RREADY => gmem0_RREADY,
@@ -840,7 +865,7 @@ begin
         ACLK_EN => ap_const_logic_1,
         I_ARVALID => gmem1_ARVALID,
         I_ARREADY => gmem1_ARREADY,
-        I_ARADDR => gmem1_addr_reg_230,
+        I_ARADDR => gmem1_addr_reg_267,
         I_ARLEN => ap_const_lv32_1,
         I_RVALID => gmem1_RVALID,
         I_RREADY => gmem1_RREADY,
@@ -938,11 +963,11 @@ begin
         I_RFIFONUM => gmem2_RFIFONUM,
         I_AWVALID => gmem2_AWVALID,
         I_AWREADY => gmem2_AWREADY,
-        I_AWADDR => gmem2_addr_reg_236,
+        I_AWADDR => gmem2_addr_reg_278,
         I_AWLEN => ap_const_lv32_1,
         I_WVALID => gmem2_WVALID,
         I_WREADY => gmem2_WREADY,
-        I_WDATA => buff3_2_reg_254,
+        I_WDATA => buff3_2_reg_307,
         I_WSTRB => ap_const_lv4_F,
         I_BVALID => gmem2_BVALID,
         I_BREADY => gmem2_BREADY);
@@ -965,8 +990,16 @@ begin
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
+            if ((ap_const_logic_1 = ap_CS_fsm_state12)) then
+                buff3_2_reg_307 <= buff3_2_fu_253_p3;
+            end if;
+        end if;
+    end process;
+    process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state11)) then
-                buff3_2_reg_254 <= buff3_2_fu_216_p3;
+                gmem0_addr_1_read_reg_302 <= gmem0_RDATA;
             end if;
         end if;
     end process;
@@ -974,8 +1007,8 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state10)) then
-                gmem0_addr_read_reg_242 <= gmem0_RDATA;
-                gmem1_addr_read_reg_248 <= gmem1_RDATA;
+                gmem0_addr_read_reg_290 <= gmem0_RDATA;
+                gmem1_addr_read_reg_296 <= gmem1_RDATA;
             end if;
         end if;
     end process;
@@ -983,14 +1016,15 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state1)) then
-                gmem0_addr_reg_224 <= p_cast_cast_fu_152_p1;
-                gmem1_addr_reg_230 <= p_cast1_cast_fu_172_p1;
-                gmem2_addr_reg_236 <= p_cast2_cast_fu_192_p1;
+                gmem0_addr_reg_261 <= p_cast_cast_fu_170_p1;
+                gmem1_addr_reg_267 <= p_cast1_cast_fu_190_p1;
+                gmem2_addr_reg_278 <= p_cast3_cast_fu_220_p1;
+                p_cast2_reg_273 <= op(31 downto 2);
             end if;
         end if;
     end process;
 
-    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1, ap_CS_fsm_state2, ap_CS_fsm_state10, ap_CS_fsm_state12, ap_CS_fsm_state17, gmem2_WREADY, gmem2_BVALID, ap_block_state2_io, ap_block_state10)
+    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1, ap_CS_fsm_state2, ap_CS_fsm_state10, ap_CS_fsm_state3, ap_CS_fsm_state11, ap_CS_fsm_state13, ap_CS_fsm_state18, gmem0_ARREADY, gmem0_RVALID, gmem2_WREADY, gmem2_BVALID, ap_block_state2_io, ap_block_state10)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
@@ -1006,7 +1040,11 @@ begin
                     ap_NS_fsm <= ap_ST_fsm_state2;
                 end if;
             when ap_ST_fsm_state3 => 
-                ap_NS_fsm <= ap_ST_fsm_state4;
+                if (((gmem0_ARREADY = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then
+                    ap_NS_fsm <= ap_ST_fsm_state4;
+                else
+                    ap_NS_fsm <= ap_ST_fsm_state3;
+                end if;
             when ap_ST_fsm_state4 => 
                 ap_NS_fsm <= ap_ST_fsm_state5;
             when ap_ST_fsm_state5 => 
@@ -1026,15 +1064,19 @@ begin
                     ap_NS_fsm <= ap_ST_fsm_state10;
                 end if;
             when ap_ST_fsm_state11 => 
-                ap_NS_fsm <= ap_ST_fsm_state12;
-            when ap_ST_fsm_state12 => 
-                if (((gmem2_WREADY = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state12))) then
-                    ap_NS_fsm <= ap_ST_fsm_state13;
-                else
+                if (((gmem0_RVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state11))) then
                     ap_NS_fsm <= ap_ST_fsm_state12;
+                else
+                    ap_NS_fsm <= ap_ST_fsm_state11;
                 end if;
+            when ap_ST_fsm_state12 => 
+                ap_NS_fsm <= ap_ST_fsm_state13;
             when ap_ST_fsm_state13 => 
-                ap_NS_fsm <= ap_ST_fsm_state14;
+                if (((gmem2_WREADY = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state13))) then
+                    ap_NS_fsm <= ap_ST_fsm_state14;
+                else
+                    ap_NS_fsm <= ap_ST_fsm_state13;
+                end if;
             when ap_ST_fsm_state14 => 
                 ap_NS_fsm <= ap_ST_fsm_state15;
             when ap_ST_fsm_state15 => 
@@ -1042,21 +1084,25 @@ begin
             when ap_ST_fsm_state16 => 
                 ap_NS_fsm <= ap_ST_fsm_state17;
             when ap_ST_fsm_state17 => 
-                if (((gmem2_BVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state17))) then
+                ap_NS_fsm <= ap_ST_fsm_state18;
+            when ap_ST_fsm_state18 => 
+                if (((gmem2_BVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state18))) then
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 else
-                    ap_NS_fsm <= ap_ST_fsm_state17;
+                    ap_NS_fsm <= ap_ST_fsm_state18;
                 end if;
             when others =>  
-                ap_NS_fsm <= "XXXXXXXXXXXXXXXXX";
+                ap_NS_fsm <= "XXXXXXXXXXXXXXXXXX";
         end case;
     end process;
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
     ap_CS_fsm_state10 <= ap_CS_fsm(9);
     ap_CS_fsm_state11 <= ap_CS_fsm(10);
     ap_CS_fsm_state12 <= ap_CS_fsm(11);
-    ap_CS_fsm_state17 <= ap_CS_fsm(16);
+    ap_CS_fsm_state13 <= ap_CS_fsm(12);
+    ap_CS_fsm_state18 <= ap_CS_fsm(17);
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
+    ap_CS_fsm_state3 <= ap_CS_fsm(2);
 
     ap_ST_fsm_state10_blk_assign_proc : process(ap_block_state10)
     begin
@@ -1067,28 +1113,38 @@ begin
         end if; 
     end process;
 
-    ap_ST_fsm_state11_blk <= ap_const_logic_0;
 
-    ap_ST_fsm_state12_blk_assign_proc : process(gmem2_WREADY)
+    ap_ST_fsm_state11_blk_assign_proc : process(gmem0_RVALID)
     begin
-        if ((gmem2_WREADY = ap_const_logic_0)) then 
-            ap_ST_fsm_state12_blk <= ap_const_logic_1;
+        if ((gmem0_RVALID = ap_const_logic_0)) then 
+            ap_ST_fsm_state11_blk <= ap_const_logic_1;
         else 
-            ap_ST_fsm_state12_blk <= ap_const_logic_0;
+            ap_ST_fsm_state11_blk <= ap_const_logic_0;
         end if; 
     end process;
 
-    ap_ST_fsm_state13_blk <= ap_const_logic_0;
+    ap_ST_fsm_state12_blk <= ap_const_logic_0;
+
+    ap_ST_fsm_state13_blk_assign_proc : process(gmem2_WREADY)
+    begin
+        if ((gmem2_WREADY = ap_const_logic_0)) then 
+            ap_ST_fsm_state13_blk <= ap_const_logic_1;
+        else 
+            ap_ST_fsm_state13_blk <= ap_const_logic_0;
+        end if; 
+    end process;
+
     ap_ST_fsm_state14_blk <= ap_const_logic_0;
     ap_ST_fsm_state15_blk <= ap_const_logic_0;
     ap_ST_fsm_state16_blk <= ap_const_logic_0;
+    ap_ST_fsm_state17_blk <= ap_const_logic_0;
 
-    ap_ST_fsm_state17_blk_assign_proc : process(gmem2_BVALID)
+    ap_ST_fsm_state18_blk_assign_proc : process(gmem2_BVALID)
     begin
         if ((gmem2_BVALID = ap_const_logic_0)) then 
-            ap_ST_fsm_state17_blk <= ap_const_logic_1;
+            ap_ST_fsm_state18_blk <= ap_const_logic_1;
         else 
-            ap_ST_fsm_state17_blk <= ap_const_logic_0;
+            ap_ST_fsm_state18_blk <= ap_const_logic_0;
         end if; 
     end process;
 
@@ -1112,7 +1168,16 @@ begin
         end if; 
     end process;
 
-    ap_ST_fsm_state3_blk <= ap_const_logic_0;
+
+    ap_ST_fsm_state3_blk_assign_proc : process(gmem0_ARREADY)
+    begin
+        if ((gmem0_ARREADY = ap_const_logic_0)) then 
+            ap_ST_fsm_state3_blk <= ap_const_logic_1;
+        else 
+            ap_ST_fsm_state3_blk <= ap_const_logic_0;
+        end if; 
+    end process;
+
     ap_ST_fsm_state4_blk <= ap_const_logic_0;
     ap_ST_fsm_state5_blk <= ap_const_logic_0;
     ap_ST_fsm_state6_blk <= ap_const_logic_0;
@@ -1132,9 +1197,9 @@ begin
     end process;
 
 
-    ap_done_assign_proc : process(ap_CS_fsm_state17, gmem2_BVALID)
+    ap_done_assign_proc : process(ap_CS_fsm_state18, gmem2_BVALID)
     begin
-        if (((gmem2_BVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state17))) then 
+        if (((gmem2_BVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state18))) then 
             ap_done <= ap_const_logic_1;
         else 
             ap_done <= ap_const_logic_0;
@@ -1152,9 +1217,9 @@ begin
     end process;
 
 
-    ap_ready_assign_proc : process(ap_CS_fsm_state17, gmem2_BVALID)
+    ap_ready_assign_proc : process(ap_CS_fsm_state18, gmem2_BVALID)
     begin
-        if (((gmem2_BVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state17))) then 
+        if (((gmem2_BVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state18))) then 
             ap_ready <= ap_const_logic_1;
         else 
             ap_ready <= ap_const_logic_0;
@@ -1167,15 +1232,27 @@ begin
                 ap_rst_n_inv <= not(ap_rst_n);
     end process;
 
-    buff3_1_fu_212_p2 <= std_logic_vector(unsigned(gmem0_addr_read_reg_242) - unsigned(gmem1_addr_read_reg_248));
-    buff3_2_fu_216_p3 <= 
-        buff3_fu_208_p2 when (icmp_ln60_fu_202_p2(0) = '1') else 
-        buff3_1_fu_212_p2;
-    buff3_fu_208_p2 <= std_logic_vector(unsigned(gmem1_addr_read_reg_248) + unsigned(gmem0_addr_read_reg_242));
+    buff3_1_fu_249_p2 <= std_logic_vector(unsigned(gmem0_addr_read_reg_290) - unsigned(gmem1_addr_read_reg_296));
+    buff3_2_fu_253_p3 <= 
+        buff3_fu_245_p2 when (icmp_ln38_fu_240_p2(0) = '1') else 
+        buff3_1_fu_249_p2;
+    buff3_fu_245_p2 <= std_logic_vector(unsigned(gmem1_addr_read_reg_296) + unsigned(gmem0_addr_read_reg_290));
 
-    gmem0_ARVALID_assign_proc : process(ap_CS_fsm_state2, ap_block_state2_io)
+    gmem0_ARADDR_assign_proc : process(ap_CS_fsm_state2, ap_CS_fsm_state3, gmem0_addr_reg_261, gmem0_ARREADY, p_cast2_cast_fu_230_p1, ap_block_state2_io)
     begin
-        if (((ap_const_boolean_0 = ap_block_state2_io) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+        if (((gmem0_ARREADY = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
+            gmem0_ARADDR <= p_cast2_cast_fu_230_p1;
+        elsif (((ap_const_boolean_0 = ap_block_state2_io) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+            gmem0_ARADDR <= gmem0_addr_reg_261;
+        else 
+            gmem0_ARADDR <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        end if; 
+    end process;
+
+
+    gmem0_ARVALID_assign_proc : process(ap_CS_fsm_state2, ap_CS_fsm_state3, gmem0_ARREADY, ap_block_state2_io)
+    begin
+        if ((((gmem0_ARREADY = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state3)) or ((ap_const_boolean_0 = ap_block_state2_io) and (ap_const_logic_1 = ap_CS_fsm_state2)))) then 
             gmem0_ARVALID <= ap_const_logic_1;
         else 
             gmem0_ARVALID <= ap_const_logic_0;
@@ -1183,9 +1260,9 @@ begin
     end process;
 
 
-    gmem0_RREADY_assign_proc : process(ap_CS_fsm_state10, ap_block_state10)
+    gmem0_RREADY_assign_proc : process(ap_CS_fsm_state10, ap_CS_fsm_state11, gmem0_RVALID, ap_block_state10)
     begin
-        if (((ap_const_boolean_0 = ap_block_state10) and (ap_const_logic_1 = ap_CS_fsm_state10))) then 
+        if ((((gmem0_RVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state11)) or ((ap_const_boolean_0 = ap_block_state10) and (ap_const_logic_1 = ap_CS_fsm_state10)))) then 
             gmem0_RREADY <= ap_const_logic_1;
         else 
             gmem0_RREADY <= ap_const_logic_0;
@@ -1193,9 +1270,9 @@ begin
     end process;
 
 
-    gmem0_blk_n_AR_assign_proc : process(m_axi_gmem0_ARREADY, ap_CS_fsm_state2)
+    gmem0_blk_n_AR_assign_proc : process(m_axi_gmem0_ARREADY, ap_CS_fsm_state2, ap_CS_fsm_state3)
     begin
-        if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state3) or (ap_const_logic_1 = ap_CS_fsm_state2))) then 
             gmem0_blk_n_AR <= m_axi_gmem0_ARREADY;
         else 
             gmem0_blk_n_AR <= ap_const_logic_1;
@@ -1203,9 +1280,9 @@ begin
     end process;
 
 
-    gmem0_blk_n_R_assign_proc : process(m_axi_gmem0_RVALID, ap_CS_fsm_state10)
+    gmem0_blk_n_R_assign_proc : process(m_axi_gmem0_RVALID, ap_CS_fsm_state10, ap_CS_fsm_state11)
     begin
-        if ((ap_const_logic_1 = ap_CS_fsm_state10)) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state11) or (ap_const_logic_1 = ap_CS_fsm_state10))) then 
             gmem0_blk_n_R <= m_axi_gmem0_RVALID;
         else 
             gmem0_blk_n_R <= ap_const_logic_1;
@@ -1263,9 +1340,9 @@ begin
     end process;
 
 
-    gmem2_BREADY_assign_proc : process(ap_CS_fsm_state17, gmem2_BVALID)
+    gmem2_BREADY_assign_proc : process(ap_CS_fsm_state18, gmem2_BVALID)
     begin
-        if (((gmem2_BVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state17))) then 
+        if (((gmem2_BVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state18))) then 
             gmem2_BREADY <= ap_const_logic_1;
         else 
             gmem2_BREADY <= ap_const_logic_0;
@@ -1273,9 +1350,9 @@ begin
     end process;
 
 
-    gmem2_WVALID_assign_proc : process(ap_CS_fsm_state12, gmem2_WREADY)
+    gmem2_WVALID_assign_proc : process(ap_CS_fsm_state13, gmem2_WREADY)
     begin
-        if (((gmem2_WREADY = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state12))) then 
+        if (((gmem2_WREADY = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state13))) then 
             gmem2_WVALID <= ap_const_logic_1;
         else 
             gmem2_WVALID <= ap_const_logic_0;
@@ -1293,9 +1370,9 @@ begin
     end process;
 
 
-    gmem2_blk_n_B_assign_proc : process(m_axi_gmem2_BVALID, ap_CS_fsm_state17)
+    gmem2_blk_n_B_assign_proc : process(m_axi_gmem2_BVALID, ap_CS_fsm_state18)
     begin
-        if ((ap_const_logic_1 = ap_CS_fsm_state17)) then 
+        if ((ap_const_logic_1 = ap_CS_fsm_state18)) then 
             gmem2_blk_n_B <= m_axi_gmem2_BVALID;
         else 
             gmem2_blk_n_B <= ap_const_logic_1;
@@ -1303,23 +1380,25 @@ begin
     end process;
 
 
-    gmem2_blk_n_W_assign_proc : process(m_axi_gmem2_WREADY, ap_CS_fsm_state12)
+    gmem2_blk_n_W_assign_proc : process(m_axi_gmem2_WREADY, ap_CS_fsm_state13)
     begin
-        if ((ap_const_logic_1 = ap_CS_fsm_state12)) then 
+        if ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
             gmem2_blk_n_W <= m_axi_gmem2_WREADY;
         else 
             gmem2_blk_n_W <= ap_const_logic_1;
         end if; 
     end process;
 
-    icmp_ln60_fu_202_p2 <= "1" when (op = ap_const_lv32_1) else "0";
-        p_cast1_cast_fu_172_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(p_cast1_fu_162_p4),64));
+    icmp_ln38_fu_240_p2 <= "1" when (gmem0_addr_1_read_reg_302 = ap_const_lv32_1) else "0";
+        p_cast1_cast_fu_190_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(p_cast1_fu_180_p4),64));
 
-    p_cast1_fu_162_p4 <= b(63 downto 2);
-        p_cast2_cast_fu_192_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(p_cast2_fu_182_p4),64));
+    p_cast1_fu_180_p4 <= b(63 downto 2);
+        p_cast2_cast_fu_230_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(p_cast2_reg_273),64));
 
-    p_cast2_fu_182_p4 <= c(63 downto 2);
-        p_cast_cast_fu_152_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(p_cast_fu_142_p4),64));
+        p_cast3_cast_fu_220_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(p_cast3_fu_210_p4),64));
 
-    p_cast_fu_142_p4 <= a(63 downto 2);
+    p_cast3_fu_210_p4 <= c(63 downto 2);
+        p_cast_cast_fu_170_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(p_cast_fu_160_p4),64));
+
+    p_cast_fu_160_p4 <= a(63 downto 2);
 end behav;

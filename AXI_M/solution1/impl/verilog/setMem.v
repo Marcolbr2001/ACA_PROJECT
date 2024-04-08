@@ -6,15 +6,11 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="setMem_setMem,hls_ip_2023_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=16,HLS_SYN_TPT=none,HLS_SYN_MEM=12,HLS_SYN_DSP=0,HLS_SYN_FF=3035,HLS_SYN_LUT=2929,HLS_VERSION=2023_2}" *)
+(* CORE_GENERATION_INFO="setMem_setMem,hls_ip_2023_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=17,HLS_SYN_TPT=none,HLS_SYN_MEM=12,HLS_SYN_DSP=0,HLS_SYN_FF=3142,HLS_SYN_LUT=3013,HLS_VERSION=2023_2}" *)
 
 module setMem (
         ap_clk,
         ap_rst_n,
-        ap_start,
-        ap_done,
-        ap_idle,
-        ap_ready,
         m_axi_gmem0_AWVALID,
         m_axi_gmem0_AWREADY,
         m_axi_gmem0_AWADDR,
@@ -150,7 +146,6 @@ module setMem (
         m_axi_gmem2_BRESP,
         m_axi_gmem2_BID,
         m_axi_gmem2_BUSER,
-        op,
         s_axi_control_AWVALID,
         s_axi_control_AWREADY,
         s_axi_control_AWADDR,
@@ -167,26 +162,28 @@ module setMem (
         s_axi_control_RRESP,
         s_axi_control_BVALID,
         s_axi_control_BREADY,
-        s_axi_control_BRESP
+        s_axi_control_BRESP,
+        interrupt
 );
 
-parameter    ap_ST_fsm_state1 = 17'd1;
-parameter    ap_ST_fsm_state2 = 17'd2;
-parameter    ap_ST_fsm_state3 = 17'd4;
-parameter    ap_ST_fsm_state4 = 17'd8;
-parameter    ap_ST_fsm_state5 = 17'd16;
-parameter    ap_ST_fsm_state6 = 17'd32;
-parameter    ap_ST_fsm_state7 = 17'd64;
-parameter    ap_ST_fsm_state8 = 17'd128;
-parameter    ap_ST_fsm_state9 = 17'd256;
-parameter    ap_ST_fsm_state10 = 17'd512;
-parameter    ap_ST_fsm_state11 = 17'd1024;
-parameter    ap_ST_fsm_state12 = 17'd2048;
-parameter    ap_ST_fsm_state13 = 17'd4096;
-parameter    ap_ST_fsm_state14 = 17'd8192;
-parameter    ap_ST_fsm_state15 = 17'd16384;
-parameter    ap_ST_fsm_state16 = 17'd32768;
-parameter    ap_ST_fsm_state17 = 17'd65536;
+parameter    ap_ST_fsm_state1 = 18'd1;
+parameter    ap_ST_fsm_state2 = 18'd2;
+parameter    ap_ST_fsm_state3 = 18'd4;
+parameter    ap_ST_fsm_state4 = 18'd8;
+parameter    ap_ST_fsm_state5 = 18'd16;
+parameter    ap_ST_fsm_state6 = 18'd32;
+parameter    ap_ST_fsm_state7 = 18'd64;
+parameter    ap_ST_fsm_state8 = 18'd128;
+parameter    ap_ST_fsm_state9 = 18'd256;
+parameter    ap_ST_fsm_state10 = 18'd512;
+parameter    ap_ST_fsm_state11 = 18'd1024;
+parameter    ap_ST_fsm_state12 = 18'd2048;
+parameter    ap_ST_fsm_state13 = 18'd4096;
+parameter    ap_ST_fsm_state14 = 18'd8192;
+parameter    ap_ST_fsm_state15 = 18'd16384;
+parameter    ap_ST_fsm_state16 = 18'd32768;
+parameter    ap_ST_fsm_state17 = 18'd65536;
+parameter    ap_ST_fsm_state18 = 18'd131072;
 parameter    C_S_AXI_CONTROL_DATA_WIDTH = 32;
 parameter    C_S_AXI_CONTROL_ADDR_WIDTH = 6;
 parameter    C_S_AXI_DATA_WIDTH = 32;
@@ -234,10 +231,6 @@ parameter C_M_AXI_GMEM2_WSTRB_WIDTH = (32 / 8);
 
 input   ap_clk;
 input   ap_rst_n;
-input   ap_start;
-output   ap_done;
-output   ap_idle;
-output   ap_ready;
 output   m_axi_gmem0_AWVALID;
 input   m_axi_gmem0_AWREADY;
 output  [C_M_AXI_GMEM0_ADDR_WIDTH - 1:0] m_axi_gmem0_AWADDR;
@@ -373,7 +366,6 @@ output   m_axi_gmem2_BREADY;
 input  [1:0] m_axi_gmem2_BRESP;
 input  [C_M_AXI_GMEM2_ID_WIDTH - 1:0] m_axi_gmem2_BID;
 input  [C_M_AXI_GMEM2_BUSER_WIDTH - 1:0] m_axi_gmem2_BUSER;
-input  [31:0] op;
 input   s_axi_control_AWVALID;
 output   s_axi_control_AWREADY;
 input  [C_S_AXI_CONTROL_ADDR_WIDTH - 1:0] s_axi_control_AWADDR;
@@ -391,40 +383,47 @@ output  [1:0] s_axi_control_RRESP;
 output   s_axi_control_BVALID;
 input   s_axi_control_BREADY;
 output  [1:0] s_axi_control_BRESP;
-
-reg ap_done;
-reg ap_idle;
-reg ap_ready;
+output   interrupt;
 
  reg    ap_rst_n_inv;
-(* fsm_encoding = "none" *) reg   [16:0] ap_CS_fsm;
+wire    ap_start;
+reg    ap_done;
+reg    ap_idle;
+(* fsm_encoding = "none" *) reg   [17:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
+reg    ap_ready;
 wire   [63:0] a;
 wire   [63:0] b;
 wire   [63:0] c;
+wire   [31:0] op;
 reg    gmem0_blk_n_AR;
 wire    ap_CS_fsm_state2;
 reg    gmem0_blk_n_R;
 wire    ap_CS_fsm_state10;
+wire    ap_CS_fsm_state3;
+wire    ap_CS_fsm_state11;
 reg    gmem1_blk_n_AR;
 reg    gmem1_blk_n_R;
 reg    gmem2_blk_n_AW;
 reg    gmem2_blk_n_W;
-wire    ap_CS_fsm_state12;
+wire    ap_CS_fsm_state13;
 reg    gmem2_blk_n_B;
-wire    ap_CS_fsm_state17;
-reg   [63:0] gmem0_addr_reg_224;
-reg   [63:0] gmem1_addr_reg_230;
-reg   [63:0] gmem2_addr_reg_236;
-reg   [31:0] gmem0_addr_read_reg_242;
-reg   [31:0] gmem1_addr_read_reg_248;
-wire   [31:0] buff3_2_fu_216_p3;
-reg   [31:0] buff3_2_reg_254;
-wire    ap_CS_fsm_state11;
+wire    ap_CS_fsm_state18;
+reg   [63:0] gmem0_addr_reg_261;
+reg   [63:0] gmem1_addr_reg_267;
+reg   [29:0] p_cast2_reg_273;
+reg   [63:0] gmem2_addr_reg_278;
+reg   [31:0] gmem0_addr_read_reg_290;
+reg   [31:0] gmem1_addr_read_reg_296;
+reg   [31:0] gmem0_addr_1_read_reg_302;
+wire   [31:0] buff3_2_fu_253_p3;
+reg   [31:0] buff3_2_reg_307;
+wire    ap_CS_fsm_state12;
 wire    gmem0_AWREADY;
 wire    gmem0_WREADY;
 reg    gmem0_ARVALID;
 wire    gmem0_ARREADY;
+reg   [63:0] gmem0_ARADDR;
 wire    gmem0_RVALID;
 reg    gmem0_RREADY;
 wire   [31:0] gmem0_RDATA;
@@ -449,21 +448,22 @@ wire   [31:0] gmem2_RDATA;
 wire   [8:0] gmem2_RFIFONUM;
 wire    gmem2_BVALID;
 reg    gmem2_BREADY;
-wire  signed [63:0] p_cast_cast_fu_152_p1;
-wire  signed [63:0] p_cast1_cast_fu_172_p1;
-wire  signed [63:0] p_cast2_cast_fu_192_p1;
+wire  signed [63:0] p_cast_cast_fu_170_p1;
+wire  signed [63:0] p_cast1_cast_fu_190_p1;
+wire  signed [63:0] p_cast3_cast_fu_220_p1;
+wire  signed [63:0] p_cast2_cast_fu_230_p1;
 reg    ap_block_state2_io;
 reg    ap_block_state10;
-wire   [61:0] p_cast_fu_142_p4;
-wire   [61:0] p_cast1_fu_162_p4;
-wire   [61:0] p_cast2_fu_182_p4;
-wire   [0:0] icmp_ln60_fu_202_p2;
-wire   [31:0] buff3_fu_208_p2;
-wire   [31:0] buff3_1_fu_212_p2;
-reg   [16:0] ap_NS_fsm;
+wire   [61:0] p_cast_fu_160_p4;
+wire   [61:0] p_cast1_fu_180_p4;
+wire   [61:0] p_cast3_fu_210_p4;
+wire   [0:0] icmp_ln38_fu_240_p2;
+wire   [31:0] buff3_fu_245_p2;
+wire   [31:0] buff3_1_fu_249_p2;
+reg   [17:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 reg    ap_ST_fsm_state2_blk;
-wire    ap_ST_fsm_state3_blk;
+reg    ap_ST_fsm_state3_blk;
 wire    ap_ST_fsm_state4_blk;
 wire    ap_ST_fsm_state5_blk;
 wire    ap_ST_fsm_state6_blk;
@@ -471,18 +471,19 @@ wire    ap_ST_fsm_state7_blk;
 wire    ap_ST_fsm_state8_blk;
 wire    ap_ST_fsm_state9_blk;
 reg    ap_ST_fsm_state10_blk;
-wire    ap_ST_fsm_state11_blk;
-reg    ap_ST_fsm_state12_blk;
-wire    ap_ST_fsm_state13_blk;
+reg    ap_ST_fsm_state11_blk;
+wire    ap_ST_fsm_state12_blk;
+reg    ap_ST_fsm_state13_blk;
 wire    ap_ST_fsm_state14_blk;
 wire    ap_ST_fsm_state15_blk;
 wire    ap_ST_fsm_state16_blk;
-reg    ap_ST_fsm_state17_blk;
+wire    ap_ST_fsm_state17_blk;
+reg    ap_ST_fsm_state18_blk;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 17'd1;
+#0 ap_CS_fsm = 18'd1;
 end
 
 setMem_control_s_axi #(
@@ -511,7 +512,13 @@ control_s_axi_U(
     .ACLK_EN(1'b1),
     .a(a),
     .b(b),
-    .c(c)
+    .c(c),
+    .op(op),
+    .ap_start(ap_start),
+    .interrupt(interrupt),
+    .ap_ready(ap_ready),
+    .ap_done(ap_done),
+    .ap_idle(ap_idle)
 );
 
 setMem_gmem0_m_axi #(
@@ -586,7 +593,7 @@ gmem0_m_axi_U(
     .ACLK_EN(1'b1),
     .I_ARVALID(gmem0_ARVALID),
     .I_ARREADY(gmem0_ARREADY),
-    .I_ARADDR(gmem0_addr_reg_224),
+    .I_ARADDR(gmem0_ARADDR),
     .I_ARLEN(32'd1),
     .I_RVALID(gmem0_RVALID),
     .I_RREADY(gmem0_RREADY),
@@ -676,7 +683,7 @@ gmem1_m_axi_U(
     .ACLK_EN(1'b1),
     .I_ARVALID(gmem1_ARVALID),
     .I_ARREADY(gmem1_ARREADY),
-    .I_ARADDR(gmem1_addr_reg_230),
+    .I_ARADDR(gmem1_addr_reg_267),
     .I_ARLEN(32'd1),
     .I_RVALID(gmem1_RVALID),
     .I_RREADY(gmem1_RREADY),
@@ -774,11 +781,11 @@ gmem2_m_axi_U(
     .I_RFIFONUM(gmem2_RFIFONUM),
     .I_AWVALID(gmem2_AWVALID),
     .I_AWREADY(gmem2_AWREADY),
-    .I_AWADDR(gmem2_addr_reg_236),
+    .I_AWADDR(gmem2_addr_reg_278),
     .I_AWLEN(32'd1),
     .I_WVALID(gmem2_WVALID),
     .I_WREADY(gmem2_WREADY),
-    .I_WDATA(buff3_2_reg_254),
+    .I_WDATA(buff3_2_reg_307),
     .I_WSTRB(4'd15),
     .I_BVALID(gmem2_BVALID),
     .I_BREADY(gmem2_BREADY)
@@ -793,23 +800,30 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        buff3_2_reg_307 <= buff3_2_fu_253_p3;
+    end
+end
+
+always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state11)) begin
-        buff3_2_reg_254 <= buff3_2_fu_216_p3;
+        gmem0_addr_1_read_reg_302 <= gmem0_RDATA;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state10)) begin
-        gmem0_addr_read_reg_242 <= gmem0_RDATA;
-        gmem1_addr_read_reg_248 <= gmem1_RDATA;
+        gmem0_addr_read_reg_290 <= gmem0_RDATA;
+        gmem1_addr_read_reg_296 <= gmem1_RDATA;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state1)) begin
-        gmem0_addr_reg_224 <= p_cast_cast_fu_152_p1;
-        gmem1_addr_reg_230 <= p_cast1_cast_fu_172_p1;
-        gmem2_addr_reg_236 <= p_cast2_cast_fu_192_p1;
+        gmem0_addr_reg_261 <= p_cast_cast_fu_170_p1;
+        gmem1_addr_reg_267 <= p_cast1_cast_fu_190_p1;
+        gmem2_addr_reg_278 <= p_cast3_cast_fu_220_p1;
+        p_cast2_reg_273 <= {{op[31:2]}};
     end
 end
 
@@ -821,17 +835,23 @@ always @ (*) begin
     end
 end
 
-assign ap_ST_fsm_state11_blk = 1'b0;
-
 always @ (*) begin
-    if ((gmem2_WREADY == 1'b0)) begin
-        ap_ST_fsm_state12_blk = 1'b1;
+    if ((gmem0_RVALID == 1'b0)) begin
+        ap_ST_fsm_state11_blk = 1'b1;
     end else begin
-        ap_ST_fsm_state12_blk = 1'b0;
+        ap_ST_fsm_state11_blk = 1'b0;
     end
 end
 
-assign ap_ST_fsm_state13_blk = 1'b0;
+assign ap_ST_fsm_state12_blk = 1'b0;
+
+always @ (*) begin
+    if ((gmem2_WREADY == 1'b0)) begin
+        ap_ST_fsm_state13_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state13_blk = 1'b0;
+    end
+end
 
 assign ap_ST_fsm_state14_blk = 1'b0;
 
@@ -839,11 +859,13 @@ assign ap_ST_fsm_state15_blk = 1'b0;
 
 assign ap_ST_fsm_state16_blk = 1'b0;
 
+assign ap_ST_fsm_state17_blk = 1'b0;
+
 always @ (*) begin
     if ((gmem2_BVALID == 1'b0)) begin
-        ap_ST_fsm_state17_blk = 1'b1;
+        ap_ST_fsm_state18_blk = 1'b1;
     end else begin
-        ap_ST_fsm_state17_blk = 1'b0;
+        ap_ST_fsm_state18_blk = 1'b0;
     end
 end
 
@@ -863,7 +885,13 @@ always @ (*) begin
     end
 end
 
-assign ap_ST_fsm_state3_blk = 1'b0;
+always @ (*) begin
+    if ((gmem0_ARREADY == 1'b0)) begin
+        ap_ST_fsm_state3_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state3_blk = 1'b0;
+    end
+end
 
 assign ap_ST_fsm_state4_blk = 1'b0;
 
@@ -878,7 +906,7 @@ assign ap_ST_fsm_state8_blk = 1'b0;
 assign ap_ST_fsm_state9_blk = 1'b0;
 
 always @ (*) begin
-    if (((gmem2_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state17))) begin
+    if (((gmem2_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state18))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -894,7 +922,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((gmem2_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state17))) begin
+    if (((gmem2_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state18))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -902,7 +930,17 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_state2_io) & (1'b1 == ap_CS_fsm_state2))) begin
+    if (((gmem0_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
+        gmem0_ARADDR = p_cast2_cast_fu_230_p1;
+    end else if (((1'b0 == ap_block_state2_io) & (1'b1 == ap_CS_fsm_state2))) begin
+        gmem0_ARADDR = gmem0_addr_reg_261;
+    end else begin
+        gmem0_ARADDR = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((((gmem0_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state3)) | ((1'b0 == ap_block_state2_io) & (1'b1 == ap_CS_fsm_state2)))) begin
         gmem0_ARVALID = 1'b1;
     end else begin
         gmem0_ARVALID = 1'b0;
@@ -910,7 +948,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_state10) & (1'b1 == ap_CS_fsm_state10))) begin
+    if ((((gmem0_RVALID == 1'b1) & (1'b1 == ap_CS_fsm_state11)) | ((1'b0 == ap_block_state10) & (1'b1 == ap_CS_fsm_state10)))) begin
         gmem0_RREADY = 1'b1;
     end else begin
         gmem0_RREADY = 1'b0;
@@ -918,7 +956,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
+    if (((1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state2))) begin
         gmem0_blk_n_AR = m_axi_gmem0_ARREADY;
     end else begin
         gmem0_blk_n_AR = 1'b1;
@@ -926,7 +964,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state10)) begin
+    if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state10))) begin
         gmem0_blk_n_R = m_axi_gmem0_RVALID;
     end else begin
         gmem0_blk_n_R = 1'b1;
@@ -974,7 +1012,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((gmem2_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state17))) begin
+    if (((gmem2_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state18))) begin
         gmem2_BREADY = 1'b1;
     end else begin
         gmem2_BREADY = 1'b0;
@@ -982,7 +1020,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((gmem2_WREADY == 1'b1) & (1'b1 == ap_CS_fsm_state12))) begin
+    if (((gmem2_WREADY == 1'b1) & (1'b1 == ap_CS_fsm_state13))) begin
         gmem2_WVALID = 1'b1;
     end else begin
         gmem2_WVALID = 1'b0;
@@ -998,7 +1036,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state17)) begin
+    if ((1'b1 == ap_CS_fsm_state18)) begin
         gmem2_blk_n_B = m_axi_gmem2_BVALID;
     end else begin
         gmem2_blk_n_B = 1'b1;
@@ -1006,7 +1044,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state12)) begin
+    if ((1'b1 == ap_CS_fsm_state13)) begin
         gmem2_blk_n_W = m_axi_gmem2_WREADY;
     end else begin
         gmem2_blk_n_W = 1'b1;
@@ -1030,7 +1068,11 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state3 : begin
-            ap_NS_fsm = ap_ST_fsm_state4;
+            if (((gmem0_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
+                ap_NS_fsm = ap_ST_fsm_state4;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state3;
+            end
         end
         ap_ST_fsm_state4 : begin
             ap_NS_fsm = ap_ST_fsm_state5;
@@ -1058,17 +1100,21 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state11 : begin
-            ap_NS_fsm = ap_ST_fsm_state12;
-        end
-        ap_ST_fsm_state12 : begin
-            if (((gmem2_WREADY == 1'b1) & (1'b1 == ap_CS_fsm_state12))) begin
-                ap_NS_fsm = ap_ST_fsm_state13;
-            end else begin
+            if (((gmem0_RVALID == 1'b1) & (1'b1 == ap_CS_fsm_state11))) begin
                 ap_NS_fsm = ap_ST_fsm_state12;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state11;
             end
         end
+        ap_ST_fsm_state12 : begin
+            ap_NS_fsm = ap_ST_fsm_state13;
+        end
         ap_ST_fsm_state13 : begin
-            ap_NS_fsm = ap_ST_fsm_state14;
+            if (((gmem2_WREADY == 1'b1) & (1'b1 == ap_CS_fsm_state13))) begin
+                ap_NS_fsm = ap_ST_fsm_state14;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state13;
+            end
         end
         ap_ST_fsm_state14 : begin
             ap_NS_fsm = ap_ST_fsm_state15;
@@ -1080,10 +1126,13 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state17;
         end
         ap_ST_fsm_state17 : begin
-            if (((gmem2_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state17))) begin
+            ap_NS_fsm = ap_ST_fsm_state18;
+        end
+        ap_ST_fsm_state18 : begin
+            if (((gmem2_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state18))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
-                ap_NS_fsm = ap_ST_fsm_state17;
+                ap_NS_fsm = ap_ST_fsm_state18;
             end
         end
         default : begin
@@ -1100,9 +1149,13 @@ assign ap_CS_fsm_state11 = ap_CS_fsm[32'd10];
 
 assign ap_CS_fsm_state12 = ap_CS_fsm[32'd11];
 
-assign ap_CS_fsm_state17 = ap_CS_fsm[32'd16];
+assign ap_CS_fsm_state13 = ap_CS_fsm[32'd12];
+
+assign ap_CS_fsm_state18 = ap_CS_fsm[32'd17];
 
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
+
+assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
 always @ (*) begin
     ap_block_state10 = ((gmem1_RVALID == 1'b0) | (gmem0_RVALID == 1'b0));
@@ -1116,24 +1169,26 @@ always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign buff3_1_fu_212_p2 = (gmem0_addr_read_reg_242 - gmem1_addr_read_reg_248);
+assign buff3_1_fu_249_p2 = (gmem0_addr_read_reg_290 - gmem1_addr_read_reg_296);
 
-assign buff3_2_fu_216_p3 = ((icmp_ln60_fu_202_p2[0:0] == 1'b1) ? buff3_fu_208_p2 : buff3_1_fu_212_p2);
+assign buff3_2_fu_253_p3 = ((icmp_ln38_fu_240_p2[0:0] == 1'b1) ? buff3_fu_245_p2 : buff3_1_fu_249_p2);
 
-assign buff3_fu_208_p2 = (gmem1_addr_read_reg_248 + gmem0_addr_read_reg_242);
+assign buff3_fu_245_p2 = (gmem1_addr_read_reg_296 + gmem0_addr_read_reg_290);
 
-assign icmp_ln60_fu_202_p2 = ((op == 32'd1) ? 1'b1 : 1'b0);
+assign icmp_ln38_fu_240_p2 = ((gmem0_addr_1_read_reg_302 == 32'd1) ? 1'b1 : 1'b0);
 
-assign p_cast1_cast_fu_172_p1 = $signed(p_cast1_fu_162_p4);
+assign p_cast1_cast_fu_190_p1 = $signed(p_cast1_fu_180_p4);
 
-assign p_cast1_fu_162_p4 = {{b[63:2]}};
+assign p_cast1_fu_180_p4 = {{b[63:2]}};
 
-assign p_cast2_cast_fu_192_p1 = $signed(p_cast2_fu_182_p4);
+assign p_cast2_cast_fu_230_p1 = $signed(p_cast2_reg_273);
 
-assign p_cast2_fu_182_p4 = {{c[63:2]}};
+assign p_cast3_cast_fu_220_p1 = $signed(p_cast3_fu_210_p4);
 
-assign p_cast_cast_fu_152_p1 = $signed(p_cast_fu_142_p4);
+assign p_cast3_fu_210_p4 = {{c[63:2]}};
 
-assign p_cast_fu_142_p4 = {{a[63:2]}};
+assign p_cast_cast_fu_170_p1 = $signed(p_cast_fu_160_p4);
+
+assign p_cast_fu_160_p4 = {{a[63:2]}};
 
 endmodule //setMem

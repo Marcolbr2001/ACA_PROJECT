@@ -1,7 +1,6 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling ../../../core.cpp in debug mode
-   Generating csim.exe
+make: 'csim.exe' is up to date.
 HLS AXI-Stream no side-channel data example
 A = 27 B = 9, C = 18, OP = 0 difference
 

@@ -92,6 +92,12 @@ int XSetmem_Initialize(XSetmem *InstancePtr, const char* InstanceName);
 int XSetmem_Release(XSetmem *InstancePtr);
 #endif
 
+void XSetmem_Start(XSetmem *InstancePtr);
+u32 XSetmem_IsDone(XSetmem *InstancePtr);
+u32 XSetmem_IsIdle(XSetmem *InstancePtr);
+u32 XSetmem_IsReady(XSetmem *InstancePtr);
+void XSetmem_EnableAutoRestart(XSetmem *InstancePtr);
+void XSetmem_DisableAutoRestart(XSetmem *InstancePtr);
 
 void XSetmem_Set_a(XSetmem *InstancePtr, u64 Data);
 u64 XSetmem_Get_a(XSetmem *InstancePtr);
@@ -99,6 +105,16 @@ void XSetmem_Set_b(XSetmem *InstancePtr, u64 Data);
 u64 XSetmem_Get_b(XSetmem *InstancePtr);
 void XSetmem_Set_c(XSetmem *InstancePtr, u64 Data);
 u64 XSetmem_Get_c(XSetmem *InstancePtr);
+void XSetmem_Set_op(XSetmem *InstancePtr, u32 Data);
+u32 XSetmem_Get_op(XSetmem *InstancePtr);
+
+void XSetmem_InterruptGlobalEnable(XSetmem *InstancePtr);
+void XSetmem_InterruptGlobalDisable(XSetmem *InstancePtr);
+void XSetmem_InterruptEnable(XSetmem *InstancePtr, u32 Mask);
+void XSetmem_InterruptDisable(XSetmem *InstancePtr, u32 Mask);
+void XSetmem_InterruptClear(XSetmem *InstancePtr, u32 Mask);
+u32 XSetmem_InterruptGetEnabled(XSetmem *InstancePtr);
+u32 XSetmem_InterruptGetStatus(XSetmem *InstancePtr);
 
 #ifdef __cplusplus
 }

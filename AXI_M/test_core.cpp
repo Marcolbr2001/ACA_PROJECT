@@ -15,7 +15,7 @@
 
 #include <stdio.h>
 
-void setMem(volatile int* a, volatile int* b, volatile int* c, volatile int* op);
+void setMem(volatile int* a, volatile int* b, volatile int* c, int op);
 
 int main() {
     int i;

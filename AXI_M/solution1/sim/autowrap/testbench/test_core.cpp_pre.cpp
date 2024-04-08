@@ -938,7 +938,7 @@ extern "C" {
 
 
 # 18 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/test_core.cpp"
-void setMem(volatile int* a, volatile int* b, volatile int* c, volatile int* op);
+void setMem(volatile int* a, volatile int* b, volatile int* c, int op);
 
 int main() {
     int i;

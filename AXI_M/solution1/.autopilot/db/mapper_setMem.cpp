@@ -242,8 +242,8 @@ class AESL_RUNTIME_BC {
     string mName;
 };
 using hls::sim::Byte;
-extern "C" void setMem(Byte<4>*, Byte<4>*, Byte<4>*, int, int, int, volatile void *);
-extern "C" void apatb_setMem_hw(volatile void * __xlx_apatb_param_a, volatile void * __xlx_apatb_param_b, volatile void * __xlx_apatb_param_c, volatile void * __xlx_apatb_param_op) {
+extern "C" void setMem(Byte<4>*, Byte<4>*, Byte<4>*, int, int, int, int);
+extern "C" void apatb_setMem_hw(volatile void * __xlx_apatb_param_a, volatile void * __xlx_apatb_param_b, volatile void * __xlx_apatb_param_c, int __xlx_apatb_param_op) {
 using hls::sim::createStream;
   // Collect __xlx_a__tmp_vec
 std::vector<Byte<4>> __xlx_a__tmp_vec;

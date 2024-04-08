@@ -1,40 +1,18 @@
-//#include "core.h"
-
-//int setMem(unsigned char value, unsigned char *addr, int size)
-//{
-//#pragma HLS INTERFACE mode=m_axi depth=max_depth bundle=MASTER_BUS port=addr offset=slave
-//#pragma HLS INTERFACE mode=s_axilite bundle=CTRL_BUS port=size
-//#pragma HLS INTERFACE mode=s_axilite bundle=CTRL_BUS port=value
-
-
-//	if(size < MAX_TRANSFER_SIZE)
-//	{
-//		for(int idxMemAddr = 0; idxMemAddr < MAX_TRANSFER_SIZE; idxMemAddr++)
-//		{
-//			#pragma HLS PIPELINE
-
-//			addr[idxMemAddr] = value;
-
-
-//		}
-//		return 0;
-//	}
-//	else
-//	{
-//		return -1;
-//	}
-//}
-
 #include <stdio.h>
 #include <string.h>
 
-void setMem(volatile int* a, volatile int* b, volatile int* c, volatile int* op) {
+void setMem(volatile int* a, volatile int* b, volatile int* c, int op) {
 
-#pragma HLS INTERFACE m_axi port = a bundle = gmem0 depth = 1
-#pragma HLS INTERFACE m_axi port = b bundle = gmem1 depth = 1
-#pragma HLS INTERFACE m_axi port = c bundle = gmem2 depth = 1
+#pragma HLS INTERFACE mode=s_axilite bundle=control port=op
+#pragma HLS INTERFACE mode=s_axilite bundle=control port=a
+#pragma HLS INTERFACE mode=s_axilite bundle=control port=b
+#pragma HLS INTERFACE mode=s_axilite bundle=control port=c
 
-#pragma HLS INTERFACE s_axilite port = op bundle = operation depth = 1
+#pragma HLS INTERFACE mode=s_axilite bundle=control port=return
+
+#pragma HLS INTERFACE mode=m_axi port = a bundle = gmem0 depth = 1 offset=slave
+#pragma HLS INTERFACE mode=m_axi port = b bundle = gmem1 depth = 1 offset=slave
+#pragma HLS INTERFACE mode=m_axi port = c bundle = gmem2 depth = 1 offset=slave
 
 
     int i;

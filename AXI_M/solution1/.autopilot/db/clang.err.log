@@ -1,4 +1,4 @@
-AXI_M/core.cpp:37:70: warning: unexpected pragma parameter 'depth' [-Winvalid-hls-pragmas]
-#pragma HLS INTERFACE s_axilite port = op bundle = operation depth = 1
-                                                                     ^
+AXI_M/core.cpp:34:19: warning: cast to 'const int *' from smaller integer type 'int' [-Wint-to-pointer-cast]
+    memcpy(buff4, (const int*)op, 1 * sizeof(int));
+                  ^
 1 warning generated.

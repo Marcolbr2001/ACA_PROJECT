@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'setMem'
 ================================================================
 + General Information: 
-    * Date:           Mon Apr  8 13:29:52 2024
+    * Date:           Mon Apr  8 16:57:12 2024
     * Version:        2023.2 (Build 4023990 on Oct 11 2023)
     * Project:        AXI_M
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -19,7 +19,7 @@
     |  Modules | Issue|      | Latency | Latency | Iteration|         | Trip |          |         |    |           |           |     |
     |  & Loops | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF    |    LUT    | URAM|
     +----------+------+------+---------+---------+----------+---------+------+----------+---------+----+-----------+-----------+-----+
-    |+ setMem  |     -|  0.00|       16|  160.000|         -|       17|     -|        no|  12 (4%)|   -|  3035 (2%)|  2929 (5%)|    -|
+    |+ setMem  |     -|  0.00|       17|  170.000|         -|       18|     -|        no|  12 (4%)|   -|  3142 (2%)|  3013 (5%)|    -|
     +----------+------+------+---------+---------+----------+---------+------+----------+---------+----+-----------+-----------+-----+
 
 
@@ -44,32 +44,31 @@
 +---------------+------------+---------------+--------+----------+
 
 * S_AXILITE Registers
-+---------------+----------+--------+-------+--------+------------------+
-| Interface     | Register | Offset | Width | Access | Description      |
-+---------------+----------+--------+-------+--------+------------------+
-| s_axi_control | a_1      | 0x10   | 32    | W      | Data signal of a |
-| s_axi_control | a_2      | 0x14   | 32    | W      | Data signal of a |
-| s_axi_control | b_1      | 0x1c   | 32    | W      | Data signal of b |
-| s_axi_control | b_2      | 0x20   | 32    | W      | Data signal of b |
-| s_axi_control | c_1      | 0x28   | 32    | W      | Data signal of c |
-| s_axi_control | c_2      | 0x2c   | 32    | W      | Data signal of c |
-+---------------+----------+--------+-------+--------+------------------+
-
-* Other Ports
-+------+---------+-----------+----------+
-| Port | Mode    | Direction | Bitwidth |
-+------+---------+-----------+----------+
-| op   | ap_none | in        | 32       |
-+------+---------+-----------+----------+
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | a_1      | 0x10   | 32    | W      | Data signal of a                 |                                                                      |
+| s_axi_control | a_2      | 0x14   | 32    | W      | Data signal of a                 |                                                                      |
+| s_axi_control | b_1      | 0x1c   | 32    | W      | Data signal of b                 |                                                                      |
+| s_axi_control | b_2      | 0x20   | 32    | W      | Data signal of b                 |                                                                      |
+| s_axi_control | c_1      | 0x28   | 32    | W      | Data signal of c                 |                                                                      |
+| s_axi_control | c_2      | 0x2c   | 32    | W      | Data signal of c                 |                                                                      |
+| s_axi_control | op       | 0x34   | 32    | W      | Data signal of op                |                                                                      |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
 
 * TOP LEVEL CONTROL
-+-----------+------------+-----------------------------------+
-| Interface | Type       | Ports                             |
-+-----------+------------+-----------------------------------+
-| ap_clk    | clock      | ap_clk                            |
-| ap_rst_n  | reset      | ap_rst_n                          |
-| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
-+-----------+------------+-----------------------------------+
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
 
 
 ================================================================
@@ -79,10 +78,10 @@
 +----------+-----------+----------+
 | Argument | Direction | Datatype |
 +----------+-----------+----------+
-| a        | in        | pointer  |
-| b        | in        | pointer  |
-| c        | out       | pointer  |
-| op       | in        | pointer  |
+| a        | inout     | pointer  |
+| b        | inout     | pointer  |
+| c        | inout     | pointer  |
+| op       | in        | int      |
 +----------+-----------+----------+
 
 * SW-to-HW Mapping
@@ -98,7 +97,7 @@
 | c        | m_axi_gmem2   | interface |          |                               |
 | c        | s_axi_control | register  | offset   | name=c_1 offset=0x28 range=32 |
 | c        | s_axi_control | register  | offset   | name=c_2 offset=0x2c range=32 |
-| op       | op            | port      |          |                               |
+| op       | s_axi_control | register  |          | name=op offset=0x34 range=32  |
 +----------+---------------+-----------+----------+-------------------------------+
 
 
@@ -109,8 +108,8 @@
 | Name                | DSP | Pragma | Variable | Op  | Impl   | Latency |
 +---------------------+-----+--------+----------+-----+--------+---------+
 | + setMem            | 0   |        |          |     |        |         |
-|   buff3_fu_208_p2   |     |        | buff3    | add | fabric | 0       |
-|   buff3_1_fu_212_p2 |     |        | buff3_1  | sub | fabric | 0       |
+|   buff3_fu_245_p2   |     |        | buff3    | add | fabric | 0       |
+|   buff3_1_fu_249_p2 |     |        | buff3_1  | sub | fabric | 0       |
 +---------------------+-----+--------+----------+-----+--------+---------+
 
 
@@ -132,20 +131,18 @@
 ================================================================
 == Pragma Report
 ================================================================
-* Ignored Pragmas
-+-----------+--------------------------------------------------+-----------------------------+-------------------------------------+
-| Type      | Options                                          | Location                    | Messages                            |
-+-----------+--------------------------------------------------+-----------------------------+-------------------------------------+
-| interface | s_axilite port = op bundle = operation depth = 1 | AXI_M/core.cpp:37 in setmem | unexpected pragma parameter 'depth' |
-+-----------+--------------------------------------------------+-----------------------------+-------------------------------------+
-
 * Valid Pragma Syntax
-+-----------+-----------------------------------------+-----------------------------+
-| Type      | Options                                 | Location                    |
-+-----------+-----------------------------------------+-----------------------------+
-| interface | m_axi port = a bundle = gmem0 depth = 1 | AXI_M/core.cpp:33 in setmem |
-| interface | m_axi port = b bundle = gmem1 depth = 1 | AXI_M/core.cpp:34 in setmem |
-| interface | m_axi port = c bundle = gmem2 depth = 1 | AXI_M/core.cpp:35 in setmem |
-+-----------+-----------------------------------------+-----------------------------+
++-----------+-----------------------------------------------------------+-------------------------------------+
+| Type      | Options                                                   | Location                            |
++-----------+-----------------------------------------------------------+-------------------------------------+
+| interface | mode=s_axilite bundle=control port=op                     | AXI_M/core.cpp:6 in setmem, op      |
+| interface | mode=s_axilite bundle=control port=a                      | AXI_M/core.cpp:7 in setmem, a       |
+| interface | mode=s_axilite bundle=control port=b                      | AXI_M/core.cpp:8 in setmem, b       |
+| interface | mode=s_axilite bundle=control port=c                      | AXI_M/core.cpp:9 in setmem, c       |
+| interface | mode=s_axilite bundle=control port=return                 | AXI_M/core.cpp:11 in setmem, return |
+| interface | mode=m_axi port = a bundle = gmem0 depth = 1 offset=slave | AXI_M/core.cpp:13 in setmem         |
+| interface | mode=m_axi port = b bundle = gmem1 depth = 1 offset=slave | AXI_M/core.cpp:14 in setmem         |
+| interface | mode=m_axi port = c bundle = gmem2 depth = 1 offset=slave | AXI_M/core.cpp:15 in setmem         |
++-----------+-----------------------------------------------------------+-------------------------------------+
 
 

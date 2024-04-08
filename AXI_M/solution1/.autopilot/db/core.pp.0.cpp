@@ -156,7 +156,6 @@ extern "C" {
 }
 # 2 "<built-in>" 2
 # 1 "AXI_M/core.cpp" 2
-# 28 "AXI_M/core.cpp"
 # 1 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdio.h" 1 3
 
 
@@ -928,7 +927,7 @@ void __attribute__((__cdecl__)) __mingw_str_free(void *ptr);
 
 # 1 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\_mingw_print_pop.h" 1 3
 # 1403 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdio.h" 2 3
-# 29 "AXI_M/core.cpp" 2
+# 2 "AXI_M/core.cpp" 2
 # 1 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\string.h" 1 3
 # 21 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\string.h" 3
 extern "C" {
@@ -1091,23 +1090,28 @@ extern "C" {
 # 1 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\string.h" 1 3
 # 10 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\sec_api/string_s.h" 2 3
 # 191 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\string.h" 2 3
-# 30 "AXI_M/core.cpp" 2
+# 3 "AXI_M/core.cpp" 2
 
-__attribute__((sdx_kernel("setMem", 0))) void setMem(volatile int* a, volatile int* b, volatile int* c, volatile int* op) {
+__attribute__((sdx_kernel("setMem", 0))) void setMem(volatile int* a, volatile int* b, volatile int* c, int op) {
 #line 18 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=setMem
-# 31 "AXI_M/core.cpp"
+# 4 "AXI_M/core.cpp"
 
 #line 7 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=setMem
-# 31 "AXI_M/core.cpp"
+# 4 "AXI_M/core.cpp"
 
 
-#pragma HLS INTERFACE m_axi port = a bundle = gmem0 depth = 1
-#pragma HLS INTERFACE m_axi port = b bundle = gmem1 depth = 1
-#pragma HLS INTERFACE m_axi port = c bundle = gmem2 depth = 1
+#pragma HLS INTERFACE mode=s_axilite bundle=control port=op
+#pragma HLS INTERFACE mode=s_axilite bundle=control port=a
+#pragma HLS INTERFACE mode=s_axilite bundle=control port=b
+#pragma HLS INTERFACE mode=s_axilite bundle=control port=c
 
-#pragma HLS INTERFACE s_axilite port = op bundle = operation depth = 1
+#pragma HLS INTERFACE mode=s_axilite bundle=control port=return
+
+#pragma HLS INTERFACE mode=m_axi port = a bundle = gmem0 depth = 1 offset=slave
+#pragma HLS INTERFACE mode=m_axi port = b bundle = gmem1 depth = 1 offset=slave
+#pragma HLS INTERFACE mode=m_axi port = c bundle = gmem2 depth = 1 offset=slave
 
 
  int i;
