@@ -1,3 +1,5 @@
-setMem_gmem_m_axi
+setMem_gmem0_m_axi
+setMem_gmem1_m_axi
+setMem_gmem2_m_axi
 setMem_control_s_axi
 setMem

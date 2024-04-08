@@ -1,0 +1,58 @@
+ECHO is off.
+ECHO is off.
+INFO: [HLS 200-10] Running 'C:/ProgramData/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'marco' on host 'pc_di_marco' (Windows NT_amd64 version 6.2) on Mon Apr 08 13:31:39 +0200 2024
+INFO: [HLS 200-10] In directory 'C:/Users/marco/Desktop/NECST/NL2/AXI_M'
+INFO: [HLS 200-2053] The vitis_hls executable is being deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: source C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/export.tcl
+INFO: [HLS 200-1510] Running: open_project AXI_M 
+INFO: [HLS 200-10] Opening project 'C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M'.
+INFO: [HLS 200-1510] Running: set_top setMem 
+INFO: [HLS 200-1510] Running: add_files AXI_M/core.cpp 
+INFO: [HLS 200-10] Adding design file 'AXI_M/core.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files AXI_M/core.h 
+INFO: [HLS 200-10] Adding design file 'AXI_M/core.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb AXI_M/test_core.cpp -cflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'AXI_M/test_core.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_cosim -trace_level=all
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=AXI_ALU
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.0
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim -trace_level all 
+INFO: [HLS 200-1510] Running: config_export -display_name AXI_ALU -format ip_catalog -output C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M -rtl verilog -version 1.0 
+INFO: [HLS 200-1510] Running: source ./AXI_M/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name setMem setMem 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 488.695 ; gain = 176.086
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/ProgramData/Xilinx/Vivado/2023.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  8 13:31:51 2024...
+INFO: [HLS 200-802] Generated output file AXI_M/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 10.928 seconds; current allocated memory: 10.695 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 12.616 seconds; peak allocated memory: 142.609 MB.

@@ -11,7 +11,7 @@
       <key>line</key>
       <integer>37</integer>
       <key>column</key>
-      <integer>58</integer>
+      <integer>70</integer>
       <key>message</key>
       <string>unexpected pragma parameter &apos;depth&apos;</string>
       <key>ID</key>

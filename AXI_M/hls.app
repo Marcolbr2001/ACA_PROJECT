@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="setMem" name="AXI_M" projectType="C/C++">
+<project xmlns="com.autoesl.autopilot.project" name="AXI_M" top="setMem" projectType="C/C++">
     <includePaths/>
     <libraryPaths/>
     <Simulation>

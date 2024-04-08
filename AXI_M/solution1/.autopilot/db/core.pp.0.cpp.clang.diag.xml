@@ -9,7 +9,7 @@
       <key>filename</key>
       <string>C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/csynth.tcl</string>
       <key>line</key>
-      <integer>16</integer>
+      <integer>18</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -45,7 +45,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=setMem_XLX_SEP_ PragmaOptions=m_axi port = a depth = 1_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=setMem_XLX_SEP_ PragmaOptions=m_axi port = a bundle = gmem0 depth = 1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -61,7 +61,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=setMem_XLX_SEP_ PragmaOptions=m_axi port = b depth = 1_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=setMem_XLX_SEP_ PragmaOptions=m_axi port = b bundle = gmem1 depth = 1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -77,7 +77,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=setMem_XLX_SEP_ PragmaOptions=m_axi port = c depth = 1_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=setMem_XLX_SEP_ PragmaOptions=m_axi port = c bundle = gmem2 depth = 1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -91,7 +91,7 @@
       <key>line</key>
       <integer>37</integer>
       <key>column</key>
-      <integer>58</integer>
+      <integer>70</integer>
       <key>message</key>
       <string>unexpected pragma parameter &apos;depth&apos;</string>
       <key>ID</key>
@@ -109,7 +109,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=0_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=setMem_XLX_SEP_ PragmaOptions=mode = s_axilite port = op depth = 1_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=0_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=setMem_XLX_SEP_ PragmaOptions=s_axilite port = op bundle = operation depth = 1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>

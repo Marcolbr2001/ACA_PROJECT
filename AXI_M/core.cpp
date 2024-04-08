@@ -30,11 +30,11 @@
 
 void setMem(volatile int* a, volatile int* b, volatile int* c, volatile int* op) {
 
-#pragma HLS INTERFACE m_axi port = a depth = 1
-#pragma HLS INTERFACE m_axi port = b depth = 1
-#pragma HLS INTERFACE m_axi port = c depth = 1
+#pragma HLS INTERFACE m_axi port = a bundle = gmem0 depth = 1
+#pragma HLS INTERFACE m_axi port = b bundle = gmem1 depth = 1
+#pragma HLS INTERFACE m_axi port = c bundle = gmem2 depth = 1
 
-#pragma HLS INTERFACE mode = s_axilite port = op depth = 1
+#pragma HLS INTERFACE s_axilite port = op bundle = operation depth = 1
 
 
     int i;

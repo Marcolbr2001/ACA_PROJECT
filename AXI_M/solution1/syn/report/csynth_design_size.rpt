@@ -28,15 +28,15 @@
 |               | (4) simplification          | 15           | simplification of design after performance transformations                             |
 |               |                             |              |                                                                                        |
 | HW Transforms |                             |              | After hardware transfomations                                                          |
-|               | (1) lowering                | 25           | initial conversion to HW specific instructions                                         |
-|               | (2) optimizations           | 26           | high level synthesis optimizations                                                     |
+|               | (1) lowering                | 29           | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           | 30           | high level synthesis optimizations                                                     |
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 
 * Instructions per Function for each Compilation Phase
 +----------+-------------+--------------+---------------+--------------+-------------+---------------+
 | Function | Location    | Compile/Link | Unroll/Inline | Array/Struct | Performance | HW Transforms |
 +----------+-------------+--------------+---------------+--------------+-------------+---------------+
-|   setMem | core.cpp:31 | 64           | 15            | 15           | 15          | 26            |
+|   setMem | core.cpp:31 | 64           | 15            | 15           | 15          | 30            |
 +----------+-------------+--------------+---------------+--------------+-------------+---------------+
 
 * Design Size Message Settings

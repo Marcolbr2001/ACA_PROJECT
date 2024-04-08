@@ -24,15 +24,15 @@
             <column name="">(4) simplification, 15, simplification of design after performance transformations</column>
             <column name="">, , </column>
             <column name="HW Transforms">, , After hardware transfomations</column>
-            <column name="">(1) lowering, 25, initial conversion to HW specific instructions</column>
-            <column name="">(2) optimizations, 26, high level synthesis optimizations</column>
+            <column name="">(1) lowering, 29, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations, 30, high level synthesis optimizations</column>
         </table>
     </item>
     <item name="Instructions per Function for each Compilation Phase">
         <hiertable>
             <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
             <rows>
-                <row id="0" col0="setMem" col1="core.cpp:31" col2="64" col3="15" col4="15" col5="15" col6="26"/>
+                <row id="0" col0="setMem" col1="core.cpp:31" col2="64" col3="15" col4="15" col5="15" col6="30"/>
             </rows>
             <notes/>
         </hiertable>

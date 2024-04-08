@@ -4,11 +4,11 @@
     "calls": "",
     "file": "core.cpp",
     "fileloc": 31,
-    "instructions": 25,
+    "instructions": 29,
     "loads": {
       "T": 1
     },
     "name": "setMem",
-    "total_instructions": 25
+    "total_instructions": 29
   }
 }

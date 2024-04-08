@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'setMem'
 ================================================================
 + General Information: 
-    * Date:           Sun Apr  7 23:27:14 2024
+    * Date:           Mon Apr  8 13:29:52 2024
     * Version:        2023.2 (Build 4023990 on Oct 11 2023)
     * Project:        AXI_M
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,24 +15,26 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +----------+------+------+---------+---------+----------+---------+------+----------+--------+----+-----------+-----------+-----+
-    |  Modules | Issue|      | Latency | Latency | Iteration|         | Trip |          |        |    |           |           |     |
-    |  & Loops | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined|  BRAM  | DSP|     FF    |    LUT    | URAM|
-    +----------+------+------+---------+---------+----------+---------+------+----------+--------+----+-----------+-----------+-----+
-    |+ setMem  |     -|  0.00|       17|  170.000|         -|       18|     -|        no|  4 (1%)|   -|  1376 (1%)|  1461 (2%)|    -|
-    +----------+------+------+---------+---------+----------+---------+------+----------+--------+----+-----------+-----------+-----+
+    +----------+------+------+---------+---------+----------+---------+------+----------+---------+----+-----------+-----------+-----+
+    |  Modules | Issue|      | Latency | Latency | Iteration|         | Trip |          |         |    |           |           |     |
+    |  & Loops | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF    |    LUT    | URAM|
+    +----------+------+------+---------+---------+----------+---------+------+----------+---------+----+-----------+-----------+-----+
+    |+ setMem  |     -|  0.00|       16|  160.000|         -|       17|     -|        no|  12 (4%)|   -|  3035 (2%)|  2929 (5%)|    -|
+    +----------+------+------+---------+---------+----------+---------+------+----------+---------+----+-----------+-----------+-----+
 
 
 ================================================================
 == HW Interfaces
 ================================================================
 * M_AXI
-+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
-| Interface  | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
-|            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
-+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
-| m_axi_gmem | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
-+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem0 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem1 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem2 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
 
 * S_AXILITE Interfaces
 +---------------+------------+---------------+--------+----------+
@@ -77,9 +79,9 @@
 +----------+-----------+----------+
 | Argument | Direction | Datatype |
 +----------+-----------+----------+
-| a        | inout     | pointer  |
-| b        | inout     | pointer  |
-| c        | inout     | pointer  |
+| a        | in        | pointer  |
+| b        | in        | pointer  |
+| c        | out       | pointer  |
 | op       | in        | pointer  |
 +----------+-----------+----------+
 
@@ -87,13 +89,13 @@
 +----------+---------------+-----------+----------+-------------------------------+
 | Argument | HW Interface  | HW Type   | HW Usage | HW Info                       |
 +----------+---------------+-----------+----------+-------------------------------+
-| a        | m_axi_gmem    | interface |          |                               |
+| a        | m_axi_gmem0   | interface |          |                               |
 | a        | s_axi_control | register  | offset   | name=a_1 offset=0x10 range=32 |
 | a        | s_axi_control | register  | offset   | name=a_2 offset=0x14 range=32 |
-| b        | m_axi_gmem    | interface |          |                               |
+| b        | m_axi_gmem1   | interface |          |                               |
 | b        | s_axi_control | register  | offset   | name=b_1 offset=0x1c range=32 |
 | b        | s_axi_control | register  | offset   | name=b_2 offset=0x20 range=32 |
-| c        | m_axi_gmem    | interface |          |                               |
+| c        | m_axi_gmem2   | interface |          |                               |
 | c        | s_axi_control | register  | offset   | name=c_1 offset=0x28 range=32 |
 | c        | s_axi_control | register  | offset   | name=c_2 offset=0x2c range=32 |
 | op       | op            | port      |          |                               |
@@ -107,8 +109,8 @@
 | Name                | DSP | Pragma | Variable | Op  | Impl   | Latency |
 +---------------------+-----+--------+----------+-----+--------+---------+
 | + setMem            | 0   |        |          |     |        |         |
-|   buff3_fu_200_p2   |     |        | buff3    | add | fabric | 0       |
-|   buff3_1_fu_204_p2 |     |        | buff3_1  | sub | fabric | 0       |
+|   buff3_fu_208_p2   |     |        | buff3    | add | fabric | 0       |
+|   buff3_1_fu_212_p2 |     |        | buff3_1  | sub | fabric | 0       |
 +---------------------+-----+--------+----------+-----+--------+---------+
 
 
@@ -119,9 +121,11 @@
 | Name              | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
 |                   |           |           |      |      |        |          |      |         | Banks            |
 +-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
-| + setMem          |           |           | 4    | 0    |        |          |      |         |                  |
+| + setMem          |           |           | 12   | 0    |        |          |      |         |                  |
 |   control_s_axi_U | interface | s_axilite |      |      |        |          |      |         |                  |
-|   gmem_m_axi_U    | interface | m_axi     | 4    |      |        |          |      |         |                  |
+|   gmem0_m_axi_U   | interface | m_axi     | 4    |      |        |          |      |         |                  |
+|   gmem1_m_axi_U   | interface | m_axi     | 4    |      |        |          |      |         |                  |
+|   gmem2_m_axi_U   | interface | m_axi     | 4    |      |        |          |      |         |                  |
 +-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
 
 
@@ -129,19 +133,19 @@
 == Pragma Report
 ================================================================
 * Ignored Pragmas
-+-----------+--------------------------------------+-----------------------------+-------------------------------------+
-| Type      | Options                              | Location                    | Messages                            |
-+-----------+--------------------------------------+-----------------------------+-------------------------------------+
-| interface | mode = s_axilite port = op depth = 1 | AXI_M/core.cpp:37 in setmem | unexpected pragma parameter 'depth' |
-+-----------+--------------------------------------+-----------------------------+-------------------------------------+
++-----------+--------------------------------------------------+-----------------------------+-------------------------------------+
+| Type      | Options                                          | Location                    | Messages                            |
++-----------+--------------------------------------------------+-----------------------------+-------------------------------------+
+| interface | s_axilite port = op bundle = operation depth = 1 | AXI_M/core.cpp:37 in setmem | unexpected pragma parameter 'depth' |
++-----------+--------------------------------------------------+-----------------------------+-------------------------------------+
 
 * Valid Pragma Syntax
-+-----------+--------------------------+-----------------------------+
-| Type      | Options                  | Location                    |
-+-----------+--------------------------+-----------------------------+
-| interface | m_axi port = a depth = 1 | AXI_M/core.cpp:33 in setmem |
-| interface | m_axi port = b depth = 1 | AXI_M/core.cpp:34 in setmem |
-| interface | m_axi port = c depth = 1 | AXI_M/core.cpp:35 in setmem |
-+-----------+--------------------------+-----------------------------+
++-----------+-----------------------------------------+-----------------------------+
+| Type      | Options                                 | Location                    |
++-----------+-----------------------------------------+-----------------------------+
+| interface | m_axi port = a bundle = gmem0 depth = 1 | AXI_M/core.cpp:33 in setmem |
+| interface | m_axi port = b bundle = gmem1 depth = 1 | AXI_M/core.cpp:34 in setmem |
+| interface | m_axi port = c bundle = gmem2 depth = 1 | AXI_M/core.cpp:35 in setmem |
++-----------+-----------------------------------------+-----------------------------+
 
 

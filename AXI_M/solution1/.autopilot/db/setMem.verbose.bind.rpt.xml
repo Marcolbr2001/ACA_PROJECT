@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'setMem'" level="0">
-<item name = "Date">Sun Apr  7 23:27:14 2024
+<item name = "Date">Mon Apr  8 13:29:52 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">AXI_M</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">17, 17, 0.170 us, 0.170 us, 18, 18, no</column>
+<column name="">16, 16, 0.160 us, 0.160 us, 17, 17, no</column>
 </table>
 </item>
 <item name = "Detail">
