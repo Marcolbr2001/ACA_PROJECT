@@ -1,18 +1,19 @@
 {
   "0": {
-    "basicblocks": 1,
+    "basicblocks": 14,
     "calls": "",
     "file": "core.cpp",
-    "fileloc": 4,
-    "instructions": 19,
+    "fileloc": 6,
+    "instructions": 69,
     "loads": {
-      "L": 1,
-      "T": 2
+      "L": 3,
+      "T": 3
     },
     "name": "setMem",
     "stores": {
+      "L": 5,
       "T": 1
     },
-    "total_instructions": 19
+    "total_instructions": 69
   }
 }

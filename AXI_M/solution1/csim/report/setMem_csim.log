@@ -1,9 +1,108 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-make: 'csim.exe' is up to date.
-HLS AXI-Stream no side-channel data example
-A = 27 B = 9, C = 18, OP = 0 difference
+   Compiling ../../../test_core.cpp in debug mode
+   Generating csim.exe
 
 
+A = 0 B = 0 C = 0, OP = 1 sum
+A = 2 B = 1 C = 3, OP = 1 sum
+A = 4 B = 2 C = 6, OP = 1 sum
+A = 6 B = 3 C = 9, OP = 1 sum
+A = 8 B = 4 C = 12, OP = 1 sum
+A = 10 B = 5 C = 15, OP = 1 sum
+A = 12 B = 6 C = 18, OP = 1 sum
+A = 14 B = 7 C = 21, OP = 1 sum
+A = 16 B = 8 C = 24, OP = 1 sum
+A = 18 B = 9 C = 27, OP = 1 sum
+A = 20 B = 10 C = 30, OP = 1 sum
+A = 22 B = 11 C = 33, OP = 1 sum
+A = 24 B = 12 C = 36, OP = 1 sum
+A = 26 B = 13 C = 39, OP = 1 sum
+A = 28 B = 14 C = 42, OP = 1 sum
+A = 30 B = 15 C = 45, OP = 1 sum
+A = 32 B = 16 C = 48, OP = 1 sum
+A = 34 B = 17 C = 51, OP = 1 sum
+A = 36 B = 18 C = 54, OP = 1 sum
+A = 38 B = 19 C = 57, OP = 1 sum
+A = 40 B = 20 C = 60, OP = 1 sum
+A = 42 B = 21 C = 63, OP = 1 sum
+A = 44 B = 22 C = 66, OP = 1 sum
+A = 46 B = 23 C = 69, OP = 1 sum
+A = 48 B = 24 C = 72, OP = 1 sum
+A = 50 B = 25 C = 75, OP = 1 sum
+A = 52 B = 26 C = 78, OP = 1 sum
+A = 54 B = 27 C = 81, OP = 1 sum
+A = 56 B = 28 C = 84, OP = 1 sum
+A = 58 B = 29 C = 87, OP = 1 sum
+A = 60 B = 30 C = 90, OP = 1 sum
+A = 62 B = 31 C = 93, OP = 1 sum
+A = 64 B = 32 C = 96, OP = 1 sum
+A = 66 B = 33 C = 99, OP = 1 sum
+A = 68 B = 34 C = 102, OP = 1 sum
+A = 70 B = 35 C = 105, OP = 1 sum
+A = 72 B = 36 C = 108, OP = 1 sum
+A = 74 B = 37 C = 111, OP = 1 sum
+A = 76 B = 38 C = 114, OP = 1 sum
+A = 78 B = 39 C = 117, OP = 1 sum
+A = 80 B = 40 C = 120, OP = 1 sum
+A = 82 B = 41 C = 123, OP = 1 sum
+A = 84 B = 42 C = 126, OP = 1 sum
+A = 86 B = 43 C = 129, OP = 1 sum
+A = 88 B = 44 C = 132, OP = 1 sum
+A = 90 B = 45 C = 135, OP = 1 sum
+A = 92 B = 46 C = 138, OP = 1 sum
+A = 94 B = 47 C = 141, OP = 1 sum
+A = 96 B = 48 C = 144, OP = 1 sum
+A = 98 B = 49 C = 147, OP = 1 sum
+A = 0 B = 0, C = 0, OP = 0 difference
+A = 2 B = 1, C = 1, OP = 0 difference
+A = 4 B = 2, C = 2, OP = 0 difference
+A = 6 B = 3, C = 3, OP = 0 difference
+A = 8 B = 4, C = 4, OP = 0 difference
+A = 10 B = 5, C = 5, OP = 0 difference
+A = 12 B = 6, C = 6, OP = 0 difference
+A = 14 B = 7, C = 7, OP = 0 difference
+A = 16 B = 8, C = 8, OP = 0 difference
+A = 18 B = 9, C = 9, OP = 0 difference
+A = 20 B = 10, C = 10, OP = 0 difference
+A = 22 B = 11, C = 11, OP = 0 difference
+A = 24 B = 12, C = 12, OP = 0 difference
+A = 26 B = 13, C = 13, OP = 0 difference
+A = 28 B = 14, C = 14, OP = 0 difference
+A = 30 B = 15, C = 15, OP = 0 difference
+A = 32 B = 16, C = 16, OP = 0 difference
+A = 34 B = 17, C = 17, OP = 0 difference
+A = 36 B = 18, C = 18, OP = 0 difference
+A = 38 B = 19, C = 19, OP = 0 difference
+A = 40 B = 20, C = 20, OP = 0 difference
+A = 42 B = 21, C = 21, OP = 0 difference
+A = 44 B = 22, C = 22, OP = 0 difference
+A = 46 B = 23, C = 23, OP = 0 difference
+A = 48 B = 24, C = 24, OP = 0 difference
+A = 50 B = 25, C = 25, OP = 0 difference
+A = 52 B = 26, C = 26, OP = 0 difference
+A = 54 B = 27, C = 27, OP = 0 difference
+A = 56 B = 28, C = 28, OP = 0 difference
+A = 58 B = 29, C = 29, OP = 0 difference
+A = 60 B = 30, C = 30, OP = 0 difference
+A = 62 B = 31, C = 31, OP = 0 difference
+A = 64 B = 32, C = 32, OP = 0 difference
+A = 66 B = 33, C = 33, OP = 0 difference
+A = 68 B = 34, C = 34, OP = 0 difference
+A = 70 B = 35, C = 35, OP = 0 difference
+A = 72 B = 36, C = 36, OP = 0 difference
+A = 74 B = 37, C = 37, OP = 0 difference
+A = 76 B = 38, C = 38, OP = 0 difference
+A = 78 B = 39, C = 39, OP = 0 difference
+A = 80 B = 40, C = 40, OP = 0 difference
+A = 82 B = 41, C = 41, OP = 0 difference
+A = 84 B = 42, C = 42, OP = 0 difference
+A = 86 B = 43, C = 43, OP = 0 difference
+A = 88 B = 44, C = 44, OP = 0 difference
+A = 90 B = 45, C = 45, OP = 0 difference
+A = 92 B = 46, C = 46, OP = 0 difference
+A = 94 B = 47, C = 47, OP = 0 difference
+A = 96 B = 48, C = 48, OP = 0 difference
+A = 98 B = 49, C = 49, OP = 0 difference
 INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

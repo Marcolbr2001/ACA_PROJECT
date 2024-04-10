@@ -19,28 +19,28 @@
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>17</Best-caseLatency>
-            <Average-caseLatency>17</Average-caseLatency>
-            <Worst-caseLatency>17</Worst-caseLatency>
-            <Best-caseRealTimeLatency>0.170 us</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>0.170 us</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>0.170 us</Worst-caseRealTimeLatency>
-            <Interval-min>18</Interval-min>
-            <Interval-max>18</Interval-max>
+            <Best-caseLatency>178</Best-caseLatency>
+            <Average-caseLatency>178</Average-caseLatency>
+            <Worst-caseLatency>178</Worst-caseLatency>
+            <Best-caseRealTimeLatency>1.780 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>1.780 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>1.780 us</Worst-caseRealTimeLatency>
+            <Interval-min>179</Interval-min>
+            <Interval-max>179</Interval-max>
         </SummaryOfOverallLatency>
         <SummaryOfViolations>
             <IssueType>-</IssueType>
             <ViolationType>-</ViolationType>
-            <SourceLocation>AXI_M/core.cpp:4</SourceLocation>
+            <SourceLocation>AXI_M/core.cpp:6</SourceLocation>
         </SummaryOfViolations>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <BRAM_18K>12</BRAM_18K>
-            <FF>3142</FF>
-            <LUT>3013</LUT>
-            <DSP>0</DSP>
+            <BRAM_18K>15</BRAM_18K>
+            <FF>3313</FF>
+            <LUT>3728</LUT>
             <URAM>0</URAM>
+            <DSP>0</DSP>
         </Resources>
         <AvailableResources>
             <BRAM_18K>280</BRAM_18K>
@@ -1893,14 +1893,54 @@
         </RtlPorts>
     </InterfaceSummary>
     <RTLDesignHierarchy>
-        <TopModule MAX_DEPTH="2">
+        <TopModule MAX_DEPTH="3">
             <ModuleName>setMem</ModuleName>
-            <BindInstances>buff3_fu_245_p2 buff3_1_fu_249_p2 control_s_axi_U gmem0_m_axi_U gmem1_m_axi_U gmem2_m_axi_U</BindInstances>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_setMem_Pipeline_1_fu_147</InstName>
+                    <ModuleName>setMem_Pipeline_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>147</ID>
+                    <BindInstances>empty_fu_92_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_setMem_Pipeline_2_fu_155</InstName>
+                    <ModuleName>setMem_Pipeline_2</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>155</ID>
+                    <BindInstances>empty_fu_92_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_setMem_Pipeline_3_fu_163</InstName>
+                    <ModuleName>setMem_Pipeline_3</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>163</ID>
+                    <BindInstances>empty_fu_92_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_setMem_Pipeline_VITIS_LOOP_35_1_fu_171</InstName>
+                    <ModuleName>setMem_Pipeline_VITIS_LOOP_35_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>171</ID>
+                    <BindInstances>add_ln35_fu_99_p2 sub_ln44_fu_116_p2 add_ln40_fu_122_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_setMem_Pipeline_5_fu_179</InstName>
+                    <ModuleName>setMem_Pipeline_5</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>179</ID>
+                    <BindInstances>empty_fu_97_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+            <BindInstances>buff_U buff2_U buff3_U control_s_axi_U gmem0_m_axi_U gmem1_m_axi_U gmem2_m_axi_U</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
         <Module>
-            <Name>setMem</Name>
+            <Name>setMem_Pipeline_1</Name>
+            <Loops>
+                <Loop1/>
+            </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
@@ -1908,32 +1948,53 @@
                     <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>17</Best-caseLatency>
-                    <Average-caseLatency>17</Average-caseLatency>
-                    <Worst-caseLatency>17</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.170 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.170 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.170 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>18</PipelineInitiationInterval>
+                    <Best-caseLatency>53</Best-caseLatency>
+                    <Average-caseLatency>53</Average-caseLatency>
+                    <Worst-caseLatency>53</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.530 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.530 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.530 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>53</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <Loop1>
+                        <Name>Loop 1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>50</TripCount>
+                        <Latency>51</Latency>
+                        <AbsoluteTimeLatency>0.510 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </Loop1>
+                </SummaryOfLoopLatency>
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>AXI_M/core.cpp:4</SourceLocation>
+                    <SourceLocation>AXI_M/core.cpp:29</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <Loop1>
+                            <Name>Loop 1</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>AXI_M/core.cpp:29</SourceLocation>
+                        </Loop1>
+                    </SummaryOfLoopViolations>
                 </SummaryOfViolations>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <BRAM_18K>12</BRAM_18K>
-                    <AVAIL_BRAM>280</AVAIL_BRAM>
-                    <UTIL_BRAM>4</UTIL_BRAM>
-                    <FF>3142</FF>
+                    <FF>55</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
-                    <UTIL_FF>2</UTIL_FF>
-                    <LUT>3013</LUT>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>77</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>5</UTIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
@@ -1943,8 +2004,342 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="buff3_fu_245_p2" SOURCE="AXI_M/core.cpp:40" STORAGESUBTYPE="" URAM="0" VARIABLE="buff3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="buff3_1_fu_249_p2" SOURCE="AXI_M/core.cpp:44" STORAGESUBTYPE="" URAM="0" VARIABLE="buff3_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_fu_92_p2" SOURCE="" STORAGESUBTYPE="" URAM="0" VARIABLE="empty"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>setMem_Pipeline_2</Name>
+            <Loops>
+                <Loop1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>53</Best-caseLatency>
+                    <Average-caseLatency>53</Average-caseLatency>
+                    <Worst-caseLatency>53</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.530 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.530 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.530 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>53</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <Loop1>
+                        <Name>Loop 1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>50</TripCount>
+                        <Latency>51</Latency>
+                        <AbsoluteTimeLatency>0.510 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </Loop1>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>AXI_M/core.cpp:30</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <Loop1>
+                            <Name>Loop 1</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>AXI_M/core.cpp:30</SourceLocation>
+                        </Loop1>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>55</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>77</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_fu_92_p2" SOURCE="" STORAGESUBTYPE="" URAM="0" VARIABLE="empty"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>setMem_Pipeline_3</Name>
+            <Loops>
+                <Loop1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>53</Best-caseLatency>
+                    <Average-caseLatency>53</Average-caseLatency>
+                    <Worst-caseLatency>53</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.530 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.530 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.530 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>53</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <Loop1>
+                        <Name>Loop 1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>50</TripCount>
+                        <Latency>51</Latency>
+                        <AbsoluteTimeLatency>0.510 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </Loop1>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>AXI_M/core.cpp:31</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <Loop1>
+                            <Name>Loop 1</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>AXI_M/core.cpp:31</SourceLocation>
+                        </Loop1>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>55</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>77</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_fu_92_p2" SOURCE="" STORAGESUBTYPE="" URAM="0" VARIABLE="empty"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>setMem_Pipeline_VITIS_LOOP_35_1</Name>
+            <Loops>
+                <VITIS_LOOP_35_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.504</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>53</Best-caseLatency>
+                    <Average-caseLatency>53</Average-caseLatency>
+                    <Worst-caseLatency>53</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.530 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.530 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.530 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>53</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_35_1>
+                        <Name>VITIS_LOOP_35_1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>50</TripCount>
+                        <Latency>51</Latency>
+                        <AbsoluteTimeLatency>0.510 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_35_1>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>AXI_M/core.cpp:35</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_35_1>
+                            <Name>VITIS_LOOP_35_1</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>AXI_M/core.cpp:35</SourceLocation>
+                        </VITIS_LOOP_35_1>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>55</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>176</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_35_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln35_fu_99_p2" SOURCE="AXI_M/core.cpp:35" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln35"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_35_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln44_fu_116_p2" SOURCE="AXI_M/core.cpp:44" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln44"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_35_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln40_fu_122_p2" SOURCE="AXI_M/core.cpp:40" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln40"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>setMem_Pipeline_5</Name>
+            <Loops>
+                <Loop1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>53</Best-caseLatency>
+                    <Average-caseLatency>53</Average-caseLatency>
+                    <Worst-caseLatency>53</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.530 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.530 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.530 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>53</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <Loop1>
+                        <Name>Loop 1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>50</TripCount>
+                        <Latency>51</Latency>
+                        <AbsoluteTimeLatency>0.510 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </Loop1>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>AXI_M/core.cpp:31</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <Loop1>
+                            <Name>Loop 1</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>AXI_M/core.cpp:31</SourceLocation>
+                        </Loop1>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>43</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>77</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_fu_97_p2" SOURCE="" STORAGESUBTYPE="" URAM="0" VARIABLE="empty"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>setMem</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>178</Best-caseLatency>
+                    <Average-caseLatency>178</Average-caseLatency>
+                    <Worst-caseLatency>178</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>1.780 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.780 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>1.780 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>179</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>AXI_M/core.cpp:6</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>15</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>5</UTIL_BRAM>
+                    <FF>3313</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>3</UTIL_FF>
+                    <LUT>3728</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>7</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="buff_U" SOURCE="AXI_M/core.cpp:22" STORAGESIZE="32 50 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p array" URAM="0" VARIABLE="buff"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="buff2_U" SOURCE="AXI_M/core.cpp:23" STORAGESIZE="32 50 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p array" URAM="0" VARIABLE="buff2"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="buff3_U" SOURCE="AXI_M/core.cpp:25" STORAGESIZE="32 50 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p array" URAM="0" VARIABLE="buff3"/>
                 <BindNode BINDTYPE="adapter" BRAM="0" BUNDLEDNAME="control" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="control_s_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="s_axilite" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
                 <BindNode BINDTYPE="adapter" BRAM="4" BUNDLEDNAME="gmem0" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="gmem0_m_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="m_axi" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
                 <BindNode BINDTYPE="adapter" BRAM="4" BUNDLEDNAME="gmem1" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="gmem1_m_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="m_axi" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
@@ -1958,16 +2353,16 @@
         <config_export display_name="AXI_ALU" output="C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M" version="1.0"/>
     </UserConfigCommands>
     <Args>
-        <Arg ArgName="a" index="0" direction="inout" srcType="*" srcSize="32">
+        <Arg ArgName="a" index="0" direction="in" srcType="*" srcSize="32">
             <hwRefs>
-                <hwRef type="interface" interface="m_axi_gmem0" name="" usage="data" direction="inout"/>
+                <hwRef type="interface" interface="m_axi_gmem0" name="" usage="data" direction="in"/>
                 <hwRef type="register" interface="s_axi_control" name="a_1" usage="address" direction="in"/>
                 <hwRef type="register" interface="s_axi_control" name="a_2" usage="address" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="b" index="1" direction="inout" srcType="*" srcSize="32">
+        <Arg ArgName="b" index="1" direction="in" srcType="*" srcSize="32">
             <hwRefs>
-                <hwRef type="interface" interface="m_axi_gmem1" name="" usage="data" direction="inout"/>
+                <hwRef type="interface" interface="m_axi_gmem1" name="" usage="data" direction="in"/>
                 <hwRef type="register" interface="s_axi_control" name="b_1" usage="address" direction="in"/>
                 <hwRef type="register" interface="s_axi_control" name="b_2" usage="address" direction="in"/>
             </hwRefs>
@@ -2253,7 +2648,7 @@
                 <busParam busParamName="MAX_WRITE_BURST_LENGTH">16</busParam>
                 <busParam busParamName="MAX_BURST_LENGTH">256</busParam>
                 <busParam busParamName="PROTOCOL">AXI4</busParam>
-                <busParam busParamName="READ_WRITE_MODE">WRITE_ONLY</busParam>
+                <busParam busParamName="READ_WRITE_MODE">READ_WRITE</busParam>
                 <busParam busParamName="HAS_BURST">0</busParam>
                 <busParam busParamName="SUPPORTS_NARROW_BURST">0</busParam>
             </busParams>
@@ -2358,8 +2753,8 @@
             <item name="Top Function Arguments">
                 <table>
                     <keys size="3">Argument, Direction, Datatype</keys>
-                    <column name="a">inout, pointer</column>
-                    <column name="b">inout, pointer</column>
+                    <column name="a">in, pointer</column>
+                    <column name="b">in, pointer</column>
                     <column name="c">inout, pointer</column>
                     <column name="op">in, int</column>
                 </table>
@@ -2382,15 +2777,41 @@
         </section>
     </ReportSWInterface>
     <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.">
+            <item name="Inferred Burst Summary">
+                <table>
+                    <keys size="6">HW Interface, Direction, Length, Width, Loop, Loop Location</keys>
+                    <column name="m_axi_gmem0">read, 50, 32, anonymous, AXI_M/core.cpp:29:5</column>
+                    <column name="m_axi_gmem1">read, 50, 32, anonymous, AXI_M/core.cpp:30:5</column>
+                    <column name="m_axi_gmem2">read, 50, 32, anonymous, AXI_M/core.cpp:31:5</column>
+                    <column name="m_axi_gmem2">write, 50, 32, anonymous, AXI_M/core.cpp:48:5</column>
+                </table>
+            </item>
+            <item name="All M_AXI Variable Accesses">
+                <table>
+                    <keys size="10">HW Interface, Variable, Access Location, Direction, Burst Status, Length, Loop, Loop Location, Resolution, Problem</keys>
+                    <column name="m_axi_gmem0">a, AXI_M/core.cpp:29:5, read, Widen Fail, , anonymous, AXI_M/core.cpp:29:5, 214-353, Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_gmem0">a, AXI_M/core.cpp:29:5, read, Inferred, 50, anonymous, AXI_M/core.cpp:29:5, , </column>
+                    <column name="m_axi_gmem1">b, AXI_M/core.cpp:30:5, read, Widen Fail, , anonymous, AXI_M/core.cpp:30:5, 214-353, Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_gmem1">b, AXI_M/core.cpp:30:5, read, Inferred, 50, anonymous, AXI_M/core.cpp:30:5, , </column>
+                    <column name="m_axi_gmem2">c, AXI_M/core.cpp:31:5, read, Widen Fail, , anonymous, AXI_M/core.cpp:31:5, 214-353, Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_gmem2">c, AXI_M/core.cpp:31:5, read, Inferred, 50, anonymous, AXI_M/core.cpp:31:5, , </column>
+                    <column name="m_axi_gmem2">c, AXI_M/core.cpp:48:5, write, Widen Fail, , anonymous, AXI_M/core.cpp:48:5, 214-353, Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_gmem2">c, AXI_M/core.cpp:48:5, write, Inferred, 50, anonymous, AXI_M/core.cpp:48:5, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportBurst>
     <PragmaReport>
-        <Pragma type="interface" location="AXI_M/core.cpp:6" status="valid" parentFunction="setmem" variable="op" isDirective="0" options="mode=s_axilite bundle=control port=op"/>
-        <Pragma type="interface" location="AXI_M/core.cpp:7" status="valid" parentFunction="setmem" variable="a" isDirective="0" options="mode=s_axilite bundle=control port=a"/>
-        <Pragma type="interface" location="AXI_M/core.cpp:8" status="valid" parentFunction="setmem" variable="b" isDirective="0" options="mode=s_axilite bundle=control port=b"/>
-        <Pragma type="interface" location="AXI_M/core.cpp:9" status="valid" parentFunction="setmem" variable="c" isDirective="0" options="mode=s_axilite bundle=control port=c"/>
-        <Pragma type="interface" location="AXI_M/core.cpp:11" status="valid" parentFunction="setmem" variable="return" isDirective="0" options="mode=s_axilite bundle=control port=return"/>
-        <Pragma type="interface" location="AXI_M/core.cpp:13" status="valid" parentFunction="setmem" variable="" isDirective="0" options="mode=m_axi port = a bundle = gmem0 depth = 1 offset=slave"/>
-        <Pragma type="interface" location="AXI_M/core.cpp:14" status="valid" parentFunction="setmem" variable="" isDirective="0" options="mode=m_axi port = b bundle = gmem1 depth = 1 offset=slave"/>
-        <Pragma type="interface" location="AXI_M/core.cpp:15" status="valid" parentFunction="setmem" variable="" isDirective="0" options="mode=m_axi port = c bundle = gmem2 depth = 1 offset=slave"/>
+        <Pragma type="interface" location="AXI_M/core.cpp:8" status="valid" parentFunction="setmem" variable="op" isDirective="0" options="mode=s_axilite bundle=control port=op"/>
+        <Pragma type="interface" location="AXI_M/core.cpp:9" status="valid" parentFunction="setmem" variable="a" isDirective="0" options="mode=s_axilite bundle=control port=a"/>
+        <Pragma type="interface" location="AXI_M/core.cpp:10" status="valid" parentFunction="setmem" variable="b" isDirective="0" options="mode=s_axilite bundle=control port=b"/>
+        <Pragma type="interface" location="AXI_M/core.cpp:11" status="valid" parentFunction="setmem" variable="c" isDirective="0" options="mode=s_axilite bundle=control port=c"/>
+        <Pragma type="interface" location="AXI_M/core.cpp:13" status="valid" parentFunction="setmem" variable="return" isDirective="0" options="mode=s_axilite bundle=control port=return"/>
+        <Pragma type="interface" location="AXI_M/core.cpp:15" status="valid" parentFunction="setmem" variable="a" isDirective="0" options="mode=m_axi port=a bundle=gmem0 depth=50 offset=slave"/>
+        <Pragma type="interface" location="AXI_M/core.cpp:16" status="valid" parentFunction="setmem" variable="b" isDirective="0" options="mode=m_axi port=b bundle=gmem1 depth=50 offset=slave"/>
+        <Pragma type="interface" location="AXI_M/core.cpp:17" status="valid" parentFunction="setmem" variable="c" isDirective="0" options="mode=m_axi port=c bundle=gmem2 depth=50 offset=slave"/>
     </PragmaReport>
 </profile>
 

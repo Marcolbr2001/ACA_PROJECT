@@ -1152,7 +1152,9 @@ extern "C" {
 # 3 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/core.cpp" 2
 
 
-# 4 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/core.cpp"
+
+
+# 6 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/core.cpp"
 void setMem(volatile int* a, volatile int* b, volatile int* c, int op) {
 
 #pragma HLS INTERFACE mode=s_axilite bundle=control port=op
@@ -1162,43 +1164,39 @@ void setMem(volatile int* a, volatile int* b, volatile int* c, int op) {
 
 #pragma HLS INTERFACE mode=s_axilite bundle=control port=return
 
-#pragma HLS INTERFACE mode=m_axi port = a bundle = gmem0 depth = 1 offset=slave
-#pragma HLS INTERFACE mode=m_axi port = b bundle = gmem1 depth = 1 offset=slave
-#pragma HLS INTERFACE mode=m_axi port = c bundle = gmem2 depth = 1 offset=slave
+#pragma HLS INTERFACE mode=m_axi port=a bundle=gmem0 depth=DATA_LENGTH offset=slave
+#pragma HLS INTERFACE mode=m_axi port=b bundle=gmem1 depth=DATA_LENGTH offset=slave
+#pragma HLS INTERFACE mode=m_axi port=c bundle=gmem2 depth=DATA_LENGTH offset=slave
 
 
     int i;
 
-    int buff[1];
-    int buff2[1];
+    int buff[50];
+ int buff2[50];
 
-    int buff3[1];
+ int buff3[50];
 
-    int buff4[1];
+ int buff4;
 
+    memcpy(buff, (const int*)a, 50 * sizeof(int));
+    memcpy(buff2, (const int*)b, 50 * sizeof(int));
+    memcpy(buff3, (const int*)c, 50 * sizeof(int));
 
+    buff4 = op;
 
+    for(int i=0; i < 50; i++)
+ {
 
+  if(buff4 == 1)
+  {
+   buff3[i] = buff[i] + buff2[i];
+  }
+  else
+  {
+   buff3[i] = buff[i] - buff2[i];
+  }
+ }
 
-    memcpy(buff, (const int*)a, 1 * sizeof(int));
-    memcpy(buff2, (const int*)b, 1 * sizeof(int));
-    memcpy(buff3, (const int*)c, 1 * sizeof(int));
-    memcpy(buff4, (const int*)op, 1 * sizeof(int));
-
-
-
-    if(buff4[0] == 1)
-    {
-        buff3[0] = buff[0] + buff2[0];
-    }
-    else
-    {
-        buff3[0] = buff[0] - buff2[0];
-    }
-
-
-
-
-    memcpy((int*)c, buff3, 1 * sizeof(int));
+    memcpy((int*)c, buff3, 50 * sizeof(int));
 
 }

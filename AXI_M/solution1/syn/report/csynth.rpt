@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'setMem'
 ================================================================
 + General Information: 
-    * Date:           Mon Apr  8 16:57:12 2024
+    * Date:           Wed Apr 10 17:18:24 2024
     * Version:        2023.2 (Build 4023990 on Oct 11 2023)
     * Project:        AXI_M
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,12 +15,22 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +----------+------+------+---------+---------+----------+---------+------+----------+---------+----+-----------+-----------+-----+
-    |  Modules | Issue|      | Latency | Latency | Iteration|         | Trip |          |         |    |           |           |     |
-    |  & Loops | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF    |    LUT    | URAM|
-    +----------+------+------+---------+---------+----------+---------+------+----------+---------+----+-----------+-----------+-----+
-    |+ setMem  |     -|  0.00|       17|  170.000|         -|       18|     -|        no|  12 (4%)|   -|  3142 (2%)|  3013 (5%)|    -|
-    +----------+------+------+---------+---------+----------+---------+------+----------+---------+----+-----------+-----------+-----+
+    +------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+-----------+-----+
+    |               Modules              | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |    |           |           |     |
+    |               & Loops              | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF    |    LUT    | URAM|
+    +------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+-----------+-----+
+    |+ setMem                            |     -|  0.00|      178|  1.780e+03|         -|      179|     -|        no|  15 (5%)|   -|  3313 (3%)|  3728 (7%)|    -|
+    | + setMem_Pipeline_1                |     -|  0.00|       53|    530.000|         -|       53|     -|        no|        -|   -|   55 (~0%)|   77 (~0%)|    -|
+    |  o Loop 1                          |     -|  7.30|       51|    510.000|         3|        1|    50|       yes|        -|   -|          -|          -|    -|
+    | + setMem_Pipeline_2                |     -|  0.00|       53|    530.000|         -|       53|     -|        no|        -|   -|   55 (~0%)|   77 (~0%)|    -|
+    |  o Loop 1                          |     -|  7.30|       51|    510.000|         3|        1|    50|       yes|        -|   -|          -|          -|    -|
+    | + setMem_Pipeline_3                |     -|  0.00|       53|    530.000|         -|       53|     -|        no|        -|   -|   55 (~0%)|   77 (~0%)|    -|
+    |  o Loop 1                          |     -|  7.30|       51|    510.000|         3|        1|    50|       yes|        -|   -|          -|          -|    -|
+    | + setMem_Pipeline_VITIS_LOOP_35_1  |     -|  0.80|       53|    530.000|         -|       53|     -|        no|        -|   -|   55 (~0%)|  176 (~0%)|    -|
+    |  o VITIS_LOOP_35_1                 |     -|  7.30|       51|    510.000|         3|        1|    50|       yes|        -|   -|          -|          -|    -|
+    | + setMem_Pipeline_5                |     -|  0.00|       53|    530.000|         -|       53|     -|        no|        -|   -|   43 (~0%)|   77 (~0%)|    -|
+    |  o Loop 1                          |     -|  7.30|       51|    510.000|         3|        1|    50|       yes|        -|   -|          -|          -|    -|
+    +------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+-----------+-----+
 
 
 ================================================================
@@ -78,8 +88,8 @@
 +----------+-----------+----------+
 | Argument | Direction | Datatype |
 +----------+-----------+----------+
-| a        | inout     | pointer  |
-| b        | inout     | pointer  |
+| a        | in        | pointer  |
+| b        | in        | pointer  |
 | c        | inout     | pointer  |
 | op       | in        | int      |
 +----------+-----------+----------+
@@ -102,47 +112,91 @@
 
 
 ================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+--------+-------+-----------+---------------------+
+| HW Interface | Direction | Length | Width | Loop      | Loop Location       |
++--------------+-----------+--------+-------+-----------+---------------------+
+| m_axi_gmem0  | read      | 50     | 32    | anonymous | AXI_M/core.cpp:29:5 |
+| m_axi_gmem1  | read      | 50     | 32    | anonymous | AXI_M/core.cpp:30:5 |
+| m_axi_gmem2  | read      | 50     | 32    | anonymous | AXI_M/core.cpp:31:5 |
+| m_axi_gmem2  | write     | 50     | 32    | anonymous | AXI_M/core.cpp:48:5 |
++--------------+-----------+--------+-------+-----------+---------------------+
+
+* All M_AXI Variable Accesses
++--------------+----------+---------------------+-----------+--------------+--------+-----------+---------------------+------------+-------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location     | Direction | Burst Status | Length | Loop      | Loop Location       | Resolution | Problem                                                                                               |
++--------------+----------+---------------------+-----------+--------------+--------+-----------+---------------------+------------+-------------------------------------------------------------------------------------------------------+
+| m_axi_gmem0  | a        | AXI_M/core.cpp:29:5 | read      | Widen Fail   |        | anonymous | AXI_M/core.cpp:29:5 | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | a        | AXI_M/core.cpp:29:5 | read      | Inferred     | 50     | anonymous | AXI_M/core.cpp:29:5 |            |                                                                                                       |
+| m_axi_gmem1  | b        | AXI_M/core.cpp:30:5 | read      | Widen Fail   |        | anonymous | AXI_M/core.cpp:30:5 | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem1  | b        | AXI_M/core.cpp:30:5 | read      | Inferred     | 50     | anonymous | AXI_M/core.cpp:30:5 |            |                                                                                                       |
+| m_axi_gmem2  | c        | AXI_M/core.cpp:31:5 | read      | Widen Fail   |        | anonymous | AXI_M/core.cpp:31:5 | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem2  | c        | AXI_M/core.cpp:31:5 | read      | Inferred     | 50     | anonymous | AXI_M/core.cpp:31:5 |            |                                                                                                       |
+| m_axi_gmem2  | c        | AXI_M/core.cpp:48:5 | write     | Widen Fail   |        | anonymous | AXI_M/core.cpp:48:5 | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem2  | c        | AXI_M/core.cpp:48:5 | write     | Inferred     | 50     | anonymous | AXI_M/core.cpp:48:5 |            |                                                                                                       |
++--------------+----------+---------------------+-----------+--------------+--------+-----------+---------------------+------------+-------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
 == Bind Op Report
 ================================================================
-+---------------------+-----+--------+----------+-----+--------+---------+
-| Name                | DSP | Pragma | Variable | Op  | Impl   | Latency |
-+---------------------+-----+--------+----------+-----+--------+---------+
-| + setMem            | 0   |        |          |     |        |         |
-|   buff3_fu_245_p2   |     |        | buff3    | add | fabric | 0       |
-|   buff3_1_fu_249_p2 |     |        | buff3_1  | sub | fabric | 0       |
-+---------------------+-----+--------+----------+-----+--------+---------+
++------------------------------------+-----+--------+----------+-----+--------+---------+
+| Name                               | DSP | Pragma | Variable | Op  | Impl   | Latency |
++------------------------------------+-----+--------+----------+-----+--------+---------+
+| + setMem                           | 0   |        |          |     |        |         |
+|  + setMem_Pipeline_1               | 0   |        |          |     |        |         |
+|    empty_fu_92_p2                  |     |        | empty    | add | fabric | 0       |
+|  + setMem_Pipeline_2               | 0   |        |          |     |        |         |
+|    empty_fu_92_p2                  |     |        | empty    | add | fabric | 0       |
+|  + setMem_Pipeline_3               | 0   |        |          |     |        |         |
+|    empty_fu_92_p2                  |     |        | empty    | add | fabric | 0       |
+|  + setMem_Pipeline_VITIS_LOOP_35_1 | 0   |        |          |     |        |         |
+|    add_ln35_fu_99_p2               |     |        | add_ln35 | add | fabric | 0       |
+|    sub_ln44_fu_116_p2              |     |        | sub_ln44 | sub | fabric | 0       |
+|    add_ln40_fu_122_p2              |     |        | add_ln40 | add | fabric | 0       |
+|  + setMem_Pipeline_5               | 0   |        |          |     |        |         |
+|    empty_fu_97_p2                  |     |        | empty    | add | fabric | 0       |
++------------------------------------+-----+--------+----------+-----+--------+---------+
 
 
 ================================================================
 == Storage Report
 ================================================================
-+-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
-| Name              | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
-|                   |           |           |      |      |        |          |      |         | Banks            |
-+-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
-| + setMem          |           |           | 12   | 0    |        |          |      |         |                  |
-|   control_s_axi_U | interface | s_axilite |      |      |        |          |      |         |                  |
-|   gmem0_m_axi_U   | interface | m_axi     | 4    |      |        |          |      |         |                  |
-|   gmem1_m_axi_U   | interface | m_axi     | 4    |      |        |          |      |         |                  |
-|   gmem2_m_axi_U   | interface | m_axi     | 4    |      |        |          |      |         |                  |
-+-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
++-------------------+--------------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name              | Usage        | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                   |              |           |      |      |        |          |      |         | Banks            |
++-------------------+--------------+-----------+------+------+--------+----------+------+---------+------------------+
+| + setMem          |              |           | 15   | 0    |        |          |      |         |                  |
+|   control_s_axi_U | interface    | s_axilite |      |      |        |          |      |         |                  |
+|   gmem0_m_axi_U   | interface    | m_axi     | 4    |      |        |          |      |         |                  |
+|   gmem1_m_axi_U   | interface    | m_axi     | 4    |      |        |          |      |         |                  |
+|   gmem2_m_axi_U   | interface    | m_axi     | 4    |      |        |          |      |         |                  |
+|   buff_U          | ram_1p array |           | 2    |      |        | buff     | auto | 1       | 32, 50, 1        |
+|   buff2_U         | ram_1p array |           | 2    |      |        | buff2    | auto | 1       | 32, 50, 1        |
+|   buff3_U         | ram_1p array |           | 2    |      |        | buff3    | auto | 1       | 32, 50, 1        |
++-------------------+--------------+-----------+------+------+--------+----------+------+---------+------------------+
 
 
 ================================================================
 == Pragma Report
 ================================================================
 * Valid Pragma Syntax
-+-----------+-----------------------------------------------------------+-------------------------------------+
-| Type      | Options                                                   | Location                            |
-+-----------+-----------------------------------------------------------+-------------------------------------+
-| interface | mode=s_axilite bundle=control port=op                     | AXI_M/core.cpp:6 in setmem, op      |
-| interface | mode=s_axilite bundle=control port=a                      | AXI_M/core.cpp:7 in setmem, a       |
-| interface | mode=s_axilite bundle=control port=b                      | AXI_M/core.cpp:8 in setmem, b       |
-| interface | mode=s_axilite bundle=control port=c                      | AXI_M/core.cpp:9 in setmem, c       |
-| interface | mode=s_axilite bundle=control port=return                 | AXI_M/core.cpp:11 in setmem, return |
-| interface | mode=m_axi port = a bundle = gmem0 depth = 1 offset=slave | AXI_M/core.cpp:13 in setmem         |
-| interface | mode=m_axi port = b bundle = gmem1 depth = 1 offset=slave | AXI_M/core.cpp:14 in setmem         |
-| interface | mode=m_axi port = c bundle = gmem2 depth = 1 offset=slave | AXI_M/core.cpp:15 in setmem         |
-+-----------+-----------------------------------------------------------+-------------------------------------+
++-----------+------------------------------------------------------+-------------------------------------+
+| Type      | Options                                              | Location                            |
++-----------+------------------------------------------------------+-------------------------------------+
+| interface | mode=s_axilite bundle=control port=op                | AXI_M/core.cpp:8 in setmem, op      |
+| interface | mode=s_axilite bundle=control port=a                 | AXI_M/core.cpp:9 in setmem, a       |
+| interface | mode=s_axilite bundle=control port=b                 | AXI_M/core.cpp:10 in setmem, b      |
+| interface | mode=s_axilite bundle=control port=c                 | AXI_M/core.cpp:11 in setmem, c      |
+| interface | mode=s_axilite bundle=control port=return            | AXI_M/core.cpp:13 in setmem, return |
+| interface | mode=m_axi port=a bundle=gmem0 depth=50 offset=slave | AXI_M/core.cpp:15 in setmem, a      |
+| interface | mode=m_axi port=b bundle=gmem1 depth=50 offset=slave | AXI_M/core.cpp:16 in setmem, b      |
+| interface | mode=m_axi port=c bundle=gmem2 depth=50 offset=slave | AXI_M/core.cpp:17 in setmem, c      |
++-----------+------------------------------------------------------+-------------------------------------+
 
 

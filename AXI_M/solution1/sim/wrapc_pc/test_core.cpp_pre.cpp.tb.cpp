@@ -9,7 +9,6 @@
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/test_core.cpp"
-# 16 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/test_core.cpp"
 # 1 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/stdio.h" 1 3
 # 10 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/stdio.h" 3
 # 1 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/crtdefs.h" 1 3
@@ -941,59 +940,66 @@ extern "C" {
 
 # 1 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/_mingw_print_pop.h" 1 3
 # 1038 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/stdio.h" 2 3
-# 17 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/test_core.cpp" 2
+# 2 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/test_core.cpp" 2
 
 
-# 18 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/test_core.cpp"
+
+
+# 5 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/test_core.cpp"
+
+#ifndef HLS_FASTSIM
+#ifdef __cplusplus
+extern "C"
+#endif
+void apatb_setMem_sw(volatile int *, volatile int *, volatile int *, int);
+#endif
+# 5 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/test_core.cpp"
 void setMem(volatile int* a, volatile int* b, volatile int* c, int op);
 
 
 #ifndef HLS_FASTSIM
-# 20 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/test_core.cpp"
+# 7 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/test_core.cpp"
 int main() {
     int i;
-    int A[1];
-    int B[1];
 
-    int C[1];
-
-    int OP[1];
-
-    printf("HLS AXI-Stream no side-channel data example\n");
+    int A[50];
+ int B[50];
+ int C[50];
+ int OP;
 
 
-        A[0] = 27;
+    for (int i = 0; i < 50; i++)
+    {
+        A[i] = 2*i;
+  B[i] = i;
+  C[i] = 0;
+  OP = i%2;
+ }
 
-
-
-
-  B[0] = 9;
-
-
-
-
-  C[0] = 0;
-
-
-
-
-  OP[0] = 0;
-
-
-
-    setMem(A, B, C, OP);
-
-
-
-           if(OP[0] == 1)
-                printf("A = %d B = %d C = %d, OP = %d sum\n", A[0], B[0], C[0], OP[0]);
-            else
-                printf("A = %d B = %d, C = %d, OP = %d difference\n", A[0], B[0], C[0], OP[0]);
-# 89 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/test_core.cpp"
     printf("\n\n");
-# 98 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/test_core.cpp"
+
+
+    
+#ifndef HLS_FASTSIM
+#define setMem apatb_setMem_sw
+#endif
+# 27 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/test_core.cpp"
+setMem(A, B, C, OP);
+#undef setMem
+# 27 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/test_core.cpp"
+
+
+    for (int i=0; i<50; i++)
+         {
+
+               if(OP == 1)
+                    printf("A = %d B = %d C = %d, OP = %d sum\n", A[i], B[i], C[i], OP);
+                else
+                    printf("A = %d B = %d, C = %d, OP = %d difference\n", A[i], B[i], C[i], OP);
+            }
+
     return 0;
 }
 #endif
-# 99 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/test_core.cpp"
+# 39 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/test_core.cpp"
 

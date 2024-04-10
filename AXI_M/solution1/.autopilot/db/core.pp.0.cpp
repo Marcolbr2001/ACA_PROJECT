@@ -1092,14 +1092,16 @@ extern "C" {
 # 191 "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\string.h" 2 3
 # 3 "AXI_M/core.cpp" 2
 
+
+
 __attribute__((sdx_kernel("setMem", 0))) void setMem(volatile int* a, volatile int* b, volatile int* c, int op) {
 #line 18 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=setMem
-# 4 "AXI_M/core.cpp"
+# 6 "AXI_M/core.cpp"
 
 #line 7 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=setMem
-# 4 "AXI_M/core.cpp"
+# 6 "AXI_M/core.cpp"
 
 
 #pragma HLS INTERFACE mode=s_axilite bundle=control port=op
@@ -1109,43 +1111,39 @@ __attribute__((sdx_kernel("setMem", 0))) void setMem(volatile int* a, volatile i
 
 #pragma HLS INTERFACE mode=s_axilite bundle=control port=return
 
-#pragma HLS INTERFACE mode=m_axi port = a bundle = gmem0 depth = 1 offset=slave
-#pragma HLS INTERFACE mode=m_axi port = b bundle = gmem1 depth = 1 offset=slave
-#pragma HLS INTERFACE mode=m_axi port = c bundle = gmem2 depth = 1 offset=slave
+#pragma HLS INTERFACE mode=m_axi port=a bundle=gmem0 depth=50 offset=slave
+#pragma HLS INTERFACE mode=m_axi port=b bundle=gmem1 depth=50 offset=slave
+#pragma HLS INTERFACE mode=m_axi port=c bundle=gmem2 depth=50 offset=slave
 
 
  int i;
 
-    int buff[1];
-    int buff2[1];
+    int buff[50];
+ int buff2[50];
 
-    int buff3[1];
+ int buff3[50];
 
-    int buff4[1];
+ int buff4;
 
+    memcpy(buff, (const int*)a, 50 * sizeof(int));
+    memcpy(buff2, (const int*)b, 50 * sizeof(int));
+    memcpy(buff3, (const int*)c, 50 * sizeof(int));
 
+    buff4 = op;
 
+    VITIS_LOOP_35_1: for(int i=0; i < 50; i++)
+ {
 
+  if(buff4 == 1)
+  {
+   buff3[i] = buff[i] + buff2[i];
+  }
+  else
+  {
+   buff3[i] = buff[i] - buff2[i];
+  }
+ }
 
-    memcpy(buff, (const int*)a, 1 * sizeof(int));
-    memcpy(buff2, (const int*)b, 1 * sizeof(int));
-    memcpy(buff3, (const int*)c, 1 * sizeof(int));
-    memcpy(buff4, (const int*)op, 1 * sizeof(int));
-
-
-
-    if(buff4[0] == 1)
-    {
-        buff3[0] = buff[0] + buff2[0];
-    }
-    else
-    {
-        buff3[0] = buff[0] - buff2[0];
-    }
-
-
-
-
-    memcpy((int*)c, buff3, 1 * sizeof(int));
+    memcpy((int*)c, buff3, 50 * sizeof(int));
 
 }

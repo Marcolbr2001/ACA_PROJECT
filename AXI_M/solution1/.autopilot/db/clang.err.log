@@ -1,4 +1,0 @@
-AXI_M/core.cpp:34:19: warning: cast to 'const int *' from smaller integer type 'int' [-Wint-to-pointer-cast]
-    memcpy(buff4, (const int*)op, 1 * sizeof(int));
-                  ^
-1 warning generated.

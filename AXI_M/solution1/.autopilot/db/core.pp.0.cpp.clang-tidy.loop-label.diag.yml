@@ -1,0 +1,13 @@
+---
+MainSourceFile:  'C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/.autopilot/db/core.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_35_1:  '
+    FileOffset:      35
+    FilePath:        'C:\Users\marco\Desktop\NECST\NL2\AXI_M\AXI_M\core.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\marco\Desktop\NECST\NL2\AXI_M\AXI_M\solution1\.autopilot\db\core.pp.0.cpp'
+        Offset:          63958
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_35_1: '
+...
