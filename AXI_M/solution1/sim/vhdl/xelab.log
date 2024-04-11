@@ -19,10 +19,10 @@ INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/
 INFO: [VRFC 10-3107] analyzing entity 'apatb_setMem_top'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'setMem'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_buff_RAM_AUTO_1R1W.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'setMem_buff_RAM_AUTO_1R1W'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_control_s_axi.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'setMem_control_s_axi'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_data_a_RAM_AUTO_1R1W.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'setMem_data_a_RAM_AUTO_1R1W'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_flow_control_loop_pipe_sequential_init.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'setMem_flow_control_loop_pipe_sequential_init'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_gmem0_m_axi.vhd" into library xil_defaultlib
@@ -61,16 +61,12 @@ INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem2_m_axi_reg_slice'
 INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem2_m_axi_fifo'
 INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem2_m_axi_srl'
 INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem2_m_axi_mem'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_1.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_1'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_2.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_2'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_3.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_3'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_5.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_5'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_VITIS_LOOP_35_1.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_VITIS_LOOP_35_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_VITIS_LOOP_31_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_VITIS_LOOP_31_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_VITIS_LOOP_43_2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_VITIS_LOOP_43_2'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_VITIS_LOOP_58_3.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_VITIS_LOOP_58_3'
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
@@ -85,13 +81,11 @@ Compiling package ieee.std_logic_unsigned
 Compiling package ieee.numeric_std
 Compiling package ieee.std_logic_textio
 Compiling module work.glbl
-Compiling architecture rtl of entity xil_defaultlib.setMem_buff_RAM_AUTO_1R1W [\setMem_buff_RAM_AUTO_1R1W(1,4)\]
+Compiling architecture rtl of entity xil_defaultlib.setMem_data_a_RAM_AUTO_1R1W [\setMem_data_a_RAM_AUTO_1R1W(1,4...]
 Compiling architecture behav of entity xil_defaultlib.setMem_flow_control_loop_pipe_sequential_init [setmem_flow_control_loop_pipe_se...]
-Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_1 [setmem_setmem_pipeline_1_default]
-Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_2 [setmem_setmem_pipeline_2_default]
-Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_3 [setmem_setmem_pipeline_3_default]
-Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_VITIS_LOOP_35_1 [setmem_setmem_pipeline_vitis_loo...]
-Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_5 [setmem_setmem_pipeline_5_default]
+Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_VITIS_LOOP_31_1 [setmem_setmem_pipeline_vitis_loo...]
+Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_VITIS_LOOP_43_2 [setmem_setmem_pipeline_vitis_loo...]
+Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_VITIS_LOOP_58_3 [setmem_setmem_pipeline_vitis_loo...]
 Compiling architecture behave of entity xil_defaultlib.setMem_control_s_axi [setmem_control_s_axi_default]
 Compiling architecture behav of entity xil_defaultlib.setMem_gmem0_m_axi_srl [\setMem_gmem0_m_axi_srl(data_wid...]
 Compiling architecture behave of entity xil_defaultlib.setMem_gmem0_m_axi_fifo [\setMem_gmem0_m_axi_fifo(data_wi...]

@@ -3,8 +3,8 @@ source_filename = "llvm-link"
 target datalayout = "e-m:e-i64:64-i128:128-i256:256-i512:512-i1024:1024-i2048:2048-i4096:4096-n8:16:32:64-S128-v16:16-v24:32-v32:32-v48:64-v96:128-v192:256-v256:256-v512:512-v1024:1024"
 target triple = "fpga64-xilinx-none"
 
-; Function Attrs: inaccessiblemem_or_argmemonly noinline willreturn
-define void @apatb_setMem_ir(i32* noalias nocapture nonnull readonly "maxi" %a, i32* noalias nocapture nonnull readonly "maxi" %b, i32* noalias nocapture nonnull "maxi" %c, i32 %op) local_unnamed_addr #0 {
+; Function Attrs: noinline
+define void @apatb_setMem_ir(i32* noalias nonnull "maxi" %a, i32* noalias nonnull "maxi" %b, i32* noalias nonnull "maxi" %c, i32 %op) local_unnamed_addr #0 {
 entry:
   %a_copy = alloca [50 x i32], align 512
   %b_copy = alloca [50 x i32], align 512
@@ -89,6 +89,8 @@ declare void @apatb_setMem_hw([50 x i32]*, [50 x i32]*, [50 x i32]*, i32)
 ; Function Attrs: argmemonly noinline norecurse willreturn
 define internal fastcc void @copy_back([50 x i32]* noalias, [50 x i32]* noalias readonly align 512, [50 x i32]* noalias, [50 x i32]* noalias readonly align 512, [50 x i32]* noalias, [50 x i32]* noalias readonly align 512) unnamed_addr #4 {
 entry:
+  call fastcc void @onebyonecpy_hls.p0a50i32([50 x i32]* %0, [50 x i32]* align 512 %1)
+  call fastcc void @onebyonecpy_hls.p0a50i32([50 x i32]* %2, [50 x i32]* align 512 %3)
   call fastcc void @onebyonecpy_hls.p0a50i32([50 x i32]* %4, [50 x i32]* align 512 %5)
   ret void
 }
@@ -106,7 +108,7 @@ entry:
 
 declare void @setMem_hw_stub(i32*, i32*, i32*, i32)
 
-attributes #0 = { inaccessiblemem_or_argmemonly noinline willreturn "fpga.wrapper.func"="wrapper" }
+attributes #0 = { noinline "fpga.wrapper.func"="wrapper" }
 attributes #1 = { argmemonly noinline norecurse willreturn "fpga.wrapper.func"="copyin" }
 attributes #2 = { argmemonly noinline norecurse willreturn "fpga.wrapper.func"="onebyonecpy_hls" }
 attributes #3 = { argmemonly noinline norecurse willreturn "fpga.wrapper.func"="arraycpy_hls" }

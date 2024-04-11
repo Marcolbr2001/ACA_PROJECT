@@ -2,7 +2,27 @@
 log_wave -r /
 set designtopgroup [add_wave_group "Design Top Signals"]
 set cinoutgroup [add_wave_group "C InOuts" -into $designtopgroup]
-set c_group [add_wave_group c(axi_master) -into $cinoutgroup]
+set a__b__c__op__return_group [add_wave_group a__b__c__op__return(axi_slave) -into $cinoutgroup]
+add_wave /apatb_setMem_top/AESL_inst_setMem/interrupt -into $a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_BRESP -into $a__b__c__op__return_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_BREADY -into $a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_BVALID -into $a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_RRESP -into $a__b__c__op__return_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_RDATA -into $a__b__c__op__return_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_RREADY -into $a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_RVALID -into $a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_ARREADY -into $a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_ARVALID -into $a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_ARADDR -into $a__b__c__op__return_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_WSTRB -into $a__b__c__op__return_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_WDATA -into $a__b__c__op__return_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_WREADY -into $a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_WVALID -into $a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_AWREADY -into $a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_AWVALID -into $a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_AWADDR -into $a__b__c__op__return_group -radix hex
+set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+set c_group [add_wave_group c(axi_master) -into $coutputgroup]
 set rdata_group [add_wave_group "Read Channel" -into $c_group]
 set wdata_group [add_wave_group "Write Channel" -into $c_group]
 set ctrl_group [add_wave_group "Handshakes" -into $c_group]
@@ -51,25 +71,6 @@ add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem2_AWID -into $wdata_group 
 add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem2_AWADDR -into $wdata_group -radix hex
 add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem2_AWREADY -into $ctrl_group -color #ffff00 -radix hex
 add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem2_AWVALID -into $ctrl_group -color #ffff00 -radix hex
-set a__b__c__op__return_group [add_wave_group a__b__c__op__return(axi_slave) -into $cinoutgroup]
-add_wave /apatb_setMem_top/AESL_inst_setMem/interrupt -into $a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_BRESP -into $a__b__c__op__return_group -radix hex
-add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_BREADY -into $a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_BVALID -into $a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_RRESP -into $a__b__c__op__return_group -radix hex
-add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_RDATA -into $a__b__c__op__return_group -radix hex
-add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_RREADY -into $a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_RVALID -into $a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_ARREADY -into $a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_ARVALID -into $a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_ARADDR -into $a__b__c__op__return_group -radix hex
-add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_WSTRB -into $a__b__c__op__return_group -radix hex
-add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_WDATA -into $a__b__c__op__return_group -radix hex
-add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_WREADY -into $a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_WVALID -into $a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_AWREADY -into $a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_AWVALID -into $a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_AWADDR -into $a__b__c__op__return_group -radix hex
 set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
 set b_group [add_wave_group b(axi_master) -into $cinputgroup]
 set rdata_group [add_wave_group "Read Channel" -into $b_group]
@@ -193,7 +194,27 @@ add_wave /apatb_setMem_top/LENGTH_gmem1 -into $tb_portdepth_group -radix hex
 add_wave /apatb_setMem_top/LENGTH_gmem2 -into $tb_portdepth_group -radix hex
 add_wave /apatb_setMem_top/LENGTH_op -into $tb_portdepth_group -radix hex
 set tbcinoutgroup [add_wave_group "C InOuts" -into $testbenchgroup]
-set tb_c_group [add_wave_group c(axi_master) -into $tbcinoutgroup]
+set tb_a__b__c__op__return_group [add_wave_group a__b__c__op__return(axi_slave) -into $tbcinoutgroup]
+add_wave /apatb_setMem_top/control_INTERRUPT -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/control_BRESP -into $tb_a__b__c__op__return_group -radix hex
+add_wave /apatb_setMem_top/control_BREADY -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/control_BVALID -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/control_RRESP -into $tb_a__b__c__op__return_group -radix hex
+add_wave /apatb_setMem_top/control_RDATA -into $tb_a__b__c__op__return_group -radix hex
+add_wave /apatb_setMem_top/control_RREADY -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/control_RVALID -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/control_ARREADY -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/control_ARVALID -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/control_ARADDR -into $tb_a__b__c__op__return_group -radix hex
+add_wave /apatb_setMem_top/control_WSTRB -into $tb_a__b__c__op__return_group -radix hex
+add_wave /apatb_setMem_top/control_WDATA -into $tb_a__b__c__op__return_group -radix hex
+add_wave /apatb_setMem_top/control_WREADY -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/control_WVALID -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/control_AWREADY -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/control_AWVALID -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/control_AWADDR -into $tb_a__b__c__op__return_group -radix hex
+set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+set tb_c_group [add_wave_group c(axi_master) -into $tbcoutputgroup]
 set rdata_group [add_wave_group "Read Channel" -into $tb_c_group]
 set wdata_group [add_wave_group "Write Channel" -into $tb_c_group]
 set ctrl_group [add_wave_group "Handshakes" -into $tb_c_group]
@@ -242,25 +263,6 @@ add_wave /apatb_setMem_top/gmem2_AWID -into $wdata_group -radix hex
 add_wave /apatb_setMem_top/gmem2_AWADDR -into $wdata_group -radix hex
 add_wave /apatb_setMem_top/gmem2_AWREADY -into $ctrl_group -color #ffff00 -radix hex
 add_wave /apatb_setMem_top/gmem2_AWVALID -into $ctrl_group -color #ffff00 -radix hex
-set tb_a__b__c__op__return_group [add_wave_group a__b__c__op__return(axi_slave) -into $tbcinoutgroup]
-add_wave /apatb_setMem_top/control_INTERRUPT -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/control_BRESP -into $tb_a__b__c__op__return_group -radix hex
-add_wave /apatb_setMem_top/control_BREADY -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/control_BVALID -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/control_RRESP -into $tb_a__b__c__op__return_group -radix hex
-add_wave /apatb_setMem_top/control_RDATA -into $tb_a__b__c__op__return_group -radix hex
-add_wave /apatb_setMem_top/control_RREADY -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/control_RVALID -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/control_ARREADY -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/control_ARVALID -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/control_ARADDR -into $tb_a__b__c__op__return_group -radix hex
-add_wave /apatb_setMem_top/control_WSTRB -into $tb_a__b__c__op__return_group -radix hex
-add_wave /apatb_setMem_top/control_WDATA -into $tb_a__b__c__op__return_group -radix hex
-add_wave /apatb_setMem_top/control_WREADY -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/control_WVALID -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/control_AWREADY -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/control_AWVALID -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-add_wave /apatb_setMem_top/control_AWADDR -into $tb_a__b__c__op__return_group -radix hex
 set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
 set tb_b_group [add_wave_group b(axi_master) -into $tbcinputgroup]
 set rdata_group [add_wave_group "Read Channel" -into $tb_b_group]

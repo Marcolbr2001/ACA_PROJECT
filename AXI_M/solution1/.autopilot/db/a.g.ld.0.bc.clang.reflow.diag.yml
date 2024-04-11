@@ -1,223 +1,59 @@
---- !Passed
+--- !Missed
 Pass:            reflow-burst-inference
-Name:            BurstInferred
-DebugLoc:        { File: AXI_M/core.cpp, Line: 29, Column: 5 }
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: AXI_M/core.cpp, Line: 33, Column: 15 }
 Function:        _Z6setMemPViS0_S0_i
 Args:            
-  - String:          'Sequential '
-  - Direction:       read
-  - String:          ' of length '
-  - Length:          '50'
-  - String:          ' has been inferred'
+  - String:          Volatile or Atomic access cannot be transformed
   - String:          ' _XLX_SEP_ '
-  - AccessID:        a1seq
+  - OrigAccess:      load
+    DebugLoc:        { File: AXI_M/core.cpp, Line: 33, Column: 15 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.3
   - ArrayName:       a
   - String:          ' '
   - BundleName:      gmem0
   - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'AXI_M/core.cpp:29:5'
-  - String:          ' '
   - Function:        'setMem(int volatile*, int volatile*, int volatile*, int)'
     DebugLoc:        { File: AXI_M/core.cpp, Line: 6, Column: 0 }
   - String:          ' '
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop8.load.3
 ...
---- !Passed
+--- !Missed
 Pass:            reflow-burst-inference
-Name:            BurstInferred
-DebugLoc:        { File: AXI_M/core.cpp, Line: 30, Column: 5 }
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: AXI_M/core.cpp, Line: 34, Column: 15 }
 Function:        _Z6setMemPViS0_S0_i
 Args:            
-  - String:          'Sequential '
-  - Direction:       read
-  - String:          ' of length '
-  - Length:          '50'
-  - String:          ' has been inferred'
+  - String:          Volatile or Atomic access cannot be transformed
   - String:          ' _XLX_SEP_ '
-  - AccessID:        b2seq
+  - OrigAccess:      load
+    DebugLoc:        { File: AXI_M/core.cpp, Line: 34, Column: 15 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.7
   - ArrayName:       b
   - String:          ' '
   - BundleName:      gmem1
   - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'AXI_M/core.cpp:30:5'
-  - String:          ' '
   - Function:        'setMem(int volatile*, int volatile*, int volatile*, int)'
     DebugLoc:        { File: AXI_M/core.cpp, Line: 6, Column: 0 }
   - String:          ' '
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop5.load.3
 ...
---- !Passed
+--- !Missed
 Pass:            reflow-burst-inference
-Name:            BurstInferred
-DebugLoc:        { File: AXI_M/core.cpp, Line: 31, Column: 5 }
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: AXI_M/core.cpp, Line: 60, Column: 8 }
 Function:        _Z6setMemPViS0_S0_i
 Args:            
-  - String:          'Sequential '
-  - Direction:       read
-  - String:          ' of length '
-  - Length:          '50'
-  - String:          ' has been inferred'
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        c3seq
-  - ArrayName:       c
-  - String:          ' '
-  - BundleName:      gmem2
-  - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'AXI_M/core.cpp:31:5'
-  - String:          ' '
-  - Function:        'setMem(int volatile*, int volatile*, int volatile*, int)'
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 6, Column: 0 }
-  - String:          ' '
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop2.load.3
-...
---- !Passed
-Pass:            reflow-burst-inference
-Name:            BurstInferred
-DebugLoc:        { File: AXI_M/core.cpp, Line: 48, Column: 5 }
-Function:        _Z6setMemPViS0_S0_i
-Args:            
-  - String:          'Sequential '
-  - Direction:       write
-  - String:          ' of length '
-  - Length:          '50'
-  - String:          ' has been inferred'
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        c3seq4
-  - ArrayName:       c
-  - String:          ' '
-  - BundleName:      gmem2
-  - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'AXI_M/core.cpp:48:5'
-  - String:          ' '
-  - Function:        'setMem(int volatile*, int volatile*, int volatile*, int)'
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 6, Column: 0 }
-  - String:          ' '
+  - String:          Volatile or Atomic access cannot be transformed
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      store
+    DebugLoc:        { File: AXI_M/core.cpp, Line: 60, Column: 8 }
   - OrigDirection:   write
-  - OrigID:          load-store-loop.store.5
-...
---- !Missed
-Pass:            reflow-burst-widen
-Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: AXI_M/core.cpp, Line: 48, Column: 5 }
-Function:        _Z6setMemPViS0_S0_i
-Args:            
-  - String:          'Could not widen since type '
-  - Type:            i32
-  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
-  - Threshold:       '0'
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      call
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 48, Column: 5 }
-  - OrigDirection:   write
-  - OrigID:          c3seq4
+  - OrigID:          for.inc38.store.5
   - ArrayName:       c
   - String:          ' '
   - BundleName:      gmem2
   - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'AXI_M/core.cpp:48:5'
-  - String:          ' '
-  - Function:        'setMem(int volatile*, int volatile*, int volatile*, int)'
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 6, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-widen
-Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: AXI_M/core.cpp, Line: 31, Column: 5 }
-Function:        _Z6setMemPViS0_S0_i
-Args:            
-  - String:          'Could not widen since type '
-  - Type:            i32
-  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
-  - Threshold:       '0'
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      call
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 31, Column: 5 }
-  - OrigDirection:   read
-  - OrigID:          c3seq
-  - ArrayName:       c
-  - String:          ' '
-  - BundleName:      gmem2
-  - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'AXI_M/core.cpp:31:5'
-  - String:          ' '
-  - Function:        'setMem(int volatile*, int volatile*, int volatile*, int)'
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 6, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-widen
-Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: AXI_M/core.cpp, Line: 30, Column: 5 }
-Function:        _Z6setMemPViS0_S0_i
-Args:            
-  - String:          'Could not widen since type '
-  - Type:            i32
-  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
-  - Threshold:       '0'
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      call
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 30, Column: 5 }
-  - OrigDirection:   read
-  - OrigID:          b2seq
-  - ArrayName:       b
-  - String:          ' '
-  - BundleName:      gmem1
-  - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'AXI_M/core.cpp:30:5'
-  - String:          ' '
-  - Function:        'setMem(int volatile*, int volatile*, int volatile*, int)'
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 6, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-widen
-Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: AXI_M/core.cpp, Line: 29, Column: 5 }
-Function:        _Z6setMemPViS0_S0_i
-Args:            
-  - String:          'Could not widen since type '
-  - Type:            i32
-  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
-  - Threshold:       '0'
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      call
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 29, Column: 5 }
-  - OrigDirection:   read
-  - OrigID:          a1seq
-  - ArrayName:       a
-  - String:          ' '
-  - BundleName:      gmem0
-  - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'AXI_M/core.cpp:29:5'
-  - String:          ' '
   - Function:        'setMem(int volatile*, int volatile*, int volatile*, int)'
     DebugLoc:        { File: AXI_M/core.cpp, Line: 6, Column: 0 }
   - String:          ' '
@@ -227,9 +63,9 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        unknown
+  - LoopName:        VITIS_LOOP_31_1
   - String:          '> at '
-  - LoopLoc:         'AXI_M/core.cpp:29:5'
+  - LoopLoc:         'AXI_M/core.cpp:31:19'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -237,9 +73,9 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        unknown
+  - LoopName:        VITIS_LOOP_43_2
   - String:          '> at '
-  - LoopLoc:         'AXI_M/core.cpp:30:5'
+  - LoopLoc:         'AXI_M/core.cpp:43:22'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -247,228 +83,8 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        unknown
+  - LoopName:        VITIS_LOOP_58_3
   - String:          '> at '
-  - LoopLoc:         'AXI_M/core.cpp:31:5'
+  - LoopLoc:         'AXI_M/core.cpp:58:19'
   - String:          ' '
-...
---- !HLSReportInfo
-Pass:            auto-loop-pipeline
-Name:            AutoLoopPipeline
-Args:            
-  - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_35_1
-  - String:          '> at '
-  - LoopLoc:         'AXI_M/core.cpp:35:22'
-  - String:          ' '
-...
---- !HLSReportInfo
-Pass:            auto-loop-pipeline
-Name:            AutoLoopPipeline
-Args:            
-  - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        unknown
-  - String:          '> at '
-  - LoopLoc:         'AXI_M/core.cpp:48:5'
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-burst-summary
-Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: AXI_M/core.cpp, Line: 29, Column: 5 }
-Function:        _Z6setMemPViS0_S0_i
-Args:            
-  - String:          'Multiple burst '
-  - Direction:       reads
-  - String:          ' of length '
-  - Length:          '50'
-  - String:          ' and bit width '
-  - Width:           '32'
-  - String:          ' has been inferred.'
-  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        seq
-  - ArrayName:       ''
-  - String:          ' '
-  - BundleName:      gmem0
-  - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'AXI_M/core.cpp:29:5'
-  - String:          ' '
-  - Function:        'setMem(int volatile*, int volatile*, int volatile*, int)'
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 6, Column: 0 }
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-burst-summary
-Name:            BurstInferredSummary
-DebugLoc:        { File: AXI_M/core.cpp, Line: 29, Column: 5 }
-Function:        _Z6setMemPViS0_S0_i
-Args:            
-  - String:          'Multiple burst '
-  - Direction:       reads
-  - String:          ' of length '
-  - Length:          '50'
-  - String:          ' and bit width '
-  - Width:           '32'
-  - String:          ' in loop '''
-  - LoopName:        anonymous
-  - String:          '''('
-  - LoopLoc:         'AXI_M/core.cpp:29:5'
-  - String:          ')'
-  - String:          ' has been inferred on bundle '''
-  - BundleName:      gmem0
-  - String:          '''.'
-  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
-...
---- !Passed
-Pass:            reflow-burst-summary
-Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: AXI_M/core.cpp, Line: 30, Column: 5 }
-Function:        _Z6setMemPViS0_S0_i
-Args:            
-  - String:          'Multiple burst '
-  - Direction:       reads
-  - String:          ' of length '
-  - Length:          '50'
-  - String:          ' and bit width '
-  - Width:           '32'
-  - String:          ' has been inferred.'
-  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        seq1
-  - ArrayName:       ''
-  - String:          ' '
-  - BundleName:      gmem1
-  - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'AXI_M/core.cpp:30:5'
-  - String:          ' '
-  - Function:        'setMem(int volatile*, int volatile*, int volatile*, int)'
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 6, Column: 0 }
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-burst-summary
-Name:            BurstInferredSummary
-DebugLoc:        { File: AXI_M/core.cpp, Line: 30, Column: 5 }
-Function:        _Z6setMemPViS0_S0_i
-Args:            
-  - String:          'Multiple burst '
-  - Direction:       reads
-  - String:          ' of length '
-  - Length:          '50'
-  - String:          ' and bit width '
-  - Width:           '32'
-  - String:          ' in loop '''
-  - LoopName:        anonymous
-  - String:          '''('
-  - LoopLoc:         'AXI_M/core.cpp:30:5'
-  - String:          ')'
-  - String:          ' has been inferred on bundle '''
-  - BundleName:      gmem1
-  - String:          '''.'
-  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
-...
---- !Passed
-Pass:            reflow-burst-summary
-Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: AXI_M/core.cpp, Line: 31, Column: 5 }
-Function:        _Z6setMemPViS0_S0_i
-Args:            
-  - String:          'Multiple burst '
-  - Direction:       reads
-  - String:          ' of length '
-  - Length:          '50'
-  - String:          ' and bit width '
-  - Width:           '32'
-  - String:          ' has been inferred.'
-  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        seq2
-  - ArrayName:       ''
-  - String:          ' '
-  - BundleName:      gmem2
-  - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'AXI_M/core.cpp:31:5'
-  - String:          ' '
-  - Function:        'setMem(int volatile*, int volatile*, int volatile*, int)'
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 6, Column: 0 }
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-burst-summary
-Name:            BurstInferredSummary
-DebugLoc:        { File: AXI_M/core.cpp, Line: 31, Column: 5 }
-Function:        _Z6setMemPViS0_S0_i
-Args:            
-  - String:          'Multiple burst '
-  - Direction:       reads
-  - String:          ' of length '
-  - Length:          '50'
-  - String:          ' and bit width '
-  - Width:           '32'
-  - String:          ' in loop '''
-  - LoopName:        anonymous
-  - String:          '''('
-  - LoopLoc:         'AXI_M/core.cpp:31:5'
-  - String:          ')'
-  - String:          ' has been inferred on bundle '''
-  - BundleName:      gmem2
-  - String:          '''.'
-  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
-...
---- !Passed
-Pass:            reflow-burst-summary
-Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: AXI_M/core.cpp, Line: 48, Column: 5 }
-Function:        _Z6setMemPViS0_S0_i
-Args:            
-  - String:          'Multiple burst '
-  - Direction:       writes
-  - String:          ' of length '
-  - Length:          '50'
-  - String:          ' and bit width '
-  - Width:           '32'
-  - String:          ' has been inferred.'
-  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        seq3
-  - ArrayName:       ''
-  - String:          ' '
-  - BundleName:      gmem2
-  - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'AXI_M/core.cpp:48:5'
-  - String:          ' '
-  - Function:        'setMem(int volatile*, int volatile*, int volatile*, int)'
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 6, Column: 0 }
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-burst-summary
-Name:            BurstInferredSummary
-DebugLoc:        { File: AXI_M/core.cpp, Line: 48, Column: 5 }
-Function:        _Z6setMemPViS0_S0_i
-Args:            
-  - String:          'Multiple burst '
-  - Direction:       writes
-  - String:          ' of length '
-  - Length:          '50'
-  - String:          ' and bit width '
-  - Width:           '32'
-  - String:          ' in loop '''
-  - LoopName:        anonymous
-  - String:          '''('
-  - LoopLoc:         'AXI_M/core.cpp:48:5'
-  - String:          ')'
-  - String:          ' has been inferred on bundle '''
-  - BundleName:      gmem2
-  - String:          '''.'
-  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...

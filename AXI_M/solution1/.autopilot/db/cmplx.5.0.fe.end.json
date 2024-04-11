@@ -1,71 +1,8 @@
 {
     "1": {
-        "name": "setMem_Pipeline_1",
+        "name": "setMem_Pipeline_VITIS_LOOP_43_2",
         "file": "AXI_M\/core.cpp",
-        "fileloc": "29",
-        "instructions": "21",
-        "total_instructions": "21",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "L": "1"
-        },
-        "stores": {
-            "L": "3"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "0": {
-        "name": "setMem",
-        "file": "core.cpp",
-        "fileloc": "6",
-        "instructions": "45",
-        "total_instructions": "153",
-        "calls": "1 5 2 4 3",
-        "basicblocks": "1"
-    },
-    "2": {
-        "name": "setMem_Pipeline_3",
-        "file": "AXI_M\/core.cpp",
-        "fileloc": "31",
-        "instructions": "21",
-        "total_instructions": "21",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "L": "1"
-        },
-        "stores": {
-            "L": "3"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "3": {
-        "name": "setMem_Pipeline_5",
-        "file": "AXI_M\/core.cpp",
-        "fileloc": "31",
-        "instructions": "21",
-        "total_instructions": "21",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "L": "2"
-        },
-        "stores": {
-            "L": "2"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "4": {
-        "name": "setMem_Pipeline_VITIS_LOOP_35_1",
-        "file": "AXI_M\/core.cpp",
-        "fileloc": "35",
+        "fileloc": "43",
         "instructions": "24",
         "total_instructions": "24",
         "calls": "",
@@ -80,19 +17,46 @@
             "L": "1"
         }
     },
-    "5": {
-        "name": "setMem_Pipeline_2",
+    "0": {
+        "name": "setMem",
+        "file": "core.cpp",
+        "fileloc": "6",
+        "instructions": "29",
+        "total_instructions": "119",
+        "calls": "3 1 2",
+        "basicblocks": "1"
+    },
+    "2": {
+        "name": "setMem_Pipeline_VITIS_LOOP_58_3",
         "file": "AXI_M\/core.cpp",
-        "fileloc": "30",
-        "instructions": "21",
-        "total_instructions": "21",
+        "fileloc": "58",
+        "instructions": "28",
+        "total_instructions": "28",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "setMem_Pipeline_VITIS_LOOP_31_1",
+        "file": "AXI_M\/core.cpp",
+        "fileloc": "31",
+        "instructions": "38",
+        "total_instructions": "38",
         "calls": "",
         "basicblocks": "4",
         "loads": {
             "L": "1"
         },
         "stores": {
-            "L": "3"
+            "L": "4"
         },
         "loops": {
             "L": "1"

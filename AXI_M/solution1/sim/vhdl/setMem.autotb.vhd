@@ -19,14 +19,12 @@ entity apatb_setMem_top is
        AUTOTB_CLOCK_PERIOD_DIV2 :   TIME := 5.00 ns;
        AUTOTB_TVIN_gmem0 : STRING := "../tv/cdatafile/c.setMem.autotvin_gmem0.dat";
        AUTOTB_TVIN_gmem1 : STRING := "../tv/cdatafile/c.setMem.autotvin_gmem1.dat";
-       AUTOTB_TVIN_gmem2 : STRING := "../tv/cdatafile/c.setMem.autotvin_gmem2.dat";
        AUTOTB_TVIN_a : STRING := "../tv/cdatafile/c.setMem.autotvin_a.dat";
        AUTOTB_TVIN_b : STRING := "../tv/cdatafile/c.setMem.autotvin_b.dat";
        AUTOTB_TVIN_c : STRING := "../tv/cdatafile/c.setMem.autotvin_c.dat";
        AUTOTB_TVIN_op : STRING := "../tv/cdatafile/c.setMem.autotvin_op.dat";
        AUTOTB_TVIN_gmem0_out_wrapc : STRING := "../tv/rtldatafile/rtl.setMem.autotvin_gmem0.dat";
        AUTOTB_TVIN_gmem1_out_wrapc : STRING := "../tv/rtldatafile/rtl.setMem.autotvin_gmem1.dat";
-       AUTOTB_TVIN_gmem2_out_wrapc : STRING := "../tv/rtldatafile/rtl.setMem.autotvin_gmem2.dat";
        AUTOTB_TVIN_a_out_wrapc : STRING := "../tv/rtldatafile/rtl.setMem.autotvin_a.dat";
        AUTOTB_TVIN_b_out_wrapc : STRING := "../tv/rtldatafile/rtl.setMem.autotvin_b.dat";
        AUTOTB_TVIN_c_out_wrapc : STRING := "../tv/rtldatafile/rtl.setMem.autotvin_c.dat";
@@ -42,7 +40,7 @@ entity apatb_setMem_top is
       LENGTH_gmem1     : INTEGER := 50;
       LENGTH_gmem2     : INTEGER := 50;
       LENGTH_op     : INTEGER := 1;
-	    AUTOTB_TRANSACTION_NUM    : INTEGER := 1
+	    AUTOTB_TRANSACTION_NUM    : INTEGER := 2
 );
 
 end apatb_setMem_top;

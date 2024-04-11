@@ -1118,32 +1118,45 @@ __attribute__((sdx_kernel("setMem", 0))) void setMem(volatile int* a, volatile i
 
  int i;
 
-    int buff[50];
- int buff2[50];
+    int data_a[50];
+ int data_b[50];
 
- int buff3[50];
+ int data_result[50];
 
- int buff4;
+ int ALU_operation;
 
-    memcpy(buff, (const int*)a, 50 * sizeof(int));
-    memcpy(buff2, (const int*)b, 50 * sizeof(int));
-    memcpy(buff3, (const int*)c, 50 * sizeof(int));
 
-    buff4 = op;
 
-    VITIS_LOOP_35_1: for(int i=0; i < 50; i++)
+ VITIS_LOOP_31_1: for(int i = 0; i < 50; i++)
+ {
+  data_a[i] = a[i];
+  data_b[i] = b[i];
+ }
+
+
+
+ ALU_operation = op;
+
+
+
+    VITIS_LOOP_43_2: for(int i=0; i < 50; i++)
  {
 
-  if(buff4 == 1)
+  if(ALU_operation == 1)
   {
-   buff3[i] = buff[i] + buff2[i];
+   data_result[i] = data_a[i] + data_b[i];
   }
   else
   {
-   buff3[i] = buff[i] - buff2[i];
+   data_result[i] = data_a[i] - data_b[i];
   }
  }
 
-    memcpy((int*)c, buff3, 50 * sizeof(int));
+
+
+ VITIS_LOOP_58_3: for(int i = 0; i < 50; i++)
+ {
+  c[i] = data_result[i];
+ }
 
 }

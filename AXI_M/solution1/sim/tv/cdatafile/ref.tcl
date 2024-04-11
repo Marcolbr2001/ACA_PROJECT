@@ -7,4 +7,4 @@ set depth_list {
   {gmem2 50}
   {op 1}
 }
-set trans_num 1
+set trans_num 2

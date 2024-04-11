@@ -85,7 +85,6 @@ proc check_tvin_file {} {
     set rtlfilelist {
          "c.setMem.autotvin_gmem0.dat"
          "c.setMem.autotvin_gmem1.dat"
-         "c.setMem.autotvin_gmem2.dat"
          "c.setMem.autotvin_a.dat"
          "c.setMem.autotvin_b.dat"
          "c.setMem.autotvin_c.dat"

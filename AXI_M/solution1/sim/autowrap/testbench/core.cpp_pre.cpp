@@ -1171,32 +1171,45 @@ void setMem(volatile int* a, volatile int* b, volatile int* c, int op) {
 
     int i;
 
-    int buff[50];
- int buff2[50];
+    int data_a[50];
+ int data_b[50];
 
- int buff3[50];
+ int data_result[50];
 
- int buff4;
+ int ALU_operation;
 
-    memcpy(buff, (const int*)a, 50 * sizeof(int));
-    memcpy(buff2, (const int*)b, 50 * sizeof(int));
-    memcpy(buff3, (const int*)c, 50 * sizeof(int));
 
-    buff4 = op;
+
+ for(int i = 0; i < 50; i++)
+ {
+  data_a[i] = a[i];
+  data_b[i] = b[i];
+ }
+
+
+
+ ALU_operation = op;
+
+
 
     for(int i=0; i < 50; i++)
  {
 
-  if(buff4 == 1)
+  if(ALU_operation == 1)
   {
-   buff3[i] = buff[i] + buff2[i];
+   data_result[i] = data_a[i] + data_b[i];
   }
   else
   {
-   buff3[i] = buff[i] - buff2[i];
+   data_result[i] = data_a[i] - data_b[i];
   }
  }
 
-    memcpy((int*)c, buff3, 50 * sizeof(int));
+
+
+ for(int i = 0; i < 50; i++)
+ {
+  c[i] = data_result[i];
+ }
 
 }

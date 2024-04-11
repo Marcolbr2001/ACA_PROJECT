@@ -1,55 +1,109 @@
 
 
-A = 0 B = 0 C = 0, OP = 1 sum
-A = 2 B = 1 C = 3, OP = 1 sum
-A = 4 B = 2 C = 6, OP = 1 sum
-A = 6 B = 3 C = 9, OP = 1 sum
-A = 8 B = 4 C = 12, OP = 1 sum
-A = 10 B = 5 C = 15, OP = 1 sum
-A = 12 B = 6 C = 18, OP = 1 sum
-A = 14 B = 7 C = 21, OP = 1 sum
-A = 16 B = 8 C = 24, OP = 1 sum
-A = 18 B = 9 C = 27, OP = 1 sum
-A = 20 B = 10 C = 30, OP = 1 sum
-A = 22 B = 11 C = 33, OP = 1 sum
-A = 24 B = 12 C = 36, OP = 1 sum
-A = 26 B = 13 C = 39, OP = 1 sum
-A = 28 B = 14 C = 42, OP = 1 sum
-A = 30 B = 15 C = 45, OP = 1 sum
-A = 32 B = 16 C = 48, OP = 1 sum
-A = 34 B = 17 C = 51, OP = 1 sum
-A = 36 B = 18 C = 54, OP = 1 sum
-A = 38 B = 19 C = 57, OP = 1 sum
-A = 40 B = 20 C = 60, OP = 1 sum
-A = 42 B = 21 C = 63, OP = 1 sum
-A = 44 B = 22 C = 66, OP = 1 sum
-A = 46 B = 23 C = 69, OP = 1 sum
-A = 48 B = 24 C = 72, OP = 1 sum
-A = 50 B = 25 C = 75, OP = 1 sum
-A = 52 B = 26 C = 78, OP = 1 sum
-A = 54 B = 27 C = 81, OP = 1 sum
-A = 56 B = 28 C = 84, OP = 1 sum
-A = 58 B = 29 C = 87, OP = 1 sum
-A = 60 B = 30 C = 90, OP = 1 sum
-A = 62 B = 31 C = 93, OP = 1 sum
-A = 64 B = 32 C = 96, OP = 1 sum
-A = 66 B = 33 C = 99, OP = 1 sum
-A = 68 B = 34 C = 102, OP = 1 sum
-A = 70 B = 35 C = 105, OP = 1 sum
-A = 72 B = 36 C = 108, OP = 1 sum
-A = 74 B = 37 C = 111, OP = 1 sum
-A = 76 B = 38 C = 114, OP = 1 sum
-A = 78 B = 39 C = 117, OP = 1 sum
-A = 80 B = 40 C = 120, OP = 1 sum
-A = 82 B = 41 C = 123, OP = 1 sum
-A = 84 B = 42 C = 126, OP = 1 sum
-A = 86 B = 43 C = 129, OP = 1 sum
-A = 88 B = 44 C = 132, OP = 1 sum
-A = 90 B = 45 C = 135, OP = 1 sum
-A = 92 B = 46 C = 138, OP = 1 sum
-A = 94 B = 47 C = 141, OP = 1 sum
-A = 96 B = 48 C = 144, OP = 1 sum
-A = 98 B = 49 C = 147, OP = 1 sum
+A = 0 B = 0 RES = 0, OP = 1 sum
+A = 2 B = 1 RES = 3, OP = 1 sum
+A = 4 B = 2 RES = 6, OP = 1 sum
+A = 6 B = 3 RES = 9, OP = 1 sum
+A = 8 B = 4 RES = 12, OP = 1 sum
+A = 10 B = 5 RES = 15, OP = 1 sum
+A = 12 B = 6 RES = 18, OP = 1 sum
+A = 14 B = 7 RES = 21, OP = 1 sum
+A = 16 B = 8 RES = 24, OP = 1 sum
+A = 18 B = 9 RES = 27, OP = 1 sum
+A = 20 B = 10 RES = 30, OP = 1 sum
+A = 22 B = 11 RES = 33, OP = 1 sum
+A = 24 B = 12 RES = 36, OP = 1 sum
+A = 26 B = 13 RES = 39, OP = 1 sum
+A = 28 B = 14 RES = 42, OP = 1 sum
+A = 30 B = 15 RES = 45, OP = 1 sum
+A = 32 B = 16 RES = 48, OP = 1 sum
+A = 34 B = 17 RES = 51, OP = 1 sum
+A = 36 B = 18 RES = 54, OP = 1 sum
+A = 38 B = 19 RES = 57, OP = 1 sum
+A = 40 B = 20 RES = 60, OP = 1 sum
+A = 42 B = 21 RES = 63, OP = 1 sum
+A = 44 B = 22 RES = 66, OP = 1 sum
+A = 46 B = 23 RES = 69, OP = 1 sum
+A = 48 B = 24 RES = 72, OP = 1 sum
+A = 50 B = 25 RES = 75, OP = 1 sum
+A = 52 B = 26 RES = 78, OP = 1 sum
+A = 54 B = 27 RES = 81, OP = 1 sum
+A = 56 B = 28 RES = 84, OP = 1 sum
+A = 58 B = 29 RES = 87, OP = 1 sum
+A = 60 B = 30 RES = 90, OP = 1 sum
+A = 62 B = 31 RES = 93, OP = 1 sum
+A = 64 B = 32 RES = 96, OP = 1 sum
+A = 66 B = 33 RES = 99, OP = 1 sum
+A = 68 B = 34 RES = 102, OP = 1 sum
+A = 70 B = 35 RES = 105, OP = 1 sum
+A = 72 B = 36 RES = 108, OP = 1 sum
+A = 74 B = 37 RES = 111, OP = 1 sum
+A = 76 B = 38 RES = 114, OP = 1 sum
+A = 78 B = 39 RES = 117, OP = 1 sum
+A = 80 B = 40 RES = 120, OP = 1 sum
+A = 82 B = 41 RES = 123, OP = 1 sum
+A = 84 B = 42 RES = 126, OP = 1 sum
+A = 86 B = 43 RES = 129, OP = 1 sum
+A = 88 B = 44 RES = 132, OP = 1 sum
+A = 90 B = 45 RES = 135, OP = 1 sum
+A = 92 B = 46 RES = 138, OP = 1 sum
+A = 94 B = 47 RES = 141, OP = 1 sum
+A = 96 B = 48 RES = 144, OP = 1 sum
+A = 98 B = 49 RES = 147, OP = 1 sum
+
+
+A = 0 B = 0, RES = 0, OP = 0 difference
+A = 2 B = 1, RES = 1, OP = 0 difference
+A = 4 B = 2, RES = 2, OP = 0 difference
+A = 6 B = 3, RES = 3, OP = 0 difference
+A = 8 B = 4, RES = 4, OP = 0 difference
+A = 10 B = 5, RES = 5, OP = 0 difference
+A = 12 B = 6, RES = 6, OP = 0 difference
+A = 14 B = 7, RES = 7, OP = 0 difference
+A = 16 B = 8, RES = 8, OP = 0 difference
+A = 18 B = 9, RES = 9, OP = 0 difference
+A = 20 B = 10, RES = 10, OP = 0 difference
+A = 22 B = 11, RES = 11, OP = 0 difference
+A = 24 B = 12, RES = 12, OP = 0 difference
+A = 26 B = 13, RES = 13, OP = 0 difference
+A = 28 B = 14, RES = 14, OP = 0 difference
+A = 30 B = 15, RES = 15, OP = 0 difference
+A = 32 B = 16, RES = 16, OP = 0 difference
+A = 34 B = 17, RES = 17, OP = 0 difference
+A = 36 B = 18, RES = 18, OP = 0 difference
+A = 38 B = 19, RES = 19, OP = 0 difference
+A = 40 B = 20, RES = 20, OP = 0 difference
+A = 42 B = 21, RES = 21, OP = 0 difference
+A = 44 B = 22, RES = 22, OP = 0 difference
+A = 46 B = 23, RES = 23, OP = 0 difference
+A = 48 B = 24, RES = 24, OP = 0 difference
+A = 50 B = 25, RES = 25, OP = 0 difference
+A = 52 B = 26, RES = 26, OP = 0 difference
+A = 54 B = 27, RES = 27, OP = 0 difference
+A = 56 B = 28, RES = 28, OP = 0 difference
+A = 58 B = 29, RES = 29, OP = 0 difference
+A = 60 B = 30, RES = 30, OP = 0 difference
+A = 62 B = 31, RES = 31, OP = 0 difference
+A = 64 B = 32, RES = 32, OP = 0 difference
+A = 66 B = 33, RES = 33, OP = 0 difference
+A = 68 B = 34, RES = 34, OP = 0 difference
+A = 70 B = 35, RES = 35, OP = 0 difference
+A = 72 B = 36, RES = 36, OP = 0 difference
+A = 74 B = 37, RES = 37, OP = 0 difference
+A = 76 B = 38, RES = 38, OP = 0 difference
+A = 78 B = 39, RES = 39, OP = 0 difference
+A = 80 B = 40, RES = 40, OP = 0 difference
+A = 82 B = 41, RES = 41, OP = 0 difference
+A = 84 B = 42, RES = 42, OP = 0 difference
+A = 86 B = 43, RES = 43, OP = 0 difference
+A = 88 B = 44, RES = 44, OP = 0 difference
+A = 90 B = 45, RES = 45, OP = 0 difference
+A = 92 B = 46, RES = 46, OP = 0 difference
+A = 94 B = 47, RES = 47, OP = 0 difference
+A = 96 B = 48, RES = 48, OP = 0 difference
+A = 98 B = 49, RES = 49, OP = 0 difference
+
+
 
 C:\Users\marco\Desktop\NECST\NL2\AXI_M\AXI_M\solution1\sim\vhdl>set PATH= 
 
@@ -77,10 +131,10 @@ INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/
 INFO: [VRFC 10-3107] analyzing entity 'apatb_setMem_top'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'setMem'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_buff_RAM_AUTO_1R1W.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'setMem_buff_RAM_AUTO_1R1W'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_control_s_axi.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'setMem_control_s_axi'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_data_a_RAM_AUTO_1R1W.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'setMem_data_a_RAM_AUTO_1R1W'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_flow_control_loop_pipe_sequential_init.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'setMem_flow_control_loop_pipe_sequential_init'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_gmem0_m_axi.vhd" into library xil_defaultlib
@@ -119,16 +173,12 @@ INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem2_m_axi_reg_slice'
 INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem2_m_axi_fifo'
 INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem2_m_axi_srl'
 INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem2_m_axi_mem'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_1.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_1'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_2.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_2'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_3.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_3'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_5.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_5'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_VITIS_LOOP_35_1.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_VITIS_LOOP_35_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_VITIS_LOOP_31_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_VITIS_LOOP_31_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_VITIS_LOOP_43_2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_VITIS_LOOP_43_2'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_VITIS_LOOP_58_3.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_VITIS_LOOP_58_3'
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
@@ -143,13 +193,11 @@ Compiling package ieee.std_logic_unsigned
 Compiling package ieee.numeric_std
 Compiling package ieee.std_logic_textio
 Compiling module work.glbl
-Compiling architecture rtl of entity xil_defaultlib.setMem_buff_RAM_AUTO_1R1W [\setMem_buff_RAM_AUTO_1R1W(1,4)\]
+Compiling architecture rtl of entity xil_defaultlib.setMem_data_a_RAM_AUTO_1R1W [\setMem_data_a_RAM_AUTO_1R1W(1,4...]
 Compiling architecture behav of entity xil_defaultlib.setMem_flow_control_loop_pipe_sequential_init [setmem_flow_control_loop_pipe_se...]
-Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_1 [setmem_setmem_pipeline_1_default]
-Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_2 [setmem_setmem_pipeline_2_default]
-Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_3 [setmem_setmem_pipeline_3_default]
-Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_VITIS_LOOP_35_1 [setmem_setmem_pipeline_vitis_loo...]
-Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_5 [setmem_setmem_pipeline_5_default]
+Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_VITIS_LOOP_31_1 [setmem_setmem_pipeline_vitis_loo...]
+Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_VITIS_LOOP_43_2 [setmem_setmem_pipeline_vitis_loo...]
+Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_VITIS_LOOP_58_3 [setmem_setmem_pipeline_vitis_loo...]
 Compiling architecture behave of entity xil_defaultlib.setMem_control_s_axi [setmem_control_s_axi_default]
 Compiling architecture behav of entity xil_defaultlib.setMem_gmem0_m_axi_srl [\setMem_gmem0_m_axi_srl(data_wid...]
 Compiling architecture behave of entity xil_defaultlib.setMem_gmem0_m_axi_fifo [\setMem_gmem0_m_axi_fifo(data_wi...]
@@ -257,7 +305,27 @@ source setMem.tcl
 WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
 ## set designtopgroup [add_wave_group "Design Top Signals"]
 ## set cinoutgroup [add_wave_group "C InOuts" -into $designtopgroup]
-## set c_group [add_wave_group c(axi_master) -into $cinoutgroup]
+## set a__b__c__op__return_group [add_wave_group a__b__c__op__return(axi_slave) -into $cinoutgroup]
+## add_wave /apatb_setMem_top/AESL_inst_setMem/interrupt -into $a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_BRESP -into $a__b__c__op__return_group -radix hex
+## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_BREADY -into $a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_BVALID -into $a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_RRESP -into $a__b__c__op__return_group -radix hex
+## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_RDATA -into $a__b__c__op__return_group -radix hex
+## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_RREADY -into $a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_RVALID -into $a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_ARREADY -into $a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_ARVALID -into $a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_ARADDR -into $a__b__c__op__return_group -radix hex
+## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_WSTRB -into $a__b__c__op__return_group -radix hex
+## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_WDATA -into $a__b__c__op__return_group -radix hex
+## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_WREADY -into $a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_WVALID -into $a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_AWREADY -into $a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_AWVALID -into $a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_AWADDR -into $a__b__c__op__return_group -radix hex
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set c_group [add_wave_group c(axi_master) -into $coutputgroup]
 ## set rdata_group [add_wave_group "Read Channel" -into $c_group]
 ## set wdata_group [add_wave_group "Write Channel" -into $c_group]
 ## set ctrl_group [add_wave_group "Handshakes" -into $c_group]
@@ -306,25 +374,6 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 ## add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem2_AWADDR -into $wdata_group -radix hex
 ## add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem2_AWREADY -into $ctrl_group -color #ffff00 -radix hex
 ## add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem2_AWVALID -into $ctrl_group -color #ffff00 -radix hex
-## set a__b__c__op__return_group [add_wave_group a__b__c__op__return(axi_slave) -into $cinoutgroup]
-## add_wave /apatb_setMem_top/AESL_inst_setMem/interrupt -into $a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_BRESP -into $a__b__c__op__return_group -radix hex
-## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_BREADY -into $a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_BVALID -into $a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_RRESP -into $a__b__c__op__return_group -radix hex
-## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_RDATA -into $a__b__c__op__return_group -radix hex
-## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_RREADY -into $a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_RVALID -into $a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_ARREADY -into $a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_ARVALID -into $a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_ARADDR -into $a__b__c__op__return_group -radix hex
-## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_WSTRB -into $a__b__c__op__return_group -radix hex
-## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_WDATA -into $a__b__c__op__return_group -radix hex
-## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_WREADY -into $a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_WVALID -into $a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_AWREADY -into $a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_AWVALID -into $a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/AESL_inst_setMem/s_axi_control_AWADDR -into $a__b__c__op__return_group -radix hex
 ## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
 ## set b_group [add_wave_group b(axi_master) -into $cinputgroup]
 ## set rdata_group [add_wave_group "Read Channel" -into $b_group]
@@ -448,7 +497,27 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 ## add_wave /apatb_setMem_top/LENGTH_gmem2 -into $tb_portdepth_group -radix hex
 ## add_wave /apatb_setMem_top/LENGTH_op -into $tb_portdepth_group -radix hex
 ## set tbcinoutgroup [add_wave_group "C InOuts" -into $testbenchgroup]
-## set tb_c_group [add_wave_group c(axi_master) -into $tbcinoutgroup]
+## set tb_a__b__c__op__return_group [add_wave_group a__b__c__op__return(axi_slave) -into $tbcinoutgroup]
+## add_wave /apatb_setMem_top/control_INTERRUPT -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/control_BRESP -into $tb_a__b__c__op__return_group -radix hex
+## add_wave /apatb_setMem_top/control_BREADY -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/control_BVALID -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/control_RRESP -into $tb_a__b__c__op__return_group -radix hex
+## add_wave /apatb_setMem_top/control_RDATA -into $tb_a__b__c__op__return_group -radix hex
+## add_wave /apatb_setMem_top/control_RREADY -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/control_RVALID -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/control_ARREADY -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/control_ARVALID -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/control_ARADDR -into $tb_a__b__c__op__return_group -radix hex
+## add_wave /apatb_setMem_top/control_WSTRB -into $tb_a__b__c__op__return_group -radix hex
+## add_wave /apatb_setMem_top/control_WDATA -into $tb_a__b__c__op__return_group -radix hex
+## add_wave /apatb_setMem_top/control_WREADY -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/control_WVALID -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/control_AWREADY -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/control_AWVALID -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
+## add_wave /apatb_setMem_top/control_AWADDR -into $tb_a__b__c__op__return_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_c_group [add_wave_group c(axi_master) -into $tbcoutputgroup]
 ## set rdata_group [add_wave_group "Read Channel" -into $tb_c_group]
 ## set wdata_group [add_wave_group "Write Channel" -into $tb_c_group]
 ## set ctrl_group [add_wave_group "Handshakes" -into $tb_c_group]
@@ -497,25 +566,6 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 ## add_wave /apatb_setMem_top/gmem2_AWADDR -into $wdata_group -radix hex
 ## add_wave /apatb_setMem_top/gmem2_AWREADY -into $ctrl_group -color #ffff00 -radix hex
 ## add_wave /apatb_setMem_top/gmem2_AWVALID -into $ctrl_group -color #ffff00 -radix hex
-## set tb_a__b__c__op__return_group [add_wave_group a__b__c__op__return(axi_slave) -into $tbcinoutgroup]
-## add_wave /apatb_setMem_top/control_INTERRUPT -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/control_BRESP -into $tb_a__b__c__op__return_group -radix hex
-## add_wave /apatb_setMem_top/control_BREADY -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/control_BVALID -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/control_RRESP -into $tb_a__b__c__op__return_group -radix hex
-## add_wave /apatb_setMem_top/control_RDATA -into $tb_a__b__c__op__return_group -radix hex
-## add_wave /apatb_setMem_top/control_RREADY -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/control_RVALID -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/control_ARREADY -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/control_ARVALID -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/control_ARADDR -into $tb_a__b__c__op__return_group -radix hex
-## add_wave /apatb_setMem_top/control_WSTRB -into $tb_a__b__c__op__return_group -radix hex
-## add_wave /apatb_setMem_top/control_WDATA -into $tb_a__b__c__op__return_group -radix hex
-## add_wave /apatb_setMem_top/control_WREADY -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/control_WVALID -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/control_AWREADY -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/control_AWVALID -into $tb_a__b__c__op__return_group -color #ffff00 -radix hex
-## add_wave /apatb_setMem_top/control_AWADDR -into $tb_a__b__c__op__return_group -radix hex
 ## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
 ## set tb_b_group [add_wave_group b(axi_master) -into $tbcinputgroup]
 ## set rdata_group [add_wave_group "Read Channel" -into $tb_b_group]
@@ -618,61 +668,115 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 ## save_wave_config setMem.wcfg
 ## run all
 Note: simulation done!
-Time: 2625 ns  Iteration: 1  Process: /apatb_setMem_top/generate_sim_done_proc  File: C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem.autotb.vhd
+Time: 7065 ns  Iteration: 1  Process: /apatb_setMem_top/generate_sim_done_proc  File: C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem.autotb.vhd
 Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
-Time: 2625 ns  Iteration: 1  Process: /apatb_setMem_top/generate_sim_done_proc  File: C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem.autotb.vhd
-$finish called at time : 2625 ns : File "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem.autotb.vhd" Line 1404
+Time: 7065 ns  Iteration: 1  Process: /apatb_setMem_top/generate_sim_done_proc  File: C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem.autotb.vhd
+$finish called at time : 7065 ns : File "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem.autotb.vhd" Line 1402
 ## quit
-INFO: [Common 17-206] Exiting xsim at Wed Apr 10 17:18:54 2024...
+INFO: [Common 17-206] Exiting xsim at Thu Apr 11 13:53:07 2024...
 
 
-A = 0 B = 0 C = 0, OP = 1 sum
-A = 2 B = 1 C = 3, OP = 1 sum
-A = 4 B = 2 C = 6, OP = 1 sum
-A = 6 B = 3 C = 9, OP = 1 sum
-A = 8 B = 4 C = 12, OP = 1 sum
-A = 10 B = 5 C = 15, OP = 1 sum
-A = 12 B = 6 C = 18, OP = 1 sum
-A = 14 B = 7 C = 21, OP = 1 sum
-A = 16 B = 8 C = 24, OP = 1 sum
-A = 18 B = 9 C = 27, OP = 1 sum
-A = 20 B = 10 C = 30, OP = 1 sum
-A = 22 B = 11 C = 33, OP = 1 sum
-A = 24 B = 12 C = 36, OP = 1 sum
-A = 26 B = 13 C = 39, OP = 1 sum
-A = 28 B = 14 C = 42, OP = 1 sum
-A = 30 B = 15 C = 45, OP = 1 sum
-A = 32 B = 16 C = 48, OP = 1 sum
-A = 34 B = 17 C = 51, OP = 1 sum
-A = 36 B = 18 C = 54, OP = 1 sum
-A = 38 B = 19 C = 57, OP = 1 sum
-A = 40 B = 20 C = 60, OP = 1 sum
-A = 42 B = 21 C = 63, OP = 1 sum
-A = 44 B = 22 C = 66, OP = 1 sum
-A = 46 B = 23 C = 69, OP = 1 sum
-A = 48 B = 24 C = 72, OP = 1 sum
-A = 50 B = 25 C = 75, OP = 1 sum
-A = 52 B = 26 C = 78, OP = 1 sum
-A = 54 B = 27 C = 81, OP = 1 sum
-A = 56 B = 28 C = 84, OP = 1 sum
-A = 58 B = 29 C = 87, OP = 1 sum
-A = 60 B = 30 C = 90, OP = 1 sum
-A = 62 B = 31 C = 93, OP = 1 sum
-A = 64 B = 32 C = 96, OP = 1 sum
-A = 66 B = 33 C = 99, OP = 1 sum
-A = 68 B = 34 C = 102, OP = 1 sum
-A = 70 B = 35 C = 105, OP = 1 sum
-A = 72 B = 36 C = 108, OP = 1 sum
-A = 74 B = 37 C = 111, OP = 1 sum
-A = 76 B = 38 C = 114, OP = 1 sum
-A = 78 B = 39 C = 117, OP = 1 sum
-A = 80 B = 40 C = 120, OP = 1 sum
-A = 82 B = 41 C = 123, OP = 1 sum
-A = 84 B = 42 C = 126, OP = 1 sum
-A = 86 B = 43 C = 129, OP = 1 sum
-A = 88 B = 44 C = 132, OP = 1 sum
-A = 90 B = 45 C = 135, OP = 1 sum
-A = 92 B = 46 C = 138, OP = 1 sum
-A = 94 B = 47 C = 141, OP = 1 sum
-A = 96 B = 48 C = 144, OP = 1 sum
-A = 98 B = 49 C = 147, OP = 1 sum
+A = 0 B = 0 RES = 0, OP = 1 sum
+A = 2 B = 1 RES = 3, OP = 1 sum
+A = 4 B = 2 RES = 6, OP = 1 sum
+A = 6 B = 3 RES = 9, OP = 1 sum
+A = 8 B = 4 RES = 12, OP = 1 sum
+A = 10 B = 5 RES = 15, OP = 1 sum
+A = 12 B = 6 RES = 18, OP = 1 sum
+A = 14 B = 7 RES = 21, OP = 1 sum
+A = 16 B = 8 RES = 24, OP = 1 sum
+A = 18 B = 9 RES = 27, OP = 1 sum
+A = 20 B = 10 RES = 30, OP = 1 sum
+A = 22 B = 11 RES = 33, OP = 1 sum
+A = 24 B = 12 RES = 36, OP = 1 sum
+A = 26 B = 13 RES = 39, OP = 1 sum
+A = 28 B = 14 RES = 42, OP = 1 sum
+A = 30 B = 15 RES = 45, OP = 1 sum
+A = 32 B = 16 RES = 48, OP = 1 sum
+A = 34 B = 17 RES = 51, OP = 1 sum
+A = 36 B = 18 RES = 54, OP = 1 sum
+A = 38 B = 19 RES = 57, OP = 1 sum
+A = 40 B = 20 RES = 60, OP = 1 sum
+A = 42 B = 21 RES = 63, OP = 1 sum
+A = 44 B = 22 RES = 66, OP = 1 sum
+A = 46 B = 23 RES = 69, OP = 1 sum
+A = 48 B = 24 RES = 72, OP = 1 sum
+A = 50 B = 25 RES = 75, OP = 1 sum
+A = 52 B = 26 RES = 78, OP = 1 sum
+A = 54 B = 27 RES = 81, OP = 1 sum
+A = 56 B = 28 RES = 84, OP = 1 sum
+A = 58 B = 29 RES = 87, OP = 1 sum
+A = 60 B = 30 RES = 90, OP = 1 sum
+A = 62 B = 31 RES = 93, OP = 1 sum
+A = 64 B = 32 RES = 96, OP = 1 sum
+A = 66 B = 33 RES = 99, OP = 1 sum
+A = 68 B = 34 RES = 102, OP = 1 sum
+A = 70 B = 35 RES = 105, OP = 1 sum
+A = 72 B = 36 RES = 108, OP = 1 sum
+A = 74 B = 37 RES = 111, OP = 1 sum
+A = 76 B = 38 RES = 114, OP = 1 sum
+A = 78 B = 39 RES = 117, OP = 1 sum
+A = 80 B = 40 RES = 120, OP = 1 sum
+A = 82 B = 41 RES = 123, OP = 1 sum
+A = 84 B = 42 RES = 126, OP = 1 sum
+A = 86 B = 43 RES = 129, OP = 1 sum
+A = 88 B = 44 RES = 132, OP = 1 sum
+A = 90 B = 45 RES = 135, OP = 1 sum
+A = 92 B = 46 RES = 138, OP = 1 sum
+A = 94 B = 47 RES = 141, OP = 1 sum
+A = 96 B = 48 RES = 144, OP = 1 sum
+A = 98 B = 49 RES = 147, OP = 1 sum
+
+
+A = 0 B = 0, RES = 0, OP = 0 difference
+A = 2 B = 1, RES = 1, OP = 0 difference
+A = 4 B = 2, RES = 2, OP = 0 difference
+A = 6 B = 3, RES = 3, OP = 0 difference
+A = 8 B = 4, RES = 4, OP = 0 difference
+A = 10 B = 5, RES = 5, OP = 0 difference
+A = 12 B = 6, RES = 6, OP = 0 difference
+A = 14 B = 7, RES = 7, OP = 0 difference
+A = 16 B = 8, RES = 8, OP = 0 difference
+A = 18 B = 9, RES = 9, OP = 0 difference
+A = 20 B = 10, RES = 10, OP = 0 difference
+A = 22 B = 11, RES = 11, OP = 0 difference
+A = 24 B = 12, RES = 12, OP = 0 difference
+A = 26 B = 13, RES = 13, OP = 0 difference
+A = 28 B = 14, RES = 14, OP = 0 difference
+A = 30 B = 15, RES = 15, OP = 0 difference
+A = 32 B = 16, RES = 16, OP = 0 difference
+A = 34 B = 17, RES = 17, OP = 0 difference
+A = 36 B = 18, RES = 18, OP = 0 difference
+A = 38 B = 19, RES = 19, OP = 0 difference
+A = 40 B = 20, RES = 20, OP = 0 difference
+A = 42 B = 21, RES = 21, OP = 0 difference
+A = 44 B = 22, RES = 22, OP = 0 difference
+A = 46 B = 23, RES = 23, OP = 0 difference
+A = 48 B = 24, RES = 24, OP = 0 difference
+A = 50 B = 25, RES = 25, OP = 0 difference
+A = 52 B = 26, RES = 26, OP = 0 difference
+A = 54 B = 27, RES = 27, OP = 0 difference
+A = 56 B = 28, RES = 28, OP = 0 difference
+A = 58 B = 29, RES = 29, OP = 0 difference
+A = 60 B = 30, RES = 30, OP = 0 difference
+A = 62 B = 31, RES = 31, OP = 0 difference
+A = 64 B = 32, RES = 32, OP = 0 difference
+A = 66 B = 33, RES = 33, OP = 0 difference
+A = 68 B = 34, RES = 34, OP = 0 difference
+A = 70 B = 35, RES = 35, OP = 0 difference
+A = 72 B = 36, RES = 36, OP = 0 difference
+A = 74 B = 37, RES = 37, OP = 0 difference
+A = 76 B = 38, RES = 38, OP = 0 difference
+A = 78 B = 39, RES = 39, OP = 0 difference
+A = 80 B = 40, RES = 40, OP = 0 difference
+A = 82 B = 41, RES = 41, OP = 0 difference
+A = 84 B = 42, RES = 42, OP = 0 difference
+A = 86 B = 43, RES = 43, OP = 0 difference
+A = 88 B = 44, RES = 44, OP = 0 difference
+A = 90 B = 45, RES = 45, OP = 0 difference
+A = 92 B = 46, RES = 46, OP = 0 difference
+A = 94 B = 47, RES = 47, OP = 0 difference
+A = 96 B = 48, RES = 48, OP = 0 difference
+A = 98 B = 49, RES = 49, OP = 0 difference
+
+

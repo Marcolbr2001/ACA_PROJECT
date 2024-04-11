@@ -5,44 +5,59 @@
 
 void setMem(volatile int* a, volatile int* b, volatile int* c, int op) {
 
-#pragma HLS INTERFACE mode=s_axilite bundle=control port=op
-#pragma HLS INTERFACE mode=s_axilite bundle=control port=a
-#pragma HLS INTERFACE mode=s_axilite bundle=control port=b
-#pragma HLS INTERFACE mode=s_axilite bundle=control port=c
+	#pragma HLS INTERFACE mode=s_axilite bundle=control port=op
+	#pragma HLS INTERFACE mode=s_axilite bundle=control port=a
+	#pragma HLS INTERFACE mode=s_axilite bundle=control port=b
+	#pragma HLS INTERFACE mode=s_axilite bundle=control port=c
 
-#pragma HLS INTERFACE mode=s_axilite bundle=control port=return
+	#pragma HLS INTERFACE mode=s_axilite bundle=control port=return
 
-#pragma HLS INTERFACE mode=m_axi port=a bundle=gmem0 depth=DATA_LENGTH offset=slave
-#pragma HLS INTERFACE mode=m_axi port=b bundle=gmem1 depth=DATA_LENGTH offset=slave
-#pragma HLS INTERFACE mode=m_axi port=c bundle=gmem2 depth=DATA_LENGTH offset=slave
+	#pragma HLS INTERFACE mode=m_axi port=a bundle=gmem0 depth=DATA_LENGTH offset=slave
+	#pragma HLS INTERFACE mode=m_axi port=b bundle=gmem1 depth=DATA_LENGTH offset=slave
+	#pragma HLS INTERFACE mode=m_axi port=c bundle=gmem2 depth=DATA_LENGTH offset=slave
 
 
     int i;
 
-    int buff[DATA_LENGTH]; //first operand
-	int buff2[DATA_LENGTH]; //second operand
+    int data_a[DATA_LENGTH]; //first operand
+	int data_b[DATA_LENGTH]; //second operand
 
-	int buff3[DATA_LENGTH]; //result
+	int data_result[DATA_LENGTH]; //result
 
-	int buff4; //operation
+	int ALU_operation; //operation
 
-    memcpy(buff, (const int*)a, DATA_LENGTH * sizeof(int));
-    memcpy(buff2, (const int*)b, DATA_LENGTH * sizeof(int));
-    memcpy(buff3, (const int*)c, DATA_LENGTH * sizeof(int));
 
+	// ----- Taking Data ------------------ //
+	for(int i = 0; i < DATA_LENGTH; i++)
+	{
+		data_a[i] = a[i];
+		data_b[i] = b[i];
+	}
+
+
+	// ----- Taking Operation ------------ //
+	ALU_operation = op;
+
+
+	// ----- Doing chosen operation ----- //
     for(int i=0; i < DATA_LENGTH; i++)
 	{
 
-		if(op == 1)
+		if(ALU_operation == 1)
 		{
-			buff3[i] = buff[i] + buff2[i];
+			data_result[i] = data_a[i] + data_b[i];
 		}
 		else
 		{
-			buff3[i] = buff[i] - buff2[i];
+			data_result[i] = data_a[i] - data_b[i];
 		}
 	}
     
-    memcpy((int*)c, buff3, DATA_LENGTH * sizeof(int));
+
+    // ----- Outputting results -------- //
+	for(int i = 0; i < DATA_LENGTH; i++)
+	{
+		c[i] = data_result[i];
+	}
 
 }
