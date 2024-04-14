@@ -20,6 +20,11 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler setMem_gmem3_m_axi BINDTYPE {interface} TYPE {adapter} IMPL {m_axi}
+}
+
+
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -55,11 +60,11 @@ c {
 }
 op { 
 	dir I
-	width 32
+	width 64
 	depth 1
 	mode ap_none
 	offset 52
-	offset_end 59
+	offset_end 63
 }
 ap_start { }
 ap_done { }
@@ -75,7 +80,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 15 \
+			id 22 \
 			corename setMem_control_axilite \
 			name setMem_control_s_axi \
 			ports {$port_control} \

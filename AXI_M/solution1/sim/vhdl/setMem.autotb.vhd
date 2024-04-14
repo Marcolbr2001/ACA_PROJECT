@@ -19,12 +19,14 @@ entity apatb_setMem_top is
        AUTOTB_CLOCK_PERIOD_DIV2 :   TIME := 5.00 ns;
        AUTOTB_TVIN_gmem0 : STRING := "../tv/cdatafile/c.setMem.autotvin_gmem0.dat";
        AUTOTB_TVIN_gmem1 : STRING := "../tv/cdatafile/c.setMem.autotvin_gmem1.dat";
+       AUTOTB_TVIN_gmem3 : STRING := "../tv/cdatafile/c.setMem.autotvin_gmem3.dat";
        AUTOTB_TVIN_a : STRING := "../tv/cdatafile/c.setMem.autotvin_a.dat";
        AUTOTB_TVIN_b : STRING := "../tv/cdatafile/c.setMem.autotvin_b.dat";
        AUTOTB_TVIN_c : STRING := "../tv/cdatafile/c.setMem.autotvin_c.dat";
        AUTOTB_TVIN_op : STRING := "../tv/cdatafile/c.setMem.autotvin_op.dat";
        AUTOTB_TVIN_gmem0_out_wrapc : STRING := "../tv/rtldatafile/rtl.setMem.autotvin_gmem0.dat";
        AUTOTB_TVIN_gmem1_out_wrapc : STRING := "../tv/rtldatafile/rtl.setMem.autotvin_gmem1.dat";
+       AUTOTB_TVIN_gmem3_out_wrapc : STRING := "../tv/rtldatafile/rtl.setMem.autotvin_gmem3.dat";
        AUTOTB_TVIN_a_out_wrapc : STRING := "../tv/rtldatafile/rtl.setMem.autotvin_a.dat";
        AUTOTB_TVIN_b_out_wrapc : STRING := "../tv/rtldatafile/rtl.setMem.autotvin_b.dat";
        AUTOTB_TVIN_c_out_wrapc : STRING := "../tv/rtldatafile/rtl.setMem.autotvin_c.dat";
@@ -39,8 +41,9 @@ entity apatb_setMem_top is
       LENGTH_gmem0     : INTEGER := 50;
       LENGTH_gmem1     : INTEGER := 50;
       LENGTH_gmem2     : INTEGER := 50;
+      LENGTH_gmem3     : INTEGER := 50;
       LENGTH_op     : INTEGER := 1;
-	    AUTOTB_TRANSACTION_NUM    : INTEGER := 2
+	    AUTOTB_TRANSACTION_NUM    : INTEGER := 1
 );
 
 end apatb_setMem_top;
@@ -220,6 +223,51 @@ architecture behav of apatb_setMem_top is
   signal gmem2_BRESP:  STD_LOGIC_VECTOR (1 DOWNTO 0);
   signal gmem2_BID:  STD_LOGIC_VECTOR (0 DOWNTO 0);
   signal gmem2_BUSER:  STD_LOGIC_VECTOR (0 DOWNTO 0);
+  signal gmem3_AWVALID:  STD_LOGIC;
+  signal gmem3_AWREADY:  STD_LOGIC;
+  signal gmem3_AWADDR:  STD_LOGIC_VECTOR (63 DOWNTO 0);
+  signal gmem3_AWID:  STD_LOGIC_VECTOR (0 DOWNTO 0);
+  signal gmem3_AWLEN:  STD_LOGIC_VECTOR (7 DOWNTO 0);
+  signal gmem3_AWSIZE:  STD_LOGIC_VECTOR (2 DOWNTO 0);
+  signal gmem3_AWBURST:  STD_LOGIC_VECTOR (1 DOWNTO 0);
+  signal gmem3_AWLOCK:  STD_LOGIC_VECTOR (1 DOWNTO 0);
+  signal gmem3_AWCACHE:  STD_LOGIC_VECTOR (3 DOWNTO 0);
+  signal gmem3_AWPROT:  STD_LOGIC_VECTOR (2 DOWNTO 0);
+  signal gmem3_AWQOS:  STD_LOGIC_VECTOR (3 DOWNTO 0);
+  signal gmem3_AWREGION:  STD_LOGIC_VECTOR (3 DOWNTO 0);
+  signal gmem3_AWUSER:  STD_LOGIC_VECTOR (0 DOWNTO 0);
+  signal gmem3_WVALID:  STD_LOGIC;
+  signal gmem3_WREADY:  STD_LOGIC;
+  signal gmem3_WDATA:  STD_LOGIC_VECTOR (31 DOWNTO 0);
+  signal gmem3_WSTRB:  STD_LOGIC_VECTOR (3 DOWNTO 0);
+  signal gmem3_WLAST:  STD_LOGIC;
+  signal gmem3_WID:  STD_LOGIC_VECTOR (0 DOWNTO 0);
+  signal gmem3_WUSER:  STD_LOGIC_VECTOR (0 DOWNTO 0);
+  signal gmem3_ARVALID:  STD_LOGIC;
+  signal gmem3_ARREADY:  STD_LOGIC;
+  signal gmem3_ARADDR:  STD_LOGIC_VECTOR (63 DOWNTO 0);
+  signal gmem3_ARID:  STD_LOGIC_VECTOR (0 DOWNTO 0);
+  signal gmem3_ARLEN:  STD_LOGIC_VECTOR (7 DOWNTO 0);
+  signal gmem3_ARSIZE:  STD_LOGIC_VECTOR (2 DOWNTO 0);
+  signal gmem3_ARBURST:  STD_LOGIC_VECTOR (1 DOWNTO 0);
+  signal gmem3_ARLOCK:  STD_LOGIC_VECTOR (1 DOWNTO 0);
+  signal gmem3_ARCACHE:  STD_LOGIC_VECTOR (3 DOWNTO 0);
+  signal gmem3_ARPROT:  STD_LOGIC_VECTOR (2 DOWNTO 0);
+  signal gmem3_ARQOS:  STD_LOGIC_VECTOR (3 DOWNTO 0);
+  signal gmem3_ARREGION:  STD_LOGIC_VECTOR (3 DOWNTO 0);
+  signal gmem3_ARUSER:  STD_LOGIC_VECTOR (0 DOWNTO 0);
+  signal gmem3_RVALID:  STD_LOGIC;
+  signal gmem3_RREADY:  STD_LOGIC;
+  signal gmem3_RDATA:  STD_LOGIC_VECTOR (31 DOWNTO 0);
+  signal gmem3_RLAST:  STD_LOGIC;
+  signal gmem3_RID:  STD_LOGIC_VECTOR (0 DOWNTO 0);
+  signal gmem3_RUSER:  STD_LOGIC_VECTOR (0 DOWNTO 0);
+  signal gmem3_RRESP:  STD_LOGIC_VECTOR (1 DOWNTO 0);
+  signal gmem3_BVALID:  STD_LOGIC;
+  signal gmem3_BREADY:  STD_LOGIC;
+  signal gmem3_BRESP:  STD_LOGIC_VECTOR (1 DOWNTO 0);
+  signal gmem3_BID:  STD_LOGIC_VECTOR (0 DOWNTO 0);
+  signal gmem3_BUSER:  STD_LOGIC_VECTOR (0 DOWNTO 0);
 
   signal ready_cnt : STD_LOGIC_VECTOR(31 DOWNTO 0);
   signal done_cnt	: STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -385,6 +433,51 @@ port (
     m_axi_gmem2_BRESP :  IN STD_LOGIC_VECTOR (1 DOWNTO 0);
     m_axi_gmem2_BID :  IN STD_LOGIC_VECTOR (0 DOWNTO 0);
     m_axi_gmem2_BUSER :  IN STD_LOGIC_VECTOR (0 DOWNTO 0);
+    m_axi_gmem3_AWVALID :  OUT STD_LOGIC;
+    m_axi_gmem3_AWREADY :  IN STD_LOGIC;
+    m_axi_gmem3_AWADDR :  OUT STD_LOGIC_VECTOR (63 DOWNTO 0);
+    m_axi_gmem3_AWID :  OUT STD_LOGIC_VECTOR (0 DOWNTO 0);
+    m_axi_gmem3_AWLEN :  OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
+    m_axi_gmem3_AWSIZE :  OUT STD_LOGIC_VECTOR (2 DOWNTO 0);
+    m_axi_gmem3_AWBURST :  OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+    m_axi_gmem3_AWLOCK :  OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+    m_axi_gmem3_AWCACHE :  OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
+    m_axi_gmem3_AWPROT :  OUT STD_LOGIC_VECTOR (2 DOWNTO 0);
+    m_axi_gmem3_AWQOS :  OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
+    m_axi_gmem3_AWREGION :  OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
+    m_axi_gmem3_AWUSER :  OUT STD_LOGIC_VECTOR (0 DOWNTO 0);
+    m_axi_gmem3_WVALID :  OUT STD_LOGIC;
+    m_axi_gmem3_WREADY :  IN STD_LOGIC;
+    m_axi_gmem3_WDATA :  OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+    m_axi_gmem3_WSTRB :  OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
+    m_axi_gmem3_WLAST :  OUT STD_LOGIC;
+    m_axi_gmem3_WID :  OUT STD_LOGIC_VECTOR (0 DOWNTO 0);
+    m_axi_gmem3_WUSER :  OUT STD_LOGIC_VECTOR (0 DOWNTO 0);
+    m_axi_gmem3_ARVALID :  OUT STD_LOGIC;
+    m_axi_gmem3_ARREADY :  IN STD_LOGIC;
+    m_axi_gmem3_ARADDR :  OUT STD_LOGIC_VECTOR (63 DOWNTO 0);
+    m_axi_gmem3_ARID :  OUT STD_LOGIC_VECTOR (0 DOWNTO 0);
+    m_axi_gmem3_ARLEN :  OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
+    m_axi_gmem3_ARSIZE :  OUT STD_LOGIC_VECTOR (2 DOWNTO 0);
+    m_axi_gmem3_ARBURST :  OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+    m_axi_gmem3_ARLOCK :  OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+    m_axi_gmem3_ARCACHE :  OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
+    m_axi_gmem3_ARPROT :  OUT STD_LOGIC_VECTOR (2 DOWNTO 0);
+    m_axi_gmem3_ARQOS :  OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
+    m_axi_gmem3_ARREGION :  OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
+    m_axi_gmem3_ARUSER :  OUT STD_LOGIC_VECTOR (0 DOWNTO 0);
+    m_axi_gmem3_RVALID :  IN STD_LOGIC;
+    m_axi_gmem3_RREADY :  OUT STD_LOGIC;
+    m_axi_gmem3_RDATA :  IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+    m_axi_gmem3_RLAST :  IN STD_LOGIC;
+    m_axi_gmem3_RID :  IN STD_LOGIC_VECTOR (0 DOWNTO 0);
+    m_axi_gmem3_RUSER :  IN STD_LOGIC_VECTOR (0 DOWNTO 0);
+    m_axi_gmem3_RRESP :  IN STD_LOGIC_VECTOR (1 DOWNTO 0);
+    m_axi_gmem3_BVALID :  IN STD_LOGIC;
+    m_axi_gmem3_BREADY :  OUT STD_LOGIC;
+    m_axi_gmem3_BRESP :  IN STD_LOGIC_VECTOR (1 DOWNTO 0);
+    m_axi_gmem3_BID :  IN STD_LOGIC_VECTOR (0 DOWNTO 0);
+    m_axi_gmem3_BUSER :  IN STD_LOGIC_VECTOR (0 DOWNTO 0);
     s_axi_control_AWVALID :  IN STD_LOGIC;
     s_axi_control_AWREADY :  OUT STD_LOGIC;
     s_axi_control_AWADDR :  IN STD_LOGIC_VECTOR (5 DOWNTO 0);
@@ -411,6 +504,8 @@ shared variable AESL_REG_gmem0 : STD_LOGIC_VECTOR(31 downto 0) := (others => '0'
 shared variable AESL_REG_gmem1 : STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
 -- The signal of port gmem2
 shared variable AESL_REG_gmem2 : STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+-- The signal of port gmem3
+shared variable AESL_REG_gmem3 : STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
 -- The signal of port a
 shared variable AESL_REG_a : STD_LOGIC_VECTOR(63 downto 0) := (others => '0');
 -- The signal of port b
@@ -418,7 +513,7 @@ shared variable AESL_REG_b : STD_LOGIC_VECTOR(63 downto 0) := (others => '0');
 -- The signal of port c
 shared variable AESL_REG_c : STD_LOGIC_VECTOR(63 downto 0) := (others => '0');
 -- The signal of port op
-shared variable AESL_REG_op : STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+shared variable AESL_REG_op : STD_LOGIC_VECTOR(63 downto 0) := (others => '0');
 signal	AESL_axi_master_gmem0_ready : STD_LOGIC;
 signal	AESL_axi_master_gmem0_done  : STD_LOGIC;
 component AESL_axi_master_gmem0 is
@@ -582,6 +677,62 @@ component AESL_axi_master_gmem2 is
     TRAN_gmem2_BRESP : OUT STD_LOGIC_VECTOR;
     TRAN_gmem2_BID : OUT STD_LOGIC_VECTOR;
     TRAN_gmem2_BUSER : OUT STD_LOGIC_VECTOR;
+    ready        :    IN  STD_LOGIC;
+    done         :    IN  STD_LOGIC
+  );
+end component;
+
+signal	AESL_axi_master_gmem3_ready : STD_LOGIC;
+signal	AESL_axi_master_gmem3_done  : STD_LOGIC;
+component AESL_axi_master_gmem3 is
+  port(
+    clk   :   IN STD_LOGIC;
+    reset :   IN STD_LOGIC;
+    TRAN_gmem3_AWVALID : IN STD_LOGIC;
+    TRAN_gmem3_AWREADY : OUT STD_LOGIC;
+    TRAN_gmem3_AWADDR : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_AWID : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_AWLEN : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_AWSIZE : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_AWBURST : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_AWLOCK : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_AWCACHE : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_AWPROT : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_AWQOS : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_AWREGION : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_AWUSER : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_WVALID : IN STD_LOGIC;
+    TRAN_gmem3_WREADY : OUT STD_LOGIC;
+    TRAN_gmem3_WDATA : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_WSTRB : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_WLAST : IN STD_LOGIC;
+    TRAN_gmem3_WID : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_WUSER : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_ARVALID : IN STD_LOGIC;
+    TRAN_gmem3_ARREADY : OUT STD_LOGIC;
+    TRAN_gmem3_ARADDR : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_ARID : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_ARLEN : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_ARSIZE : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_ARBURST : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_ARLOCK : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_ARCACHE : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_ARPROT : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_ARQOS : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_ARREGION : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_ARUSER : IN STD_LOGIC_VECTOR;
+    TRAN_gmem3_RVALID : OUT STD_LOGIC;
+    TRAN_gmem3_RREADY : IN STD_LOGIC;
+    TRAN_gmem3_RDATA : OUT STD_LOGIC_VECTOR;
+    TRAN_gmem3_RLAST : OUT STD_LOGIC;
+    TRAN_gmem3_RID : OUT STD_LOGIC_VECTOR;
+    TRAN_gmem3_RUSER : OUT STD_LOGIC_VECTOR;
+    TRAN_gmem3_RRESP : OUT STD_LOGIC_VECTOR;
+    TRAN_gmem3_BVALID : OUT STD_LOGIC;
+    TRAN_gmem3_BREADY : IN STD_LOGIC;
+    TRAN_gmem3_BRESP : OUT STD_LOGIC_VECTOR;
+    TRAN_gmem3_BID : OUT STD_LOGIC_VECTOR;
+    TRAN_gmem3_BUSER : OUT STD_LOGIC_VECTOR;
     ready        :    IN  STD_LOGIC;
     done         :    IN  STD_LOGIC
   );
@@ -1102,7 +1253,52 @@ AESL_inst_setMem    :   setMem port map (
    m_axi_gmem2_BREADY  =>  gmem2_BREADY,
    m_axi_gmem2_BRESP  =>  gmem2_BRESP,
    m_axi_gmem2_BID  =>  gmem2_BID,
-   m_axi_gmem2_BUSER  =>  gmem2_BUSER
+   m_axi_gmem2_BUSER  =>  gmem2_BUSER,
+   m_axi_gmem3_AWVALID  =>  gmem3_AWVALID,
+   m_axi_gmem3_AWREADY  =>  gmem3_AWREADY,
+   m_axi_gmem3_AWADDR  =>  gmem3_AWADDR,
+   m_axi_gmem3_AWID  =>  gmem3_AWID,
+   m_axi_gmem3_AWLEN  =>  gmem3_AWLEN,
+   m_axi_gmem3_AWSIZE  =>  gmem3_AWSIZE,
+   m_axi_gmem3_AWBURST  =>  gmem3_AWBURST,
+   m_axi_gmem3_AWLOCK  =>  gmem3_AWLOCK,
+   m_axi_gmem3_AWCACHE  =>  gmem3_AWCACHE,
+   m_axi_gmem3_AWPROT  =>  gmem3_AWPROT,
+   m_axi_gmem3_AWQOS  =>  gmem3_AWQOS,
+   m_axi_gmem3_AWREGION  =>  gmem3_AWREGION,
+   m_axi_gmem3_AWUSER  =>  gmem3_AWUSER,
+   m_axi_gmem3_WVALID  =>  gmem3_WVALID,
+   m_axi_gmem3_WREADY  =>  gmem3_WREADY,
+   m_axi_gmem3_WDATA  =>  gmem3_WDATA,
+   m_axi_gmem3_WSTRB  =>  gmem3_WSTRB,
+   m_axi_gmem3_WLAST  =>  gmem3_WLAST,
+   m_axi_gmem3_WID  =>  gmem3_WID,
+   m_axi_gmem3_WUSER  =>  gmem3_WUSER,
+   m_axi_gmem3_ARVALID  =>  gmem3_ARVALID,
+   m_axi_gmem3_ARREADY  =>  gmem3_ARREADY,
+   m_axi_gmem3_ARADDR  =>  gmem3_ARADDR,
+   m_axi_gmem3_ARID  =>  gmem3_ARID,
+   m_axi_gmem3_ARLEN  =>  gmem3_ARLEN,
+   m_axi_gmem3_ARSIZE  =>  gmem3_ARSIZE,
+   m_axi_gmem3_ARBURST  =>  gmem3_ARBURST,
+   m_axi_gmem3_ARLOCK  =>  gmem3_ARLOCK,
+   m_axi_gmem3_ARCACHE  =>  gmem3_ARCACHE,
+   m_axi_gmem3_ARPROT  =>  gmem3_ARPROT,
+   m_axi_gmem3_ARQOS  =>  gmem3_ARQOS,
+   m_axi_gmem3_ARREGION  =>  gmem3_ARREGION,
+   m_axi_gmem3_ARUSER  =>  gmem3_ARUSER,
+   m_axi_gmem3_RVALID  =>  gmem3_RVALID,
+   m_axi_gmem3_RREADY  =>  gmem3_RREADY,
+   m_axi_gmem3_RDATA  =>  gmem3_RDATA,
+   m_axi_gmem3_RLAST  =>  gmem3_RLAST,
+   m_axi_gmem3_RID  =>  gmem3_RID,
+   m_axi_gmem3_RUSER  =>  gmem3_RUSER,
+   m_axi_gmem3_RRESP  =>  gmem3_RRESP,
+   m_axi_gmem3_BVALID  =>  gmem3_BVALID,
+   m_axi_gmem3_BREADY  =>  gmem3_BREADY,
+   m_axi_gmem3_BRESP  =>  gmem3_BRESP,
+   m_axi_gmem3_BID  =>  gmem3_BID,
+   m_axi_gmem3_BUSER  =>  gmem3_BUSER
 );
 
 -- Assignment for control signal
@@ -1326,6 +1522,59 @@ AESL_axi_master_inst_gmem2 : AESL_axi_master_gmem2 port map (
 );
 AESL_axi_master_gmem2_ready	<=   ready;
 AESL_axi_master_gmem2_done	<=   AESL_done_delay;
+AESL_axi_master_inst_gmem3 : AESL_axi_master_gmem3 port map (
+    clk   =>   AESL_clock,
+    reset =>   AESL_reset,
+    TRAN_gmem3_AWVALID => gmem3_AWVALID,
+    TRAN_gmem3_AWREADY => gmem3_AWREADY,
+    TRAN_gmem3_AWADDR => gmem3_AWADDR,
+    TRAN_gmem3_AWID => gmem3_AWID,
+    TRAN_gmem3_AWLEN => gmem3_AWLEN,
+    TRAN_gmem3_AWSIZE => gmem3_AWSIZE,
+    TRAN_gmem3_AWBURST => gmem3_AWBURST,
+    TRAN_gmem3_AWLOCK => gmem3_AWLOCK,
+    TRAN_gmem3_AWCACHE => gmem3_AWCACHE,
+    TRAN_gmem3_AWPROT => gmem3_AWPROT,
+    TRAN_gmem3_AWQOS => gmem3_AWQOS,
+    TRAN_gmem3_AWREGION => gmem3_AWREGION,
+    TRAN_gmem3_AWUSER => gmem3_AWUSER,
+    TRAN_gmem3_WVALID => gmem3_WVALID,
+    TRAN_gmem3_WREADY => gmem3_WREADY,
+    TRAN_gmem3_WDATA => gmem3_WDATA,
+    TRAN_gmem3_WSTRB => gmem3_WSTRB,
+    TRAN_gmem3_WLAST => gmem3_WLAST,
+    TRAN_gmem3_WID => gmem3_WID,
+    TRAN_gmem3_WUSER => gmem3_WUSER,
+    TRAN_gmem3_ARVALID => gmem3_ARVALID,
+    TRAN_gmem3_ARREADY => gmem3_ARREADY,
+    TRAN_gmem3_ARADDR => gmem3_ARADDR,
+    TRAN_gmem3_ARID => gmem3_ARID,
+    TRAN_gmem3_ARLEN => gmem3_ARLEN,
+    TRAN_gmem3_ARSIZE => gmem3_ARSIZE,
+    TRAN_gmem3_ARBURST => gmem3_ARBURST,
+    TRAN_gmem3_ARLOCK => gmem3_ARLOCK,
+    TRAN_gmem3_ARCACHE => gmem3_ARCACHE,
+    TRAN_gmem3_ARPROT => gmem3_ARPROT,
+    TRAN_gmem3_ARQOS => gmem3_ARQOS,
+    TRAN_gmem3_ARREGION => gmem3_ARREGION,
+    TRAN_gmem3_ARUSER => gmem3_ARUSER,
+    TRAN_gmem3_RVALID => gmem3_RVALID,
+    TRAN_gmem3_RREADY => gmem3_RREADY,
+    TRAN_gmem3_RDATA => gmem3_RDATA,
+    TRAN_gmem3_RLAST => gmem3_RLAST,
+    TRAN_gmem3_RID => gmem3_RID,
+    TRAN_gmem3_RUSER => gmem3_RUSER,
+    TRAN_gmem3_RRESP => gmem3_RRESP,
+    TRAN_gmem3_BVALID => gmem3_BVALID,
+    TRAN_gmem3_BREADY => gmem3_BREADY,
+    TRAN_gmem3_BRESP => gmem3_BRESP,
+    TRAN_gmem3_BID => gmem3_BID,
+    TRAN_gmem3_BUSER => gmem3_BUSER,
+    ready => AESL_axi_master_gmem3_ready,
+    done  => AESL_axi_master_gmem3_done
+);
+AESL_axi_master_gmem3_ready	<=   ready;
+AESL_axi_master_gmem3_done	<=   AESL_done_delay;
 
 AESL_axi_slave_inst_control : AESL_AXI_SLAVE_control port map (
     clk   =>  AESL_clock,

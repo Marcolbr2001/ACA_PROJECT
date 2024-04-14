@@ -4,26 +4,29 @@ target datalayout = "e-m:e-i64:64-i128:128-i256:256-i512:512-i1024:1024-i2048:20
 target triple = "fpga64-xilinx-none"
 
 ; Function Attrs: noinline
-define void @apatb_setMem_ir(i32* noalias nonnull "maxi" %a, i32* noalias nonnull "maxi" %b, i32* noalias nonnull "maxi" %c, i32 %op) local_unnamed_addr #0 {
+define void @apatb_setMem_ir(i32* noalias nonnull "maxi" %a, i32* noalias nonnull "maxi" %b, i32* noalias nonnull "maxi" %c, i32* noalias nonnull "maxi" %op) local_unnamed_addr #0 {
 entry:
   %a_copy = alloca [50 x i32], align 512
   %b_copy = alloca [50 x i32], align 512
   %c_copy = alloca [50 x i32], align 512
+  %op_copy = alloca [50 x i32], align 512
   %0 = bitcast i32* %a to [50 x i32]*
   %1 = bitcast i32* %b to [50 x i32]*
   %2 = bitcast i32* %c to [50 x i32]*
-  call fastcc void @copy_in([50 x i32]* nonnull %0, [50 x i32]* nonnull align 512 %a_copy, [50 x i32]* nonnull %1, [50 x i32]* nonnull align 512 %b_copy, [50 x i32]* nonnull %2, [50 x i32]* nonnull align 512 %c_copy)
-  call void @apatb_setMem_hw([50 x i32]* %a_copy, [50 x i32]* %b_copy, [50 x i32]* %c_copy, i32 %op)
-  call void @copy_back([50 x i32]* %0, [50 x i32]* %a_copy, [50 x i32]* %1, [50 x i32]* %b_copy, [50 x i32]* %2, [50 x i32]* %c_copy)
+  %3 = bitcast i32* %op to [50 x i32]*
+  call fastcc void @copy_in([50 x i32]* nonnull %0, [50 x i32]* nonnull align 512 %a_copy, [50 x i32]* nonnull %1, [50 x i32]* nonnull align 512 %b_copy, [50 x i32]* nonnull %2, [50 x i32]* nonnull align 512 %c_copy, [50 x i32]* nonnull %3, [50 x i32]* nonnull align 512 %op_copy)
+  call void @apatb_setMem_hw([50 x i32]* %a_copy, [50 x i32]* %b_copy, [50 x i32]* %c_copy, [50 x i32]* %op_copy)
+  call void @copy_back([50 x i32]* %0, [50 x i32]* %a_copy, [50 x i32]* %1, [50 x i32]* %b_copy, [50 x i32]* %2, [50 x i32]* %c_copy, [50 x i32]* %3, [50 x i32]* %op_copy)
   ret void
 }
 
 ; Function Attrs: argmemonly noinline norecurse willreturn
-define internal fastcc void @copy_in([50 x i32]* noalias readonly, [50 x i32]* noalias align 512, [50 x i32]* noalias readonly, [50 x i32]* noalias align 512, [50 x i32]* noalias readonly, [50 x i32]* noalias align 512) unnamed_addr #1 {
+define internal fastcc void @copy_in([50 x i32]* noalias readonly, [50 x i32]* noalias align 512, [50 x i32]* noalias readonly, [50 x i32]* noalias align 512, [50 x i32]* noalias readonly, [50 x i32]* noalias align 512, [50 x i32]* noalias readonly, [50 x i32]* noalias align 512) unnamed_addr #1 {
 entry:
   call fastcc void @onebyonecpy_hls.p0a50i32([50 x i32]* align 512 %1, [50 x i32]* %0)
   call fastcc void @onebyonecpy_hls.p0a50i32([50 x i32]* align 512 %3, [50 x i32]* %2)
   call fastcc void @onebyonecpy_hls.p0a50i32([50 x i32]* align 512 %5, [50 x i32]* %4)
+  call fastcc void @onebyonecpy_hls.p0a50i32([50 x i32]* align 512 %7, [50 x i32]* %6)
   ret void
 }
 
@@ -76,37 +79,40 @@ ret:                                              ; preds = %copy.split, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse willreturn
-define internal fastcc void @copy_out([50 x i32]* noalias, [50 x i32]* noalias readonly align 512, [50 x i32]* noalias, [50 x i32]* noalias readonly align 512, [50 x i32]* noalias, [50 x i32]* noalias readonly align 512) unnamed_addr #4 {
+define internal fastcc void @copy_out([50 x i32]* noalias, [50 x i32]* noalias readonly align 512, [50 x i32]* noalias, [50 x i32]* noalias readonly align 512, [50 x i32]* noalias, [50 x i32]* noalias readonly align 512, [50 x i32]* noalias, [50 x i32]* noalias readonly align 512) unnamed_addr #4 {
 entry:
   call fastcc void @onebyonecpy_hls.p0a50i32([50 x i32]* %0, [50 x i32]* align 512 %1)
   call fastcc void @onebyonecpy_hls.p0a50i32([50 x i32]* %2, [50 x i32]* align 512 %3)
   call fastcc void @onebyonecpy_hls.p0a50i32([50 x i32]* %4, [50 x i32]* align 512 %5)
+  call fastcc void @onebyonecpy_hls.p0a50i32([50 x i32]* %6, [50 x i32]* align 512 %7)
   ret void
 }
 
-declare void @apatb_setMem_hw([50 x i32]*, [50 x i32]*, [50 x i32]*, i32)
+declare void @apatb_setMem_hw([50 x i32]*, [50 x i32]*, [50 x i32]*, [50 x i32]*)
 
 ; Function Attrs: argmemonly noinline norecurse willreturn
-define internal fastcc void @copy_back([50 x i32]* noalias, [50 x i32]* noalias readonly align 512, [50 x i32]* noalias, [50 x i32]* noalias readonly align 512, [50 x i32]* noalias, [50 x i32]* noalias readonly align 512) unnamed_addr #4 {
+define internal fastcc void @copy_back([50 x i32]* noalias, [50 x i32]* noalias readonly align 512, [50 x i32]* noalias, [50 x i32]* noalias readonly align 512, [50 x i32]* noalias, [50 x i32]* noalias readonly align 512, [50 x i32]* noalias, [50 x i32]* noalias readonly align 512) unnamed_addr #4 {
 entry:
   call fastcc void @onebyonecpy_hls.p0a50i32([50 x i32]* %0, [50 x i32]* align 512 %1)
   call fastcc void @onebyonecpy_hls.p0a50i32([50 x i32]* %2, [50 x i32]* align 512 %3)
   call fastcc void @onebyonecpy_hls.p0a50i32([50 x i32]* %4, [50 x i32]* align 512 %5)
+  call fastcc void @onebyonecpy_hls.p0a50i32([50 x i32]* %6, [50 x i32]* align 512 %7)
   ret void
 }
 
-define void @setMem_hw_stub_wrapper([50 x i32]*, [50 x i32]*, [50 x i32]*, i32) #5 {
+define void @setMem_hw_stub_wrapper([50 x i32]*, [50 x i32]*, [50 x i32]*, [50 x i32]*) #5 {
 entry:
-  call void @copy_out([50 x i32]* null, [50 x i32]* %0, [50 x i32]* null, [50 x i32]* %1, [50 x i32]* null, [50 x i32]* %2)
+  call void @copy_out([50 x i32]* null, [50 x i32]* %0, [50 x i32]* null, [50 x i32]* %1, [50 x i32]* null, [50 x i32]* %2, [50 x i32]* null, [50 x i32]* %3)
   %4 = bitcast [50 x i32]* %0 to i32*
   %5 = bitcast [50 x i32]* %1 to i32*
   %6 = bitcast [50 x i32]* %2 to i32*
-  call void @setMem_hw_stub(i32* %4, i32* %5, i32* %6, i32 %3)
-  call void @copy_in([50 x i32]* null, [50 x i32]* %0, [50 x i32]* null, [50 x i32]* %1, [50 x i32]* null, [50 x i32]* %2)
+  %7 = bitcast [50 x i32]* %3 to i32*
+  call void @setMem_hw_stub(i32* %4, i32* %5, i32* %6, i32* %7)
+  call void @copy_in([50 x i32]* null, [50 x i32]* %0, [50 x i32]* null, [50 x i32]* %1, [50 x i32]* null, [50 x i32]* %2, [50 x i32]* null, [50 x i32]* %3)
   ret void
 }
 
-declare void @setMem_hw_stub(i32*, i32*, i32*, i32)
+declare void @setMem_hw_stub(i32*, i32*, i32*, i32*)
 
 attributes #0 = { noinline "fpga.wrapper.func"="wrapper" }
 attributes #1 = { argmemonly noinline norecurse willreturn "fpga.wrapper.func"="copyin" }

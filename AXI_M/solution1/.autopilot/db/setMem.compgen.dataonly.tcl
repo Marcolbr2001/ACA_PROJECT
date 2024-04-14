@@ -28,11 +28,11 @@ c {
 }
 op { 
 	dir I
-	width 32
+	width 64
 	depth 1
 	mode ap_none
 	offset 52
-	offset_end 59
+	offset_end 63
 }
 ap_start { }
 ap_done { }

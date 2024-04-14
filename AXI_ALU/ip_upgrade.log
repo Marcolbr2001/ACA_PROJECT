@@ -1,6 +1,148 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Sun Apr 14 20:40:09 2024
+| Host         : PC_di_Marco running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_setMem_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_setMem_0_0 (xilinx.com:hls:setMem:1.0) from (Rev. 2113505431) to (Rev. 2113514497)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_setMem_0_0'.
+
+
+-Upgrade has removed interface 'ap_ctrl'
+
+-Upgrade has added interface 'm_axi_gmem3' (xilinx.com:interface:aximm:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_setMem_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'ap_done'
+
+-Upgrade has removed port 'ap_idle'
+
+-Upgrade has removed port 'ap_ready'
+
+-Upgrade has removed port 'ap_start'
+
+-Upgrade has removed port 'op'
+
+-Upgrade has added port 'interrupt'
+
+-Upgrade has added port 'm_axi_gmem3_ARADDR'
+
+-Upgrade has added port 'm_axi_gmem3_ARBURST'
+
+-Upgrade has added port 'm_axi_gmem3_ARCACHE'
+
+-Upgrade has added port 'm_axi_gmem3_ARID'
+
+-Upgrade has added port 'm_axi_gmem3_ARLEN'
+
+-Upgrade has added port 'm_axi_gmem3_ARLOCK'
+
+-Upgrade has added port 'm_axi_gmem3_ARPROT'
+
+-Upgrade has added port 'm_axi_gmem3_ARQOS'
+
+-Upgrade has added port 'm_axi_gmem3_ARREADY'
+
+-Upgrade has added port 'm_axi_gmem3_ARREGION'
+
+-Upgrade has added port 'm_axi_gmem3_ARSIZE'
+
+-Upgrade has added port 'm_axi_gmem3_ARVALID'
+
+-Upgrade has added port 'm_axi_gmem3_AWADDR'
+
+-Upgrade has added port 'm_axi_gmem3_AWBURST'
+
+-Upgrade has added port 'm_axi_gmem3_AWCACHE'
+
+-Upgrade has added port 'm_axi_gmem3_AWID'
+
+-Upgrade has added port 'm_axi_gmem3_AWLEN'
+
+-Upgrade has added port 'm_axi_gmem3_AWLOCK'
+
+-Upgrade has added port 'm_axi_gmem3_AWPROT'
+
+-Upgrade has added port 'm_axi_gmem3_AWQOS'
+
+-Upgrade has added port 'm_axi_gmem3_AWREADY'
+
+-Upgrade has added port 'm_axi_gmem3_AWREGION'
+
+-Upgrade has added port 'm_axi_gmem3_AWSIZE'
+
+-Upgrade has added port 'm_axi_gmem3_AWVALID'
+
+-Upgrade has added port 'm_axi_gmem3_BID'
+
+-Upgrade has added port 'm_axi_gmem3_BREADY'
+
+-Upgrade has added port 'm_axi_gmem3_BRESP'
+
+-Upgrade has added port 'm_axi_gmem3_BVALID'
+
+-Upgrade has added port 'm_axi_gmem3_RDATA'
+
+-Upgrade has added port 'm_axi_gmem3_RID'
+
+-Upgrade has added port 'm_axi_gmem3_RLAST'
+
+-Upgrade has added port 'm_axi_gmem3_RREADY'
+
+-Upgrade has added port 'm_axi_gmem3_RRESP'
+
+-Upgrade has added port 'm_axi_gmem3_RVALID'
+
+-Upgrade has added port 'm_axi_gmem3_WDATA'
+
+-Upgrade has added port 'm_axi_gmem3_WID'
+
+-Upgrade has added port 'm_axi_gmem3_WLAST'
+
+-Upgrade has added port 'm_axi_gmem3_WREADY'
+
+-Upgrade has added port 'm_axi_gmem3_WSTRB'
+
+-Upgrade has added port 'm_axi_gmem3_WVALID'
+
+
+4. Addressing Information
+-------------------------
+
+Detected addressing differences while upgrading 'design_1_setMem_0_0'. These changes may impact your design.
+
+
+-Upgrade has added address space 'Data_m_axi_gmem3'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
 | Date         : Mon Apr  8 13:32:33 2024
 | Host         : PC_di_Marco running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

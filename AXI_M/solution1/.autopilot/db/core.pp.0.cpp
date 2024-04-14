@@ -1094,14 +1094,15 @@ extern "C" {
 
 
 
-__attribute__((sdx_kernel("setMem", 0))) void setMem(volatile int* a, volatile int* b, volatile int* c, int op) {
+
+__attribute__((sdx_kernel("setMem", 0))) void setMem(volatile int* a, volatile int* b, volatile int* c, volatile int* op) {
 #line 18 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=setMem
-# 6 "AXI_M/core.cpp"
+# 7 "AXI_M/core.cpp"
 
 #line 7 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=setMem
-# 6 "AXI_M/core.cpp"
+# 7 "AXI_M/core.cpp"
 
 
 #pragma HLS INTERFACE mode=s_axilite bundle=control port=op
@@ -1114,6 +1115,8 @@ __attribute__((sdx_kernel("setMem", 0))) void setMem(volatile int* a, volatile i
 #pragma HLS INTERFACE mode=m_axi port=a bundle=gmem0 depth=50 offset=slave
 #pragma HLS INTERFACE mode=m_axi port=b bundle=gmem1 depth=50 offset=slave
 #pragma HLS INTERFACE mode=m_axi port=c bundle=gmem2 depth=50 offset=slave
+#pragma HLS INTERFACE mode=m_axi port=op bundle=gmem3 depth=50 offset=slave
+
 
 
  int i;
@@ -1123,38 +1126,74 @@ __attribute__((sdx_kernel("setMem", 0))) void setMem(volatile int* a, volatile i
 
  int data_result[50];
 
- int ALU_operation;
+ int ALU_operation[50];
 
 
 
- VITIS_LOOP_31_1: for(int i = 0; i < 50; i++)
+ VITIS_LOOP_34_1: for(int i = 0; i < 50; i++)
  {
   data_a[i] = a[i];
   data_b[i] = b[i];
+  ALU_operation[i] = op[i];
  }
 
 
-
- ALU_operation = op;
-
-
-
-    VITIS_LOOP_43_2: for(int i=0; i < 50; i++)
+    VITIS_LOOP_42_2: for(int i=0; i < 50; i++)
  {
 
-  if(ALU_operation == 1)
+  switch(ALU_operation[i])
   {
-   data_result[i] = data_a[i] + data_b[i];
+
+   case 0 :
+    data_result[i] = data_a[i] + 27;
+   break;
+
+   case 1 :
+    data_result[i] = data_b[i] + 27;
+   break;
+
+   case 2 :
+    data_result[i] = data_a[i]*2;
+   break;
+
+   case 3 :
+    data_result[i] = data_b[i]*2;
+   break;
+
+   case 4 :
+    data_result[i] = data_a[i]/2;
+   break;
+
+   case 5 :
+    data_result[i] = data_b[i]/2;
+   break;
+
+   case 6 :
+    data_result[i] = data_a[i] + data_b[i];
+   break;
+
+   case 7 :
+    data_result[i] = data_a[i] - data_b[i];
+   break;
+
+   case 8 :
+    data_result[i] = data_a[i]*data_b[i];
+   break;
+
+   case 9 :
+    data_result[i] = data_a[i]/data_b[i];
+   break;
+
+
+   default :
+    data_result[i] = 0;
   }
-  else
-  {
-   data_result[i] = data_a[i] - data_b[i];
-  }
+
  }
 
 
 
- VITIS_LOOP_58_3: for(int i = 0; i < 50; i++)
+ VITIS_LOOP_97_3: for(int i = 0; i < 50; i++)
  {
   c[i] = data_result[i];
  }

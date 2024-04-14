@@ -5,6 +5,7 @@ set depth_list {
   {gmem0 50}
   {gmem1 50}
   {gmem2 50}
+  {gmem3 50}
   {op 1}
 }
-set trans_num 2
+set trans_num 1

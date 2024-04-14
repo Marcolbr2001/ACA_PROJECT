@@ -1161,8 +1161,9 @@ extern "C" {
 
 
 
-# 6 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/core.cpp"
-void setMem(volatile int* a, volatile int* b, volatile int* c, int op) {
+
+# 7 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/core.cpp"
+void setMem(volatile int* a, volatile int* b, volatile int* c, volatile int* op) {
 
 #pragma HLS INTERFACE mode=s_axilite bundle=control port=op
 #pragma HLS INTERFACE mode=s_axilite bundle=control port=a
@@ -1174,6 +1175,8 @@ void setMem(volatile int* a, volatile int* b, volatile int* c, int op) {
 #pragma HLS INTERFACE mode=m_axi port=a bundle=gmem0 depth=DATA_LENGTH offset=slave
 #pragma HLS INTERFACE mode=m_axi port=b bundle=gmem1 depth=DATA_LENGTH offset=slave
 #pragma HLS INTERFACE mode=m_axi port=c bundle=gmem2 depth=DATA_LENGTH offset=slave
+#pragma HLS INTERFACE mode=m_axi port=op bundle=gmem3 depth=DATA_LENGTH offset=slave
+
 
 
     int i;
@@ -1183,7 +1186,7 @@ void setMem(volatile int* a, volatile int* b, volatile int* c, int op) {
 
  int data_result[50];
 
- int ALU_operation;
+ int ALU_operation[50];
 
 
 
@@ -1191,25 +1194,61 @@ void setMem(volatile int* a, volatile int* b, volatile int* c, int op) {
  {
   data_a[i] = a[i];
   data_b[i] = b[i];
+  ALU_operation[i] = op[i];
  }
-
-
-
- ALU_operation = op;
-
 
 
     for(int i=0; i < 50; i++)
  {
 
-  if(ALU_operation == 1)
+  switch(ALU_operation[i])
   {
-   data_result[i] = data_a[i] + data_b[i];
+
+   case 0 :
+    data_result[i] = data_a[i] + 27;
+   break;
+
+   case 1 :
+    data_result[i] = data_b[i] + 27;
+   break;
+
+   case 2 :
+    data_result[i] = data_a[i]*2;
+   break;
+
+   case 3 :
+    data_result[i] = data_b[i]*2;
+   break;
+
+   case 4 :
+    data_result[i] = data_a[i]/2;
+   break;
+
+   case 5 :
+    data_result[i] = data_b[i]/2;
+   break;
+
+   case 6 :
+    data_result[i] = data_a[i] + data_b[i];
+   break;
+
+   case 7 :
+    data_result[i] = data_a[i] - data_b[i];
+   break;
+
+   case 8 :
+    data_result[i] = data_a[i]*data_b[i];
+   break;
+
+   case 9 :
+    data_result[i] = data_a[i]/data_b[i];
+   break;
+
+
+   default :
+    data_result[i] = 0;
   }
-  else
-  {
-   data_result[i] = data_a[i] - data_b[i];
-  }
+
  }
 
 
@@ -1224,11 +1263,11 @@ void setMem(volatile int* a, volatile int* b, volatile int* c, int op) {
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_setMem_ir(volatile int *, volatile int *, volatile int *, int);
+void apatb_setMem_ir(volatile int *, volatile int *, volatile int *, volatile int *);
 #ifdef __cplusplus
 extern "C"
 #endif
-void setMem_hw_stub(volatile int *a, volatile int *b, volatile int *c, int op){
+void setMem_hw_stub(volatile int *a, volatile int *b, volatile int *c, volatile int *op){
 setMem(a, b, c, op);
 return ;
 }
@@ -1239,11 +1278,11 @@ void refine_signal_handler();
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_setMem_sw(volatile int *a, volatile int *b, volatile int *c, int op){
+void apatb_setMem_sw(volatile int *a, volatile int *b, volatile int *c, volatile int *op){
 refine_signal_handler();
 apatb_setMem_ir(a, b, c, op);
 return ;
 }
 #endif
-# 63 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/core.cpp"
+# 102 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/core.cpp"
 

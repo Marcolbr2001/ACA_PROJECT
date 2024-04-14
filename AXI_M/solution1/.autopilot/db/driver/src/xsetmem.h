@@ -105,8 +105,8 @@ void XSetmem_Set_b(XSetmem *InstancePtr, u64 Data);
 u64 XSetmem_Get_b(XSetmem *InstancePtr);
 void XSetmem_Set_c(XSetmem *InstancePtr, u64 Data);
 u64 XSetmem_Get_c(XSetmem *InstancePtr);
-void XSetmem_Set_op(XSetmem *InstancePtr, u32 Data);
-u32 XSetmem_Get_op(XSetmem *InstancePtr);
+void XSetmem_Set_op(XSetmem *InstancePtr, u64 Data);
+u64 XSetmem_Get_op(XSetmem *InstancePtr);
 
 void XSetmem_InterruptGlobalEnable(XSetmem *InstancePtr);
 void XSetmem_InterruptGlobalDisable(XSetmem *InstancePtr);

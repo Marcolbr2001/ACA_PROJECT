@@ -388,9 +388,262 @@
          <obj_property name="label">C Inputs</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <wvobject fp_name="group73" type="group">
-            <obj_property name="label">b(axi_master)</obj_property>
+            <obj_property name="label">op(axi_master)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="group74" type="group">
+               <obj_property name="label">Read Channel</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_RRESP" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_RRESP[1:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_RRESP[1:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_RUSER" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_RUSER[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_RUSER[0:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_RID" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_RID[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_RID[0:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_RDATA" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_RDATA[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_RDATA[31:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARUSER" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_ARUSER[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_ARUSER[0:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARREGION" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_ARREGION[3:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_ARREGION[3:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARQOS" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_ARQOS[3:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_ARQOS[3:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARPROT" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_ARPROT[2:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_ARPROT[2:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARCACHE" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_ARCACHE[3:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_ARCACHE[3:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARLOCK" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_ARLOCK[1:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_ARLOCK[1:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARBURST" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_ARBURST[1:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_ARBURST[1:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARSIZE" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_ARSIZE[2:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_ARSIZE[2:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARLEN" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_ARLEN[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_ARLEN[7:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARID" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_ARID[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_ARID[0:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARADDR" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_ARADDR[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_ARADDR[63:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject fp_name="group75" type="group">
+               <obj_property name="label">Write Channel</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_BUSER" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_BUSER[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_BUSER[0:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_BID" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_BID[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_BID[0:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_BRESP" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_BRESP[1:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_BRESP[1:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_WUSER" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_WUSER[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_WUSER[0:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_WID" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_WID[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_WID[0:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_WSTRB" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_WSTRB[3:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_WSTRB[3:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_WDATA" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_WDATA[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_WDATA[31:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWUSER" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_AWUSER[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_AWUSER[0:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWREGION" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_AWREGION[3:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_AWREGION[3:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWQOS" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_AWQOS[3:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_AWQOS[3:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWPROT" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_AWPROT[2:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_AWPROT[2:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWCACHE" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_AWCACHE[3:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_AWCACHE[3:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWLOCK" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_AWLOCK[1:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_AWLOCK[1:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWBURST" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_AWBURST[1:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_AWBURST[1:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWSIZE" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_AWSIZE[2:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_AWSIZE[2:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWLEN" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_AWLEN[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_AWLEN[7:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWID" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_AWID[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_AWID[0:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWADDR" type="array">
+                  <obj_property name="ElementShortName">m_axi_gmem3_AWADDR[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_AWADDR[63:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject fp_name="group76" type="group">
+               <obj_property name="label">Handshakes</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_BREADY" type="logic">
+                  <obj_property name="ElementShortName">m_axi_gmem3_BREADY</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_BREADY</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_BVALID" type="logic">
+                  <obj_property name="ElementShortName">m_axi_gmem3_BVALID</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_BVALID</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_RLAST" type="logic">
+                  <obj_property name="ElementShortName">m_axi_gmem3_RLAST</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_RLAST</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_RREADY" type="logic">
+                  <obj_property name="ElementShortName">m_axi_gmem3_RREADY</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_RREADY</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_RVALID" type="logic">
+                  <obj_property name="ElementShortName">m_axi_gmem3_RVALID</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_RVALID</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARREADY" type="logic">
+                  <obj_property name="ElementShortName">m_axi_gmem3_ARREADY</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_ARREADY</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARVALID" type="logic">
+                  <obj_property name="ElementShortName">m_axi_gmem3_ARVALID</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_ARVALID</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_WLAST" type="logic">
+                  <obj_property name="ElementShortName">m_axi_gmem3_WLAST</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_WLAST</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_WREADY" type="logic">
+                  <obj_property name="ElementShortName">m_axi_gmem3_WREADY</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_WREADY</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_WVALID" type="logic">
+                  <obj_property name="ElementShortName">m_axi_gmem3_WVALID</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_WVALID</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWREADY" type="logic">
+                  <obj_property name="ElementShortName">m_axi_gmem3_AWREADY</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_AWREADY</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWVALID" type="logic">
+                  <obj_property name="ElementShortName">m_axi_gmem3_AWVALID</obj_property>
+                  <obj_property name="ObjectShortName">m_axi_gmem3_AWVALID</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group122" type="group">
+            <obj_property name="label">b(axi_master)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="group123" type="group">
                <obj_property name="label">Read Channel</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem1_RRESP" type="array">
@@ -469,7 +722,7 @@
                   <obj_property name="Radix">HEXRADIX</obj_property>
                </wvobject>
             </wvobject>
-            <wvobject fp_name="group75" type="group">
+            <wvobject fp_name="group124" type="group">
                <obj_property name="label">Write Channel</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem1_BUSER" type="array">
@@ -563,7 +816,7 @@
                   <obj_property name="Radix">HEXRADIX</obj_property>
                </wvobject>
             </wvobject>
-            <wvobject fp_name="group76" type="group">
+            <wvobject fp_name="group125" type="group">
                <obj_property name="label">Handshakes</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem1_BREADY" type="logic">
@@ -640,10 +893,10 @@
                </wvobject>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group122" type="group">
+         <wvobject fp_name="group171" type="group">
             <obj_property name="label">a(axi_master)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject fp_name="group123" type="group">
+            <wvobject fp_name="group172" type="group">
                <obj_property name="label">Read Channel</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem0_RRESP" type="array">
@@ -722,7 +975,7 @@
                   <obj_property name="Radix">HEXRADIX</obj_property>
                </wvobject>
             </wvobject>
-            <wvobject fp_name="group124" type="group">
+            <wvobject fp_name="group173" type="group">
                <obj_property name="label">Write Channel</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem0_BUSER" type="array">
@@ -816,7 +1069,7 @@
                   <obj_property name="Radix">HEXRADIX</obj_property>
                </wvobject>
             </wvobject>
-            <wvobject fp_name="group125" type="group">
+            <wvobject fp_name="group174" type="group">
                <obj_property name="label">Handshakes</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/m_axi_gmem0_BREADY" type="logic">
@@ -894,7 +1147,7 @@
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group171" type="group">
+      <wvobject fp_name="group220" type="group">
          <obj_property name="label">Block-level IO Handshake(internal)</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/ap_done" type="logic">
@@ -914,7 +1167,7 @@
             <obj_property name="ObjectShortName">ap_start</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group176" type="group">
+      <wvobject fp_name="group225" type="group">
          <obj_property name="label">Reset</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/ap_rst_n" type="logic">
@@ -922,7 +1175,7 @@
             <obj_property name="ObjectShortName">ap_rst_n</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group178" type="group">
+      <wvobject fp_name="group227" type="group">
          <obj_property name="label">Clock</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <wvobject fp_name="/apatb_setMem_top/AESL_inst_setMem/ap_clk" type="logic">
@@ -931,13 +1184,13 @@
          </wvobject>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="group180" type="group">
+   <wvobject fp_name="group229" type="group">
       <obj_property name="label">Test Bench Signals</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="group181" type="group">
+      <wvobject fp_name="group230" type="group">
          <obj_property name="label">Internal Signals</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="group182" type="group">
+         <wvobject fp_name="group231" type="group">
             <obj_property name="label">Simulation Status</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_setMem_top/AUTOTB_TRANSACTION_NUM" type="other">
@@ -956,7 +1209,7 @@
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group183" type="group">
+         <wvobject fp_name="group232" type="group">
             <obj_property name="label">Port Depth</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_setMem_top/LENGTH_a" type="other">
@@ -989,6 +1242,11 @@
                <obj_property name="ObjectShortName">LENGTH_gmem2</obj_property>
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
+            <wvobject fp_name="/apatb_setMem_top/LENGTH_gmem3" type="other">
+               <obj_property name="ElementShortName">LENGTH_gmem3</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_gmem3</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
             <wvobject fp_name="/apatb_setMem_top/LENGTH_op" type="other">
                <obj_property name="ElementShortName">LENGTH_op</obj_property>
                <obj_property name="ObjectShortName">LENGTH_op</obj_property>
@@ -996,10 +1254,10 @@
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group194" type="group">
+      <wvobject fp_name="group244" type="group">
          <obj_property name="label">C InOuts</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="group195" type="group">
+         <wvobject fp_name="group245" type="group">
             <obj_property name="label">a__b__c__op__return(axi_slave)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_setMem_top/control_INTERRUPT" type="logic">
@@ -1105,13 +1363,13 @@
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group214" type="group">
+      <wvobject fp_name="group264" type="group">
          <obj_property name="label">C Outputs</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="group215" type="group">
+         <wvobject fp_name="group265" type="group">
             <obj_property name="label">c(axi_master)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject fp_name="group216" type="group">
+            <wvobject fp_name="group266" type="group">
                <obj_property name="label">Read Channel</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject fp_name="/apatb_setMem_top/gmem2_RRESP" type="array">
@@ -1190,7 +1448,7 @@
                   <obj_property name="Radix">HEXRADIX</obj_property>
                </wvobject>
             </wvobject>
-            <wvobject fp_name="group217" type="group">
+            <wvobject fp_name="group267" type="group">
                <obj_property name="label">Write Channel</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject fp_name="/apatb_setMem_top/gmem2_BUSER" type="array">
@@ -1284,7 +1542,7 @@
                   <obj_property name="Radix">HEXRADIX</obj_property>
                </wvobject>
             </wvobject>
-            <wvobject fp_name="group218" type="group">
+            <wvobject fp_name="group268" type="group">
                <obj_property name="label">Handshakes</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject fp_name="/apatb_setMem_top/gmem2_BREADY" type="logic">
@@ -1362,13 +1620,266 @@
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group264" type="group">
+      <wvobject fp_name="group314" type="group">
          <obj_property name="label">C Inputs</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="group265" type="group">
+         <wvobject fp_name="group315" type="group">
+            <obj_property name="label">op(axi_master)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="group316" type="group">
+               <obj_property name="label">Read Channel</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_RRESP" type="array">
+                  <obj_property name="ElementShortName">gmem3_RRESP[1:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_RRESP[1:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_RUSER" type="array">
+                  <obj_property name="ElementShortName">gmem3_RUSER[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_RUSER[0:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_RID" type="array">
+                  <obj_property name="ElementShortName">gmem3_RID[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_RID[0:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_RDATA" type="array">
+                  <obj_property name="ElementShortName">gmem3_RDATA[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_RDATA[31:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_ARUSER" type="array">
+                  <obj_property name="ElementShortName">gmem3_ARUSER[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_ARUSER[0:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_ARREGION" type="array">
+                  <obj_property name="ElementShortName">gmem3_ARREGION[3:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_ARREGION[3:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_ARQOS" type="array">
+                  <obj_property name="ElementShortName">gmem3_ARQOS[3:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_ARQOS[3:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_ARPROT" type="array">
+                  <obj_property name="ElementShortName">gmem3_ARPROT[2:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_ARPROT[2:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_ARCACHE" type="array">
+                  <obj_property name="ElementShortName">gmem3_ARCACHE[3:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_ARCACHE[3:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_ARLOCK" type="array">
+                  <obj_property name="ElementShortName">gmem3_ARLOCK[1:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_ARLOCK[1:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_ARBURST" type="array">
+                  <obj_property name="ElementShortName">gmem3_ARBURST[1:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_ARBURST[1:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_ARSIZE" type="array">
+                  <obj_property name="ElementShortName">gmem3_ARSIZE[2:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_ARSIZE[2:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_ARLEN" type="array">
+                  <obj_property name="ElementShortName">gmem3_ARLEN[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_ARLEN[7:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_ARID" type="array">
+                  <obj_property name="ElementShortName">gmem3_ARID[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_ARID[0:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_ARADDR" type="array">
+                  <obj_property name="ElementShortName">gmem3_ARADDR[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_ARADDR[63:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject fp_name="group317" type="group">
+               <obj_property name="label">Write Channel</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_BUSER" type="array">
+                  <obj_property name="ElementShortName">gmem3_BUSER[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_BUSER[0:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_BID" type="array">
+                  <obj_property name="ElementShortName">gmem3_BID[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_BID[0:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_BRESP" type="array">
+                  <obj_property name="ElementShortName">gmem3_BRESP[1:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_BRESP[1:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_WUSER" type="array">
+                  <obj_property name="ElementShortName">gmem3_WUSER[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_WUSER[0:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_WID" type="array">
+                  <obj_property name="ElementShortName">gmem3_WID[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_WID[0:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_WSTRB" type="array">
+                  <obj_property name="ElementShortName">gmem3_WSTRB[3:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_WSTRB[3:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_WDATA" type="array">
+                  <obj_property name="ElementShortName">gmem3_WDATA[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_WDATA[31:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_AWUSER" type="array">
+                  <obj_property name="ElementShortName">gmem3_AWUSER[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_AWUSER[0:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_AWREGION" type="array">
+                  <obj_property name="ElementShortName">gmem3_AWREGION[3:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_AWREGION[3:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_AWQOS" type="array">
+                  <obj_property name="ElementShortName">gmem3_AWQOS[3:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_AWQOS[3:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_AWPROT" type="array">
+                  <obj_property name="ElementShortName">gmem3_AWPROT[2:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_AWPROT[2:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_AWCACHE" type="array">
+                  <obj_property name="ElementShortName">gmem3_AWCACHE[3:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_AWCACHE[3:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_AWLOCK" type="array">
+                  <obj_property name="ElementShortName">gmem3_AWLOCK[1:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_AWLOCK[1:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_AWBURST" type="array">
+                  <obj_property name="ElementShortName">gmem3_AWBURST[1:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_AWBURST[1:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_AWSIZE" type="array">
+                  <obj_property name="ElementShortName">gmem3_AWSIZE[2:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_AWSIZE[2:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_AWLEN" type="array">
+                  <obj_property name="ElementShortName">gmem3_AWLEN[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_AWLEN[7:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_AWID" type="array">
+                  <obj_property name="ElementShortName">gmem3_AWID[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_AWID[0:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_AWADDR" type="array">
+                  <obj_property name="ElementShortName">gmem3_AWADDR[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_AWADDR[63:0]</obj_property>
+                  <obj_property name="Radix">HEXRADIX</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject fp_name="group318" type="group">
+               <obj_property name="label">Handshakes</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_BREADY" type="logic">
+                  <obj_property name="ElementShortName">gmem3_BREADY</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_BREADY</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_BVALID" type="logic">
+                  <obj_property name="ElementShortName">gmem3_BVALID</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_BVALID</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_RLAST" type="logic">
+                  <obj_property name="ElementShortName">gmem3_RLAST</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_RLAST</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_RREADY" type="logic">
+                  <obj_property name="ElementShortName">gmem3_RREADY</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_RREADY</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_RVALID" type="logic">
+                  <obj_property name="ElementShortName">gmem3_RVALID</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_RVALID</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_ARREADY" type="logic">
+                  <obj_property name="ElementShortName">gmem3_ARREADY</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_ARREADY</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_ARVALID" type="logic">
+                  <obj_property name="ElementShortName">gmem3_ARVALID</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_ARVALID</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_WLAST" type="logic">
+                  <obj_property name="ElementShortName">gmem3_WLAST</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_WLAST</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_WREADY" type="logic">
+                  <obj_property name="ElementShortName">gmem3_WREADY</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_WREADY</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_WVALID" type="logic">
+                  <obj_property name="ElementShortName">gmem3_WVALID</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_WVALID</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_AWREADY" type="logic">
+                  <obj_property name="ElementShortName">gmem3_AWREADY</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_AWREADY</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+               <wvobject fp_name="/apatb_setMem_top/gmem3_AWVALID" type="logic">
+                  <obj_property name="ElementShortName">gmem3_AWVALID</obj_property>
+                  <obj_property name="ObjectShortName">gmem3_AWVALID</obj_property>
+                  <obj_property name="CustomSignalColor">#ffff00</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group364" type="group">
             <obj_property name="label">b(axi_master)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject fp_name="group266" type="group">
+            <wvobject fp_name="group365" type="group">
                <obj_property name="label">Read Channel</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject fp_name="/apatb_setMem_top/gmem1_RRESP" type="array">
@@ -1447,7 +1958,7 @@
                   <obj_property name="Radix">HEXRADIX</obj_property>
                </wvobject>
             </wvobject>
-            <wvobject fp_name="group267" type="group">
+            <wvobject fp_name="group366" type="group">
                <obj_property name="label">Write Channel</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject fp_name="/apatb_setMem_top/gmem1_BUSER" type="array">
@@ -1541,7 +2052,7 @@
                   <obj_property name="Radix">HEXRADIX</obj_property>
                </wvobject>
             </wvobject>
-            <wvobject fp_name="group268" type="group">
+            <wvobject fp_name="group367" type="group">
                <obj_property name="label">Handshakes</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject fp_name="/apatb_setMem_top/gmem1_BREADY" type="logic">
@@ -1618,10 +2129,10 @@
                </wvobject>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group314" type="group">
+         <wvobject fp_name="group413" type="group">
             <obj_property name="label">a(axi_master)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject fp_name="group315" type="group">
+            <wvobject fp_name="group414" type="group">
                <obj_property name="label">Read Channel</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject fp_name="/apatb_setMem_top/gmem0_RRESP" type="array">
@@ -1700,7 +2211,7 @@
                   <obj_property name="Radix">HEXRADIX</obj_property>
                </wvobject>
             </wvobject>
-            <wvobject fp_name="group316" type="group">
+            <wvobject fp_name="group415" type="group">
                <obj_property name="label">Write Channel</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject fp_name="/apatb_setMem_top/gmem0_BUSER" type="array">
@@ -1794,7 +2305,7 @@
                   <obj_property name="Radix">HEXRADIX</obj_property>
                </wvobject>
             </wvobject>
-            <wvobject fp_name="group317" type="group">
+            <wvobject fp_name="group416" type="group">
                <obj_property name="label">Handshakes</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject fp_name="/apatb_setMem_top/gmem0_BREADY" type="logic">

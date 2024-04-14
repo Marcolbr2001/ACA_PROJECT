@@ -72,6 +72,55 @@ add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem2_AWADDR -into $wdata_grou
 add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem2_AWREADY -into $ctrl_group -color #ffff00 -radix hex
 add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem2_AWVALID -into $ctrl_group -color #ffff00 -radix hex
 set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+set op_group [add_wave_group op(axi_master) -into $cinputgroup]
+set rdata_group [add_wave_group "Read Channel" -into $op_group]
+set wdata_group [add_wave_group "Write Channel" -into $op_group]
+set ctrl_group [add_wave_group "Handshakes" -into $op_group]
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_BUSER -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_BID -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_BRESP -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_BREADY -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_BVALID -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_RRESP -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_RUSER -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_RID -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_RLAST -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_RDATA -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_RREADY -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_RVALID -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARUSER -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARREGION -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARQOS -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARPROT -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARCACHE -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARLOCK -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARBURST -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARSIZE -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARLEN -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARID -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARADDR -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARREADY -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_ARVALID -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_WUSER -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_WID -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_WLAST -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_WSTRB -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_WDATA -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_WREADY -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_WVALID -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWUSER -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWREGION -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWQOS -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWPROT -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWCACHE -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWLOCK -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWBURST -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWSIZE -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWLEN -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWID -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWADDR -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWREADY -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/AESL_inst_setMem/m_axi_gmem3_AWVALID -into $ctrl_group -color #ffff00 -radix hex
 set b_group [add_wave_group b(axi_master) -into $cinputgroup]
 set rdata_group [add_wave_group "Read Channel" -into $b_group]
 set wdata_group [add_wave_group "Write Channel" -into $b_group]
@@ -192,6 +241,7 @@ add_wave /apatb_setMem_top/LENGTH_c -into $tb_portdepth_group -radix hex
 add_wave /apatb_setMem_top/LENGTH_gmem0 -into $tb_portdepth_group -radix hex
 add_wave /apatb_setMem_top/LENGTH_gmem1 -into $tb_portdepth_group -radix hex
 add_wave /apatb_setMem_top/LENGTH_gmem2 -into $tb_portdepth_group -radix hex
+add_wave /apatb_setMem_top/LENGTH_gmem3 -into $tb_portdepth_group -radix hex
 add_wave /apatb_setMem_top/LENGTH_op -into $tb_portdepth_group -radix hex
 set tbcinoutgroup [add_wave_group "C InOuts" -into $testbenchgroup]
 set tb_a__b__c__op__return_group [add_wave_group a__b__c__op__return(axi_slave) -into $tbcinoutgroup]
@@ -264,6 +314,55 @@ add_wave /apatb_setMem_top/gmem2_AWADDR -into $wdata_group -radix hex
 add_wave /apatb_setMem_top/gmem2_AWREADY -into $ctrl_group -color #ffff00 -radix hex
 add_wave /apatb_setMem_top/gmem2_AWVALID -into $ctrl_group -color #ffff00 -radix hex
 set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+set tb_op_group [add_wave_group op(axi_master) -into $tbcinputgroup]
+set rdata_group [add_wave_group "Read Channel" -into $tb_op_group]
+set wdata_group [add_wave_group "Write Channel" -into $tb_op_group]
+set ctrl_group [add_wave_group "Handshakes" -into $tb_op_group]
+add_wave /apatb_setMem_top/gmem3_BUSER -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_BID -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_BRESP -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_BREADY -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/gmem3_BVALID -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/gmem3_RRESP -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_RUSER -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_RID -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_RLAST -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/gmem3_RDATA -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_RREADY -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/gmem3_RVALID -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/gmem3_ARUSER -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_ARREGION -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_ARQOS -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_ARPROT -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_ARCACHE -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_ARLOCK -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_ARBURST -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_ARSIZE -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_ARLEN -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_ARID -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_ARADDR -into $rdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_ARREADY -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/gmem3_ARVALID -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/gmem3_WUSER -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_WID -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_WLAST -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/gmem3_WSTRB -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_WDATA -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_WREADY -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/gmem3_WVALID -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/gmem3_AWUSER -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_AWREGION -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_AWQOS -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_AWPROT -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_AWCACHE -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_AWLOCK -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_AWBURST -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_AWSIZE -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_AWLEN -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_AWID -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_AWADDR -into $wdata_group -radix hex
+add_wave /apatb_setMem_top/gmem3_AWREADY -into $ctrl_group -color #ffff00 -radix hex
+add_wave /apatb_setMem_top/gmem3_AWVALID -into $ctrl_group -color #ffff00 -radix hex
 set tb_b_group [add_wave_group b(axi_master) -into $tbcinputgroup]
 set rdata_group [add_wave_group "Read Channel" -into $tb_b_group]
 set wdata_group [add_wave_group "Write Channel" -into $tb_b_group]

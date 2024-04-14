@@ -13,9 +13,9 @@ open_solution "solution1" -flow_target vivado
 set_part {xc7z020-clg400-1}
 create_clock -period 10 -name default
 config_cosim -rtl vhdl -tool xsim -trace_level all
-config_export -display_name AXI_ALU -format ip_catalog -output C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M -rtl verilog -version 1.0
+config_export -display_name AXI_ALU -format ip_catalog -output C:/Users/marco/Desktop/NECST/NL2/AXI_M/ip_repo -rtl verilog -version 1.0
 source "./AXI_M/solution1/directives.tcl"
 csim_design
 csynth_design
 cosim_design -trace_level all -rtl vhdl
-export_design -rtl verilog -format ip_catalog -output C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M
+export_design -rtl verilog -format ip_catalog -output C:/Users/marco/Desktop/NECST/NL2/AXI_M/ip_repo

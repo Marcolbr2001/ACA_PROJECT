@@ -32,12 +32,15 @@ using namespace std;
 #define AUTOTB_TVOUT_gmem1 "../tv/cdatafile/c.setMem.autotvout_gmem1.dat"
 #define AUTOTB_TVIN_gmem2 "../tv/cdatafile/c.setMem.autotvin_gmem2.dat"
 #define AUTOTB_TVOUT_gmem2 "../tv/cdatafile/c.setMem.autotvout_gmem2.dat"
+#define AUTOTB_TVIN_gmem3 "../tv/cdatafile/c.setMem.autotvin_gmem3.dat"
+#define AUTOTB_TVOUT_gmem3 "../tv/cdatafile/c.setMem.autotvout_gmem3.dat"
 
 
 // tvout file define:
 #define AUTOTB_TVOUT_PC_gmem0 "../tv/rtldatafile/rtl.setMem.autotvout_gmem0.dat"
 #define AUTOTB_TVOUT_PC_gmem1 "../tv/rtldatafile/rtl.setMem.autotvout_gmem1.dat"
 #define AUTOTB_TVOUT_PC_gmem2 "../tv/rtldatafile/rtl.setMem.autotvout_gmem2.dat"
+#define AUTOTB_TVOUT_PC_gmem3 "../tv/rtldatafile/rtl.setMem.autotvout_gmem3.dat"
 
 
 namespace hls::sim
@@ -1038,10 +1041,10 @@ namespace hls::sim
 
 
 extern "C"
-void setMem_hw_stub_wrapper(void*, void*, void*, hls::sim::Byte<4>);
+void setMem_hw_stub_wrapper(void*, void*, void*, void*);
 
 extern "C"
-void apatb_setMem_hw(void* __xlx_apatb_param_a, void* __xlx_apatb_param_b, void* __xlx_apatb_param_c, hls::sim::Byte<4> __xlx_apatb_param_op)
+void apatb_setMem_hw(void* __xlx_apatb_param_a, void* __xlx_apatb_param_b, void* __xlx_apatb_param_c, void* __xlx_apatb_param_op)
 {
   hls::sim::Byte<4> __xlx_offset_byte_param_a;
   static hls::sim::Register port0 {
@@ -1079,6 +1082,7 @@ void apatb_setMem_hw(void* __xlx_apatb_param_a, void* __xlx_apatb_param_b, void*
   };
   port2.param = &__xlx_offset_byte_param_c;
 
+  hls::sim::Byte<4> __xlx_offset_byte_param_op;
   static hls::sim::Register port3 {
     .name = "op",
     .width = 32,
@@ -1088,7 +1092,7 @@ void apatb_setMem_hw(void* __xlx_apatb_param_a, void* __xlx_apatb_param_b, void*
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_op),
 #endif
   };
-  port3.param = &__xlx_apatb_param_op;
+  port3.param = &__xlx_offset_byte_param_op;
 
 #ifdef USE_BINARY_TV_FILE
   static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port4 {
@@ -1171,6 +1175,30 @@ void apatb_setMem_hw(void* __xlx_apatb_param_a, void* __xlx_apatb_param_b, void*
   port6.offset = {  };
   port6.hasWrite = { true };
 
+#ifdef USE_BINARY_TV_FILE
+  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port7 {
+#else
+  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port7 {
+#endif
+    .width = 32,
+    .asize = 4,
+    .hbm = false,
+    .name = { "gmem3" },
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+#ifdef USE_BINARY_TV_FILE
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_gmem3),
+#else
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_gmem3),
+#endif
+#endif
+  };
+  port7.param = { __xlx_apatb_param_op };
+  port7.nbytes = { 200 };
+  port7.offset = {  };
+  port7.hasWrite = { false };
+
   try {
 #ifdef POST_CHECK
     CodeState = ENTER_WRAPC_PC;
@@ -1185,6 +1213,7 @@ void apatb_setMem_hw(void* __xlx_apatb_param_a, void* __xlx_apatb_param_b, void*
     dump(port4, port4.iwriter, tcl.AESL_transaction);
     dump(port5, port5.iwriter, tcl.AESL_transaction);
     dump(port6, port6.iwriter, tcl.AESL_transaction);
+    dump(port7, port7.iwriter, tcl.AESL_transaction);
     port0.doTCL(tcl);
     port1.doTCL(tcl);
     port2.doTCL(tcl);
@@ -1192,6 +1221,7 @@ void apatb_setMem_hw(void* __xlx_apatb_param_a, void* __xlx_apatb_param_b, void*
     port4.doTCL(tcl);
     port5.doTCL(tcl);
     port6.doTCL(tcl);
+    port7.doTCL(tcl);
     CodeState = CALL_C_DUT;
     setMem_hw_stub_wrapper(__xlx_apatb_param_a, __xlx_apatb_param_b, __xlx_apatb_param_c, __xlx_apatb_param_op);
     CodeState = DUMP_OUTPUTS;

@@ -34,7 +34,9 @@
 // 0x30 : reserved
 // 0x34 : Data signal of op
 //        bit 31~0 - op[31:0] (Read/Write)
-// 0x38 : reserved
+// 0x38 : Data signal of op
+//        bit 31~0 - op[63:32] (Read/Write)
+// 0x3c : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 #define CONTROL_ADDR_AP_CTRL 0x00
@@ -48,4 +50,4 @@
 #define CONTROL_ADDR_C_DATA  0x28
 #define CONTROL_BITS_C_DATA  64
 #define CONTROL_ADDR_OP_DATA 0x34
-#define CONTROL_BITS_OP_DATA 32
+#define CONTROL_BITS_OP_DATA 64

@@ -133,20 +133,22 @@ u64 XSetmem_Get_c(XSetmem *InstancePtr) {
     return Data;
 }
 
-void XSetmem_Set_op(XSetmem *InstancePtr, u32 Data) {
+void XSetmem_Set_op(XSetmem *InstancePtr, u64 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    XSetmem_WriteReg(InstancePtr->Control_BaseAddress, XSETMEM_CONTROL_ADDR_OP_DATA, Data);
+    XSetmem_WriteReg(InstancePtr->Control_BaseAddress, XSETMEM_CONTROL_ADDR_OP_DATA, (u32)(Data));
+    XSetmem_WriteReg(InstancePtr->Control_BaseAddress, XSETMEM_CONTROL_ADDR_OP_DATA + 4, (u32)(Data >> 32));
 }
 
-u32 XSetmem_Get_op(XSetmem *InstancePtr) {
-    u32 Data;
+u64 XSetmem_Get_op(XSetmem *InstancePtr) {
+    u64 Data;
 
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
     Data = XSetmem_ReadReg(InstancePtr->Control_BaseAddress, XSETMEM_CONTROL_ADDR_OP_DATA);
+    Data += (u64)XSetmem_ReadReg(InstancePtr->Control_BaseAddress, XSETMEM_CONTROL_ADDR_OP_DATA + 4) << 32;
     return Data;
 }
 

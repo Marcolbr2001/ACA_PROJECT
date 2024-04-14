@@ -10,4 +10,4 @@ extern "C" void AESL_WRAP_setMem (
 volatile void* a,
 volatile void* b,
 volatile void* c,
-int op);
+volatile void* op);

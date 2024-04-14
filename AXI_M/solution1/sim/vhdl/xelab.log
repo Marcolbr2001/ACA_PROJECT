@@ -13,6 +13,8 @@ INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/
 INFO: [VRFC 10-3107] analyzing entity 'AESL_axi_master_gmem1'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/AESL_axi_master_gmem2.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'AESL_axi_master_gmem2'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/AESL_axi_master_gmem3.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AESL_axi_master_gmem3'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/AESL_axi_slave_control.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'AESL_axi_slave_control'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem.autotb.vhd" into library xil_defaultlib
@@ -61,12 +63,29 @@ INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem2_m_axi_reg_slice'
 INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem2_m_axi_fifo'
 INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem2_m_axi_srl'
 INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem2_m_axi_mem'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_VITIS_LOOP_31_1.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_VITIS_LOOP_31_1'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_VITIS_LOOP_43_2.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_VITIS_LOOP_43_2'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_VITIS_LOOP_58_3.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_VITIS_LOOP_58_3'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_gmem3_m_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem3_m_axi'
+INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem3_m_axi_load'
+INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem3_m_axi_store'
+INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem3_m_axi_read'
+INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem3_m_axi_write'
+INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem3_m_axi_burst_converter'
+INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem3_m_axi_throttle'
+INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem3_m_axi_reg_slice'
+INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem3_m_axi_fifo'
+INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem3_m_axi_srl'
+INFO: [VRFC 10-3107] analyzing entity 'setMem_gmem3_m_axi_mem'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_mul_32s_32s_32_2_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'setMem_mul_32s_32s_32_2_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_sdiv_32ns_32ns_32_36_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'setMem_sdiv_32ns_32ns_32_36_1_divider'
+INFO: [VRFC 10-3107] analyzing entity 'setMem_sdiv_32ns_32ns_32_36_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_VITIS_LOOP_34_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_VITIS_LOOP_34_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_VITIS_LOOP_42_2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_VITIS_LOOP_42_2'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/sim/vhdl/setMem_setMem_Pipeline_VITIS_LOOP_97_3.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'setMem_setMem_Pipeline_VITIS_LOOP_97_3'
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
@@ -83,9 +102,12 @@ Compiling package ieee.std_logic_textio
 Compiling module work.glbl
 Compiling architecture rtl of entity xil_defaultlib.setMem_data_a_RAM_AUTO_1R1W [\setMem_data_a_RAM_AUTO_1R1W(1,4...]
 Compiling architecture behav of entity xil_defaultlib.setMem_flow_control_loop_pipe_sequential_init [setmem_flow_control_loop_pipe_se...]
-Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_VITIS_LOOP_31_1 [setmem_setmem_pipeline_vitis_loo...]
-Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_VITIS_LOOP_43_2 [setmem_setmem_pipeline_vitis_loo...]
-Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_VITIS_LOOP_58_3 [setmem_setmem_pipeline_vitis_loo...]
+Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_VITIS_LOOP_34_1 [setmem_setmem_pipeline_vitis_loo...]
+Compiling architecture behav of entity xil_defaultlib.setMem_mul_32s_32s_32_2_1 [\setMem_mul_32s_32s_32_2_1(num_s...]
+Compiling architecture rtl of entity xil_defaultlib.setMem_sdiv_32ns_32ns_32_36_1_divider [setmem_sdiv_32ns_32ns_32_36_1_di...]
+Compiling architecture rtl of entity xil_defaultlib.setMem_sdiv_32ns_32ns_32_36_1 [\setMem_sdiv_32ns_32ns_32_36_1(n...]
+Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_VITIS_LOOP_42_2 [setmem_setmem_pipeline_vitis_loo...]
+Compiling architecture behav of entity xil_defaultlib.setMem_setMem_Pipeline_VITIS_LOOP_97_3 [setmem_setmem_pipeline_vitis_loo...]
 Compiling architecture behave of entity xil_defaultlib.setMem_control_s_axi [setmem_control_s_axi_default]
 Compiling architecture behav of entity xil_defaultlib.setMem_gmem0_m_axi_srl [\setMem_gmem0_m_axi_srl(data_wid...]
 Compiling architecture behave of entity xil_defaultlib.setMem_gmem0_m_axi_fifo [\setMem_gmem0_m_axi_fifo(data_wi...]
@@ -168,10 +190,38 @@ Compiling architecture behav of entity xil_defaultlib.setMem_gmem2_m_axi_throttl
 Compiling architecture behave of entity xil_defaultlib.setMem_gmem2_m_axi_reg_slice [\setMem_gmem2_m_axi_reg_slice(da...]
 Compiling architecture behave of entity xil_defaultlib.setMem_gmem2_m_axi_write [\setMem_gmem2_m_axi_write(conser...]
 Compiling architecture behave of entity xil_defaultlib.setMem_gmem2_m_axi [\setMem_gmem2_m_axi(conservative...]
+Compiling architecture behav of entity xil_defaultlib.setMem_gmem3_m_axi_srl [\setMem_gmem3_m_axi_srl(data_wid...]
+Compiling architecture behave of entity xil_defaultlib.setMem_gmem3_m_axi_fifo [\setMem_gmem3_m_axi_fifo(data_wi...]
+Compiling architecture behav of entity xil_defaultlib.setMem_gmem3_m_axi_mem [\setMem_gmem3_m_axi_mem(mem_styl...]
+Compiling architecture behave of entity xil_defaultlib.setMem_gmem3_m_axi_fifo [\setMem_gmem3_m_axi_fifo(mem_sty...]
+Compiling architecture behave of entity xil_defaultlib.setMem_gmem3_m_axi_load [\setMem_gmem3_m_axi_load(num_rea...]
+Compiling architecture behav of entity xil_defaultlib.setMem_gmem3_m_axi_mem [\setMem_gmem3_m_axi_mem(mem_styl...]
+Compiling architecture behave of entity xil_defaultlib.setMem_gmem3_m_axi_fifo [\setMem_gmem3_m_axi_fifo(mem_sty...]
+Compiling architecture behav of entity xil_defaultlib.setMem_gmem3_m_axi_srl [\setMem_gmem3_m_axi_srl(data_wid...]
+Compiling architecture behave of entity xil_defaultlib.setMem_gmem3_m_axi_fifo [\setMem_gmem3_m_axi_fifo(data_wi...]
+Compiling architecture behav of entity xil_defaultlib.setMem_gmem3_m_axi_srl [\setMem_gmem3_m_axi_srl(data_wid...]
+Compiling architecture behave of entity xil_defaultlib.setMem_gmem3_m_axi_fifo [\setMem_gmem3_m_axi_fifo(data_wi...]
+Compiling architecture behave of entity xil_defaultlib.setMem_gmem3_m_axi_store [\setMem_gmem3_m_axi_store(num_wr...]
+Compiling architecture behave of entity xil_defaultlib.setMem_gmem3_m_axi_reg_slice [\setMem_gmem3_m_axi_reg_slice(da...]
+Compiling architecture behave of entity xil_defaultlib.setMem_gmem3_m_axi_burst_converter [\setMem_gmem3_m_axi_burst_conver...]
+Compiling architecture behave of entity xil_defaultlib.setMem_gmem3_m_axi_reg_slice [\setMem_gmem3_m_axi_reg_slice(da...]
+Compiling architecture behave of entity xil_defaultlib.setMem_gmem3_m_axi_read [\setMem_gmem3_m_axi_read(bus_add...]
+Compiling architecture behav of entity xil_defaultlib.setMem_gmem3_m_axi_srl [\setMem_gmem3_m_axi_srl(data_wid...]
+Compiling architecture behave of entity xil_defaultlib.setMem_gmem3_m_axi_fifo [\setMem_gmem3_m_axi_fifo(1,8)\]
+Compiling architecture behav of entity xil_defaultlib.setMem_gmem3_m_axi_srl [\setMem_gmem3_m_axi_srl(data_wid...]
+Compiling architecture behave of entity xil_defaultlib.setMem_gmem3_m_axi_fifo [\setMem_gmem3_m_axi_fifo(data_wi...]
+Compiling architecture behave of entity xil_defaultlib.setMem_gmem3_m_axi_reg_slice [\setMem_gmem3_m_axi_reg_slice(da...]
+Compiling architecture behav of entity xil_defaultlib.setMem_gmem3_m_axi_srl [\setMem_gmem3_m_axi_srl(data_wid...]
+Compiling architecture behave of entity xil_defaultlib.setMem_gmem3_m_axi_fifo [\setMem_gmem3_m_axi_fifo(data_wi...]
+Compiling architecture behav of entity xil_defaultlib.setMem_gmem3_m_axi_throttle [\setMem_gmem3_m_axi_throttle(con...]
+Compiling architecture behave of entity xil_defaultlib.setMem_gmem3_m_axi_reg_slice [\setMem_gmem3_m_axi_reg_slice(da...]
+Compiling architecture behave of entity xil_defaultlib.setMem_gmem3_m_axi_write [\setMem_gmem3_m_axi_write(conser...]
+Compiling architecture behave of entity xil_defaultlib.setMem_gmem3_m_axi [\setMem_gmem3_m_axi(conservative...]
 Compiling architecture behav of entity xil_defaultlib.setMem [setmem_default]
 Compiling architecture behav of entity xil_defaultlib.AESL_axi_master_gmem0 [aesl_axi_master_gmem0_default]
 Compiling architecture behav of entity xil_defaultlib.AESL_axi_master_gmem1 [aesl_axi_master_gmem1_default]
 Compiling architecture behav of entity xil_defaultlib.AESL_axi_master_gmem2 [aesl_axi_master_gmem2_default]
+Compiling architecture behav of entity xil_defaultlib.AESL_axi_master_gmem3 [aesl_axi_master_gmem3_default]
 Compiling architecture behav of entity xil_defaultlib.AESL_axi_slave_control [aesl_axi_slave_control_default]
 Compiling architecture behav of entity xil_defaultlib.apatb_setmem_top
 Built simulation snapshot setMem

@@ -38,7 +38,7 @@ port (
     a                     :out  STD_LOGIC_VECTOR(63 downto 0);
     b                     :out  STD_LOGIC_VECTOR(63 downto 0);
     c                     :out  STD_LOGIC_VECTOR(63 downto 0);
-    op                    :out  STD_LOGIC_VECTOR(31 downto 0);
+    op                    :out  STD_LOGIC_VECTOR(63 downto 0);
     ap_start              :out  STD_LOGIC;
     ap_done               :in   STD_LOGIC;
     ap_ready              :in   STD_LOGIC;
@@ -85,7 +85,9 @@ end entity setMem_control_s_axi;
 -- 0x30 : reserved
 -- 0x34 : Data signal of op
 --        bit 31~0 - op[31:0] (Read/Write)
--- 0x38 : reserved
+-- 0x38 : Data signal of op
+--        bit 31~0 - op[63:32] (Read/Write)
+-- 0x3c : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of setMem_control_s_axi is
@@ -107,7 +109,8 @@ architecture behave of setMem_control_s_axi is
     constant ADDR_C_DATA_1  : INTEGER := 16#2c#;
     constant ADDR_C_CTRL    : INTEGER := 16#30#;
     constant ADDR_OP_DATA_0 : INTEGER := 16#34#;
-    constant ADDR_OP_CTRL   : INTEGER := 16#38#;
+    constant ADDR_OP_DATA_1 : INTEGER := 16#38#;
+    constant ADDR_OP_CTRL   : INTEGER := 16#3c#;
     constant ADDR_BITS         : INTEGER := 6;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
@@ -139,7 +142,7 @@ architecture behave of setMem_control_s_axi is
     signal int_a               : UNSIGNED(63 downto 0) := (others => '0');
     signal int_b               : UNSIGNED(63 downto 0) := (others => '0');
     signal int_c               : UNSIGNED(63 downto 0) := (others => '0');
-    signal int_op              : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_op              : UNSIGNED(63 downto 0) := (others => '0');
 
 
 begin
@@ -282,6 +285,8 @@ begin
                         rdata_data <= RESIZE(int_c(63 downto 32), 32);
                     when ADDR_OP_DATA_0 =>
                         rdata_data <= RESIZE(int_op(31 downto 0), 32);
+                    when ADDR_OP_DATA_1 =>
+                        rdata_data <= RESIZE(int_op(63 downto 32), 32);
                     when others =>
                         NULL;
                     end case;
@@ -543,6 +548,17 @@ begin
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_OP_DATA_0) then
                     int_op(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_op(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_OP_DATA_1) then
+                    int_op(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_op(63 downto 32));
                 end if;
             end if;
         end if;

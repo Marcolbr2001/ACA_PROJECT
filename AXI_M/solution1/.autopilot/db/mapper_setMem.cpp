@@ -242,8 +242,8 @@ class AESL_RUNTIME_BC {
     string mName;
 };
 using hls::sim::Byte;
-extern "C" void setMem(Byte<4>*, Byte<4>*, Byte<4>*, int, int, int, int);
-extern "C" void apatb_setMem_hw(volatile void * __xlx_apatb_param_a, volatile void * __xlx_apatb_param_b, volatile void * __xlx_apatb_param_c, int __xlx_apatb_param_op) {
+extern "C" void setMem(Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, int, int, int, int);
+extern "C" void apatb_setMem_hw(volatile void * __xlx_apatb_param_a, volatile void * __xlx_apatb_param_b, volatile void * __xlx_apatb_param_c, volatile void * __xlx_apatb_param_op) {
 using hls::sim::createStream;
   // Collect __xlx_a__tmp_vec
 std::vector<Byte<4>> __xlx_a__tmp_vec;
@@ -269,8 +269,16 @@ __xlx_c__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_c)[i]);
   int __xlx_size_param_c = 50;
   int __xlx_offset_param_c = 0;
   int __xlx_offset_byte_param_c = 0*4;
+  // Collect __xlx_op__tmp_vec
+std::vector<Byte<4>> __xlx_op__tmp_vec;
+for (size_t i = 0; i < 50; ++i){
+__xlx_op__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_op)[i]);
+}
+  int __xlx_size_param_op = 50;
+  int __xlx_offset_param_op = 0;
+  int __xlx_offset_byte_param_op = 0*4;
   // DUT call
-  setMem(__xlx_a__tmp_vec.data(), __xlx_b__tmp_vec.data(), __xlx_c__tmp_vec.data(), __xlx_offset_byte_param_a, __xlx_offset_byte_param_b, __xlx_offset_byte_param_c, __xlx_apatb_param_op);
+  setMem(__xlx_a__tmp_vec.data(), __xlx_b__tmp_vec.data(), __xlx_c__tmp_vec.data(), __xlx_op__tmp_vec.data(), __xlx_offset_byte_param_a, __xlx_offset_byte_param_b, __xlx_offset_byte_param_c, __xlx_offset_byte_param_op);
 // print __xlx_apatb_param_a
 for (size_t i = 0; i < __xlx_size_param_a; ++i) {
 ((Byte<4>*)__xlx_apatb_param_a)[i] = __xlx_a__tmp_vec[__xlx_offset_param_a+i];
@@ -282,5 +290,9 @@ for (size_t i = 0; i < __xlx_size_param_b; ++i) {
 // print __xlx_apatb_param_c
 for (size_t i = 0; i < __xlx_size_param_c; ++i) {
 ((Byte<4>*)__xlx_apatb_param_c)[i] = __xlx_c__tmp_vec[__xlx_offset_param_c+i];
+}
+// print __xlx_apatb_param_op
+for (size_t i = 0; i < __xlx_size_param_op; ++i) {
+((Byte<4>*)__xlx_apatb_param_op)[i] = __xlx_op__tmp_vec[__xlx_offset_param_op+i];
 }
 }

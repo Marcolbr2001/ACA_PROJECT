@@ -2,7 +2,7 @@
 
 #define DATA_LENGTH 50
 
-void setMem(volatile int* a, volatile int* b, volatile int* c, int op);
+void setMem(volatile int* a, volatile int* b, volatile int* c, volatile int* op);
 
 int main() {
     int i;
@@ -10,7 +10,7 @@ int main() {
     int DATA_A[DATA_LENGTH];
 	int DATA_B[DATA_LENGTH];
 	int DATA_RESULT[DATA_LENGTH];
-	int ALU_OPERATION;
+	int ALU_OPERATION[DATA_LENGTH];
 
     printf("\n\n");
 
@@ -22,42 +22,29 @@ int main() {
     	DATA_RESULT[i] = 0;
 	}
 
-    // ------------------ Sum ------------------- //
+    // selecting operations
+    int j = 0;
 
-    ALU_OPERATION = 1;
+	for (int i = 0; i < DATA_LENGTH; i++)
+	{
+		if(j == 10)
+			j = 0;
+
+		ALU_OPERATION[i] = j;
+		j++;
+	}
+
+
+    // ------------------ Go ------------------- //
 
     // Call the hardware functions
     setMem(DATA_A, DATA_B, DATA_RESULT, ALU_OPERATION);
     
+    //print results
     for (int i = 0; i < DATA_LENGTH; i++)
 	{
-
-	  if(ALU_OPERATION == 1)
-		   printf("A = %d B = %d RES = %d, OP = %d sum\n", DATA_A[i], DATA_B[i], DATA_RESULT[i], ALU_OPERATION);
-	  else
-		   printf("A = %d B = %d, RES = %d, OP = %d difference\n", DATA_A[i], DATA_B[i], DATA_RESULT[i], ALU_OPERATION);
-   }
-
-    printf("\n\n");
-    // ----------------------------------------- //
-
-
-
-
-    // ------------- Difference ---------------- //
-
-    ALU_OPERATION = 0;
-
-    setMem(DATA_A, DATA_B, DATA_RESULT, ALU_OPERATION);
-
-    for (int i=0; i < DATA_LENGTH; i++)
-	{
-
-	   if(ALU_OPERATION == 1)
-			printf("A = %d B = %d RES = %d, OP = %d sum\n", DATA_A[i], DATA_B[i], DATA_RESULT[i], ALU_OPERATION);
-	   else
-			printf("A = %d B = %d, RES = %d, OP = %d difference\n", DATA_A[i], DATA_B[i], DATA_RESULT[i], ALU_OPERATION);
-	}
+    	printf("A = %d B = %d RES = %d, OP = %d \n", DATA_A[i], DATA_B[i], DATA_RESULT[i], ALU_OPERATION[i]);
+    }
 
     printf("\n\n");
     // ----------------------------------------- //

@@ -29,7 +29,7 @@ constant b_c_bitwidth : INTEGER := 64;
 constant c_DEPTH : INTEGER := 1;
 constant c_c_bitwidth : INTEGER := 64;
 constant op_DEPTH : INTEGER := 1;
-constant op_c_bitwidth : INTEGER := 32;
+constant op_c_bitwidth : INTEGER := 64;
 constant START_ADDR : INTEGER := 0;
 constant setMem_continue_addr : INTEGER := 0;
 constant setMem_auto_start_addr : INTEGER := 0;
@@ -166,7 +166,7 @@ shared variable mem_c : mem_c_arr2D := (others => (others => '0'));
   type    image_mem_c_arr2D is array(0 to (c_c_bitwidth+DATA_WIDTH-1)/DATA_WIDTH * c_DEPTH -1) of STD_LOGIC_VECTOR(DATA_WIDTH - 1 downto 0);
   shared variable image_mem_c : image_mem_c_arr2D := (others => (others => '0'));
 signal c_write_data_finish : STD_LOGIC := '0';
-  type    mem_op_arr2D is array(0 to op_DEPTH - 1) of STD_LOGIC_VECTOR(DATA_WIDTH - 1 downto 0);
+  type    mem_op_arr2D is array(0 to op_DEPTH - 1) of STD_LOGIC_VECTOR(op_c_bitwidth - 1 downto 0);
 shared variable mem_op : mem_op_arr2D := (others => (others => '0'));
   type    image_mem_op_arr2D is array(0 to (op_c_bitwidth+DATA_WIDTH-1)/DATA_WIDTH * op_DEPTH -1) of STD_LOGIC_VECTOR(DATA_WIDTH - 1 downto 0);
   shared variable image_mem_op : image_mem_op_arr2D := (others => (others => '0'));
@@ -1149,7 +1149,7 @@ begin
         write_start_run_flag <= '0'; 
         write_start_count := 0;
     elsif (clk'event and clk = '1') then
-        if (write_start_count >= 2) then
+        if (write_start_count >= 1) then
             write_start_run_flag <= '0'; 
         elsif (TRAN_control_write_start_in = '1') then
             write_start_run_flag <= '1'; 
@@ -1563,7 +1563,7 @@ read_op_file_process : process
   file        fp          :   TEXT;
   variable    fstatus     :   FILE_OPEN_STATUS;
   variable    token_line  :   LINE;
-  variable    token       :   STRING(1 to 128);
+  variable    token       :   STRING(1 to 152);
   variable    token_tmp : STD_LOGIC_VECTOR(op_c_bitwidth - 1 downto 0) := (others => '0'); 
   variable    tmp_cache_mem : STD_LOGIC_VECTOR(DATA_WIDTH - 1 downto 0) := (others => '0'); 
   variable    tmp_cache_mem_8 : STD_LOGIC_VECTOR(8 - 1 downto 0) := (others => '0'); 

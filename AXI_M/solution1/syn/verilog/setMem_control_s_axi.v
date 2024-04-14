@@ -35,7 +35,7 @@ module setMem_control_s_axi
     output wire [63:0]                   a,
     output wire [63:0]                   b,
     output wire [63:0]                   c,
-    output wire [31:0]                   op,
+    output wire [63:0]                   op,
     output wire                          ap_start,
     input  wire                          ap_done,
     input  wire                          ap_ready,
@@ -80,7 +80,9 @@ module setMem_control_s_axi
 // 0x30 : reserved
 // 0x34 : Data signal of op
 //        bit 31~0 - op[31:0] (Read/Write)
-// 0x38 : reserved
+// 0x38 : Data signal of op
+//        bit 31~0 - op[63:32] (Read/Write)
+// 0x3c : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
@@ -99,7 +101,8 @@ localparam
     ADDR_C_DATA_1  = 6'h2c,
     ADDR_C_CTRL    = 6'h30,
     ADDR_OP_DATA_0 = 6'h34,
-    ADDR_OP_CTRL   = 6'h38,
+    ADDR_OP_DATA_1 = 6'h38,
+    ADDR_OP_CTRL   = 6'h3c,
     WRIDLE         = 2'd0,
     WRDATA         = 2'd1,
     WRRESP         = 2'd2,
@@ -139,7 +142,7 @@ localparam
     reg  [63:0]                   int_a = 'b0;
     reg  [63:0]                   int_b = 'b0;
     reg  [63:0]                   int_c = 'b0;
-    reg  [31:0]                   int_op = 'b0;
+    reg  [63:0]                   int_op = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -269,6 +272,9 @@ always @(posedge ACLK) begin
                 end
                 ADDR_OP_DATA_0: begin
                     rdata <= int_op[31:0];
+                end
+                ADDR_OP_DATA_1: begin
+                    rdata <= int_op[63:32];
                 end
             endcase
         end
@@ -485,6 +491,16 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_OP_DATA_0)
             int_op[31:0] <= (WDATA[31:0] & wmask) | (int_op[31:0] & ~wmask);
+    end
+end
+
+// int_op[63:32]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_op[63:32] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_OP_DATA_1)
+            int_op[63:32] <= (WDATA[31:0] & wmask) | (int_op[63:32] & ~wmask);
     end
 end
 
