@@ -20,13 +20,13 @@ data_burst = 50
 # alloca dei buffer per i dati
 data_a_buffer = allocate(shape=(data_burst,), dtype=np.uint32)
 data_b_buffer = allocate(shape=(data_burst,), dtype=np.uint32)
-data_op_buffer = allocate(shape=(data_burst,), dtype=np.uint32)
+data_op_buffer = allocate(shape=(data_burst,), dtype=np.uint32) # 8 bit
 data_result_buffer = allocate(shape=(data_burst,), dtype=np.uint32)
 
 # inserimento dati
 data_a_buffer = np.random.randint(1, 100, data_burst)
 data_b_buffer = np.random.randint(1, 100, data_burst)
-data_op_buffer = np.random.randint(0, 9, data_burst)
+data_op_buffer = np.random.randint(0,  9, data_burst)
 
 axi_alu_prj.register_map.a = data_a_buffer
 axi_alu_prj.register_map.b = data_b_buffer
