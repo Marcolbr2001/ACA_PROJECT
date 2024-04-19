@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Apr 19 10:13:22 2024
+# Process ID: 14072
+# Current directory: C:/Users/lotto/Desktop/SIMD/SIMD_HLS/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/setMem/xsim_script.tcl}
+# Log file: C:/Users/lotto/Desktop/SIMD/SIMD_HLS/solution1/sim/verilog/xsim.log
+# Journal file: C:/Users/lotto/Desktop/SIMD/SIMD_HLS/solution1/sim/verilog\xsim.jou
+# Running On: MSI, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 10, Host memory: 16870 MB
+#-----------------------------------------------------------
+source xsim.dir/setMem/xsim_script.tcl
+# xsim {setMem} -autoloadwcfg -tclbatch {setMem.tcl}
+Time resolution is 1 ps
+source setMem.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "3795000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 3855 ns : File "C:/Users/lotto/Desktop/SIMD/SIMD_HLS/solution1/sim/verilog/setMem.autotb.v" Line 738
+## quit
+INFO: [Common 17-206] Exiting xsim at Fri Apr 19 10:13:25 2024...

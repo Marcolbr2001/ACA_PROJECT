@@ -1,0 +1,90 @@
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: SIMD_HLS/core.c, Line: 34, Column: 15 }
+Function:        setMem
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SIMD_HLS/core.c, Line: 34, Column: 15 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.3
+  - ArrayName:       a
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        setMem
+    DebugLoc:        { File: SIMD_HLS/core.c, Line: 6, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: SIMD_HLS/core.c, Line: 35, Column: 15 }
+Function:        setMem
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SIMD_HLS/core.c, Line: 35, Column: 15 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.7
+  - ArrayName:       b
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - Function:        setMem
+    DebugLoc:        { File: SIMD_HLS/core.c, Line: 6, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: SIMD_HLS/core.c, Line: 60, Column: 8 }
+Function:        setMem
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: SIMD_HLS/core.c, Line: 60, Column: 8 }
+  - OrigDirection:   write
+  - OrigID:          for.inc38.store.5
+  - ArrayName:       c
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - Function:        setMem
+    DebugLoc:        { File: SIMD_HLS/core.c, Line: 6, Column: 0 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_32_1
+  - String:          '> at '
+  - LoopLoc:         'SIMD_HLS/core.c:32:19'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_41_2
+  - String:          '> at '
+  - LoopLoc:         'SIMD_HLS/core.c:41:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_58_3
+  - String:          '> at '
+  - LoopLoc:         'SIMD_HLS/core.c:58:19'
+  - String:          ' '
+...

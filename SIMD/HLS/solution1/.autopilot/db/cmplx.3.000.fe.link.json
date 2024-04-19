@@ -1,0 +1,19 @@
+{
+  "0": {
+    "basicblocks": 22,
+    "calls": "",
+    "file": "core.c",
+    "fileloc": 6,
+    "instructions": 96,
+    "loads": {
+      "L": 6,
+      "T": 2
+    },
+    "name": "setMem",
+    "stores": {
+      "L": 5,
+      "T": 1
+    },
+    "total_instructions": 96
+  }
+}

@@ -1,0 +1,15 @@
+C:\Users\lotto\Desktop\SIMD\SIMD_HLS\solution1\.autopilot\db\core.pp.0.c:1061:2: warning: Added loop label VITIS_LOOP_32_1:   [xilinx-label-all-loops]
+ for(int i = 0; i < 50; i++)
+ ^~~
+ VITIS_LOOP_32_1: 
+C:\Users\lotto\Desktop\SIMD\SIMD_HLS\solution1\.autopilot\db\core.pp.0.c:1061:2: note: FIX-IT applied suggested code changes
+C:\Users\lotto\Desktop\SIMD\SIMD_HLS\solution1\.autopilot\db\core.pp.0.c:1070:5: warning: Added loop label VITIS_LOOP_41_2:   [xilinx-label-all-loops]
+    for(int i=0; i < 50; i++)
+    ^~~
+    VITIS_LOOP_41_2: 
+C:\Users\lotto\Desktop\SIMD\SIMD_HLS\solution1\.autopilot\db\core.pp.0.c:1070:5: note: FIX-IT applied suggested code changes
+C:\Users\lotto\Desktop\SIMD\SIMD_HLS\solution1\.autopilot\db\core.pp.0.c:1087:2: warning: Added loop label VITIS_LOOP_58_3:   [xilinx-label-all-loops]
+ for(int i = 0; i < 50; i++)
+ ^~~
+ VITIS_LOOP_58_3: 
+C:\Users\lotto\Desktop\SIMD\SIMD_HLS\solution1\.autopilot\db\core.pp.0.c:1087:2: note: FIX-IT applied suggested code changes

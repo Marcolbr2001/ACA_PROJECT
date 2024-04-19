@@ -2,13 +2,13 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Mon Apr 15 00:25:14 2024
-# Process ID: 22936
-# Current directory: C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_ALU
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19136 C:\Users\marco\Desktop\NECST\NL2\AXI_M\AXI_ALU\AXI_ALU.xpr
-# Log file: C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_ALU/vivado.log
-# Journal file: C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_ALU\vivado.jou
+# Start of session at: Fri Apr 19 18:36:51 2024
+# Process ID: 21928
+# Current directory: C:/Users/marco/Desktop/NECST/NL2/AXI_M/MIMD/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11764 C:\Users\marco\Desktop\NECST\NL2\AXI_M\MIMD\Vivado\AXI_ALU.xpr
+# Log file: C:/Users/marco/Desktop/NECST/NL2/AXI_M/MIMD/Vivado/vivado.log
+# Journal file: C:/Users/marco/Desktop/NECST/NL2/AXI_M/MIMD/Vivado\vivado.jou
 #-----------------------------------------------------------
 start_gui
 exit
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 15 00:26:34 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 19 18:37:13 2024...
