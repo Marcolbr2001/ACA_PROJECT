@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[37]:
+# In[1]:
 
 
 import pynq
@@ -10,129 +10,140 @@ import numpy as np
 from pynq import allocate
 
 
-# In[41]:
+# In[2]:
 
 
-test = Overlay('/home/xilinx/pynq/overlays/AXI_ALU/AXI_ALU.bit')
+test = Overlay('/home/xilinx/pynq/overlays/AXI_ALU/MIMD/MIMD.bit')
 
 
-# In[44]:
-
-
-get_ipython().run_line_magic('pinfo', 'test')
-
-
-# In[45]:
+# In[3]:
 
 
 AXI_ALU = test.setMem_0
 
 
-# In[46]:
+# In[4]:
 
 
 v_size=50
 
 
-# In[47]:
+# In[5]:
 
 
-input_a = pynq.allocate(v_size,np.uint32)
-input_b = pynq.allocate(v_size,np.uint32)
+input_a = pynq.allocate(v_size,np.int32)
+input_b = pynq.allocate(v_size,np.int32)
 
-op = pynq.allocate(v_size,np.uint32)
+input_op = pynq.allocate(v_size,np.uint32)
 
-output = pynq.allocate(v_size,np.uint32)
-
-
-# In[48]:
+output = pynq.allocate(v_size,np.int32)
 
 
-addr_a = input_a.physical_address
-
-
-# In[49]:
-
-
-addr_b = input_b.physical_address
-
-
-# In[50]:
-
-
-addr_op = op.physical_address
-
-
-# In[51]:
-
-
-addr_out = output.physical_address
-
-
-# In[52]:
+# In[6]:
 
 
 seed = 12345
 np.random.seed(seed)
-input_a = np.random.randint(low=0, high=255, size=v_size, dtype='uint32')
-input_b = np.random.randint(low=0, high=255, size=v_size, dtype='uint32')
-op = np.random.randint(low=0, high=9, size=v_size, dtype='uint32')
+data_a = np.random.randint(low=0, high=255, size=v_size, dtype='uint32')
+data_b = np.random.randint(low=0, high=255, size=v_size, dtype='uint32')
+operation = np.random.randint(low=0, high=9, size=v_size, dtype='uint32')
 
 
-# In[53]:
+# In[7]:
 
 
+data_a
+
+
+# In[8]:
+
+
+data_b
+
+
+# In[9]:
+
+
+operation
+
+
+# In[10]:
+
+
+input_a[:] = data_a.flatten()
 input_a
 
 
-# In[54]:
+# In[11]:
 
 
+input_b[:] = data_b.flatten()
 input_b
 
 
-# In[55]:
+# In[12]:
 
 
-op
+input_op[:] = operation.flatten()
+input_op
 
 
-# In[56]:
+# In[13]:
 
 
-AXI_ALU.register_map
+input_a.flush()
+input_b.flush()
+input_op.flush()
 
 
-# In[57]:
+# In[14]:
 
 
-AXI_ALU.write(0x10,addr_a)   #0x10 address port a
-AXI_ALU.write(0x1c,addr_b)   #0x1c address port a
-AXI_ALU.write(0x34,addr_op)  #0x34 address port a
-AXI_ALU.write(0x28,addr_out) #0x28 address port a
+output
 
 
-# In[58]:
+# In[15]:
+
+
+AXI_ALU.read(0x10)
+
+
+# In[16]:
+
+
+AXI_ALU.write(0x10, input_a.physical_address)   #0x10 address port a
+AXI_ALU.write(0x1c, input_b.physical_address)   #0x1c address port a
+AXI_ALU.write(0x34, input_op.physical_address)  #0x34 address port a
+AXI_ALU.write(0x28, output.physical_address) #0x28 address port a
+
+
+# In[17]:
+
+
+AXI_ALU.read(0x10)
+
+
+# In[18]:
 
 
 AXI_ALU.write(0x00,0x1) # Start IP computation: write(control sign, ap_start)
 
 
-# In[32]:
+# In[19]:
 
 
 #polling
-while AXI_ALU.read(0x00) & 0x4==4:
-    pass
+#while AXI_ALU.read(0x00) & 0x4==4:
+#    pass
 
 
-# In[59]:
+# In[20]:
 
 
 output.sync_from_device()
 
 
-# In[62]:
+# In[21]:
 
 
 output # Read results
