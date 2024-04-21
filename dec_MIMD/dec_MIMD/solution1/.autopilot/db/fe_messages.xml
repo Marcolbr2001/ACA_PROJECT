@@ -1,0 +1,36 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/dec_MIMD/solution1/csynth.tcl:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=dec_MIMD" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dec_MIMD/core.c:11:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=a" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dec_MIMD/core.c:12:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=b" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dec_MIMD/core.c:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=c" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dec_MIMD/core.c:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=op" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dec_MIMD/core.c:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=group" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dec_MIMD/core.c:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dec_MIMD/core.c:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=a bundle=gmem0 depth=50 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dec_MIMD/core.c:20:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=b bundle=gmem1 depth=50 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dec_MIMD/core.c:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=c bundle=gmem2 depth=50 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dec_MIMD/core.c:22:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=op bundle=gmem3 depth=50 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

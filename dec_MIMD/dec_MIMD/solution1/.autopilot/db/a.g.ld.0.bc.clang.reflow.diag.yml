@@ -1,0 +1,120 @@
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: dec_MIMD/core.c, Line: 41, Column: 23 }
+Function:        dec_MIMD
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: dec_MIMD/core.c, Line: 41, Column: 23 }
+  - OrigDirection:   read
+  - OrigID:          if.then11.load.1
+  - ArrayName:       op
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - Function:        dec_MIMD
+    DebugLoc:        { File: dec_MIMD/core.c, Line: 9, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: dec_MIMD/core.c, Line: 37, Column: 16 }
+Function:        dec_MIMD
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: dec_MIMD/core.c, Line: 37, Column: 16 }
+  - OrigDirection:   read
+  - OrigID:          for.body.load.8
+  - ArrayName:       a
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        dec_MIMD
+    DebugLoc:        { File: dec_MIMD/core.c, Line: 9, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: dec_MIMD/core.c, Line: 38, Column: 16 }
+Function:        dec_MIMD
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: dec_MIMD/core.c, Line: 38, Column: 16 }
+  - OrigDirection:   read
+  - OrigID:          for.body.load.16
+  - ArrayName:       b
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - Function:        dec_MIMD
+    DebugLoc:        { File: dec_MIMD/core.c, Line: 9, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: dec_MIMD/core.c, Line: 108, Column: 8 }
+Function:        dec_MIMD
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: dec_MIMD/core.c, Line: 108, Column: 8 }
+  - OrigDirection:   write
+  - OrigID:          for.inc113.store.5
+  - ArrayName:       c
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - Function:        dec_MIMD
+    DebugLoc:        { File: dec_MIMD/core.c, Line: 9, Column: 0 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_99_3
+  - String:          '> at '
+  - LoopLoc:         'dec_MIMD/core.c:99:20'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_35_1
+  - String:          '> at '
+  - LoopLoc:         'dec_MIMD/core.c:35:20'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_45_2
+  - String:          '> at '
+  - LoopLoc:         'dec_MIMD/core.c:45:20'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_106_4
+  - String:          '> at '
+  - LoopLoc:         'dec_MIMD/core.c:106:20'
+  - String:          ' '
+...

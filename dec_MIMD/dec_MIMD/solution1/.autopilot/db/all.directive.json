@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "dec_MIMD",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "dec_MIMD"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/dec_MIMD/solution1/csynth.tcl",
+    "sourceLine": 15,
+    "success": true
+  }
+]

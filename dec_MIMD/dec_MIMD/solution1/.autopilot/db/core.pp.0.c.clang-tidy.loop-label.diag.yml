@@ -1,0 +1,40 @@
+---
+MainSourceFile:  'C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/dec_MIMD/solution1/.autopilot/db/core.pp.0.c'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_35_1:  '
+    FileOffset:      35
+    FilePath:        'C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\dec_MIMD\core.c'
+    Replacements:    
+      - FilePath:        'C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\dec_MIMD\solution1\.autopilot\db\core.pp.0.c'
+        Offset:          58765
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_35_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_45_2:  '
+    FileOffset:      45
+    FilePath:        'C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\dec_MIMD\core.c'
+    Replacements:    
+      - FilePath:        'C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\dec_MIMD\solution1\.autopilot\db\core.pp.0.c'
+        Offset:          58908
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_45_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_99_3:  '
+    FileOffset:      99
+    FilePath:        'C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\dec_MIMD\core.c'
+    Replacements:    
+      - FilePath:        'C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\dec_MIMD\solution1\.autopilot\db\core.pp.0.c'
+        Offset:          59678
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_99_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_106_4:  '
+    FileOffset:      106
+    FilePath:        'C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\dec_MIMD\core.c'
+    Replacements:    
+      - FilePath:        'C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\dec_MIMD\solution1\.autopilot\db\core.pp.0.c'
+        Offset:          59746
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_106_4: '
+...

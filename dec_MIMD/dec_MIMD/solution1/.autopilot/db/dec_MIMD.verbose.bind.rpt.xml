@@ -1,0 +1,49 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'dec_MIMD'" level="0">
+<item name = "Date">Sun Apr 21 13:47:43 2024
+</item>
+<item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
+<item name = "Project">dec_MIMD</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.784 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">34, 185, 0.340 us, 1.850 us, 35, 186, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_99_3_fu_132">dec_MIMD_Pipeline_VITIS_LOOP_99_3, 12, 12, 0.120 us, 0.120 us, 12, 12, no</column>
+<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_35_1_fu_138">dec_MIMD_Pipeline_VITIS_LOOP_35_1, 112, 112, 1.120 us, 1.120 us, 112, 112, no</column>
+<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_45_2_fu_155">dec_MIMD_Pipeline_VITIS_LOOP_45_2, 49, 49, 0.490 us, 0.490 us, 49, 49, no</column>
+<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_106_4_fu_163">dec_MIMD_Pipeline_VITIS_LOOP_106_4, 18, 18, 0.180 us, 0.180 us, 18, 18, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

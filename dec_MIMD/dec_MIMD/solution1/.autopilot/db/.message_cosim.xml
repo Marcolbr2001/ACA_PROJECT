@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[COSIM 212-47]" key="COSIM_TCL_47_1115" tag="" content="Using XSIM for RTL simulation." resolution=""/>
+	<Message severity="INFO" prefix="[COSIM 212-14]" key="COSIM_TCL_14_1084" tag="" content="Instrumenting C test bench ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;C:/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/win64.o/apcc.exe&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;lotto&apos; on host &apos;msi&apos; (Windows NT_amd64 version 6.2) on Sun Apr 21 13:48:00 +0200 2024" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/dec_MIMD/solution1/sim/wrapc&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/dec_MIMD/solution1/sim/wrapc/apcc_db_lotto/138603834713634" resolution=""/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;C:/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/win64.o/apcc.exe&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;lotto&apos; on host &apos;msi&apos; (Windows NT_amd64 version 6.2) on Sun Apr 21 13:48:02 +0200 2024" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/dec_MIMD/solution1/sim/wrapc&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/dec_MIMD/solution1/sim/wrapc/apcc_db_lotto/168683836618546" resolution=""/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done." resolution=""/>
+	<Message severity="INFO" prefix="[COSIM 212-302]" key="COSIM_TCL_302_1177" tag="" content="Starting C TB testing ..." resolution=""/>
+	<Message severity="INFO" prefix="[COSIM 212-333]" key="COSIM_TCL_333_1204" tag="" content="Generating C post check test bench ..." resolution=""/>
+	<Message severity="INFO" prefix="[COSIM 212-12]" key="COSIM_TCL_12_1082" tag="" content="Generating RTL test bench ..." resolution=""/>
+	<Message severity="INFO" prefix="[COSIM 212-1]" key="COSIM_TCL_1_1071" tag="" content="*** C/RTL co-simulation file generation completed. ***" resolution=""/>
+	<Message severity="INFO" prefix="[COSIM 212-323]" key="COSIM_TCL_323_1195" tag="" content="Starting verilog simulation." resolution=""/>
+	<Message severity="INFO" prefix="[COSIM 212-15]" key="COSIM_TCL_15_1085" tag="" content="Starting XSIM ..." resolution=""/>
+	<Message severity="ERROR" prefix="[COSIM 212-4]" key="COSIM_TCL_4_1074" tag="" content="*** C/RTL co-simulation finished: FAIL ***" resolution=""/>
+	<Message severity="INFO" prefix="[COSIM 212-211]" key="COSIM_TCL_211_1174" tag="" content="II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command cosim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 30.332 seconds; current allocated memory: 10.500 MB." resolution=""/>
+</Messages>

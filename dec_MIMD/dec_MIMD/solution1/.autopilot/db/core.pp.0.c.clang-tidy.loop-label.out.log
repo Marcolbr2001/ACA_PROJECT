@@ -1,0 +1,20 @@
+C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\dec_MIMD\solution1\.autopilot\db\core.pp.0.c:1064:3: warning: Added loop label VITIS_LOOP_35_1:   [xilinx-label-all-loops]
+  for(int i = 0; i < 50; i++)
+  ^~~
+  VITIS_LOOP_35_1: 
+C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\dec_MIMD\solution1\.autopilot\db\core.pp.0.c:1064:3: note: FIX-IT applied suggested code changes
+C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\dec_MIMD\solution1\.autopilot\db\core.pp.0.c:1074:3: warning: Added loop label VITIS_LOOP_45_2:   [xilinx-label-all-loops]
+  for(int i=0; i < 10; i++)
+  ^~~
+  VITIS_LOOP_45_2: 
+C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\dec_MIMD\solution1\.autopilot\db\core.pp.0.c:1074:3: note: FIX-IT applied suggested code changes
+C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\dec_MIMD\solution1\.autopilot\db\core.pp.0.c:1128:3: warning: Added loop label VITIS_LOOP_99_3:   [xilinx-label-all-loops]
+  for(int i = 0; i < 10; i++)
+  ^~~
+  VITIS_LOOP_99_3: 
+C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\dec_MIMD\solution1\.autopilot\db\core.pp.0.c:1128:3: note: FIX-IT applied suggested code changes
+C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\dec_MIMD\solution1\.autopilot\db\core.pp.0.c:1135:2: warning: Added loop label VITIS_LOOP_106_4:   [xilinx-label-all-loops]
+ for(int i = 0; i < 10; i++)
+ ^~~
+ VITIS_LOOP_106_4: 
+C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\dec_MIMD\solution1\.autopilot\db\core.pp.0.c:1135:2: note: FIX-IT applied suggested code changes

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="core.c" path="C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\dec_MIMD\core.c"/>
+  </source>
+  <testbench>
+    <originFiles name="test_core.c" path="C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\dec_MIMD\test_core.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
