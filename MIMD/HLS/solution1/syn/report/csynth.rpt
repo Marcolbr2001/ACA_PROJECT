@@ -4,9 +4,9 @@
 == Synthesis Summary Report of 'setMem'
 ================================================================
 + General Information: 
-    * Date:           Sun Apr 14 18:37:16 2024
+    * Date:           Tue Apr 23 22:56:19 2024
     * Version:        2023.2 (Build 4023990 on Oct 11 2023)
-    * Project:        AXI_M
+    * Project:        HLS
     * Solution:       solution1 (Vivado IP Flow Target)
     * Product family: zynq
     * Target device:  xc7z020-clg400-1
@@ -117,14 +117,14 @@
  Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
 
 * All M_AXI Variable Accesses
-+--------------+----------+----------------------+-----------+--------------+------------+-------------------------------------------------+
-| HW Interface | Variable | Access Location      | Direction | Burst Status | Resolution | Problem                                         |
-+--------------+----------+----------------------+-----------+--------------+------------+-------------------------------------------------+
-| m_axi_gmem0  | a        | AXI_M/core.cpp:36:15 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-| m_axi_gmem1  | b        | AXI_M/core.cpp:37:15 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-| m_axi_gmem2  | c        | AXI_M/core.cpp:99:8  | write     | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-| m_axi_gmem3  | op       | AXI_M/core.cpp:38:22 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-+--------------+----------+----------------------+-----------+--------------+------------+-------------------------------------------------+
++--------------+----------+--------------------+-----------+--------------+------------+-------------------------------------------------+
+| HW Interface | Variable | Access Location    | Direction | Burst Status | Resolution | Problem                                         |
++--------------+----------+--------------------+-----------+--------------+------------+-------------------------------------------------+
+| m_axi_gmem0  | a        | HLS/core.cpp:36:15 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem1  | b        | HLS/core.cpp:37:15 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem2  | c        | HLS/core.cpp:99:8  | write     | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem3  | op       | HLS/core.cpp:38:22 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
++--------------+----------+--------------------+-----------+--------------+------------+-------------------------------------------------+
 
     * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
 
@@ -181,18 +181,18 @@
 == Pragma Report
 ================================================================
 * Valid Pragma Syntax
-+-----------+-------------------------------------------------------+-------------------------------------+
-| Type      | Options                                               | Location                            |
-+-----------+-------------------------------------------------------+-------------------------------------+
-| interface | mode=s_axilite bundle=control port=op                 | AXI_M/core.cpp:9 in setmem, op      |
-| interface | mode=s_axilite bundle=control port=a                  | AXI_M/core.cpp:10 in setmem, a      |
-| interface | mode=s_axilite bundle=control port=b                  | AXI_M/core.cpp:11 in setmem, b      |
-| interface | mode=s_axilite bundle=control port=c                  | AXI_M/core.cpp:12 in setmem, c      |
-| interface | mode=s_axilite bundle=control port=return             | AXI_M/core.cpp:14 in setmem, return |
-| interface | mode=m_axi port=a bundle=gmem0 depth=50 offset=slave  | AXI_M/core.cpp:16 in setmem, a      |
-| interface | mode=m_axi port=b bundle=gmem1 depth=50 offset=slave  | AXI_M/core.cpp:17 in setmem, b      |
-| interface | mode=m_axi port=c bundle=gmem2 depth=50 offset=slave  | AXI_M/core.cpp:18 in setmem, c      |
-| interface | mode=m_axi port=op bundle=gmem3 depth=50 offset=slave | AXI_M/core.cpp:19 in setmem, op     |
-+-----------+-------------------------------------------------------+-------------------------------------+
++-----------+-------------------------------------------------------+-----------------------------------+
+| Type      | Options                                               | Location                          |
++-----------+-------------------------------------------------------+-----------------------------------+
+| interface | mode=s_axilite bundle=control port=op                 | HLS/core.cpp:9 in setmem, op      |
+| interface | mode=s_axilite bundle=control port=a                  | HLS/core.cpp:10 in setmem, a      |
+| interface | mode=s_axilite bundle=control port=b                  | HLS/core.cpp:11 in setmem, b      |
+| interface | mode=s_axilite bundle=control port=c                  | HLS/core.cpp:12 in setmem, c      |
+| interface | mode=s_axilite bundle=control port=return             | HLS/core.cpp:14 in setmem, return |
+| interface | mode=m_axi port=a bundle=gmem0 depth=50 offset=slave  | HLS/core.cpp:16 in setmem, a      |
+| interface | mode=m_axi port=b bundle=gmem1 depth=50 offset=slave  | HLS/core.cpp:17 in setmem, b      |
+| interface | mode=m_axi port=c bundle=gmem2 depth=50 offset=slave  | HLS/core.cpp:18 in setmem, c      |
+| interface | mode=m_axi port=op bundle=gmem3 depth=50 offset=slave | HLS/core.cpp:19 in setmem, op     |
++-----------+-------------------------------------------------------+-----------------------------------+
 
 

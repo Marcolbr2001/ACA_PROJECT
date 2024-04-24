@@ -1,15 +1,15 @@
 <dict>
   <key>main-file</key>
-  <string>C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/.autopilot/db/core.pp.0.cpp</string>
+  <string>C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/MIMD/HLS/solution1/.autopilot/db/core.pp.0.cpp</string>
   <key>diagnostics</key>
   <array>
     <dict>
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/csynth.tcl</string>
+      <string>C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/MIMD/HLS/solution1/csynth.tcl</string>
       <key>line</key>
-      <integer>18</integer>
+      <integer>17</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -23,7 +23,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/directives.tcl</string>
+      <string>C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/MIMD/HLS/solution1/directives.tcl</string>
       <key>line</key>
       <integer>7</integer>
       <key>column</key>
@@ -39,7 +39,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>AXI_M/core.cpp</string>
+      <string>HLS/core.cpp</string>
       <key>line</key>
       <integer>9</integer>
       <key>column</key>
@@ -55,7 +55,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>AXI_M/core.cpp</string>
+      <string>HLS/core.cpp</string>
       <key>line</key>
       <integer>10</integer>
       <key>column</key>
@@ -71,7 +71,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>AXI_M/core.cpp</string>
+      <string>HLS/core.cpp</string>
       <key>line</key>
       <integer>11</integer>
       <key>column</key>
@@ -87,7 +87,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>AXI_M/core.cpp</string>
+      <string>HLS/core.cpp</string>
       <key>line</key>
       <integer>12</integer>
       <key>column</key>
@@ -103,7 +103,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>AXI_M/core.cpp</string>
+      <string>HLS/core.cpp</string>
       <key>line</key>
       <integer>14</integer>
       <key>column</key>
@@ -119,7 +119,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>AXI_M/core.cpp</string>
+      <string>HLS/core.cpp</string>
       <key>line</key>
       <integer>16</integer>
       <key>column</key>
@@ -135,7 +135,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>AXI_M/core.cpp</string>
+      <string>HLS/core.cpp</string>
       <key>line</key>
       <integer>17</integer>
       <key>column</key>
@@ -151,7 +151,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>AXI_M/core.cpp</string>
+      <string>HLS/core.cpp</string>
       <key>line</key>
       <integer>18</integer>
       <key>column</key>
@@ -167,7 +167,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>AXI_M/core.cpp</string>
+      <string>HLS/core.cpp</string>
       <key>line</key>
       <integer>19</integer>
       <key>column</key>

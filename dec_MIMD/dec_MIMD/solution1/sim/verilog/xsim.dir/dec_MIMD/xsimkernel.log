@@ -1,7 +1,0 @@
-Running: xsim.dir/dec_MIMD/xsimk.exe -simmode gui -wdb dec_MIMD.wdb -simrunnum 0 -socket 61153
-Design successfully loaded
-Design Loading Memory Usage: 10180 KB (Peak: 10180 KB)
-Design Loading CPU Usage: 0 ms
-Simulation completed
-Simulation Memory Usage: 12928 KB (Peak: 12928 KB)
-Simulation CPU Usage: 0 ms

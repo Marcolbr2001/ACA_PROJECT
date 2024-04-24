@@ -1,4 +1,4 @@
-   Build using "C:/ProgramData/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/bin/g++"
+   Build using "C:/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/bin/g++"
    Compiling test_core.cpp_pre.cpp.tb.cpp
    Compiling apatb_setMem.cpp
    Compiling core.cpp_pre.cpp.tb.cpp

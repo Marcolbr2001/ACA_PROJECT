@@ -31,7 +31,7 @@
         <SummaryOfViolations>
             <IssueType>-</IssueType>
             <ViolationType>-</ViolationType>
-            <SourceLocation>AXI_M/core.cpp:7</SourceLocation>
+            <SourceLocation>HLS/core.cpp:7</SourceLocation>
         </SummaryOfViolations>
     </PerformanceEstimates>
     <AreaEstimates>
@@ -2499,13 +2499,13 @@
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>AXI_M/core.cpp:34</SourceLocation>
+                    <SourceLocation>HLS/core.cpp:34</SourceLocation>
                     <SummaryOfLoopViolations>
                         <VITIS_LOOP_34_1>
                             <Name>VITIS_LOOP_34_1</Name>
                             <IssueType>-</IssueType>
                             <ViolationType>-</ViolationType>
-                            <SourceLocation>AXI_M/core.cpp:34</SourceLocation>
+                            <SourceLocation>HLS/core.cpp:34</SourceLocation>
                         </VITIS_LOOP_34_1>
                     </SummaryOfLoopViolations>
                 </SummaryOfViolations>
@@ -2530,10 +2530,10 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_34_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln34_fu_189_p2" SOURCE="AXI_M/core.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln34"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_34_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln36_fu_207_p2" SOURCE="AXI_M/core.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln36"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_34_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_fu_233_p2" SOURCE="AXI_M/core.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln37"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_34_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_fu_259_p2" SOURCE="AXI_M/core.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln38"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_34_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln34_fu_189_p2" SOURCE="HLS/core.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln34"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_34_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln36_fu_207_p2" SOURCE="HLS/core.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln36"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_34_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_fu_233_p2" SOURCE="HLS/core.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln37"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_34_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_fu_259_p2" SOURCE="HLS/core.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln38"/>
             </BindNodes>
         </Module>
         <Module>
@@ -2573,13 +2573,13 @@
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>AXI_M/core.cpp:42</SourceLocation>
+                    <SourceLocation>HLS/core.cpp:42</SourceLocation>
                     <SummaryOfLoopViolations>
                         <VITIS_LOOP_42_2>
                             <Name>VITIS_LOOP_42_2</Name>
                             <IssueType>-</IssueType>
                             <ViolationType>-</ViolationType>
-                            <SourceLocation>AXI_M/core.cpp:42</SourceLocation>
+                            <SourceLocation>HLS/core.cpp:42</SourceLocation>
                         </VITIS_LOOP_42_2>
                     </SummaryOfLoopViolations>
                 </SummaryOfViolations>
@@ -2604,16 +2604,16 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln42_fu_238_p2" SOURCE="AXI_M/core.cpp:42" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln42"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="1" LOOP="VITIS_LOOP_42_2" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_2_1_U10" SOURCE="AXI_M/core.cpp:81" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln81"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln77_fu_254_p2" SOURCE="AXI_M/core.cpp:77" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln77"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_fu_260_p2" SOURCE="AXI_M/core.cpp:73" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln73"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln69_fu_274_p2" SOURCE="AXI_M/core.cpp:69" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln69"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln69_1_fu_343_p2" SOURCE="AXI_M/core.cpp:69" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln69_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln65_fu_308_p2" SOURCE="AXI_M/core.cpp:65" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln65"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln65_1_fu_362_p2" SOURCE="AXI_M/core.cpp:65" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln65_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln53_fu_392_p2" SOURCE="AXI_M/core.cpp:53" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln53"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_fu_399_p2" SOURCE="AXI_M/core.cpp:49" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln49"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln42_fu_238_p2" SOURCE="HLS/core.cpp:42" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln42"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="1" LOOP="VITIS_LOOP_42_2" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_2_1_U10" SOURCE="HLS/core.cpp:81" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln81"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln77_fu_254_p2" SOURCE="HLS/core.cpp:77" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln77"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_fu_260_p2" SOURCE="HLS/core.cpp:73" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln73"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln69_fu_274_p2" SOURCE="HLS/core.cpp:69" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln69"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln69_1_fu_343_p2" SOURCE="HLS/core.cpp:69" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln69_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln65_fu_308_p2" SOURCE="HLS/core.cpp:65" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln65"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln65_1_fu_362_p2" SOURCE="HLS/core.cpp:65" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln65_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln53_fu_392_p2" SOURCE="HLS/core.cpp:53" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln53"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_fu_399_p2" SOURCE="HLS/core.cpp:49" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln49"/>
             </BindNodes>
         </Module>
         <Module>
@@ -2653,13 +2653,13 @@
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>AXI_M/core.cpp:97</SourceLocation>
+                    <SourceLocation>HLS/core.cpp:97</SourceLocation>
                     <SummaryOfLoopViolations>
                         <VITIS_LOOP_97_3>
                             <Name>VITIS_LOOP_97_3</Name>
                             <IssueType>-</IssueType>
                             <ViolationType>-</ViolationType>
-                            <SourceLocation>AXI_M/core.cpp:97</SourceLocation>
+                            <SourceLocation>HLS/core.cpp:97</SourceLocation>
                         </VITIS_LOOP_97_3>
                     </SummaryOfLoopViolations>
                 </SummaryOfViolations>
@@ -2684,8 +2684,8 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_97_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln97_fu_119_p2" SOURCE="AXI_M/core.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln97"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_97_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln99_fu_142_p2" SOURCE="AXI_M/core.cpp:99" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln99"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_97_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln97_fu_119_p2" SOURCE="HLS/core.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln97"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_97_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln99_fu_142_p2" SOURCE="HLS/core.cpp:99" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln99"/>
             </BindNodes>
         </Module>
         <Module>
@@ -2709,7 +2709,7 @@
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>AXI_M/core.cpp:7</SourceLocation>
+                    <SourceLocation>HLS/core.cpp:7</SourceLocation>
                 </SummaryOfViolations>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -2732,10 +2732,10 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="data_a_U" SOURCE="AXI_M/core.cpp:25" STORAGESIZE="32 50 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p array" URAM="0" VARIABLE="data_a"/>
-                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="data_b_U" SOURCE="AXI_M/core.cpp:26" STORAGESIZE="32 50 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p array" URAM="0" VARIABLE="data_b"/>
-                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="data_result_U" SOURCE="AXI_M/core.cpp:28" STORAGESIZE="32 50 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p array" URAM="0" VARIABLE="data_result"/>
-                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="ALU_operation_U" SOURCE="AXI_M/core.cpp:30" STORAGESIZE="32 50 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p array" URAM="0" VARIABLE="ALU_operation"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="data_a_U" SOURCE="HLS/core.cpp:25" STORAGESIZE="32 50 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p array" URAM="0" VARIABLE="data_a"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="data_b_U" SOURCE="HLS/core.cpp:26" STORAGESIZE="32 50 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p array" URAM="0" VARIABLE="data_b"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="data_result_U" SOURCE="HLS/core.cpp:28" STORAGESIZE="32 50 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p array" URAM="0" VARIABLE="data_result"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="ALU_operation_U" SOURCE="HLS/core.cpp:30" STORAGESIZE="32 50 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p array" URAM="0" VARIABLE="ALU_operation"/>
                 <BindNode BINDTYPE="adapter" BRAM="0" BUNDLEDNAME="control" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="control_s_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="s_axilite" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
                 <BindNode BINDTYPE="adapter" BRAM="4" BUNDLEDNAME="gmem0" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="gmem0_m_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="m_axi" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
                 <BindNode BINDTYPE="adapter" BRAM="4" BUNDLEDNAME="gmem1" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="gmem1_m_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="m_axi" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
@@ -2747,7 +2747,7 @@
     <FIFOInformation/>
     <UserConfigCommands>
         <config_cosim rtl="vhdl" trace_level="all"/>
-        <config_export display_name="AXI_ALU" output="C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M" version="1.0"/>
+        <config_export display_name="AXI_ALU" output="C:/Users/marco/Desktop/NECST/NL2/AXI_M/ip_repo" version="1.0"/>
     </UserConfigCommands>
     <Args>
         <Arg ArgName="a" index="0" direction="in" srcType="*" srcSize="32">
@@ -3254,24 +3254,24 @@
             <item name="All M_AXI Variable Accesses">
                 <table>
                     <keys size="7">HW Interface, Variable, Access Location, Direction, Burst Status, Resolution, Problem</keys>
-                    <column name="m_axi_gmem0">a, AXI_M/core.cpp:36:15, read, Fail, 214-227, Volatile or Atomic access cannot be transformed</column>
-                    <column name="m_axi_gmem1">b, AXI_M/core.cpp:37:15, read, Fail, 214-227, Volatile or Atomic access cannot be transformed</column>
-                    <column name="m_axi_gmem2">c, AXI_M/core.cpp:99:8, write, Fail, 214-227, Volatile or Atomic access cannot be transformed</column>
-                    <column name="m_axi_gmem3">op, AXI_M/core.cpp:38:22, read, Fail, 214-227, Volatile or Atomic access cannot be transformed</column>
+                    <column name="m_axi_gmem0">a, HLS/core.cpp:36:15, read, Fail, 214-227, Volatile or Atomic access cannot be transformed</column>
+                    <column name="m_axi_gmem1">b, HLS/core.cpp:37:15, read, Fail, 214-227, Volatile or Atomic access cannot be transformed</column>
+                    <column name="m_axi_gmem2">c, HLS/core.cpp:99:8, write, Fail, 214-227, Volatile or Atomic access cannot be transformed</column>
+                    <column name="m_axi_gmem3">op, HLS/core.cpp:38:22, read, Fail, 214-227, Volatile or Atomic access cannot be transformed</column>
                 </table>
             </item>
         </section>
     </ReportBurst>
     <PragmaReport>
-        <Pragma type="interface" location="AXI_M/core.cpp:9" status="valid" parentFunction="setmem" variable="op" isDirective="0" options="mode=s_axilite bundle=control port=op"/>
-        <Pragma type="interface" location="AXI_M/core.cpp:10" status="valid" parentFunction="setmem" variable="a" isDirective="0" options="mode=s_axilite bundle=control port=a"/>
-        <Pragma type="interface" location="AXI_M/core.cpp:11" status="valid" parentFunction="setmem" variable="b" isDirective="0" options="mode=s_axilite bundle=control port=b"/>
-        <Pragma type="interface" location="AXI_M/core.cpp:12" status="valid" parentFunction="setmem" variable="c" isDirective="0" options="mode=s_axilite bundle=control port=c"/>
-        <Pragma type="interface" location="AXI_M/core.cpp:14" status="valid" parentFunction="setmem" variable="return" isDirective="0" options="mode=s_axilite bundle=control port=return"/>
-        <Pragma type="interface" location="AXI_M/core.cpp:16" status="valid" parentFunction="setmem" variable="a" isDirective="0" options="mode=m_axi port=a bundle=gmem0 depth=50 offset=slave"/>
-        <Pragma type="interface" location="AXI_M/core.cpp:17" status="valid" parentFunction="setmem" variable="b" isDirective="0" options="mode=m_axi port=b bundle=gmem1 depth=50 offset=slave"/>
-        <Pragma type="interface" location="AXI_M/core.cpp:18" status="valid" parentFunction="setmem" variable="c" isDirective="0" options="mode=m_axi port=c bundle=gmem2 depth=50 offset=slave"/>
-        <Pragma type="interface" location="AXI_M/core.cpp:19" status="valid" parentFunction="setmem" variable="op" isDirective="0" options="mode=m_axi port=op bundle=gmem3 depth=50 offset=slave"/>
+        <Pragma type="interface" location="HLS/core.cpp:9" status="valid" parentFunction="setmem" variable="op" isDirective="0" options="mode=s_axilite bundle=control port=op"/>
+        <Pragma type="interface" location="HLS/core.cpp:10" status="valid" parentFunction="setmem" variable="a" isDirective="0" options="mode=s_axilite bundle=control port=a"/>
+        <Pragma type="interface" location="HLS/core.cpp:11" status="valid" parentFunction="setmem" variable="b" isDirective="0" options="mode=s_axilite bundle=control port=b"/>
+        <Pragma type="interface" location="HLS/core.cpp:12" status="valid" parentFunction="setmem" variable="c" isDirective="0" options="mode=s_axilite bundle=control port=c"/>
+        <Pragma type="interface" location="HLS/core.cpp:14" status="valid" parentFunction="setmem" variable="return" isDirective="0" options="mode=s_axilite bundle=control port=return"/>
+        <Pragma type="interface" location="HLS/core.cpp:16" status="valid" parentFunction="setmem" variable="a" isDirective="0" options="mode=m_axi port=a bundle=gmem0 depth=50 offset=slave"/>
+        <Pragma type="interface" location="HLS/core.cpp:17" status="valid" parentFunction="setmem" variable="b" isDirective="0" options="mode=m_axi port=b bundle=gmem1 depth=50 offset=slave"/>
+        <Pragma type="interface" location="HLS/core.cpp:18" status="valid" parentFunction="setmem" variable="c" isDirective="0" options="mode=m_axi port=c bundle=gmem2 depth=50 offset=slave"/>
+        <Pragma type="interface" location="HLS/core.cpp:19" status="valid" parentFunction="setmem" variable="op" isDirective="0" options="mode=m_axi port=op bundle=gmem3 depth=50 offset=slave"/>
     </PragmaReport>
 </profile>
 

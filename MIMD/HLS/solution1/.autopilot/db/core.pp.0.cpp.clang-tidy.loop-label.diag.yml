@@ -1,31 +1,31 @@
 ---
-MainSourceFile:  'C:/Users/marco/Desktop/NECST/NL2/AXI_M/AXI_M/solution1/.autopilot/db/core.pp.0.cpp'
+MainSourceFile:  'C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/MIMD/HLS/solution1/.autopilot/db/core.pp.0.cpp'
 Diagnostics:     
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_34_1:  '
     FileOffset:      34
-    FilePath:        'C:\Users\marco\Desktop\NECST\NL2\AXI_M\AXI_M\core.cpp'
+    FilePath:        'C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\MIMD\HLS\core.cpp'
     Replacements:    
-      - FilePath:        'C:\Users\marco\Desktop\NECST\NL2\AXI_M\AXI_M\solution1\.autopilot\db\core.pp.0.cpp'
-        Offset:          63893
+      - FilePath:        'C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\MIMD\HLS\solution1\.autopilot\db\core.pp.0.cpp'
+        Offset:          62911
         Length:          0
         ReplacementText: 'VITIS_LOOP_34_1: '
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_42_2:  '
     FileOffset:      42
-    FilePath:        'C:\Users\marco\Desktop\NECST\NL2\AXI_M\AXI_M\core.cpp'
+    FilePath:        'C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\MIMD\HLS\core.cpp'
     Replacements:    
-      - FilePath:        'C:\Users\marco\Desktop\NECST\NL2\AXI_M\AXI_M\solution1\.autopilot\db\core.pp.0.cpp'
-        Offset:          64001
+      - FilePath:        'C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\MIMD\HLS\solution1\.autopilot\db\core.pp.0.cpp'
+        Offset:          63019
         Length:          0
         ReplacementText: 'VITIS_LOOP_42_2: '
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_97_3:  '
     FileOffset:      97
-    FilePath:        'C:\Users\marco\Desktop\NECST\NL2\AXI_M\AXI_M\core.cpp'
+    FilePath:        'C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\MIMD\HLS\core.cpp'
     Replacements:    
-      - FilePath:        'C:\Users\marco\Desktop\NECST\NL2\AXI_M\AXI_M\solution1\.autopilot\db\core.pp.0.cpp'
-        Offset:          64725
+      - FilePath:        'C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\MIMD\HLS\solution1\.autopilot\db\core.pp.0.cpp'
+        Offset:          63743
         Length:          0
         ReplacementText: 'VITIS_LOOP_97_3: '
 ...

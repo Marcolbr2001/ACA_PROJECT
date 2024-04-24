@@ -1,7 +1,6 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling ../../../core.cpp in debug mode
-   Generating csim.exe
+make: 'csim.exe' is up to date.
 
 
 A = 0 B = 0 RES = 27, OP = 0 

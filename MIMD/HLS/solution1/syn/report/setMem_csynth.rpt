@@ -3,10 +3,10 @@
 ================================================================
 == Vitis HLS Report for 'setMem'
 ================================================================
-* Date:           Sun Apr 14 18:37:16 2024
+* Date:           Tue Apr 23 22:56:19 2024
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
-* Project:        AXI_M
+* Project:        HLS
 * Solution:       solution1 (Vivado IP Flow Target)
 * Product family: zynq
 * Target device:  xc7z020-clg400-1

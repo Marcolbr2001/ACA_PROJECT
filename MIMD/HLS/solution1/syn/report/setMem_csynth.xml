@@ -34,7 +34,7 @@
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>AXI_M/core.cpp:7</SourceLocation>
+<SourceLocation>HLS/core.cpp:7</SourceLocation>
 </SummaryOfViolations>
 </PerformanceEstimates>
 

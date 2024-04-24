@@ -1,13 +1,13 @@
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: AXI_M/core.cpp, Line: 36, Column: 15 }
+DebugLoc:        { File: HLS/core.cpp, Line: 36, Column: 15 }
 Function:        _Z6setMemPViS0_S0_S0_
 Args:            
   - String:          Volatile or Atomic access cannot be transformed
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 36, Column: 15 }
+    DebugLoc:        { File: HLS/core.cpp, Line: 36, Column: 15 }
   - OrigDirection:   read
   - OrigID:          for.inc.load.3
   - ArrayName:       a
@@ -15,19 +15,19 @@ Args:
   - BundleName:      gmem0
   - String:          ' '
   - Function:        'setMem(int volatile*, int volatile*, int volatile*, int volatile*)'
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 7, Column: 0 }
+    DebugLoc:        { File: HLS/core.cpp, Line: 7, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: AXI_M/core.cpp, Line: 37, Column: 15 }
+DebugLoc:        { File: HLS/core.cpp, Line: 37, Column: 15 }
 Function:        _Z6setMemPViS0_S0_S0_
 Args:            
   - String:          Volatile or Atomic access cannot be transformed
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 37, Column: 15 }
+    DebugLoc:        { File: HLS/core.cpp, Line: 37, Column: 15 }
   - OrigDirection:   read
   - OrigID:          for.inc.load.7
   - ArrayName:       b
@@ -35,19 +35,19 @@ Args:
   - BundleName:      gmem1
   - String:          ' '
   - Function:        'setMem(int volatile*, int volatile*, int volatile*, int volatile*)'
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 7, Column: 0 }
+    DebugLoc:        { File: HLS/core.cpp, Line: 7, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: AXI_M/core.cpp, Line: 38, Column: 22 }
+DebugLoc:        { File: HLS/core.cpp, Line: 38, Column: 22 }
 Function:        _Z6setMemPViS0_S0_S0_
 Args:            
   - String:          Volatile or Atomic access cannot be transformed
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 38, Column: 22 }
+    DebugLoc:        { File: HLS/core.cpp, Line: 38, Column: 22 }
   - OrigDirection:   read
   - OrigID:          for.inc.load.11
   - ArrayName:       op
@@ -55,19 +55,19 @@ Args:
   - BundleName:      gmem3
   - String:          ' '
   - Function:        'setMem(int volatile*, int volatile*, int volatile*, int volatile*)'
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 7, Column: 0 }
+    DebugLoc:        { File: HLS/core.cpp, Line: 7, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: AXI_M/core.cpp, Line: 99, Column: 8 }
+DebugLoc:        { File: HLS/core.cpp, Line: 99, Column: 8 }
 Function:        _Z6setMemPViS0_S0_S0_
 Args:            
   - String:          Volatile or Atomic access cannot be transformed
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      store
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 99, Column: 8 }
+    DebugLoc:        { File: HLS/core.cpp, Line: 99, Column: 8 }
   - OrigDirection:   write
   - OrigID:          for.inc96.store.5
   - ArrayName:       c
@@ -75,7 +75,7 @@ Args:
   - BundleName:      gmem2
   - String:          ' '
   - Function:        'setMem(int volatile*, int volatile*, int volatile*, int volatile*)'
-    DebugLoc:        { File: AXI_M/core.cpp, Line: 7, Column: 0 }
+    DebugLoc:        { File: HLS/core.cpp, Line: 7, Column: 0 }
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -85,7 +85,7 @@ Args:
   - String:          'automatically set the pipeline for Loop< '
   - LoopName:        VITIS_LOOP_34_1
   - String:          '> at '
-  - LoopLoc:         'AXI_M/core.cpp:34:19'
+  - LoopLoc:         'HLS/core.cpp:34:19'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -95,7 +95,7 @@ Args:
   - String:          'automatically set the pipeline for Loop< '
   - LoopName:        VITIS_LOOP_42_2
   - String:          '> at '
-  - LoopLoc:         'AXI_M/core.cpp:42:22'
+  - LoopLoc:         'HLS/core.cpp:42:22'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -105,6 +105,6 @@ Args:
   - String:          'automatically set the pipeline for Loop< '
   - LoopName:        VITIS_LOOP_97_3
   - String:          '> at '
-  - LoopLoc:         'AXI_M/core.cpp:97:19'
+  - LoopLoc:         'HLS/core.cpp:97:19'
   - String:          ' '
 ...

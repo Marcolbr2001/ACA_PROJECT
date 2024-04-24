@@ -1,0 +1,21 @@
+{
+  "0": {
+    "basicblocks": 24,
+    "calls": "",
+    "file": "core.c",
+    "fileloc": 7,
+    "instructions": 148,
+    "loads": {
+      "G": 15,
+      "L": 2,
+      "T": 6
+    },
+    "name": "dec_MIMD",
+    "stores": {
+      "G": 6,
+      "L": 12,
+      "T": 1
+    },
+    "total_instructions": 148
+  }
+}

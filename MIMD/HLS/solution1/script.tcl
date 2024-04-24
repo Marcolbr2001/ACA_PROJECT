@@ -6,8 +6,7 @@
 ############################################################
 open_project HLS
 set_top setMem
-add_files core.cpp
-add_files core.h
+add_files HLS/core.cpp
 add_files -tb HLS/test_core.cpp -cflags "-Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vivado
 set_part {xc7z020-clg400-1}
