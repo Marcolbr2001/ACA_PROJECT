@@ -23,7 +23,7 @@ int main() {
     // Put data into variables
     for (int i = 0; i < DATA_LENGTH; i++)
     {
-    	DATA_A[i] = i;
+    	DATA_A[i] = 1;
     	DATA_B[i] = 1;
 	}
 
@@ -56,7 +56,7 @@ int main() {
 
 
 
-    ////////CASE SELEC=1: NEW OPERATIONS////////////////////////////////////////////
+    ////////CASE SELEC=2: NEW OPERATIONS////////////////////////////////////////////
 
     printf("\n TO BE RIGHT THE RESULT MUST BE 28\n");
 
@@ -64,8 +64,8 @@ int main() {
     // Put data into variables
         for (int i = 0; i < DATA_LENGTH; i++)
         {
-        	DATA_A[i] = i;
-        	DATA_B[i] = 2;
+        	DATA_A[i] = 2;
+        	DATA_B[i] = 3;
     	}
 
         // selecting operations
@@ -97,20 +97,20 @@ int main() {
 
         ////////CASE SELEC=0: NEW DATA////////////////////////////////////////////
 
-        printf("\n TO BE RIGHT THE RESULT MUST BE 30\n");
+        printf("\n TO BE RIGHT THE RESULT MUST BE 30---\n");
 
 
             // Put data into variables
                 for (int i = 0; i < DATA_LENGTH; i++)
                 {
-                	DATA_A[i] = i;
-                	DATA_B[i] = 3;
+                	DATA_A[i] = 3;
+                	DATA_B[i] = 4;
             	}
 
                 // selecting operations
                 for (int i = 0; i < DATA_LENGTH; i++)
                 	{
-                		ALU_OPERATION[i] = 10;
+                		ALU_OPERATION[i] = 1;
                 	}
 
             	// selecting inputs
