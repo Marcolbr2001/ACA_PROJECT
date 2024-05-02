@@ -3,17 +3,17 @@
     "basicblocks": 24,
     "calls": "",
     "file": "core.c",
-    "fileloc": 7,
-    "instructions": 161,
+    "fileloc": 100,
+    "instructions": 167,
     "loads": {
       "G": 15,
-      "L": 2
+      "L": 3
     },
     "name": "dec_MIMD",
     "stores": {
       "G": 6,
-      "L": 12
+      "L": 13
     },
-    "total_instructions": 161
+    "total_instructions": 167
   }
 }

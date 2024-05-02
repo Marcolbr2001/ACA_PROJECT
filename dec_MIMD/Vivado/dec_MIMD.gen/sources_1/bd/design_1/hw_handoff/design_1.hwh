@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 24 23:46:38 2024" VIVADOVERSION="2023.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu May  2 14:28:07 2024" VIVADOVERSION="2023.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -2447,7 +2447,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2113527672" FULLNAME="/dec_MIMD_0" HWVERSION="1.0" INSTANCE="dec_MIMD_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dec_MIMD" VLNV="xilinx.com:hls:dec_MIMD:1.0">
+    <MODULE COREREVISION="2113540039" FULLNAME="/dec_MIMD_0" HWVERSION="1.0" INSTANCE="dec_MIMD_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dec_MIMD" VLNV="xilinx.com:hls:dec_MIMD:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="read-write" INTERFACE="s_axi_control" NAME="Reg" RANGE="65536" USAGE="register">
@@ -2900,7 +2900,7 @@
         <PARAMETER NAME="C_M_AXI_GMEM2_ENABLE_USER_PORTS" VALUE="false"/>
         <PARAMETER NAME="C_M_AXI_GMEM3_ENABLE_ID_PORTS" VALUE="true"/>
         <PARAMETER NAME="C_M_AXI_GMEM3_ENABLE_USER_PORTS" VALUE="false"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_dec_MIMD_0_1"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_dec_MIMD_0_3"/>
         <PARAMETER NAME="II" VALUE="x"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -4707,7 +4707,6 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="slowest_sync_clk"/>
-            <CONNECTION INSTANCE="dec_MIMD_0" PORT="ap_clk"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="ACLK"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_ACLK"/>
@@ -4726,6 +4725,7 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP3_ACLK"/>
             <CONNECTION INSTANCE="axi_mem_intercon_3" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="axi_mem_intercon_3" PORT="ACLK"/>
+            <CONNECTION INSTANCE="dec_MIMD_0" PORT="ap_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -6416,7 +6416,6 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ARESETN"/>
-            <CONNECTION INSTANCE="dec_MIMD_0" PORT="ap_rst_n"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_ARESETN"/>
@@ -6431,6 +6430,7 @@
             <CONNECTION INSTANCE="axi_mem_intercon_3" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon_3" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon_3" PORT="ARESETN"/>
+            <CONNECTION INSTANCE="dec_MIMD_0" PORT="ap_rst_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>

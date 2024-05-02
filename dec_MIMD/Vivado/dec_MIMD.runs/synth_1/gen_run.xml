@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1713995205">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1714652892" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/design_1_wrapper.dcp">
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
@@ -24,6 +24,118 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../HLS/solution1/impl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_35_1.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../HLS/solution1/impl/vhdl/dec_MIMD_sdiv_32ns_32ns_32_36_1.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../HLS/solution1/impl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_43_2.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../HLS/solution1/impl/vhdl/dec_MIMD_control_s_axi.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../HLS/solution1/impl/vhdl/dec_MIMD.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../HLS/solution1/impl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_115_5.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../HLS/solution1/impl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_51_3.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../HLS/solution1/impl/vhdl/dec_MIMD_data_result_RAM_AUTO_1R1W.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../HLS/solution1/impl/vhdl/dec_MIMD_gmem3_m_axi.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../HLS/solution1/impl/vhdl/dec_MIMD_mul_32s_32s_32_2_1.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../HLS/solution1/impl/vhdl/dec_MIMD_gmem2_m_axi.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../HLS/solution1/impl/vhdl/dec_MIMD_gmem1_m_axi.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../HLS/solution1/impl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_61_4.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../HLS/solution1/impl/vhdl/dec_MIMD_flow_control_loop_pipe_sequential_init.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../HLS/solution1/impl/vhdl/dec_MIMD_gmem0_m_axi.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../HLS/solution1/impl/vhdl/dec_MIMD_data_a_RAM_AUTO_1R1W.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="design_1_wrapper"/>
@@ -38,24 +150,25 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/design_1_wrapper.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_8"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_us_7"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_processing_system7_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_9"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_us_6"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps7_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_dec_MIMD_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_us_4"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_7"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_6"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_us_5"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_5"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_dec_MIMD_0_3"/>
 </GenRun>

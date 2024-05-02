@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dec_MIMD'" level="0">
-<item name = "Date">Tue Apr 23 23:05:19 2024
+<item name = "Date">Thu May  2 14:11:05 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">HLS</item>
@@ -31,11 +31,11 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_51_3_fu_130">dec_MIMD_Pipeline_VITIS_LOOP_51_3, 61, 61, 0.610 us, 0.610 us, 61, 61, no</column>
-<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_43_2_fu_152">dec_MIMD_Pipeline_VITIS_LOOP_43_2, 61, 61, 0.610 us, 0.610 us, 61, 61, no</column>
-<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_35_1_fu_162">dec_MIMD_Pipeline_VITIS_LOOP_35_1, 61, 61, 0.610 us, 0.610 us, 61, 61, no</column>
-<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_61_4_fu_178">dec_MIMD_Pipeline_VITIS_LOOP_61_4, 90, 90, 0.900 us, 0.900 us, 90, 90, no</column>
-<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_115_5_fu_189">dec_MIMD_Pipeline_VITIS_LOOP_115_5, 58, 58, 0.580 us, 0.580 us, 58, 58, no</column>
+<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_28_3_fu_134">dec_MIMD_Pipeline_VITIS_LOOP_28_3, 61, 61, 0.610 us, 0.610 us, 61, 61, no</column>
+<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_20_2_fu_156">dec_MIMD_Pipeline_VITIS_LOOP_20_2, 61, 61, 0.610 us, 0.610 us, 61, 61, no</column>
+<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_12_1_fu_166">dec_MIMD_Pipeline_VITIS_LOOP_12_1, 61, 61, 0.610 us, 0.610 us, 61, 61, no</column>
+<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_41_1_fu_182">dec_MIMD_Pipeline_VITIS_LOOP_41_1, 90, 90, 0.900 us, 0.900 us, 90, 90, no</column>
+<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_96_1_fu_193">dec_MIMD_Pipeline_VITIS_LOOP_96_1, 58, 58, 0.580 us, 0.580 us, 58, 58, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -56,8 +56,8 @@
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">16, 3, 8204, 7233, -</column>
 <column name="Memory">4, -, 0, 0, 0</column>
-<column name="Multiplexer">-, -, -, 482, -</column>
-<column name="Register">-, -, 331, -, -</column>
+<column name="Multiplexer">-, -, -, 491, -</column>
+<column name="Register">-, -, 363, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
 <specialColumn name="Utilization (%)">7, 1, 8, 14, 0</specialColumn>
 </table>
@@ -67,11 +67,11 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="control_s_axi_U">control_s_axi, 0, 0, 354, 616, 0</column>
-<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_115_5_fu_189">dec_MIMD_Pipeline_VITIS_LOOP_115_5, 0, 0, 117, 168, 0</column>
-<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_35_1_fu_162">dec_MIMD_Pipeline_VITIS_LOOP_35_1, 0, 0, 289, 282, 0</column>
-<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_43_2_fu_152">dec_MIMD_Pipeline_VITIS_LOOP_43_2, 0, 0, 193, 189, 0</column>
-<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_51_3_fu_130">dec_MIMD_Pipeline_VITIS_LOOP_51_3, 0, 0, 385, 371, 0</column>
-<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_61_4_fu_178">dec_MIMD_Pipeline_VITIS_LOOP_61_4, 0, 3, 3546, 2671, 0</column>
+<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_12_1_fu_166">dec_MIMD_Pipeline_VITIS_LOOP_12_1, 0, 0, 289, 282, 0</column>
+<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_20_2_fu_156">dec_MIMD_Pipeline_VITIS_LOOP_20_2, 0, 0, 193, 189, 0</column>
+<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_28_3_fu_134">dec_MIMD_Pipeline_VITIS_LOOP_28_3, 0, 0, 385, 371, 0</column>
+<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_41_1_fu_182">dec_MIMD_Pipeline_VITIS_LOOP_41_1, 0, 3, 3546, 2671, 0</column>
+<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_96_1_fu_193">dec_MIMD_Pipeline_VITIS_LOOP_96_1, 0, 0, 117, 168, 0</column>
 <column name="gmem0_m_axi_U">gmem0_m_axi, 4, 0, 830, 734, 0</column>
 <column name="gmem1_m_axi_U">gmem1_m_axi, 4, 0, 830, 734, 0</column>
 <column name="gmem2_m_axi_U">gmem2_m_axi, 4, 0, 830, 734, 0</column>
@@ -106,6 +106,7 @@
 <column name="ALU_operation_d0">14, 3, 32, 96</column>
 <column name="ALU_operation_we0">14, 3, 1, 3</column>
 <column name="ap_NS_fsm">37, 7, 1, 7</column>
+<column name="ap_sig_allocacmp_selec_assign_2_load">9, 2, 32, 64</column>
 <column name="ap_sig_allocacmp_selec_assign_load">9, 2, 32, 64</column>
 <column name="data_a_address0">20, 4, 6, 24</column>
 <column name="data_a_ce0">20, 4, 1, 4</column>
@@ -137,18 +138,19 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="a_read_reg_222">64, 0, 64, 0</column>
+<column name="a_read_reg_234">64, 0, 64, 0</column>
 <column name="ap_CS_fsm">6, 0, 6, 0</column>
-<column name="b_read_reg_216">64, 0, 64, 0</column>
-<column name="c_read_reg_211">64, 0, 64, 0</column>
-<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_115_5_fu_189_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_35_1_fu_162_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_43_2_fu_152_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_51_3_fu_130_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_61_4_fu_178_ap_start_reg">1, 0, 1, 0</column>
-<column name="op_read_reg_205">64, 0, 64, 0</column>
-<column name="selec_assign_fu_92">32, 0, 32, 0</column>
-<column name="selec_assign_load_reg_234">32, 0, 32, 0</column>
+<column name="b_read_reg_228">64, 0, 64, 0</column>
+<column name="c_read_reg_223">64, 0, 64, 0</column>
+<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_12_1_fu_166_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_20_2_fu_156_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_28_3_fu_134_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_41_1_fu_182_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_dec_MIMD_Pipeline_VITIS_LOOP_96_1_fu_193_ap_start_reg">1, 0, 1, 0</column>
+<column name="op_read_reg_217">64, 0, 64, 0</column>
+<column name="selec_assign_2_fu_92">32, 0, 32, 0</column>
+<column name="selec_assign_2_load_reg_252">32, 0, 32, 0</column>
+<column name="selec_assign_fu_96">32, 0, 32, 0</column>
 </table>
 </item>
 </section>

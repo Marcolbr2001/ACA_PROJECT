@@ -1,37 +1,37 @@
-C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/csynth.tcl:17:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=name=dec_MIMD_XLX_SEP_ [-Wdump-hls-pragmas]
+C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/csynth.tcl:17:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=name=dec_MIMD_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=dec_MIMD
         ^
-C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/directives.tcl:7:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=name=dec_MIMD_XLX_SEP_ [-Wdump-hls-pragmas]
+C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/directives.tcl:7:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=name=dec_MIMD_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=dec_MIMD
         ^
-HLS/core.c:9:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=control port=a_XLX_SEP_ [-Wdump-hls-pragmas]
+HLS/core.c:102:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=control port=a_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=s_axilite bundle=control port=a
         ^
-HLS/core.c:10:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=control port=b_XLX_SEP_ [-Wdump-hls-pragmas]
+HLS/core.c:103:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=control port=b_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=s_axilite bundle=control port=b
         ^
-HLS/core.c:11:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=control port=c_XLX_SEP_ [-Wdump-hls-pragmas]
+HLS/core.c:104:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=control port=c_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=s_axilite bundle=control port=c
         ^
-HLS/core.c:12:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=control port=op_XLX_SEP_ [-Wdump-hls-pragmas]
+HLS/core.c:105:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=control port=op_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=s_axilite bundle=control port=op
         ^
-HLS/core.c:13:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=control port=selec_XLX_SEP_ [-Wdump-hls-pragmas]
+HLS/core.c:106:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=control port=selec_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=s_axilite bundle=control port=selec
         ^
-HLS/core.c:15:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=control port=return_XLX_SEP_ [-Wdump-hls-pragmas]
+HLS/core.c:108:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=control port=return_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=s_axilite bundle=control port=return
         ^
-HLS/core.c:17:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=mode=m_axi port=a bundle=gmem0 depth=50 offset=slave_XLX_SEP_ [-Wdump-hls-pragmas]
+HLS/core.c:110:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=mode=m_axi port=a bundle=gmem0 depth=50 offset=slave_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=m_axi port=a bundle=gmem0 depth=50 offset=slave
         ^
-HLS/core.c:18:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=mode=m_axi port=b bundle=gmem1 depth=50 offset=slave_XLX_SEP_ [-Wdump-hls-pragmas]
+HLS/core.c:111:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=mode=m_axi port=b bundle=gmem1 depth=50 offset=slave_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=m_axi port=b bundle=gmem1 depth=50 offset=slave
         ^
-HLS/core.c:19:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=mode=m_axi port=c bundle=gmem2 depth=50 offset=slave_XLX_SEP_ [-Wdump-hls-pragmas]
+HLS/core.c:112:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=mode=m_axi port=c bundle=gmem2 depth=50 offset=slave_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=m_axi port=c bundle=gmem2 depth=50 offset=slave
         ^
-HLS/core.c:20:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=mode=m_axi port=op bundle=gmem3 depth=50 offset=slave_XLX_SEP_ [-Wdump-hls-pragmas]
+HLS/core.c:113:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dec_MIMD_XLX_SEP_ PragmaOptions=mode=m_axi port=op bundle=gmem3 depth=50 offset=slave_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=m_axi port=op bundle=gmem3 depth=50 offset=slave
         ^
 12 warnings generated.

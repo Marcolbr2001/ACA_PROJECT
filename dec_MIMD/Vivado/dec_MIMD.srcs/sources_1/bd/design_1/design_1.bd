@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xCC6CFA53F622E079",
+      "boundary_crc": "0xCC6CFA53B4580162",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../dec_MIMD.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -11,7 +11,6 @@
       "validated": "true"
     },
     "design_tree": {
-      "dec_MIMD_0": "",
       "processing_system7_0": "",
       "ps7_0_axi_periph": {
         "s00_couplers": {
@@ -42,7 +41,8 @@
           "auto_pc": "",
           "auto_us": ""
         }
-      }
+      },
+      "dec_MIMD_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -215,75 +215,6 @@
       }
     },
     "components": {
-      "dec_MIMD_0": {
-        "vlnv": "xilinx.com:hls:dec_MIMD:1.0",
-        "ip_revision": "2113527672",
-        "xci_name": "design_1_dec_MIMD_0_1",
-        "xci_path": "ip\\design_1_dec_MIMD_0_1\\design_1_dec_MIMD_0_1.xci",
-        "inst_hier_path": "dec_MIMD_0",
-        "interface_ports": {
-          "m_axi_gmem0": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Master",
-            "address_space_ref": "Data_m_axi_gmem0",
-            "base_address": {
-              "minimum": "0x00000000",
-              "maximum": "0xFFFFFFFFFFFFFFFF",
-              "width": "64"
-            }
-          },
-          "m_axi_gmem1": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Master",
-            "address_space_ref": "Data_m_axi_gmem1",
-            "base_address": {
-              "minimum": "0x00000000",
-              "maximum": "0xFFFFFFFFFFFFFFFF",
-              "width": "64"
-            }
-          },
-          "m_axi_gmem2": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Master",
-            "address_space_ref": "Data_m_axi_gmem2",
-            "base_address": {
-              "minimum": "0x00000000",
-              "maximum": "0xFFFFFFFFFFFFFFFF",
-              "width": "64"
-            }
-          },
-          "m_axi_gmem3": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Master",
-            "address_space_ref": "Data_m_axi_gmem3",
-            "base_address": {
-              "minimum": "0x00000000",
-              "maximum": "0xFFFFFFFFFFFFFFFF",
-              "width": "64"
-            }
-          }
-        },
-        "addressing": {
-          "address_spaces": {
-            "Data_m_axi_gmem0": {
-              "range": "16E",
-              "width": "64"
-            },
-            "Data_m_axi_gmem1": {
-              "range": "16E",
-              "width": "64"
-            },
-            "Data_m_axi_gmem2": {
-              "range": "16E",
-              "width": "64"
-            },
-            "Data_m_axi_gmem3": {
-              "range": "16E",
-              "width": "64"
-            }
-          }
-        }
-      },
       "processing_system7_0": {
         "vlnv": "xilinx.com:ip:processing_system7:5.5",
         "ip_revision": "6",
@@ -2178,8 +2109,8 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "ip_revision": "29",
-                "xci_name": "design_1_auto_pc_5",
-                "xci_path": "ip\\design_1_auto_pc_5\\design_1_auto_pc_5.xci",
+                "xci_name": "design_1_auto_pc_0",
+                "xci_path": "ip\\design_1_auto_pc_0\\design_1_auto_pc_0.xci",
                 "inst_hier_path": "ps7_0_axi_periph/s00_couplers/auto_pc",
                 "parameters": {
                   "MI_PROTOCOL": {
@@ -2285,6 +2216,9 @@
         "xci_name": "design_1_axi_mem_intercon_5",
         "parameters": {
           "NUM_MI": {
+            "value": "1"
+          },
+          "NUM_SI": {
             "value": "1"
           }
         },
@@ -2399,8 +2333,8 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "ip_revision": "29",
-                "xci_name": "design_1_auto_pc_6",
-                "xci_path": "ip\\design_1_auto_pc_6\\design_1_auto_pc_6.xci",
+                "xci_name": "design_1_auto_pc_1",
+                "xci_path": "ip\\design_1_auto_pc_1\\design_1_auto_pc_1.xci",
                 "inst_hier_path": "axi_mem_intercon/s00_couplers/auto_pc",
                 "parameters": {
                   "MI_PROTOCOL": {
@@ -2423,8 +2357,8 @@
               "auto_us": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "ip_revision": "29",
-                "xci_name": "design_1_auto_us_4",
-                "xci_path": "ip\\design_1_auto_us_4\\design_1_auto_us_4.xci",
+                "xci_name": "design_1_auto_us_0",
+                "xci_path": "ip\\design_1_auto_us_0\\design_1_auto_us_0.xci",
                 "inst_hier_path": "axi_mem_intercon/s00_couplers/auto_us",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -2645,8 +2579,8 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "ip_revision": "29",
-                "xci_name": "design_1_auto_pc_7",
-                "xci_path": "ip\\design_1_auto_pc_7\\design_1_auto_pc_7.xci",
+                "xci_name": "design_1_auto_pc_2",
+                "xci_path": "ip\\design_1_auto_pc_2\\design_1_auto_pc_2.xci",
                 "inst_hier_path": "axi_mem_intercon_1/s00_couplers/auto_pc",
                 "parameters": {
                   "MI_PROTOCOL": {
@@ -2669,8 +2603,8 @@
               "auto_us": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "ip_revision": "29",
-                "xci_name": "design_1_auto_us_5",
-                "xci_path": "ip\\design_1_auto_us_5\\design_1_auto_us_5.xci",
+                "xci_name": "design_1_auto_us_1",
+                "xci_path": "ip\\design_1_auto_us_1\\design_1_auto_us_1.xci",
                 "inst_hier_path": "axi_mem_intercon_1/s00_couplers/auto_us",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -2891,8 +2825,8 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "ip_revision": "29",
-                "xci_name": "design_1_auto_pc_8",
-                "xci_path": "ip\\design_1_auto_pc_8\\design_1_auto_pc_8.xci",
+                "xci_name": "design_1_auto_pc_3",
+                "xci_path": "ip\\design_1_auto_pc_3\\design_1_auto_pc_3.xci",
                 "inst_hier_path": "axi_mem_intercon_2/s00_couplers/auto_pc",
                 "parameters": {
                   "MI_PROTOCOL": {
@@ -2915,8 +2849,8 @@
               "auto_us": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "ip_revision": "29",
-                "xci_name": "design_1_auto_us_6",
-                "xci_path": "ip\\design_1_auto_us_6\\design_1_auto_us_6.xci",
+                "xci_name": "design_1_auto_us_2",
+                "xci_path": "ip\\design_1_auto_us_2\\design_1_auto_us_2.xci",
                 "inst_hier_path": "axi_mem_intercon_2/s00_couplers/auto_us",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -3137,8 +3071,8 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "ip_revision": "29",
-                "xci_name": "design_1_auto_pc_9",
-                "xci_path": "ip\\design_1_auto_pc_9\\design_1_auto_pc_9.xci",
+                "xci_name": "design_1_auto_pc_4",
+                "xci_path": "ip\\design_1_auto_pc_4\\design_1_auto_pc_4.xci",
                 "inst_hier_path": "axi_mem_intercon_3/s00_couplers/auto_pc",
                 "parameters": {
                   "MI_PROTOCOL": {
@@ -3161,8 +3095,8 @@
               "auto_us": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "ip_revision": "29",
-                "xci_name": "design_1_auto_us_7",
-                "xci_path": "ip\\design_1_auto_us_7\\design_1_auto_us_7.xci",
+                "xci_name": "design_1_auto_us_3",
+                "xci_path": "ip\\design_1_auto_us_3\\design_1_auto_us_3.xci",
                 "inst_hier_path": "axi_mem_intercon_3/s00_couplers/auto_us",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -3261,6 +3195,75 @@
             ]
           }
         }
+      },
+      "dec_MIMD_0": {
+        "vlnv": "xilinx.com:hls:dec_MIMD:1.0",
+        "ip_revision": "2113540039",
+        "xci_name": "design_1_dec_MIMD_0_3",
+        "xci_path": "ip\\design_1_dec_MIMD_0_3\\design_1_dec_MIMD_0_3.xci",
+        "inst_hier_path": "dec_MIMD_0",
+        "interface_ports": {
+          "m_axi_gmem0": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Data_m_axi_gmem0",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFFFFFFFFFF",
+              "width": "64"
+            }
+          },
+          "m_axi_gmem1": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Data_m_axi_gmem1",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFFFFFFFFFF",
+              "width": "64"
+            }
+          },
+          "m_axi_gmem2": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Data_m_axi_gmem2",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFFFFFFFFFF",
+              "width": "64"
+            }
+          },
+          "m_axi_gmem3": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Data_m_axi_gmem3",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFFFFFFFFFF",
+              "width": "64"
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "Data_m_axi_gmem0": {
+              "range": "16E",
+              "width": "64"
+            },
+            "Data_m_axi_gmem1": {
+              "range": "16E",
+              "width": "64"
+            },
+            "Data_m_axi_gmem2": {
+              "range": "16E",
+              "width": "64"
+            },
+            "Data_m_axi_gmem3": {
+              "range": "16E",
+              "width": "64"
+            }
+          }
+        }
       }
     },
     "interface_nets": {
@@ -3344,7 +3347,6 @@
           "processing_system7_0/M_AXI_GP0_ACLK",
           "ps7_0_axi_periph/S00_ACLK",
           "rst_ps7_0_100M/slowest_sync_clk",
-          "dec_MIMD_0/ap_clk",
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/ACLK",
           "axi_mem_intercon/S00_ACLK",
@@ -3362,7 +3364,8 @@
           "axi_mem_intercon_3/S00_ACLK",
           "processing_system7_0/S_AXI_HP3_ACLK",
           "axi_mem_intercon_3/M00_ACLK",
-          "axi_mem_intercon_3/ACLK"
+          "axi_mem_intercon_3/ACLK",
+          "dec_MIMD_0/ap_clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -3375,7 +3378,6 @@
         "ports": [
           "rst_ps7_0_100M/peripheral_aresetn",
           "ps7_0_axi_periph/S00_ARESETN",
-          "dec_MIMD_0/ap_rst_n",
           "ps7_0_axi_periph/M00_ARESETN",
           "ps7_0_axi_periph/ARESETN",
           "axi_mem_intercon/S00_ARESETN",
@@ -3389,11 +3391,27 @@
           "axi_mem_intercon_2/ARESETN",
           "axi_mem_intercon_3/S00_ARESETN",
           "axi_mem_intercon_3/M00_ARESETN",
-          "axi_mem_intercon_3/ARESETN"
+          "axi_mem_intercon_3/ARESETN",
+          "dec_MIMD_0/ap_rst_n"
         ]
       }
     },
     "addressing": {
+      "/processing_system7_0": {
+        "address_spaces": {
+          "Data": {
+            "segments": {
+              "SEG_dec_MIMD_0_Reg": {
+                "address_block": "/dec_MIMD_0/s_axi_control/Reg",
+                "offset": "0x40000000",
+                "range": "64K",
+                "offset_base_param": "C_S_AXI_CONTROL_BASEADDR",
+                "offset_high_param": "C_S_AXI_CONTROL_HIGHADDR"
+              }
+            }
+          }
+        }
+      },
       "/dec_MIMD_0": {
         "address_spaces": {
           "Data_m_axi_gmem0": {
@@ -3429,21 +3447,6 @@
                 "address_block": "/processing_system7_0/S_AXI_HP3/HP3_DDR_LOWOCM",
                 "offset": "0x0000000000000000",
                 "range": "512M"
-              }
-            }
-          }
-        }
-      },
-      "/processing_system7_0": {
-        "address_spaces": {
-          "Data": {
-            "segments": {
-              "SEG_dec_MIMD_0_Reg": {
-                "address_block": "/dec_MIMD_0/s_axi_control/Reg",
-                "offset": "0x40000000",
-                "range": "64K",
-                "offset_base_param": "C_S_AXI_CONTROL_BASEADDR",
-                "offset_high_param": "C_S_AXI_CONTROL_HIGHADDR"
               }
             }
           }

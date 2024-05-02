@@ -1,21 +1,63 @@
 {
   "0": {
-    "basicblocks": 24,
-    "calls": "",
+    "basicblocks": 1,
+    "calls": "1 3 2",
     "file": "core.c",
-    "fileloc": 7,
-    "instructions": 148,
+    "fileloc": 100,
+    "instructions": 19,
     "loads": {
-      "G": 15,
-      "L": 2,
-      "T": 6
+      "L": 1
     },
     "name": "dec_MIMD",
     "stores": {
-      "G": 6,
-      "L": 12,
-      "T": 1
+      "L": 1
     },
-    "total_instructions": 148
+    "total_instructions": 158
+  },
+  "1": {
+    "basicblocks": 8,
+    "calls": "",
+    "file": "core.c",
+    "fileloc": 7,
+    "instructions": 47,
+    "loads": {
+      "L": 7
+    },
+    "name": "selecf",
+    "stores": {
+      "G": 6,
+      "L": 1
+    },
+    "total_instructions": 47
+  },
+  "2": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "core.c",
+    "fileloc": 94,
+    "instructions": 11,
+    "loads": {
+      "L": 1
+    },
+    "name": "output",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 11
+  },
+  "3": {
+    "basicblocks": 15,
+    "calls": "",
+    "file": "core.c",
+    "fileloc": 38,
+    "instructions": 81,
+    "loads": {
+      "G": 15
+    },
+    "name": "execute",
+    "stores": {
+      "L": 11
+    },
+    "total_instructions": 81
   }
 }

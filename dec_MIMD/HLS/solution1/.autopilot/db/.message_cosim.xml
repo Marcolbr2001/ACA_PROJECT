@@ -2,15 +2,15 @@
 <Messages>
 	<Message severity="INFO" prefix="[COSIM 212-47]" key="COSIM_TCL_47_1115" tag="" content="Using XSIM for RTL simulation." resolution=""/>
 	<Message severity="INFO" prefix="[COSIM 212-14]" key="COSIM_TCL_14_1084" tag="" content="Instrumenting C test bench ..." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;C:/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/win64.o/apcc.exe&apos;" resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;lotto&apos; on host &apos;msi&apos; (Windows NT_amd64 version 6.2) on Tue Apr 23 23:06:08 +0200 2024" resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/sim/wrapc&apos;" resolution=""/>
-	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/sim/wrapc/apcc_db_lotto/236363963719538" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;C:/ProgramData/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/win64.o/apcc.exe&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;marco&apos; on host &apos;pc_di_marco&apos; (Windows NT_amd64 version 6.2) on Thu May 02 14:11:52 +0200 2024" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/sim/wrapc&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/sim/wrapc/apcc_db_marco/225082184196547" resolution=""/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;C:/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/win64.o/apcc.exe&apos;" resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;lotto&apos; on host &apos;msi&apos; (Windows NT_amd64 version 6.2) on Tue Apr 23 23:06:10 +0200 2024" resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/sim/wrapc&apos;" resolution=""/>
-	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/sim/wrapc/apcc_db_lotto/102203966511348" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;C:/ProgramData/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/win64.o/apcc.exe&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;marco&apos; on host &apos;pc_di_marco&apos; (Windows NT_amd64 version 6.2) on Thu May 02 14:11:55 +0200 2024" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/sim/wrapc&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/sim/wrapc/apcc_db_marco/192122186555263" resolution=""/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done." resolution=""/>
 	<Message severity="INFO" prefix="[COSIM 212-302]" key="COSIM_TCL_302_1177" tag="" content="Starting C TB testing ..." resolution=""/>
 	<Message severity="INFO" prefix="[COSIM 212-333]" key="COSIM_TCL_333_1204" tag="" content="Generating C post check test bench ..." resolution=""/>
@@ -20,5 +20,5 @@
 	<Message severity="INFO" prefix="[COSIM 212-15]" key="COSIM_TCL_15_1085" tag="" content="Starting XSIM ..." resolution=""/>
 	<Message severity="INFO" prefix="[COSIM 212-316]" key="COSIM_TCL_316_1188" tag="" content="Starting C post checking ..." resolution=""/>
 	<Message severity="INFO" prefix="[COSIM 212-1000]" key="COSIM_TCL_1000_1070" tag="" content="*** C/RTL co-simulation finished: PASS ***" resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command cosim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 29.6 seconds; current allocated memory: 9.449 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command cosim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 34.617 seconds; current allocated memory: 9.828 MB." resolution=""/>
 </Messages>

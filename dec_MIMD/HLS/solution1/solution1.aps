@@ -8,7 +8,7 @@
     <synthesis askAgain="true"/>
     <config>
         <config_cosim rtl="vhdl" tool="xsim"/>
-        <config_export display_name="dec_MIMD" flow="syn" format="ip_catalog" output="C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD" rtl="vhdl" vivado_clock="10"/>
+        <config_export display_name="dec_MIMD" flow="syn" format="ip_catalog" output="C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS" rtl="vhdl" vivado_clock="10"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
@@ -41,7 +41,7 @@
             </RTLs>
         </UIAutoSimConf>
     </UIConfigurations>
-    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD" rtl="verilog" rtlButton="true" rtlCombo="vhdl">
+    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS" rtl="verilog" rtlButton="true" rtlCombo="vhdl">
         <Format formatName="ip_catalog"/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
@@ -70,7 +70,7 @@
         <library value="xilinx/zynq/zynq" name="DefaultPlatform"/>
     </libraryList>
     <clockList>
-        <clock default="false" name="default" period="10"/>
+        <clock name="default" default="false" period="10"/>
     </clockList>
 </solution>
 

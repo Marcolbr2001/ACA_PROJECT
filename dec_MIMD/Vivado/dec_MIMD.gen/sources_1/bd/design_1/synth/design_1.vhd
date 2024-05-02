@@ -2,8 +2,8 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
---Date        : Wed Apr 24 23:46:16 2024
---Host        : MSI running 64-bit major release  (build 9200)
+--Date        : Thu May  2 14:28:04 2024
+--Host        : PC_di_Marco running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
 --Purpose     : IP block netlist
@@ -55,7 +55,7 @@ entity s00_couplers_imp_164DZQ2 is
 end s00_couplers_imp_164DZQ2;
 
 architecture STRUCTURE of s00_couplers_imp_164DZQ2 is
-  component design_1_auto_pc_9 is
+  component design_1_auto_pc_4 is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -95,8 +95,8 @@ architecture STRUCTURE of s00_couplers_imp_164DZQ2 is
     m_axi_rvalid : in STD_LOGIC;
     m_axi_rready : out STD_LOGIC
   );
-  end component design_1_auto_pc_9;
-  component design_1_auto_us_7 is
+  end component design_1_auto_pc_4;
+  component design_1_auto_us_3 is
   port (
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC;
@@ -133,7 +133,7 @@ architecture STRUCTURE of s00_couplers_imp_164DZQ2 is
     m_axi_rvalid : in STD_LOGIC;
     m_axi_rready : out STD_LOGIC
   );
-  end component design_1_auto_us_7;
+  end component design_1_auto_us_3;
   signal S_ACLK_1 : STD_LOGIC;
   signal S_ARESETN_1 : STD_LOGIC;
   signal auto_pc_to_auto_us_ARADDR : STD_LOGIC_VECTOR ( 63 downto 0 );
@@ -222,7 +222,7 @@ begin
   s00_couplers_to_auto_pc_ARSIZE(2 downto 0) <= S_AXI_arsize(2 downto 0);
   s00_couplers_to_auto_pc_ARVALID <= S_AXI_arvalid;
   s00_couplers_to_auto_pc_RREADY <= S_AXI_rready;
-auto_pc: component design_1_auto_pc_9
+auto_pc: component design_1_auto_pc_4
      port map (
       aclk => S_ACLK_1,
       aresetn => S_ARESETN_1,
@@ -262,7 +262,7 @@ auto_pc: component design_1_auto_pc_9
       s_axi_rresp(1 downto 0) => s00_couplers_to_auto_pc_RRESP(1 downto 0),
       s_axi_rvalid => s00_couplers_to_auto_pc_RVALID
     );
-auto_us: component design_1_auto_us_7
+auto_us: component design_1_auto_us_3
      port map (
       m_axi_araddr(63 downto 0) => auto_us_to_s00_couplers_ARADDR(63 downto 0),
       m_axi_arburst(1 downto 0) => auto_us_to_s00_couplers_ARBURST(1 downto 0),
@@ -347,7 +347,7 @@ entity s00_couplers_imp_1FI55ZU is
 end s00_couplers_imp_1FI55ZU;
 
 architecture STRUCTURE of s00_couplers_imp_1FI55ZU is
-  component design_1_auto_pc_7 is
+  component design_1_auto_pc_2 is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -387,8 +387,8 @@ architecture STRUCTURE of s00_couplers_imp_1FI55ZU is
     m_axi_rvalid : in STD_LOGIC;
     m_axi_rready : out STD_LOGIC
   );
-  end component design_1_auto_pc_7;
-  component design_1_auto_us_5 is
+  end component design_1_auto_pc_2;
+  component design_1_auto_us_1 is
   port (
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC;
@@ -425,7 +425,7 @@ architecture STRUCTURE of s00_couplers_imp_1FI55ZU is
     m_axi_rvalid : in STD_LOGIC;
     m_axi_rready : out STD_LOGIC
   );
-  end component design_1_auto_us_5;
+  end component design_1_auto_us_1;
   signal S_ACLK_1 : STD_LOGIC;
   signal S_ARESETN_1 : STD_LOGIC;
   signal auto_pc_to_auto_us_ARADDR : STD_LOGIC_VECTOR ( 63 downto 0 );
@@ -514,7 +514,7 @@ begin
   s00_couplers_to_auto_pc_ARSIZE(2 downto 0) <= S_AXI_arsize(2 downto 0);
   s00_couplers_to_auto_pc_ARVALID <= S_AXI_arvalid;
   s00_couplers_to_auto_pc_RREADY <= S_AXI_rready;
-auto_pc: component design_1_auto_pc_7
+auto_pc: component design_1_auto_pc_2
      port map (
       aclk => S_ACLK_1,
       aresetn => S_ARESETN_1,
@@ -554,7 +554,7 @@ auto_pc: component design_1_auto_pc_7
       s_axi_rresp(1 downto 0) => s00_couplers_to_auto_pc_RRESP(1 downto 0),
       s_axi_rvalid => s00_couplers_to_auto_pc_RVALID
     );
-auto_us: component design_1_auto_us_5
+auto_us: component design_1_auto_us_1
      port map (
       m_axi_araddr(63 downto 0) => auto_us_to_s00_couplers_ARADDR(63 downto 0),
       m_axi_arburst(1 downto 0) => auto_us_to_s00_couplers_ARBURST(1 downto 0),
@@ -639,7 +639,7 @@ entity s00_couplers_imp_7HNO1D is
 end s00_couplers_imp_7HNO1D;
 
 architecture STRUCTURE of s00_couplers_imp_7HNO1D is
-  component design_1_auto_pc_6 is
+  component design_1_auto_pc_1 is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -679,8 +679,8 @@ architecture STRUCTURE of s00_couplers_imp_7HNO1D is
     m_axi_rvalid : in STD_LOGIC;
     m_axi_rready : out STD_LOGIC
   );
-  end component design_1_auto_pc_6;
-  component design_1_auto_us_4 is
+  end component design_1_auto_pc_1;
+  component design_1_auto_us_0 is
   port (
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC;
@@ -717,7 +717,7 @@ architecture STRUCTURE of s00_couplers_imp_7HNO1D is
     m_axi_rvalid : in STD_LOGIC;
     m_axi_rready : out STD_LOGIC
   );
-  end component design_1_auto_us_4;
+  end component design_1_auto_us_0;
   signal S_ACLK_1 : STD_LOGIC;
   signal S_ARESETN_1 : STD_LOGIC;
   signal auto_pc_to_auto_us_ARADDR : STD_LOGIC_VECTOR ( 63 downto 0 );
@@ -806,7 +806,7 @@ begin
   s00_couplers_to_auto_pc_ARSIZE(2 downto 0) <= S_AXI_arsize(2 downto 0);
   s00_couplers_to_auto_pc_ARVALID <= S_AXI_arvalid;
   s00_couplers_to_auto_pc_RREADY <= S_AXI_rready;
-auto_pc: component design_1_auto_pc_6
+auto_pc: component design_1_auto_pc_1
      port map (
       aclk => S_ACLK_1,
       aresetn => S_ARESETN_1,
@@ -846,7 +846,7 @@ auto_pc: component design_1_auto_pc_6
       s_axi_rresp(1 downto 0) => s00_couplers_to_auto_pc_RRESP(1 downto 0),
       s_axi_rvalid => s00_couplers_to_auto_pc_RVALID
     );
-auto_us: component design_1_auto_us_4
+auto_us: component design_1_auto_us_0
      port map (
       m_axi_araddr(63 downto 0) => auto_us_to_s00_couplers_ARADDR(63 downto 0),
       m_axi_arburst(1 downto 0) => auto_us_to_s00_couplers_ARBURST(1 downto 0),
@@ -953,7 +953,7 @@ entity s00_couplers_imp_UYSKKA is
 end s00_couplers_imp_UYSKKA;
 
 architecture STRUCTURE of s00_couplers_imp_UYSKKA is
-  component design_1_auto_pc_5 is
+  component design_1_auto_pc_0 is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -1015,7 +1015,7 @@ architecture STRUCTURE of s00_couplers_imp_UYSKKA is
     m_axi_rvalid : in STD_LOGIC;
     m_axi_rready : out STD_LOGIC
   );
-  end component design_1_auto_pc_5;
+  end component design_1_auto_pc_0;
   signal S_ACLK_1 : STD_LOGIC;
   signal S_ARESETN_1 : STD_LOGIC;
   signal auto_pc_to_s00_couplers_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -1133,7 +1133,7 @@ begin
   s00_couplers_to_auto_pc_WLAST <= S_AXI_wlast;
   s00_couplers_to_auto_pc_WSTRB(3 downto 0) <= S_AXI_wstrb(3 downto 0);
   s00_couplers_to_auto_pc_WVALID <= S_AXI_wvalid;
-auto_pc: component design_1_auto_pc_5
+auto_pc: component design_1_auto_pc_0
      port map (
       aclk => S_ACLK_1,
       aresetn => S_ARESETN_1,
@@ -1249,7 +1249,7 @@ entity s00_couplers_imp_ZRKJIY is
 end s00_couplers_imp_ZRKJIY;
 
 architecture STRUCTURE of s00_couplers_imp_ZRKJIY is
-  component design_1_auto_pc_8 is
+  component design_1_auto_pc_3 is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -1296,8 +1296,8 @@ architecture STRUCTURE of s00_couplers_imp_ZRKJIY is
     m_axi_bvalid : in STD_LOGIC;
     m_axi_bready : out STD_LOGIC
   );
-  end component design_1_auto_pc_8;
-  component design_1_auto_us_6 is
+  end component design_1_auto_pc_3;
+  component design_1_auto_us_2 is
   port (
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC;
@@ -1340,7 +1340,7 @@ architecture STRUCTURE of s00_couplers_imp_ZRKJIY is
     m_axi_bvalid : in STD_LOGIC;
     m_axi_bready : out STD_LOGIC
   );
-  end component design_1_auto_us_6;
+  end component design_1_auto_us_2;
   signal S_ACLK_1 : STD_LOGIC;
   signal S_ARESETN_1 : STD_LOGIC;
   signal auto_pc_to_auto_us_AWADDR : STD_LOGIC_VECTOR ( 63 downto 0 );
@@ -1445,7 +1445,7 @@ begin
   s00_couplers_to_auto_pc_WLAST <= S_AXI_wlast;
   s00_couplers_to_auto_pc_WSTRB(3 downto 0) <= S_AXI_wstrb(3 downto 0);
   s00_couplers_to_auto_pc_WVALID <= S_AXI_wvalid;
-auto_pc: component design_1_auto_pc_8
+auto_pc: component design_1_auto_pc_3
      port map (
       aclk => S_ACLK_1,
       aresetn => S_ARESETN_1,
@@ -1492,7 +1492,7 @@ auto_pc: component design_1_auto_pc_8
       s_axi_wstrb(3 downto 0) => s00_couplers_to_auto_pc_WSTRB(3 downto 0),
       s_axi_wvalid => s00_couplers_to_auto_pc_WVALID
     );
-auto_us: component design_1_auto_us_6
+auto_us: component design_1_auto_us_2
      port map (
       m_axi_awaddr(63 downto 0) => auto_us_to_s00_couplers_AWADDR(63 downto 0),
       m_axi_awburst(1 downto 0) => auto_us_to_s00_couplers_AWBURST(1 downto 0),
@@ -2502,196 +2502,12 @@ entity design_1 is
     FIXED_IO_ps_srstb : inout STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=22,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=10,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=31,da_ps7_cnt=2,synth_mode=Hierarchical}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=22,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=10,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=41,da_ps7_cnt=2,synth_mode=Hierarchical}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
 
 architecture STRUCTURE of design_1 is
-  component design_1_dec_MIMD_0_1 is
-  port (
-    s_axi_control_AWADDR : in STD_LOGIC_VECTOR ( 6 downto 0 );
-    s_axi_control_AWVALID : in STD_LOGIC;
-    s_axi_control_AWREADY : out STD_LOGIC;
-    s_axi_control_WDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axi_control_WSTRB : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s_axi_control_WVALID : in STD_LOGIC;
-    s_axi_control_WREADY : out STD_LOGIC;
-    s_axi_control_BRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axi_control_BVALID : out STD_LOGIC;
-    s_axi_control_BREADY : in STD_LOGIC;
-    s_axi_control_ARADDR : in STD_LOGIC_VECTOR ( 6 downto 0 );
-    s_axi_control_ARVALID : in STD_LOGIC;
-    s_axi_control_ARREADY : out STD_LOGIC;
-    s_axi_control_RDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axi_control_RRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axi_control_RVALID : out STD_LOGIC;
-    s_axi_control_RREADY : in STD_LOGIC;
-    ap_clk : in STD_LOGIC;
-    ap_rst_n : in STD_LOGIC;
-    interrupt : out STD_LOGIC;
-    m_axi_gmem0_AWID : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_gmem0_AWADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
-    m_axi_gmem0_AWLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    m_axi_gmem0_AWSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axi_gmem0_AWBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem0_AWLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem0_AWREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem0_AWCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem0_AWPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axi_gmem0_AWQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem0_AWVALID : out STD_LOGIC;
-    m_axi_gmem0_AWREADY : in STD_LOGIC;
-    m_axi_gmem0_WID : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_gmem0_WDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_axi_gmem0_WSTRB : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem0_WLAST : out STD_LOGIC;
-    m_axi_gmem0_WVALID : out STD_LOGIC;
-    m_axi_gmem0_WREADY : in STD_LOGIC;
-    m_axi_gmem0_BID : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_gmem0_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem0_BVALID : in STD_LOGIC;
-    m_axi_gmem0_BREADY : out STD_LOGIC;
-    m_axi_gmem0_ARID : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_gmem0_ARADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
-    m_axi_gmem0_ARLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    m_axi_gmem0_ARSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axi_gmem0_ARBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem0_ARLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem0_ARREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem0_ARCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem0_ARPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axi_gmem0_ARQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem0_ARVALID : out STD_LOGIC;
-    m_axi_gmem0_ARREADY : in STD_LOGIC;
-    m_axi_gmem0_RID : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_gmem0_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_axi_gmem0_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem0_RLAST : in STD_LOGIC;
-    m_axi_gmem0_RVALID : in STD_LOGIC;
-    m_axi_gmem0_RREADY : out STD_LOGIC;
-    m_axi_gmem1_AWID : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_gmem1_AWADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
-    m_axi_gmem1_AWLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    m_axi_gmem1_AWSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axi_gmem1_AWBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem1_AWLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem1_AWREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem1_AWCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem1_AWPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axi_gmem1_AWQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem1_AWVALID : out STD_LOGIC;
-    m_axi_gmem1_AWREADY : in STD_LOGIC;
-    m_axi_gmem1_WID : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_gmem1_WDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_axi_gmem1_WSTRB : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem1_WLAST : out STD_LOGIC;
-    m_axi_gmem1_WVALID : out STD_LOGIC;
-    m_axi_gmem1_WREADY : in STD_LOGIC;
-    m_axi_gmem1_BID : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_gmem1_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem1_BVALID : in STD_LOGIC;
-    m_axi_gmem1_BREADY : out STD_LOGIC;
-    m_axi_gmem1_ARID : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_gmem1_ARADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
-    m_axi_gmem1_ARLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    m_axi_gmem1_ARSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axi_gmem1_ARBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem1_ARLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem1_ARREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem1_ARCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem1_ARPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axi_gmem1_ARQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem1_ARVALID : out STD_LOGIC;
-    m_axi_gmem1_ARREADY : in STD_LOGIC;
-    m_axi_gmem1_RID : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_gmem1_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_axi_gmem1_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem1_RLAST : in STD_LOGIC;
-    m_axi_gmem1_RVALID : in STD_LOGIC;
-    m_axi_gmem1_RREADY : out STD_LOGIC;
-    m_axi_gmem2_AWID : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_gmem2_AWADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
-    m_axi_gmem2_AWLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    m_axi_gmem2_AWSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axi_gmem2_AWBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem2_AWLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem2_AWREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem2_AWCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem2_AWPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axi_gmem2_AWQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem2_AWVALID : out STD_LOGIC;
-    m_axi_gmem2_AWREADY : in STD_LOGIC;
-    m_axi_gmem2_WID : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_gmem2_WDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_axi_gmem2_WSTRB : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem2_WLAST : out STD_LOGIC;
-    m_axi_gmem2_WVALID : out STD_LOGIC;
-    m_axi_gmem2_WREADY : in STD_LOGIC;
-    m_axi_gmem2_BID : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_gmem2_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem2_BVALID : in STD_LOGIC;
-    m_axi_gmem2_BREADY : out STD_LOGIC;
-    m_axi_gmem2_ARID : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_gmem2_ARADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
-    m_axi_gmem2_ARLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    m_axi_gmem2_ARSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axi_gmem2_ARBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem2_ARLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem2_ARREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem2_ARCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem2_ARPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axi_gmem2_ARQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem2_ARVALID : out STD_LOGIC;
-    m_axi_gmem2_ARREADY : in STD_LOGIC;
-    m_axi_gmem2_RID : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_gmem2_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_axi_gmem2_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem2_RLAST : in STD_LOGIC;
-    m_axi_gmem2_RVALID : in STD_LOGIC;
-    m_axi_gmem2_RREADY : out STD_LOGIC;
-    m_axi_gmem3_AWID : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_gmem3_AWADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
-    m_axi_gmem3_AWLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    m_axi_gmem3_AWSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axi_gmem3_AWBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem3_AWLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem3_AWREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem3_AWCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem3_AWPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axi_gmem3_AWQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem3_AWVALID : out STD_LOGIC;
-    m_axi_gmem3_AWREADY : in STD_LOGIC;
-    m_axi_gmem3_WID : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_gmem3_WDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_axi_gmem3_WSTRB : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem3_WLAST : out STD_LOGIC;
-    m_axi_gmem3_WVALID : out STD_LOGIC;
-    m_axi_gmem3_WREADY : in STD_LOGIC;
-    m_axi_gmem3_BID : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_gmem3_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem3_BVALID : in STD_LOGIC;
-    m_axi_gmem3_BREADY : out STD_LOGIC;
-    m_axi_gmem3_ARID : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_gmem3_ARADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
-    m_axi_gmem3_ARLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    m_axi_gmem3_ARSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axi_gmem3_ARBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem3_ARLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem3_ARREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem3_ARCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem3_ARPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axi_gmem3_ARQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_gmem3_ARVALID : out STD_LOGIC;
-    m_axi_gmem3_ARREADY : in STD_LOGIC;
-    m_axi_gmem3_RID : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_gmem3_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_axi_gmem3_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_gmem3_RLAST : in STD_LOGIC;
-    m_axi_gmem3_RVALID : in STD_LOGIC;
-    m_axi_gmem3_RREADY : out STD_LOGIC
-  );
-  end component design_1_dec_MIMD_0_1;
   component design_1_processing_system7_0_1 is
   port (
     USB0_PORT_INDCTL : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -2955,6 +2771,190 @@ architecture STRUCTURE of design_1 is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_rst_ps7_0_100M_0;
+  component design_1_dec_MIMD_0_3 is
+  port (
+    s_axi_control_AWADDR : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    s_axi_control_AWVALID : in STD_LOGIC;
+    s_axi_control_AWREADY : out STD_LOGIC;
+    s_axi_control_WDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_control_WSTRB : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axi_control_WVALID : in STD_LOGIC;
+    s_axi_control_WREADY : out STD_LOGIC;
+    s_axi_control_BRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_control_BVALID : out STD_LOGIC;
+    s_axi_control_BREADY : in STD_LOGIC;
+    s_axi_control_ARADDR : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    s_axi_control_ARVALID : in STD_LOGIC;
+    s_axi_control_ARREADY : out STD_LOGIC;
+    s_axi_control_RDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_control_RRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_control_RVALID : out STD_LOGIC;
+    s_axi_control_RREADY : in STD_LOGIC;
+    ap_clk : in STD_LOGIC;
+    ap_rst_n : in STD_LOGIC;
+    interrupt : out STD_LOGIC;
+    m_axi_gmem0_AWID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_gmem0_AWADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axi_gmem0_AWLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axi_gmem0_AWSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_gmem0_AWBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem0_AWLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem0_AWREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem0_AWCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem0_AWPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_gmem0_AWQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem0_AWVALID : out STD_LOGIC;
+    m_axi_gmem0_AWREADY : in STD_LOGIC;
+    m_axi_gmem0_WID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_gmem0_WDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_gmem0_WSTRB : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem0_WLAST : out STD_LOGIC;
+    m_axi_gmem0_WVALID : out STD_LOGIC;
+    m_axi_gmem0_WREADY : in STD_LOGIC;
+    m_axi_gmem0_BID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_gmem0_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem0_BVALID : in STD_LOGIC;
+    m_axi_gmem0_BREADY : out STD_LOGIC;
+    m_axi_gmem0_ARID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_gmem0_ARADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axi_gmem0_ARLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axi_gmem0_ARSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_gmem0_ARBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem0_ARLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem0_ARREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem0_ARCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem0_ARPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_gmem0_ARQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem0_ARVALID : out STD_LOGIC;
+    m_axi_gmem0_ARREADY : in STD_LOGIC;
+    m_axi_gmem0_RID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_gmem0_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_gmem0_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem0_RLAST : in STD_LOGIC;
+    m_axi_gmem0_RVALID : in STD_LOGIC;
+    m_axi_gmem0_RREADY : out STD_LOGIC;
+    m_axi_gmem1_AWID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_gmem1_AWADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axi_gmem1_AWLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axi_gmem1_AWSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_gmem1_AWBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem1_AWLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem1_AWREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem1_AWCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem1_AWPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_gmem1_AWQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem1_AWVALID : out STD_LOGIC;
+    m_axi_gmem1_AWREADY : in STD_LOGIC;
+    m_axi_gmem1_WID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_gmem1_WDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_gmem1_WSTRB : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem1_WLAST : out STD_LOGIC;
+    m_axi_gmem1_WVALID : out STD_LOGIC;
+    m_axi_gmem1_WREADY : in STD_LOGIC;
+    m_axi_gmem1_BID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_gmem1_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem1_BVALID : in STD_LOGIC;
+    m_axi_gmem1_BREADY : out STD_LOGIC;
+    m_axi_gmem1_ARID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_gmem1_ARADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axi_gmem1_ARLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axi_gmem1_ARSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_gmem1_ARBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem1_ARLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem1_ARREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem1_ARCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem1_ARPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_gmem1_ARQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem1_ARVALID : out STD_LOGIC;
+    m_axi_gmem1_ARREADY : in STD_LOGIC;
+    m_axi_gmem1_RID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_gmem1_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_gmem1_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem1_RLAST : in STD_LOGIC;
+    m_axi_gmem1_RVALID : in STD_LOGIC;
+    m_axi_gmem1_RREADY : out STD_LOGIC;
+    m_axi_gmem2_AWID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_gmem2_AWADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axi_gmem2_AWLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axi_gmem2_AWSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_gmem2_AWBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem2_AWLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem2_AWREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem2_AWCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem2_AWPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_gmem2_AWQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem2_AWVALID : out STD_LOGIC;
+    m_axi_gmem2_AWREADY : in STD_LOGIC;
+    m_axi_gmem2_WID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_gmem2_WDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_gmem2_WSTRB : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem2_WLAST : out STD_LOGIC;
+    m_axi_gmem2_WVALID : out STD_LOGIC;
+    m_axi_gmem2_WREADY : in STD_LOGIC;
+    m_axi_gmem2_BID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_gmem2_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem2_BVALID : in STD_LOGIC;
+    m_axi_gmem2_BREADY : out STD_LOGIC;
+    m_axi_gmem2_ARID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_gmem2_ARADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axi_gmem2_ARLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axi_gmem2_ARSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_gmem2_ARBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem2_ARLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem2_ARREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem2_ARCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem2_ARPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_gmem2_ARQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem2_ARVALID : out STD_LOGIC;
+    m_axi_gmem2_ARREADY : in STD_LOGIC;
+    m_axi_gmem2_RID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_gmem2_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_gmem2_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem2_RLAST : in STD_LOGIC;
+    m_axi_gmem2_RVALID : in STD_LOGIC;
+    m_axi_gmem2_RREADY : out STD_LOGIC;
+    m_axi_gmem3_AWID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_gmem3_AWADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axi_gmem3_AWLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axi_gmem3_AWSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_gmem3_AWBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem3_AWLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem3_AWREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem3_AWCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem3_AWPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_gmem3_AWQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem3_AWVALID : out STD_LOGIC;
+    m_axi_gmem3_AWREADY : in STD_LOGIC;
+    m_axi_gmem3_WID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_gmem3_WDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_gmem3_WSTRB : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem3_WLAST : out STD_LOGIC;
+    m_axi_gmem3_WVALID : out STD_LOGIC;
+    m_axi_gmem3_WREADY : in STD_LOGIC;
+    m_axi_gmem3_BID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_gmem3_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem3_BVALID : in STD_LOGIC;
+    m_axi_gmem3_BREADY : out STD_LOGIC;
+    m_axi_gmem3_ARID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_gmem3_ARADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axi_gmem3_ARLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axi_gmem3_ARSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_gmem3_ARBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem3_ARLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem3_ARREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem3_ARCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem3_ARPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_gmem3_ARQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_gmem3_ARVALID : out STD_LOGIC;
+    m_axi_gmem3_ARREADY : in STD_LOGIC;
+    m_axi_gmem3_RID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_gmem3_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_gmem3_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_gmem3_RLAST : in STD_LOGIC;
+    m_axi_gmem3_RVALID : in STD_LOGIC;
+    m_axi_gmem3_RREADY : out STD_LOGIC
+  );
+  end component design_1_dec_MIMD_0_3;
   signal axi_mem_intercon_1_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 63 downto 0 );
   signal axi_mem_intercon_1_M00_AXI_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_mem_intercon_1_M00_AXI_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -3484,7 +3484,7 @@ axi_mem_intercon_3: entity work.design_1_axi_mem_intercon_3_0
       S00_AXI_rresp(1 downto 0) => dec_MIMD_0_m_axi_gmem3_RRESP(1 downto 0),
       S00_AXI_rvalid => dec_MIMD_0_m_axi_gmem3_RVALID
     );
-dec_MIMD_0: component design_1_dec_MIMD_0_1
+dec_MIMD_0: component design_1_dec_MIMD_0_3
      port map (
       ap_clk => processing_system7_0_FCLK_CLK0,
       ap_rst_n => rst_ps7_0_100M_peripheral_aresetn(0),

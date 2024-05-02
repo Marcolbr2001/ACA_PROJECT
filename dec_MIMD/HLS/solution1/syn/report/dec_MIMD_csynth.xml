@@ -34,7 +34,7 @@
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>HLS/core.c:7</SourceLocation>
+<SourceLocation>HLS/core.c:100</SourceLocation>
 </SummaryOfViolations>
 </PerformanceEstimates>
 
@@ -42,8 +42,8 @@
 <Resources>
 <BRAM_18K>20</BRAM_18K>
 <DSP>3</DSP>
-<FF>8535</FF>
-<LUT>7717</LUT>
+<FF>8567</FF>
+<LUT>7726</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'dec_MIMD'
 ================================================================
 + General Information: 
-    * Date:           Tue Apr 23 23:05:19 2024
+    * Date:           Thu May  2 14:11:06 2024
     * Version:        2023.2 (Build 4023990 on Oct 11 2023)
     * Project:        HLS
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,22 +15,22 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +---------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+-----------+------------+-----+
-    |                Modules                | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |        |           |            |     |
-    |                & Loops                | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP  |     FF    |     LUT    | URAM|
-    +---------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+-----------+------------+-----+
-    |+ dec_MIMD                             |     -|  0.00|      214|  2.140e+03|         -|      215|     -|        no|  20 (7%)|  3 (1%)|  8535 (8%)|  7717 (14%)|    -|
-    | + dec_MIMD_Pipeline_VITIS_LOOP_51_3   |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|  385 (~0%)|   371 (~0%)|    -|
-    |  o VITIS_LOOP_51_3                    |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|          -|           -|    -|
-    | + dec_MIMD_Pipeline_VITIS_LOOP_43_2   |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|  193 (~0%)|   189 (~0%)|    -|
-    |  o VITIS_LOOP_43_2                    |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|          -|           -|    -|
-    | + dec_MIMD_Pipeline_VITIS_LOOP_35_1   |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|  289 (~0%)|   282 (~0%)|    -|
-    |  o VITIS_LOOP_35_1                    |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|          -|           -|    -|
-    | + dec_MIMD_Pipeline_VITIS_LOOP_61_4   |     -|  0.39|       90|    900.000|         -|       90|     -|        no|        -|  3 (1%)|  3546 (3%)|   2671 (5%)|    -|
-    |  o VITIS_LOOP_61_4                    |     -|  7.30|       88|    880.000|        40|        1|    50|       yes|        -|       -|          -|           -|    -|
-    | + dec_MIMD_Pipeline_VITIS_LOOP_115_5  |     -|  0.00|       58|    580.000|         -|       58|     -|        no|        -|       -|  117 (~0%)|   168 (~0%)|    -|
-    |  o VITIS_LOOP_115_5                   |     -|  7.30|       56|    560.000|         8|        1|    50|       yes|        -|       -|          -|           -|    -|
-    +---------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+-----------+------------+-----+
+    +--------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+-----------+------------+-----+
+    |                Modules               | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |        |           |            |     |
+    |                & Loops               | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP  |     FF    |     LUT    | URAM|
+    +--------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+-----------+------------+-----+
+    |+ dec_MIMD                            |     -|  0.00|      214|  2.140e+03|         -|      215|     -|        no|  20 (7%)|  3 (1%)|  8567 (8%)|  7726 (14%)|    -|
+    | + dec_MIMD_Pipeline_VITIS_LOOP_28_3  |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|  385 (~0%)|   371 (~0%)|    -|
+    |  o VITIS_LOOP_28_3                   |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|          -|           -|    -|
+    | + dec_MIMD_Pipeline_VITIS_LOOP_20_2  |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|  193 (~0%)|   189 (~0%)|    -|
+    |  o VITIS_LOOP_20_2                   |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|          -|           -|    -|
+    | + dec_MIMD_Pipeline_VITIS_LOOP_12_1  |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|  289 (~0%)|   282 (~0%)|    -|
+    |  o VITIS_LOOP_12_1                   |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|          -|           -|    -|
+    | + dec_MIMD_Pipeline_VITIS_LOOP_41_1  |     -|  0.39|       90|    900.000|         -|       90|     -|        no|        -|  3 (1%)|  3546 (3%)|   2671 (5%)|    -|
+    |  o VITIS_LOOP_41_1                   |     -|  7.30|       88|    880.000|        40|        1|    50|       yes|        -|       -|          -|           -|    -|
+    | + dec_MIMD_Pipeline_VITIS_LOOP_96_1  |     -|  0.00|       58|    580.000|         -|       58|     -|        no|        -|       -|  117 (~0%)|   168 (~0%)|    -|
+    |  o VITIS_LOOP_96_1                   |     -|  7.30|       56|    560.000|         8|        1|    50|       yes|        -|       -|          -|           -|    -|
+    +--------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+-----------+------------+-----+
 
 
 ================================================================
@@ -127,13 +127,13 @@
 +--------------+----------+------------------+-----------+--------------+------------+-------------------------------------------------+
 | HW Interface | Variable | Access Location  | Direction | Burst Status | Resolution | Problem                                         |
 +--------------+----------+------------------+-----------+--------------+------------+-------------------------------------------------+
-| m_axi_gmem0  | a        | HLS/core.c:37:18 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-| m_axi_gmem0  | a        | HLS/core.c:53:18 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-| m_axi_gmem1  | b        | HLS/core.c:38:18 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-| m_axi_gmem1  | b        | HLS/core.c:54:18 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-| m_axi_gmem2  | c        | HLS/core.c:117:8 | write     | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-| m_axi_gmem3  | op       | HLS/core.c:45:25 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-| m_axi_gmem3  | op       | HLS/core.c:55:25 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem0  | a        | HLS/core.c:14:18 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem0  | a        | HLS/core.c:30:18 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem1  | b        | HLS/core.c:15:18 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem1  | b        | HLS/core.c:31:18 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem2  | c        | HLS/core.c:97:8  | write     | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem3  | op       | HLS/core.c:22:25 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem3  | op       | HLS/core.c:32:25 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
 +--------------+----------+------------------+-----------+--------------+------------+-------------------------------------------------+
 
     * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
@@ -141,37 +141,37 @@
 ================================================================
 == Bind Op Report
 ================================================================
-+---------------------------------------+-----+--------+------------+-----+--------+---------+
-| Name                                  | DSP | Pragma | Variable   | Op  | Impl   | Latency |
-+---------------------------------------+-----+--------+------------+-----+--------+---------+
-| + dec_MIMD                            | 3   |        |            |     |        |         |
-|  + dec_MIMD_Pipeline_VITIS_LOOP_51_3  | 0   |        |            |     |        |         |
-|    add_ln51_fu_189_p2                 |     |        | add_ln51   | add | fabric | 0       |
-|    add_ln53_fu_207_p2                 |     |        | add_ln53   | add | fabric | 0       |
-|    add_ln54_fu_233_p2                 |     |        | add_ln54   | add | fabric | 0       |
-|    add_ln55_fu_259_p2                 |     |        | add_ln55   | add | fabric | 0       |
-|  + dec_MIMD_Pipeline_VITIS_LOOP_43_2  | 0   |        |            |     |        |         |
-|    add_ln43_fu_111_p2                 |     |        | add_ln43   | add | fabric | 0       |
-|    add_ln45_fu_129_p2                 |     |        | add_ln45   | add | fabric | 0       |
-|  + dec_MIMD_Pipeline_VITIS_LOOP_35_1  | 0   |        |            |     |        |         |
-|    add_ln35_fu_150_p2                 |     |        | add_ln35   | add | fabric | 0       |
-|    add_ln37_fu_168_p2                 |     |        | add_ln37   | add | fabric | 0       |
-|    add_ln38_fu_194_p2                 |     |        | add_ln38   | add | fabric | 0       |
-|  + dec_MIMD_Pipeline_VITIS_LOOP_61_4  | 3   |        |            |     |        |         |
-|    add_ln61_fu_238_p2                 |     |        | add_ln61   | add | fabric | 0       |
-|    mul_32s_32s_32_2_1_U19             | 3   |        | mul_ln100  | mul | auto   | 1       |
-|    sub_ln96_fu_254_p2                 |     |        | sub_ln96   | sub | fabric | 0       |
-|    add_ln92_fu_260_p2                 |     |        | add_ln92   | add | fabric | 0       |
-|    sub_ln88_fu_274_p2                 |     |        | sub_ln88   | sub | fabric | 0       |
-|    sub_ln88_1_fu_343_p2               |     |        | sub_ln88_1 | sub | fabric | 0       |
-|    sub_ln84_fu_308_p2                 |     |        | sub_ln84   | sub | fabric | 0       |
-|    sub_ln84_1_fu_362_p2               |     |        | sub_ln84_1 | sub | fabric | 0       |
-|    add_ln72_fu_392_p2                 |     |        | add_ln72   | add | fabric | 0       |
-|    add_ln68_fu_399_p2                 |     |        | add_ln68   | add | fabric | 0       |
-|  + dec_MIMD_Pipeline_VITIS_LOOP_115_5 | 0   |        |            |     |        |         |
-|    add_ln115_fu_119_p2                |     |        | add_ln115  | add | fabric | 0       |
-|    add_ln117_fu_142_p2                |     |        | add_ln117  | add | fabric | 0       |
-+---------------------------------------+-----+--------+------------+-----+--------+---------+
++--------------------------------------+-----+--------+------------+-----+--------+---------+
+| Name                                 | DSP | Pragma | Variable   | Op  | Impl   | Latency |
++--------------------------------------+-----+--------+------------+-----+--------+---------+
+| + dec_MIMD                           | 3   |        |            |     |        |         |
+|  + dec_MIMD_Pipeline_VITIS_LOOP_28_3 | 0   |        |            |     |        |         |
+|    add_ln28_fu_189_p2                |     |        | add_ln28   | add | fabric | 0       |
+|    add_ln30_fu_207_p2                |     |        | add_ln30   | add | fabric | 0       |
+|    add_ln31_fu_233_p2                |     |        | add_ln31   | add | fabric | 0       |
+|    add_ln32_fu_259_p2                |     |        | add_ln32   | add | fabric | 0       |
+|  + dec_MIMD_Pipeline_VITIS_LOOP_20_2 | 0   |        |            |     |        |         |
+|    add_ln20_fu_111_p2                |     |        | add_ln20   | add | fabric | 0       |
+|    add_ln22_fu_129_p2                |     |        | add_ln22   | add | fabric | 0       |
+|  + dec_MIMD_Pipeline_VITIS_LOOP_12_1 | 0   |        |            |     |        |         |
+|    add_ln12_fu_150_p2                |     |        | add_ln12   | add | fabric | 0       |
+|    add_ln14_fu_168_p2                |     |        | add_ln14   | add | fabric | 0       |
+|    add_ln15_fu_194_p2                |     |        | add_ln15   | add | fabric | 0       |
+|  + dec_MIMD_Pipeline_VITIS_LOOP_41_1 | 3   |        |            |     |        |         |
+|    add_ln41_fu_238_p2                |     |        | add_ln41   | add | fabric | 0       |
+|    mul_32s_32s_32_2_1_U19            | 3   |        | mul_ln80   | mul | auto   | 1       |
+|    sub_ln76_fu_254_p2                |     |        | sub_ln76   | sub | fabric | 0       |
+|    add_ln72_fu_260_p2                |     |        | add_ln72   | add | fabric | 0       |
+|    sub_ln68_fu_274_p2                |     |        | sub_ln68   | sub | fabric | 0       |
+|    sub_ln68_1_fu_343_p2              |     |        | sub_ln68_1 | sub | fabric | 0       |
+|    sub_ln64_fu_308_p2                |     |        | sub_ln64   | sub | fabric | 0       |
+|    sub_ln64_1_fu_362_p2              |     |        | sub_ln64_1 | sub | fabric | 0       |
+|    add_ln52_fu_392_p2                |     |        | add_ln52   | add | fabric | 0       |
+|    add_ln48_fu_399_p2                |     |        | add_ln48   | add | fabric | 0       |
+|  + dec_MIMD_Pipeline_VITIS_LOOP_96_1 | 0   |        |            |     |        |         |
+|    add_ln96_fu_119_p2                |     |        | add_ln96   | add | fabric | 0       |
+|    add_ln97_fu_142_p2                |     |        | add_ln97   | add | fabric | 0       |
++--------------------------------------+-----+--------+------------+-----+--------+---------+
 
 
 ================================================================
@@ -198,19 +198,19 @@
 == Pragma Report
 ================================================================
 * Valid Pragma Syntax
-+-----------+-------------------------------------------------------+-----------------------------------+
-| Type      | Options                                               | Location                          |
-+-----------+-------------------------------------------------------+-----------------------------------+
-| interface | mode=s_axilite bundle=control port=a                  | HLS/core.c:9 in dec_mimd, a       |
-| interface | mode=s_axilite bundle=control port=b                  | HLS/core.c:10 in dec_mimd, b      |
-| interface | mode=s_axilite bundle=control port=c                  | HLS/core.c:11 in dec_mimd, c      |
-| interface | mode=s_axilite bundle=control port=op                 | HLS/core.c:12 in dec_mimd, op     |
-| interface | mode=s_axilite bundle=control port=selec              | HLS/core.c:13 in dec_mimd, selec  |
-| interface | mode=s_axilite bundle=control port=return             | HLS/core.c:15 in dec_mimd, return |
-| interface | mode=m_axi port=a bundle=gmem0 depth=50 offset=slave  | HLS/core.c:17 in dec_mimd, a      |
-| interface | mode=m_axi port=b bundle=gmem1 depth=50 offset=slave  | HLS/core.c:18 in dec_mimd, b      |
-| interface | mode=m_axi port=c bundle=gmem2 depth=50 offset=slave  | HLS/core.c:19 in dec_mimd, c      |
-| interface | mode=m_axi port=op bundle=gmem3 depth=50 offset=slave | HLS/core.c:20 in dec_mimd, op     |
-+-----------+-------------------------------------------------------+-----------------------------------+
++-----------+-------------------------------------------------------+------------------------------------+
+| Type      | Options                                               | Location                           |
++-----------+-------------------------------------------------------+------------------------------------+
+| interface | mode=s_axilite bundle=control port=a                  | HLS/core.c:102 in dec_mimd, a      |
+| interface | mode=s_axilite bundle=control port=b                  | HLS/core.c:103 in dec_mimd, b      |
+| interface | mode=s_axilite bundle=control port=c                  | HLS/core.c:104 in dec_mimd, c      |
+| interface | mode=s_axilite bundle=control port=op                 | HLS/core.c:105 in dec_mimd, op     |
+| interface | mode=s_axilite bundle=control port=selec              | HLS/core.c:106 in dec_mimd, selec  |
+| interface | mode=s_axilite bundle=control port=return             | HLS/core.c:108 in dec_mimd, return |
+| interface | mode=m_axi port=a bundle=gmem0 depth=50 offset=slave  | HLS/core.c:110 in dec_mimd, a      |
+| interface | mode=m_axi port=b bundle=gmem1 depth=50 offset=slave  | HLS/core.c:111 in dec_mimd, b      |
+| interface | mode=m_axi port=c bundle=gmem2 depth=50 offset=slave  | HLS/core.c:112 in dec_mimd, c      |
+| interface | mode=m_axi port=op bundle=gmem3 depth=50 offset=slave | HLS/core.c:113 in dec_mimd, op     |
++-----------+-------------------------------------------------------+------------------------------------+
 
 

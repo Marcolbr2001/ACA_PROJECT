@@ -1,141 +1,183 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: HLS/core.c, Line: 100, Column: 0 }
+Function:        dec_MIMD
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          selecf
+    DebugLoc:        { File: HLS/core.c, Line: 8, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          dec_MIMD
+    DebugLoc:        { File: HLS/core.c, Line: 100, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: HLS/core.c, Line: 100, Column: 0 }
+Function:        dec_MIMD
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          execute
+    DebugLoc:        { File: HLS/core.c, Line: 39, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          dec_MIMD
+    DebugLoc:        { File: HLS/core.c, Line: 100, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: HLS/core.c, Line: 100, Column: 0 }
+Function:        dec_MIMD
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          output
+    DebugLoc:        { File: HLS/core.c, Line: 95, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          dec_MIMD
+    DebugLoc:        { File: HLS/core.c, Line: 100, Column: 0 }
+  - String:          ''''
+...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: HLS/core.c, Line: 37, Column: 18 }
+DebugLoc:        { File: HLS/core.c, Line: 14, Column: 18 }
 Function:        dec_MIMD
 Args:            
   - String:          Volatile or Atomic access cannot be transformed
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: HLS/core.c, Line: 37, Column: 18 }
+    DebugLoc:        { File: HLS/core.c, Line: 14, Column: 18 }
   - OrigDirection:   read
-  - OrigID:          for.inc.load.3
+  - OrigID:          for.inc.i.load.3
   - ArrayName:       a
   - String:          ' '
   - BundleName:      gmem0
   - String:          ' '
   - Function:        dec_MIMD
-    DebugLoc:        { File: HLS/core.c, Line: 7, Column: 0 }
+    DebugLoc:        { File: HLS/core.c, Line: 100, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: HLS/core.c, Line: 38, Column: 18 }
+DebugLoc:        { File: HLS/core.c, Line: 15, Column: 18 }
 Function:        dec_MIMD
 Args:            
   - String:          Volatile or Atomic access cannot be transformed
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: HLS/core.c, Line: 38, Column: 18 }
+    DebugLoc:        { File: HLS/core.c, Line: 15, Column: 18 }
   - OrigDirection:   read
-  - OrigID:          for.inc.load.7
+  - OrigID:          for.inc.i.load.7
   - ArrayName:       b
   - String:          ' '
   - BundleName:      gmem1
   - String:          ' '
   - Function:        dec_MIMD
-    DebugLoc:        { File: HLS/core.c, Line: 7, Column: 0 }
+    DebugLoc:        { File: HLS/core.c, Line: 100, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: HLS/core.c, Line: 45, Column: 25 }
+DebugLoc:        { File: HLS/core.c, Line: 22, Column: 25 }
 Function:        dec_MIMD
 Args:            
   - String:          Volatile or Atomic access cannot be transformed
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: HLS/core.c, Line: 45, Column: 25 }
+    DebugLoc:        { File: HLS/core.c, Line: 22, Column: 25 }
   - OrigDirection:   read
-  - OrigID:          for.inc17.load.3
+  - OrigID:          for.inc17.i.load.3
   - ArrayName:       op
   - String:          ' '
   - BundleName:      gmem3
   - String:          ' '
   - Function:        dec_MIMD
-    DebugLoc:        { File: HLS/core.c, Line: 7, Column: 0 }
+    DebugLoc:        { File: HLS/core.c, Line: 100, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: HLS/core.c, Line: 53, Column: 18 }
+DebugLoc:        { File: HLS/core.c, Line: 30, Column: 18 }
 Function:        dec_MIMD
 Args:            
   - String:          Volatile or Atomic access cannot be transformed
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: HLS/core.c, Line: 53, Column: 18 }
+    DebugLoc:        { File: HLS/core.c, Line: 30, Column: 18 }
   - OrigDirection:   read
-  - OrigID:          for.inc38.load.3
+  - OrigID:          for.inc38.i.load.3
   - ArrayName:       a
   - String:          ' '
   - BundleName:      gmem0
   - String:          ' '
   - Function:        dec_MIMD
-    DebugLoc:        { File: HLS/core.c, Line: 7, Column: 0 }
+    DebugLoc:        { File: HLS/core.c, Line: 100, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: HLS/core.c, Line: 54, Column: 18 }
+DebugLoc:        { File: HLS/core.c, Line: 31, Column: 18 }
 Function:        dec_MIMD
 Args:            
   - String:          Volatile or Atomic access cannot be transformed
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: HLS/core.c, Line: 54, Column: 18 }
+    DebugLoc:        { File: HLS/core.c, Line: 31, Column: 18 }
   - OrigDirection:   read
-  - OrigID:          for.inc38.load.7
+  - OrigID:          for.inc38.i.load.7
   - ArrayName:       b
   - String:          ' '
   - BundleName:      gmem1
   - String:          ' '
   - Function:        dec_MIMD
-    DebugLoc:        { File: HLS/core.c, Line: 7, Column: 0 }
+    DebugLoc:        { File: HLS/core.c, Line: 100, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: HLS/core.c, Line: 55, Column: 25 }
+DebugLoc:        { File: HLS/core.c, Line: 32, Column: 25 }
 Function:        dec_MIMD
 Args:            
   - String:          Volatile or Atomic access cannot be transformed
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: HLS/core.c, Line: 55, Column: 25 }
+    DebugLoc:        { File: HLS/core.c, Line: 32, Column: 25 }
   - OrigDirection:   read
-  - OrigID:          for.inc38.load.11
+  - OrigID:          for.inc38.i.load.11
   - ArrayName:       op
   - String:          ' '
   - BundleName:      gmem3
   - String:          ' '
   - Function:        dec_MIMD
-    DebugLoc:        { File: HLS/core.c, Line: 7, Column: 0 }
+    DebugLoc:        { File: HLS/core.c, Line: 100, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: HLS/core.c, Line: 117, Column: 8 }
+DebugLoc:        { File: HLS/core.c, Line: 97, Column: 8 }
 Function:        dec_MIMD
 Args:            
   - String:          Volatile or Atomic access cannot be transformed
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      store
-    DebugLoc:        { File: HLS/core.c, Line: 117, Column: 8 }
+    DebugLoc:        { File: HLS/core.c, Line: 97, Column: 8 }
   - OrigDirection:   write
-  - OrigID:          for.inc127.store.5
+  - OrigID:          for.inc.i10.store.5
   - ArrayName:       c
   - String:          ' '
   - BundleName:      gmem2
   - String:          ' '
   - Function:        dec_MIMD
-    DebugLoc:        { File: HLS/core.c, Line: 7, Column: 0 }
+    DebugLoc:        { File: HLS/core.c, Line: 100, Column: 0 }
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -143,9 +185,9 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_51_3
+  - LoopName:        VITIS_LOOP_28_3
   - String:          '> at '
-  - LoopLoc:         'HLS/core.c:51:21'
+  - LoopLoc:         'HLS/core.c:28:21'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -153,9 +195,9 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_43_2
+  - LoopName:        VITIS_LOOP_20_2
   - String:          '> at '
-  - LoopLoc:         'HLS/core.c:43:21'
+  - LoopLoc:         'HLS/core.c:20:21'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -163,9 +205,9 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_35_1
+  - LoopName:        VITIS_LOOP_12_1
   - String:          '> at '
-  - LoopLoc:         'HLS/core.c:35:21'
+  - LoopLoc:         'HLS/core.c:12:21'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -173,9 +215,9 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_61_4
+  - LoopName:        VITIS_LOOP_41_1
   - String:          '> at '
-  - LoopLoc:         'HLS/core.c:61:20'
+  - LoopLoc:         'HLS/core.c:41:20'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -183,8 +225,8 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_115_5
+  - LoopName:        VITIS_LOOP_96_1
   - String:          '> at '
-  - LoopLoc:         'HLS/core.c:115:20'
+  - LoopLoc:         'HLS/core.c:96:19'
   - String:          ' '
 ...

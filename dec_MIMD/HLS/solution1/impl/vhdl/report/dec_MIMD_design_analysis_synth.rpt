@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Tue Apr 23 23:15:48 2024
-| Host         : MSI running 64-bit major release  (build 9200)
+| Date         : Thu May  2 14:22:27 2024
+| Host         : PC_di_Marco running 64-bit major release  (build 9200)
 | Command      : report_design_analysis -file ./report/dec_MIMD_design_analysis_synth.rpt
 | Design       : bd_0_wrapper
 | Device       : xc7z020
@@ -49,7 +49,7 @@ Table of Contents
 | Mark Debug                | 0                                                                                    |
 | Start Point Pin Primitive | FDRE/C                                                                               |
 | End Point Pin Primitive   | RAMB18E1/ENARDEN                                                                     |
-| Start Point Pin           | selec_assign_fu_92_reg[9]/C                                                          |
+| Start Point Pin           | selec_assign_2_fu_92_reg[9]/C                                                        |
 | End Point Pin             | mem_reg/ENARDEN                                                                      |
 +---------------------------+--------------------------------------------------------------------------------------+
 * Bounding box calculated as % of dimensions for the target device (308, 299)
