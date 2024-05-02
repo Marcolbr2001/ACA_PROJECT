@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Thu May  2 14:22:27 2024
-| Host         : PC_di_Marco running 64-bit major release  (build 9200)
+| Date         : Thu May  2 22:13:18 2024
+| Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -file ./report/dec_MIMD_timing_synth.rpt
 | Design       : bd_0_wrapper
 | Device       : 7z020-clg400
@@ -138,7 +138,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      3.026        0.000                      0                13670        0.193        0.000                      0                13670        4.020        0.000                       0                  8325  
+      2.768        0.000                      0                13826        0.193        0.000                      0                13826        4.020        0.000                       0                  8403  
 
 
 All user specified timing constraints are met.
@@ -161,7 +161,7 @@ ap_clk  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-ap_clk              3.026        0.000                      0                13670        0.193        0.000                      0                13670        4.020        0.000                       0                  8325  
+ap_clk              2.768        0.000                      0                13826        0.193        0.000                      0                13826        4.020        0.000                       0                  8403  
 
 
 ------------------------------------------------------------------------------------------------
@@ -192,7 +192,7 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  ap_clk
   To Clock:  ap_clk
 
-Setup :            0  Failing Endpoints,  Worst Slack        3.026ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        2.768ns,  Total Violation        0.000ns
 Hold  :            0  Failing Endpoints,  Worst Slack        0.193ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        4.020ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
@@ -200,16 +200,16 @@ PW    :            0  Failing Endpoints,  Worst Slack        4.020ns,  Total Vio
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             3.026ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/U0/selec_assign_2_fu_92_reg[9]/C
+Slack (MET) :             2.768ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/selec_assign_fu_98_reg[8]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/U0/gmem0_m_axi_U/load_unit/buff_rdata/fifo_mem_gen.U_ffo_mem/mem_reg/ENARDEN
-                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_depth_gt1_gen.empty_n_reg/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.447ns  (logic 1.433ns (22.228%)  route 5.014ns (77.772%))
-  Logic Levels:           6  (LUT2=1 LUT3=1 LUT4=1 LUT5=1 LUT6=2)
+  Data Path Delay:        6.979ns  (logic 1.433ns (20.533%)  route 5.546ns (79.467%))
+  Logic Levels:           6  (LUT4=1 LUT5=1 LUT6=4)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -224,39 +224,38 @@ Slack (MET) :             3.026ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=8324, unset)         0.973     0.973    bd_0_i/hls_inst/U0/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/U0/selec_assign_2_fu_92_reg[9]/C
+                         net (fo=8402, unset)         0.973     0.973    bd_0_i/hls_inst/U0/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/U0/selec_assign_fu_98_reg[8]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/U0/selec_assign_2_fu_92_reg[9]/Q
-                         net (fo=1, unplaced)         0.806     2.297    bd_0_i/hls_inst/U0/control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_20_2_fu_156_ap_start_reg_i_7_0[7]
-                         LUT5 (Prop_lut5_I0_O)        0.295     2.592 f  bd_0_i/hls_inst/U0/control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_20_2_fu_156_ap_start_reg_i_11/O
-                         net (fo=1, unplaced)         0.902     3.494    bd_0_i/hls_inst/U0/control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_20_2_fu_156_ap_start_reg_i_11_n_4
-                         LUT4 (Prop_lut4_I1_O)        0.124     3.618 f  bd_0_i/hls_inst/U0/control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_20_2_fu_156_ap_start_reg_i_4/O
-                         net (fo=3, unplaced)         0.982     4.600    bd_0_i/hls_inst/U0/control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_20_2_fu_156_ap_start_reg_i_4_n_4
-                         LUT6 (Prop_lut6_I0_O)        0.124     4.724 r  bd_0_i/hls_inst/U0/control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_12_1_fu_166_ap_start_reg_i_2/O
-                         net (fo=2, unplaced)         0.460     5.184    bd_0_i/hls_inst/U0/control_s_axi_U/gmem0_ARADDR2
-                         LUT3 (Prop_lut3_I2_O)        0.124     5.308 r  bd_0_i/hls_inst/U0/control_s_axi_U/fifo_depth_gt1_gen.mem_reg[5][0]_srl6_i_3__0/O
-                         net (fo=129, unplaced)       0.555     5.863    bd_0_i/hls_inst/U0/control_s_axi_U/gmem0_ARADDR1
-                         LUT6 (Prop_lut6_I3_O)        0.124     5.987 r  bd_0_i/hls_inst/U0/control_s_axi_U/mem_reg_i_4__1/O
-                         net (fo=20, unplaced)        0.509     6.496    bd_0_i/hls_inst/U0/control_s_axi_U/re_3
-                         LUT2 (Prop_lut2_I0_O)        0.124     6.620 r  bd_0_i/hls_inst/U0/control_s_axi_U/mem_reg_i_1__2/O
-                         net (fo=1, unplaced)         0.800     7.420    bd_0_i/hls_inst/U0/gmem0_m_axi_U/load_unit/buff_rdata/fifo_mem_gen.U_ffo_mem/mem_reg_2
-                         RAMB18E1                                     r  bd_0_i/hls_inst/U0/gmem0_m_axi_U/load_unit/buff_rdata/fifo_mem_gen.U_ffo_mem/mem_reg/ENARDEN
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/U0/selec_assign_fu_98_reg[8]/Q
+                         net (fo=1, unplaced)         0.806     2.297    bd_0_i/hls_inst/U0/control_s_axi_U/fifo_depth_gt1_gen.mem_reg[5][0]_srl6_i_10_0[8]
+                         LUT5 (Prop_lut5_I0_O)        0.295     2.592 f  bd_0_i/hls_inst/U0/control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_19_1_fu_190_ap_start_reg_i_11/O
+                         net (fo=1, unplaced)         1.111     3.703    bd_0_i/hls_inst/U0/control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_19_1_fu_190_ap_start_reg_i_11_n_4
+                         LUT6 (Prop_lut6_I1_O)        0.124     3.827 f  bd_0_i/hls_inst/U0/control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_19_1_fu_190_ap_start_reg_i_5/O
+                         net (fo=5, unplaced)         1.139     4.966    bd_0_i/hls_inst/U0/control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_19_1_fu_190_ap_start_reg_i_5_n_4
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.090 f  bd_0_i/hls_inst/U0/control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_104_1_fu_136_ap_start_reg_i_2/O
+                         net (fo=5, unplaced)         0.930     6.020    bd_0_i/hls_inst/U0/control_s_axi_U/gmem2_AWADDR5
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.144 r  bd_0_i/hls_inst/U0/control_s_axi_U/fifo_depth_gt1_gen.mem_reg[2][0]_srl3_i_3/O
+                         net (fo=100, unplaced)       0.519     6.663    bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_9_1_fu_206/gmem2_AWADDR1
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.787 r  bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_9_1_fu_206/fifo_depth_gt1_gen.mem_reg[2][0]_srl3_i_1/O
+                         net (fo=70, unplaced)        0.540     7.327    bd_0_i/hls_inst/U0/gmem2_m_axi_U/store_unit/fifo_wreq/we
+                         LUT6 (Prop_lut6_I0_O)        0.124     7.451 r  bd_0_i/hls_inst/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_depth_gt1_gen.empty_n_i_1/O
+                         net (fo=5, unplaced)         0.501     7.952    bd_0_i/hls_inst/U0/gmem2_m_axi_U/store_unit/fifo_wreq/empty_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_depth_gt1_gen.empty_n_reg/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=8324, unset)         0.924    10.924    bd_0_i/hls_inst/U0/gmem0_m_axi_U/load_unit/buff_rdata/fifo_mem_gen.U_ffo_mem/ap_clk
-                         RAMB18E1                                     r  bd_0_i/hls_inst/U0/gmem0_m_axi_U/load_unit/buff_rdata/fifo_mem_gen.U_ffo_mem/mem_reg/CLKARDCLK
+                         net (fo=8402, unset)         0.924    10.924    bd_0_i/hls_inst/U0/gmem2_m_axi_U/store_unit/fifo_wreq/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_depth_gt1_gen.empty_n_reg/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-                         RAMB18E1 (Setup_ramb18e1_CLKARDCLK_ENARDEN)
-                                                     -0.443    10.446    bd_0_i/hls_inst/U0/gmem0_m_axi_U/load_unit/buff_rdata/fifo_mem_gen.U_ffo_mem/mem_reg
+                         FDRE (Setup_fdre_C_CE)      -0.169    10.720    bd_0_i/hls_inst/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_depth_gt1_gen.empty_n_reg
   -------------------------------------------------------------------
-                         required time                         10.446    
-                         arrival time                          -7.420    
+                         required time                         10.720    
+                         arrival time                          -7.952    
   -------------------------------------------------------------------
-                         slack                                  3.026    
+                         slack                                  2.768    
 
 
 
@@ -265,9 +264,9 @@ Slack (MET) :             3.026ns  (required time - arrival time)
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack (MET) :             0.193ns  (arrival time - required time)
-  Source:                 bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_41_1_fu_182/ALU_operation_load_reg_441_pp0_iter33_reg_reg[0]_srl32/CLK
+  Source:                 bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_49_1_fu_146/ALU_operation_load_reg_441_pp0_iter33_reg_reg[0]_srl32/CLK
                             (rising edge-triggered cell SRLC32E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_41_1_fu_182/ALU_operation_load_reg_441_pp0_iter36_reg_reg[0]_srl3/D
+  Destination:            bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_49_1_fu_146/ALU_operation_load_reg_441_pp0_iter36_reg_reg[0]_srl3/D
                             (rising edge-triggered cell SRLC32E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
@@ -283,22 +282,22 @@ Slack (MET) :             0.193ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=8324, unset)         0.410     0.410    bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_41_1_fu_182/ap_clk
-                         SRLC32E                                      r  bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_41_1_fu_182/ALU_operation_load_reg_441_pp0_iter33_reg_reg[0]_srl32/CLK
+                         net (fo=8402, unset)         0.410     0.410    bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_49_1_fu_146/ap_clk
+                         SRLC32E                                      r  bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_49_1_fu_146/ALU_operation_load_reg_441_pp0_iter33_reg_reg[0]_srl32/CLK
   -------------------------------------------------------------------    -------------------
                          SRLC32E (Prop_srlc32e_CLK_Q31)
-                                                      0.332     0.742 r  bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_41_1_fu_182/ALU_operation_load_reg_441_pp0_iter33_reg_reg[0]_srl32/Q31
-                         net (fo=1, unplaced)         0.000     0.742    bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_41_1_fu_182/ALU_operation_load_reg_441_pp0_iter33_reg_reg[0]_srl32_n_5
-                         SRLC32E                                      r  bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_41_1_fu_182/ALU_operation_load_reg_441_pp0_iter36_reg_reg[0]_srl3/D
+                                                      0.332     0.742 r  bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_49_1_fu_146/ALU_operation_load_reg_441_pp0_iter33_reg_reg[0]_srl32/Q31
+                         net (fo=1, unplaced)         0.000     0.742    bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_49_1_fu_146/ALU_operation_load_reg_441_pp0_iter33_reg_reg[0]_srl32_n_5
+                         SRLC32E                                      r  bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_49_1_fu_146/ALU_operation_load_reg_441_pp0_iter36_reg_reg[0]_srl3/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=8324, unset)         0.432     0.432    bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_41_1_fu_182/ap_clk
-                         SRLC32E                                      r  bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_41_1_fu_182/ALU_operation_load_reg_441_pp0_iter36_reg_reg[0]_srl3/CLK
+                         net (fo=8402, unset)         0.432     0.432    bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_49_1_fu_146/ap_clk
+                         SRLC32E                                      r  bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_49_1_fu_146/ALU_operation_load_reg_441_pp0_iter36_reg_reg[0]_srl3/CLK
                          clock pessimism              0.000     0.432    
                          SRLC32E (Hold_srlc32e_CLK_D)
-                                                      0.117     0.549    bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_41_1_fu_182/ALU_operation_load_reg_441_pp0_iter36_reg_reg[0]_srl3
+                                                      0.117     0.549    bd_0_i/hls_inst/U0/grp_dec_MIMD_Pipeline_VITIS_LOOP_49_1_fu_146/ALU_operation_load_reg_441_pp0_iter36_reg_reg[0]_srl3
   -------------------------------------------------------------------
                          required time                         -0.549    
                          arrival time                           0.742    

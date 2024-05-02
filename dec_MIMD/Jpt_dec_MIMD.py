@@ -89,8 +89,9 @@ output = pynq.allocate(v_size,np.int32)
 
 
 #use the seed you need
-#seed = 12345
-seed = 54321
+seed = 12345
+#seed = 54321
+#seed = 65432
 
 np.random.seed(seed)
 
@@ -138,29 +139,8 @@ input_op.flush()
 
 selec = 2
 
-AXI_ALU.write(0x10, input_a.physical_address)   #0x10 address port a1 or a2
-AXI_ALU.write(0x1c, input_b.physical_address)   #0x1c address port a1 or b2
-AXI_ALU.write(0x34, input_op.physical_address)  #0x34 address port op1 or op2
-AXI_ALU.write(0x40, selec)  #0x40 address port selec /0 new data/1 new op/2 new data and op/
-AXI_ALU.write(0x28, output.physical_address) #0x28 address port a
-
 
 # In[15]:
-
-
-AXI_ALU.write(0x00,0x1) # Start IP computation: write(control sign, ap_start)
-#polling
-while (AXI_ALU.read(0x00) & 0x2) != 2:
-        pass
-
-
-# In[16]:
-
-
-output.sync_from_device()
-
-
-# In[17]:
 
 
 output_sw = np.zeros(v_size, dtype=np.int32)
@@ -172,16 +152,83 @@ match(selec):
         sw_result = golden(data_a_old, data_b_old, operation, output_sw)
     case 2:
         sw_result = golden(data_a, data_b, operation, output_sw)
+    case 10: 
+        sw_result = np.zeros(v_size, 'int32')
+
+
+# In[16]:
+
+
+AXI_ALU.write(0x10, input_a.physical_address)   #0x10 address port a1 or a2
+AXI_ALU.write(0x1c, input_b.physical_address)   #0x1c address port a1 or b2
+AXI_ALU.write(0x34, input_op.physical_address)  #0x34 address port op1 or op2
+AXI_ALU.write(0x40, selec)  #0x40 address port selec /0 new data/1 new op/2 new data and op/
+AXI_ALU.write(0x28, output.physical_address) #0x28 address port a
+
+
+# In[17]:
+
+
+AXI_ALU.write(0x00,0x1) # Start IP computation: write(control sign, ap_start)
+#polling
+while (AXI_ALU.read(0x00) & 0x2) != 2:
+        pass
 
 
 # In[18]:
 
 
+output.sync_from_device()
+
+
+# In[19]:
+
+
+selec = 3 #execution
+
+AXI_ALU.write(0x40, selec)  #0x40 address port selec /0 new data/1 new op/2 new data and op/
+
+
+# In[20]:
+
+
+AXI_ALU.write(0x00,0x1) # Start IP computation: write(control sign, ap_start)
+#polling
+while (AXI_ALU.read(0x00) & 0x2) != 2:
+        pass
+
+
+# In[21]:
+
+
+output.sync_from_device()
+
+
+# In[22]:
+
+
+selec = 4 #write back
+
+AXI_ALU.write(0x40, selec)  #0x40 address port selec /0 new data/1 new op/2 new data and op/
+
+
+# In[23]:
+
+
+AXI_ALU.write(0x00,0x1) # Start IP computation: write(control sign, ap_start)
+#polling
+while (AXI_ALU.read(0x00) & 0x2) != 2:
+        pass
+
+
+# In[24]:
+
+
+output.sync_from_device()
+
+
+# In[25]:
+
+
 eye(sw_result, output)
-
-
-# In[ ]:
-
-
-
 

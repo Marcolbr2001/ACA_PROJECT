@@ -3,8 +3,8 @@
     with args -log bd_0_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_wrapper.tcl
 
 
-ECHO is off.
-ECHO is off.
+ECHO disattivato.
+ECHO disattivato.
 
 ****** Vivado v2023.2 (64-bit)
   **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
@@ -14,11 +14,12 @@ ECHO is off.
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source bd_0_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 484.328 ; gain = 177.668
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/impl/ip'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/ProgramData/Xilinx/Vivado/2023.2/data/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
-Current IP cache path is c:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/impl/vhdl/project.cache/ip 
+Current IP cache path is c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/impl/vhdl/project.cache/ip 
 Command: synth_design -top bd_0_wrapper -part xc7z020clg400-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
@@ -26,57 +27,57 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 23740
+INFO: [Synth 8-7075] Helper process launched with PID 24412
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1356.285 ; gain = 439.113
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1356.258 ; gain = 437.605
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'bd_0_wrapper' [c:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/impl/vhdl/project.gen/sources_1/bd/bd_0/hdl/bd_0_wrapper.vhd:200]
-INFO: [Synth 8-3491] module 'bd_0' declared at 'c:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/impl/vhdl/project.gen/sources_1/bd/bd_0/synth/bd_0.vhd:15' bound to instance 'bd_0_i' of component 'bd_0' [c:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/impl/vhdl/project.gen/sources_1/bd/bd_0/hdl/bd_0_wrapper.vhd:386]
-INFO: [Synth 8-638] synthesizing module 'bd_0' [c:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/impl/vhdl/project.gen/sources_1/bd/bd_0/synth/bd_0.vhd:204]
-INFO: [Synth 8-3491] module 'bd_0_hls_inst_0' declared at 'C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/impl/vhdl/project.runs/synth_1/.Xil/Vivado-29564-PC_di_Marco/realtime/bd_0_hls_inst_0_stub.vhdl:6' bound to instance 'hls_inst' of component 'bd_0_hls_inst_0' [c:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/impl/vhdl/project.gen/sources_1/bd/bd_0/synth/bd_0.vhd:940]
-INFO: [Synth 8-638] synthesizing module 'bd_0_hls_inst_0' [C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/impl/vhdl/project.runs/synth_1/.Xil/Vivado-29564-PC_di_Marco/realtime/bd_0_hls_inst_0_stub.vhdl:192]
-INFO: [Synth 8-256] done synthesizing module 'bd_0' (0#1) [c:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/impl/vhdl/project.gen/sources_1/bd/bd_0/synth/bd_0.vhd:204]
-INFO: [Synth 8-256] done synthesizing module 'bd_0_wrapper' (0#1) [c:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/impl/vhdl/project.gen/sources_1/bd/bd_0/hdl/bd_0_wrapper.vhd:200]
+INFO: [Synth 8-638] synthesizing module 'bd_0_wrapper' [c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/impl/vhdl/project.gen/sources_1/bd/bd_0/hdl/bd_0_wrapper.vhd:200]
+INFO: [Synth 8-3491] module 'bd_0' declared at 'c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/impl/vhdl/project.gen/sources_1/bd/bd_0/synth/bd_0.vhd:15' bound to instance 'bd_0_i' of component 'bd_0' [c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/impl/vhdl/project.gen/sources_1/bd/bd_0/hdl/bd_0_wrapper.vhd:386]
+INFO: [Synth 8-638] synthesizing module 'bd_0' [c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/impl/vhdl/project.gen/sources_1/bd/bd_0/synth/bd_0.vhd:204]
+INFO: [Synth 8-3491] module 'bd_0_hls_inst_0' declared at 'C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/impl/vhdl/project.runs/synth_1/.Xil/Vivado-23568-MSI/realtime/bd_0_hls_inst_0_stub.vhdl:6' bound to instance 'hls_inst' of component 'bd_0_hls_inst_0' [c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/impl/vhdl/project.gen/sources_1/bd/bd_0/synth/bd_0.vhd:940]
+INFO: [Synth 8-638] synthesizing module 'bd_0_hls_inst_0' [C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/impl/vhdl/project.runs/synth_1/.Xil/Vivado-23568-MSI/realtime/bd_0_hls_inst_0_stub.vhdl:192]
+INFO: [Synth 8-256] done synthesizing module 'bd_0' (0#1) [c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/impl/vhdl/project.gen/sources_1/bd/bd_0/synth/bd_0.vhd:204]
+INFO: [Synth 8-256] done synthesizing module 'bd_0_wrapper' (0#1) [c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/impl/vhdl/project.gen/sources_1/bd/bd_0/hdl/bd_0_wrapper.vhd:200]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1473.762 ; gain = 556.590
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1474.160 ; gain = 555.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1473.762 ; gain = 556.590
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1474.160 ; gain = 555.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1473.762 ; gain = 556.590
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1474.160 ; gain = 555.508
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1473.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1474.160 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/impl/vhdl/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0/bd_0_hls_inst_0_in_context.xdc] for cell 'bd_0_i/hls_inst'
-Finished Parsing XDC File [c:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/impl/vhdl/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0/bd_0_hls_inst_0_in_context.xdc] for cell 'bd_0_i/hls_inst'
-Parsing XDC File [C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/impl/vhdl/dec_MIMD.xdc]
-Finished Parsing XDC File [C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/impl/vhdl/dec_MIMD.xdc]
-Parsing XDC File [C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/impl/vhdl/project.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/impl/vhdl/project.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/impl/vhdl/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0/bd_0_hls_inst_0_in_context.xdc] for cell 'bd_0_i/hls_inst'
+Finished Parsing XDC File [c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/impl/vhdl/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0/bd_0_hls_inst_0_in_context.xdc] for cell 'bd_0_i/hls_inst'
+Parsing XDC File [C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/impl/vhdl/dec_MIMD.xdc]
+Finished Parsing XDC File [C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/impl/vhdl/dec_MIMD.xdc]
+Parsing XDC File [C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/impl/vhdl/project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/impl/vhdl/project.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1473.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1482.840 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-The system cannot find the path specified.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1473.762 ; gain = 0.000
+Impossibile trovare il percorso specificato.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1482.840 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1473.762 ; gain = 556.590
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 1482.840 ; gain = 564.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1473.762 ; gain = 556.590
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 1482.840 ; gain = 564.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -84,10 +85,10 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property KEEP_HIERARCHY = SOFT for bd_0_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for bd_0_i/hls_inst. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1473.762 ; gain = 556.590
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 1482.840 ; gain = 564.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1473.762 ; gain = 556.590
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 1482.840 ; gain = 564.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -110,25 +111,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 1473.762 ; gain = 556.590
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 1482.840 ; gain = 564.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 1473.762 ; gain = 556.590
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:21 . Memory (MB): peak = 1482.840 ; gain = 564.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 1473.762 ; gain = 556.590
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:21 . Memory (MB): peak = 1482.840 ; gain = 564.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 1473.762 ; gain = 556.590
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:21 . Memory (MB): peak = 1482.840 ; gain = 564.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -146,37 +147,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 1473.762 ; gain = 556.590
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 1482.840 ; gain = 564.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 1473.762 ; gain = 556.590
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 1482.840 ; gain = 564.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 1473.762 ; gain = 556.590
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 1482.840 ; gain = 564.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 1473.762 ; gain = 556.590
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 1482.840 ; gain = 564.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 1473.762 ; gain = 556.590
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 1482.840 ; gain = 564.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 1473.762 ; gain = 556.590
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 1482.840 ; gain = 564.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -196,25 +197,25 @@ Report Cell Usage:
 |1     |bd_0_hls_inst_0_bbox |     1|
 +------+---------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 1473.762 ; gain = 556.590
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 1482.840 ; gain = 564.188
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:18 . Memory (MB): peak = 1473.762 ; gain = 556.590
-Synthesis Optimization Complete : Time (s): cpu = 00:00:03 ; elapsed = 00:00:20 . Memory (MB): peak = 1473.762 ; gain = 556.590
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 1482.840 ; gain = 555.508
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 1482.840 ; gain = 564.188
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1473.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1482.840 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1474.020 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1493.039 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-The system cannot find the path specified.
+Impossibile trovare il percorso specificato.
 Synth Design complete | Checksum: 3308e51f
 INFO: [Common 17-83] Releasing license: Synthesis
 22 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:03 ; elapsed = 00:00:23 . Memory (MB): peak = 1474.020 ; gain = 979.750
-INFO: [Common 17-1381] The checkpoint 'C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/impl/vhdl/project.runs/synth_1/bd_0_wrapper.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:30 . Memory (MB): peak = 1493.039 ; gain = 999.766
+INFO: [Common 17-1381] The checkpoint 'C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/impl/vhdl/project.runs/synth_1/bd_0_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file bd_0_wrapper_utilization_synth.rpt -pb bd_0_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu May  2 14:22:12 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu May  2 22:13:04 2024...

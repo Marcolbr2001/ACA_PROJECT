@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Apr 24 23:45:27 2024
+# Process ID: 11968
+# Current directory: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14676 C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\Vivado\dec_MIMD.xpr
+# Log file: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/Vivado/vivado.log
+# Journal file: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/Vivado\vivado.jou
+# Running On: MSI, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 10, Host memory: 16870 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/Vivado/dec_MIMD.xpr
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_run impl_1
+write_project_tcl -use_bd_files {C:/Users/lotto/Desktop/dec_MIMD/Vivado/ip_repo/dec_MIMD.tcl}
+write_project_tcl -use_bd_files {C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/Bitstream_files/dec_MIMD.tcl}

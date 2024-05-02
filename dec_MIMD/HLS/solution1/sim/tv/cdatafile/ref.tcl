@@ -9,4 +9,4 @@ set depth_list {
   {op 1}
   {selec 1}
 }
-set trans_num 3
+set trans_num 10

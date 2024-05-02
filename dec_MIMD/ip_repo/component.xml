@@ -2445,7 +2445,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>58b1361c</spirit:value>
+            <spirit:value>eeb71a47</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2461,7 +2461,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f418f223</spirit:value>
+            <spirit:value>5eafa5de</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2477,7 +2477,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>e4763962</spirit:value>
+            <spirit:value>f127d2a9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2493,7 +2493,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9ddf6f0f</spirit:value>
+            <spirit:value>620f8add</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -6443,23 +6443,27 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_12_1.v</spirit:name>
+        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_9_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_20_2.v</spirit:name>
+        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_19_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_28_3.v</spirit:name>
+        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_30_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_41_1.v</spirit:name>
+        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_37_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_96_1.v</spirit:name>
+        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_49_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_104_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -6517,27 +6521,32 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_12_1.v</spirit:name>
+        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_9_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_20_2.v</spirit:name>
+        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_19_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_28_3.v</spirit:name>
+        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_30_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_41_1.v</spirit:name>
+        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_37_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_96_1.v</spirit:name>
+        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_49_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_104_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -6602,23 +6611,27 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_12_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_9_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_20_2.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_19_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_28_3.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_30_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_41_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_37_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_96_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_49_1.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_104_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -6652,7 +6665,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/dec_MIMD.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_9efcd341</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_b8b75b05</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -6673,27 +6686,32 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_12_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_9_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_20_2.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_19_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_28_3.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_30_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_41_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_37_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_96_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_49_1.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/dec_MIMD_dec_MIMD_Pipeline_VITIS_LOOP_104_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -7269,7 +7287,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="53">153</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="53">59</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
@@ -7286,8 +7304,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>dec_MIMD</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2113540039</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-05-02T12:19:52Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2113540569</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-05-02T20:10:04Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -7298,10 +7316,10 @@
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="13efa976"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="f53e1c9f"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="f6d5f37e"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="c7670590"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f07fcc05"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="6cb4889d"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="6889942a"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="c10be89e"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="dd4bd8f3"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

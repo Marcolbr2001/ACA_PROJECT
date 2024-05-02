@@ -25,6 +25,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ax
 # IP: bd/design_1/ip/design_1_axi_mem_intercon_3_0/design_1_axi_mem_intercon_3_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_mem_intercon_3_0 || ORIG_REF_NAME==design_1_axi_mem_intercon_3_0} -quiet] -quiet
 
+# IP: bd/design_1/ip/design_1_dec_MIMD_0_4/design_1_dec_MIMD_0_4.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_dec_MIMD_0_4 || ORIG_REF_NAME==design_1_dec_MIMD_0_4} -quiet] -quiet
+
 # IP: bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_0 || ORIG_REF_NAME==design_1_auto_pc_0} -quiet] -quiet
 
@@ -52,7 +55,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_au
 # IP: bd/design_1/ip/design_1_auto_us_3/design_1_auto_us_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_us_3 || ORIG_REF_NAME==design_1_auto_us_3} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_dec_MIMD_0_3/design_1_dec_MIMD_0_3.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_dec_MIMD_0_3 || ORIG_REF_NAME==design_1_dec_MIMD_0_3} -quiet] -quiet
-
-# XDC: c:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/Vivado/dec_MIMD.gen/sources_1/bd/design_1/design_1_ooc.xdc
+# XDC: c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/Vivado/dec_MIMD.gen/sources_1/bd/design_1/design_1_ooc.xdc

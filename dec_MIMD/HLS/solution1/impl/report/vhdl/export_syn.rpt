@@ -2,7 +2,7 @@
 == Vivado RTL Synthesis Results
 ================================================================
 + General Information:
-    * Date:            Thu May 02 14:22:33 +0200 2024
+    * Date:            Thu May 02 22:13:25 +0200 2024
     * Version:         2023.2 (Build 4023990 on Oct 11 2023)
     * Project:         HLS
     * Solution:        solution1 (Vivado IP Flow Target)
@@ -30,12 +30,12 @@
 ================================================================
 == RTL Synthesis Resource Summary
 ================================================================
-LUT:              5582
-FF:               7365
+LUT:              5707
+FF:               7442
 DSP:              3
 BRAM:             8
 URAM:             0
-SRL:              941
+SRL:              942
 
 
 ================================================================
@@ -46,42 +46,44 @@ SRL:              941
 | Timing         | Period (ns) |
 +----------------+-------------+
 | Target         | 10.000      |
-| Post-Synthesis | 6.974       |
+| Post-Synthesis | 7.232       |
 +----------------+-------------+
 
 
 ================================================================
 == RTL Synthesis Resources
 ================================================================
-+----------------------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+--------+
-| Name                                               | LUT  | FF   | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
-+----------------------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+--------+
-| U0                                                 | 5582 | 7365 | 3   | 8    |      |     |        |      |         |          |        |
-|   (U0)                                             | 3    | 325  |     |      |      |     |        |      |         |          |        |
-|   ALU_operation_U                                  | 21   |      |     | 1    |      |     |        |      |         |          |        |
-|   control_s_axi_U                                  | 360  | 344  |     |      |      |     |        |      |         |          |        |
-|   data_a_U                                         | 71   |      |     | 1    |      |     |        |      |         |          |        |
-|   data_b_U                                         | 97   |      |     | 1    |      |     |        |      |         |          |        |
-|   data_result_U                                    |      |      |     | 1    |      |     |        |      |         |          |        |
-|   gmem0_m_axi_U                                    | 494  | 730  |     | 1    |      |     |        |      |         |          |        |
-|   gmem1_m_axi_U                                    | 496  | 730  |     | 1    |      |     |        |      |         |          |        |
-|   gmem2_m_axi_U                                    | 716  | 966  |     | 1    |      |     |        |      |         |          |        |
-|   gmem3_m_axi_U                                    | 495  | 730  |     | 1    |      |     |        |      |         |          |        |
-|   grp_dec_MIMD_Pipeline_VITIS_LOOP_12_1_fu_166     | 127  | 213  |     |      |      |     |        |      |         |          |        |
-|     (grp_dec_MIMD_Pipeline_VITIS_LOOP_12_1_fu_166) | 103  | 211  |     |      |      |     |        |      |         |          |        |
-|   grp_dec_MIMD_Pipeline_VITIS_LOOP_20_2_fu_156     | 63   | 119  |     |      |      |     |        |      |         |          |        |
-|     (grp_dec_MIMD_Pipeline_VITIS_LOOP_20_2_fu_156) | 41   | 117  |     |      |      |     |        |      |         |          |        |
-|   grp_dec_MIMD_Pipeline_VITIS_LOOP_28_3_fu_134     | 119  | 307  |     |      |      |     |        |      |         |          |        |
-|     (grp_dec_MIMD_Pipeline_VITIS_LOOP_28_3_fu_134) | 84   | 305  |     |      |      |     |        |      |         |          |        |
-|   grp_dec_MIMD_Pipeline_VITIS_LOOP_41_1_fu_182     | 2490 | 2823 | 3   |      |      |     |        |      |         |          |        |
-|     (grp_dec_MIMD_Pipeline_VITIS_LOOP_41_1_fu_182) | 781  | 641  | 3   |      |      |     |        |      |         |          |        |
-|     mul_32s_32s_32_2_1_U19                         |      | 32   |     |      |      |     |        |      |         |          |        |
-|     sdiv_32ns_32ns_32_36_1_U20                     | 1695 | 2148 |     |      |      |     |        |      |         |          |        |
-|       (sdiv_32ns_32ns_32_36_1_U20)                 |      | 96   |     |      |      |     |        |      |         |          |        |
-|   grp_dec_MIMD_Pipeline_VITIS_LOOP_96_1_fu_193     | 30   | 78   |     |      |      |     |        |      |         |          |        |
-|     (grp_dec_MIMD_Pipeline_VITIS_LOOP_96_1_fu_193) | 5    | 76   |     |      |      |     |        |      |         |          |        |
-|     flow_control_loop_pipe_sequential_init_U       | 25   | 2    |     |      |      |     |        |      |         |          |        |
-+----------------------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+--------+
++-----------------------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+--------+
+| Name                                                | LUT  | FF   | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
++-----------------------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+--------+
+| U0                                                  | 5707 | 7442 | 3   | 8    |      |     |        |      |         |          |        |
+|   (U0)                                              | 3    | 324  |     |      |      |     |        |      |         |          |        |
+|   ALU_operation_U                                   | 18   |      |     | 1    |      |     |        |      |         |          |        |
+|   control_s_axi_U                                   | 374  | 344  |     |      |      |     |        |      |         |          |        |
+|   data_a_U                                          | 73   |      |     | 1    |      |     |        |      |         |          |        |
+|   data_b_U                                          | 101  |      |     | 1    |      |     |        |      |         |          |        |
+|   data_result_U                                     | 33   |      |     | 1    |      |     |        |      |         |          |        |
+|   gmem0_m_axi_U                                     | 493  | 730  |     | 1    |      |     |        |      |         |          |        |
+|   gmem1_m_axi_U                                     | 496  | 730  |     | 1    |      |     |        |      |         |          |        |
+|   gmem2_m_axi_U                                     | 724  | 966  |     | 1    |      |     |        |      |         |          |        |
+|   gmem3_m_axi_U                                     | 495  | 730  |     | 1    |      |     |        |      |         |          |        |
+|   grp_dec_MIMD_Pipeline_VITIS_LOOP_104_1_fu_136     | 32   | 78   |     |      |      |     |        |      |         |          |        |
+|     (grp_dec_MIMD_Pipeline_VITIS_LOOP_104_1_fu_136) | 8    | 76   |     |      |      |     |        |      |         |          |        |
+|   grp_dec_MIMD_Pipeline_VITIS_LOOP_19_1_fu_190      | 158  | 213  |     |      |      |     |        |      |         |          |        |
+|     (grp_dec_MIMD_Pipeline_VITIS_LOOP_19_1_fu_190)  | 134  | 211  |     |      |      |     |        |      |         |          |        |
+|   grp_dec_MIMD_Pipeline_VITIS_LOOP_30_1_fu_180      | 95   | 119  |     |      |      |     |        |      |         |          |        |
+|     (grp_dec_MIMD_Pipeline_VITIS_LOOP_30_1_fu_180)  | 72   | 117  |     |      |      |     |        |      |         |          |        |
+|   grp_dec_MIMD_Pipeline_VITIS_LOOP_37_1_fu_158      | 51   | 307  |     |      |      |     |        |      |         |          |        |
+|     (grp_dec_MIMD_Pipeline_VITIS_LOOP_37_1_fu_158)  | 16   | 305  |     |      |      |     |        |      |         |          |        |
+|   grp_dec_MIMD_Pipeline_VITIS_LOOP_49_1_fu_146      | 2505 | 2823 | 3   |      |      |     |        |      |         |          |        |
+|     (grp_dec_MIMD_Pipeline_VITIS_LOOP_49_1_fu_146)  | 794  | 641  | 3   |      |      |     |        |      |         |          |        |
+|     mul_32s_32s_32_2_1_U4                           |      | 32   |     |      |      |     |        |      |         |          |        |
+|     sdiv_32ns_32ns_32_36_1_U5                       | 1695 | 2148 |     |      |      |     |        |      |         |          |        |
+|       (sdiv_32ns_32ns_32_36_1_U5)                   |      | 96   |     |      |      |     |        |      |         |          |        |
+|   grp_dec_MIMD_Pipeline_VITIS_LOOP_9_1_fu_206       | 56   | 78   |     |      |      |     |        |      |         |          |        |
+|     (grp_dec_MIMD_Pipeline_VITIS_LOOP_9_1_fu_206)   | 37   | 76   |     |      |      |     |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U        | 19   | 2    |     |      |      |     |        |      |         |          |        |
++-----------------------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+--------+
 
 
 ================================================================
@@ -90,8 +92,8 @@ SRL:              941
 +-----------------------------------------------------------+-----------+--------+--------+
 | Criteria                                                  | Guideline | Actual | Status |
 +-----------------------------------------------------------+-----------+--------+--------+
-| LUT                                                       | 70%       | 10.49% | OK     |
-| FD                                                        | 50%       | 6.92%  | OK     |
+| LUT                                                       | 70%       | 10.73% | OK     |
+| FD                                                        | 50%       | 6.99%  | OK     |
 | LUTRAM+SRL                                                | 25%       | 5.41%  | OK     |
 | MUXF7                                                     | 15%       | 0.00%  | OK     |
 | DSP                                                       | 80%       | 1.36%  | OK     |
@@ -100,8 +102,8 @@ SRL:              941
 | BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
 | DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
 | MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
-| Control Sets                                              | 998       | 136    | OK     |
-| Average Fanout for modules > 100k cells                   | 4         | 2.22   | OK     |
+| Control Sets                                              | 998       | 139    | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 2.23   | OK     |
 | Max Average Fanout for modules > 100k cells               | 4         | 0      | OK     |
 | Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
 +-----------------------------------------------------------+-----------+--------+--------+
@@ -120,89 +122,81 @@ SRL:              941
 == RTL Synthesis Timing Paths
 ================================================================
 * Timing was met
-+-------+-------+-------------------------------+----------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
-| Path  | SLACK | STARTPOINT PIN                | ENDPOINT PIN                                                               | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
-|       |       |                               |                                                                            |              |            |                |          DELAY |        DELAY |
-+-------+-------+-------------------------------+----------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
-| Path1 | 3.026 | selec_assign_2_fu_92_reg[9]/C | gmem0_m_axi_U/load_unit/buff_rdata/fifo_mem_gen.U_ffo_mem/mem_reg/ENARDEN  |            6 |        129 |          6.447 |          1.433 |        5.014 |
-| Path2 | 3.026 | selec_assign_2_fu_92_reg[9]/C | gmem1_m_axi_U/load_unit/buff_rdata/fifo_mem_gen.U_ffo_mem/mem_reg/ENARDEN  |            6 |        129 |          6.447 |          1.433 |        5.014 |
-| Path3 | 3.043 | selec_assign_2_fu_92_reg[9]/C | gmem3_m_axi_U/load_unit/buff_rdata/fifo_mem_gen.U_ffo_mem/mem_reg/ENARDEN  |            6 |         65 |          6.430 |          1.433 |        4.997 |
-| Path4 | 3.136 | data_b_U/ram_reg/CLKARDCLK    | grp_dec_MIMD_Pipeline_VITIS_LOOP_41_1_fu_182/sub_ln76_reg_520_reg[29]__0/D |           10 |          7 |          6.889 |          5.129 |        1.760 |
-| Path5 | 3.142 | data_b_U/ram_reg/CLKARDCLK    | grp_dec_MIMD_Pipeline_VITIS_LOOP_41_1_fu_182/sub_ln76_reg_520_reg[31]__0/D |           10 |          7 |          6.883 |          5.123 |        1.760 |
-+-------+-------+-------------------------------+----------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
++-------+-------+-----------------------------+-------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN              | ENDPOINT PIN                                                            | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                             |                                                                         |              |            |                |          DELAY |        DELAY |
++-------+-------+-----------------------------+-------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 2.768 | selec_assign_fu_98_reg[8]/C | gmem2_m_axi_U/store_unit/fifo_wreq/fifo_depth_gt1_gen.empty_n_reg/CE    |            6 |        100 |          6.979 |          1.433 |        5.546 |
+| Path2 | 2.768 | selec_assign_fu_98_reg[8]/C | gmem2_m_axi_U/store_unit/fifo_wreq/fifo_depth_gt1_gen.full_n_reg/CE     |            6 |        100 |          6.979 |          1.433 |        5.546 |
+| Path3 | 2.768 | selec_assign_fu_98_reg[8]/C | gmem2_m_axi_U/store_unit/fifo_wreq/fifo_depth_gt1_gen.mOutPtr_reg[0]/CE |            6 |        100 |          6.979 |          1.433 |        5.546 |
+| Path4 | 2.768 | selec_assign_fu_98_reg[8]/C | gmem2_m_axi_U/store_unit/fifo_wreq/fifo_depth_gt1_gen.mOutPtr_reg[1]/CE |            6 |        100 |          6.979 |          1.433 |        5.546 |
+| Path5 | 2.768 | selec_assign_fu_98_reg[8]/C | gmem2_m_axi_U/store_unit/fifo_wreq/fifo_depth_gt1_gen.mOutPtr_reg[2]/CE |            6 |        100 |          6.979 |          1.433 |        5.546 |
++-------+-------+-----------------------------+-------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
 
-    +--------------------------------------------------------------------------------+----------------------+
-    | Path1 Cells                                                                    | Primitive Type       |
-    +--------------------------------------------------------------------------------+----------------------+
-    | selec_assign_2_fu_92_reg[9]                                                    | FLOP_LATCH.flop.FDRE |
-    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_20_2_fu_156_ap_start_reg_i_11 | LUT.others.LUT5      |
-    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_20_2_fu_156_ap_start_reg_i_4  | LUT.others.LUT4      |
-    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_12_1_fu_166_ap_start_reg_i_2  | LUT.others.LUT6      |
-    | control_s_axi_U/fifo_depth_gt1_gen.mem_reg[5][0]_srl6_i_3__0                   | LUT.others.LUT3      |
-    | control_s_axi_U/mem_reg_i_4__1                                                 | LUT.others.LUT6      |
-    | control_s_axi_U/mem_reg_i_1__2                                                 | LUT.others.LUT2      |
-    | gmem0_m_axi_U/load_unit/buff_rdata/fifo_mem_gen.U_ffo_mem/mem_reg              | BMEM.bram.RAMB18E1   |
-    +--------------------------------------------------------------------------------+----------------------+
+    +---------------------------------------------------------------------------------------+----------------------+
+    | Path1 Cells                                                                           | Primitive Type       |
+    +---------------------------------------------------------------------------------------+----------------------+
+    | selec_assign_fu_98_reg[8]                                                             | FLOP_LATCH.flop.FDRE |
+    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_19_1_fu_190_ap_start_reg_i_11        | LUT.others.LUT5      |
+    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_19_1_fu_190_ap_start_reg_i_5         | LUT.others.LUT6      |
+    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_104_1_fu_136_ap_start_reg_i_2        | LUT.others.LUT6      |
+    | control_s_axi_U/fifo_depth_gt1_gen.mem_reg[2][0]_srl3_i_3                             | LUT.others.LUT4      |
+    | grp_dec_MIMD_Pipeline_VITIS_LOOP_9_1_fu_206/fifo_depth_gt1_gen.mem_reg[2][0]_srl3_i_1 | LUT.others.LUT6      |
+    | gmem2_m_axi_U/store_unit/fifo_wreq/fifo_depth_gt1_gen.empty_n_i_1                     | LUT.others.LUT6      |
+    | gmem2_m_axi_U/store_unit/fifo_wreq/fifo_depth_gt1_gen.empty_n_reg                     | FLOP_LATCH.flop.FDRE |
+    +---------------------------------------------------------------------------------------+----------------------+
 
-    +--------------------------------------------------------------------------------+----------------------+
-    | Path2 Cells                                                                    | Primitive Type       |
-    +--------------------------------------------------------------------------------+----------------------+
-    | selec_assign_2_fu_92_reg[9]                                                    | FLOP_LATCH.flop.FDRE |
-    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_20_2_fu_156_ap_start_reg_i_11 | LUT.others.LUT5      |
-    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_20_2_fu_156_ap_start_reg_i_4  | LUT.others.LUT4      |
-    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_12_1_fu_166_ap_start_reg_i_2  | LUT.others.LUT6      |
-    | control_s_axi_U/fifo_depth_gt1_gen.mem_reg[5][0]_srl6_i_3__0                   | LUT.others.LUT3      |
-    | control_s_axi_U/mem_reg_i_4__0                                                 | LUT.others.LUT6      |
-    | control_s_axi_U/mem_reg_i_1__1                                                 | LUT.others.LUT2      |
-    | gmem1_m_axi_U/load_unit/buff_rdata/fifo_mem_gen.U_ffo_mem/mem_reg              | BMEM.bram.RAMB18E1   |
-    +--------------------------------------------------------------------------------+----------------------+
+    +---------------------------------------------------------------------------------------+----------------------+
+    | Path2 Cells                                                                           | Primitive Type       |
+    +---------------------------------------------------------------------------------------+----------------------+
+    | selec_assign_fu_98_reg[8]                                                             | FLOP_LATCH.flop.FDRE |
+    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_19_1_fu_190_ap_start_reg_i_11        | LUT.others.LUT5      |
+    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_19_1_fu_190_ap_start_reg_i_5         | LUT.others.LUT6      |
+    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_104_1_fu_136_ap_start_reg_i_2        | LUT.others.LUT6      |
+    | control_s_axi_U/fifo_depth_gt1_gen.mem_reg[2][0]_srl3_i_3                             | LUT.others.LUT4      |
+    | grp_dec_MIMD_Pipeline_VITIS_LOOP_9_1_fu_206/fifo_depth_gt1_gen.mem_reg[2][0]_srl3_i_1 | LUT.others.LUT6      |
+    | gmem2_m_axi_U/store_unit/fifo_wreq/fifo_depth_gt1_gen.empty_n_i_1                     | LUT.others.LUT6      |
+    | gmem2_m_axi_U/store_unit/fifo_wreq/fifo_depth_gt1_gen.full_n_reg                      | FLOP_LATCH.flop.FDSE |
+    +---------------------------------------------------------------------------------------+----------------------+
 
-    +--------------------------------------------------------------------------------+----------------------+
-    | Path3 Cells                                                                    | Primitive Type       |
-    +--------------------------------------------------------------------------------+----------------------+
-    | selec_assign_2_fu_92_reg[9]                                                    | FLOP_LATCH.flop.FDRE |
-    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_20_2_fu_156_ap_start_reg_i_11 | LUT.others.LUT5      |
-    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_20_2_fu_156_ap_start_reg_i_4  | LUT.others.LUT4      |
-    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_20_2_fu_156_ap_start_reg_i_2  | LUT.others.LUT6      |
-    | control_s_axi_U/fifo_depth_gt1_gen.mem_reg[5][0]_srl6_i_3                      | LUT.others.LUT6      |
-    | control_s_axi_U/mem_reg_i_4                                                    | LUT.others.LUT6      |
-    | control_s_axi_U/mem_reg_i_1__0                                                 | LUT.others.LUT2      |
-    | gmem3_m_axi_U/load_unit/buff_rdata/fifo_mem_gen.U_ffo_mem/mem_reg              | BMEM.bram.RAMB18E1   |
-    +--------------------------------------------------------------------------------+----------------------+
+    +---------------------------------------------------------------------------------------+----------------------+
+    | Path3 Cells                                                                           | Primitive Type       |
+    +---------------------------------------------------------------------------------------+----------------------+
+    | selec_assign_fu_98_reg[8]                                                             | FLOP_LATCH.flop.FDRE |
+    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_19_1_fu_190_ap_start_reg_i_11        | LUT.others.LUT5      |
+    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_19_1_fu_190_ap_start_reg_i_5         | LUT.others.LUT6      |
+    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_104_1_fu_136_ap_start_reg_i_2        | LUT.others.LUT6      |
+    | control_s_axi_U/fifo_depth_gt1_gen.mem_reg[2][0]_srl3_i_3                             | LUT.others.LUT4      |
+    | grp_dec_MIMD_Pipeline_VITIS_LOOP_9_1_fu_206/fifo_depth_gt1_gen.mem_reg[2][0]_srl3_i_1 | LUT.others.LUT6      |
+    | gmem2_m_axi_U/store_unit/fifo_wreq/fifo_depth_gt1_gen.empty_n_i_1                     | LUT.others.LUT6      |
+    | gmem2_m_axi_U/store_unit/fifo_wreq/fifo_depth_gt1_gen.mOutPtr_reg[0]                  | FLOP_LATCH.flop.FDRE |
+    +---------------------------------------------------------------------------------------+----------------------+
 
-    +--------------------------------------------------------------------------+----------------------+
-    | Path4 Cells                                                              | Primitive Type       |
-    +--------------------------------------------------------------------------+----------------------+
-    | data_b_U/ram_reg                                                         | BMEM.bram.RAMB18E1   |
-    | data_b_U/sub_ln76_reg_520[7]__0_i_7                                      | LUT.others.LUT1      |
-    | data_b_U/sub_ln76_reg_520_reg[7]__0_i_6                                  | CARRY.others.CARRY4  |
-    | data_b_U/sub_ln76_reg_520_reg[11]__0_i_6                                 | CARRY.others.CARRY4  |
-    | data_b_U/sub_ln76_reg_520_reg[15]__0_i_6                                 | CARRY.others.CARRY4  |
-    | data_b_U/sub_ln76_reg_520_reg[19]__0_i_6                                 | CARRY.others.CARRY4  |
-    | data_b_U/sub_ln76_reg_520_reg[23]__0_i_6                                 | CARRY.others.CARRY4  |
-    | data_b_U/sub_ln76_reg_520_reg[27]__0_i_6                                 | CARRY.others.CARRY4  |
-    | data_a_U/sub_ln76_reg_520[27]__0_i_5                                     | LUT.others.LUT2      |
-    | data_a_U/sub_ln76_reg_520_reg[27]__0_i_1                                 | CARRY.others.CARRY4  |
-    | data_a_U/sub_ln76_reg_520_reg[31]__0_i_1                                 | CARRY.others.CARRY4  |
-    | grp_dec_MIMD_Pipeline_VITIS_LOOP_41_1_fu_182/sub_ln76_reg_520_reg[29]__0 | FLOP_LATCH.flop.FDRE |
-    +--------------------------------------------------------------------------+----------------------+
+    +---------------------------------------------------------------------------------------+----------------------+
+    | Path4 Cells                                                                           | Primitive Type       |
+    +---------------------------------------------------------------------------------------+----------------------+
+    | selec_assign_fu_98_reg[8]                                                             | FLOP_LATCH.flop.FDRE |
+    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_19_1_fu_190_ap_start_reg_i_11        | LUT.others.LUT5      |
+    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_19_1_fu_190_ap_start_reg_i_5         | LUT.others.LUT6      |
+    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_104_1_fu_136_ap_start_reg_i_2        | LUT.others.LUT6      |
+    | control_s_axi_U/fifo_depth_gt1_gen.mem_reg[2][0]_srl3_i_3                             | LUT.others.LUT4      |
+    | grp_dec_MIMD_Pipeline_VITIS_LOOP_9_1_fu_206/fifo_depth_gt1_gen.mem_reg[2][0]_srl3_i_1 | LUT.others.LUT6      |
+    | gmem2_m_axi_U/store_unit/fifo_wreq/fifo_depth_gt1_gen.empty_n_i_1                     | LUT.others.LUT6      |
+    | gmem2_m_axi_U/store_unit/fifo_wreq/fifo_depth_gt1_gen.mOutPtr_reg[1]                  | FLOP_LATCH.flop.FDRE |
+    +---------------------------------------------------------------------------------------+----------------------+
 
-    +--------------------------------------------------------------------------+----------------------+
-    | Path5 Cells                                                              | Primitive Type       |
-    +--------------------------------------------------------------------------+----------------------+
-    | data_b_U/ram_reg                                                         | BMEM.bram.RAMB18E1   |
-    | data_b_U/sub_ln76_reg_520[7]__0_i_7                                      | LUT.others.LUT1      |
-    | data_b_U/sub_ln76_reg_520_reg[7]__0_i_6                                  | CARRY.others.CARRY4  |
-    | data_b_U/sub_ln76_reg_520_reg[11]__0_i_6                                 | CARRY.others.CARRY4  |
-    | data_b_U/sub_ln76_reg_520_reg[15]__0_i_6                                 | CARRY.others.CARRY4  |
-    | data_b_U/sub_ln76_reg_520_reg[19]__0_i_6                                 | CARRY.others.CARRY4  |
-    | data_b_U/sub_ln76_reg_520_reg[23]__0_i_6                                 | CARRY.others.CARRY4  |
-    | data_b_U/sub_ln76_reg_520_reg[27]__0_i_6                                 | CARRY.others.CARRY4  |
-    | data_a_U/sub_ln76_reg_520[27]__0_i_5                                     | LUT.others.LUT2      |
-    | data_a_U/sub_ln76_reg_520_reg[27]__0_i_1                                 | CARRY.others.CARRY4  |
-    | data_a_U/sub_ln76_reg_520_reg[31]__0_i_1                                 | CARRY.others.CARRY4  |
-    | grp_dec_MIMD_Pipeline_VITIS_LOOP_41_1_fu_182/sub_ln76_reg_520_reg[31]__0 | FLOP_LATCH.flop.FDRE |
-    +--------------------------------------------------------------------------+----------------------+
+    +---------------------------------------------------------------------------------------+----------------------+
+    | Path5 Cells                                                                           | Primitive Type       |
+    +---------------------------------------------------------------------------------------+----------------------+
+    | selec_assign_fu_98_reg[8]                                                             | FLOP_LATCH.flop.FDRE |
+    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_19_1_fu_190_ap_start_reg_i_11        | LUT.others.LUT5      |
+    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_19_1_fu_190_ap_start_reg_i_5         | LUT.others.LUT6      |
+    | control_s_axi_U/grp_dec_MIMD_Pipeline_VITIS_LOOP_104_1_fu_136_ap_start_reg_i_2        | LUT.others.LUT6      |
+    | control_s_axi_U/fifo_depth_gt1_gen.mem_reg[2][0]_srl3_i_3                             | LUT.others.LUT4      |
+    | grp_dec_MIMD_Pipeline_VITIS_LOOP_9_1_fu_206/fifo_depth_gt1_gen.mem_reg[2][0]_srl3_i_1 | LUT.others.LUT6      |
+    | gmem2_m_axi_U/store_unit/fifo_wreq/fifo_depth_gt1_gen.empty_n_i_1                     | LUT.others.LUT6      |
+    | gmem2_m_axi_U/store_unit/fifo_wreq/fifo_depth_gt1_gen.mOutPtr_reg[2]                  | FLOP_LATCH.flop.FDRE |
+    +---------------------------------------------------------------------------------------+----------------------+
 
 
 ================================================================

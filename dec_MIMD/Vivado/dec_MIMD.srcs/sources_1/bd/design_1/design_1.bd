@@ -3198,9 +3198,9 @@
       },
       "dec_MIMD_0": {
         "vlnv": "xilinx.com:hls:dec_MIMD:1.0",
-        "ip_revision": "2113540039",
-        "xci_name": "design_1_dec_MIMD_0_3",
-        "xci_path": "ip\\design_1_dec_MIMD_0_3\\design_1_dec_MIMD_0_3.xci",
+        "ip_revision": "2113540569",
+        "xci_name": "design_1_dec_MIMD_0_4",
+        "xci_path": "ip\\design_1_dec_MIMD_0_4\\design_1_dec_MIMD_0_4.xci",
         "inst_hier_path": "dec_MIMD_0",
         "interface_ports": {
           "m_axi_gmem0": {

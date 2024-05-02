@@ -1,0 +1,16 @@
+verilog xil_defaultlib --include "C:/Xilinx/Vivado/2023.2/data/xilinx_vip/include" --include "../../../../dec_MIMD.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../dec_MIMD.gen/sources_1/bd/design_1/ipshared/6b2b/hdl" --include "../../../../dec_MIMD.gen/sources_1/bd/design_1/ip/design_1_dec_MIMD_0_3/drivers/dec_MIMD_v1_0/src" \
+"../../../bd/design_1/ip/design_1_processing_system7_0_1/sim/design_1_processing_system7_0_1.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_1/sim/design_1_auto_pc_1.v" \
+"../../../bd/design_1/ip/design_1_auto_us_0/sim/design_1_auto_us_0.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_2/sim/design_1_auto_pc_2.v" \
+"../../../bd/design_1/ip/design_1_auto_us_1/sim/design_1_auto_us_1.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_3/sim/design_1_auto_pc_3.v" \
+"../../../bd/design_1/ip/design_1_auto_us_2/sim/design_1_auto_us_2.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_4/sim/design_1_auto_pc_4.v" \
+"../../../bd/design_1/ip/design_1_auto_us_3/sim/design_1_auto_us_3.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

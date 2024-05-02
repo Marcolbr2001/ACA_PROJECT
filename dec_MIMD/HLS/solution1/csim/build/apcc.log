@@ -1,8 +1,8 @@
-ECHO is off.
-ECHO is off.
-INFO: [HLS 200-10] Running 'C:/ProgramData/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'marco' on host 'pc_di_marco' (Windows NT_amd64 version 6.2) on Thu May 02 14:10:12 +0200 2024
-INFO: [HLS 200-10] In directory 'C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/csim/build'
-INFO: [APCC 202-3] Tmp directory is C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/csim/build/apcc_db_marco/261002083810273
+ECHO disattivato.
+ECHO disattivato.
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'lotto' on host 'msi' (Windows NT_amd64 version 6.2) on Thu May 02 22:03:02 +0200 2024
+INFO: [HLS 200-10] In directory 'C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/csim/build/apcc_db_lotto/10908389141902
 INFO: [APCC 202-1] APCC is done.
-INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 1.096 seconds; peak allocated memory: 8.387 MB.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 1.161 seconds; peak allocated memory: 8.238 MB.

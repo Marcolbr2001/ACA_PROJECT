@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dec_MIMD'" level="0">
-<item name = "Date">Thu May  2 14:11:05 2024
+<item name = "Date">Thu May  2 22:04:06 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">HLS</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">153, 214, 1.530 us, 2.140 us, 154, 215, no</column>
+<column name="">59, 91, 0.590 us, 0.910 us, 60, 92, no</column>
 </table>
 </item>
 <item name = "Detail">

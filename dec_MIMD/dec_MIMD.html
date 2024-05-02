@@ -14622,9 +14622,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 
-<div id="421b35d0-4275-48d8-9024-813a07c99aea" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
+<div id="ce8f4ea8-22fb-48c8-a431-1ed9fd05bdb0" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
 <script type="text/javascript">
-var element = document.getElementById('421b35d0-4275-48d8-9024-813a07c99aea');
+var element = document.getElementById('ce8f4ea8-22fb-48c8-a431-1ed9fd05bdb0');
 
 try {
 require(['notebook/js/codecell'], function(codecell) {
@@ -14650,9 +14650,9 @@ require(['notebook/js/codecell'], function(codecell) {
 
 
 
-<div id="421b35d0-4275-48d8-9024-813a07c99aea" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
+<div id="ce8f4ea8-22fb-48c8-a431-1ed9fd05bdb0" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
 <script type="text/javascript">
-var element = document.getElementById('421b35d0-4275-48d8-9024-813a07c99aea');
+var element = document.getElementById('ce8f4ea8-22fb-48c8-a431-1ed9fd05bdb0');
 
 try {
 require(['notebook/js/codecell'], function(codecell) {
@@ -14802,8 +14802,9 @@ require(['notebook/js/codecell'], function(codecell) {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#use the seed you need</span>
-<span class="c1">#seed = 12345</span>
-<span class="n">seed</span> <span class="o">=</span> <span class="mi">54321</span>
+<span class="n">seed</span> <span class="o">=</span> <span class="mi">12345</span>
+<span class="c1">#seed = 54321</span>
+<span class="c1">#seed = 65432</span>
 
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
 
@@ -14910,8 +14911,48 @@ require(['notebook/js/codecell'], function(codecell) {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">selec</span> <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
 
-<span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x10</span><span class="p">,</span> <span class="n">input_a</span><span class="o">.</span><span class="n">physical_address</span><span class="p">)</span>   <span class="c1">#0x10 address port a1 or a2</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">output_sw</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">v_size</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+
+<span class="k">match</span><span class="p">(</span><span class="n">selec</span><span class="p">):</span>
+    <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">sw_result</span> <span class="o">=</span> <span class="n">golden</span><span class="p">(</span><span class="n">data_a</span><span class="p">,</span> <span class="n">data_b</span><span class="p">,</span> <span class="n">operation_old</span><span class="p">,</span> <span class="n">output_sw</span><span class="p">)</span>
+    <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">sw_result</span> <span class="o">=</span> <span class="n">golden</span><span class="p">(</span><span class="n">data_a_old</span><span class="p">,</span> <span class="n">data_b_old</span><span class="p">,</span> <span class="n">operation</span><span class="p">,</span> <span class="n">output_sw</span><span class="p">)</span>
+    <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">sw_result</span> <span class="o">=</span> <span class="n">golden</span><span class="p">(</span><span class="n">data_a</span><span class="p">,</span> <span class="n">data_b</span><span class="p">,</span> <span class="n">operation</span><span class="p">,</span> <span class="n">output_sw</span><span class="p">)</span>
+    <span class="k">case</span> <span class="mi">10</span><span class="p">:</span> 
+        <span class="n">sw_result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">v_size</span><span class="p">,</span> <span class="s1">&#39;int32&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x10</span><span class="p">,</span> <span class="n">input_a</span><span class="o">.</span><span class="n">physical_address</span><span class="p">)</span>   <span class="c1">#0x10 address port a1 or a2</span>
 <span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x1c</span><span class="p">,</span> <span class="n">input_b</span><span class="o">.</span><span class="n">physical_address</span><span class="p">)</span>   <span class="c1">#0x1c address port a1 or b2</span>
 <span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="n">input_op</span><span class="o">.</span><span class="n">physical_address</span><span class="p">)</span>  <span class="c1">#0x34 address port op1 or op2</span>
 <span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x40</span><span class="p">,</span> <span class="n">selec</span><span class="p">)</span>  <span class="c1">#0x40 address port selec /0 new data/1 new op/2 new data and op/</span>
@@ -14928,7 +14969,7 @@ require(['notebook/js/codecell'], function(codecell) {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x00</span><span class="p">,</span><span class="mh">0x1</span><span class="p">)</span> <span class="c1"># Start IP computation: write(control sign, ap_start)</span>
@@ -14947,7 +14988,7 @@ require(['notebook/js/codecell'], function(codecell) {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">output</span><span class="o">.</span><span class="n">sync_from_device</span><span class="p">()</span>
@@ -14963,18 +15004,100 @@ require(['notebook/js/codecell'], function(codecell) {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">output_sw</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">v_size</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">selec</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1">#execution</span>
 
-<span class="k">match</span><span class="p">(</span><span class="n">selec</span><span class="p">):</span>
-    <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">sw_result</span> <span class="o">=</span> <span class="n">golden</span><span class="p">(</span><span class="n">data_a</span><span class="p">,</span> <span class="n">data_b</span><span class="p">,</span> <span class="n">operation_old</span><span class="p">,</span> <span class="n">output_sw</span><span class="p">)</span>
-    <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">sw_result</span> <span class="o">=</span> <span class="n">golden</span><span class="p">(</span><span class="n">data_a_old</span><span class="p">,</span> <span class="n">data_b_old</span><span class="p">,</span> <span class="n">operation</span><span class="p">,</span> <span class="n">output_sw</span><span class="p">)</span>
-    <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="n">sw_result</span> <span class="o">=</span> <span class="n">golden</span><span class="p">(</span><span class="n">data_a</span><span class="p">,</span> <span class="n">data_b</span><span class="p">,</span> <span class="n">operation</span><span class="p">,</span> <span class="n">output_sw</span><span class="p">)</span>
+<span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x40</span><span class="p">,</span> <span class="n">selec</span><span class="p">)</span>  <span class="c1">#0x40 address port selec /0 new data/1 new op/2 new data and op/</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x00</span><span class="p">,</span><span class="mh">0x1</span><span class="p">)</span> <span class="c1"># Start IP computation: write(control sign, ap_start)</span>
+<span class="c1">#polling</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">AXI_ALU</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mh">0x00</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x2</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">pass</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">output</span><span class="o">.</span><span class="n">sync_from_device</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">selec</span> <span class="o">=</span> <span class="mi">4</span> <span class="c1">#write back</span>
+
+<span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x40</span><span class="p">,</span> <span class="n">selec</span><span class="p">)</span>  <span class="c1">#0x40 address port selec /0 new data/1 new op/2 new data and op/</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x00</span><span class="p">,</span><span class="mh">0x1</span><span class="p">)</span> <span class="c1"># Start IP computation: write(control sign, ap_start)</span>
+<span class="c1">#polling</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">AXI_ALU</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mh">0x00</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x2</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">pass</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">output</span><span class="o">.</span><span class="n">sync_from_device</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14987,7 +15110,7 @@ require(['notebook/js/codecell'], function(codecell) {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">eye</span><span class="p">(</span><span class="n">sw_result</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
@@ -15019,22 +15142,6 @@ require(['notebook/js/codecell'], function(codecell) {
 
 </div>
 
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
 </div>
 
 </div>

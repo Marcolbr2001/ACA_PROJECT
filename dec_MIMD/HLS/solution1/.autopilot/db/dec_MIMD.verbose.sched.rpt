@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'dec_MIMD'
 ================================================================
-* Date:           Thu May  2 14:11:05 2024
+* Date:           Thu May  2 22:04:06 2024
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        HLS
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
     |   min   |   max   |    min   |    max   | min | max |   Type  |
     +---------+---------+----------+----------+-----+-----+---------+
-    |      153|      214|  1.530 us|  2.140 us|  154|  215|       no|
+    |       59|       91|  0.590 us|  0.910 us|   60|   92|       no|
     +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
@@ -65,79 +65,69 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 6
+* Number of FSM states : 2
 * Pipeline : 0
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
 1 --> 2 
-2 --> 3 
-3 --> 4 
-4 --> 5 
-5 --> 6 
-6 --> 
+2 --> 
 
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 6.75>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%spectopmodule_ln100 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_15" [HLS/core.c:100]   --->   Operation 7 'spectopmodule' 'spectopmodule_ln100' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem0, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 50, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem0"   --->   Operation 9 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem1, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 50, void @empty_3, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem1"   --->   Operation 11 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem2, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 50, void @empty_4, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem2"   --->   Operation 13 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem3, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 50, void @empty_5, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem3"   --->   Operation 15 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %a, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_8, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %a, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %b, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_11, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %b, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %c, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_12, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %c, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %op, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_13, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %op, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %selec"   --->   Operation 24 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %selec, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_14, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %selec, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 28 [1/1] (1.00ns)   --->   "%selec_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %selec"   --->   Operation 28 'read' 'selec_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 29 [1/1] (1.00ns)   --->   "%op_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %op"   --->   Operation 29 'read' 'op_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 30 [1/1] (1.00ns)   --->   "%c_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %c"   --->   Operation 30 'read' 'c_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 31 [1/1] (1.00ns)   --->   "%b_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %b"   --->   Operation 31 'read' 'b_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 32 [1/1] (1.00ns)   --->   "%a_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %a"   --->   Operation 32 'read' 'a_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%selec_assign_2 = alloca i64 1"   --->   Operation 33 'alloca' 'selec_assign_2' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%selec_assign = alloca i64 1"   --->   Operation 34 'alloca' 'selec_assign' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%data_result = alloca i64 1" [HLS/core.c:119]   --->   Operation 35 'alloca' 'data_result' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%store_ln0 = store i32 %selec_read, i32 %selec_assign"   --->   Operation 36 'store' 'store_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%selec_assign_load = load i32 %selec_assign" [HLS/core.c:123]   --->   Operation 37 'load' 'selec_assign_load' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%store_ln123 = store i32 %selec_assign_load, i32 %selec_assign_2" [HLS/core.c:123]   --->   Operation 38 'store' 'store_ln123' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%selec_assign_2_load = load i32 %selec_assign_2" [HLS/core.c:9->HLS/core.c:123]   --->   Operation 39 'load' 'selec_assign_2_load' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 40 [1/1] (2.23ns)   --->   "%switch_ln9 = switch i32 %selec_assign_2_load, void %selecf.exit, i32 0, void %for.inc.i.preheader, i32 1, void %for.inc17.i.preheader, i32 2, void %for.inc38.i.preheader" [HLS/core.c:9->HLS/core.c:123]   --->   Operation 40 'switch' 'switch_ln9' <Predicate = true> <Delay = 2.23>
-ST_1 : Operation 41 [2/2] (3.52ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_28_3, i32 %gmem3, i32 %gmem1, i32 %gmem0, i64 %a_read, i64 %b_read, i64 %op_read, i32 %data_a, i32 %data_b, i32 %ALU_operation"   --->   Operation 41 'call' 'call_ln0' <Predicate = (selec_assign_2_load == 2)> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_1 : Operation 42 [2/2] (3.52ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_20_2, i32 %gmem3, i64 %op_read, i32 %ALU_operation"   --->   Operation 42 'call' 'call_ln0' <Predicate = (selec_assign_2_load == 1)> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_1 : Operation 43 [2/2] (3.52ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_12_1, i32 %gmem1, i32 %gmem0, i64 %a_read, i64 %b_read, i32 %data_a, i32 %data_b"   --->   Operation 43 'call' 'call_ln0' <Predicate = (selec_assign_2_load == 0)> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%spectopmodule_ln108 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_15" [HLS/core.c:108]   --->   Operation 3 'spectopmodule' 'spectopmodule_ln108' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem0, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 50, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 4 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem0"   --->   Operation 5 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem1, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 50, void @empty_3, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem1"   --->   Operation 7 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem2, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 50, void @empty_4, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem2"   --->   Operation 9 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem3, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 50, void @empty_5, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem3"   --->   Operation 11 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %a, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_8, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %a, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %b, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_11, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %b, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %c, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_12, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %c, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %op, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_13, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %op, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %selec"   --->   Operation 20 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %selec, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_14, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %selec, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (1.00ns)   --->   "%selec_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %selec"   --->   Operation 24 'read' 'selec_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 25 [1/1] (1.00ns)   --->   "%op_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %op"   --->   Operation 25 'read' 'op_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 26 [1/1] (1.00ns)   --->   "%c_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %c"   --->   Operation 26 'read' 'c_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 27 [1/1] (1.00ns)   --->   "%b_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %b"   --->   Operation 27 'read' 'b_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 28 [1/1] (1.00ns)   --->   "%a_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %a"   --->   Operation 28 'read' 'a_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%selec_assign = alloca i64 1"   --->   Operation 29 'alloca' 'selec_assign' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%data_result = alloca i64 1" [HLS/core.c:127]   --->   Operation 30 'alloca' 'data_result' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%store_ln0 = store i32 %selec_read, i32 %selec_assign"   --->   Operation 31 'store' 'store_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%selec_assign_load = load i32 %selec_assign" [HLS/core.c:132]   --->   Operation 32 'load' 'selec_assign_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (2.23ns)   --->   "%switch_ln132 = switch i32 %selec_assign_load, void %for.inc.i31.preheader, i32 0, void %for.inc.i.preheader, i32 1, void %for.inc.i6.preheader, i32 2, void %for.inc.i14.preheader, i32 3, void %for.body.i.preheader, i32 4, void %for.inc.i25.preheader" [HLS/core.c:132]   --->   Operation 33 'switch' 'switch_ln132' <Predicate = true> <Delay = 2.23>
+ST_1 : Operation 34 [2/2] (3.52ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_104_1, i32 %gmem2, i32 %data_result, i64 %c_read"   --->   Operation 34 'call' 'call_ln0' <Predicate = (selec_assign_load == 4)> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 35 [2/2] (0.00ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_49_1, i32 %data_result, i32 %data_a, i32 %ALU_operation, i32 %data_b"   --->   Operation 35 'call' 'call_ln0' <Predicate = (selec_assign_load == 3)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 36 [2/2] (3.52ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_37_1, i32 %gmem3, i32 %gmem1, i32 %gmem0, i64 %a_read, i64 %b_read, i64 %op_read, i32 %data_a, i32 %data_b, i32 %ALU_operation"   --->   Operation 36 'call' 'call_ln0' <Predicate = (selec_assign_load == 2)> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 37 [2/2] (3.52ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_30_1, i32 %gmem3, i64 %op_read, i32 %ALU_operation"   --->   Operation 37 'call' 'call_ln0' <Predicate = (selec_assign_load == 1)> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 38 [2/2] (3.52ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_19_1, i32 %gmem1, i32 %gmem0, i64 %a_read, i64 %b_read, i32 %data_a, i32 %data_b"   --->   Operation 38 'call' 'call_ln0' <Predicate = (selec_assign_load == 0)> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 39 [2/2] (3.52ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_9_1, i32 %gmem2, i64 %c_read, i32 %data_a, i32 %data_b"   --->   Operation 39 'call' 'call_ln0' <Predicate = (selec_assign_load != 0 & selec_assign_load != 1 & selec_assign_load != 2 & selec_assign_load != 3 & selec_assign_load != 4)> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 2 <SV = 1> <Delay = 0.00>
-ST_2 : Operation 44 [1/2] (0.00ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_28_3, i32 %gmem3, i32 %gmem1, i32 %gmem0, i64 %a_read, i64 %b_read, i64 %op_read, i32 %data_a, i32 %data_b, i32 %ALU_operation"   --->   Operation 44 'call' 'call_ln0' <Predicate = (selec_assign_2_load == 2)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln0 = br void %selecf.exit"   --->   Operation 45 'br' 'br_ln0' <Predicate = (selec_assign_2_load == 2)> <Delay = 0.00>
-ST_2 : Operation 46 [1/2] (0.00ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_20_2, i32 %gmem3, i64 %op_read, i32 %ALU_operation"   --->   Operation 46 'call' 'call_ln0' <Predicate = (selec_assign_2_load == 1)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%br_ln0 = br void %selecf.exit"   --->   Operation 47 'br' 'br_ln0' <Predicate = (selec_assign_2_load == 1)> <Delay = 0.00>
-ST_2 : Operation 48 [1/2] (0.00ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_12_1, i32 %gmem1, i32 %gmem0, i64 %a_read, i64 %b_read, i32 %data_a, i32 %data_b"   --->   Operation 48 'call' 'call_ln0' <Predicate = (selec_assign_2_load == 0)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%br_ln0 = br void %selecf.exit"   --->   Operation 49 'br' 'br_ln0' <Predicate = (selec_assign_2_load == 0)> <Delay = 0.00>
-
-State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 50 [2/2] (0.00ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_41_1, i32 %data_result, i32 %data_a, i32 %ALU_operation, i32 %data_b"   --->   Operation 50 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-
-State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 51 [1/2] (0.00ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_41_1, i32 %data_result, i32 %data_a, i32 %ALU_operation, i32 %data_b"   --->   Operation 51 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-
-State 5 <SV = 4> <Delay = 3.52>
-ST_5 : Operation 52 [2/2] (3.52ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_96_1, i32 %gmem2, i32 %data_result, i64 %c_read"   --->   Operation 52 'call' 'call_ln0' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-
-State 6 <SV = 5> <Delay = 0.00>
-ST_6 : Operation 53 [1/2] (0.00ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_96_1, i32 %gmem2, i32 %data_result, i64 %c_read"   --->   Operation 53 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_6 : Operation 54 [1/1] (0.00ns)   --->   "%ret_ln129 = ret" [HLS/core.c:129]   --->   Operation 54 'ret' 'ret_ln129' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/2] (0.00ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_104_1, i32 %gmem2, i32 %data_result, i64 %c_read"   --->   Operation 40 'call' 'call_ln0' <Predicate = (selec_assign_load == 4)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln0 = br void %sw.epilog"   --->   Operation 41 'br' 'br_ln0' <Predicate = (selec_assign_load == 4)> <Delay = 0.00>
+ST_2 : Operation 42 [1/2] (0.00ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_49_1, i32 %data_result, i32 %data_a, i32 %ALU_operation, i32 %data_b"   --->   Operation 42 'call' 'call_ln0' <Predicate = (selec_assign_load == 3)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%br_ln0 = br void %sw.epilog"   --->   Operation 43 'br' 'br_ln0' <Predicate = (selec_assign_load == 3)> <Delay = 0.00>
+ST_2 : Operation 44 [1/2] (0.00ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_37_1, i32 %gmem3, i32 %gmem1, i32 %gmem0, i64 %a_read, i64 %b_read, i64 %op_read, i32 %data_a, i32 %data_b, i32 %ALU_operation"   --->   Operation 44 'call' 'call_ln0' <Predicate = (selec_assign_load == 2)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln0 = br void %sw.epilog"   --->   Operation 45 'br' 'br_ln0' <Predicate = (selec_assign_load == 2)> <Delay = 0.00>
+ST_2 : Operation 46 [1/2] (0.00ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_30_1, i32 %gmem3, i64 %op_read, i32 %ALU_operation"   --->   Operation 46 'call' 'call_ln0' <Predicate = (selec_assign_load == 1)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%br_ln0 = br void %sw.epilog"   --->   Operation 47 'br' 'br_ln0' <Predicate = (selec_assign_load == 1)> <Delay = 0.00>
+ST_2 : Operation 48 [1/2] (0.00ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_19_1, i32 %gmem1, i32 %gmem0, i64 %a_read, i64 %b_read, i32 %data_a, i32 %data_b"   --->   Operation 48 'call' 'call_ln0' <Predicate = (selec_assign_load == 0)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%br_ln0 = br void %sw.epilog"   --->   Operation 49 'br' 'br_ln0' <Predicate = (selec_assign_load == 0)> <Delay = 0.00>
+ST_2 : Operation 50 [1/2] (0.00ns)   --->   "%call_ln0 = call void @dec_MIMD_Pipeline_VITIS_LOOP_9_1, i32 %gmem2, i64 %c_read, i32 %data_a, i32 %data_b"   --->   Operation 50 'call' 'call_ln0' <Predicate = (selec_assign_load != 0 & selec_assign_load != 1 & selec_assign_load != 2 & selec_assign_load != 3 & selec_assign_load != 4)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%br_ln0 = br void %sw.epilog"   --->   Operation 51 'br' 'br_ln0' <Predicate = (selec_assign_load != 0 & selec_assign_load != 1 & selec_assign_load != 2 & selec_assign_load != 3 & selec_assign_load != 4)> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%ret_ln162 = ret" [HLS/core.c:162]   --->   Operation 52 'ret' 'ret_ln162' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -148,27 +138,12 @@ Target clock period: 10.000ns, clock uncertainty: 2.700ns.
  <State 1>: 6.756ns
 The critical path consists of the following:
 	s_axi read operation ('selec') on port 'selec' [34]  (1.000 ns)
-	'store' operation 0 bit ('store_ln0') of variable 'selec' on local variable 'selec' [42]  (0.000 ns)
-	'load' operation 32 bit ('selec', HLS/core.c:123) on local variable 'selec' [43]  (0.000 ns)
-	'store' operation 0 bit ('store_ln123', HLS/core.c:123) of variable 'selec', HLS/core.c:123 on local variable 'selec' [44]  (0.000 ns)
-	'load' operation 32 bit ('selec_assign_2_load', HLS/core.c:9->HLS/core.c:123) on local variable 'selec' [45]  (0.000 ns)
-	'call' operation 0 bit ('call_ln0') to 'dec_MIMD_Pipeline_VITIS_LOOP_20_2' [51]  (3.520 ns)
+	'store' operation 0 bit ('store_ln0') of variable 'selec' on local variable 'selec' [41]  (0.000 ns)
+	'load' operation 32 bit ('selec_assign_load', HLS/core.c:132) on local variable 'selec' [42]  (0.000 ns)
+	'call' operation 0 bit ('call_ln0') to 'dec_MIMD_Pipeline_VITIS_LOOP_19_1' [57]  (3.520 ns)
 	blocking operation 2.2365 ns on control path)
 
  <State 2>: 0.000ns
-The critical path consists of the following:
-
- <State 3>: 0.000ns
-The critical path consists of the following:
-
- <State 4>: 0.000ns
-The critical path consists of the following:
-
- <State 5>: 3.520ns
-The critical path consists of the following:
-	'call' operation 0 bit ('call_ln0') to 'dec_MIMD_Pipeline_VITIS_LOOP_96_1' [58]  (3.520 ns)
-
- <State 6>: 0.000ns
 The critical path consists of the following:
 
 
@@ -182,10 +157,6 @@ N/A
   - Chain level:
 	State 1
 	State 2
-	State 3
-	State 4
-	State 5
-	State 6
 
 
 ============================================================

@@ -1,48 +1,57 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/csynth.tcl:17:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/csynth.tcl:17:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=dec_MIMD" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/directives.tcl:7:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/directives.tcl:7:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=dec_MIMD" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.c:102:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=a" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.c:103:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=b" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.c:104:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=c" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.c:105:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=op" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.c:106:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=selec" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.c:108:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.c:110:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=a bundle=gmem0 depth=50 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=a" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.c:111:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=b bundle=gmem1 depth=50 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=b" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.c:112:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=c bundle=gmem2 depth=50 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=c" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.c:113:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=op" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.c:114:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=selec" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.c:116:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.c:118:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=a bundle=gmem0 depth=50 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.c:119:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=b bundle=gmem1 depth=50 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.c:120:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=c bundle=gmem2 depth=50 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.c:121:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="dec_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=op bundle=gmem3 depth=50 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.c:100:0" msg_body="Inlining function 'selecf' into 'dec_MIMD'">
-        <args Callee="selecf" Callee-DebugLoc="File HLS/core.c Line 8 Column 0" Caller="dec_MIMD" Caller-DebugLoc="File HLS/core.c Line 100 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.c:108:0" msg_body="Inlining function 'load_data' into 'dec_MIMD'">
+        <args Callee="load_data" Callee-DebugLoc="File HLS/core.c Line 18 Column 0" Caller="dec_MIMD" Caller-DebugLoc="File HLS/core.c Line 108 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.c:100:0" msg_body="Inlining function 'execute' into 'dec_MIMD'">
-        <args Callee="execute" Callee-DebugLoc="File HLS/core.c Line 39 Column 0" Caller="dec_MIMD" Caller-DebugLoc="File HLS/core.c Line 100 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.c:108:0" msg_body="Inlining function 'load_op' into 'dec_MIMD'">
+        <args Callee="load_op" Callee-DebugLoc="File HLS/core.c Line 29 Column 0" Caller="dec_MIMD" Caller-DebugLoc="File HLS/core.c Line 108 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.c:100:0" msg_body="Inlining function 'output' into 'dec_MIMD'">
-        <args Callee="output" Callee-DebugLoc="File HLS/core.c Line 95 Column 0" Caller="dec_MIMD" Caller-DebugLoc="File HLS/core.c Line 100 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.c:108:0" msg_body="Inlining function 'load_data_and_op' into 'dec_MIMD'">
+        <args Callee="load_data_and_op" Callee-DebugLoc="File HLS/core.c Line 36 Column 0" Caller="dec_MIMD" Caller-DebugLoc="File HLS/core.c Line 108 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.c:108:0" msg_body="Inlining function 'execute' into 'dec_MIMD'">
+        <args Callee="execute" Callee-DebugLoc="File HLS/core.c Line 47 Column 0" Caller="dec_MIMD" Caller-DebugLoc="File HLS/core.c Line 108 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.c:108:0" msg_body="Inlining function 'output' into 'dec_MIMD'">
+        <args Callee="output" Callee-DebugLoc="File HLS/core.c Line 103 Column 0" Caller="dec_MIMD" Caller-DebugLoc="File HLS/core.c Line 108 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.c:108:0" msg_body="Inlining function 'reset' into 'dec_MIMD'">
+        <args Callee="reset" Callee-DebugLoc="File HLS/core.c Line 8 Column 0" Caller="dec_MIMD" Caller-DebugLoc="File HLS/core.c Line 108 Column 0"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

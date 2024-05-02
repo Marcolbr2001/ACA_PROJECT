@@ -1302,7 +1302,7 @@ begin
         write_start_run_flag <= '0'; 
         write_start_count := 0;
     elsif (clk'event and clk = '1') then
-        if (write_start_count >= 3) then
+        if (write_start_count >= 10) then
             write_start_run_flag <= '0'; 
         elsif (TRAN_control_write_start_in = '1') then
             write_start_run_flag <= '1'; 

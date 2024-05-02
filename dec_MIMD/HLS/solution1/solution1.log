@@ -3078,3 +3078,1113 @@ INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
 INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...
 INFO: [HLS 200-802] Generated output file HLS/export.zip
 INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 170.494 seconds; current allocated memory: 12.148 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.622 seconds; current allocated memory: 0.316 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.229 seconds; current allocated memory: 0.492 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.299 seconds; current allocated memory: 0.520 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.864 seconds; current allocated memory: 0.402 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.875 seconds; current allocated memory: 0.410 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.531 seconds; current allocated memory: 0.410 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.708 seconds; current allocated memory: 0.441 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.424 seconds; current allocated memory: 0.324 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.773 seconds; current allocated memory: 0.613 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 132.191 MB.
+INFO: [HLS 200-10] Analyzing design file 'HLS/core.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.209 seconds; current allocated memory: 134.145 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 273 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 257 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 203 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 215 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 198 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 196 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 196 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 196 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 196 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 202 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 202 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 196 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 196 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 196 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 223 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 236 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'reset' into 'dec_MIMD' (HLS/core.c:124:0)
+INFO: [HLS 214-178] Inlining function 'load_data' into 'dec_MIMD' (HLS/core.c:124:0)
+INFO: [HLS 214-178] Inlining function 'load_op' into 'dec_MIMD' (HLS/core.c:124:0)
+INFO: [HLS 214-178] Inlining function 'load_data_and_op' into 'dec_MIMD' (HLS/core.c:124:0)
+INFO: [HLS 214-178] Inlining function 'execute' into 'dec_MIMD' (HLS/core.c:124:0)
+INFO: [HLS 214-178] Inlining function 'output' into 'dec_MIMD' (HLS/core.c:124:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_11_1> at HLS/core.c:11:20 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_20_1> at HLS/core.c:20:19 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_34_1> at HLS/core.c:34:19 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_46_1> at HLS/core.c:46:19 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_61_1> at HLS/core.c:61:20 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_119_1> at HLS/core.c:119:21 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.304 seconds; current allocated memory: 136.621 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 136.621 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 141.625 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.032 seconds; current allocated memory: 143.109 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.077 seconds; current allocated memory: 165.859 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.094 seconds; current allocated memory: 212.918 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dec_MIMD' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dec_MIMD_Pipeline_VITIS_LOOP_11_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_11_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop 'VITIS_LOOP_11_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 217.344 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 218.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dec_MIMD_Pipeline_VITIS_LOOP_20_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 11, loop 'VITIS_LOOP_20_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.058 seconds; current allocated memory: 219.148 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.044 seconds; current allocated memory: 219.188 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dec_MIMD_Pipeline_VITIS_LOOP_34_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_34_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 11, loop 'VITIS_LOOP_34_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.065 seconds; current allocated memory: 219.461 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.051 seconds; current allocated memory: 219.555 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dec_MIMD_Pipeline_VITIS_LOOP_46_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_46_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 11, loop 'VITIS_LOOP_46_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 220.270 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.052 seconds; current allocated memory: 220.422 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dec_MIMD_Pipeline_VITIS_LOOP_61_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_61_1'.
+INFO: [SCHED 204-61] Discarding stage scheduling solution.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 40, loop 'VITIS_LOOP_61_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.096 seconds; current allocated memory: 221.934 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.062 seconds; current allocated memory: 222.176 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dec_MIMD_Pipeline_VITIS_LOOP_119_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_119_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop 'VITIS_LOOP_119_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 222.289 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.044 seconds; current allocated memory: 222.375 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dec_MIMD' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 223.016 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 223.484 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dec_MIMD_Pipeline_VITIS_LOOP_11_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dec_MIMD_Pipeline_VITIS_LOOP_11_1' pipeline 'VITIS_LOOP_11_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dec_MIMD_Pipeline_VITIS_LOOP_11_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.069 seconds; current allocated memory: 225.508 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dec_MIMD_Pipeline_VITIS_LOOP_20_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dec_MIMD_Pipeline_VITIS_LOOP_20_1' pipeline 'VITIS_LOOP_20_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dec_MIMD_Pipeline_VITIS_LOOP_20_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.109 seconds; current allocated memory: 227.492 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dec_MIMD_Pipeline_VITIS_LOOP_34_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dec_MIMD_Pipeline_VITIS_LOOP_34_1' pipeline 'VITIS_LOOP_34_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dec_MIMD_Pipeline_VITIS_LOOP_34_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 228.992 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dec_MIMD_Pipeline_VITIS_LOOP_46_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dec_MIMD_Pipeline_VITIS_LOOP_46_1' pipeline 'VITIS_LOOP_46_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dec_MIMD_Pipeline_VITIS_LOOP_46_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 230.449 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dec_MIMD_Pipeline_VITIS_LOOP_61_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dec_MIMD_Pipeline_VITIS_LOOP_61_1' pipeline 'VITIS_LOOP_61_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'dec_MIMD_Pipeline_VITIS_LOOP_61_1' is 9675 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dec_MIMD_Pipeline_VITIS_LOOP_61_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.203 seconds; current allocated memory: 233.938 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dec_MIMD_Pipeline_VITIS_LOOP_119_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dec_MIMD_Pipeline_VITIS_LOOP_119_1' pipeline 'VITIS_LOOP_119_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dec_MIMD_Pipeline_VITIS_LOOP_119_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.224 seconds; current allocated memory: 236.535 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dec_MIMD' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dec_MIMD/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dec_MIMD/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dec_MIMD/gmem2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dec_MIMD/gmem3' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dec_MIMD/a' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dec_MIMD/b' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dec_MIMD/c' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dec_MIMD/op' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dec_MIMD/selec' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'dec_MIMD' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'a', 'b', 'c', 'op', 'selec' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dec_MIMD'.
+INFO: [RTMG 210-278] Implementing memory 'dec_MIMD_data_a_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'dec_MIMD_data_result_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.286 seconds; current allocated memory: 240.719 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.611 seconds; current allocated memory: 245.953 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.43 seconds; current allocated memory: 257.473 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for dec_MIMD.
+INFO: [VLOG 209-307] Generating Verilog RTL for dec_MIMD.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 13.199 seconds; current allocated memory: 125.688 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: cosim_design -rtl vhdl 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-322] Starting VHDL simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 27.73 seconds; current allocated memory: 9.496 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: export_design -flow syn -rtl vhdl -format ip_catalog -output C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 176.321 seconds; current allocated memory: 12.859 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: export_design -rtl vhdl -format ip_catalog -output C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...
+INFO: [HLS 200-802] Generated output file export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 168.087 seconds; current allocated memory: 11.461 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.396 seconds; current allocated memory: 0.328 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.118 seconds; current allocated memory: 0.309 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.007 seconds; current allocated memory: 0.305 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.817 seconds; current allocated memory: 0.309 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.983 seconds; current allocated memory: 0.691 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.189 seconds; current allocated memory: 0.484 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 132.109 MB.
+INFO: [HLS 200-10] Analyzing design file 'HLS/core.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.301 seconds; current allocated memory: 133.914 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 245 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 229 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 180 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 162 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 150 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 148 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 148 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 148 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 148 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 154 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 154 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 148 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 148 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 148 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 175 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 206 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'load_data' into 'dec_MIMD' (HLS/core.c:108:0)
+INFO: [HLS 214-178] Inlining function 'load_op' into 'dec_MIMD' (HLS/core.c:108:0)
+INFO: [HLS 214-178] Inlining function 'load_data_and_op' into 'dec_MIMD' (HLS/core.c:108:0)
+INFO: [HLS 214-178] Inlining function 'execute' into 'dec_MIMD' (HLS/core.c:108:0)
+INFO: [HLS 214-178] Inlining function 'output' into 'dec_MIMD' (HLS/core.c:108:0)
+INFO: [HLS 214-178] Inlining function 'reset' into 'dec_MIMD' (HLS/core.c:108:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_104_1> at HLS/core.c:104:20 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_49_1> at HLS/core.c:49:19 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_37_1> at HLS/core.c:37:19 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_30_1> at HLS/core.c:30:19 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_19_1> at HLS/core.c:19:19 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_9_1> at HLS/core.c:9:19 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.106 seconds; current allocated memory: 136.496 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 136.496 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.101 seconds; current allocated memory: 141.762 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.044 seconds; current allocated memory: 143.332 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.102 seconds; current allocated memory: 165.191 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 212.762 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dec_MIMD' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dec_MIMD_Pipeline_VITIS_LOOP_104_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_104_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop 'VITIS_LOOP_104_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.248 seconds; current allocated memory: 217.066 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 218.266 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dec_MIMD_Pipeline_VITIS_LOOP_49_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_49_1'.
+INFO: [SCHED 204-61] Discarding stage scheduling solution.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 40, loop 'VITIS_LOOP_49_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.127 seconds; current allocated memory: 219.883 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 219.992 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dec_MIMD_Pipeline_VITIS_LOOP_37_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_37_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 11, loop 'VITIS_LOOP_37_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.103 seconds; current allocated memory: 220.434 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 220.559 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dec_MIMD_Pipeline_VITIS_LOOP_30_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_30_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 11, loop 'VITIS_LOOP_30_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.091 seconds; current allocated memory: 220.969 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.066 seconds; current allocated memory: 220.969 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dec_MIMD_Pipeline_VITIS_LOOP_19_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_19_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 11, loop 'VITIS_LOOP_19_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.092 seconds; current allocated memory: 221.566 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 221.770 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dec_MIMD_Pipeline_VITIS_LOOP_9_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_9_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop 'VITIS_LOOP_9_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.109 seconds; current allocated memory: 222.145 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.065 seconds; current allocated memory: 222.312 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dec_MIMD' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 222.543 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.065 seconds; current allocated memory: 222.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dec_MIMD_Pipeline_VITIS_LOOP_104_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dec_MIMD_Pipeline_VITIS_LOOP_104_1' pipeline 'VITIS_LOOP_104_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dec_MIMD_Pipeline_VITIS_LOOP_104_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.089 seconds; current allocated memory: 224.816 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dec_MIMD_Pipeline_VITIS_LOOP_49_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dec_MIMD_Pipeline_VITIS_LOOP_49_1' pipeline 'VITIS_LOOP_49_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'dec_MIMD_Pipeline_VITIS_LOOP_49_1' is 9675 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dec_MIMD_Pipeline_VITIS_LOOP_49_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.228 seconds; current allocated memory: 228.746 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dec_MIMD_Pipeline_VITIS_LOOP_37_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dec_MIMD_Pipeline_VITIS_LOOP_37_1' pipeline 'VITIS_LOOP_37_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dec_MIMD_Pipeline_VITIS_LOOP_37_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.294 seconds; current allocated memory: 231.219 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dec_MIMD_Pipeline_VITIS_LOOP_30_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dec_MIMD_Pipeline_VITIS_LOOP_30_1' pipeline 'VITIS_LOOP_30_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dec_MIMD_Pipeline_VITIS_LOOP_30_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.182 seconds; current allocated memory: 232.621 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dec_MIMD_Pipeline_VITIS_LOOP_19_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dec_MIMD_Pipeline_VITIS_LOOP_19_1' pipeline 'VITIS_LOOP_19_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dec_MIMD_Pipeline_VITIS_LOOP_19_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.154 seconds; current allocated memory: 234.270 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dec_MIMD_Pipeline_VITIS_LOOP_9_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dec_MIMD_Pipeline_VITIS_LOOP_9_1' pipeline 'VITIS_LOOP_9_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dec_MIMD_Pipeline_VITIS_LOOP_9_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.192 seconds; current allocated memory: 235.914 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dec_MIMD' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dec_MIMD/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dec_MIMD/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dec_MIMD/gmem2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dec_MIMD/gmem3' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dec_MIMD/a' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dec_MIMD/b' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dec_MIMD/c' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dec_MIMD/op' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dec_MIMD/selec' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'dec_MIMD' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'a', 'b', 'c', 'op', 'selec' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dec_MIMD'.
+INFO: [RTMG 210-278] Implementing memory 'dec_MIMD_data_a_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'dec_MIMD_data_result_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.444 seconds; current allocated memory: 240.211 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.783 seconds; current allocated memory: 244.746 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.377 seconds; current allocated memory: 256.078 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for dec_MIMD.
+INFO: [VLOG 209-307] Generating Verilog RTL for dec_MIMD.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 16.292 seconds; current allocated memory: 124.469 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: cosim_design -rtl vhdl 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-322] Starting VHDL simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 29.565 seconds; current allocated memory: 9.957 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: export_design -flow syn -rtl vhdl -format ip_catalog -output C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...
+INFO: [HLS 200-802] Generated output file export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 219.94 seconds; current allocated memory: 12.980 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -display_name dec_MIMD -flow syn -format ip_catalog -output C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD -rtl vhdl -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./HLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dec_MIMD dec_MIMD 
+INFO: [HLS 200-1510] Running: export_design -rtl vhdl -format ip_catalog -output C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...
+INFO: [HLS 200-802] Generated output file export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 213.82 seconds; current allocated memory: 12.539 MB.

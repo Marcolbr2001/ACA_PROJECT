@@ -2,8 +2,8 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
---Date        : Thu May  2 14:28:04 2024
---Host        : PC_di_Marco running 64-bit major release  (build 9200)
+--Date        : Thu May  2 22:17:24 2024
+--Host        : MSI running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
 --Purpose     : IP block netlist
@@ -2502,7 +2502,7 @@ entity design_1 is
     FIXED_IO_ps_srstb : inout STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=22,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=10,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=41,da_ps7_cnt=2,synth_mode=Hierarchical}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=22,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=10,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=46,da_ps7_cnt=2,synth_mode=Hierarchical}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -2771,7 +2771,7 @@ architecture STRUCTURE of design_1 is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_rst_ps7_0_100M_0;
-  component design_1_dec_MIMD_0_3 is
+  component design_1_dec_MIMD_0_4 is
   port (
     s_axi_control_AWADDR : in STD_LOGIC_VECTOR ( 6 downto 0 );
     s_axi_control_AWVALID : in STD_LOGIC;
@@ -2954,7 +2954,7 @@ architecture STRUCTURE of design_1 is
     m_axi_gmem3_RVALID : in STD_LOGIC;
     m_axi_gmem3_RREADY : out STD_LOGIC
   );
-  end component design_1_dec_MIMD_0_3;
+  end component design_1_dec_MIMD_0_4;
   signal axi_mem_intercon_1_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 63 downto 0 );
   signal axi_mem_intercon_1_M00_AXI_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_mem_intercon_1_M00_AXI_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -3484,7 +3484,7 @@ axi_mem_intercon_3: entity work.design_1_axi_mem_intercon_3_0
       S00_AXI_rresp(1 downto 0) => dec_MIMD_0_m_axi_gmem3_RRESP(1 downto 0),
       S00_AXI_rvalid => dec_MIMD_0_m_axi_gmem3_RVALID
     );
-dec_MIMD_0: component design_1_dec_MIMD_0_3
+dec_MIMD_0: component design_1_dec_MIMD_0_4
      port map (
       ap_clk => processing_system7_0_FCLK_CLK0,
       ap_rst_n => rst_ps7_0_100M_peripheral_aresetn(0),

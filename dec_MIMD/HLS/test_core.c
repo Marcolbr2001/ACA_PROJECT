@@ -29,18 +29,13 @@ int main() {
 
     // selecting operations
     for (int i = 0; i < DATA_LENGTH; i++)
-    	{
-    		ALU_OPERATION[i] = 10;
-    	}
+	{
+		ALU_OPERATION[i] = 1;
+	}
 
 	// selecting inputs
 
-	SELEC=2;
-
-    // ------------------ Go ------------------- //
-
-    // Call the hardware functions
-
+	SELEC=10;
 	dec_MIMD(DATA_A, DATA_B, DATA_RESULT, ALU_OPERATION,SELEC);
 
     //print results
@@ -53,84 +48,79 @@ int main() {
 
 
 
+        ////////NEW DATA_and_OPERATION////////////////////////////////////////////
 
-
-
-    ////////CASE SELEC=2: NEW OPERATIONS////////////////////////////////////////////
-
-    printf("\n TO BE RIGHT THE RESULT MUST BE 28\n");
-
-
-    // Put data into variables
-        for (int i = 0; i < DATA_LENGTH; i++)
-        {
-        	DATA_A[i] = 2;
-        	DATA_B[i] = 3;
-    	}
-
-        // selecting operations
-        for (int i = 0; i < DATA_LENGTH; i++)
-        	{
-        		ALU_OPERATION[i] = 0;
-        	}
-
-    	// selecting inputs
-
-    	SELEC=1;
-
-        // ------------------ Go ------------------- //
-
-        // Call the hardware functions
-
-    	dec_MIMD(DATA_A, DATA_B, DATA_RESULT, ALU_OPERATION,SELEC);
-
-        //print results
-        for (int i = 0; i < DATA_LENGTH; i++)
-    	{
-        	printf("A = %d B = %d RES = %d, OP = %d, SELEC = %d \n", DATA_A[i], DATA_B[i], DATA_RESULT[i], ALU_OPERATION[i], SELEC);
-        }
-        printf("\n\n");
-        // ----------------------------------------- //
-
-
-
-
-        ////////CASE SELEC=0: NEW DATA////////////////////////////////////////////
-
-        printf("\n TO BE RIGHT THE RESULT MUST BE 30---\n");
-
-
-            // Put data into variables
-                for (int i = 0; i < DATA_LENGTH; i++)
-                {
-                	DATA_A[i] = 3;
-                	DATA_B[i] = 4;
-            	}
-
-                // selecting operations
-                for (int i = 0; i < DATA_LENGTH; i++)
-                	{
-                		ALU_OPERATION[i] = 1;
-                	}
-
-            	// selecting inputs
-
-            	SELEC=0;
-
-                // ------------------ Go ------------------- //
-
-                // Call the hardware functions
-
+        		SELEC=2;
+            	dec_MIMD(DATA_A, DATA_B, DATA_RESULT, ALU_OPERATION,SELEC);
+            	SELEC=3;
+            	dec_MIMD(DATA_A, DATA_B, DATA_RESULT, ALU_OPERATION,SELEC);
+            	SELEC=4;
             	dec_MIMD(DATA_A, DATA_B, DATA_RESULT, ALU_OPERATION,SELEC);
 
-                //print results
+
                 for (int i = 0; i < DATA_LENGTH; i++)
             	{
                 	printf("A = %d B = %d RES = %d, OP = %d, SELEC = %d \n", DATA_A[i], DATA_B[i], DATA_RESULT[i], ALU_OPERATION[i], SELEC);
                 }
                 printf("\n\n");
-                // ----------------------------------------- //
 
+          ////////NEW DATA_old_OPERATION////////////////////////////////////////////
+
+                // Put data into variables
+                    for (int i = 0; i < DATA_LENGTH; i++)
+                    {
+                    	DATA_A[i] = 2;
+                    	DATA_B[i] = 2;
+                	}
+
+                    // selecting operations
+                    for (int i = 0; i < DATA_LENGTH; i++)
+                    	{
+                    		ALU_OPERATION[i] = 10;
+                    	}
+
+				SELEC=0;
+				dec_MIMD(DATA_A, DATA_B, DATA_RESULT, ALU_OPERATION,SELEC);
+				SELEC=3;
+				dec_MIMD(DATA_A, DATA_B, DATA_RESULT, ALU_OPERATION,SELEC);
+				SELEC=4;
+				dec_MIMD(DATA_A, DATA_B, DATA_RESULT, ALU_OPERATION,SELEC);
+
+
+				for (int i = 0; i < DATA_LENGTH; i++)
+				{
+					printf("A = %d B = %d RES = %d, OP = %d, SELEC = %d \n", DATA_A[i], DATA_B[i], DATA_RESULT[i], ALU_OPERATION[i], SELEC);
+				}
+				printf("\n\n");
+
+				////////old_DATA_NEW_OPERATION////////////////////////////////////////////
+
+				// Put data into variables
+					for (int i = 0; i < DATA_LENGTH; i++)
+					{
+						DATA_A[i] = 45;
+						DATA_B[i] = 45;
+					}
+
+					// selecting operations
+					for (int i = 0; i < DATA_LENGTH; i++)
+						{
+							ALU_OPERATION[i] = 9;
+						}
+
+				SELEC=1;
+				dec_MIMD(DATA_A, DATA_B, DATA_RESULT, ALU_OPERATION,SELEC);
+				SELEC=3;
+				dec_MIMD(DATA_A, DATA_B, DATA_RESULT, ALU_OPERATION,SELEC);
+				SELEC=4;
+				dec_MIMD(DATA_A, DATA_B, DATA_RESULT, ALU_OPERATION,SELEC);
+
+
+				for (int i = 0; i < DATA_LENGTH; i++)
+				{
+					printf("A = %d B = %d RES = %d, OP = %d, SELEC = %d \n", DATA_A[i], DATA_B[i], DATA_RESULT[i], ALU_OPERATION[i], SELEC);
+				}
+				printf("\n\n");
 
     return 0;
 }

@@ -16,7 +16,7 @@
       ]
     },
     "slx": false,
-    "sourceFile": "C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/directives.tcl",
+    "sourceFile": "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/directives.tcl",
     "sourceLine": 7,
     "success": true
   },
@@ -37,7 +37,7 @@
       ]
     },
     "slx": false,
-    "sourceFile": "C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/csynth.tcl",
+    "sourceFile": "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/csynth.tcl",
     "sourceLine": 17,
     "success": true
   }

@@ -46,7 +46,7 @@ entity apatb_dec_MIMD_top is
       LENGTH_gmem3     : INTEGER := 50;
       LENGTH_op     : INTEGER := 1;
       LENGTH_selec     : INTEGER := 1;
-	    AUTOTB_TRANSACTION_NUM    : INTEGER := 3
+	    AUTOTB_TRANSACTION_NUM    : INTEGER := 10
 );
 
 end apatb_dec_MIMD_top;

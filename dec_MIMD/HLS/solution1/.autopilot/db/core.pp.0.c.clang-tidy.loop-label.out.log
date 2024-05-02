@@ -1,25 +1,30 @@
-C:\Users\marco\Desktop\NECST\NL2\AXI_M\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1037:4: warning: Added loop label VITIS_LOOP_12_1:   [xilinx-label-all-loops]
-   for(int i = 0; i < 50; i++)
-   ^~~
-   VITIS_LOOP_12_1: 
-C:\Users\marco\Desktop\NECST\NL2\AXI_M\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1037:4: note: FIX-IT applied suggested code changes
-C:\Users\marco\Desktop\NECST\NL2\AXI_M\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1045:4: warning: Added loop label VITIS_LOOP_20_2:   [xilinx-label-all-loops]
-   for(int i = 0; i < 50; i++)
-   ^~~
-   VITIS_LOOP_20_2: 
-C:\Users\marco\Desktop\NECST\NL2\AXI_M\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1045:4: note: FIX-IT applied suggested code changes
-C:\Users\marco\Desktop\NECST\NL2\AXI_M\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1053:4: warning: Added loop label VITIS_LOOP_28_3:   [xilinx-label-all-loops]
-   for(int i = 0; i < 50; i++)
-   ^~~
-   VITIS_LOOP_28_3: 
-C:\Users\marco\Desktop\NECST\NL2\AXI_M\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1053:4: note: FIX-IT applied suggested code changes
-C:\Users\marco\Desktop\NECST\NL2\AXI_M\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1066:3: warning: Added loop label VITIS_LOOP_41_1:   [xilinx-label-all-loops]
-  for(int i=0; i < 50; i++)
+C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1034:3: warning: Added loop label VITIS_LOOP_9_1:   [xilinx-label-all-loops]
+  for(int i = 0; i < 50; i++)
   ^~~
-  VITIS_LOOP_41_1: 
-C:\Users\marco\Desktop\NECST\NL2\AXI_M\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1066:3: note: FIX-IT applied suggested code changes
-C:\Users\marco\Desktop\NECST\NL2\AXI_M\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1121:2: warning: Added loop label VITIS_LOOP_96_1:   [xilinx-label-all-loops]
+  VITIS_LOOP_9_1: 
+C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1034:3: note: FIX-IT applied suggested code changes
+C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1044:2: warning: Added loop label VITIS_LOOP_19_1:   [xilinx-label-all-loops]
  for(int i = 0; i < 50; i++)
  ^~~
- VITIS_LOOP_96_1: 
-C:\Users\marco\Desktop\NECST\NL2\AXI_M\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1121:2: note: FIX-IT applied suggested code changes
+ VITIS_LOOP_19_1: 
+C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1044:2: note: FIX-IT applied suggested code changes
+C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1055:2: warning: Added loop label VITIS_LOOP_30_1:   [xilinx-label-all-loops]
+ for(int i = 0; i < 50; i++)
+ ^~~
+ VITIS_LOOP_30_1: 
+C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1055:2: note: FIX-IT applied suggested code changes
+C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1062:2: warning: Added loop label VITIS_LOOP_37_1:   [xilinx-label-all-loops]
+ for(int i = 0; i < 50; i++)
+ ^~~
+ VITIS_LOOP_37_1: 
+C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1062:2: note: FIX-IT applied suggested code changes
+C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1074:2: warning: Added loop label VITIS_LOOP_49_1:   [xilinx-label-all-loops]
+ for(int i=0; i < 50; i++)
+ ^~~
+ VITIS_LOOP_49_1: 
+C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1074:2: note: FIX-IT applied suggested code changes
+C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1129:2: warning: Added loop label VITIS_LOOP_104_1:   [xilinx-label-all-loops]
+ for(int i = 0; i < 50; i++)
+ ^~~
+ VITIS_LOOP_104_1: 
+C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\M_AXI_ALU\dec_MIMD\HLS\solution1\.autopilot\db\core.pp.0.c:1129:2: note: FIX-IT applied suggested code changes

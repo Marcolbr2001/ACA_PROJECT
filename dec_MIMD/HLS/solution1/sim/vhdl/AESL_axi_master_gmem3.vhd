@@ -782,7 +782,7 @@ begin
             end loop;
 
             if (to_integer(FIFO_AW_req_ADDR_tmp/data_byte_size) > gmem3_mem_depth) then
-                assert false report "C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/sim/vhdl/AESL_axi_master_gmem3.vhd: Write request address " & integer'image(to_integer(FIFO_AW_req_ADDR_tmp/data_byte_size)) & " exceed AXI master gmem3 array depth: " & integer'image(gmem3_mem_depth) & ""severity failure; 
+                assert false report "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/sim/vhdl/AESL_axi_master_gmem3.vhd: Write request address " & integer'image(to_integer(FIFO_AW_req_ADDR_tmp/data_byte_size)) & " exceed AXI master gmem3 array depth: " & integer'image(gmem3_mem_depth) & ""severity failure; 
             end if;
             
             if (FIFO_AW_req_BURST_tmp = 1) then
@@ -968,7 +968,7 @@ begin
             end loop;
 
             if (to_integer(FIFO_AR_req_ADDR_tmp/data_byte_size) > gmem3_mem_depth) then
-                assert false report "C:/Users/marco/Desktop/NECST/NL2/AXI_M/dec_MIMD/HLS/solution1/sim/vhdl/AESL_axi_master_gmem3.vhd: Read request address " & integer'image(to_integer(FIFO_AR_req_ADDR_tmp/data_byte_size)) & " exceed AXI master gmem3 array depth: " & integer'image(gmem3_mem_depth) & ""severity failure; 
+                assert false report "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/M_AXI_ALU/dec_MIMD/HLS/solution1/sim/vhdl/AESL_axi_master_gmem3.vhd: Read request address " & integer'image(to_integer(FIFO_AR_req_ADDR_tmp/data_byte_size)) & " exceed AXI master gmem3 array depth: " & integer'image(gmem3_mem_depth) & ""severity failure; 
             end if;
 
             if (FIFO_AR_req_BURST_tmp = 1) then
