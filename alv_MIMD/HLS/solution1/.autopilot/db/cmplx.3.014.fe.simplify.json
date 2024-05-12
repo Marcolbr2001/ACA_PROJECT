@@ -1,0 +1,28 @@
+{
+  "0": {
+    "basicblocks": 14,
+    "calls": "1 1",
+    "file": "core.cpp",
+    "fileloc": 145,
+    "instructions": 84,
+    "loads": {
+      "L": 1,
+      "T": 6
+    },
+    "name": "alv_MIMD",
+    "stores": {
+      "L": 1,
+      "T": 3
+    },
+    "total_instructions": 192
+  },
+  "1": {
+    "basicblocks": 15,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 79,
+    "instructions": 54,
+    "name": "execute",
+    "total_instructions": 54
+  }
+}

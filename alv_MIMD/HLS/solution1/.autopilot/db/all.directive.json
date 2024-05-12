@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "alv_MIMD",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "alv_MIMD"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/HLS/solution1/csynth.tcl",
+    "sourceLine": 16,
+    "success": true
+  }
+]

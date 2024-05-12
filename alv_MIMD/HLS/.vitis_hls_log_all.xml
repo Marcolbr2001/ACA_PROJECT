@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Port 'alv_MIMD/m_axi_gmem1_BUSER' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="HLS" solutionName="solution1" date="2024-05-12T19:57:50.945+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'alv_MIMD/m_axi_gmem1_BID' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="HLS" solutionName="solution1" date="2024-05-12T19:57:50.945+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'alv_MIMD/m_axi_gmem1_BRESP' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="HLS" solutionName="solution1" date="2024-05-12T19:57:50.945+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'alv_MIMD/m_axi_gmem1_BREADY' to 0." projectName="HLS" solutionName="solution1" date="2024-05-12T19:57:50.945+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'alv_MIMD/m_axi_gmem1_BREADY' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="HLS" solutionName="solution1" date="2024-05-12T19:57:50.945+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'alv_MIMD/m_axi_gmem1_BVALID' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="HLS" solutionName="solution1" date="2024-05-12T19:57:50.945+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'alv_MIMD/m_axi_gmem1_RRESP' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="HLS" solutionName="solution1" date="2024-05-12T19:57:50.929+0200" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

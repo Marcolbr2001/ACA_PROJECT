@@ -1,0 +1,239 @@
+
+
+================================================================
+== Synthesis Summary Report of 'alv_MIMD'
+================================================================
++ General Information: 
+    * Date:           Sun May 12 19:57:51 2024
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        HLS
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+-----------+------------+-----+
+    |                  Modules                  | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |        |           |            |     |
+    |                  & Loops                  | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP  |     FF    |     LUT    | URAM|
+    +-------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+-----------+------------+-----+
+    |+ alv_MIMD                                 |     -|  0.00|      214|  2.140e+03|         -|      215|     -|        no|  12 (4%)|  3 (1%)|  7770 (7%)|  7311 (13%)|    -|
+    | + alv_MIMD_Pipeline_l_data_and_operation  |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|  219 (~0%)|   281 (~0%)|    -|
+    |  o l_data_and_operation                   |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|          -|           -|    -|
+    | + alv_MIMD_Pipeline_l_data                |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|  123 (~0%)|   179 (~0%)|    -|
+    |  o l_data                                 |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|          -|           -|    -|
+    | + alv_MIMD_Pipeline_l_operation           |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|  123 (~0%)|   168 (~0%)|    -|
+    |  o l_operation                            |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|          -|           -|    -|
+    | + alv_MIMD_Pipeline_reset                 |     -|  0.00|       58|    580.000|         -|       58|     -|        no|        -|       -|   85 (~0%)|   188 (~0%)|    -|
+    |  o reset                                  |     -|  7.30|       56|    560.000|         8|        1|    50|       yes|        -|       -|          -|           -|    -|
+    | + execute                                 |     -|  0.39|       90|    900.000|         -|       90|     -|        no|        -|  3 (1%)|  3469 (3%)|   2595 (4%)|    -|
+    |  o exe                                    |     -|  7.30|       88|    880.000|        40|        1|    50|       yes|        -|       -|          -|           -|    -|
+    | + alv_MIMD_Pipeline_output1               |     -|  0.00|       58|    580.000|         -|       58|     -|        no|        -|       -|  117 (~0%)|   177 (~0%)|    -|
+    |  o output                                 |     -|  7.30|       56|    560.000|         8|        1|    50|       yes|        -|       -|          -|           -|    -|
+    | + alv_MIMD_Pipeline_output                |     -|  0.00|       58|    580.000|         -|       58|     -|        no|        -|       -|  117 (~0%)|   177 (~0%)|    -|
+    |  o output                                 |     -|  7.30|       56|    560.000|         8|        1|    50|       yes|        -|       -|          -|           -|    -|
+    +-------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem0 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem1 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |                   |
+| m_axi_gmem2 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem3 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | a_1      | 0x10   | 32    | W      | Data signal of a                 |                                                                      |
+| s_axi_control | a_2      | 0x14   | 32    | W      | Data signal of a                 |                                                                      |
+| s_axi_control | b_1      | 0x1c   | 32    | W      | Data signal of b                 |                                                                      |
+| s_axi_control | b_2      | 0x20   | 32    | W      | Data signal of b                 |                                                                      |
+| s_axi_control | c_1      | 0x28   | 32    | W      | Data signal of c                 |                                                                      |
+| s_axi_control | c_2      | 0x2c   | 32    | W      | Data signal of c                 |                                                                      |
+| s_axi_control | op_1     | 0x34   | 32    | W      | Data signal of op                |                                                                      |
+| s_axi_control | op_2     | 0x38   | 32    | W      | Data signal of op                |                                                                      |
+| s_axi_control | selec    | 0x40   | 32    | W      | Data signal of selec             |                                                                      |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| a        | in        | pointer  |
+| b        | unused    | pointer  |
+| c        | out       | pointer  |
+| op       | in        | pointer  |
+| selec    | in        |          |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+---------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                         |
++----------+---------------+-----------+----------+---------------------------------+
+| a        | m_axi_gmem0   | interface |          |                                 |
+| a        | s_axi_control | register  | offset   | name=a_1 offset=0x10 range=32   |
+| a        | s_axi_control | register  | offset   | name=a_2 offset=0x14 range=32   |
+| b        | m_axi_gmem1   | interface |          |                                 |
+| b        | s_axi_control | register  | offset   | name=b_1 offset=0x1c range=32   |
+| b        | s_axi_control | register  | offset   | name=b_2 offset=0x20 range=32   |
+| c        | m_axi_gmem2   | interface |          |                                 |
+| c        | s_axi_control | register  | offset   | name=c_1 offset=0x28 range=32   |
+| c        | s_axi_control | register  | offset   | name=c_2 offset=0x2c range=32   |
+| op       | m_axi_gmem3   | interface |          |                                 |
+| op       | s_axi_control | register  | offset   | name=op_1 offset=0x34 range=32  |
+| op       | s_axi_control | register  | offset   | name=op_2 offset=0x38 range=32  |
+| selec    | s_axi_control | register  |          | name=selec offset=0x40 range=32 |
++----------+---------------+-----------+----------+---------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* All M_AXI Variable Accesses
++--------------+----------+--------------------+-----------+--------------+------------+-------------------------------------------------+
+| HW Interface | Variable | Access Location    | Direction | Burst Status | Resolution | Problem                                         |
++--------------+----------+--------------------+-----------+--------------+------------+-------------------------------------------------+
+| m_axi_gmem0  | a        | HLS/core.cpp:27:14 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem0  | a        | HLS/core.cpp:30:15 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem0  | a        | HLS/core.cpp:60:14 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem0  | a        | HLS/core.cpp:63:15 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem2  | c        | HLS/core.cpp:14:8  | write     | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem2  | c        | HLS/core.cpp:141:7 | write     | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem3  | op       | HLS/core.cpp:46:15 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem3  | op       | HLS/core.cpp:66:16 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
++--------------+----------+--------------------+-----------+--------------+------------+-------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                                      | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++-------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| + alv_MIMD                                | 3   |        |             |     |        |         |
+|  + alv_MIMD_Pipeline_l_data_and_operation | 0   |        |             |     |        |         |
+|    add_ln56_fu_149_p2                     |     |        | add_ln56    | add | fabric | 0       |
+|    add_ln60_fu_167_p2                     |     |        | add_ln60    | add | fabric | 0       |
+|    add_ln66_fu_193_p2                     |     |        | add_ln66    | add | fabric | 0       |
+|  + alv_MIMD_Pipeline_l_data               | 0   |        |             |     |        |         |
+|    add_ln23_fu_116_p2                     |     |        | add_ln23    | add | fabric | 0       |
+|    add_ln27_fu_134_p2                     |     |        | add_ln27    | add | fabric | 0       |
+|  + alv_MIMD_Pipeline_l_operation          | 0   |        |             |     |        |         |
+|    add_ln42_fu_107_p2                     |     |        | add_ln42    | add | fabric | 0       |
+|    add_ln46_fu_125_p2                     |     |        | add_ln46    | add | fabric | 0       |
+|  + alv_MIMD_Pipeline_reset                | 0   |        |             |     |        |         |
+|    add_ln12_fu_127_p2                     |     |        | add_ln12    | add | fabric | 0       |
+|    add_ln14_fu_145_p2                     |     |        | add_ln14    | add | fabric | 0       |
+|  + execute                                | 3   |        |             |     |        |         |
+|    i_2_fu_122_p2                          |     |        | i_2         | add | fabric | 0       |
+|    mul_32s_32s_32_2_1_U8                  | 3   |        | mul_ln122   | mul | auto   | 1       |
+|    sub_ln118_fu_133_p2                    |     |        | sub_ln118   | sub | fabric | 0       |
+|    add_ln114_fu_139_p2                    |     |        | add_ln114   | add | fabric | 0       |
+|    sub_ln110_fu_153_p2                    |     |        | sub_ln110   | sub | fabric | 0       |
+|    sub_ln110_1_fu_222_p2                  |     |        | sub_ln110_1 | sub | fabric | 0       |
+|    sub_ln106_fu_187_p2                    |     |        | sub_ln106   | sub | fabric | 0       |
+|    sub_ln106_1_fu_241_p2                  |     |        | sub_ln106_1 | sub | fabric | 0       |
+|    add_ln94_fu_271_p2                     |     |        | add_ln94    | add | fabric | 0       |
+|    add_ln90_fu_278_p2                     |     |        | add_ln90    | add | fabric | 0       |
+|  + alv_MIMD_Pipeline_output1              | 0   |        |             |     |        |         |
+|    add_ln138_fu_114_p2                    |     |        | add_ln138   | add | fabric | 0       |
+|    add_ln141_fu_132_p2                    |     |        | add_ln141   | add | fabric | 0       |
+|  + alv_MIMD_Pipeline_output               | 0   |        |             |     |        |         |
+|    add_ln138_fu_114_p2                    |     |        | add_ln138   | add | fabric | 0       |
+|    add_ln141_fu_132_p2                    |     |        | add_ln141   | add | fabric | 0       |
++-------------------------------------------+-----+--------+-------------+-----+--------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++------------------------+------------+-----------+------+------+--------+---------------+------+---------+------------------+
+| Name                   | Usage      | Type      | BRAM | URAM | Pragma | Variable      | Impl | Latency | Bitwidth, Depth, |
+|                        |            |           |      |      |        |               |      |         | Banks            |
++------------------------+------------+-----------+------+------+--------+---------------+------+---------+------------------+
+| + alv_MIMD             |            |           | 12   | 0    |        |               |      |         |                  |
+|   control_s_axi_U      | interface  | s_axilite |      |      |        |               |      |         |                  |
+|   gmem0_m_axi_U        | interface  | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem2_m_axi_U        | interface  | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem3_m_axi_U        | interface  | m_axi     | 4    |      |        |               |      |         |                  |
+|   data_a_fifo_U        | fifo array |           |      |      |        | data_a        | srl  | 0       | 32, 2, 1         |
+|   data_b_fifo_U        | fifo array |           |      |      |        | data_b        | srl  | 0       | 32, 2, 1         |
+|   data_result_fifo_U   | fifo array |           |      |      |        | data_result   | srl  | 0       | 32, 2, 1         |
+|   ALU_operation_fifo_U | fifo array |           |      |      |        | ALU_operation | srl  | 0       | 32, 2, 1         |
++------------------------+------------+-----------+------+------+--------+---------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++----------+---------+------------------------------+--------------------------------------------------------------+
+| Type     | Options | Location                     | Messages                                                     |
++----------+---------+------------------------------+--------------------------------------------------------------+
+| dataflow |         | HLS/core.cpp:173 in alv_mimd | Only 'for' loop or function body support the dataflow pragma |
+| dataflow |         | HLS/core.cpp:181 in alv_mimd | Only 'for' loop or function body support the dataflow pragma |
+| dataflow |         | HLS/core.cpp:191 in alv_mimd | Only 'for' loop or function body support the dataflow pragma |
+| dataflow |         | HLS/core.cpp:200 in alv_mimd | Only 'for' loop or function body support the dataflow pragma |
++----------+---------+------------------------------+--------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------+-------------------------------------------------------+--------------------------------------+
+| Type      | Options                                               | Location                             |
++-----------+-------------------------------------------------------+--------------------------------------+
+| pipeline  | II=1                                                  | HLS/core.cpp:25 in load_data         |
+| pipeline  | II=1                                                  | HLS/core.cpp:44 in load_op           |
+| pipeline  | II=1                                                  | HLS/core.cpp:58 in load_data_and_op  |
+| pipeline  | II=1                                                  | HLS/core.cpp:84 in execute           |
+| pipeline  | II=1                                                  | HLS/core.cpp:140 in output           |
+| interface | mode=s_axilite bundle=control port=a                  | HLS/core.cpp:147 in alv_mimd, a      |
+| interface | mode=s_axilite bundle=control port=b                  | HLS/core.cpp:148 in alv_mimd, b      |
+| interface | mode=s_axilite bundle=control port=c                  | HLS/core.cpp:149 in alv_mimd, c      |
+| interface | mode=s_axilite bundle=control port=op                 | HLS/core.cpp:150 in alv_mimd, op     |
+| interface | mode=s_axilite bundle=control port=selec              | HLS/core.cpp:151 in alv_mimd, selec  |
+| interface | mode=s_axilite bundle=control port=return             | HLS/core.cpp:153 in alv_mimd, return |
+| interface | mode=m_axi port=a bundle=gmem0 depth=50 offset=slave  | HLS/core.cpp:155 in alv_mimd, a      |
+| interface | mode=m_axi port=b bundle=gmem1 depth=50 offset=slave  | HLS/core.cpp:156 in alv_mimd, b      |
+| interface | mode=m_axi port=c bundle=gmem2 depth=50 offset=slave  | HLS/core.cpp:157 in alv_mimd, c      |
+| interface | mode=m_axi port=op bundle=gmem3 depth=50 offset=slave | HLS/core.cpp:158 in alv_mimd, op     |
++-----------+-------------------------------------------------------+--------------------------------------+
+
+

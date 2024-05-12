@@ -1,0 +1,260 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: HLS/core.cpp, Line: 145, Column: 0 }
+Function:        _Z8alv_MIMDPViS0_S0_S0_i
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'load_op(int volatile*, hls::stream<int, 0>&)'
+    DebugLoc:        { File: HLS/core.cpp, Line: 41, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)'
+    DebugLoc:        { File: HLS/core.cpp, Line: 145, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: HLS/core.cpp, Line: 145, Column: 0 }
+Function:        _Z8alv_MIMDPViS0_S0_S0_i
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'load_data(int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&)'
+    DebugLoc:        { File: HLS/core.cpp, Line: 22, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)'
+    DebugLoc:        { File: HLS/core.cpp, Line: 145, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: HLS/core.cpp, Line: 145, Column: 0 }
+Function:        _Z8alv_MIMDPViS0_S0_S0_i
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'output(hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: HLS/core.cpp, Line: 137, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)'
+    DebugLoc:        { File: HLS/core.cpp, Line: 145, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: HLS/core.cpp, Line: 145, Column: 0 }
+Function:        _Z8alv_MIMDPViS0_S0_S0_i
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'load_data_and_op(int volatile*, int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)'
+    DebugLoc:        { File: HLS/core.cpp, Line: 55, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)'
+    DebugLoc:        { File: HLS/core.cpp, Line: 145, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: HLS/core.cpp, Line: 145, Column: 0 }
+Function:        _Z8alv_MIMDPViS0_S0_S0_i
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'reset(int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&)'
+    DebugLoc:        { File: HLS/core.cpp, Line: 11, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)'
+    DebugLoc:        { File: HLS/core.cpp, Line: 145, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: HLS/core.cpp, Line: 14, Column: 8 }
+Function:        _Z8alv_MIMDPViS0_S0_S0_i
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: HLS/core.cpp, Line: 14, Column: 8 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.i30.store.3
+  - ArrayName:       c
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - Function:        'alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)'
+    DebugLoc:        { File: HLS/core.cpp, Line: 145, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: HLS/core.cpp, Line: 46, Column: 15 }
+Function:        _Z8alv_MIMDPViS0_S0_S0_i
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      tmp_op
+    DebugLoc:        { File: HLS/core.cpp, Line: 46, Column: 15 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i.load.3
+  - ArrayName:       op
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - Function:        'alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)'
+    DebugLoc:        { File: HLS/core.cpp, Line: 145, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: HLS/core.cpp, Line: 27, Column: 14 }
+Function:        _Z8alv_MIMDPViS0_S0_S0_i
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      tmp_a
+    DebugLoc:        { File: HLS/core.cpp, Line: 27, Column: 14 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i9.load.3
+  - ArrayName:       a
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)'
+    DebugLoc:        { File: HLS/core.cpp, Line: 145, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: HLS/core.cpp, Line: 30, Column: 15 }
+Function:        _Z8alv_MIMDPViS0_S0_S0_i
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      tmp_b
+    DebugLoc:        { File: HLS/core.cpp, Line: 30, Column: 15 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i9.load.6
+  - ArrayName:       a
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)'
+    DebugLoc:        { File: HLS/core.cpp, Line: 145, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: HLS/core.cpp, Line: 141, Column: 7 }
+Function:        _Z8alv_MIMDPViS0_S0_S0_i
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: HLS/core.cpp, Line: 141, Column: 7 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.i14.store.4
+  - ArrayName:       c
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - Function:        'alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)'
+    DebugLoc:        { File: HLS/core.cpp, Line: 145, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: HLS/core.cpp, Line: 60, Column: 14 }
+Function:        _Z8alv_MIMDPViS0_S0_S0_i
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      tmp_a
+    DebugLoc:        { File: HLS/core.cpp, Line: 60, Column: 14 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i19.load.3
+  - ArrayName:       a
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)'
+    DebugLoc:        { File: HLS/core.cpp, Line: 145, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: HLS/core.cpp, Line: 63, Column: 15 }
+Function:        _Z8alv_MIMDPViS0_S0_S0_i
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      tmp_b
+    DebugLoc:        { File: HLS/core.cpp, Line: 63, Column: 15 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i19.load.6
+  - ArrayName:       a
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)'
+    DebugLoc:        { File: HLS/core.cpp, Line: 145, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: HLS/core.cpp, Line: 66, Column: 16 }
+Function:        _Z8alv_MIMDPViS0_S0_S0_i
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      tmp_op
+    DebugLoc:        { File: HLS/core.cpp, Line: 66, Column: 16 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i19.load.10
+  - ArrayName:       op
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - Function:        'alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)'
+    DebugLoc:        { File: HLS/core.cpp, Line: 145, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: HLS/core.cpp, Line: 141, Column: 7 }
+Function:        _Z8alv_MIMDPViS0_S0_S0_i
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: HLS/core.cpp, Line: 141, Column: 7 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.i24.store.4
+  - ArrayName:       c
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - Function:        'alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)'
+    DebugLoc:        { File: HLS/core.cpp, Line: 145, Column: 0 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        reset
+  - String:          '> at '
+  - LoopLoc:         'HLS/core.cpp:12:9'
+  - String:          ' '
+...

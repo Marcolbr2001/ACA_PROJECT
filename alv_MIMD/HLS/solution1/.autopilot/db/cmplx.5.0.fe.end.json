@@ -1,0 +1,143 @@
+{
+    "0": {
+        "name": "alv_MIMD",
+        "file": "core.cpp",
+        "fileloc": "145",
+        "instructions": "62",
+        "total_instructions": "396",
+        "calls": "6 5 4 2 1 4 7 3",
+        "basicblocks": "6",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "1"
+        }
+    },
+    "1": {
+        "name": "alv_MIMD_Pipeline_l_data_and_operation",
+        "file": "HLS\/core.cpp",
+        "fileloc": "193",
+        "instructions": "39",
+        "total_instructions": "39",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "alv_MIMD_Pipeline_output",
+        "file": "HLS\/core.cpp",
+        "fileloc": "185",
+        "instructions": "27",
+        "total_instructions": "27",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "alv_MIMD_Pipeline_reset",
+        "file": "HLS\/core.cpp",
+        "fileloc": "202",
+        "instructions": "29",
+        "total_instructions": "29",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "execute",
+        "file": "core.cpp",
+        "fileloc": "79",
+        "instructions": "79",
+        "total_instructions": "79",
+        "calls": "",
+        "basicblocks": "16",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "alv_MIMD_Pipeline_l_data",
+        "file": "HLS\/core.cpp",
+        "fileloc": "183",
+        "instructions": "28",
+        "total_instructions": "28",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "alv_MIMD_Pipeline_l_operation",
+        "file": "HLS\/core.cpp",
+        "fileloc": "175",
+        "instructions": "26",
+        "total_instructions": "26",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "7": {
+        "name": "alv_MIMD_Pipeline_output1",
+        "file": "HLS\/core.cpp",
+        "fileloc": "195",
+        "instructions": "27",
+        "total_instructions": "27",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}
