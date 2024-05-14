@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'execute'" level="0">
-<item name = "Date">Sun May 12 19:57:49 2024
+<item name = "Date">Tue May 14 23:14:49 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">HLS</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">90, 90, 0.900 us, 0.900 us, 90, 90, no</column>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- exe">88, 88, 40, 1, 1, 50, yes</column>
+<column name="- exe">?, ?, 39, 1, 1, ?, yes</column>
 </table>
 </item>
 </section>

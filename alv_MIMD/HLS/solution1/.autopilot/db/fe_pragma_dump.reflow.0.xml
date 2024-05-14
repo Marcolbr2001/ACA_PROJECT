@@ -1,21 +1,28 @@
 <pragmas>
-<pragma file="HLS/core.cpp" line="25" pragmaType="pipeline" parentfunction="load_data" off="0" ii="1" rewind="0" style=""/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<int, 0>::stream()" off="0" region="0" recursive="0"/>
-<pragma file="HLS/core.cpp" line="58" pragmaType="pipeline" parentfunction="load_data_and_op" off="0" ii="1" rewind="0" style=""/>
+<pragma file="HLS/core.cpp" line="37" pragmaType="pipeline" parentfunction="load_data_a" off="0" ii="1" rewind="0" style=""/>
+<pragma file="HLS/core.cpp" line="89" pragmaType="pipeline" parentfunction="execute" off="0" ii="1" rewind="0" style=""/>
+<pragma file="HLS/core.cpp" line="174" pragmaType="dataflow" parentfunction="lod_exe_wb" disable_start_propagation="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="HLS/core.cpp" line="49" pragmaType="pipeline" parentfunction="load_data_b" off="0" ii="1" rewind="0" style=""/>
+<pragma file="HLS/core.cpp" line="184" pragmaType="interface" parentfunction="alv_MIMD" mode="s_axilite" port="a" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="HLS/core.cpp" line="185" pragmaType="interface" parentfunction="alv_MIMD" mode="s_axilite" port="b" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="HLS/core.cpp" line="186" pragmaType="interface" parentfunction="alv_MIMD" mode="s_axilite" port="c" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="HLS/core.cpp" line="187" pragmaType="interface" parentfunction="alv_MIMD" mode="s_axilite" port="op" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="HLS/core.cpp" line="188" pragmaType="interface" parentfunction="alv_MIMD" mode="s_axilite" port="selec" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="HLS/core.cpp" line="190" pragmaType="interface" parentfunction="alv_MIMD" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="HLS/core.cpp" line="192" pragmaType="interface" parentfunction="alv_MIMD" mode="m_axi" port="a" bundle="gmem0" offset="slave" name="" depth="50" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="HLS/core.cpp" line="193" pragmaType="interface" parentfunction="alv_MIMD" mode="m_axi" port="b" bundle="gmem1" offset="slave" name="" depth="50" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="HLS/core.cpp" line="194" pragmaType="interface" parentfunction="alv_MIMD" mode="m_axi" port="c" bundle="gmem2" offset="slave" name="" depth="50" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="HLS/core.cpp" line="195" pragmaType="interface" parentfunction="alv_MIMD" mode="m_axi" port="op" bundle="gmem3" offset="slave" name="" depth="50" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="HLS/core.cpp" line="198" pragmaType="stream" parentfunction="alv_MIMD" depth="50" type="fifo" variable="_ZZ8alv_MIMDPViS0_S0_S0_iE6data_a"/>
+<pragma file="HLS/core.cpp" line="202" pragmaType="stream" parentfunction="alv_MIMD" depth="50" type="fifo" variable="_ZZ8alv_MIMDPViS0_S0_S0_iE6data_b"/>
+<pragma file="HLS/core.cpp" line="206" pragmaType="stream" parentfunction="alv_MIMD" depth="50" type="fifo" variable="_ZZ8alv_MIMDPViS0_S0_S0_iE11data_result"/>
+<pragma file="HLS/core.cpp" line="210" pragmaType="stream" parentfunction="alv_MIMD" depth="50" type="fifo" variable="_ZZ8alv_MIMDPViS0_S0_S0_iE13ALU_operation"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
-<pragma file="HLS/core.cpp" line="147" pragmaType="interface" parentfunction="alv_MIMD" mode="s_axilite" port="a" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="HLS/core.cpp" line="148" pragmaType="interface" parentfunction="alv_MIMD" mode="s_axilite" port="b" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="HLS/core.cpp" line="149" pragmaType="interface" parentfunction="alv_MIMD" mode="s_axilite" port="c" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="HLS/core.cpp" line="150" pragmaType="interface" parentfunction="alv_MIMD" mode="s_axilite" port="op" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="HLS/core.cpp" line="151" pragmaType="interface" parentfunction="alv_MIMD" mode="s_axilite" port="selec" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="HLS/core.cpp" line="153" pragmaType="interface" parentfunction="alv_MIMD" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="HLS/core.cpp" line="155" pragmaType="interface" parentfunction="alv_MIMD" mode="m_axi" port="a" bundle="gmem0" offset="slave" name="" depth="50" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="HLS/core.cpp" line="156" pragmaType="interface" parentfunction="alv_MIMD" mode="m_axi" port="b" bundle="gmem1" offset="slave" name="" depth="50" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="HLS/core.cpp" line="157" pragmaType="interface" parentfunction="alv_MIMD" mode="m_axi" port="c" bundle="gmem2" offset="slave" name="" depth="50" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="HLS/core.cpp" line="158" pragmaType="interface" parentfunction="alv_MIMD" mode="m_axi" port="op" bundle="gmem3" offset="slave" name="" depth="50" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="HLS/core.cpp" line="140" pragmaType="pipeline" parentfunction="output" off="0" ii="1" rewind="0" style=""/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
-<pragma file="HLS/core.cpp" line="84" pragmaType="pipeline" parentfunction="execute" off="0" ii="1" rewind="0" style=""/>
-<pragma file="HLS/core.cpp" line="44" pragmaType="pipeline" parentfunction="load_op" off="0" ii="1" rewind="0" style=""/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="HLS/core.cpp" line="154" pragmaType="pipeline" parentfunction="write_back" off="0" ii="1" rewind="0" style=""/>
+<pragma file="HLS/core.cpp" line="63" pragmaType="pipeline" parentfunction="load_op" off="0" ii="1" rewind="0" style=""/>
+<pragma file="HLS/core.cpp" line="75" pragmaType="inline" parentfunction="load_data_and_op" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<int, 0>::stream(char const*)" off="0" region="0" recursive="0"/>
 </pragmas>

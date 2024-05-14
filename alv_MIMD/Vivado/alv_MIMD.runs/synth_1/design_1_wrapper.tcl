@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 7
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -90,14 +91,14 @@ set_property ip_output_repo c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Viva
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+read_vhdl -library xil_defaultlib C:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
 add_files C:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_0/constraints/alv_MIMD_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/constraints/alv_MIMD_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc]
 set_property used_in_synthesis false [get_files -all c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_clocks.xdc]
@@ -128,6 +129,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

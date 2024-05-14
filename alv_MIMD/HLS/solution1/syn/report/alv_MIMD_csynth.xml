@@ -22,28 +22,28 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>60</Best-caseLatency>
-<Average-caseLatency>138</Average-caseLatency>
-<Worst-caseLatency>214</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.600 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>1.380 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>2.140 us</Worst-caseRealTimeLatency>
-<Interval-min>61</Interval-min>
-<Interval-max>215</Interval-max>
+<Best-caseLatency>undef</Best-caseLatency>
+<Average-caseLatency>undef</Average-caseLatency>
+<Worst-caseLatency>undef</Worst-caseLatency>
+<Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+<Interval-min>undef</Interval-min>
+<Interval-max>undef</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>HLS/core.cpp:145</SourceLocation>
+<SourceLocation>HLS/core.cpp:182</SourceLocation>
 </SummaryOfViolations>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>12</BRAM_18K>
+<BRAM_18K>24</BRAM_18K>
 <DSP>3</DSP>
-<FF>7770</FF>
-<LUT>7311</LUT>
+<FF>8766</FF>
+<LUT>7491</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

@@ -1,95 +1,8 @@
 {
-    "0": {
-        "name": "alv_MIMD",
-        "file": "core.cpp",
-        "fileloc": "145",
-        "instructions": "62",
-        "total_instructions": "396",
-        "calls": "6 5 4 2 1 4 7 3",
-        "basicblocks": "6",
-        "loads": {
-            "L": "1"
-        },
-        "stores": {
-            "L": "1"
-        }
-    },
     "1": {
-        "name": "alv_MIMD_Pipeline_l_data_and_operation",
+        "name": "load_data_b",
         "file": "HLS\/core.cpp",
-        "fileloc": "193",
-        "instructions": "39",
-        "total_instructions": "39",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "L": "1"
-        },
-        "stores": {
-            "L": "2"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "2": {
-        "name": "alv_MIMD_Pipeline_output",
-        "file": "HLS\/core.cpp",
-        "fileloc": "185",
-        "instructions": "27",
-        "total_instructions": "27",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "L": "1"
-        },
-        "stores": {
-            "L": "2"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "3": {
-        "name": "alv_MIMD_Pipeline_reset",
-        "file": "HLS\/core.cpp",
-        "fileloc": "202",
-        "instructions": "29",
-        "total_instructions": "29",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "L": "1"
-        },
-        "stores": {
-            "L": "2"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "4": {
-        "name": "execute",
-        "file": "core.cpp",
-        "fileloc": "79",
-        "instructions": "79",
-        "total_instructions": "79",
-        "calls": "",
-        "basicblocks": "16",
-        "loads": {
-            "L": "1"
-        },
-        "stores": {
-            "L": "2"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "5": {
-        "name": "alv_MIMD_Pipeline_l_data",
-        "file": "HLS\/core.cpp",
-        "fileloc": "183",
+        "fileloc": "47",
         "instructions": "28",
         "total_instructions": "28",
         "calls": "",
@@ -104,12 +17,21 @@
             "L": "1"
         }
     },
-    "6": {
-        "name": "alv_MIMD_Pipeline_l_operation",
+    "0": {
+        "name": "alv_MIMD",
+        "file": "core.cpp",
+        "fileloc": "182",
+        "instructions": "35",
+        "total_instructions": "277",
+        "calls": "4",
+        "basicblocks": "3"
+    },
+    "2": {
+        "name": "load_op",
         "file": "HLS\/core.cpp",
-        "fileloc": "175",
-        "instructions": "26",
-        "total_instructions": "26",
+        "fileloc": "61",
+        "instructions": "28",
+        "total_instructions": "28",
         "calls": "",
         "basicblocks": "4",
         "loads": {
@@ -122,12 +44,12 @@
             "L": "1"
         }
     },
-    "7": {
-        "name": "alv_MIMD_Pipeline_output1",
+    "3": {
+        "name": "load_data_a",
         "file": "HLS\/core.cpp",
-        "fileloc": "195",
-        "instructions": "27",
-        "total_instructions": "27",
+        "fileloc": "35",
+        "instructions": "28",
+        "total_instructions": "28",
         "calls": "",
         "basicblocks": "4",
         "loads": {
@@ -139,5 +61,62 @@
         "loops": {
             "L": "1"
         }
+    },
+    "4": {
+        "name": "lod_exe_wb",
+        "file": "core.cpp",
+        "fileloc": "171",
+        "instructions": "27",
+        "total_instructions": "242",
+        "calls": "8 2 3 1 6 7",
+        "basicblocks": "1"
+    },
+    "5": {
+        "name": "write_back_Pipeline_write_back",
+        "file": "HLS\/core.cpp",
+        "fileloc": "151",
+        "instructions": "24",
+        "total_instructions": "24",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "execute",
+        "file": "HLS\/core.cpp",
+        "fileloc": "87",
+        "instructions": "93",
+        "total_instructions": "93",
+        "calls": "",
+        "basicblocks": "16",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "7": {
+        "name": "write_back",
+        "file": "HLS\/core.cpp",
+        "fileloc": "152",
+        "instructions": "10",
+        "total_instructions": "34",
+        "calls": "5",
+        "basicblocks": "1"
+    },
+    "8": {
+        "name": "entry_proc",
+        "file": "core.cpp",
+        "fileloc": "0",
+        "instructions": "4",
+        "total_instructions": "4",
+        "calls": "",
+        "basicblocks": "1"
     }
 }

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1715721291273">
+  <ports id="1" name="gmem3" type="PortType" coreId="1702129263" bitwidth="32" iftype="IfTypeFifo">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="op" type="PortType" coreId="1702129263" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="gmem0" type="PortType" coreId="1702129263" bitwidth="32" iftype="IfTypeFifo">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="4" name="a" type="PortType" coreId="315" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="gmem1" type="PortType" coreId="3" bitwidth="32" iftype="IfTypeFifo">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="6" name="b" type="PortType" coreId="1701603700" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="7" name="gmem2" type="PortType" coreId="540767087" bitwidth="32" direction="DirOut" iftype="IfTypeFifo">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="8" name="c" type="PortType" coreId="1953392928" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="43" source_obj="//@ports.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="45" source_obj="//@ports.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="47" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="49" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="54" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="55" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="58" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="59" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="62" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="63" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="66" source_obj="//@ports.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="67" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="72" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@ports.6"/>
+  <edges id="73" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="74" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="75" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="76" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="77" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="78" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="79" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="80" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="81" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="327" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="328" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="329" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="330" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="331" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="332" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <regions anchor_node="-1" region_type="16" typeName="Dataflow" iiViolation="" id="172" RegionName="lod_exe_wb">
+    <basic_blocks id="40" name="lod_exe_wb" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="c_read" coreId="1394634343" bitwidth="64" opcode="read" nodeLabel="3.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <dataInputObjs>c</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="b_read" coreId="1869440365" bitwidth="64" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <dataInputObjs>b</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="a_read" coreId="572669294" bitwidth="64" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <dataInputObjs>a</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="op_read" coreId="1279795773" bitwidth="64" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <dataInputObjs>op</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="c_c" rtlName="c_c_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="_ln0" rtlName="entry_proc_U0" coreId="1113268797" opcode="call" nodeLabel="3.0" m_display="0" m_delay="3.63" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>entry_proc</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="_ln77" lineNumber="77" fileName="HLS/core.cpp" fileDirectory="../." rtlName="load_op_U0" coreId="1936018748" contextFuncName="load_data_and_op" opcode="call" nodeLatency="1" m_display="0" m_delay="3.52" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS/core.cpp" linenumber="77" fileDirectory="C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD" functionName="load_data_and_op"/>
+        <inlineStackInfo fileName="HLS/core.cpp" linenumber="176" fileDirectory="C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD" functionName="lod_exe_wb"/>
+        <dataInputObjs>gmem3</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <constName>load_op</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="_ln78" lineNumber="78" fileName="HLS/core.cpp" fileDirectory="../." rtlName="load_data_a_U0" coreId="1769234802" contextFuncName="load_data_and_op" opcode="call" nodeLatency="1" m_display="0" m_delay="3.52" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS/core.cpp" linenumber="78" fileDirectory="C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD" functionName="load_data_and_op"/>
+        <inlineStackInfo fileName="HLS/core.cpp" linenumber="176" fileDirectory="C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD" functionName="lod_exe_wb"/>
+        <dataInputObjs>gmem0</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <constName>load_data_a</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="_ln79" lineNumber="79" fileName="HLS/core.cpp" fileDirectory="../." rtlName="load_data_b_U0" coreId="1819243365" contextFuncName="load_data_and_op" opcode="call" nodeLatency="1" m_display="0" m_delay="3.52" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS/core.cpp" linenumber="79" fileDirectory="C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD" functionName="load_data_and_op"/>
+        <inlineStackInfo fileName="HLS/core.cpp" linenumber="176" fileDirectory="C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD" functionName="lod_exe_wb"/>
+        <dataInputObjs>gmem1</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <constName>load_data_b</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="_ln177" lineNumber="177" fileName="HLS/core.cpp" fileDirectory="../." rtlName="execute_U0" coreId="1936018748" contextFuncName="lod_exe_wb" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS/core.cpp" linenumber="177" fileDirectory="C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD" functionName="lod_exe_wb"/>
+        <constName>execute</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="_ln178" lineNumber="178" fileName="HLS/core.cpp" fileDirectory="../." rtlName="write_back_U0" coreId="1663052132" contextFuncName="lod_exe_wb" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS/core.cpp" linenumber="178" fileDirectory="C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD" functionName="lod_exe_wb"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>gmem2</dataOutputObjs>
+        <constName>write_back</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="_ln180" lineNumber="180" fileName="HLS/core.cpp" fileDirectory="../." coreId="757935405" contextFuncName="lod_exe_wb" opcode="ret" nodeLabel="5.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS/core.cpp" linenumber="180" fileDirectory="C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD" functionName="lod_exe_wb"/>
+      </node_objs>
+      <fileValidLineNumbers fileName="HLS/core.cpp">
+        <validLinenumbers>77</validLinenumbers>
+        <validLinenumbers>78</validLinenumbers>
+        <validLinenumbers>79</validLinenumbers>
+        <validLinenumbers>177</validLinenumbers>
+        <validLinenumbers>178</validLinenumbers>
+        <validLinenumbers>180</validLinenumbers>
+        <validLinenumbers>176</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <regnodes realName="a_read_reg_181">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="c_c_reg_191">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="b_read_reg_176">
+    <nodeIds>14</nodeIds>
+  </regnodes>
+  <regnodes realName="op_read_reg_186">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <expressionNodes realName="c_c_fu_90">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_write_back_fu_167">
+    <nodeIds>38</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_load_op_fu_118">
+    <nodeIds>34</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_execute_fu_148">
+    <nodeIds>37</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_load_data_a_fu_128">
+    <nodeIds>35</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="call_ln0_entry_proc_fu_160">
+    <nodeIds>33</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_load_data_b_fu_138">
+    <nodeIds>36</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="b_read_read_fu_94">
+    <nodeIds>14</nodeIds>
+  </ioNodes>
+  <ioNodes realName="c_read_read_fu_112">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <ioNodes realName="op_read_read_fu_106">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioNodes realName="a_read_read_fu_100">
+    <nodeIds>15</nodeIds>
+  </ioNodes>
+  <ioPorts name="a">
+    <contents name="read">
+      <nodeIds>15</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="b">
+    <contents name="read">
+      <nodeIds>14</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="c">
+    <contents name="read">
+      <nodeIds>13</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="gmem0">
+    <contents name="call">
+      <nodeIds>35</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="gmem1">
+    <contents name="call">
+      <nodeIds>36</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="gmem2">
+    <contents name="call">
+      <nodeIds>38</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="gmem3">
+    <contents name="call">
+      <nodeIds>34</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="op">
+    <contents name="read">
+      <nodeIds>16</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="34" stage="2" latency="2"/>
+      <operations id="35" stage="2" latency="2"/>
+      <operations id="36" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="34" stage="1" latency="2"/>
+      <operations id="35" stage="1" latency="2"/>
+      <operations id="36" stage="1" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="37" stage="2" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="38" stage="2" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="2"/>
+      <operations id="39" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="lod_exe_wb" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mIsDfPipe="true">
+      <basicBlocks>40</basicBlocks>
+      <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.1/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.2/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.3/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.5/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.1/@sink.0/@inst">
+        <processe_list name="entry_proc_U0" ssdmobj_id="33">
+          <pins>
+            <port name="c" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_73" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="entry_proc_U0" ssdmobj_id="33" object_id="_77"/>
+          </pins>
+        </processe_list>
+        <processe_list name="load_op_U0" ssdmobj_id="34">
+          <pins>
+            <port name="gmem3" type="BUSType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_66" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="load_op_U0" ssdmobj_id="34" object_id="_81"/>
+          </pins>
+          <pins>
+            <port name="op" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_67" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="load_op_U0" ssdmobj_id="34" object_id="_81"/>
+          </pins>
+        </processe_list>
+        <processe_list name="load_data_a_U0" ssdmobj_id="35">
+          <pins>
+            <port name="gmem0" type="BUSType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_68" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="load_data_a_U0" ssdmobj_id="35" object_id="_87"/>
+          </pins>
+          <pins>
+            <port name="a" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_69" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="load_data_a_U0" ssdmobj_id="35" object_id="_87"/>
+          </pins>
+        </processe_list>
+        <processe_list name="load_data_b_U0" ssdmobj_id="36">
+          <pins>
+            <port name="gmem1" type="BUSType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_70" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="load_data_b_U0" ssdmobj_id="36" object_id="_93"/>
+          </pins>
+          <pins>
+            <port name="b" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_71" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="load_data_b_U0" ssdmobj_id="36" object_id="_93"/>
+          </pins>
+        </processe_list>
+        <processe_list name="execute_U0" ssdmobj_id="37"/>
+        <processe_list name="write_back_U0" ssdmobj_id="38">
+          <pins>
+            <port name="gmem2" dir="DirOut" type="BUSType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_72" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="write_back_U0" ssdmobj_id="38" object_id="_100"/>
+          </pins>
+        </processe_list>
+        <channel_list depth="4" bitwidth="64" suggested_type="2" suggested_depth="4" name="c_c" ssdmobj_id="17" bram_cost="0" uram_cost="0" storage_size="64 4 1">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="entry_proc_U0" ssdmobj_id="33" object_id="_77"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="write_back_U0" ssdmobj_id="38" object_id="_100"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="50" bitwidth="32" suggested_type="0" suggested_depth="50" name="ALU_operation" ssdmobj_id="9" bram_cost="2" uram_cost="0" storage_size="32 50 1">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="load_op_U0" ssdmobj_id="34" object_id="_81"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="execute_U0" ssdmobj_id="37" object_id="_111"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="50" bitwidth="32" suggested_type="0" suggested_depth="50" name="data_a" ssdmobj_id="10" bram_cost="2" uram_cost="0" storage_size="32 50 1">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="load_data_a_U0" ssdmobj_id="35" object_id="_87"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="execute_U0" ssdmobj_id="37" object_id="_111"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="50" bitwidth="32" suggested_type="0" suggested_depth="50" name="data_b" ssdmobj_id="11" bram_cost="2" uram_cost="0" storage_size="32 50 1">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="load_data_b_U0" ssdmobj_id="36" object_id="_93"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="execute_U0" ssdmobj_id="37" object_id="_111"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="50" bitwidth="32" suggested_type="0" suggested_depth="50" name="data_result" ssdmobj_id="12" bram_cost="2" uram_cost="0" storage_size="32 50 1">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="execute_U0" ssdmobj_id="37" object_id="_111"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="write_back_U0" ssdmobj_id="38" object_id="_100"/>
+          </sink>
+        </channel_list>
+      </mDfPipe>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

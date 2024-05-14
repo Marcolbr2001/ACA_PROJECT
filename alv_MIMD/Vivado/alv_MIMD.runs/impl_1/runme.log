@@ -21,7 +21,7 @@ Command: link_design -top design_1_wrapper -part xc7z020clg400-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7z020clg400-1
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_0/design_1_alv_MIMD_0_0.dcp' for cell 'design_1_i/alv_MIMD_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1.dcp' for cell 'design_1_i/alv_MIMD_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.dcp' for cell 'design_1_i/rst_ps7_0_100M'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1.dcp' for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_pc'
@@ -33,8 +33,8 @@ INFO: [Project 1-454] Reading design checkpoint 'c:/Users/marco/Desktop/NECST/NL
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_auto_pc_4/design_1_auto_pc_4.dcp' for cell 'design_1_i/axi_mem_intercon_3/s00_couplers/auto_pc'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_auto_us_3/design_1_auto_us_3.dcp' for cell 'design_1_i/axi_mem_intercon_3/s00_couplers/auto_us'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.280 . Memory (MB): peak = 1003.012 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 729 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.274 . Memory (MB): peak = 1004.180 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 764 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2023.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -115,7 +115,7 @@ Finished Parsing XDC File [c:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivad
 INFO: [Project 1-1714] 5 XPM XDC files have been applied to the design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-1687] 60 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1161.250 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1161.820 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5 instances were transformed.
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
@@ -124,7 +124,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 The system cannot find the path specified.
 24 Infos, 60 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1161.250 ; gain = 648.738
+link_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1161.820 ; gain = 650.457
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -135,119 +135,157 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.660 . Memory (MB): peak = 1191.461 ; gain = 30.211
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.623 . Memory (MB): peak = 1190.945 ; gain = 29.125
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 6ef1eaf8
+Ending Cache Timing Information Task | Checksum: 10a17cb1a
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1708.438 ; gain = 516.977
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1710.305 ; gain = 519.359
 
 Starting Logic Optimization Task
 
 Phase 1 Initialization
 
 Phase 1.1 Core Generation And Design Setup
-Phase 1.1 Core Generation And Design Setup | Checksum: 6ef1eaf8
+Phase 1.1 Core Generation And Design Setup | Checksum: 10a17cb1a
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2084.430 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2079.234 ; gain = 0.000
 
 Phase 1.2 Setup Constraints And Sort Netlist
-Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 6ef1eaf8
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 10a17cb1a
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2084.430 ; gain = 0.000
-Phase 1 Initialization | Checksum: 6ef1eaf8
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2079.234 ; gain = 0.000
+Phase 1 Initialization | Checksum: 10a17cb1a
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2084.430 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2079.234 ; gain = 0.000
 
 Phase 2 Timer Update And Timing Data Collection
 
 Phase 2.1 Timer Update
-Phase 2.1 Timer Update | Checksum: 6ef1eaf8
+Phase 2.1 Timer Update | Checksum: 10a17cb1a
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.223 . Memory (MB): peak = 2084.430 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.226 . Memory (MB): peak = 2079.234 ; gain = 0.000
 
 Phase 2.2 Timing Data Collection
-Phase 2.2 Timing Data Collection | Checksum: 6ef1eaf8
+Phase 2.2 Timing Data Collection | Checksum: 10a17cb1a
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.243 . Memory (MB): peak = 2084.430 ; gain = 0.000
-Phase 2 Timer Update And Timing Data Collection | Checksum: 6ef1eaf8
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.246 . Memory (MB): peak = 2079.234 ; gain = 0.000
+Phase 2 Timer Update And Timing Data Collection | Checksum: 10a17cb1a
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.246 . Memory (MB): peak = 2084.430 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.248 . Memory (MB): peak = 2079.234 ; gain = 0.000
 
 Phase 3 Retarget
-INFO: [Opt 31-1566] Pulled 10 inverters resulting in an inversion of 68 pins
-INFO: [Opt 31-138] Pushed 1 inverter(s) to 4 load pin(s).
+INFO: [Opt 31-1566] Pulled 8 inverters resulting in an inversion of 38 pins
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 9 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 3 Retarget | Checksum: 176f3c1f5
+Phase 3 Retarget | Checksum: eb8755a1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.616 . Memory (MB): peak = 2084.430 ; gain = 0.000
-Retarget | Checksum: 176f3c1f5
-INFO: [Opt 31-389] Phase Retarget created 298 cells and removed 374 cells
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.491 . Memory (MB): peak = 2079.234 ; gain = 0.000
+Retarget | Checksum: eb8755a1
+INFO: [Opt 31-389] Phase Retarget created 305 cells and removed 378 cells
 INFO: [Opt 31-1021] In phase Retarget, 45 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 Constant propagation
-INFO: [Opt 31-138] Pushed 8 inverter(s) to 16 load pin(s).
-Phase 4 Constant propagation | Checksum: 1580165e3
+INFO: [Opt 31-138] Pushed 11 inverter(s) to 21 load pin(s).
+Phase 4 Constant propagation | Checksum: 5cf6019a
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.919 . Memory (MB): peak = 2084.430 ; gain = 0.000
-Constant propagation | Checksum: 1580165e3
-INFO: [Opt 31-389] Phase Constant propagation created 379 cells and removed 1985 cells
-INFO: [Opt 31-1021] In phase Constant propagation, 46 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.737 . Memory (MB): peak = 2079.234 ; gain = 0.000
+Constant propagation | Checksum: 5cf6019a
+INFO: [Opt 31-389] Phase Constant propagation created 386 cells and removed 1710 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 45 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 5 Sweep
-Phase 5 Sweep | Checksum: 17bab341d
+Phase 5 Sweep | Checksum: 8d503362
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 2084.430 ; gain = 0.000
-Sweep | Checksum: 17bab341d
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 2828 cells
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2079.234 ; gain = 0.000
+Sweep | Checksum: 8d503362
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 3071 cells
 INFO: [Opt 31-1021] In phase Sweep, 160 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 6 BUFG optimization
-Phase 6 BUFG optimization | Checksum: 17bab341d
+Phase 6 BUFG optimization | Checksum: 8d503362
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2084.430 ; gain = 0.000
-BUFG optimization | Checksum: 17bab341d
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2079.234 ; gain = 0.000
+BUFG optimization | Checksum: 8d503362
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 7 Shift Register Optimization
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/bus_read/fifo_burst/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[14][0]_srl15 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][9]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][8]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][7]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][6]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][64]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][1]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][20]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][5]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][21]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][22]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][23]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][24]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][25]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][26]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][27]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][28]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][29]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][2]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][4]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][30]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][31]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][32]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][33]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][34]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][3]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][0]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][10]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][11]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][12]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][13]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][14]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][15]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][16]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][17]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][18]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem0_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][19]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/fifo_burst/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[14][0]_srl15__1 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/fifo_burst/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[14][0]_srl15__0 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/fifo_burst/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[14][0]_srl15 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][10]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][11]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][12]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][13]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][14]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][15]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][16]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][17]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][18]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][19]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][1]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][20]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][21]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][22]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][23]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][24]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][25]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][26]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][27]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][28]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][29]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][2]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][30]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][31]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][32]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][33]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][34]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][35]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][36]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][9]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][8]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][7]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][3]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][6]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][5]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/c_c_U/U_alv_MIMD_fifo_w64_d4_S_ShiftReg/SRL_SIG_reg[3][4]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][9]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][8]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][7]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][6]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][64]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][1]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][20]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][5]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][21]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][22]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][23]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][24]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][25]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][26]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][27]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][28]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][29]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][2]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][4]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][30]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][31]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][32]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][33]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][34]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][3]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][0]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][10]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][11]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][12]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][13]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][14]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][15]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][16]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][17]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][18]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][19]_srl6 due to none static srl address bits
 WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[2][9]_srl3 due to none static srl address bits
 WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[2][8]_srl3 due to none static srl address bits
 WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[2][7]_srl3 due to none static srl address bits
@@ -273,78 +311,40 @@ WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/g
 WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[2][33]_srl3 due to none static srl address bits
 WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[2][34]_srl3 due to none static srl address bits
 WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[2][3]_srl3 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[2][0]_srl3 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[2][10]_srl3 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[2][11]_srl3 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[2][12]_srl3 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[2][13]_srl3 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[2][14]_srl3 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[2][15]_srl3 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[2][16]_srl3 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[2][17]_srl3 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[2][18]_srl3 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/store_unit/fifo_wreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[2][19]_srl3 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/store_unit/fifo_wrsp/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[14][0]_srl15 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/bus_write/fifo_burst/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[14][0]_srl15 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/bus_write/fifo_burst/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[14][1]_srl15 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/bus_write/fifo_burst/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[14][2]_srl15 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/bus_write/fifo_burst/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[14][3]_srl15 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/bus_write/fifo_resp/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[14][0]_srl15 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/bus_read/fifo_burst/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[14][0]_srl15 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][9]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][8]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][7]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][6]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][64]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][1]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][20]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][5]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][21]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][22]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][23]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][24]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][25]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][26]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][27]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][28]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][29]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][2]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][4]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from design_1_i/alv_MIMD_0/U0/gmem3_m_axi_U/load_unit/fifo_rreq/fifo_srl_gen.U_ffo_srl/fifo_depth_gt1_gen.mem_reg[5][30]_srl6 due to none static srl address bits
 INFO: [Common 17-14] Message 'Opt 31-1131' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 7 Shift Register Optimization | Checksum: 17bab341d
+Phase 7 Shift Register Optimization | Checksum: 8d503362
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2084.430 ; gain = 0.000
-Shift Register Optimization | Checksum: 17bab341d
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2079.234 ; gain = 0.000
+Shift Register Optimization | Checksum: 8d503362
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 8 Post Processing Netlist
-Phase 8 Post Processing Netlist | Checksum: 164c6472a
+Phase 8 Post Processing Netlist | Checksum: def1ab14
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2084.430 ; gain = 0.000
-Post Processing Netlist | Checksum: 164c6472a
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2079.234 ; gain = 0.000
+Post Processing Netlist | Checksum: def1ab14
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Post Processing Netlist, 55 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 9 Finalization
 
 Phase 9.1 Finalizing Design Cores and Updating Shapes
-Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 94600249
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: fa96a232
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2084.430 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2079.234 ; gain = 0.000
 
 Phase 9.2 Verifying Netlist Connectivity
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2084.430 ; gain = 0.000
-Phase 9.2 Verifying Netlist Connectivity | Checksum: 94600249
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2079.234 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: fa96a232
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2084.430 ; gain = 0.000
-Phase 9 Finalization | Checksum: 94600249
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2079.234 ; gain = 0.000
+Phase 9 Finalization | Checksum: fa96a232
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2084.430 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2079.234 ; gain = 0.000
 Opt_design Change Summary
 =========================
 
@@ -352,20 +352,20 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |             298  |             374  |                                             45  |
-|  Constant propagation         |             379  |            1985  |                                             46  |
-|  Sweep                        |               0  |            2828  |                                            160  |
+|  Retarget                     |             305  |             378  |                                             45  |
+|  Constant propagation         |             386  |            1710  |                                             45  |
+|  Sweep                        |               0  |            3071  |                                            160  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
 |  Post Processing Netlist      |               0  |               0  |                                             55  |
 -------------------------------------------------------------------------------------------------------------------------
 
 
-Ending Logic Optimization Task | Checksum: 94600249
+Ending Logic Optimization Task | Checksum: fa96a232
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2084.430 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2079.234 ; gain = 0.000
 INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
-Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2084.430 ; gain = 0.000
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2079.234 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -378,30 +378,38 @@ Finished Running Vector-less Activity Propagation
 
 
 Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 3 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 8 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 2 newly gated: 2 Total Ports: 6
-Ending PowerOpt Patch Enables Task | Checksum: 15397936b
+Number of BRAM Ports augmented: 8 newly gated: 6 Total Ports: 16
+Ending PowerOpt Patch Enables Task | Checksum: 1647e6a33
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 15397936b
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1647e6a33
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2207.609 ; gain = 123.180
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2205.438 ; gain = 126.203
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 15397936b
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 125153ef5
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.630 . Memory (MB): peak = 2205.438 ; gain = 0.000
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 125153ef5
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 11ae27dac
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 125153ef5
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2205.438 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-53 Infos, 160 Warnings, 0 Critical Warnings and 0 Errors encountered.
+55 Infos, 160 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2207.609 ; gain = 1046.359
+opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2205.438 ; gain = 1043.617
 INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
 Command: report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
@@ -409,16 +417,16 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.runs/impl_1/design_1_wrapper_drc_opted.rpt.
 report_drc completed successfully
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2205.438 ; gain = 0.000
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 2205.438 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -438,59 +446,59 @@ Starting Placer Task
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 9534a46b
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: a481898c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 62a65292
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: b5d22698
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.919 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.926 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 16ed7a321
+Phase 1.3 Build Placer Netlist Model | Checksum: 6eed104d
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 16ed7a321
+Phase 1.4 Constrain Clocks/Macros | Checksum: 6eed104d
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 16ed7a321
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 6eed104d
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 1732e8de3
+Phase 2.1 Floorplanning | Checksum: f60c0842
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: b84f9a98
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 52eb9594
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Phase 2.3 Post-Processing in Floorplanning
-Phase 2.3 Post-Processing in Floorplanning | Checksum: b84f9a98
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 52eb9594
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Phase 2.4 Global Placement Core
 
 Phase 2.4.1 UpdateTiming Before Physical Synthesis
-Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 1996d5e7e
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 91b05c30
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Phase 2.4.2 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 292 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 350 LUT instances to create LUTNM shape
 INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
-INFO: [Physopt 32-1138] End 1 Pass. Optimized 126 nets or LUTs. Breaked 0 LUT, combined 126 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 141 nets or LUTs. Breaked 0 LUT, combined 141 existing LUTs and moved 0 existing LUT
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -501,7 +509,7 @@ INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was
 INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -510,7 +518,7 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            0  |            126  |                   126  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            0  |            141  |                   141  |           0  |           1  |  00:00:00  |
 |  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
@@ -519,59 +527,59 @@ Summary of Physical Synthesis Optimizations
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            0  |            126  |                   126  |           0  |           4  |  00:00:00  |
+|  Total                                            |            0  |            141  |                   141  |           0  |           4  |  00:00:00  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.4.2 Physical Synthesis In Placer | Checksum: 1ac0b8c79
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 12296cdfd
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Phase 2.4 Global Placement Core | Checksum: 1796654b9
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Phase 2.4 Global Placement Core | Checksum: e7668371
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 1796654b9
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Phase 2 Global Placement | Checksum: e7668371
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 172086a77
+Phase 3.1 Commit Multi Column Macros | Checksum: 10c3cc87f
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1a6330074
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 15bf6ee57
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1dc439e3f
+Phase 3.3 Area Swap Optimization | Checksum: 7bac6d9e
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 1c1ebea1e
+Phase 3.4 Pipeline Register Optimization | Checksum: af73b438
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Phase 3.5 Small Shape Detail Placement
-Phase 3.5 Small Shape Detail Placement | Checksum: 181541164
+Phase 3.5 Small Shape Detail Placement | Checksum: e5f792bb
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Phase 3.6 Re-assign LUT pins
-Phase 3.6 Re-assign LUT pins | Checksum: 18c5b80ea
+Phase 3.6 Re-assign LUT pins | Checksum: 14c0c236c
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Phase 3.7 Pipeline Register Optimization
-Phase 3.7 Pipeline Register Optimization | Checksum: 1c731c0b8
+Phase 3.7 Pipeline Register Optimization | Checksum: 1aa16851c
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 1c731c0b8
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1aa16851c
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -579,7 +587,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 19185cacf
+Post Placement Optimization Initialization | Checksum: 1f43decd5
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -587,35 +595,35 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.383 | TNS=0.000 |
-Phase 1 Physical Synthesis Initialization | Checksum: 1c9602806
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.025 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1849ea898
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.346 . Memory (MB): peak = 2207.609 ; gain = 0.000
-INFO: [Place 46-33] Processed net design_1_i/alv_MIMD_0/U0/grp_execute_fu_194/sdiv_32ns_32ns_32_36_1_U9/alv_MIMD_sdiv_32ns_32ns_32_36_1_divider_u/E[0], BUFG insertion was skipped due to placement/routing conflicts.
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.348 . Memory (MB): peak = 2205.438 ; gain = 0.000
+INFO: [Place 46-33] Processed net design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/execute_U0/sdiv_32ns_32ns_32_36_1_U13/alv_MIMD_sdiv_32ns_32ns_32_36_1_divider_u/full_n_reg, BUFG insertion was skipped due to placement/routing conflicts.
 INFO: [Place 46-33] Processed net design_1_i/alv_MIMD_0/U0/gmem2_m_axi_U/bus_write/wreq_burst_conv/rs_req/SR[0], BUFG insertion was skipped due to placement/routing conflicts.
 INFO: [Place 46-56] BUFG insertion identified 2 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 2, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
-Ending Physical Synthesis Task | Checksum: 1c9602806
+Ending Physical Synthesis Task | Checksum: 1849ea898
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.576 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Phase 4.1.1.1 BUFG Insertion | Checksum: 19185cacf
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.588 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1f43decd5
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Phase 4.1.1.2 Post Placement Timing Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=0.595. For the most accurate timing information please run report_timing.
-Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1c8058fc8
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.555. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 8982931c
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 1c8058fc8
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 8982931c
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 1c8058fc8
+Phase 4.2 Post Placement Cleanup | Checksum: 8982931c
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
 
@@ -627,49 +635,49 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |___________|___________________|___________________|
 |      North|                1x1|                2x2|
 |___________|___________________|___________________|
-|      South|                1x1|                2x2|
+|      South|                1x1|                1x1|
 |___________|___________________|___________________|
 |       East|                1x1|                1x1|
 |___________|___________________|___________________|
 |       West|                1x1|                1x1|
 |___________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: 1c8058fc8
+Phase 4.3.1 Print Estimated Congestion | Checksum: 8982931c
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Phase 4.3 Placer Reporting | Checksum: 1c8058fc8
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 8982931c
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2205.438 ; gain = 0.000
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 16393fb61
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 74268087
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Ending Placer Task | Checksum: 104a4ae1c
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Ending Placer Task | Checksum: 17c3f0f3
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2207.609 ; gain = 0.000
-90 Infos, 160 Warnings, 0 Critical Warnings and 0 Errors encountered.
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2205.438 ; gain = 0.000
+92 Infos, 160 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2207.609 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2205.438 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_io -file design_1_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 2207.609 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 2205.438 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 2207.609 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 2205.438 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Wrote PlaceDB: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.502 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.547 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2205.438 ; gain = 0.000
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.558 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.604 . Memory (MB): peak = 2205.438 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -677,23 +685,23 @@ INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc
 
 Starting Initial Update Timing Task
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2205.438 ; gain = 0.000
 INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
 INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
 INFO: [Common 17-83] Releasing license: Implementation
-99 Infos, 160 Warnings, 0 Critical Warnings and 0 Errors encountered.
+101 Infos, 160 Warnings, 0 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Wrote PlaceDB: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.521 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.554 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2205.438 ; gain = 0.000
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2207.609 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.580 . Memory (MB): peak = 2207.609 ; gain = 0.000
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2205.438 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.631 . Memory (MB): peak = 2205.438 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.runs/impl_1/design_1_wrapper_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -708,30 +716,30 @@ Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
 
 Phase 1 Build RT Design
-Checksum: PlaceDB: 6ca4992f ConstDB: 0 ShapeSum: 980014ed RouteDB: 0
-Post Restoration Checksum: NetGraph: 587ac06 | NumContArr: 38da7bea | Constraints: c2a8fa9d | Timing: c2a8fa9d
-Phase 1 Build RT Design | Checksum: 1c3b41d2a
+Checksum: PlaceDB: 815b5a7 ConstDB: 0 ShapeSum: fae3b4c RouteDB: 0
+Post Restoration Checksum: NetGraph: f9d74712 | NumContArr: 4554fdfa | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 2c47e3a46
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2314.289 ; gain = 106.680
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 2321.605 ; gain = 114.379
 
 Phase 2 Router Initialization
 
 Phase 2.1 Fix Topology Constraints
-Phase 2.1 Fix Topology Constraints | Checksum: 1c3b41d2a
+Phase 2.1 Fix Topology Constraints | Checksum: 2c47e3a46
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2314.289 ; gain = 106.680
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 2321.605 ; gain = 114.379
 
 Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 1c3b41d2a
+Phase 2.2 Pre Route Cleanup | Checksum: 2c47e3a46
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2314.289 ; gain = 106.680
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 2321.605 ; gain = 114.379
  Number of Nodes with overlaps = 0
 
 Phase 2.3 Update Timing
-Phase 2.3 Update Timing | Checksum: 2bd0406dd
+Phase 2.3 Update Timing | Checksum: 1cfefec2d
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2345.543 ; gain = 137.934
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.896  | TNS=0.000  | WHS=-0.239 | THS=-153.589|
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 2359.598 ; gain = 152.371
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.679  | TNS=0.000  | WHS=-0.213 | THS=-190.166|
 
 
 Router Utilization Summary
@@ -740,102 +748,103 @@ Router Utilization Summary
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 11524
+  Number of Failed Nets               = 12050
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 11524
+  Number of Unrouted Nets             = 12050
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 2 Router Initialization | Checksum: 29d0aab74
+Phase 2 Router Initialization | Checksum: 208104371
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2377.984 ; gain = 170.375
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 2390.977 ; gain = 183.750
 
 Phase 3 Initial Routing
 
 Phase 3.1 Global Routing
-Phase 3.1 Global Routing | Checksum: 29d0aab74
+Phase 3.1 Global Routing | Checksum: 208104371
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2377.984 ; gain = 170.375
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 2390.977 ; gain = 183.750
 
 Phase 3.2 Initial Net Routing
-Phase 3.2 Initial Net Routing | Checksum: 2e8097a6b
+Phase 3.2 Initial Net Routing | Checksum: 1502f3650
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2377.984 ; gain = 170.375
-Phase 3 Initial Routing | Checksum: 2e8097a6b
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 2390.977 ; gain = 183.750
+Phase 3 Initial Routing | Checksum: 1502f3650
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2377.984 ; gain = 170.375
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 2390.977 ; gain = 183.750
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 655
- Number of Nodes with overlaps = 80
- Number of Nodes with overlaps = 41
- Number of Nodes with overlaps = 24
- Number of Nodes with overlaps = 15
- Number of Nodes with overlaps = 5
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.490  | TNS=0.000  | WHS=N/A    | THS=N/A    |
-
-Phase 4.1 Global Iteration 0 | Checksum: 1ec212d66
-
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2377.984 ; gain = 170.375
-
-Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 639
+ Number of Nodes with overlaps = 68
+ Number of Nodes with overlaps = 14
  Number of Nodes with overlaps = 4
  Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 4
- Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.560  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.952  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 19bfd606d
+Phase 4.1 Global Iteration 0 | Checksum: 2e0190343
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 2377.984 ; gain = 170.375
-Phase 4 Rip-up And Reroute | Checksum: 19bfd606d
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 2390.977 ; gain = 183.750
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 2377.984 ; gain = 170.375
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.952  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 2a041c8af
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 2390.977 ; gain = 183.750
+Phase 4 Rip-up And Reroute | Checksum: 2a041c8af
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 2390.977 ; gain = 183.750
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: 19bfd606d
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 2377.984 ; gain = 170.375
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 2220a7ff9
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 2390.977 ; gain = 183.750
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.966  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 2220a7ff9
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 2390.977 ; gain = 183.750
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 19bfd606d
+Phase 5.2 Clock Skew Optimization | Checksum: 2220a7ff9
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 2377.984 ; gain = 170.375
-Phase 5 Delay and Skew Optimization | Checksum: 19bfd606d
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 2390.977 ; gain = 183.750
+Phase 5 Delay and Skew Optimization | Checksum: 2220a7ff9
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 2377.984 ; gain = 170.375
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 2390.977 ; gain = 183.750
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 26070f4a9
+Phase 6.1.1 Update Timing | Checksum: 1ee29d35d
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 2377.984 ; gain = 170.375
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.574  | TNS=0.000  | WHS=0.014  | THS=0.000  |
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 2390.977 ; gain = 183.750
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.966  | TNS=0.000  | WHS=0.021  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 1e9d34df2
+Phase 6.1 Hold Fix Iter | Checksum: 21f012d12
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 2377.984 ; gain = 170.375
-Phase 6 Post Hold Fix | Checksum: 1e9d34df2
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2390.977 ; gain = 183.750
+Phase 6 Post Hold Fix | Checksum: 21f012d12
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 2377.984 ; gain = 170.375
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2390.977 ; gain = 183.750
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 2.19592 %
-  Global Horizontal Routing Utilization  = 2.20918 %
+  Global Vertical Routing Utilization    = 2.14984 %
+  Global Horizontal Routing Utilization  = 2.29572 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -845,44 +854,44 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 1e9d34df2
+Phase 7 Route finalize | Checksum: 21f012d12
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 2377.984 ; gain = 170.375
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2390.977 ; gain = 183.750
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 1e9d34df2
+Phase 8 Verifying routed nets | Checksum: 21f012d12
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 2377.984 ; gain = 170.375
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2390.977 ; gain = 183.750
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 1899e6c0d
+Phase 9 Depositing Routes | Checksum: 1b4987b59
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 2377.984 ; gain = 170.375
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2390.977 ; gain = 183.750
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.574  | TNS=0.000  | WHS=0.014  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.966  | TNS=0.000  | WHS=0.021  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 1899e6c0d
+Phase 10 Post Router Timing | Checksum: 1b4987b59
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 2377.984 ; gain = 170.375
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2390.977 ; gain = 183.750
 INFO: [Route 35-16] Router Completed Successfully
 
 Phase 11 Post-Route Event Processing
-Phase 11 Post-Route Event Processing | Checksum: 23def90ff
+Phase 11 Post-Route Event Processing | Checksum: 1da478793
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 2377.984 ; gain = 170.375
-Ending Routing Task | Checksum: 23def90ff
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 2390.977 ; gain = 183.750
+Ending Routing Task | Checksum: 1da478793
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 2377.984 ; gain = 170.375
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 2390.977 ; gain = 183.750
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-114 Infos, 160 Warnings, 0 Critical Warnings and 0 Errors encountered.
+117 Infos, 160 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 2377.984 ; gain = 170.375
+route_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 2390.977 ; gain = 185.539
 INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 Command: report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
@@ -901,7 +910,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-124 Infos, 160 Warnings, 0 Critical Warnings and 0 Errors encountered.
+127 Infos, 160 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file design_1_wrapper_route_status.rpt -pb design_1_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file design_1_wrapper_timing_summary_routed.rpt -pb design_1_wrapper_timing_summary_routed.pb -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation 
@@ -914,16 +923,16 @@ INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file design_1_w
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 2410.105 ; gain = 17.914
-Wrote PlaceDB: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.531 . Memory (MB): peak = 2410.105 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2410.105 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2421.520 ; gain = 15.199
+Wrote PlaceDB: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.559 . Memory (MB): peak = 2422.719 ; gain = 16.398
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2422.719 ; gain = 0.000
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 2410.105 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2410.105 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2410.105 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.664 . Memory (MB): peak = 2410.105 ; gain = 17.914
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 2422.719 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2422.719 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2422.719 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.686 . Memory (MB): peak = 2422.719 ; gain = 16.398
 INFO: [Common 17-1381] The checkpoint 'C:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
 Command: write_bitstream -force design_1_wrapper.bit
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -931,16 +940,16 @@ INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc
 Running DRC as a precondition to command write_bitstream
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/alv_MIMD_0/U0/grp_execute_fu_194/mul_32s_32s_32_2_1_U8/tmp_product__0 output design_1_i/alv_MIMD_0/U0/grp_execute_fu_194/mul_32s_32s_32_2_1_U8/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/alv_MIMD_0/U0/grp_execute_fu_194/mul_32s_32s_32_2_1_U8/buff0_reg multiplier stage design_1_i/alv_MIMD_0/U0/grp_execute_fu_194/mul_32s_32s_32_2_1_U8/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/alv_MIMD_0/U0/grp_execute_fu_194/mul_32s_32s_32_2_1_U8/tmp_product multiplier stage design_1_i/alv_MIMD_0/U0/grp_execute_fu_194/mul_32s_32s_32_2_1_U8/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/alv_MIMD_0/U0/grp_execute_fu_194/mul_32s_32s_32_2_1_U8/tmp_product__0 multiplier stage design_1_i/alv_MIMD_0/U0/grp_execute_fu_194/mul_32s_32s_32_2_1_U8/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell design_1_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A5)+((~A5)*(~A6)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A4' of cell design_1_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A3)+((~A3)*(~A5)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A4' of cell design_1_i/axi_mem_intercon_2/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/axi_mem_intercon_2/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A3)+((~A3)*(~A2)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A4' of cell design_1_i/axi_mem_intercon_3/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/axi_mem_intercon_3/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A5)+((~A5)*(~A6)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A6' of cell design_1_i/axi_mem_intercon_2/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/axi_mem_intercon_2/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A5)+((~A5)*(~A3)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC RTSTAT-10] No routable loads: 55 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_mem_intercon_2/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_mem_intercon_3/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_mem_intercon_2/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_mem_intercon_2/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], design_1_i/axi_mem_intercon_3/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], design_1_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], design_1_i/axi_mem_intercon_2/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], design_1_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], design_1_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], design_1_i/axi_mem_intercon_2/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], design_1_i/axi_mem_intercon_3/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], design_1_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], design_1_i/axi_mem_intercon_2/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0]... and (the first 15 of 35 listed).
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/execute_U0/mul_32s_32s_32_2_1_U12/tmp_product__0 output design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/execute_U0/mul_32s_32s_32_2_1_U12/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/execute_U0/mul_32s_32s_32_2_1_U12/buff0_reg multiplier stage design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/execute_U0/mul_32s_32s_32_2_1_U12/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/execute_U0/mul_32s_32s_32_2_1_U12/tmp_product multiplier stage design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/execute_U0/mul_32s_32s_32_2_1_U12/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/execute_U0/mul_32s_32s_32_2_1_U12/tmp_product__0 multiplier stage design_1_i/alv_MIMD_0/U0/grp_lod_exe_wb_fu_114/execute_U0/mul_32s_32s_32_2_1_U12/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell design_1_i/axi_mem_intercon_3/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/axi_mem_intercon_3/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A5)+((~A5)*(~A6)*A2)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A2' of cell design_1_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A1)+((~A1)*(~A6)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A2' of cell design_1_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A5)+((~A5)*(~A6)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A3' of cell design_1_i/axi_mem_intercon_2/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/axi_mem_intercon_2/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A1)+((~A1)*(~A6)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A4' of cell design_1_i/axi_mem_intercon_2/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/axi_mem_intercon_2/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A3)+((~A3)*(~A6)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC RTSTAT-10] No routable loads: 55 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_mem_intercon_2/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_mem_intercon_3/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_mem_intercon_2/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_mem_intercon_2/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], design_1_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], design_1_i/axi_mem_intercon_3/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], design_1_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], design_1_i/axi_mem_intercon_2/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], design_1_i/axi_mem_intercon_2/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], design_1_i/axi_mem_intercon_3/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], design_1_i/axi_mem_intercon_2/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], design_1_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], design_1_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0]... and (the first 15 of 35 listed).
 INFO: [Vivado 12-3199] DRC finished with 0 Errors, 10 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
@@ -956,5 +965,5 @@ INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT dev
 INFO: [Common 17-83] Releasing license: Implementation
 14 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2865.410 ; gain = 455.305
-INFO: [Common 17-206] Exiting Vivado at Sun May 12 20:09:38 2024...
+write_bitstream: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2881.133 ; gain = 458.414
+INFO: [Common 17-206] Exiting Vivado at Tue May 14 23:36:03 2024...

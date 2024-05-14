@@ -22,37 +22,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 12 \
-    name data_a \
-    type fifo \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_data_a \
-    op interface \
-    ports { data_a_dout { I 32 vector } data_a_empty_n { I 1 bit } data_a_read { O 1 bit } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 13 \
-    name data_b \
-    type fifo \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_data_b \
-    op interface \
-    ports { data_b_dout { I 32 vector } data_b_empty_n { I 1 bit } data_b_read { O 1 bit } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 14 \
+    id 16 \
     name ALU_operation \
     type fifo \
     dir I \
@@ -60,14 +30,29 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_ALU_operation \
     op interface \
-    ports { ALU_operation_dout { I 32 vector } ALU_operation_empty_n { I 1 bit } ALU_operation_read { O 1 bit } } \
+    ports { ALU_operation_dout { I 32 vector } ALU_operation_num_data_valid { I 7 vector } ALU_operation_fifo_cap { I 7 vector } ALU_operation_empty_n { I 1 bit } ALU_operation_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 15 \
+    id 17 \
+    name data_a \
+    type fifo \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_data_a \
+    op interface \
+    ports { data_a_dout { I 32 vector } data_a_num_data_valid { I 7 vector } data_a_fifo_cap { I 7 vector } data_a_empty_n { I 1 bit } data_a_read { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 18 \
     name data_result \
     type fifo \
     dir O \
@@ -75,7 +60,22 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_data_result \
     op interface \
-    ports { data_result_din { O 32 vector } data_result_full_n { I 1 bit } data_result_write { O 1 bit } } \
+    ports { data_result_din { O 32 vector } data_result_num_data_valid { I 7 vector } data_result_fifo_cap { I 7 vector } data_result_full_n { I 1 bit } data_result_write { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 19 \
+    name data_b \
+    type fifo \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_data_b \
+    op interface \
+    ports { data_b_dout { I 32 vector } data_b_num_data_valid { I 7 vector } data_b_fifo_cap { I 7 vector } data_b_empty_n { I 1 bit } data_b_read { O 1 bit } } \
 } "
 }
 
@@ -89,7 +89,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename ap_ctrl \
     op interface \
-    ports { ap_start { I 1 bit } ap_ready { O 1 bit } ap_done { O 1 bit } ap_idle { O 1 bit } } \
+    ports { ap_start { I 1 bit } ap_ready { O 1 bit } ap_done { O 1 bit } ap_idle { O 1 bit } ap_continue { I 1 bit } } \
 } "
 }
 
@@ -144,9 +144,9 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 
 # flow_control definition:
-set InstName alv_MIMD_flow_control_loop_pipe_sequential_init_U
-set CompName alv_MIMD_flow_control_loop_pipe_sequential_init
-set name flow_control_loop_pipe_sequential_init
+set InstName alv_MIMD_flow_control_loop_pipe_U
+set CompName alv_MIMD_flow_control_loop_pipe
+set name flow_control_loop_pipe
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control] == "::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control"} {
 eval "::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control { \

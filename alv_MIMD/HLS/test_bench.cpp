@@ -15,10 +15,7 @@ int main() {
 
     printf("\n\n");
 
-
-
-
-////////CASE SELEC=10: DEFAULT RESET////////////////////////////////////////////
+    ////////CASE SELEC=10: DEFAULT RESET////////////////////////////////////////////
 
     // Put data into variables
     for (int i = 0; i < DATA_LENGTH; i++)
@@ -37,6 +34,7 @@ int main() {
 	// selecting inputs
 
 	SELEC=10;
+
 	alv_MIMD(DATA_A, DATA_B, DATA_RESULT, ALU_OPERATION, SELEC);
 
     //print results
@@ -49,71 +47,74 @@ int main() {
 
 
 
-        ////////NEW PATTERN////////////////////////////////////////////
-    	for (int i = 0; i < DATA_LENGTH; i++)
-    	{
-    		ALU_OPERATION[i] = 1;
-    	}
+	////////NEW PATTERN////////////////////////////////////////////
+	for (int i = 0; i < DATA_LENGTH; i++)
+	{
+		ALU_OPERATION[i] = 1;
+	}
 
-        		SELEC=0;
-            	alv_MIMD(DATA_A, DATA_B, DATA_RESULT, ALU_OPERATION,SELEC);
+	SELEC=0;
 
-
-                for (int i = 0; i < DATA_LENGTH; i++)
-            	{
-                	printf("A = %d B = %d RES = %d, OP = %d, SELEC = %d \n", DATA_A[i], DATA_B[i], DATA_RESULT[i], ALU_OPERATION[i], SELEC);
-                }
-                printf("\n\n");
-
-          ////////NEW DATA_AND_EXECUTE////////////////////////////////////////////
-
-                // Put data into variables
-                    for (int i = 0; i < DATA_LENGTH; i++)
-                    {
-                    	DATA_A[i] = 2;
-                    	DATA_B[i] = 3;
-                	}
-
-                    // selecting operations //IT WILL BE IGNORED
-                    for (int i = 0; i < DATA_LENGTH; i++)
-                    	{
-                    		ALU_OPERATION[i] = 10;
-                    	}
-
-				SELEC=1;
-				alv_MIMD(DATA_A, DATA_B, DATA_RESULT, ALU_OPERATION,SELEC);
+	alv_MIMD(DATA_A, DATA_B, DATA_RESULT, ALU_OPERATION, SELEC);
 
 
-				for (int i = 0; i < DATA_LENGTH; i++)
-				{
-					printf("A = %d B = %d RES = %d, OP = %d, SELEC = %d \n", DATA_A[i], DATA_B[i], DATA_RESULT[i], ALU_OPERATION[i], SELEC);
-				}
-				printf("\n\n");
+	for (int i = 0; i < DATA_LENGTH; i++)
+	{
+		printf("A = %d B = %d RES = %d, OP = %d, SELEC = %d \n", DATA_A[i], DATA_B[i], DATA_RESULT[i], ALU_OPERATION[i], SELEC);
+	}
+	printf("\n\n");
 
-				////////NEW PATTERN AND OP////////////////////////////////////////////
-
-				// Put data into variables
-					for (int i = 0; i < DATA_LENGTH; i++)
-					{
-						DATA_A[i] = 45;
-						DATA_B[i] = 45;
-					}
-
-					// selecting operations
-					for (int i = 0; i < DATA_LENGTH; i++)
-						{
-							ALU_OPERATION[i] = 9;
-						}
-
-				SELEC=2;
-				alv_MIMD(DATA_A, DATA_B, DATA_RESULT, ALU_OPERATION,SELEC);
+	////////NEW DATA_AND_EXECUTE////////////////////////////////////////////
 
 
-				for (int i = 0; i < DATA_LENGTH; i++)
-				{
-					printf("A = %d B = %d RES = %d, OP = %d, SELEC = %d \n", DATA_A[i], DATA_B[i], DATA_RESULT[i], ALU_OPERATION[i], SELEC);
-				}
-				printf("\n\n");
+	// Put data into variables
+	for (int i = 0; i < DATA_LENGTH; i++)
+	{
+		DATA_A[i] = 2;
+		DATA_B[i] = 3;
+	}
+
+	// selecting operations //IT WILL BE IGNORED
+	for (int i = 0; i < DATA_LENGTH; i++)
+	{
+		ALU_OPERATION[i] = 10;
+	}
+
+	SELEC=1;
+	alv_MIMD(DATA_A, DATA_B, DATA_RESULT, ALU_OPERATION,SELEC);
+
+
+	for (int i = 0; i < DATA_LENGTH; i++)
+	{
+		printf("A = %d B = %d RES = %d, OP = %d, SELEC = %d \n", DATA_A[i], DATA_B[i], DATA_RESULT[i], ALU_OPERATION[i], SELEC);
+	}
+	printf("\n\n");
+
+	////////NEW PATTERN AND OP////////////////////////////////////////////
+
+	// Put data into variables
+	for (int i = 0; i < DATA_LENGTH; i++)
+	{
+		DATA_A[i] = 45;
+		DATA_B[i] = 45;
+	}
+
+	// selecting operations
+	for (int i = 0; i < DATA_LENGTH; i++)
+	{
+		ALU_OPERATION[i] = 9;
+	}
+
+	SELEC=2;
+
+	alv_MIMD(DATA_A, DATA_B, DATA_RESULT, ALU_OPERATION,SELEC);
+
+
+	for (int i = 0; i < DATA_LENGTH; i++)
+	{
+		printf("A = %d B = %d RES = %d, OP = %d, SELEC = %d \n", DATA_A[i], DATA_B[i], DATA_RESULT[i], ALU_OPERATION[i], SELEC);
+	}
+	printf("\n\n");
 
     return 0;
 }

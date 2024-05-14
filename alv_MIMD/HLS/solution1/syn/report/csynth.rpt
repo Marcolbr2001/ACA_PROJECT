@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'alv_MIMD'
 ================================================================
 + General Information: 
-    * Date:           Sun May 12 19:57:51 2024
+    * Date:           Tue May 14 23:14:51 2024
     * Version:        2023.2 (Build 4023990 on Oct 11 2023)
     * Project:        HLS
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,26 +15,25 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +-------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+-----------+------------+-----+
-    |                  Modules                  | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |        |           |            |     |
-    |                  & Loops                  | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP  |     FF    |     LUT    | URAM|
-    +-------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+-----------+------------+-----+
-    |+ alv_MIMD                                 |     -|  0.00|      214|  2.140e+03|         -|      215|     -|        no|  12 (4%)|  3 (1%)|  7770 (7%)|  7311 (13%)|    -|
-    | + alv_MIMD_Pipeline_l_data_and_operation  |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|  219 (~0%)|   281 (~0%)|    -|
-    |  o l_data_and_operation                   |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|          -|           -|    -|
-    | + alv_MIMD_Pipeline_l_data                |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|  123 (~0%)|   179 (~0%)|    -|
-    |  o l_data                                 |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|          -|           -|    -|
-    | + alv_MIMD_Pipeline_l_operation           |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|  123 (~0%)|   168 (~0%)|    -|
-    |  o l_operation                            |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|          -|           -|    -|
-    | + alv_MIMD_Pipeline_reset                 |     -|  0.00|       58|    580.000|         -|       58|     -|        no|        -|       -|   85 (~0%)|   188 (~0%)|    -|
-    |  o reset                                  |     -|  7.30|       56|    560.000|         8|        1|    50|       yes|        -|       -|          -|           -|    -|
-    | + execute                                 |     -|  0.39|       90|    900.000|         -|       90|     -|        no|        -|  3 (1%)|  3469 (3%)|   2595 (4%)|    -|
-    |  o exe                                    |     -|  7.30|       88|    880.000|        40|        1|    50|       yes|        -|       -|          -|           -|    -|
-    | + alv_MIMD_Pipeline_output1               |     -|  0.00|       58|    580.000|         -|       58|     -|        no|        -|       -|  117 (~0%)|   177 (~0%)|    -|
-    |  o output                                 |     -|  7.30|       56|    560.000|         8|        1|    50|       yes|        -|       -|          -|           -|    -|
-    | + alv_MIMD_Pipeline_output                |     -|  0.00|       58|    580.000|         -|       58|     -|        no|        -|       -|  117 (~0%)|   177 (~0%)|    -|
-    |  o output                                 |     -|  7.30|       56|    560.000|         8|        1|    50|       yes|        -|       -|          -|           -|    -|
-    +-------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+-----------+------------+-----+
+    +-------------------------------------+------+------+---------+---------+----------+---------+------+----------+---------+--------+-----------+------------+-----+
+    |               Modules               | Issue|      | Latency | Latency | Iteration|         | Trip |          |         |        |           |            |     |
+    |               & Loops               | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP  |     FF    |     LUT    | URAM|
+    +-------------------------------------+------+------+---------+---------+----------+---------+------+----------+---------+--------+-----------+------------+-----+
+    |+ alv_MIMD                           |     -|  0.00|        -|        -|         -|        -|     -|        no|  24 (8%)|  3 (1%)|  8766 (8%)|  7491 (14%)|    -|
+    | + lod_exe_wb*                       |     -|  0.00|        -|        -|         -|        -|     -|  dataflow|   8 (2%)|  3 (1%)|  4830 (4%)|   3799 (7%)|    -|
+    |  + load_op                          |     -|  0.00|       61|  610.000|         -|       61|     -|        no|        -|       -|  124 (~0%)|   179 (~0%)|    -|
+    |   o l_operation                     |     -|  7.30|       59|  590.000|        11|        1|    50|       yes|        -|       -|          -|           -|    -|
+    |  + load_data_a                      |     -|  0.00|       61|  610.000|         -|       61|     -|        no|        -|       -|  123 (~0%)|   170 (~0%)|    -|
+    |   o l_data_a                        |     -|  7.30|       59|  590.000|        11|        1|    50|       yes|        -|       -|          -|           -|    -|
+    |  + load_data_b                      |     -|  0.00|       61|  610.000|         -|       61|     -|        no|        -|       -|  123 (~0%)|   170 (~0%)|    -|
+    |   o l_data_b                        |     -|  7.30|       59|  590.000|        11|        1|    50|       yes|        -|       -|          -|           -|    -|
+    |  + execute                          |     -|  0.39|        -|        -|         -|        -|     -|        no|        -|  3 (1%)|  3461 (3%)|   2555 (4%)|    -|
+    |   o exe                             |     -|  7.30|        -|        -|        39|        1|     -|       yes|        -|       -|          -|           -|    -|
+    |  + entry_proc                       |     -|  3.67|        0|    0.000|         -|        0|     -|        no|        -|       -|    3 (~0%)|    29 (~0%)|    -|
+    |  + write_back                       |     -|  0.00|        -|        -|         -|        -|     -|        no|        -|       -|  277 (~0%)|   300 (~0%)|    -|
+    |   + write_back_Pipeline_write_back  |     -|  0.00|        -|        -|         -|        -|     -|        no|        -|       -|  208 (~0%)|   224 (~0%)|    -|
+    |    o write_back                     |     -|  7.30|        -|        -|         8|        1|     -|       yes|        -|       -|          -|           -|    -|
+    +-------------------------------------+------+------+---------+---------+----------+---------+------+----------+---------+--------+-----------+------------+-----+
 
 
 ================================================================
@@ -46,7 +45,7 @@
 |             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
 +-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
 | m_axi_gmem0 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
-| m_axi_gmem1 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |                   |
+| m_axi_gmem1 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
 | m_axi_gmem2 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
 | m_axi_gmem3 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
 +-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
@@ -96,10 +95,10 @@
 | Argument | Direction | Datatype |
 +----------+-----------+----------+
 | a        | in        | pointer  |
-| b        | unused    | pointer  |
+| b        | in        | pointer  |
 | c        | out       | pointer  |
 | op       | in        | pointer  |
-| selec    | in        |          |
+| selec    | in        | int      |
 +----------+-----------+----------+
 
 * SW-to-HW Mapping
@@ -131,14 +130,10 @@
 +--------------+----------+--------------------+-----------+--------------+------------+-------------------------------------------------+
 | HW Interface | Variable | Access Location    | Direction | Burst Status | Resolution | Problem                                         |
 +--------------+----------+--------------------+-----------+--------------+------------+-------------------------------------------------+
-| m_axi_gmem0  | a        | HLS/core.cpp:27:14 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-| m_axi_gmem0  | a        | HLS/core.cpp:30:15 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-| m_axi_gmem0  | a        | HLS/core.cpp:60:14 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-| m_axi_gmem0  | a        | HLS/core.cpp:63:15 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-| m_axi_gmem2  | c        | HLS/core.cpp:14:8  | write     | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-| m_axi_gmem2  | c        | HLS/core.cpp:141:7 | write     | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-| m_axi_gmem3  | op       | HLS/core.cpp:46:15 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-| m_axi_gmem3  | op       | HLS/core.cpp:66:16 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem0  | a        | HLS/core.cpp:65:15 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem1  | b        | HLS/core.cpp:65:15 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem2  | c        | HLS/core.cpp:155:7 | write     | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem3  | op       | HLS/core.cpp:65:15 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
 +--------------+----------+--------------------+-----------+--------------+------------+-------------------------------------------------+
 
     * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
@@ -146,94 +141,94 @@
 ================================================================
 == Bind Op Report
 ================================================================
-+-------------------------------------------+-----+--------+-------------+-----+--------+---------+
-| Name                                      | DSP | Pragma | Variable    | Op  | Impl   | Latency |
-+-------------------------------------------+-----+--------+-------------+-----+--------+---------+
-| + alv_MIMD                                | 3   |        |             |     |        |         |
-|  + alv_MIMD_Pipeline_l_data_and_operation | 0   |        |             |     |        |         |
-|    add_ln56_fu_149_p2                     |     |        | add_ln56    | add | fabric | 0       |
-|    add_ln60_fu_167_p2                     |     |        | add_ln60    | add | fabric | 0       |
-|    add_ln66_fu_193_p2                     |     |        | add_ln66    | add | fabric | 0       |
-|  + alv_MIMD_Pipeline_l_data               | 0   |        |             |     |        |         |
-|    add_ln23_fu_116_p2                     |     |        | add_ln23    | add | fabric | 0       |
-|    add_ln27_fu_134_p2                     |     |        | add_ln27    | add | fabric | 0       |
-|  + alv_MIMD_Pipeline_l_operation          | 0   |        |             |     |        |         |
-|    add_ln42_fu_107_p2                     |     |        | add_ln42    | add | fabric | 0       |
-|    add_ln46_fu_125_p2                     |     |        | add_ln46    | add | fabric | 0       |
-|  + alv_MIMD_Pipeline_reset                | 0   |        |             |     |        |         |
-|    add_ln12_fu_127_p2                     |     |        | add_ln12    | add | fabric | 0       |
-|    add_ln14_fu_145_p2                     |     |        | add_ln14    | add | fabric | 0       |
-|  + execute                                | 3   |        |             |     |        |         |
-|    i_2_fu_122_p2                          |     |        | i_2         | add | fabric | 0       |
-|    mul_32s_32s_32_2_1_U8                  | 3   |        | mul_ln122   | mul | auto   | 1       |
-|    sub_ln118_fu_133_p2                    |     |        | sub_ln118   | sub | fabric | 0       |
-|    add_ln114_fu_139_p2                    |     |        | add_ln114   | add | fabric | 0       |
-|    sub_ln110_fu_153_p2                    |     |        | sub_ln110   | sub | fabric | 0       |
-|    sub_ln110_1_fu_222_p2                  |     |        | sub_ln110_1 | sub | fabric | 0       |
-|    sub_ln106_fu_187_p2                    |     |        | sub_ln106   | sub | fabric | 0       |
-|    sub_ln106_1_fu_241_p2                  |     |        | sub_ln106_1 | sub | fabric | 0       |
-|    add_ln94_fu_271_p2                     |     |        | add_ln94    | add | fabric | 0       |
-|    add_ln90_fu_278_p2                     |     |        | add_ln90    | add | fabric | 0       |
-|  + alv_MIMD_Pipeline_output1              | 0   |        |             |     |        |         |
-|    add_ln138_fu_114_p2                    |     |        | add_ln138   | add | fabric | 0       |
-|    add_ln141_fu_132_p2                    |     |        | add_ln141   | add | fabric | 0       |
-|  + alv_MIMD_Pipeline_output               | 0   |        |             |     |        |         |
-|    add_ln138_fu_114_p2                    |     |        | add_ln138   | add | fabric | 0       |
-|    add_ln141_fu_132_p2                    |     |        | add_ln141   | add | fabric | 0       |
-+-------------------------------------------+-----+--------+-------------+-----+--------+---------+
++-------------------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                                | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++-------------------------------------+-----+--------+-------------+-----+--------+---------+
+| + alv_MIMD                          | 3   |        |             |     |        |         |
+|  + lod_exe_wb                       | 3   |        |             |     |        |         |
+|   + load_op                         | 0   |        |             |     |        |         |
+|     add_ln61_fu_105_p2              |     |        | add_ln61    | add | fabric | 0       |
+|     add_ln65_fu_123_p2              |     |        | add_ln65    | add | fabric | 0       |
+|   + load_data_a                     | 0   |        |             |     |        |         |
+|     add_ln35_fu_105_p2              |     |        | add_ln35    | add | fabric | 0       |
+|     add_ln39_fu_123_p2              |     |        | add_ln39    | add | fabric | 0       |
+|   + load_data_b                     | 0   |        |             |     |        |         |
+|     add_ln47_fu_105_p2              |     |        | add_ln47    | add | fabric | 0       |
+|     add_ln51_fu_123_p2              |     |        | add_ln51    | add | fabric | 0       |
+|   + execute                         | 3   |        |             |     |        |         |
+|     mul_32s_32s_32_2_1_U12          | 3   |        | mul_ln133   | mul | auto   | 1       |
+|     sub_ln129_fu_104_p2             |     |        | sub_ln129   | sub | fabric | 0       |
+|     add_ln125_fu_110_p2             |     |        | add_ln125   | add | fabric | 0       |
+|     sub_ln120_fu_124_p2             |     |        | sub_ln120   | sub | fabric | 0       |
+|     sub_ln120_1_fu_193_p2           |     |        | sub_ln120_1 | sub | fabric | 0       |
+|     sub_ln115_fu_158_p2             |     |        | sub_ln115   | sub | fabric | 0       |
+|     sub_ln115_1_fu_212_p2           |     |        | sub_ln115_1 | sub | fabric | 0       |
+|     add_ln100_fu_242_p2             |     |        | add_ln100   | add | fabric | 0       |
+|     add_ln95_fu_249_p2              |     |        | add_ln95    | add | fabric | 0       |
+|   + write_back                      | 0   |        |             |     |        |         |
+|    + write_back_Pipeline_write_back | 0   |        |             |     |        |         |
+|      add_ln156_fu_108_p2            |     |        | add_ln156   | add | fabric | 0       |
+|      add_ln155_fu_120_p2            |     |        | add_ln155   | add | fabric | 0       |
++-------------------------------------+-----+--------+-------------+-----+--------+---------+
 
 
 ================================================================
 == Storage Report
 ================================================================
-+------------------------+------------+-----------+------+------+--------+---------------+------+---------+------------------+
-| Name                   | Usage      | Type      | BRAM | URAM | Pragma | Variable      | Impl | Latency | Bitwidth, Depth, |
-|                        |            |           |      |      |        |               |      |         | Banks            |
-+------------------------+------------+-----------+------+------+--------+---------------+------+---------+------------------+
-| + alv_MIMD             |            |           | 12   | 0    |        |               |      |         |                  |
-|   control_s_axi_U      | interface  | s_axilite |      |      |        |               |      |         |                  |
-|   gmem0_m_axi_U        | interface  | m_axi     | 4    |      |        |               |      |         |                  |
-|   gmem2_m_axi_U        | interface  | m_axi     | 4    |      |        |               |      |         |                  |
-|   gmem3_m_axi_U        | interface  | m_axi     | 4    |      |        |               |      |         |                  |
-|   data_a_fifo_U        | fifo array |           |      |      |        | data_a        | srl  | 0       | 32, 2, 1         |
-|   data_b_fifo_U        | fifo array |           |      |      |        | data_b        | srl  | 0       | 32, 2, 1         |
-|   data_result_fifo_U   | fifo array |           |      |      |        | data_result   | srl  | 0       | 32, 2, 1         |
-|   ALU_operation_fifo_U | fifo array |           |      |      |        | ALU_operation | srl  | 0       | 32, 2, 1         |
-+------------------------+------------+-----------+------+------+--------+---------------+------+---------+------------------+
++--------------------+--------------+-------------+------+------+--------+---------------+--------+---------+------------------+
+| Name               | Usage        | Type        | BRAM | URAM | Pragma | Variable      | Impl   | Latency | Bitwidth, Depth, |
+|                    |              |             |      |      |        |               |        |         | Banks            |
++--------------------+--------------+-------------+------+------+--------+---------------+--------+---------+------------------+
+| + alv_MIMD         |              |             | 24   | 0    |        |               |        |         |                  |
+|   control_s_axi_U  | interface    | s_axilite   |      |      |        |               |        |         |                  |
+|   gmem0_m_axi_U    | interface    | m_axi       | 4    |      |        |               |        |         |                  |
+|   gmem1_m_axi_U    | interface    | m_axi       | 4    |      |        |               |        |         |                  |
+|   gmem2_m_axi_U    | interface    | m_axi       | 4    |      |        |               |        |         |                  |
+|   gmem3_m_axi_U    | interface    | m_axi       | 4    |      |        |               |        |         |                  |
+|  + lod_exe_wb      |              |             | 8    | 0    |        |               |        |         |                  |
+|    c_c_U           | fifo channel | scalar prop |      |      |        | c_c           | srl    | 0       | 64, 4, 1         |
+|    ALU_operation_U | fifo channel | stream      | 2    |      |        | ALU_operation | memory | 0       | 32, 50, 1        |
+|    data_a_U        | fifo channel | stream      | 2    |      |        | data_a        | memory | 0       | 32, 50, 1        |
+|    data_b_U        | fifo channel | stream      | 2    |      |        | data_b        | memory | 0       | 32, 50, 1        |
+|    data_result_U   | fifo channel | stream      | 2    |      |        | data_result   | memory | 0       | 32, 50, 1        |
++--------------------+--------------+-------------+------+------+--------+---------------+--------+---------+------------------+
 
 
 ================================================================
 == Pragma Report
 ================================================================
 * Pragmas with Warnings
-+----------+---------+------------------------------+--------------------------------------------------------------+
-| Type     | Options | Location                     | Messages                                                     |
-+----------+---------+------------------------------+--------------------------------------------------------------+
-| dataflow |         | HLS/core.cpp:173 in alv_mimd | Only 'for' loop or function body support the dataflow pragma |
-| dataflow |         | HLS/core.cpp:181 in alv_mimd | Only 'for' loop or function body support the dataflow pragma |
-| dataflow |         | HLS/core.cpp:191 in alv_mimd | Only 'for' loop or function body support the dataflow pragma |
-| dataflow |         | HLS/core.cpp:200 in alv_mimd | Only 'for' loop or function body support the dataflow pragma |
-+----------+---------+------------------------------+--------------------------------------------------------------+
++----------+---------+--------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type     | Options | Location                       | Messages                                                                                                                                                                           |
++----------+---------+--------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dataflow |         | HLS/core.cpp:162 in ld_exe_wb  | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+| dataflow |         | HLS/core.cpp:174 in lod_exe_wb | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
++----------+---------+--------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 * Valid Pragma Syntax
-+-----------+-------------------------------------------------------+--------------------------------------+
-| Type      | Options                                               | Location                             |
-+-----------+-------------------------------------------------------+--------------------------------------+
-| pipeline  | II=1                                                  | HLS/core.cpp:25 in load_data         |
-| pipeline  | II=1                                                  | HLS/core.cpp:44 in load_op           |
-| pipeline  | II=1                                                  | HLS/core.cpp:58 in load_data_and_op  |
-| pipeline  | II=1                                                  | HLS/core.cpp:84 in execute           |
-| pipeline  | II=1                                                  | HLS/core.cpp:140 in output           |
-| interface | mode=s_axilite bundle=control port=a                  | HLS/core.cpp:147 in alv_mimd, a      |
-| interface | mode=s_axilite bundle=control port=b                  | HLS/core.cpp:148 in alv_mimd, b      |
-| interface | mode=s_axilite bundle=control port=c                  | HLS/core.cpp:149 in alv_mimd, c      |
-| interface | mode=s_axilite bundle=control port=op                 | HLS/core.cpp:150 in alv_mimd, op     |
-| interface | mode=s_axilite bundle=control port=selec              | HLS/core.cpp:151 in alv_mimd, selec  |
-| interface | mode=s_axilite bundle=control port=return             | HLS/core.cpp:153 in alv_mimd, return |
-| interface | mode=m_axi port=a bundle=gmem0 depth=50 offset=slave  | HLS/core.cpp:155 in alv_mimd, a      |
-| interface | mode=m_axi port=b bundle=gmem1 depth=50 offset=slave  | HLS/core.cpp:156 in alv_mimd, b      |
-| interface | mode=m_axi port=c bundle=gmem2 depth=50 offset=slave  | HLS/core.cpp:157 in alv_mimd, c      |
-| interface | mode=m_axi port=op bundle=gmem3 depth=50 offset=slave | HLS/core.cpp:158 in alv_mimd, op     |
-+-----------+-------------------------------------------------------+--------------------------------------+
++-----------+-------------------------------------------------------+---------------------------------------------+
+| Type      | Options                                               | Location                                    |
++-----------+-------------------------------------------------------+---------------------------------------------+
+| pipeline  | II=1                                                  | HLS/core.cpp:37 in load_data_a              |
+| pipeline  | II=1                                                  | HLS/core.cpp:49 in load_data_b              |
+| pipeline  | II=1                                                  | HLS/core.cpp:63 in load_op                  |
+| inline    |                                                       | HLS/core.cpp:75 in load_data_and_op         |
+| pipeline  | II=1                                                  | HLS/core.cpp:89 in execute                  |
+| pipeline  | II=1                                                  | HLS/core.cpp:154 in write_back              |
+| interface | mode=s_axilite bundle=control port=a                  | HLS/core.cpp:184 in alv_mimd, a             |
+| interface | mode=s_axilite bundle=control port=b                  | HLS/core.cpp:185 in alv_mimd, b             |
+| interface | mode=s_axilite bundle=control port=c                  | HLS/core.cpp:186 in alv_mimd, c             |
+| interface | mode=s_axilite bundle=control port=op                 | HLS/core.cpp:187 in alv_mimd, op            |
+| interface | mode=s_axilite bundle=control port=selec              | HLS/core.cpp:188 in alv_mimd, selec         |
+| interface | mode=s_axilite bundle=control port=return             | HLS/core.cpp:190 in alv_mimd, return        |
+| interface | mode=m_axi port=a bundle=gmem0 depth=50 offset=slave  | HLS/core.cpp:192 in alv_mimd, a             |
+| interface | mode=m_axi port=b bundle=gmem1 depth=50 offset=slave  | HLS/core.cpp:193 in alv_mimd, b             |
+| interface | mode=m_axi port=c bundle=gmem2 depth=50 offset=slave  | HLS/core.cpp:194 in alv_mimd, c             |
+| interface | mode=m_axi port=op bundle=gmem3 depth=50 offset=slave | HLS/core.cpp:195 in alv_mimd, op            |
+| stream    | variable=data_a depth=50                              | HLS/core.cpp:198 in alv_mimd, data_a        |
+| stream    | variable=data_b depth=50                              | HLS/core.cpp:202 in alv_mimd, data_b        |
+| stream    | variable=data_result depth=50                         | HLS/core.cpp:206 in alv_mimd, data_result   |
+| stream    | variable=ALU_operation depth=50                       | HLS/core.cpp:210 in alv_mimd, ALU_operation |
++-----------+-------------------------------------------------------+---------------------------------------------+
 
 

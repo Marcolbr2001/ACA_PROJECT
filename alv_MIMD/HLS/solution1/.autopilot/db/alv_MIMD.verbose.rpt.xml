@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'alv_MIMD'" level="0">
-<item name = "Date">Sun May 12 19:57:51 2024
+<item name = "Date">Tue May 14 23:14:51 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">HLS</item>
@@ -24,20 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">60, 214, 0.600 us, 2.140 us, 61, 215, no</column>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_alv_MIMD_Pipeline_l_data_and_operation_fu_150">alv_MIMD_Pipeline_l_data_and_operation, 61, 61, 0.610 us, 0.610 us, 61, 61, no</column>
-<column name="grp_alv_MIMD_Pipeline_l_data_fu_165">alv_MIMD_Pipeline_l_data, 61, 61, 0.610 us, 0.610 us, 61, 61, no</column>
-<column name="grp_alv_MIMD_Pipeline_l_operation_fu_175">alv_MIMD_Pipeline_l_operation, 61, 61, 0.610 us, 0.610 us, 61, 61, no</column>
-<column name="grp_alv_MIMD_Pipeline_reset_fu_184">alv_MIMD_Pipeline_reset, 58, 58, 0.580 us, 0.580 us, 58, 58, no</column>
-<column name="grp_execute_fu_194">execute, 90, 90, 0.900 us, 0.900 us, 90, 90, no</column>
-<column name="grp_alv_MIMD_Pipeline_output1_fu_202">alv_MIMD_Pipeline_output1, 58, 58, 0.580 us, 0.580 us, 58, 58, no</column>
-<column name="grp_alv_MIMD_Pipeline_output_fu_210">alv_MIMD_Pipeline_output, 58, 58, 0.580 us, 0.580 us, 58, 58, no</column>
+<column name="grp_lod_exe_wb_fu_114">lod_exe_wb, ?, ?, ?, ?, ?, ?, dataflow</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -54,31 +48,26 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 12, -</column>
-<column name="FIFO">-, -, 396, 272, -</column>
-<column name="Instance">12, 3, 7097, 6583, -</column>
+<column name="Expression">-, -, 0, 45, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">24, 3, 8504, 7351, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 444, -</column>
-<column name="Register">-, -, 277, -, -</column>
+<column name="Multiplexer">-, -, -, 95, -</column>
+<column name="Register">-, -, 262, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">4, 1, 7, 13, 0</specialColumn>
+<specialColumn name="Utilization (%)">8, 1, 8, 14, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_alv_MIMD_Pipeline_l_data_fu_165">alv_MIMD_Pipeline_l_data, 0, 0, 123, 179, 0</column>
-<column name="grp_alv_MIMD_Pipeline_l_data_and_operation_fu_150">alv_MIMD_Pipeline_l_data_and_operation, 0, 0, 219, 281, 0</column>
-<column name="grp_alv_MIMD_Pipeline_l_operation_fu_175">alv_MIMD_Pipeline_l_operation, 0, 0, 123, 168, 0</column>
-<column name="grp_alv_MIMD_Pipeline_output_fu_210">alv_MIMD_Pipeline_output, 0, 0, 117, 177, 0</column>
-<column name="grp_alv_MIMD_Pipeline_output1_fu_202">alv_MIMD_Pipeline_output1, 0, 0, 117, 177, 0</column>
-<column name="grp_alv_MIMD_Pipeline_reset_fu_184">alv_MIMD_Pipeline_reset, 0, 0, 85, 188, 0</column>
 <column name="control_s_axi_U">control_s_axi, 0, 0, 354, 616, 0</column>
-<column name="grp_execute_fu_194">execute, 0, 3, 3469, 2595, 0</column>
 <column name="gmem0_m_axi_U">gmem0_m_axi, 4, 0, 830, 734, 0</column>
+<column name="gmem1_m_axi_U">gmem1_m_axi, 4, 0, 830, 734, 0</column>
 <column name="gmem2_m_axi_U">gmem2_m_axi, 4, 0, 830, 734, 0</column>
 <column name="gmem3_m_axi_U">gmem3_m_axi, 4, 0, 830, 734, 0</column>
+<column name="grp_lod_exe_wb_fu_114">lod_exe_wb, 8, 3, 4830, 3799, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -91,76 +80,41 @@
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
 <keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
-<column name="ALU_operation_fifo_U">0, 99, 0, -, 2, 32, 64</column>
-<column name="data_a_fifo_U">0, 99, 0, -, 2, 32, 64</column>
-<column name="data_b_fifo_U">0, 99, 0, -, 2, 32, 64</column>
-<column name="data_result_fifo_U">0, 99, 0, -, 2, 32, 64</column>
 </table>
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="ap_predicate_op76_call_state7">and, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state2_on_subcall_done">or, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state4_on_subcall_done">or, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state6_on_subcall_done">or, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state7_on_subcall_done">or, 0, 0, 2, 1, 1</column>
-<column name="ap_predicate_pred1105_state4">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state2_on_subcall_done">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln215_fu_142_p2">icmp, 0, 0, 39, 32, 2</column>
+<column name="ap_sync_grp_lod_exe_wb_fu_114_ap_done">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_grp_lod_exe_wb_fu_114_ap_ready">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ALU_operation_din">9, 2, 32, 64</column>
-<column name="ALU_operation_read">9, 2, 1, 2</column>
-<column name="ALU_operation_write">14, 3, 1, 3</column>
-<column name="ap_NS_fsm">42, 8, 1, 8</column>
-<column name="ap_sig_allocacmp_selec_assign_load">9, 2, 32, 64</column>
-<column name="data_a_din">14, 3, 32, 96</column>
-<column name="data_a_read">9, 2, 1, 2</column>
-<column name="data_a_write">20, 4, 1, 4</column>
-<column name="data_b_din">14, 3, 32, 96</column>
-<column name="data_b_read">9, 2, 1, 2</column>
-<column name="data_b_write">20, 4, 1, 4</column>
-<column name="data_result_read">14, 3, 1, 3</column>
-<column name="data_result_write">9, 2, 1, 2</column>
-<column name="gmem0_ARADDR">14, 3, 64, 192</column>
-<column name="gmem0_ARLEN">14, 3, 32, 96</column>
-<column name="gmem0_ARVALID">14, 3, 1, 3</column>
-<column name="gmem0_RREADY">14, 3, 1, 3</column>
-<column name="gmem2_AWADDR">20, 4, 64, 256</column>
-<column name="gmem2_AWLEN">20, 4, 32, 128</column>
-<column name="gmem2_AWVALID">20, 4, 1, 4</column>
-<column name="gmem2_BREADY">20, 4, 1, 4</column>
-<column name="gmem2_WDATA">20, 4, 32, 128</column>
-<column name="gmem2_WSTRB">20, 4, 4, 16</column>
-<column name="gmem2_WVALID">20, 4, 1, 4</column>
-<column name="gmem3_ARADDR">14, 3, 64, 192</column>
-<column name="gmem3_ARLEN">14, 3, 32, 96</column>
-<column name="gmem3_ARVALID">14, 3, 1, 3</column>
-<column name="gmem3_RREADY">14, 3, 1, 3</column>
+<column name="ap_NS_fsm">14, 3, 1, 3</column>
+<column name="gmem0_ARVALID">9, 2, 1, 2</column>
+<column name="gmem0_RREADY">9, 2, 1, 2</column>
+<column name="gmem1_ARVALID">9, 2, 1, 2</column>
+<column name="gmem1_RREADY">9, 2, 1, 2</column>
+<column name="gmem2_AWVALID">9, 2, 1, 2</column>
+<column name="gmem2_BREADY">9, 2, 1, 2</column>
+<column name="gmem2_WVALID">9, 2, 1, 2</column>
+<column name="gmem3_ARVALID">9, 2, 1, 2</column>
+<column name="gmem3_RREADY">9, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="a_read_reg_239">64, 0, 64, 0</column>
-<column name="ap_CS_fsm">7, 0, 7, 0</column>
-<column name="ap_predicate_pred1105_state4">1, 0, 1, 0</column>
-<column name="ap_predicate_pred935_state3">1, 0, 1, 0</column>
-<column name="ap_predicate_pred935_state4">1, 0, 1, 0</column>
-<column name="ap_predicate_pred935_state5">1, 0, 1, 0</column>
-<column name="ap_predicate_pred955_state3">1, 0, 1, 0</column>
-<column name="ap_predicate_pred955_state4">1, 0, 1, 0</column>
-<column name="ap_predicate_pred955_state5">1, 0, 1, 0</column>
-<column name="c_read_reg_232">64, 0, 64, 0</column>
-<column name="grp_alv_MIMD_Pipeline_l_data_and_operation_fu_150_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_alv_MIMD_Pipeline_l_data_fu_165_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_alv_MIMD_Pipeline_l_operation_fu_175_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_alv_MIMD_Pipeline_output1_fu_202_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_alv_MIMD_Pipeline_output_fu_210_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_alv_MIMD_Pipeline_reset_fu_184_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_execute_fu_194_ap_start_reg">1, 0, 1, 0</column>
-<column name="op_read_reg_226">64, 0, 64, 0</column>
-<column name="selec_assign_fu_122">32, 0, 32, 0</column>
-<column name="selec_assign_load_reg_281">32, 0, 32, 0</column>
+<column name="a_read_reg_163">64, 0, 64, 0</column>
+<column name="ap_CS_fsm">2, 0, 2, 0</column>
+<column name="ap_sync_reg_grp_lod_exe_wb_fu_114_ap_done">1, 0, 1, 0</column>
+<column name="ap_sync_reg_grp_lod_exe_wb_fu_114_ap_ready">1, 0, 1, 0</column>
+<column name="b_read_reg_158">64, 0, 64, 0</column>
+<column name="c_read_reg_153">64, 0, 64, 0</column>
+<column name="grp_lod_exe_wb_fu_114_ap_start_reg">1, 0, 1, 0</column>
+<column name="icmp_ln215_reg_168">1, 0, 1, 0</column>
+<column name="op_read_reg_148">64, 0, 64, 0</column>
 </table>
 </item>
 </section>

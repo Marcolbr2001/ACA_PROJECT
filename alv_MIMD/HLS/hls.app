@@ -1,8 +1,8 @@
-<project xmlns="com.autoesl.autopilot.project" top="alv_MIMD" name="HLS" projectType="C/C++">
+<project xmlns="com.autoesl.autopilot.project" name="HLS" top="alv_MIMD" projectType="C/C++">
     <includePaths/>
     <libraryPaths/>
     <Simulation>
-        <SimFlow name="csim" csimMode="2" lastCsimMode="2"/>
+        <SimFlow name="csim" clean="true" csimMode="0" lastCsimMode="0"/>
     </Simulation>
     <files xmlns="">
         <file name="HLS/core.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
