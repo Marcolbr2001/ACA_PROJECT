@@ -83,8 +83,8 @@ set portList {
 	{ m_axi_gmem3_BID sc_in sc_lv 1 signal 0 } 
 	{ m_axi_gmem3_BUSER sc_in sc_lv 1 signal 0 } 
 	{ ALU_operation_din sc_out sc_lv 32 signal 2 } 
-	{ ALU_operation_num_data_valid sc_in sc_lv 7 signal 2 } 
-	{ ALU_operation_fifo_cap sc_in sc_lv 7 signal 2 } 
+	{ ALU_operation_num_data_valid sc_in sc_lv 3 signal 2 } 
+	{ ALU_operation_fifo_cap sc_in sc_lv 3 signal 2 } 
 	{ ALU_operation_full_n sc_in sc_logic 1 signal 2 } 
 	{ ALU_operation_write sc_out sc_logic 1 signal 2 } 
 	{ start_out sc_out sc_logic 1 signal -1 } 
@@ -147,8 +147,8 @@ set NewPortList {[
  	{ "name": "m_axi_gmem3_BID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem3", "role": "BID" }} , 
  	{ "name": "m_axi_gmem3_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem3", "role": "BUSER" }} , 
  	{ "name": "ALU_operation_din", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ALU_operation", "role": "din" }} , 
- 	{ "name": "ALU_operation_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "ALU_operation", "role": "num_data_valid" }} , 
- 	{ "name": "ALU_operation_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "ALU_operation", "role": "fifo_cap" }} , 
+ 	{ "name": "ALU_operation_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "ALU_operation", "role": "num_data_valid" }} , 
+ 	{ "name": "ALU_operation_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "ALU_operation", "role": "fifo_cap" }} , 
  	{ "name": "ALU_operation_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "ALU_operation", "role": "full_n" }} , 
  	{ "name": "ALU_operation_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "ALU_operation", "role": "write" }} , 
  	{ "name": "start_out", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "start_out", "role": "default" }} , 
@@ -176,7 +176,7 @@ set RtlHierarchyInfo {[
 					{"Name" : "gmem3_blk_n_AR", "Type" : "RtlSignal"},
 					{"Name" : "gmem3_blk_n_R", "Type" : "RtlSignal"}]},
 			{"Name" : "op", "Type" : "None", "Direction" : "I"},
-			{"Name" : "ALU_operation", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "50", "DependentChanType" : "0",
+			{"Name" : "ALU_operation", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "ALU_operation_blk_n", "Type" : "RtlSignal"}]}],
 		"Loop" : [
@@ -205,5 +205,5 @@ set PipelineEnableSignalInfo {[
 set Spec2ImplPortList { 
 	 { m_axi {  { m_axi_gmem3_AWVALID VALID 1 1 }  { m_axi_gmem3_AWREADY READY 0 1 }  { m_axi_gmem3_AWADDR ADDR 1 64 }  { m_axi_gmem3_AWID ID 1 1 }  { m_axi_gmem3_AWLEN SIZE 1 32 }  { m_axi_gmem3_AWSIZE BURST 1 3 }  { m_axi_gmem3_AWBURST LOCK 1 2 }  { m_axi_gmem3_AWLOCK CACHE 1 2 }  { m_axi_gmem3_AWCACHE PROT 1 4 }  { m_axi_gmem3_AWPROT QOS 1 3 }  { m_axi_gmem3_AWQOS REGION 1 4 }  { m_axi_gmem3_AWREGION USER 1 4 }  { m_axi_gmem3_AWUSER DATA 1 1 }  { m_axi_gmem3_WVALID VALID 1 1 }  { m_axi_gmem3_WREADY READY 0 1 }  { m_axi_gmem3_WDATA FIFONUM 1 32 }  { m_axi_gmem3_WSTRB STRB 1 4 }  { m_axi_gmem3_WLAST LAST 1 1 }  { m_axi_gmem3_WID ID 1 1 }  { m_axi_gmem3_WUSER DATA 1 1 }  { m_axi_gmem3_ARVALID VALID 1 1 }  { m_axi_gmem3_ARREADY READY 0 1 }  { m_axi_gmem3_ARADDR ADDR 1 64 }  { m_axi_gmem3_ARID ID 1 1 }  { m_axi_gmem3_ARLEN SIZE 1 32 }  { m_axi_gmem3_ARSIZE BURST 1 3 }  { m_axi_gmem3_ARBURST LOCK 1 2 }  { m_axi_gmem3_ARLOCK CACHE 1 2 }  { m_axi_gmem3_ARCACHE PROT 1 4 }  { m_axi_gmem3_ARPROT QOS 1 3 }  { m_axi_gmem3_ARQOS REGION 1 4 }  { m_axi_gmem3_ARREGION USER 1 4 }  { m_axi_gmem3_ARUSER DATA 1 1 }  { m_axi_gmem3_RVALID VALID 0 1 }  { m_axi_gmem3_RREADY READY 1 1 }  { m_axi_gmem3_RDATA FIFONUM 0 32 }  { m_axi_gmem3_RLAST LAST 0 1 }  { m_axi_gmem3_RID ID 0 1 }  { m_axi_gmem3_RFIFONUM LEN 0 9 }  { m_axi_gmem3_RUSER DATA 0 1 }  { m_axi_gmem3_RRESP RESP 0 2 }  { m_axi_gmem3_BVALID VALID 0 1 }  { m_axi_gmem3_BREADY READY 1 1 }  { m_axi_gmem3_BRESP RESP 0 2 }  { m_axi_gmem3_BID ID 0 1 }  { m_axi_gmem3_BUSER DATA 0 1 } } }
 	op { ap_none {  { op in_data 0 64 } } }
-	ALU_operation { ap_fifo {  { ALU_operation_din fifo_data_in 1 32 }  { ALU_operation_num_data_valid fifo_status_num_data_valid 0 7 }  { ALU_operation_fifo_cap fifo_update 0 7 }  { ALU_operation_full_n fifo_status 0 1 }  { ALU_operation_write fifo_port_we 1 1 } } }
+	ALU_operation { ap_fifo {  { ALU_operation_din fifo_data_in 1 32 }  { ALU_operation_num_data_valid fifo_status_num_data_valid 0 3 }  { ALU_operation_fifo_cap fifo_update 0 3 }  { ALU_operation_full_n fifo_status 0 1 }  { ALU_operation_write fifo_port_we 1 1 } } }
 }

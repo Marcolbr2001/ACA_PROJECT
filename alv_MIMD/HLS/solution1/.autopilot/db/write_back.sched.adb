@@ -34,7 +34,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702129263</coreId>
+						<coreId>1025538401</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -70,7 +70,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702129263</coreId>
+						<coreId>539107901</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -106,7 +106,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>23</coreId>
+						<coreId>1936028261</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -131,7 +131,7 @@
 						<name>c_read</name>
 						<fileName>HLS/core.cpp</fileName>
 						<fileDirectory>C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD</fileDirectory>
-						<lineNumber>152</lineNumber>
+						<lineNumber>174</lineNumber>
 						<contextFuncName>write_back</contextFuncName>
 						<contextNormFuncName>write_back</contextNormFuncName>
 						<inlineStackInfo>
@@ -147,7 +147,7 @@
 											<first>HLS/core.cpp</first>
 											<second>write_back</second>
 										</first>
-										<second>152</second>
+										<second>174</second>
 									</item>
 								</second>
 							</item>
@@ -160,7 +160,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702127201</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -168,8 +168,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>16</item>
-					<item>17</item>
+					<item>18</item>
+					<item>19</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -184,7 +184,7 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>11</id>
+						<id>13</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -203,7 +203,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>51</coreId>
+						<coreId>1948254264</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -211,8 +211,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>19</item>
-					<item>153</item>
+					<item>21</item>
+					<item>193</item>
 				</oprand_edges>
 				<opcode>wait</opcode>
 				<m_Display>0</m_Display>
@@ -227,11 +227,11 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>12</id>
-						<name>_ln152</name>
+						<id>14</id>
+						<name>_ln174</name>
 						<fileName>HLS/core.cpp</fileName>
 						<fileDirectory>C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD</fileDirectory>
-						<lineNumber>152</lineNumber>
+						<lineNumber>174</lineNumber>
 						<contextFuncName>write_back</contextFuncName>
 						<contextNormFuncName>write_back</contextNormFuncName>
 						<inlineStackInfo>
@@ -247,7 +247,7 @@
 											<first>HLS/core.cpp</first>
 											<second>write_back</second>
 										</first>
-										<second>152</second>
+										<second>174</second>
 									</item>
 								</second>
 							</item>
@@ -260,7 +260,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1629516910</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -268,11 +268,11 @@
 				<oprand_edges>
 					<count>5</count>
 					<item_version>0</item_version>
-					<item>21</item>
-					<item>22</item>
 					<item>23</item>
 					<item>24</item>
-					<item>154</item>
+					<item>25</item>
+					<item>26</item>
+					<item>194</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
@@ -287,7 +287,7 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>13</id>
+						<id>15</id>
 						<name>_ln0</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -306,7 +306,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1769239916</coreId>
+						<coreId>1936018748</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -332,7 +332,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>20</id>
+						<id>22</id>
 						<name>write_back_Pipeline_write_back</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -351,7 +351,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1702129263</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -366,7 +366,7 @@
 			<item class_id="18" tracking_level="1" version="0" object_id="_9">
 				<Obj>
 					<type>3</type>
-					<id>14</id>
+					<id>16</id>
 					<name>write_back</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -392,9 +392,9 @@
 					<count>4</count>
 					<item_version>0</item_version>
 					<item>5</item>
-					<item>11</item>
-					<item>12</item>
 					<item>13</item>
+					<item>14</item>
+					<item>15</item>
 				</node_objs>
 			</item>
 		</blocks>
@@ -402,52 +402,52 @@
 			<count>7</count>
 			<item_version>0</item_version>
 			<item class_id="20" tracking_level="1" version="0" object_id="_10">
-				<id>17</id>
+				<id>19</id>
 				<edge_type>1</edge_type>
 				<source_obj>2</source_obj>
 				<sink_obj>5</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_11">
-				<id>21</id>
+				<id>23</id>
 				<edge_type>1</edge_type>
-				<source_obj>20</source_obj>
-				<sink_obj>12</sink_obj>
+				<source_obj>22</source_obj>
+				<sink_obj>14</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_12">
-				<id>22</id>
+				<id>24</id>
 				<edge_type>1</edge_type>
 				<source_obj>5</source_obj>
-				<sink_obj>12</sink_obj>
+				<sink_obj>14</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_13">
-				<id>23</id>
+				<id>25</id>
 				<edge_type>1</edge_type>
 				<source_obj>1</source_obj>
-				<sink_obj>12</sink_obj>
+				<sink_obj>14</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_14">
-				<id>24</id>
+				<id>26</id>
 				<edge_type>1</edge_type>
 				<source_obj>3</source_obj>
-				<sink_obj>12</sink_obj>
+				<sink_obj>14</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_15">
-				<id>153</id>
+				<id>193</id>
 				<edge_type>4</edge_type>
 				<source_obj>5</source_obj>
-				<sink_obj>11</sink_obj>
+				<sink_obj>13</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_16">
-				<id>154</id>
+				<id>194</id>
 				<edge_type>4</edge_type>
-				<source_obj>11</source_obj>
-				<sink_obj>12</sink_obj>
+				<source_obj>13</source_obj>
+				<sink_obj>14</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 		</edges>
@@ -467,7 +467,7 @@
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>14</item>
+				<item>16</item>
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
@@ -492,21 +492,21 @@
 			</second>
 		</item>
 		<item>
-			<first>11</first>
+			<first>13</first>
 			<second>
 				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
-			<first>12</first>
+			<first>14</first>
 			<second>
 				<first>1</first>
 				<second>1</second>
 			</second>
 		</item>
 		<item>
-			<first>13</first>
+			<first>15</first>
 			<second>
 				<first>2</first>
 				<second>0</second>
@@ -517,7 +517,7 @@
 		<count>1</count>
 		<item_version>0</item_version>
 		<item class_id="30" tracking_level="0" version="0">
-			<first>14</first>
+			<first>16</first>
 			<second class_id="31" tracking_level="0" version="0">
 				<first>0</first>
 				<second>2</second>

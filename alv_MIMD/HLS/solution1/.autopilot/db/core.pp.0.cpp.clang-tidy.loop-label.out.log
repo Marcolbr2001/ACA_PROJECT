@@ -23,18 +23,3 @@ C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD\HLS\solution1\.autopilot\db\core
       ^~~
       VITIS_LOOP_1247_1: 
 C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD\HLS\solution1\.autopilot\db\core.pp.0.cpp:4883:7: note: FIX-IT applied suggested code changes
-C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD\HLS\solution1\.autopilot\db\core.pp.0.cpp:6796:2: warning: Added loop label VITIS_LOOP_16_1:   [xilinx-label-all-loops]
- while(!data_a.empty())
- ^~~~~
- VITIS_LOOP_16_1: 
-C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD\HLS\solution1\.autopilot\db\core.pp.0.cpp:6796:2: note: FIX-IT applied suggested code changes
-C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD\HLS\solution1\.autopilot\db\core.pp.0.cpp:6801:2: warning: Added loop label VITIS_LOOP_21_2:   [xilinx-label-all-loops]
- while(!data_b.empty())
- ^~~~~
- VITIS_LOOP_21_2: 
-C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD\HLS\solution1\.autopilot\db\core.pp.0.cpp:6801:2: note: FIX-IT applied suggested code changes
-C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD\HLS\solution1\.autopilot\db\core.pp.0.cpp:6806:2: warning: Added loop label VITIS_LOOP_26_3:   [xilinx-label-all-loops]
- while(!ALU_operation.empty())
- ^~~~~
- VITIS_LOOP_26_3: 
-C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD\HLS\solution1\.autopilot\db\core.pp.0.cpp:6806:2: note: FIX-IT applied suggested code changes

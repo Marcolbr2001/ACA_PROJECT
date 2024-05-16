@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'lod_exe_wb'" level="0">
-<item name = "Date">Tue May 14 23:14:50 2024
+<item name = "Date">Thu May 16 16:22:32 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">HLS</item>
@@ -31,12 +31,10 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_load_op_fu_118">load_op, 61, 61, 0.610 us, 0.610 us, 61, 61, no</column>
-<column name="grp_load_data_a_fu_128">load_data_a, 61, 61, 0.610 us, 0.610 us, 61, 61, no</column>
-<column name="grp_load_data_b_fu_138">load_data_b, 61, 61, 0.610 us, 0.610 us, 61, 61, no</column>
-<column name="grp_execute_fu_148">execute, ?, ?, ?, ?, ?, ?, no</column>
-<column name="call_ln0_entry_proc_fu_160">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
-<column name="grp_write_back_fu_167">write_back, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_load_data_and_op_fu_106">load_data_and_op, 62, 62, 0.620 us, 0.620 us, 62, 62, dataflow</column>
+<column name="grp_execute_fu_130">execute, 90, 90, 0.900 us, 0.900 us, 90, 90, no</column>
+<column name="call_ln199_entry_proc_fu_142">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_write_back_fu_149">write_back, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

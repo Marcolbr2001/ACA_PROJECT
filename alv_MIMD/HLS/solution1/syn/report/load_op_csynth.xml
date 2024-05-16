@@ -46,13 +46,13 @@
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>HLS/core.cpp:61</SourceLocation>
+<SourceLocation>HLS/core.cpp:69</SourceLocation>
 <SummaryOfLoopViolations>
 <l_operation>
 <Name>l_operation</Name>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>HLS/core.cpp:61</SourceLocation>
+<SourceLocation>HLS/core.cpp:69</SourceLocation>
 </l_operation>
 </SummaryOfLoopViolations>
 </SummaryOfViolations>
@@ -711,7 +711,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>3</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -722,7 +722,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>3</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>

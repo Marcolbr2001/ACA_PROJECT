@@ -1,28 +1,29 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-114" msg_severity="WARNING" msg_loc="HLS/core.cpp:162:9" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
-    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-114" msg_severity="WARNING" msg_loc="HLS/core.cpp:174:9" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:37:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:45:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="load_data_a" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:49:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:57:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="load_data_b" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:63:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:71:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="load_op" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:75:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="load_data_and_op" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:84:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="store_op" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:89:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:96:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="load_data_and_op" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:111:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="execute" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:154:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:176:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="write_back" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:162:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:185:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="ld_exe_wb" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:174:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:197:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="lod_exe_wb" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/HLS/solution1/csynth.tcl:17:9" msg_body="HLS pragma dump">
@@ -31,53 +32,56 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/HLS/solution1/directives.tcl:7:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=alv_MIMD" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:184:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:207:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=a" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:185:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:208:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=b" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:186:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:209:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=c" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:187:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:210:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=op" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:188:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:211:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=selec" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:190:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:213:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:192:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:215:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=a bundle=gmem0 depth=50 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:193:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:216:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=b bundle=gmem1 depth=50 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:194:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:217:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=c bundle=gmem2 depth=50 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:195:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:218:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=op bundle=gmem3 depth=50 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:198:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:221:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=data_a depth=50" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:202:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:225:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=data_b depth=50" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:206:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:229:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=data_result depth=50" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:210:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:233:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=ALU_operation depth=50" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-273" msg_severity="WARNING" msg_loc="HLS/core.cpp:73:0" msg_body="In function 'load_data_and_op(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;)', Pragma conflict happens on 'INLINE' and DATAFLOW pragmas: Inline into dataflow region may break the canonical form">
-        <args Function="load_data_and_op(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;)" Function-DebugLoc="File HLS/core.cpp Line 73 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:205:0" msg_body="Inlining function 'load_op(int volatile*, hls::stream&lt;int, 0&gt;&amp;)' into 'alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)'">
+        <args Callee="load_op(int volatile*, hls::stream&lt;int, 0&gt;&amp;)" Callee-DebugLoc="File HLS/core.cpp Line 67 Column 0" Caller="alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)" Caller-DebugLoc="File HLS/core.cpp Line 205 Column 0"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="HLS/core.cpp:176:3" msg_body="Inlining function 'load_data_and_op(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;)' into 'lod_exe_wb(int volatile*, hls::stream&lt;int, 0&gt;&amp;, int volatile*, hls::stream&lt;int, 0&gt;&amp;, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
-        <args Callee="load_data_and_op(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;)" Callee-DebugLoc="File HLS/core.cpp Line 73 Column 0" Caller="lod_exe_wb(int volatile*, hls::stream&lt;int, 0&gt;&amp;, int volatile*, hls::stream&lt;int, 0&gt;&amp;, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 172 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:205:0" msg_body="Inlining function 'store_op(hls::stream&lt;int, 0&gt;&amp;, int*)' into 'alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)'">
+        <args Callee="store_op(hls::stream&lt;int, 0&gt;&amp;, int*)" Callee-DebugLoc="File HLS/core.cpp Line 80 Column 0" Caller="alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)" Caller-DebugLoc="File HLS/core.cpp Line 205 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:205:0" msg_body="Inlining function 'reset(hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;)' into 'alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)'">
+        <args Callee="reset(hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;)" Callee-DebugLoc="File HLS/core.cpp Line 14 Column 0" Caller="alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)" Caller-DebugLoc="File HLS/core.cpp Line 205 Column 0"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

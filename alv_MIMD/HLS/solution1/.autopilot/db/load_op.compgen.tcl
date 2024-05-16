@@ -48,7 +48,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_ALU_operation \
     op interface \
-    ports { ALU_operation_din { O 32 vector } ALU_operation_num_data_valid { I 7 vector } ALU_operation_fifo_cap { I 7 vector } ALU_operation_full_n { I 1 bit } ALU_operation_write { O 1 bit } } \
+    ports { ALU_operation_din { O 32 vector } ALU_operation_num_data_valid { I 3 vector } ALU_operation_fifo_cap { I 3 vector } ALU_operation_full_n { I 1 bit } ALU_operation_write { O 1 bit } } \
 } "
 }
 

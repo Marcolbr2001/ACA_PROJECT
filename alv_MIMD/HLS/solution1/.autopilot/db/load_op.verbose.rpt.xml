@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'load_op'" level="0">
-<item name = "Date">Tue May 14 23:14:50 2024
+<item name = "Date">Thu May 16 16:22:33 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">HLS</item>
@@ -78,10 +78,10 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln61_fu_105_p2">+, 0, 0, 14, 6, 1</column>
-<column name="add_ln65_fu_123_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln69_fu_105_p2">+, 0, 0, 14, 6, 1</column>
+<column name="add_ln73_fu_123_p2">+, 0, 0, 71, 64, 64</column>
 <column name="ap_condition_224">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln61_fu_99_p2">icmp, 0, 0, 14, 6, 5</column>
+<column name="icmp_ln69_fu_99_p2">icmp, 0, 0, 14, 6, 5</column>
 <column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
@@ -92,7 +92,7 @@
 <column name="ALU_operation_blk_n">9, 2, 1, 2</column>
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
-<column name="ap_sig_allocacmp_i_2">9, 2, 6, 12</column>
+<column name="ap_sig_allocacmp_i_4">9, 2, 6, 12</column>
 <column name="gmem3_blk_n_AR">9, 2, 1, 2</column>
 <column name="gmem3_blk_n_R">9, 2, 1, 2</column>
 <column name="i_fu_62">9, 2, 6, 12</column>
@@ -192,8 +192,8 @@
 <column name="m_axi_gmem3_BID">in, 1, m_axi, gmem3, pointer</column>
 <column name="m_axi_gmem3_BUSER">in, 1, m_axi, gmem3, pointer</column>
 <column name="ALU_operation_din">out, 32, ap_fifo, ALU_operation, pointer</column>
-<column name="ALU_operation_num_data_valid">in, 7, ap_fifo, ALU_operation, pointer</column>
-<column name="ALU_operation_fifo_cap">in, 7, ap_fifo, ALU_operation, pointer</column>
+<column name="ALU_operation_num_data_valid">in, 3, ap_fifo, ALU_operation, pointer</column>
+<column name="ALU_operation_fifo_cap">in, 3, ap_fifo, ALU_operation, pointer</column>
 <column name="ALU_operation_full_n">in, 1, ap_fifo, ALU_operation, pointer</column>
 <column name="ALU_operation_write">out, 1, ap_fifo, ALU_operation, pointer</column>
 <column name="op">in, 64, ap_none, op, scalar</column>

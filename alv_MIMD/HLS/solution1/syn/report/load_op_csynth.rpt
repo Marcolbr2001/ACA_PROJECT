@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'load_op'
 ================================================================
-* Date:           Tue May 14 23:14:50 2024
+* Date:           Thu May 16 16:22:33 2024
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        HLS
@@ -85,10 +85,10 @@
     +---------------------------+----------+----+---+----+------------+------------+
     |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------+----------+----+---+----+------------+------------+
-    |add_ln61_fu_105_p2         |         +|   0|  0|  14|           6|           1|
-    |add_ln65_fu_123_p2         |         +|   0|  0|  71|          64|          64|
+    |add_ln69_fu_105_p2         |         +|   0|  0|  14|           6|           1|
+    |add_ln73_fu_123_p2         |         +|   0|  0|  71|          64|          64|
     |ap_condition_224           |       and|   0|  0|   2|           1|           1|
-    |icmp_ln61_fu_99_p2         |      icmp|   0|  0|  14|           6|           5|
+    |icmp_ln69_fu_99_p2         |      icmp|   0|  0|  14|           6|           5|
     |ap_block_pp0_stage0_01001  |        or|   0|  0|   2|           1|           1|
     |ap_block_pp0_stage0_11001  |        or|   0|  0|   2|           1|           1|
     |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
@@ -103,7 +103,7 @@
     |ALU_operation_blk_n      |   9|          2|    1|          2|
     |ap_done_int              |   9|          2|    1|          2|
     |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
-    |ap_sig_allocacmp_i_2     |   9|          2|    6|         12|
+    |ap_sig_allocacmp_i_4     |   9|          2|    6|         12|
     |gmem3_blk_n_AR           |   9|          2|    1|          2|
     |gmem3_blk_n_R            |   9|          2|    1|          2|
     |i_fu_62                  |   9|          2|    6|         12|
@@ -211,8 +211,8 @@
 |m_axi_gmem3_BID               |   in|    1|       m_axi|          gmem3|       pointer|
 |m_axi_gmem3_BUSER             |   in|    1|       m_axi|          gmem3|       pointer|
 |ALU_operation_din             |  out|   32|     ap_fifo|  ALU_operation|       pointer|
-|ALU_operation_num_data_valid  |   in|    7|     ap_fifo|  ALU_operation|       pointer|
-|ALU_operation_fifo_cap        |   in|    7|     ap_fifo|  ALU_operation|       pointer|
+|ALU_operation_num_data_valid  |   in|    3|     ap_fifo|  ALU_operation|       pointer|
+|ALU_operation_fifo_cap        |   in|    3|     ap_fifo|  ALU_operation|       pointer|
 |ALU_operation_full_n          |   in|    1|     ap_fifo|  ALU_operation|       pointer|
 |ALU_operation_write           |  out|    1|     ap_fifo|  ALU_operation|       pointer|
 |op                            |   in|   64|     ap_none|             op|        scalar|

@@ -34,7 +34,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702129263</coreId>
+						<coreId>42</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -70,7 +70,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>544433253</coreId>
+						<coreId>100</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -106,7 +106,7 @@
 						<coreName>FIFO</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1226965113</coreId>
+						<coreId>100</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -131,7 +131,7 @@
 						<name>i</name>
 						<fileName>HLS/core.cpp</fileName>
 						<fileDirectory>C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD</fileDirectory>
-						<lineNumber>151</lineNumber>
+						<lineNumber>173</lineNumber>
 						<contextFuncName>write_back</contextFuncName>
 						<contextNormFuncName>write_back</contextNormFuncName>
 						<inlineStackInfo>
@@ -147,7 +147,7 @@
 											<first>HLS/core.cpp</first>
 											<second>write_back</second>
 										</first>
-										<second>151</second>
+										<second>173</second>
 									</item>
 								</second>
 							</item>
@@ -160,7 +160,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>578056306</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -187,7 +187,7 @@
 						<name>c_load_read</name>
 						<fileName>HLS/core.cpp</fileName>
 						<fileDirectory>C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD</fileDirectory>
-						<lineNumber>152</lineNumber>
+						<lineNumber>174</lineNumber>
 						<contextFuncName>write_back</contextFuncName>
 						<contextNormFuncName>write_back</contextNormFuncName>
 						<inlineStackInfo>
@@ -203,7 +203,7 @@
 											<first>HLS/core.cpp</first>
 											<second>write_back</second>
 										</first>
-										<second>152</second>
+										<second>174</second>
 									</item>
 								</second>
 							</item>
@@ -216,7 +216,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>757935405</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -241,10 +241,10 @@
 					<Obj>
 						<type>0</type>
 						<id>8</id>
-						<name>i_write_ln151</name>
+						<name>i_write_ln173</name>
 						<fileName>HLS/core.cpp</fileName>
 						<fileDirectory>C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD</fileDirectory>
-						<lineNumber>151</lineNumber>
+						<lineNumber>173</lineNumber>
 						<contextFuncName>write_back</contextFuncName>
 						<contextNormFuncName>write_back</contextNormFuncName>
 						<inlineStackInfo>
@@ -260,7 +260,7 @@
 											<first>HLS/core.cpp</first>
 											<second>write_back</second>
 										</first>
-										<second>151</second>
+										<second>173</second>
 									</item>
 								</second>
 							</item>
@@ -273,7 +273,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>544106345</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -316,7 +316,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1936018748</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -343,7 +343,7 @@
 						<name>i_1</name>
 						<fileName>HLS/core.cpp</fileName>
 						<fileDirectory>C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD</fileDirectory>
-						<lineNumber>155</lineNumber>
+						<lineNumber>177</lineNumber>
 						<contextFuncName>write_back</contextFuncName>
 						<contextNormFuncName>write_back</contextNormFuncName>
 						<inlineStackInfo>
@@ -359,7 +359,7 @@
 											<first>HLS/core.cpp</first>
 											<second>write_back</second>
 										</first>
-										<second>155</second>
+										<second>177</second>
 									</item>
 								</second>
 							</item>
@@ -372,7 +372,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1683975207</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -400,7 +400,7 @@
 						<name>tmp_i</name>
 						<fileName>HLS/core.cpp</fileName>
 						<fileDirectory>C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD</fileDirectory>
-						<lineNumber>152</lineNumber>
+						<lineNumber>174</lineNumber>
 						<contextFuncName>write_back</contextFuncName>
 						<contextNormFuncName>write_back</contextNormFuncName>
 						<inlineStackInfo>
@@ -416,7 +416,7 @@
 											<first>HLS/core.cpp</first>
 											<second>write_back</second>
 										</first>
-										<second>152</second>
+										<second>174</second>
 									</item>
 								</second>
 							</item>
@@ -455,10 +455,10 @@
 					<Obj>
 						<type>0</type>
 						<id>13</id>
-						<name>add_ln156</name>
+						<name>add_ln178</name>
 						<fileName>HLS/core.cpp</fileName>
 						<fileDirectory>C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD</fileDirectory>
-						<lineNumber>156</lineNumber>
+						<lineNumber>178</lineNumber>
 						<contextFuncName>write_back</contextFuncName>
 						<contextNormFuncName>write_back</contextNormFuncName>
 						<inlineStackInfo>
@@ -474,7 +474,7 @@
 											<first>HLS/core.cpp</first>
 											<second>write_back</second>
 										</first>
-										<second>156</second>
+										<second>178</second>
 									</item>
 								</second>
 							</item>
@@ -512,10 +512,10 @@
 					<Obj>
 						<type>0</type>
 						<id>14</id>
-						<name>br_ln152</name>
+						<name>br_ln174</name>
 						<fileName>HLS/core.cpp</fileName>
 						<fileDirectory>C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD</fileDirectory>
-						<lineNumber>152</lineNumber>
+						<lineNumber>174</lineNumber>
 						<contextFuncName>write_back</contextFuncName>
 						<contextNormFuncName>write_back</contextNormFuncName>
 						<inlineStackInfo>
@@ -531,7 +531,7 @@
 											<first>HLS/core.cpp</first>
 											<second>write_back</second>
 										</first>
-										<second>152</second>
+										<second>174</second>
 									</item>
 								</second>
 							</item>
@@ -544,7 +544,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1869440365</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -573,7 +573,7 @@
 						<name>data_result_read</name>
 						<fileName>HLS/core.cpp</fileName>
 						<fileDirectory>C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD</fileDirectory>
-						<lineNumber>155</lineNumber>
+						<lineNumber>177</lineNumber>
 						<contextFuncName>write_back</contextFuncName>
 						<contextNormFuncName>write_back</contextNormFuncName>
 						<inlineStackInfo>
@@ -589,7 +589,7 @@
 											<first>HLS/core.cpp</first>
 											<second>write_back</second>
 										</first>
-										<second>155</second>
+										<second>177</second>
 									</item>
 								</second>
 							</item>
@@ -628,10 +628,10 @@
 					<Obj>
 						<type>0</type>
 						<id>19</id>
-						<name>shl_ln155</name>
+						<name>shl_ln177</name>
 						<fileName>HLS/core.cpp</fileName>
 						<fileDirectory>C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD</fileDirectory>
-						<lineNumber>155</lineNumber>
+						<lineNumber>177</lineNumber>
 						<contextFuncName>write_back</contextFuncName>
 						<contextNormFuncName>write_back</contextNormFuncName>
 						<inlineStackInfo>
@@ -647,7 +647,7 @@
 											<first>HLS/core.cpp</first>
 											<second>write_back</second>
 										</first>
-										<second>155</second>
+										<second>177</second>
 									</item>
 								</second>
 							</item>
@@ -660,7 +660,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1936942413</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -685,10 +685,10 @@
 					<Obj>
 						<type>0</type>
 						<id>20</id>
-						<name>add_ln155</name>
+						<name>add_ln177</name>
 						<fileName>HLS/core.cpp</fileName>
 						<fileDirectory>C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD</fileDirectory>
-						<lineNumber>155</lineNumber>
+						<lineNumber>177</lineNumber>
 						<contextFuncName>write_back</contextFuncName>
 						<contextNormFuncName>write_back</contextNormFuncName>
 						<inlineStackInfo>
@@ -704,7 +704,7 @@
 											<first>HLS/core.cpp</first>
 											<second>write_back</second>
 										</first>
-										<second>155</second>
+										<second>177</second>
 									</item>
 								</second>
 							</item>
@@ -745,7 +745,7 @@
 						<name>trunc_ln</name>
 						<fileName>HLS/core.cpp</fileName>
 						<fileDirectory>C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD</fileDirectory>
-						<lineNumber>155</lineNumber>
+						<lineNumber>177</lineNumber>
 						<contextFuncName>write_back</contextFuncName>
 						<contextNormFuncName>write_back</contextNormFuncName>
 						<inlineStackInfo>
@@ -761,7 +761,7 @@
 											<first>HLS/core.cpp</first>
 											<second>write_back</second>
 										</first>
-										<second>155</second>
+										<second>177</second>
 									</item>
 								</second>
 							</item>
@@ -774,7 +774,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1113268736</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>62</bitwidth>
@@ -801,10 +801,10 @@
 					<Obj>
 						<type>0</type>
 						<id>22</id>
-						<name>sext_ln155</name>
+						<name>sext_ln177</name>
 						<fileName>HLS/core.cpp</fileName>
 						<fileDirectory>C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD</fileDirectory>
-						<lineNumber>155</lineNumber>
+						<lineNumber>177</lineNumber>
 						<contextFuncName>write_back</contextFuncName>
 						<contextNormFuncName>write_back</contextNormFuncName>
 						<inlineStackInfo>
@@ -820,7 +820,7 @@
 											<first>HLS/core.cpp</first>
 											<second>write_back</second>
 										</first>
-										<second>155</second>
+										<second>177</second>
 									</item>
 								</second>
 							</item>
@@ -833,7 +833,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2228334</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -860,7 +860,7 @@
 						<name>gmem2_addr</name>
 						<fileName>HLS/core.cpp</fileName>
 						<fileDirectory>C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD</fileDirectory>
-						<lineNumber>155</lineNumber>
+						<lineNumber>177</lineNumber>
 						<contextFuncName>write_back</contextFuncName>
 						<contextNormFuncName>write_back</contextNormFuncName>
 						<inlineStackInfo>
@@ -876,7 +876,7 @@
 											<first>HLS/core.cpp</first>
 											<second>write_back</second>
 										</first>
-										<second>155</second>
+										<second>177</second>
 									</item>
 								</second>
 							</item>
@@ -889,7 +889,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>875376688</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -917,7 +917,7 @@
 						<name>gmem2_addr_req</name>
 						<fileName>HLS/core.cpp</fileName>
 						<fileDirectory>C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD</fileDirectory>
-						<lineNumber>155</lineNumber>
+						<lineNumber>177</lineNumber>
 						<contextFuncName>write_back</contextFuncName>
 						<contextNormFuncName>write_back</contextNormFuncName>
 						<inlineStackInfo>
@@ -933,7 +933,7 @@
 											<first>HLS/core.cpp</first>
 											<second>write_back</second>
 										</first>
-										<second>155</second>
+										<second>177</second>
 									</item>
 								</second>
 							</item>
@@ -972,10 +972,10 @@
 					<Obj>
 						<type>0</type>
 						<id>25</id>
-						<name>gmem2_addr_write_ln155</name>
+						<name>gmem2_addr_write_ln177</name>
 						<fileName>HLS/core.cpp</fileName>
 						<fileDirectory>C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD</fileDirectory>
-						<lineNumber>155</lineNumber>
+						<lineNumber>177</lineNumber>
 						<contextFuncName>write_back</contextFuncName>
 						<contextNormFuncName>write_back</contextNormFuncName>
 						<inlineStackInfo>
@@ -991,7 +991,7 @@
 											<first>HLS/core.cpp</first>
 											<second>write_back</second>
 										</first>
-										<second>155</second>
+										<second>177</second>
 									</item>
 								</second>
 							</item>
@@ -1035,7 +1035,7 @@
 						<name>gmem2_addr_resp</name>
 						<fileName>HLS/core.cpp</fileName>
 						<fileDirectory>C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD</fileDirectory>
-						<lineNumber>155</lineNumber>
+						<lineNumber>177</lineNumber>
 						<contextFuncName>write_back</contextFuncName>
 						<contextNormFuncName>write_back</contextNormFuncName>
 						<inlineStackInfo>
@@ -1051,7 +1051,7 @@
 											<first>HLS/core.cpp</first>
 											<second>write_back</second>
 										</first>
-										<second>155</second>
+										<second>177</second>
 									</item>
 								</second>
 							</item>
@@ -1090,10 +1090,10 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>i_write_ln151</name>
+						<name>i_write_ln173</name>
 						<fileName>HLS/core.cpp</fileName>
 						<fileDirectory>C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD</fileDirectory>
-						<lineNumber>151</lineNumber>
+						<lineNumber>173</lineNumber>
 						<contextFuncName>write_back</contextFuncName>
 						<contextNormFuncName>write_back</contextNormFuncName>
 						<inlineStackInfo>
@@ -1109,7 +1109,7 @@
 											<first>HLS/core.cpp</first>
 											<second>write_back</second>
 										</first>
-										<second>151</second>
+										<second>173</second>
 									</item>
 								</second>
 							</item>
@@ -1122,7 +1122,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1869635878</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1149,10 +1149,10 @@
 					<Obj>
 						<type>0</type>
 						<id>28</id>
-						<name>br_ln152</name>
+						<name>br_ln174</name>
 						<fileName>HLS/core.cpp</fileName>
 						<fileDirectory>C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD</fileDirectory>
-						<lineNumber>152</lineNumber>
+						<lineNumber>174</lineNumber>
 						<contextFuncName>write_back</contextFuncName>
 						<contextNormFuncName>write_back</contextNormFuncName>
 						<inlineStackInfo>
@@ -1168,7 +1168,7 @@
 											<first>HLS/core.cpp</first>
 											<second>write_back</second>
 										</first>
-										<second>152</second>
+										<second>174</second>
 									</item>
 								</second>
 							</item>
@@ -1181,7 +1181,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>578056306</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1223,7 +1223,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1936942413</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1268,7 +1268,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1970040691</coreId>
+						<coreId>100</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1299,7 +1299,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1663041570</coreId>
+						<coreId>1702129263</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1330,7 +1330,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>997223777</coreId>
+						<coreId>100</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1361,7 +1361,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>536882754</coreId>
+						<coreId>1702129263</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1392,7 +1392,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>807418469</coreId>
+						<coreId>100</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1423,7 +1423,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>6645601</coreId>
+						<coreId>539765349</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1454,7 +1454,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1196312910</coreId>
+						<coreId>1919252069</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -1488,7 +1488,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2892232367</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1522,7 +1522,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3345901780</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1556,7 +1556,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>855683955</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -2680,7 +2680,7 @@
 		<count>7</count>
 		<item_version>0</item_version>
 		<item class_id="48" tracking_level="0" version="0">
-			<first>add_ln155_fu_120</first>
+			<first>add_ln177_fu_120</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2688,7 +2688,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln156_fu_108</first>
+			<first>add_ln178_fu_108</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2712,7 +2712,7 @@
 			</second>
 		</item>
 		<item>
-			<first>sext_ln155_fu_135</first>
+			<first>sext_ln177_fu_135</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2720,7 +2720,7 @@
 			</second>
 		</item>
 		<item>
-			<first>shl_ln155_fu_114</first>
+			<first>shl_ln177_fu_114</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2781,7 +2781,7 @@
 			</second>
 		</item>
 		<item>
-			<first>store_ln151_store_fu_100</first>
+			<first>store_ln173_store_fu_100</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2789,7 +2789,7 @@
 			</second>
 		</item>
 		<item>
-			<first>store_ln151_store_fu_145</first>
+			<first>store_ln173_store_fu_145</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2805,7 +2805,7 @@
 			</second>
 		</item>
 		<item>
-			<first>write_ln155_write_fu_91</first>
+			<first>write_ln177_write_fu_91</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

@@ -6790,23 +6790,31 @@ class stream : public stream<__STREAM_T__, 0> {
 
 
 
-void reset(hls::stream<int>&ALU_operation, hls::stream<int>&data_a, hls::stream<int>&data_b)
+void reset(hls::stream<int>&ALU_operation, int ALU_operation_MEM[], hls::stream<int>&data_a, hls::stream<int>&data_b)
 {
 
- VITIS_LOOP_16_1: while(!data_a.empty())
+ clear_FIFO_a : while(!data_a.empty())
   {
    data_a.read();
   }
 
- VITIS_LOOP_21_2: while(!data_b.empty())
+ clear_FIFO_b : while(!data_b.empty())
   {
    data_b.read();
   }
 
- VITIS_LOOP_26_3: while(!ALU_operation.empty())
+ clear_FIFO_op : while(!ALU_operation.empty())
   {
    ALU_operation.read();
   }
+
+ clear_RAM_op : for(int i = 0; i < 50; i++)
+  {
+
+   ALU_operation_MEM[i] = 0;
+
+  }
+
 }
 
 
@@ -6848,27 +6856,41 @@ void load_op(volatile int op[], hls::stream<int>&ALU_operation)
  }
 }
 
-
-void load_data_and_op(volatile int a[], volatile int b[], volatile int op[], hls::stream<int>&data_a, hls::stream<int>&data_b, hls::stream<int>&ALU_operation)
+void store_op(hls::stream<int>&ALU_operation, int ALU_operation_MEM[])
 {
 
-#pragma HLS INLINE
+ s_operation: for(int i = 0; i < 50; i++)
+ {
+#pragma HLS PIPELINE II=1
+
+ ALU_operation_MEM[i] = ALU_operation.read();
+
+ }
+}
+
+
+void load_data_and_op(volatile int a[], volatile int b[], volatile int op[], hls::stream<int>&data_a, hls::stream<int>&data_b, hls::stream<int>&ALU_operation, int ALU_operation_MEM[])
+{
+
+
+#pragma HLS DATAFLOW
 
  load_op(op, ALU_operation);
+ store_op(ALU_operation, ALU_operation_MEM);
  load_data_a(a, data_a);
  load_data_b(b, data_b);
 
 }
 
 
-void execute(hls::stream<int>&data_a, hls::stream<int>&data_b, hls::stream<int>&ALU_operation, hls::stream<int>&data_result)
+void execute(hls::stream<int>&data_a, hls::stream<int>&data_b, int ALU_operation_MEM[], hls::stream<int>&data_result)
 {
 
- exe: while(!ALU_operation.empty())
+ exe: for(int i=0; i < 50; i++)
  {
 #pragma HLS PIPELINE II=1
 
- switch(ALU_operation.read())
+ switch(ALU_operation_MEM[i])
   {
 
    case 0 :
@@ -6937,36 +6959,37 @@ void write_back(hls::stream<int>&data_result, volatile int c[])
  }
 }
 
-void ld_exe_wb(volatile int a[], hls::stream<int>&data_a, volatile int b[], hls::stream<int>&data_b, hls::stream<int>&ALU_operation, hls::stream<int>&data_result, volatile int c[])
+void ld_exe_wb(volatile int a[], hls::stream<int>&data_a, volatile int b[], hls::stream<int>&data_b, int ALU_operation_MEM[], hls::stream<int>&data_result, volatile int c[])
 {
+
 #pragma HLS DATAFLOW
- {
-  load_data_a(a, data_a);
+
+ load_data_a(a, data_a);
   load_data_b(b, data_b);
-  execute(data_a, data_b, ALU_operation, data_result);
+  execute(data_a, data_b, ALU_operation_MEM, data_result);
   write_back(data_result, c);
- }
+
 }
 
-void lod_exe_wb(volatile int op[], hls::stream<int>&ALU_operation, volatile int a[], hls::stream<int>&data_a, volatile int b[], hls::stream<int>&data_b, hls::stream<int>&data_result, volatile int c[])
+void lod_exe_wb(volatile int op[], hls::stream<int>&ALU_operation, int ALU_operation_MEM[], volatile int a[], hls::stream<int>&data_a, volatile int b[], hls::stream<int>&data_b, hls::stream<int>&data_result, volatile int c[])
 {
 
 #pragma HLS DATAFLOW
- {
-  load_data_and_op(a, b, op, data_a, data_b, ALU_operation);
-  execute(data_a, data_b, ALU_operation, data_result);
+
+ load_data_and_op(a, b, op, data_a, data_b, ALU_operation, ALU_operation_MEM);
+  execute(data_a, data_b, ALU_operation_MEM, data_result);
   write_back(data_result, c);
- }
+
 }
 
 __attribute__((sdx_kernel("alv_MIMD", 0))) void alv_MIMD(volatile int* a, volatile int* b, volatile int* c, volatile int* op, int selec) {
 #line 17 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/HLS/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=alv_MIMD
-# 182 "HLS/core.cpp"
+# 205 "HLS/core.cpp"
 
 #line 7 "C:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/HLS/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=alv_MIMD
-# 182 "HLS/core.cpp"
+# 205 "HLS/core.cpp"
 
 
 #pragma HLS INTERFACE mode=s_axilite bundle=control port=a
@@ -6998,20 +7021,33 @@ __attribute__((sdx_kernel("alv_MIMD", 0))) void alv_MIMD(volatile int* a, volati
 #pragma HLS STREAM variable=ALU_operation depth=50
 
 
-
+ static int ALU_operation_MEM[50] = {0};
 
  switch(selec)
  {
-# 230 "HLS/core.cpp"
-  case 2:
 
-   lod_exe_wb(op, ALU_operation, a, data_a, b, data_b, data_result, c);
+  case 0:
+
+   load_op(op, ALU_operation);
+   store_op(ALU_operation, ALU_operation_MEM);
 
   break;
 
+  case 1:
 
+   ld_exe_wb(a, data_a, b, data_b, ALU_operation_MEM, data_result, c);
 
+  break;
 
+  case 2:
+
+   lod_exe_wb(op, ALU_operation, ALU_operation_MEM, a, data_a, b, data_b, data_result, c);
+
+  break;
+
+  default :
+
+   reset(ALU_operation, ALU_operation_MEM, data_a, data_b);
 
  }
 

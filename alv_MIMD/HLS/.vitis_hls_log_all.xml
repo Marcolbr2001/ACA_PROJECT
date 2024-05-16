@@ -8,29 +8,14 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.288+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem2_RREADY' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.178+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem2_ARUSER' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.178+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem2_ARREGION' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.178+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem2_ARQOS' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.178+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem2_ARPROT' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.178+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem2_ARCACHE' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.178+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem2_ARLOCK' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.178+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem2_ARBURST' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.163+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem2_ARSIZE' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.163+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem2_ARLEN' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.163+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem2_ARID' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.163+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem2_ARADDR' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.163+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem2_ARVALID' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.163+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem1_BREADY' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.163+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem1_WUSER' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.147+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem1_WID' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.147+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem1_WLAST' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.147+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem1_WSTRB' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.147+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem1_WDATA' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.147+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem1_WVALID' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.147+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem1_AWUSER' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.131+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lod_exe_wb/m_axi_gmem1_AWREGION' to 0." projectName="HLS" solutionName="solution1" date="2024-05-14T23:14:51.131+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] There is no IP core bound to FIFO [ALU_operation]." projectName="HLS" solutionName="solution1" date="2024-05-16T16:22:35.082+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'load_data_and_op/ALU_operation_full_n' to 0." projectName="HLS" solutionName="solution1" date="2024-05-16T16:22:35.062+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'load_data_and_op/m_axi_gmem3_BREADY' to 0." projectName="HLS" solutionName="solution1" date="2024-05-16T16:22:35.053+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'load_data_and_op/m_axi_gmem3_WUSER' to 0." projectName="HLS" solutionName="solution1" date="2024-05-16T16:22:35.042+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'load_data_and_op/m_axi_gmem3_WID' to 0." projectName="HLS" solutionName="solution1" date="2024-05-16T16:22:35.029+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'load_data_and_op/m_axi_gmem3_WLAST' to 0." projectName="HLS" solutionName="solution1" date="2024-05-16T16:22:35.020+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'load_data_and_op/m_axi_gmem3_WSTRB' to 0." projectName="HLS" solutionName="solution1" date="2024-05-16T16:22:35.010+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'load_data_and_op/m_axi_gmem3_WDATA' to 0." projectName="HLS" solutionName="solution1" date="2024-05-16T16:22:35.000+0200" type="Warning"/>
       </synLog>
     </logs>
   </warningLogs>

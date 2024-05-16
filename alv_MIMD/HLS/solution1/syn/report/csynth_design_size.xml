@@ -2,49 +2,56 @@
     <item name="Total Instructions per Compilation Phase">
         <table>
             <keys size="4">Phase, Step, Instructions, Description</keys>
-            <column name="Compile/Link">, 610, After all functions are compiled and linked into a single design</column>
+            <column name="Compile/Link">, 1309, After all functions are compiled and linked into a single design</column>
             <column name="">, , </column>
             <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
-            <column name="">(1) unroll, 161, user unroll pragmas are applied</column>
-            <column name="">(2) simplification, 153, simplification of applied user unroll pragmas</column>
-            <column name="">(3) inline, 129, user inline pragmas are applied</column>
-            <column name="">(4) simplification, 129, simplification of applied user inline pragmas</column>
+            <column name="">(1) unroll,   366, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,   339, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,   300, user inline pragmas are applied</column>
+            <column name="">(4) simplification,   300, simplification of applied user inline pragmas</column>
             <column name="">, , </column>
             <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
-            <column name="">(1) array partition, 131, user array partition pragmas are applied</column>
-            <column name="">(2) simplification, 131, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
-            <column name="">(3) aggregate/disaggregate , 131, user struct aggregate/disaggregate pragmas are applied</column>
-            <column name="">(4) array reshape, 131, apply array reshape pragmas</column>
-            <column name="">(5) access patterns, 131, array access pattern optmizations</column>
+            <column name="">(1) array partition,   280, user array partition pragmas are applied</column>
+            <column name="">(2) simplification,   280, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate ,   280, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,   280, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,   282, array access pattern optmizations</column>
             <column name="">, , </column>
             <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
-            <column name="">(1) loop simplification, 131, loop and instruction simplification</column>
-            <column name="">(2) parallelization, 131, loops are unrolled or pipelined to meet performance targets</column>
-            <column name="">(3) array partition, 131, arrays are partitioned to meet performance targets</column>
-            <column name="">(4) simplification, 131, simplification of design after performance transformations</column>
+            <column name="">(1) loop simplification,   282, loop and instruction simplification</column>
+            <column name="">(2) parallelization,   280, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition,   280, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,   280, simplification of design after performance transformations</column>
             <column name="">, , </column>
             <column name="HW Transforms">, , After hardware transfomations</column>
-            <column name="">(1) lowering, 153, initial conversion to HW specific instructions</column>
-            <column name="">(2) optimizations, 240, high level synthesis optimizations</column>
+            <column name="">(1) lowering,   314, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations,   516, high level synthesis optimizations</column>
         </table>
     </item>
     <item name="Instructions per Function for each Compilation Phase">
         <hiertable>
             <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
             <rows>
-                <row id="0" col0="alv_MIMD" col1="core.cpp:182" col2="610" col3="129" col4="131" col5="131" col6="240">
-                    <row id="6" col0="lod_exe_wb" col1="core.cpp:171" col2="564" col3="106" col4="104" col5="104" col6="202">
-                        <row id="5" col0="load_data_and_op" col1="core.cpp:72" col2="76" col3="" col4="" col5="" col6="">
-                            <row id="1" col0="load_op" col1="core.cpp:58" col2="24" col3="" col4="" col5="" col6=""/>
-                            <row id="2" col0="load_data_a" col1="core.cpp:33" col2="24" col3="" col4="" col5="" col6=""/>
-                            <row id="7" col0="load_data_b" col1="core.cpp:45" col2="24" col3="" col4="" col5="" col6=""/>
-                        </row>
-                        <row id="4" col0="execute" col1="core.cpp:84" col2="453" col3="61" col4="61" col5="61" col6="123"/>
-                        <row id="3" col0="write_back" col1="core.cpp:149" col2="29" col3="10" col4="10" col5="10" col6="17"/>
-                        <row id="1" col0="load_op" col1="core.cpp:58" col2="" col3="9" col4="9" col5="9" col6="18"/>
-                        <row id="2" col0="load_data_a" col1="core.cpp:33" col2="" col3="9" col4="9" col5="9" col6="18"/>
-                        <row id="7" col0="load_data_b" col1="core.cpp:45" col2="" col3="9" col4="9" col5="9" col6="18"/>
+                <row id="0" col0="alv_MIMD" col1="core.cpp:205" col2="1309" col3="300" col4="282" col5="280" col6="516">
+                    <row id="1" col0="load_op" col1="core.cpp:66" col2="24" col3="" col4="" col5="" col6=""/>
+                    <row id="6" col0="store_op" col1="core.cpp:79" col2="26" col3="" col4="" col5="" col6=""/>
+                    <row id="5" col0="ld_exe_wb" col1="core.cpp:182" col2="532" col3="104" col4="96" col5="96" col6="185">
+                        <row id="4" col0="load_data_a" col1="core.cpp:41" col2="24" col3="9" col4="9" col5="9" col6="18"/>
+                        <row id="10" col0="load_data_b" col1="core.cpp:53" col2="24" col3="9" col4="9" col5="9" col6="18"/>
+                        <row id="2" col0="execute" col1="core.cpp:106" col2="442" col3="63" col4="63" col5="63" col6="125"/>
+                        <row id="7" col0="write_back" col1="core.cpp:171" col2="29" col3="10" col4="10" col5="10" col6="17"/>
                     </row>
+                    <row id="3" col0="lod_exe_wb" col1="core.cpp:194" col2="592" col3="132" col4="118" col5="118" col6="224">
+                        <row id="8" col0="load_data_and_op" col1="core.cpp:92" col2="111" col3="49" col4="41" col5="41" col6="76">
+                            <row id="1" col0="load_op" col1="core.cpp:66" col2="24" col3="9" col4="9" col5="9" col6="18"/>
+                            <row id="6" col0="store_op" col1="core.cpp:79" col2="26" col3="9" col4="9" col5="9" col6="15"/>
+                            <row id="4" col0="load_data_a" col1="core.cpp:41" col2="24" col3="9" col4="9" col5="9" col6="18"/>
+                            <row id="10" col0="load_data_b" col1="core.cpp:53" col2="24" col3="9" col4="9" col5="9" col6="18"/>
+                        </row>
+                        <row id="2" col0="execute" col1="core.cpp:106" col2="442" col3="63" col4="63" col5="63" col6="125"/>
+                        <row id="7" col0="write_back" col1="core.cpp:171" col2="29" col3="10" col4="10" col5="10" col6="17"/>
+                    </row>
+                    <row id="9" col0="reset" col1="core.cpp:13" col2="82" col3="" col4="" col5="" col6=""/>
                 </row>
             </rows>
             <notes/>

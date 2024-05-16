@@ -46,31 +46,4 @@ Diagnostics:
         Offset:          621095
         Length:          0
         ReplacementText: 'VITIS_LOOP_1247_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_16_1:  '
-    FileOffset:      16
-    FilePath:        'C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD\HLS\core.cpp'
-    Replacements:    
-      - FilePath:        'C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD\HLS\solution1\.autopilot\db\core.pp.0.cpp'
-        Offset:          993132
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_16_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_21_2:  '
-    FileOffset:      21
-    FilePath:        'C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD\HLS\core.cpp'
-    Replacements:    
-      - FilePath:        'C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD\HLS\solution1\.autopilot\db\core.pp.0.cpp'
-        Offset:          993183
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_21_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_26_3:  '
-    FileOffset:      26
-    FilePath:        'C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD\HLS\core.cpp'
-    Replacements:    
-      - FilePath:        'C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD\HLS\solution1\.autopilot\db\core.pp.0.cpp'
-        Offset:          993234
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_26_3: '
 ...
