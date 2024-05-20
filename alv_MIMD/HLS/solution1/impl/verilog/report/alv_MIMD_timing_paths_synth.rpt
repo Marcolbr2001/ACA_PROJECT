@@ -1,0 +1,613 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Sun May 19 16:20:49 2024
+| Host         : MSI running 64-bit major release  (build 9200)
+| Command      : report_timing -max_paths 10 -file ./report/alv_MIMD_timing_paths_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             2.728ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.297ns  (logic 2.407ns (32.986%)  route 4.890ns (67.014%))
+  Logic Levels:           8  (CARRY4=2 LUT4=1 LUT5=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=10864, unset)        0.973     0.973    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/Q
+                         net (fo=1, unplaced)         0.741     2.232    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg[29]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.527 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518/O
+                         net (fo=1, unplaced)         1.111     3.638    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518_n_9
+                         LUT6 (Prop_lut6_I1_O)        0.124     3.762 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315/O
+                         net (fo=1, unplaced)         0.449     4.211    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315_n_9
+                         LUT5 (Prop_lut5_I0_O)        0.124     4.335 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140/O
+                         net (fo=33, unplaced)        0.521     4.856    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140_n_9
+                         LUT6 (Prop_lut6_I3_O)        0.124     4.980 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_303/O
+                         net (fo=2, unplaced)         0.913     5.893    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/grp_data_exe_wb_fu_150_data_result_write
+                         LUT6 (Prop_lut6_I0_O)        0.124     6.017 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_128/O
+                         net (fo=6, unplaced)         0.481     6.498    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/empty_n_reg_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     6.622 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry_i_5__2/O
+                         net (fo=1, unplaced)         0.665     7.287    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry_i_5__2_n_9
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.637     7.924 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     7.933    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry_n_9
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.337     8.270 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry__0/O[1]
+                         net (fo=1, unplaced)         0.000     8.270    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry__0_n_15
+                         FDRE                                         r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=10864, unset)        0.924    10.924    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[6]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         FDRE (Setup_fdre_C_D)        0.109    10.998    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[6]
+  -------------------------------------------------------------------
+                         required time                         10.998    
+                         arrival time                          -8.270    
+  -------------------------------------------------------------------
+                         slack                                  2.728    
+
+Slack (MET) :             2.833ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.192ns  (logic 2.302ns (32.008%)  route 4.890ns (67.992%))
+  Logic Levels:           8  (CARRY4=2 LUT4=1 LUT5=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=10864, unset)        0.973     0.973    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/Q
+                         net (fo=1, unplaced)         0.741     2.232    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg[29]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.527 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518/O
+                         net (fo=1, unplaced)         1.111     3.638    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518_n_9
+                         LUT6 (Prop_lut6_I1_O)        0.124     3.762 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315/O
+                         net (fo=1, unplaced)         0.449     4.211    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315_n_9
+                         LUT5 (Prop_lut5_I0_O)        0.124     4.335 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140/O
+                         net (fo=33, unplaced)        0.521     4.856    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140_n_9
+                         LUT6 (Prop_lut6_I3_O)        0.124     4.980 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_303/O
+                         net (fo=2, unplaced)         0.913     5.893    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/grp_data_exe_wb_fu_150_data_result_write
+                         LUT6 (Prop_lut6_I0_O)        0.124     6.017 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_128/O
+                         net (fo=6, unplaced)         0.481     6.498    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/empty_n_reg_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     6.622 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry_i_5__2/O
+                         net (fo=1, unplaced)         0.665     7.287    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry_i_5__2_n_9
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.637     7.924 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     7.933    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry_n_9
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.232     8.165 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry__0/O[0]
+                         net (fo=1, unplaced)         0.000     8.165    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry__0_n_16
+                         FDRE                                         r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=10864, unset)        0.924    10.924    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[5]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         FDRE (Setup_fdre_C_D)        0.109    10.998    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[5]
+  -------------------------------------------------------------------
+                         required time                         10.998    
+                         arrival time                          -8.165    
+  -------------------------------------------------------------------
+                         slack                                  2.833    
+
+Slack (MET) :             2.935ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg/WEBWE[0]
+                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.449ns  (logic 1.433ns (22.221%)  route 5.016ns (77.779%))
+  Logic Levels:           6  (LUT1=1 LUT4=1 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=10864, unset)        0.973     0.973    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/Q
+                         net (fo=1, unplaced)         0.741     2.232    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg[29]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.527 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518/O
+                         net (fo=1, unplaced)         1.111     3.638    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518_n_9
+                         LUT6 (Prop_lut6_I1_O)        0.124     3.762 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315/O
+                         net (fo=1, unplaced)         0.449     4.211    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315_n_9
+                         LUT5 (Prop_lut5_I0_O)        0.124     4.335 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140/O
+                         net (fo=33, unplaced)        0.521     4.856    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140_n_9
+                         LUT6 (Prop_lut6_I3_O)        0.124     4.980 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_303/O
+                         net (fo=2, unplaced)         0.913     5.893    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/grp_data_exe_wb_fu_150_data_result_write
+                         LUT6 (Prop_lut6_I0_O)        0.124     6.017 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_128/O
+                         net (fo=6, unplaced)         0.481     6.498    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/int_selec_reg[0]
+                         LUT1 (Prop_lut1_I0_O)        0.124     6.622 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_34/O
+                         net (fo=10, unplaced)        0.800     7.422    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/WEBWE[0]
+                         RAMB18E1                                     r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg/WEBWE[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=10864, unset)        0.924    10.924    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/ap_clk
+                         RAMB18E1                                     r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg/CLKBWRCLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         RAMB18E1 (Setup_ramb18e1_CLKBWRCLK_WEBWE[0])
+                                                     -0.532    10.357    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg
+  -------------------------------------------------------------------
+                         required time                         10.357    
+                         arrival time                          -7.422    
+  -------------------------------------------------------------------
+                         slack                                  2.935    
+
+Slack (MET) :             2.935ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg/WEBWE[1]
+                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.449ns  (logic 1.433ns (22.221%)  route 5.016ns (77.779%))
+  Logic Levels:           6  (LUT1=1 LUT4=1 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=10864, unset)        0.973     0.973    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/Q
+                         net (fo=1, unplaced)         0.741     2.232    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg[29]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.527 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518/O
+                         net (fo=1, unplaced)         1.111     3.638    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518_n_9
+                         LUT6 (Prop_lut6_I1_O)        0.124     3.762 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315/O
+                         net (fo=1, unplaced)         0.449     4.211    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315_n_9
+                         LUT5 (Prop_lut5_I0_O)        0.124     4.335 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140/O
+                         net (fo=33, unplaced)        0.521     4.856    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140_n_9
+                         LUT6 (Prop_lut6_I3_O)        0.124     4.980 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_303/O
+                         net (fo=2, unplaced)         0.913     5.893    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/grp_data_exe_wb_fu_150_data_result_write
+                         LUT6 (Prop_lut6_I0_O)        0.124     6.017 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_128/O
+                         net (fo=6, unplaced)         0.481     6.498    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/int_selec_reg[0]
+                         LUT1 (Prop_lut1_I0_O)        0.124     6.622 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_34/O
+                         net (fo=10, unplaced)        0.800     7.422    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/WEBWE[0]
+                         RAMB18E1                                     r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg/WEBWE[1]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=10864, unset)        0.924    10.924    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/ap_clk
+                         RAMB18E1                                     r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg/CLKBWRCLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         RAMB18E1 (Setup_ramb18e1_CLKBWRCLK_WEBWE[1])
+                                                     -0.532    10.357    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg
+  -------------------------------------------------------------------
+                         required time                         10.357    
+                         arrival time                          -7.422    
+  -------------------------------------------------------------------
+                         slack                                  2.935    
+
+Slack (MET) :             2.935ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg/WEBWE[2]
+                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.449ns  (logic 1.433ns (22.221%)  route 5.016ns (77.779%))
+  Logic Levels:           6  (LUT1=1 LUT4=1 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=10864, unset)        0.973     0.973    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/Q
+                         net (fo=1, unplaced)         0.741     2.232    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg[29]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.527 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518/O
+                         net (fo=1, unplaced)         1.111     3.638    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518_n_9
+                         LUT6 (Prop_lut6_I1_O)        0.124     3.762 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315/O
+                         net (fo=1, unplaced)         0.449     4.211    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315_n_9
+                         LUT5 (Prop_lut5_I0_O)        0.124     4.335 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140/O
+                         net (fo=33, unplaced)        0.521     4.856    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140_n_9
+                         LUT6 (Prop_lut6_I3_O)        0.124     4.980 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_303/O
+                         net (fo=2, unplaced)         0.913     5.893    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/grp_data_exe_wb_fu_150_data_result_write
+                         LUT6 (Prop_lut6_I0_O)        0.124     6.017 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_128/O
+                         net (fo=6, unplaced)         0.481     6.498    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/int_selec_reg[0]
+                         LUT1 (Prop_lut1_I0_O)        0.124     6.622 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_34/O
+                         net (fo=10, unplaced)        0.800     7.422    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/WEBWE[0]
+                         RAMB18E1                                     r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg/WEBWE[2]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=10864, unset)        0.924    10.924    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/ap_clk
+                         RAMB18E1                                     r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg/CLKBWRCLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         RAMB18E1 (Setup_ramb18e1_CLKBWRCLK_WEBWE[2])
+                                                     -0.532    10.357    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg
+  -------------------------------------------------------------------
+                         required time                         10.357    
+                         arrival time                          -7.422    
+  -------------------------------------------------------------------
+                         slack                                  2.935    
+
+Slack (MET) :             2.935ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg/WEBWE[3]
+                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.449ns  (logic 1.433ns (22.221%)  route 5.016ns (77.779%))
+  Logic Levels:           6  (LUT1=1 LUT4=1 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=10864, unset)        0.973     0.973    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/Q
+                         net (fo=1, unplaced)         0.741     2.232    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg[29]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.527 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518/O
+                         net (fo=1, unplaced)         1.111     3.638    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518_n_9
+                         LUT6 (Prop_lut6_I1_O)        0.124     3.762 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315/O
+                         net (fo=1, unplaced)         0.449     4.211    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315_n_9
+                         LUT5 (Prop_lut5_I0_O)        0.124     4.335 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140/O
+                         net (fo=33, unplaced)        0.521     4.856    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140_n_9
+                         LUT6 (Prop_lut6_I3_O)        0.124     4.980 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_303/O
+                         net (fo=2, unplaced)         0.913     5.893    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/grp_data_exe_wb_fu_150_data_result_write
+                         LUT6 (Prop_lut6_I0_O)        0.124     6.017 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_128/O
+                         net (fo=6, unplaced)         0.481     6.498    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/int_selec_reg[0]
+                         LUT1 (Prop_lut1_I0_O)        0.124     6.622 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_34/O
+                         net (fo=10, unplaced)        0.800     7.422    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/WEBWE[0]
+                         RAMB18E1                                     r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg/WEBWE[3]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=10864, unset)        0.924    10.924    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/ap_clk
+                         RAMB18E1                                     r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg/CLKBWRCLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         RAMB18E1 (Setup_ramb18e1_CLKBWRCLK_WEBWE[3])
+                                                     -0.532    10.357    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg
+  -------------------------------------------------------------------
+                         required time                         10.357    
+                         arrival time                          -7.422    
+  -------------------------------------------------------------------
+                         slack                                  2.935    
+
+Slack (MET) :             2.979ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.046ns  (logic 2.165ns (30.727%)  route 4.881ns (69.273%))
+  Logic Levels:           7  (CARRY4=1 LUT4=1 LUT5=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=10864, unset)        0.973     0.973    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/Q
+                         net (fo=1, unplaced)         0.741     2.232    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg[29]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.527 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518/O
+                         net (fo=1, unplaced)         1.111     3.638    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518_n_9
+                         LUT6 (Prop_lut6_I1_O)        0.124     3.762 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315/O
+                         net (fo=1, unplaced)         0.449     4.211    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315_n_9
+                         LUT5 (Prop_lut5_I0_O)        0.124     4.335 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140/O
+                         net (fo=33, unplaced)        0.521     4.856    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140_n_9
+                         LUT6 (Prop_lut6_I3_O)        0.124     4.980 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_303/O
+                         net (fo=2, unplaced)         0.913     5.893    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/grp_data_exe_wb_fu_150_data_result_write
+                         LUT6 (Prop_lut6_I0_O)        0.124     6.017 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_128/O
+                         net (fo=6, unplaced)         0.481     6.498    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/empty_n_reg_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     6.622 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry_i_5__2/O
+                         net (fo=1, unplaced)         0.665     7.287    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry_i_5__2_n_9
+                         CARRY4 (Prop_carry4_S[0]_O[3])
+                                                      0.732     8.019 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry/O[3]
+                         net (fo=1, unplaced)         0.000     8.019    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry_n_13
+                         FDRE                                         r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=10864, unset)        0.924    10.924    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[4]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         FDRE (Setup_fdre_C_D)        0.109    10.998    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[4]
+  -------------------------------------------------------------------
+                         required time                         10.998    
+                         arrival time                          -8.019    
+  -------------------------------------------------------------------
+                         slack                                  2.979    
+
+Slack (MET) :             3.043ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.982ns  (logic 2.101ns (30.092%)  route 4.881ns (69.908%))
+  Logic Levels:           7  (CARRY4=1 LUT4=1 LUT5=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=10864, unset)        0.973     0.973    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/Q
+                         net (fo=1, unplaced)         0.741     2.232    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg[29]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.527 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518/O
+                         net (fo=1, unplaced)         1.111     3.638    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518_n_9
+                         LUT6 (Prop_lut6_I1_O)        0.124     3.762 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315/O
+                         net (fo=1, unplaced)         0.449     4.211    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315_n_9
+                         LUT5 (Prop_lut5_I0_O)        0.124     4.335 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140/O
+                         net (fo=33, unplaced)        0.521     4.856    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140_n_9
+                         LUT6 (Prop_lut6_I3_O)        0.124     4.980 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_303/O
+                         net (fo=2, unplaced)         0.913     5.893    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/grp_data_exe_wb_fu_150_data_result_write
+                         LUT6 (Prop_lut6_I0_O)        0.124     6.017 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_128/O
+                         net (fo=6, unplaced)         0.481     6.498    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/empty_n_reg_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     6.622 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry_i_5__2/O
+                         net (fo=1, unplaced)         0.665     7.287    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry_i_5__2_n_9
+                         CARRY4 (Prop_carry4_S[0]_O[2])
+                                                      0.668     7.955 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry/O[2]
+                         net (fo=1, unplaced)         0.000     7.955    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry_n_14
+                         FDRE                                         r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=10864, unset)        0.924    10.924    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[3]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         FDRE (Setup_fdre_C_D)        0.109    10.998    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[3]
+  -------------------------------------------------------------------
+                         required time                         10.998    
+                         arrival time                          -7.955    
+  -------------------------------------------------------------------
+                         slack                                  3.043    
+
+Slack (MET) :             3.160ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.865ns  (logic 1.984ns (28.900%)  route 4.881ns (71.100%))
+  Logic Levels:           7  (CARRY4=1 LUT4=1 LUT5=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=10864, unset)        0.973     0.973    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/Q
+                         net (fo=1, unplaced)         0.741     2.232    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg[29]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.527 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518/O
+                         net (fo=1, unplaced)         1.111     3.638    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518_n_9
+                         LUT6 (Prop_lut6_I1_O)        0.124     3.762 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315/O
+                         net (fo=1, unplaced)         0.449     4.211    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315_n_9
+                         LUT5 (Prop_lut5_I0_O)        0.124     4.335 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140/O
+                         net (fo=33, unplaced)        0.521     4.856    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140_n_9
+                         LUT6 (Prop_lut6_I3_O)        0.124     4.980 f  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_303/O
+                         net (fo=2, unplaced)         0.913     5.893    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/grp_data_exe_wb_fu_150_data_result_write
+                         LUT6 (Prop_lut6_I0_O)        0.124     6.017 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_128/O
+                         net (fo=6, unplaced)         0.481     6.498    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/empty_n_reg_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     6.622 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry_i_5__2/O
+                         net (fo=1, unplaced)         0.665     7.287    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry_i_5__2_n_9
+                         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.551     7.838 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry/O[1]
+                         net (fo=1, unplaced)         0.000     7.838    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry_n_15
+                         FDRE                                         r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=10864, unset)        0.924    10.924    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[2]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         FDRE (Setup_fdre_C_D)        0.109    10.998    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[2]
+  -------------------------------------------------------------------
+                         required time                         10.998    
+                         arrival time                          -7.838    
+  -------------------------------------------------------------------
+                         slack                                  3.160    
+
+Slack (MET) :             3.301ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/control_s_axi_U/int_selec_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/ALU_operation_MEM_U/ram_reg/ADDRARDADDR[4]
+                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.049ns  (logic 1.449ns (23.956%)  route 4.600ns (76.044%))
+  Logic Levels:           6  (LUT3=1 LUT5=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=10864, unset)        0.973     0.973    bd_0_i/hls_inst/inst/control_s_axi_U/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/control_s_axi_U/int_selec_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/control_s_axi_U/int_selec_reg[2]/Q
+                         net (fo=3, unplaced)         0.983     2.474    bd_0_i/hls_inst/inst/control_s_axi_U/selec[2]
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.769 r  bd_0_i/hls_inst/inst/control_s_axi_U/mem_reg[5][0]_srl6_i_15/O
+                         net (fo=1, unplaced)         0.449     3.218    bd_0_i/hls_inst/inst/control_s_axi_U/mem_reg[5][0]_srl6_i_15_n_9
+                         LUT6 (Prop_lut6_I5_O)        0.124     3.342 r  bd_0_i/hls_inst/inst/control_s_axi_U/mem_reg[5][0]_srl6_i_11/O
+                         net (fo=9, unplaced)         0.943     4.285    bd_0_i/hls_inst/inst/control_s_axi_U/mem_reg[5][0]_srl6_i_11_n_9
+                         LUT3 (Prop_lut3_I0_O)        0.148     4.433 r  bd_0_i/hls_inst/inst/control_s_axi_U/mem_reg_i_129/O
+                         net (fo=11, unplaced)        0.495     4.928    bd_0_i/hls_inst/inst/control_s_axi_U/int_selec_reg[11]_0
+                         LUT5 (Prop_lut5_I4_O)        0.116     5.044 r  bd_0_i/hls_inst/inst/control_s_axi_U/ram_reg_i_57/O
+                         net (fo=6, unplaced)         0.481     5.525    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_exe_fu_127/ram_reg_4
+                         LUT6 (Prop_lut6_I5_O)        0.124     5.649 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_exe_fu_127/ram_reg_i_51/O
+                         net (fo=1, unplaced)         0.449     6.098    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_Block_entry2_proc1_Pipeline_clear_RAM_op_fu_204/flow_control_loop_pipe_sequential_init_U/ram_reg_1
+                         LUT6 (Prop_lut6_I2_O)        0.124     6.222 r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_Block_entry2_proc1_Pipeline_clear_RAM_op_fu_204/flow_control_loop_pipe_sequential_init_U/ram_reg_i_7/O
+                         net (fo=2, unplaced)         0.800     7.022    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/ALU_operation_MEM_U/ADDRARDADDR[0]
+                         RAMB18E1                                     r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/ALU_operation_MEM_U/ram_reg/ADDRARDADDR[4]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=10864, unset)        0.924    10.924    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/ALU_operation_MEM_U/ap_clk
+                         RAMB18E1                                     r  bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/ALU_operation_MEM_U/ram_reg/CLKARDCLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         RAMB18E1 (Setup_ramb18e1_CLKARDCLK_ADDRARDADDR[4])
+                                                     -0.566    10.323    bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/ALU_operation_MEM_U/ram_reg
+  -------------------------------------------------------------------
+                         required time                         10.323    
+                         arrival time                          -7.022    
+  -------------------------------------------------------------------
+                         slack                                  3.301    
+
+
+
+

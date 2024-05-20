@@ -1,198 +1,63 @@
 {
   "0": {
-    "basicblocks": 24,
-    "calls": "11 4",
+    "basicblocks": 18,
+    "calls": "2 3 1",
     "file": "core.cpp",
-    "fileloc": 205,
-    "instructions": 107,
-    "loads": {
-      "L": 1,
-      "T": 1
-    },
+    "fileloc": 264,
+    "instructions": 79,
     "name": "alv_MIMD",
-    "stores": {
-      "G": 2,
-      "L": 1
-    },
-    "total_instructions": 516
-  },
-  "1": {
-    "basicblocks": 16,
-    "calls": "",
-    "file": "core.cpp",
-    "fileloc": 106,
-    "instructions": 125,
-    "loads": {
-      "G": 1,
-      "L": 14
-    },
-    "name": "execute",
-    "stores": {
-      "L": 11
-    },
-    "total_instructions": 125
-  },
-  "10": {
-    "basicblocks": 4,
-    "calls": "",
-    "file": "core.cpp",
-    "fileloc": 79,
-    "instructions": 15,
-    "loads": {
-      "L": 1
-    },
-    "name": "store_op",
     "stores": {
       "G": 1
     },
-    "total_instructions": 15
+    "total_instructions": 390
   },
-  "11": {
-    "basicblocks": 1,
-    "calls": "3 7 1 12",
-    "file": "core.cpp",
-    "fileloc": 182,
-    "instructions": 7,
-    "name": "ld_exe_wb",
-    "total_instructions": 185
-  },
-  "12": {
-    "basicblocks": 4,
+  "1": {
+    "basicblocks": 31,
     "calls": "",
     "file": "core.cpp",
-    "fileloc": 171,
-    "instructions": 17,
-    "loads": {
-      "L": 1
-    },
-    "name": "write_back",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 17
-  },
-  "13": {
-    "basicblocks": 4,
-    "calls": "",
-    "file": "core.cpp",
-    "fileloc": 171,
-    "instructions": 17,
-    "loads": {
-      "L": 1
-    },
-    "name": "write_back",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 17
-  },
-  "2": {
-    "basicblocks": 1,
-    "calls": "5 10 9 8",
-    "file": "core.cpp",
-    "fileloc": 92,
-    "instructions": 7,
-    "name": "load_data_and_op",
-    "total_instructions": 76
-  },
-  "3": {
-    "basicblocks": 4,
-    "calls": "",
-    "file": "core.cpp",
-    "fileloc": 41,
-    "instructions": 18,
-    "loads": {
-      "L": 1
-    },
-    "name": "load_data_a",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 18
-  },
-  "4": {
-    "basicblocks": 1,
-    "calls": "2 6 13",
-    "file": "core.cpp",
-    "fileloc": 194,
-    "instructions": 6,
-    "name": "lod_exe_wb",
-    "total_instructions": 224
-  },
-  "5": {
-    "basicblocks": 4,
-    "calls": "",
-    "file": "core.cpp",
-    "fileloc": 66,
-    "instructions": 18,
-    "loads": {
-      "L": 1
-    },
-    "name": "load_op",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 18
-  },
-  "6": {
-    "basicblocks": 16,
-    "calls": "",
-    "file": "core.cpp",
-    "fileloc": 106,
-    "instructions": 125,
+    "fileloc": 252,
+    "instructions": 155,
     "loads": {
       "G": 1,
+      "L": 7
+    },
+    "name": "op_data_exe_wb",
+    "stores": {
+      "G": 1,
+      "L": 15
+    },
+    "total_instructions": 155
+  },
+  "2": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 122,
+    "instructions": 32,
+    "loads": {
+      "L": 2
+    },
+    "name": "operation",
+    "stores": {
+      "G": 1,
+      "L": 1
+    },
+    "total_instructions": 32
+  },
+  "3": {
+    "basicblocks": 25,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 238,
+    "instructions": 124,
+    "loads": {
+      "G": 1,
+      "L": 5
+    },
+    "name": "data_exe_wb",
+    "stores": {
       "L": 14
     },
-    "name": "execute",
-    "stores": {
-      "L": 11
-    },
-    "total_instructions": 125
-  },
-  "7": {
-    "basicblocks": 4,
-    "calls": "",
-    "file": "core.cpp",
-    "fileloc": 53,
-    "instructions": 18,
-    "loads": {
-      "L": 1
-    },
-    "name": "load_data_b",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 18
-  },
-  "8": {
-    "basicblocks": 4,
-    "calls": "",
-    "file": "core.cpp",
-    "fileloc": 53,
-    "instructions": 18,
-    "loads": {
-      "L": 1
-    },
-    "name": "load_data_b",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 18
-  },
-  "9": {
-    "basicblocks": 4,
-    "calls": "",
-    "file": "core.cpp",
-    "fileloc": 41,
-    "instructions": 18,
-    "loads": {
-      "L": 1
-    },
-    "name": "load_data_a",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 18
+    "total_instructions": 124
   }
 }

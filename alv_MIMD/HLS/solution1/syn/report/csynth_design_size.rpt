@@ -6,53 +6,54 @@
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 | Phase         | Step                        | Instructions | Description                                                                            |
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
-| Compile/Link  |                             | 1,309        | After all functions are compiled and linked into a single design                       |
+| Compile/Link  |                             | 832          | After all functions are compiled and linked into a single design                       |
 |               |                             |              |                                                                                        |
 | Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
-|               | (1) unroll                  |   366        | user unroll pragmas are applied                                                        |
-|               | (2) simplification          |   339        | simplification of applied user unroll pragmas                                          |
-|               | (3) inline                  |   300        | user inline pragmas are applied                                                        |
-|               | (4) simplification          |   300        | simplification of applied user inline pragmas                                          |
+|               | (1) unroll                  | 324          | user unroll pragmas are applied                                                        |
+|               | (2) simplification          | 291          | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  | 235          | user inline pragmas are applied                                                        |
+|               | (4) simplification          | 235          | simplification of applied user inline pragmas                                          |
 |               |                             |              |                                                                                        |
 | Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
-|               | (1) array partition         |   280        | user array partition pragmas are applied                                               |
-|               | (2) simplification          |   280        | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
-|               | (3) aggregate/disaggregate  |   280        | user struct aggregate/disaggregate pragmas are applied                                 |
-|               | (4) array reshape           |   280        | apply array reshape pragmas                                                            |
-|               | (5) access patterns         |   282        | array access pattern optmizations                                                      |
+|               | (1) array partition         | 220          | user array partition pragmas are applied                                               |
+|               | (2) simplification          | 220          | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  | 220          | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           | 220          | apply array reshape pragmas                                                            |
+|               | (5) access patterns         | 221          | array access pattern optmizations                                                      |
 |               |                             |              |                                                                                        |
 | Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
-|               | (1) loop simplification     |   282        | loop and instruction simplification                                                    |
-|               | (2) parallelization         |   280        | loops are unrolled or pipelined to meet performance targets                            |
-|               | (3) array partition         |   280        | arrays are partitioned to meet performance targets                                     |
-|               | (4) simplification          |   280        | simplification of design after performance transformations                             |
+|               | (1) loop simplification     | 221          | loop and instruction simplification                                                    |
+|               | (2) parallelization         | 220          | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         | 220          | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          | 220          | simplification of design after performance transformations                             |
 |               |                             |              |                                                                                        |
 | HW Transforms |                             |              | After hardware transfomations                                                          |
-|               | (1) lowering                |   314        | initial conversion to HW specific instructions                                         |
-|               | (2) optimizations           |   516        | high level synthesis optimizations                                                     |
+|               | (1) lowering                | 254          | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           | 390          | high level synthesis optimizations                                                     |
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 
 * Instructions per Function for each Compilation Phase
 +----------------------+--------------+--------------+---------------+--------------+-------------+---------------+
 | Function             | Location     | Compile/Link | Unroll/Inline | Array/Struct | Performance | HW Transforms |
 +----------------------+--------------+--------------+---------------+--------------+-------------+---------------+
-| + alv_MIMD           | core.cpp:205 | 1,309        | 300           | 282          | 280         | 516           |
-|    load_op           | core.cpp:66  |   24         |               |              |             |               |
-|    store_op          | core.cpp:79  |   26         |               |              |             |               |
-|  + ld_exe_wb         | core.cpp:182 |  532         | 104           |  96          |  96         | 185           |
-|     load_data_a      | core.cpp:41  |   24         |   9           |   9          |   9         |  18           |
-|     load_data_b      | core.cpp:53  |   24         |   9           |   9          |   9         |  18           |
-|     execute          | core.cpp:106 |  442         |  63           |  63          |  63         | 125           |
-|     write_back       | core.cpp:171 |   29         |  10           |  10          |  10         |  17           |
-|  + lod_exe_wb        | core.cpp:194 |  592         | 132           | 118          | 118         | 224           |
-|   + load_data_and_op | core.cpp:92  |  111         |  49           |  41          |  41         |  76           |
-|      load_op         | core.cpp:66  |   24         |   9           |   9          |   9         |  18           |
-|      store_op        | core.cpp:79  |   26         |   9           |   9          |   9         |  15           |
-|      load_data_a     | core.cpp:41  |   24         |   9           |   9          |   9         |  18           |
-|      load_data_b     | core.cpp:53  |   24         |   9           |   9          |   9         |  18           |
-|     execute          | core.cpp:106 |  442         |  63           |  63          |  63         | 125           |
-|     write_back       | core.cpp:171 |   29         |  10           |  10          |  10         |  17           |
-|    reset             | core.cpp:13  |   82         |               |              |             |               |
+| + alv_MIMD           | core.cpp:264 | 832          | 235           | 221          | 220         | 390           |
+|  + operation         | core.cpp:122 |  53          |  17           |  17          |  17         |  32           |
+|     load_op          | core.cpp:73  |  24          |               |              |             |               |
+|     store_op         | core.cpp:109 |  26          |               |              |             |               |
+|  + data_exe_wb       | core.cpp:238 | 261          |  67           |  67          |  67         | 124           |
+|     load_data_a      | core.cpp:49  |  24          |               |              |             |               |
+|     load_data_b      | core.cpp:60  |  24          |               |              |             |               |
+|     execute          | core.cpp:154 | 182          |               |              |             |               |
+|     write_back       | core.cpp:216 |  26          |               |              |             |               |
+|  + op_data_exe_wb    | core.cpp:252 | 315          |  83           |  83          |  83         | 155           |
+|   + load_data_and_op | core.cpp:131 |  76          |               |              |             |               |
+|      load_op         | core.cpp:73  |  24          |               |              |             |               |
+|      load_data_a     | core.cpp:49  |  24          |               |              |             |               |
+|      load_data_b     | core.cpp:60  |  24          |               |              |             |               |
+|     store_op         | core.cpp:109 |  26          |               |              |             |               |
+|     execute          | core.cpp:154 | 182          |               |              |             |               |
+|     write_back       | core.cpp:216 |  26          |               |              |             |               |
+|    reset             | core.cpp:13  | 106          |               |              |             |               |
 +----------------------+--------------+--------------+---------------+--------------+-------------+---------------+
 
 * Design Size Message Settings

@@ -1,0 +1,310 @@
+<profile>
+<RunData>
+  <RUN_TYPE>synth</RUN_TYPE>
+  <VIVADO_VERSION>v.2023.2</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>10.000</TargetClockPeriod>
+  <AchievedClockPeriod>7.272</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>7.272</CP_FINAL>
+  <CP_ROUTE>NA</CP_ROUTE>
+  <CP_SYNTH>7.272</CP_SYNTH>
+  <CP_TARGET>10.000</CP_TARGET>
+  <SLACK_FINAL>2.728</SLACK_FINAL>
+  <SLACK_ROUTE></SLACK_ROUTE>
+  <SLACK_SYNTH>2.728</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>NA</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>2.728</WNS_FINAL>
+  <WNS_ROUTE>NA</WNS_ROUTE>
+  <WNS_SYNTH>2.728</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>9</BRAM>
+    <CLB>0</CLB>
+    <DSP>6</DSP>
+    <FF>9967</FF>
+    <LATCH>0</LATCH>
+    <LUT>7820</LUT>
+    <SRL>874</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>280</BRAM>
+    <CLB>0</CLB>
+    <DSP>220</DSP>
+    <FF>106400</FF>
+    <LUT>53200</LUT>
+    <URAM>0</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="alv_MIMD" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="6">Block_entry2_proc1_U0 control_s_axi_U gmem0_m_axi_U gmem1_m_axi_U gmem2_m_axi_U gmem3_m_axi_U</SubModules>
+    <Resources BRAM="9" DSP="6" FF="9967" LUT="7820" LogicLUT="6946" RAMB18="9" SRL="874"/>
+    <LocalResources LUT="3" SRL="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0" DEPTH="1" FILE_NAME="alv_MIMD.v" ORIG_REF_NAME="alv_MIMD_Block_entry2_proc1">
+    <SubModules count="12">ALU_operation_MEM_U ALU_operation_fifo_U data_a_fifo_U data_b_fifo_U data_result_fifo_U grp_Block_entry2_proc1_Pipeline_clear_FIFO_a_fu_186 grp_Block_entry2_proc1_Pipeline_clear_FIFO_b_fu_192 grp_Block_entry2_proc1_Pipeline_clear_FIFO_op_fu_198 grp_Block_entry2_proc1_Pipeline_clear_RAM_op_fu_204 grp_data_exe_wb_fu_150 grp_op_data_exe_wb_fu_120 grp_operation_fu_174</SubModules>
+    <Resources BRAM="5" DSP="6" FF="6467" LUT="5351" LogicLUT="4841" RAMB18="5" SRL="510"/>
+    <LocalResources FF="16" LUT="2" LogicLUT="2"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/ALU_operation_MEM_U" BINDMODULE="alv_MIMD_Block_entry2_proc1_ALU_operation_MEM_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="alv_MIMD_Block_entry2_proc1.v" ORIG_REF_NAME="alv_MIMD_Block_entry2_proc1_ALU_operation_MEM_RAM_AUTO_1R1W">
+    <Resources BRAM="1" LUT="1" LogicLUT="1" RAMB18="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/ALU_operation_fifo_U" BINDMODULE="alv_MIMD_fifo_w32_d50_A" DEPTH="2" FILE_NAME="alv_MIMD_Block_entry2_proc1.v" ORIG_REF_NAME="alv_MIMD_fifo_w32_d50_A">
+    <Resources BRAM="1" FF="29" LUT="64" LogicLUT="64" RAMB18="1"/>
+    <LocalResources FF="29" LUT="31" LogicLUT="31"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/data_a_fifo_U" BINDMODULE="alv_MIMD_fifo_w32_d50_A" DEPTH="2" FILE_NAME="alv_MIMD_Block_entry2_proc1.v" ORIG_REF_NAME="alv_MIMD_fifo_w32_d50_A">
+    <Resources BRAM="1" FF="29" LUT="35" LogicLUT="35" RAMB18="1"/>
+    <LocalResources FF="29" LUT="33" LogicLUT="33"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/data_b_fifo_U" BINDMODULE="alv_MIMD_fifo_w32_d50_A" DEPTH="2" FILE_NAME="alv_MIMD_Block_entry2_proc1.v" ORIG_REF_NAME="alv_MIMD_fifo_w32_d50_A">
+    <Resources BRAM="1" FF="29" LUT="34" LogicLUT="34" RAMB18="1"/>
+    <LocalResources FF="29" LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/data_result_fifo_U" BINDMODULE="alv_MIMD_fifo_w32_d50_A" DEPTH="2" FILE_NAME="alv_MIMD_Block_entry2_proc1.v" ORIG_REF_NAME="alv_MIMD_fifo_w32_d50_A">
+    <Resources BRAM="1" FF="29" LUT="34" LogicLUT="34" RAMB18="1"/>
+    <LocalResources FF="29" LUT="33" LogicLUT="33"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_Block_entry2_proc1_Pipeline_clear_FIFO_a_fu_186" DEPTH="2" FILE_NAME="alv_MIMD_Block_entry2_proc1.v" ORIG_REF_NAME="alv_MIMD_Block_entry2_proc1_Pipeline_clear_FIFO_a">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="1" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_Block_entry2_proc1_Pipeline_clear_FIFO_a_fu_186/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="alv_MIMD_Block_entry2_proc1_Pipeline_clear_FIFO_a.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
+    <Resources FF="1" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_Block_entry2_proc1_Pipeline_clear_FIFO_b_fu_192" DEPTH="2" FILE_NAME="alv_MIMD_Block_entry2_proc1.v" ORIG_REF_NAME="alv_MIMD_Block_entry2_proc1_Pipeline_clear_FIFO_b">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="1" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_Block_entry2_proc1_Pipeline_clear_FIFO_b_fu_192/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="alv_MIMD_Block_entry2_proc1_Pipeline_clear_FIFO_b.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
+    <Resources FF="1" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_Block_entry2_proc1_Pipeline_clear_FIFO_op_fu_198" DEPTH="2" FILE_NAME="alv_MIMD_Block_entry2_proc1.v" ORIG_REF_NAME="alv_MIMD_Block_entry2_proc1_Pipeline_clear_FIFO_op">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_Block_entry2_proc1_Pipeline_clear_FIFO_op_fu_198/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="alv_MIMD_Block_entry2_proc1_Pipeline_clear_FIFO_op.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
+    <Resources FF="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_Block_entry2_proc1_Pipeline_clear_RAM_op_fu_204" DEPTH="2" FILE_NAME="alv_MIMD_Block_entry2_proc1.v" ORIG_REF_NAME="alv_MIMD_Block_entry2_proc1_Pipeline_clear_RAM_op">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="8" LUT="16" LogicLUT="16"/>
+    <LocalResources FF="6"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_Block_entry2_proc1_Pipeline_clear_RAM_op_fu_204/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="alv_MIMD_Block_entry2_proc1_Pipeline_clear_RAM_op.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150" DEPTH="2" FILE_NAME="alv_MIMD_Block_entry2_proc1.v" ORIG_REF_NAME="alv_MIMD_data_exe_wb">
+    <SubModules count="4">grp_data_exe_wb_Pipeline_exe_fu_92 grp_data_exe_wb_Pipeline_l_data_a_fu_74 grp_data_exe_wb_Pipeline_l_data_b_fu_83 grp_data_exe_wb_Pipeline_write_back_fu_104</SubModules>
+    <Resources DSP="3" FF="3026" LUT="2612" LogicLUT="2358" SRL="254"/>
+    <LocalResources FF="16" LUT="6" LogicLUT="6"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92" DEPTH="3" FILE_NAME="alv_MIMD_data_exe_wb.v" ORIG_REF_NAME="alv_MIMD_data_exe_wb_Pipeline_exe">
+    <SubModules count="3">flow_control_loop_pipe_sequential_init_U mul_32s_32s_32_2_1_U42 sdiv_32s_32s_32_36_1_U43</SubModules>
+    <Resources DSP="3" FF="2674" LUT="2329" LogicLUT="2078" SRL="251"/>
+    <LocalResources FF="604" LUT="604" LogicLUT="413" SRL="191"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="alv_MIMD_data_exe_wb_Pipeline_exe.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="14" LogicLUT="14"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mul_32s_32s_32_2_1_U42" BINDMODULE="alv_MIMD_mul_32s_32s_32_2_1" DEPTH="4" FILE_NAME="alv_MIMD_data_exe_wb_Pipeline_exe.v" ORIG_REF_NAME="alv_MIMD_mul_32s_32s_32_2_1">
+    <Resources DSP="3" FF="17" LUT="15" LogicLUT="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/sdiv_32s_32s_32_36_1_U43" BINDMODULE="alv_MIMD_sdiv_32s_32s_32_36_1" DEPTH="4" FILE_NAME="alv_MIMD_data_exe_wb_Pipeline_exe.v" ORIG_REF_NAME="alv_MIMD_sdiv_32s_32s_32_36_1">
+    <Resources FF="2051" LUT="1696" LogicLUT="1636" SRL="60"/>
+    <LocalResources FF="32" LUT="1054" LogicLUT="1054"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_l_data_a_fu_74" DEPTH="3" FILE_NAME="alv_MIMD_data_exe_wb.v" ORIG_REF_NAME="alv_MIMD_data_exe_wb_Pipeline_l_data_a">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="113" LUT="90" LogicLUT="89" SRL="1"/>
+    <LocalResources FF="111" LUT="75" LogicLUT="74" SRL="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_l_data_a_fu_74/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="alv_MIMD_data_exe_wb_Pipeline_l_data_a.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="15" LogicLUT="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_l_data_b_fu_83" DEPTH="3" FILE_NAME="alv_MIMD_data_exe_wb.v" ORIG_REF_NAME="alv_MIMD_data_exe_wb_Pipeline_l_data_b">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="113" LUT="90" LogicLUT="89" SRL="1"/>
+    <LocalResources FF="111" LUT="75" LogicLUT="74" SRL="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_l_data_b_fu_83/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="alv_MIMD_data_exe_wb_Pipeline_l_data_b.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="15" LogicLUT="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_write_back_fu_104" DEPTH="3" FILE_NAME="alv_MIMD_data_exe_wb.v" ORIG_REF_NAME="alv_MIMD_data_exe_wb_Pipeline_write_back">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="110" LUT="97" LogicLUT="96" SRL="1"/>
+    <LocalResources FF="108" LUT="77" LogicLUT="76" SRL="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_write_back_fu_104/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="alv_MIMD_data_exe_wb_Pipeline_write_back.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="20" LogicLUT="20"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120" DEPTH="2" FILE_NAME="alv_MIMD_Block_entry2_proc1.v" ORIG_REF_NAME="alv_MIMD_op_data_exe_wb">
+    <SubModules count="6">grp_op_data_exe_wb_Pipeline_exe_fu_127 grp_op_data_exe_wb_Pipeline_l_data_a_fu_101 grp_op_data_exe_wb_Pipeline_l_data_b_fu_110 grp_op_data_exe_wb_Pipeline_l_operation_fu_92 grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_119 grp_op_data_exe_wb_Pipeline_write_back_fu_139</SubModules>
+    <Resources DSP="3" FF="3162" LUT="2440" LogicLUT="2185" SRL="255"/>
+    <LocalResources FF="24" LUT="6" LogicLUT="6"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_exe_fu_127" DEPTH="3" FILE_NAME="alv_MIMD_op_data_exe_wb.v" ORIG_REF_NAME="alv_MIMD_op_data_exe_wb_Pipeline_exe">
+    <SubModules count="3">flow_control_loop_pipe_sequential_init_U mul_32s_32s_32_2_1_U12 sdiv_32s_32s_32_36_1_U13</SubModules>
+    <Resources DSP="3" FF="2674" LUT="2320" LogicLUT="2069" SRL="251"/>
+    <LocalResources FF="604" LUT="595" LogicLUT="404" SRL="191"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_exe_fu_127/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="alv_MIMD_op_data_exe_wb_Pipeline_exe.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="14" LogicLUT="14"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_exe_fu_127/mul_32s_32s_32_2_1_U12" BINDMODULE="alv_MIMD_mul_32s_32s_32_2_1" DEPTH="4" FILE_NAME="alv_MIMD_op_data_exe_wb_Pipeline_exe.v" ORIG_REF_NAME="alv_MIMD_mul_32s_32s_32_2_1">
+    <Resources DSP="3" FF="17" LUT="15" LogicLUT="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_exe_fu_127/sdiv_32s_32s_32_36_1_U13" BINDMODULE="alv_MIMD_sdiv_32s_32s_32_36_1" DEPTH="4" FILE_NAME="alv_MIMD_op_data_exe_wb_Pipeline_exe.v" ORIG_REF_NAME="alv_MIMD_sdiv_32s_32s_32_36_1">
+    <Resources FF="2051" LUT="1696" LogicLUT="1636" SRL="60"/>
+    <LocalResources FF="32" LUT="1054" LogicLUT="1054"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_l_data_a_fu_101" DEPTH="3" FILE_NAME="alv_MIMD_op_data_exe_wb.v" ORIG_REF_NAME="alv_MIMD_op_data_exe_wb_Pipeline_l_data_a">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="113" LUT="23" LogicLUT="22" SRL="1"/>
+    <LocalResources FF="111" LUT="10" LogicLUT="9" SRL="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_l_data_a_fu_101/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="alv_MIMD_op_data_exe_wb_Pipeline_l_data_a.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="18" LogicLUT="18"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_l_data_b_fu_110" DEPTH="3" FILE_NAME="alv_MIMD_op_data_exe_wb.v" ORIG_REF_NAME="alv_MIMD_op_data_exe_wb_Pipeline_l_data_b">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="113" LUT="23" LogicLUT="22" SRL="1"/>
+    <LocalResources FF="111" LUT="10" LogicLUT="9" SRL="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_l_data_b_fu_110/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="alv_MIMD_op_data_exe_wb_Pipeline_l_data_b.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="18" LogicLUT="18"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_l_operation_fu_92" DEPTH="3" FILE_NAME="alv_MIMD_op_data_exe_wb.v" ORIG_REF_NAME="alv_MIMD_op_data_exe_wb_Pipeline_l_operation">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="113" LUT="23" LogicLUT="22" SRL="1"/>
+    <LocalResources FF="111" LUT="10" LogicLUT="9" SRL="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_l_operation_fu_92/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="alv_MIMD_op_data_exe_wb_Pipeline_l_operation.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="18" LogicLUT="18"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_119" DEPTH="3" FILE_NAME="alv_MIMD_op_data_exe_wb.v" ORIG_REF_NAME="alv_MIMD_op_data_exe_wb_Pipeline_s_operation_data_op">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="15" LUT="19" LogicLUT="19"/>
+    <LocalResources FF="13" LUT="4" LogicLUT="4"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_119/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="alv_MIMD_op_data_exe_wb_Pipeline_s_operation_data_op.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="15" LogicLUT="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_write_back_fu_139" DEPTH="3" FILE_NAME="alv_MIMD_op_data_exe_wb.v" ORIG_REF_NAME="alv_MIMD_op_data_exe_wb_Pipeline_write_back">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="110" LUT="26" LogicLUT="25" SRL="1"/>
+    <LocalResources FF="108" LUT="11" LogicLUT="10" SRL="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_write_back_fu_139/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="alv_MIMD_op_data_exe_wb_Pipeline_write_back.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="20" LogicLUT="20"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_operation_fu_174" DEPTH="2" FILE_NAME="alv_MIMD_Block_entry2_proc1.v" ORIG_REF_NAME="alv_MIMD_operation">
+    <SubModules count="2">grp_operation_Pipeline_l_operation_fu_42 grp_operation_Pipeline_s_operation_data_op_fu_51</SubModules>
+    <Resources FF="136" LUT="112" LogicLUT="111" SRL="1"/>
+    <LocalResources FF="8" LUT="2" LogicLUT="2"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_operation_fu_174/grp_operation_Pipeline_l_operation_fu_42" DEPTH="3" FILE_NAME="alv_MIMD_operation.v" ORIG_REF_NAME="alv_MIMD_operation_Pipeline_l_operation">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="113" LUT="88" LogicLUT="87" SRL="1"/>
+    <LocalResources FF="111" LUT="72" LogicLUT="71" SRL="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_operation_fu_174/grp_operation_Pipeline_l_operation_fu_42/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="alv_MIMD_operation_Pipeline_l_operation.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="18" LogicLUT="18"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_operation_fu_174/grp_operation_Pipeline_s_operation_data_op_fu_51" DEPTH="3" FILE_NAME="alv_MIMD_operation.v" ORIG_REF_NAME="alv_MIMD_operation_Pipeline_s_operation_data_op">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="15" LUT="22" LogicLUT="22"/>
+    <LocalResources FF="13" LUT="4" LogicLUT="4"/>
+  </RtlModule>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_operation_fu_174/grp_operation_Pipeline_s_operation_data_op_fu_51/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="alv_MIMD_operation_Pipeline_s_operation_data_op.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="18" LogicLUT="18"/>
+  </RtlModule>
+  <RtlModule CELL="inst/control_s_axi_U" BINDMODULE="alv_MIMD_control_s_axi" DEPTH="1" FILE_NAME="alv_MIMD.v" ORIG_REF_NAME="alv_MIMD_control_s_axi">
+    <Resources FF="344" LUT="339" LogicLUT="339"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem0_m_axi_U" BINDMODULE="alv_MIMD_gmem0_m_axi" DEPTH="1" FILE_NAME="alv_MIMD.v" ORIG_REF_NAME="alv_MIMD_gmem0_m_axi">
+    <Resources BRAM="1" FF="730" LUT="476" LogicLUT="413" RAMB18="1" SRL="63"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem1_m_axi_U" BINDMODULE="alv_MIMD_gmem1_m_axi" DEPTH="1" FILE_NAME="alv_MIMD.v" ORIG_REF_NAME="alv_MIMD_gmem1_m_axi">
+    <Resources BRAM="1" FF="730" LUT="476" LogicLUT="413" RAMB18="1" SRL="63"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem2_m_axi_U" BINDMODULE="alv_MIMD_gmem2_m_axi" DEPTH="1" FILE_NAME="alv_MIMD.v" ORIG_REF_NAME="alv_MIMD_gmem2_m_axi">
+    <Resources BRAM="1" FF="966" LUT="699" LogicLUT="527" RAMB18="1" SRL="172"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem3_m_axi_U" BINDMODULE="alv_MIMD_gmem3_m_axi" DEPTH="1" FILE_NAME="alv_MIMD.v" ORIG_REF_NAME="alv_MIMD_gmem3_m_axi">
+    <Resources BRAM="1" FF="730" LUT="476" LogicLUT="413" RAMB18="1" SRL="63"/>
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="7.297" DATAPATH_LOGIC_DELAY="2.407" DATAPATH_NET_DELAY="4.890" ENDPOINT_PIN="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[6]/D" LOGIC_LEVELS="8" MAX_FANOUT="33" SLACK="2.728" STARTPOINT_PIN="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="845"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="417"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="417"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="417"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_303" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="849"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_128" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="201"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry_i_5__2" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="201"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="1710"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="1710"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[6]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="112"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="7.192" DATAPATH_LOGIC_DELAY="2.302" DATAPATH_NET_DELAY="4.890" ENDPOINT_PIN="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[5]/D" LOGIC_LEVELS="8" MAX_FANOUT="33" SLACK="2.833" STARTPOINT_PIN="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="845"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="417"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="417"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="417"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_303" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="849"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_128" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="201"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry_i_5__2" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="201"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="1710"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/p_0_out_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="1710"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/mOutPtr_reg[5]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="112"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="6.449" DATAPATH_LOGIC_DELAY="1.433" DATAPATH_NET_DELAY="5.016" ENDPOINT_PIN="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg/WEBWE[0]" LOGIC_LEVELS="6" MAX_FANOUT="33" SLACK="2.935" STARTPOINT_PIN="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="845"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="417"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="417"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="417"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_303" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="849"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_128" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="201"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_34" PRIMITIVE_TYPE="LUT.others.LUT1" LINE_NUMBER="69"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg" PRIMITIVE_TYPE="BMEM.bram.RAMB18E1" LINE_NUMBER="195"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="6.449" DATAPATH_LOGIC_DELAY="1.433" DATAPATH_NET_DELAY="5.016" ENDPOINT_PIN="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg/WEBWE[1]" LOGIC_LEVELS="6" MAX_FANOUT="33" SLACK="2.935" STARTPOINT_PIN="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="845"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="417"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="417"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="417"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_303" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="849"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_128" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="201"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_34" PRIMITIVE_TYPE="LUT.others.LUT1" LINE_NUMBER="69"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg" PRIMITIVE_TYPE="BMEM.bram.RAMB18E1" LINE_NUMBER="195"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="6.449" DATAPATH_LOGIC_DELAY="1.433" DATAPATH_NET_DELAY="5.016" ENDPOINT_PIN="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg/WEBWE[2]" LOGIC_LEVELS="6" MAX_FANOUT="33" SLACK="2.935" STARTPOINT_PIN="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/ALU_operation_MEM_load_reg_327_pp0_iter37_reg_reg[29]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="845"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_518" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="417"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_315" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="417"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_140" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="417"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_303" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="849"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_128" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="201"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/grp_data_exe_wb_fu_150/grp_data_exe_wb_Pipeline_exe_fu_92/mem_reg_i_34" PRIMITIVE_TYPE="LUT.others.LUT1" LINE_NUMBER="69"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/Block_entry2_proc1_U0/data_result_fifo_U/U_alv_MIMD_fifo_w32_d50_A_ram/mem_reg" PRIMITIVE_TYPE="BMEM.bram.RAMB18E1" LINE_NUMBER="195"/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/alv_MIMD_design_analysis_synth.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/alv_MIMD_failfast_synth.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/alv_MIMD_timing_synth.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/alv_MIMD_timing_paths_synth.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/alv_MIMD_utilization_synth.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/alv_MIMD_utilization_hierarchical_synth.rpt"/>
+</VivadoReportFiles>
+</profile>

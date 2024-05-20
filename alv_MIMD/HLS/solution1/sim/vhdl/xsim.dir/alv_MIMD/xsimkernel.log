@@ -1,0 +1,7 @@
+Running: xsim.dir/alv_MIMD/xsimk.exe -simmode gui -wdb alv_MIMD.wdb -simrunnum 0 -socket 56792
+Design successfully loaded
+Design Loading Memory Usage: 11000 KB (Peak: 11000 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 12388 KB (Peak: 12388 KB)
+Simulation CPU Usage: 31 ms

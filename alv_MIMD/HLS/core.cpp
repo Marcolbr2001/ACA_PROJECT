@@ -10,30 +10,38 @@
 #define CONST 27
 
 
-void reset(hls::stream<int>&ALU_operation, int ALU_operation_MEM[], hls::stream<int>&data_a, hls::stream<int>&data_b)
+void reset(hls::stream<int>&data_a, hls::stream<int>&data_b, hls::stream<int>&ALU_operation, int data_a_MEM[], int data_b_MEM[], int ALU_operation_MEM[])
 {
 
+#pragma HLS INLINE
+
 	clear_FIFO_a : while(!data_a.empty())
-		{
-			data_a.read();
-		}
-
-	clear_FIFO_b : while(!data_b.empty())
-		{
-			data_b.read();
-		}
-
-	clear_FIFO_op : while(!ALU_operation.empty())
-		{
-			ALU_operation.read();
-		}
-
-	clear_RAM_op : for(int i = 0; i < DATA_LENGTH; i++)
-		{
-
-			ALU_operation_MEM[i] = 0;
-
-		}
+			{
+				int x;
+				x=data_a.read();
+			}
+		clear_FIFO_b : while(!data_b.empty())
+			{
+				int x;
+				x=data_b.read();
+			}
+		clear_FIFO_op : while(!ALU_operation.empty())
+			{
+				int x;
+				x=ALU_operation.read();
+			}
+		clear_RAM_data_a : for(int i = 0; i < DATA_LENGTH; i++)
+			{
+				data_a_MEM[i] = 0;
+			}
+		clear_RAM_data_b : for(int i = 0; i < DATA_LENGTH; i++)
+			{
+				data_b_MEM[i] = 0;
+			}
+		clear_RAM_op : for(int i = 0; i < DATA_LENGTH; i++)
+			{
+				ALU_operation_MEM[i] = 0;
+			}
 
 }
 
@@ -46,7 +54,6 @@ void load_data_a(volatile int a[], hls::stream<int>&data_a)
 
 		int tmp_a = a[i];
 		data_a.write(tmp_a);
-
 	}
 }
 
@@ -72,14 +79,37 @@ void load_op(volatile int op[], hls::stream<int>&ALU_operation)
 
 		int tmp_op = op[i];
 		ALU_operation.write(tmp_op);
-
 	}
 }
+
+
+//void store_data_a(hls::stream<int>&data_a, int data_a_MEM[])
+//{
+
+//	s_operation_data_a: for(int i = 0; i < DATA_LENGTH; i++)
+//	{
+//		#pragma HLS  PIPELINE II=1
+
+//		data_a_MEM[i] = data_a.read();
+
+//	}
+//}
+//void store_data_b(hls::stream<int>&data_b, int data_b_MEM[])
+//{
+
+//	s_operation_data_b: for(int i = 0; i < DATA_LENGTH; i++)
+//	{
+//		#pragma HLS  PIPELINE II=1
+
+//		data_b_MEM[i] = data_b.read();
+
+//	}
+//}
 
 void store_op(hls::stream<int>&ALU_operation, int ALU_operation_MEM[])
 {
 
-	s_operation: for(int i = 0; i < DATA_LENGTH; i++)
+	s_operation_data_op: for(int i = 0; i < DATA_LENGTH; i++)
 	{
 		#pragma HLS  PIPELINE II=1
 
@@ -89,120 +119,151 @@ void store_op(hls::stream<int>&ALU_operation, int ALU_operation_MEM[])
 }
 
 
-void load_data_and_op(volatile int a[], volatile int b[], volatile int op[], hls::stream<int>&data_a, hls::stream<int>&data_b, hls::stream<int>&ALU_operation, int ALU_operation_MEM[])
+void operation(volatile int op[], hls::stream<int>&ALU_operation,int ALU_operation_MEM[])
 {
-
-	//#pragma HLS INLINE
-	#pragma HLS DATAFLOW
-
 	load_op(op, ALU_operation);
 	store_op(ALU_operation, ALU_operation_MEM);
+}
+
+
+
+
+void load_data_and_op(volatile int a[], volatile int b[],volatile int op[], hls::stream<int>&data_a, hls::stream<int>&data_b, hls::stream<int>&ALU_operation)
+{
+
+	#pragma HLS INLINE
+
+	load_op(op, ALU_operation);
 	load_data_a(a, data_a);
 	load_data_b(b, data_b);
 
 }
 
+//void store_data_and_op(hls::stream<int>&data_a, hls::stream<int>&data_b, hls::stream<int>&ALU_operation,int data_a_MEM[], int data_b_MEM[], int ALU_operation_MEM[])
+//{
 
-void execute(hls::stream<int>&data_a, hls::stream<int>&data_b, int ALU_operation_MEM[], hls::stream<int>&data_result)
+//	#pragma HLS INLINE
+
+//	store_op(ALU_operation, ALU_operation_MEM);
+//	store_data_a(data_a,data_a_MEM );
+//	store_data_b(data_b, data_b_MEM);
+
+//}
+
+
+void execute(hls::stream<int>&data_a,hls::stream<int>&data_b, int ALU_operation_MEM[], hls::stream<int>&data_result)
 {
 	// ----- Doing chosen operation ----- //
-	exe: for(int i=0; i < DATA_LENGTH; i++)//while(!ALU_operation.empty())//
+	exe: for(int i=0; i < DATA_LENGTH; i++)//while(!data_a.empty() or !data_b.empty())//
 	{
 		#pragma HLS PIPELINE II=1
+
+		int a,b;
+
+		a=data_a.read();
+		b=data_b.read();
 
 		switch(ALU_operation_MEM[i])
 		{
 
 			case 0 : // add costant to data_a
-				data_result.write(data_a.read() + CONST);
-				data_b.read();
+				data_result.write(a + CONST);
 			break;
 
 			case 1 : // add costant to data_b
-				data_result.write(data_b.read() + CONST);
-				data_a.read();
-				break;
+				data_result.write(b + CONST);
+			break;
 
 			case 2 : // data_a multiplied by 2 (shift rigth)
-				data_result.write(data_a.read()*2);
-				data_b.read();
+				data_result.write(a*2);
+
 			break;
 
 			case 3 : // data_b multiplied by 2 (shift right)
-				data_result.write(data_b.read()*2);
-				data_a.read();
+				data_result.write(b*2);
 			break;
 
 			case 4 : // data_a divided by 2 (shift left)
-				data_result.write(data_a.read()/2);
-				data_b.read();
+				data_result.write(a/2);
 			break;
 
 			case 5 : // data_b divided by 2 (shift left)
-				data_result.write(data_b.read()/2);
-				data_a.read();
+				data_result.write(b/2);
 			break;
 
 			case 6 : // sum
-				data_result.write(data_a.read() + data_b.read());
+				data_result.write(a + b);
 			break;
 
 			case 7 : // difference
-				data_result.write(data_a.read() - data_b.read());
+				data_result.write(a - b);
 			break;
 
 			case 8 : // multiplication
-				data_result.write(data_a.read()*data_b.read());
+				data_result.write(a*b);
 			break;
 
 			case 9 : // data_b divided by 2 (shift left)
-				data_result.write(data_a.read()/data_b.read());
+				data_result.write(a/b);
 			break;
 
 			/* any other no-operation number  */
 			default :
 				data_result.write(0);
-				data_a.read();
-				data_b.read();
+
 		}
 	}
 }
 
 void write_back(hls::stream<int>&data_result, volatile int c[])
 {
-	int i = 0;
-	write_back: while(!data_result.empty())//for(int i = 0; i < DATA_LENGTH; i++)
+	write_back: for(int i = 0; i < DATA_LENGTH; i++)//while(!data_result.empty())//
 	{
 		#pragma HLS  PIPELINE II=1
 		c[i] = data_result.read();
-		i++;
 	}
+
 }
 
-void ld_exe_wb(volatile int a[], hls::stream<int>&data_a, volatile int b[], hls::stream<int>&data_b, int ALU_operation_MEM[], hls::stream<int>&data_result, volatile int c[])
+
+//void store_and_exe(hls::stream<int>&data_a, hls::stream<int>&data_b, hls::stream<int>&ALU_operation,int data_a_MEM[], int data_b_MEM[], int ALU_operation_MEM[],hls::stream<int>&data_result,  int c[])
+//{
+			//#pragma HLS DATAFLOW
+//			{
+//			store_data_and_op(data_a, data_b, ALU_operation, data_a_MEM, data_b_MEM, ALU_operation_MEM);
+//			execute(data_a_MEM, data_b_MEM, ALU_operation_MEM, data_result);
+//			}
+			//write_back(data_result, c);
+//}
+
+
+void data_exe_wb(volatile int a[],volatile int b[], hls::stream<int>&data_a,hls::stream<int>&data_b,int data_a_MEM[],int data_b_MEM[], int ALU_operation_MEM[], hls::stream<int>&data_result, volatile int c[])
 {
 
-	#pragma HLS DATAFLOW  //per far funzionare il dataflow
+	//#pragma HLS DATAFLOW  //per far funzionare il dataflow
 
 		load_data_a(a, data_a);
 		load_data_b(b, data_b);
+		//store_data_a(data_a,data_a_MEM );
+		//store_data_b(data_b, data_b_MEM);
 		execute(data_a, data_b, ALU_operation_MEM, data_result);
 		write_back(data_result, c);
 
 }
 
-void lod_exe_wb(volatile int op[], hls::stream<int>&ALU_operation, int ALU_operation_MEM[], volatile int a[], hls::stream<int>&data_a, volatile int b[], hls::stream<int>&data_b, hls::stream<int>&data_result, volatile int c[])
+void op_data_exe_wb(volatile int a[],volatile  int b[],volatile int op[],hls::stream<int>&data_a,hls::stream<int>&data_b, hls::stream<int>&ALU_operation,int data_a_MEM[],int data_b_MEM[] ,int ALU_operation_MEM[], hls::stream<int>&data_result,volatile int c[])
 {
 
-	#pragma HLS DATAFLOW  //per far funzionare il dataflow
+	//#pragma HLS DATAFLOW  //per far funzionare il dataflow
 
-		load_data_and_op(a, b, op, data_a, data_b, ALU_operation, ALU_operation_MEM);
+		load_data_and_op(a, b, op, data_a, data_b, ALU_operation);
+		store_op(ALU_operation,ALU_operation_MEM);
 		execute(data_a, data_b, ALU_operation_MEM, data_result);
 		write_back(data_result, c);
 
 }
 
-void alv_MIMD(volatile int* a, volatile int* b, volatile int* c, volatile int* op, int selec) {
+void alv_MIMD(volatile int* a,volatile  int* b, volatile int* c,volatile int* op, int selec) {
 
 	#pragma HLS INTERFACE mode=s_axilite bundle=control port=a
 	#pragma HLS INTERFACE mode=s_axilite bundle=control port=b
@@ -234,32 +295,36 @@ void alv_MIMD(volatile int* a, volatile int* b, volatile int* c, volatile int* o
 	 //operation
 
 	static int ALU_operation_MEM[DATA_LENGTH] = {0};
+	int data_a_MEM[DATA_LENGTH] = {0};
+	int data_b_MEM[DATA_LENGTH] = {0};
+	int data_result_MEM[DATA_LENGTH] = {0};
+
+	#pragma HLS DATAFLOW
 
 	switch(selec)
 	{
 
 		case 0: //LOAD PATTERN
 
-			load_op(op, ALU_operation);
-			store_op(ALU_operation, ALU_operation_MEM);
+			operation(op, ALU_operation, ALU_operation_MEM);
 
 		break;
 
 		case 1: //LOAD DATA, EXECUTE, WB
 
-			ld_exe_wb(a, data_a, b, data_b, ALU_operation_MEM, data_result, c);
+			data_exe_wb(a, b, data_a, data_b, data_a_MEM, data_b_MEM, ALU_operation_MEM, data_result, c);
 
 		break;
 
 		case 2: //LOAD PATTERN, DATA, EXECUTE, WB
 
-			lod_exe_wb(op, ALU_operation, ALU_operation_MEM, a, data_a, b, data_b, data_result, c);
+			op_data_exe_wb(a, b, op ,data_a, data_b, ALU_operation, data_a_MEM, data_b_MEM, ALU_operation_MEM, data_result, c);
 
 		break;
 
 		default :
 
-			reset(ALU_operation, ALU_operation_MEM, data_a, data_b);
+			reset(data_a, data_b, ALU_operation,data_a_MEM,data_b_MEM, ALU_operation_MEM);
 
 	}
 

@@ -5,11 +5,6 @@
                 <option name="name" value="alv_MIMD"/>
             </pragma>
         </directive>
-        <directive functionName="alv_MIMD" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="alv_MIMD"/>
-            </pragma>
-        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

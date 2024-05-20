@@ -4,7 +4,7 @@
     "xci_name": "design_1_alv_MIMD_0_1",
     "cell_name": "alv_MIMD_0",
     "component_reference": "xilinx.com:hls:alv_MIMD:1.0",
-    "ip_revision": "2113557856",
+    "ip_revision": "2113564697",
     "gen_directory": "../../../../../../alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1",
     "parameters": {
       "component_parameters": {
@@ -126,7 +126,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "2113557856" } ],
+        "IPREVISION": [ { "value": "2113564697" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

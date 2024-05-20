@@ -1,6 +1,6 @@
 <dict>
   <key>main-file</key>
-  <string>C:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/HLS/solution1/.autopilot/db/core.pp.0.cpp</string>
+  <string>C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/HLS/solution1/.autopilot/db/core.pp.0.cpp</string>
   <key>diagnostics</key>
   <array>
     <dict>
@@ -9,7 +9,23 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>45</integer>
+      <integer>16</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=reset_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>HLS/core.cpp</string>
+      <key>line</key>
+      <integer>53</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -25,7 +41,7 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>57</integer>
+      <integer>64</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -41,7 +57,7 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>71</integer>
+      <integer>78</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -57,7 +73,7 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>84</integer>
+      <integer>114</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -73,11 +89,11 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>96</integer>
+      <integer>134</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=load_data_and_op_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=load_data_and_op_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -89,7 +105,7 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>111</integer>
+      <integer>159</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -105,7 +121,7 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>176</integer>
+      <integer>220</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -121,15 +137,15 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>185</integer>
+      <integer>238</integer>
       <key>column</key>
-      <integer>9</integer>
+      <integer>105</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=ld_exe_wb_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <string>unused parameter &apos;data_a_MEM&apos;</string>
       <key>ID</key>
-      <integer>5471</integer>
+      <integer>5292</integer>
       <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
+      <string>unused-parameter</string>
     </dict>
     <dict>
       <key>level</key>
@@ -137,21 +153,53 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>197</integer>
+      <integer>238</integer>
       <key>column</key>
-      <integer>9</integer>
+      <integer>122</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lod_exe_wb_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <string>unused parameter &apos;data_b_MEM&apos;</string>
       <key>ID</key>
-      <integer>5471</integer>
+      <integer>5292</integer>
       <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
+      <string>unused-parameter</string>
     </dict>
     <dict>
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>C:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/HLS/solution1/csynth.tcl</string>
+      <string>HLS/core.cpp</string>
+      <key>line</key>
+      <integer>252</integer>
+      <key>column</key>
+      <integer>157</integer>
+      <key>message</key>
+      <string>unused parameter &apos;data_a_MEM&apos;</string>
+      <key>ID</key>
+      <integer>5292</integer>
+      <key>WarningOption</key>
+      <string>unused-parameter</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>HLS/core.cpp</string>
+      <key>line</key>
+      <integer>252</integer>
+      <key>column</key>
+      <integer>174</integer>
+      <key>message</key>
+      <string>unused parameter &apos;data_b_MEM&apos;</string>
+      <key>ID</key>
+      <integer>5292</integer>
+      <key>WarningOption</key>
+      <string>unused-parameter</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/HLS/solution1/csynth.tcl</string>
       <key>line</key>
       <integer>17</integer>
       <key>column</key>
@@ -167,25 +215,9 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>C:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/HLS/solution1/directives.tcl</string>
-      <key>line</key>
-      <integer>7</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=alv_MIMD_XLX_SEP_ PragmaOptions=name=alv_MIMD_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>207</integer>
+      <integer>266</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -201,7 +233,7 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>208</integer>
+      <integer>267</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -217,7 +249,7 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>209</integer>
+      <integer>268</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -233,7 +265,7 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>210</integer>
+      <integer>269</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -249,7 +281,7 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>211</integer>
+      <integer>270</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -265,7 +297,7 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>213</integer>
+      <integer>272</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -281,7 +313,7 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>215</integer>
+      <integer>274</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -297,7 +329,7 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>216</integer>
+      <integer>275</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -313,7 +345,7 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>217</integer>
+      <integer>276</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -329,7 +361,7 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>218</integer>
+      <integer>277</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -345,7 +377,7 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>221</integer>
+      <integer>280</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -361,7 +393,7 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>225</integer>
+      <integer>284</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -377,7 +409,7 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>229</integer>
+      <integer>288</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -393,11 +425,27 @@
       <key>filename</key>
       <string>HLS/core.cpp</string>
       <key>line</key>
-      <integer>233</integer>
+      <integer>292</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
       <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=alv_MIMD_XLX_SEP_ PragmaOptions=variable=ALU_operation depth=50_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>HLS/core.cpp</string>
+      <key>line</key>
+      <integer>300</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=alv_MIMD_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>

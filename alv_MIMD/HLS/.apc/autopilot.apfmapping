@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="core.cpp" path="C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD\HLS\core.cpp"/>
+    <originFiles name="core.cpp" path="C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD\HLS\core.cpp"/>
   </source>
   <testbench>
-    <originFiles name="test_bench.cpp" path="C:\Users\marco\Desktop\NECST\NL2\AXI_M\alv_MIMD\HLS\test_bench.cpp"/>
+    <originFiles name="test_bench.cpp" path="C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD\HLS\test_bench.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

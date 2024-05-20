@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'alv_MIMD'" level="0">
-<item name = "Date">Thu May 16 16:22:33 2024
+<item name = "Date">Sun May 19 16:11:29 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">HLS</item>
@@ -24,21 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">?, ?, ?, ?, ?, ?, no</column>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_lod_exe_wb_fu_146">lod_exe_wb, ?, ?, ?, ?, ?, ?, dataflow</column>
-<column name="grp_ld_exe_wb_fu_176">ld_exe_wb, ?, ?, ?, ?, ?, ?, dataflow</column>
-<column name="grp_alv_MIMD_Pipeline_l_operation_fu_200">alv_MIMD_Pipeline_l_operation, 61, 61, 0.610 us, 0.610 us, 61, 61, no</column>
-<column name="grp_alv_MIMD_Pipeline_clear_FIFO_a_fu_210">alv_MIMD_Pipeline_clear_FIFO_a, ?, ?, ?, ?, ?, ?, no</column>
-<column name="grp_alv_MIMD_Pipeline_s_operation_fu_216">alv_MIMD_Pipeline_s_operation, 52, 52, 0.520 us, 0.520 us, 52, 52, no</column>
-<column name="grp_alv_MIMD_Pipeline_clear_FIFO_b_fu_224">alv_MIMD_Pipeline_clear_FIFO_b, ?, ?, ?, ?, ?, ?, no</column>
-<column name="grp_alv_MIMD_Pipeline_clear_FIFO_op_fu_230">alv_MIMD_Pipeline_clear_FIFO_op, ?, ?, ?, ?, ?, ?, no</column>
-<column name="grp_alv_MIMD_Pipeline_clear_RAM_op_fu_236">alv_MIMD_Pipeline_clear_RAM_op, 52, 52, 0.520 us, 0.520 us, 52, 52, no</column>
+<column name="grp_Block_entry2_proc1_fu_116">Block_entry2_proc1, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

@@ -1,10 +1,10 @@
-; ModuleID = 'C:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/HLS/solution1/.autopilot/db/a.g.ld.5.gdce.bc'
+; ModuleID = 'C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/HLS/solution1/.autopilot/db/a.g.ld.5.gdce.bc'
 source_filename = "llvm-link"
 target datalayout = "e-m:e-i64:64-i128:128-i256:256-i512:512-i1024:1024-i2048:2048-i4096:4096-n8:16:32:64-S128-v16:16-v24:32-v32:32-v48:64-v96:128-v192:256-v256:256-v512:512-v1024:1024"
 target triple = "fpga64-xilinx-none"
 
 ; Function Attrs: noinline
-define void @apatb_alv_MIMD_ir(i32* noalias nonnull "maxi" %a, i32* noalias nocapture nonnull readonly "maxi" %b, i32* noalias nonnull "maxi" %c, i32* noalias nonnull "maxi" %op, i32 %selec) local_unnamed_addr #0 {
+define void @apatb_alv_MIMD_ir(i32* noalias nonnull "maxi" %a, i32* noalias nonnull "maxi" %b, i32* noalias nonnull "maxi" %c, i32* noalias nonnull "maxi" %op, i32 %selec) local_unnamed_addr #0 {
 entry:
   %a_copy = alloca [50 x i32], align 512
   %b_copy = alloca [50 x i32], align 512
@@ -15,8 +15,7 @@ entry:
   %2 = bitcast i32* %c to [50 x i32]*
   %3 = bitcast i32* %op to [50 x i32]*
   call fastcc void @copy_in([50 x i32]* nonnull %0, [50 x i32]* nonnull align 512 %a_copy, [50 x i32]* nonnull %1, [50 x i32]* nonnull align 512 %b_copy, [50 x i32]* nonnull %2, [50 x i32]* nonnull align 512 %c_copy, [50 x i32]* nonnull %3, [50 x i32]* nonnull align 512 %op_copy)
-  %4 = getelementptr inbounds [50 x i32], [50 x i32]* %b_copy, i64 0, i64 0
-  call void @apatb_alv_MIMD_hw([50 x i32]* %a_copy, i32* %4, [50 x i32]* %c_copy, [50 x i32]* %op_copy, i32 %selec)
+  call void @apatb_alv_MIMD_hw([50 x i32]* %a_copy, [50 x i32]* %b_copy, [50 x i32]* %c_copy, [50 x i32]* %op_copy, i32 %selec)
   call void @copy_back([50 x i32]* %0, [50 x i32]* %a_copy, [50 x i32]* %1, [50 x i32]* %b_copy, [50 x i32]* %2, [50 x i32]* %c_copy, [50 x i32]* %3, [50 x i32]* %op_copy)
   ret void
 }
@@ -89,27 +88,27 @@ entry:
   ret void
 }
 
-declare void @apatb_alv_MIMD_hw([50 x i32]*, i32*, [50 x i32]*, [50 x i32]*, i32)
+declare void @apatb_alv_MIMD_hw([50 x i32]*, [50 x i32]*, [50 x i32]*, [50 x i32]*, i32)
 
 ; Function Attrs: argmemonly noinline norecurse willreturn
 define internal fastcc void @copy_back([50 x i32]* noalias, [50 x i32]* noalias readonly align 512, [50 x i32]* noalias, [50 x i32]* noalias readonly align 512, [50 x i32]* noalias, [50 x i32]* noalias readonly align 512, [50 x i32]* noalias, [50 x i32]* noalias readonly align 512) unnamed_addr #4 {
 entry:
   call fastcc void @onebyonecpy_hls.p0a50i32([50 x i32]* %0, [50 x i32]* align 512 %1)
+  call fastcc void @onebyonecpy_hls.p0a50i32([50 x i32]* %2, [50 x i32]* align 512 %3)
   call fastcc void @onebyonecpy_hls.p0a50i32([50 x i32]* %4, [50 x i32]* align 512 %5)
   call fastcc void @onebyonecpy_hls.p0a50i32([50 x i32]* %6, [50 x i32]* align 512 %7)
   ret void
 }
 
-define void @alv_MIMD_hw_stub_wrapper([50 x i32]*, i32*, [50 x i32]*, [50 x i32]*, i32) #5 {
+define void @alv_MIMD_hw_stub_wrapper([50 x i32]*, [50 x i32]*, [50 x i32]*, [50 x i32]*, i32) #5 {
 entry:
-  %5 = bitcast i32* %1 to [50 x i32]*
-  call void @copy_out([50 x i32]* null, [50 x i32]* %0, [50 x i32]* null, [50 x i32]* %5, [50 x i32]* null, [50 x i32]* %2, [50 x i32]* null, [50 x i32]* %3)
-  %6 = bitcast [50 x i32]* %0 to i32*
-  %7 = bitcast [50 x i32]* %5 to i32*
-  %8 = bitcast [50 x i32]* %2 to i32*
-  %9 = bitcast [50 x i32]* %3 to i32*
-  call void @alv_MIMD_hw_stub(i32* %6, i32* %7, i32* %8, i32* %9, i32 %4)
-  call void @copy_in([50 x i32]* null, [50 x i32]* %0, [50 x i32]* null, [50 x i32]* %5, [50 x i32]* null, [50 x i32]* %2, [50 x i32]* null, [50 x i32]* %3)
+  call void @copy_out([50 x i32]* null, [50 x i32]* %0, [50 x i32]* null, [50 x i32]* %1, [50 x i32]* null, [50 x i32]* %2, [50 x i32]* null, [50 x i32]* %3)
+  %5 = bitcast [50 x i32]* %0 to i32*
+  %6 = bitcast [50 x i32]* %1 to i32*
+  %7 = bitcast [50 x i32]* %2 to i32*
+  %8 = bitcast [50 x i32]* %3 to i32*
+  call void @alv_MIMD_hw_stub(i32* %5, i32* %6, i32* %7, i32* %8, i32 %4)
+  call void @copy_in([50 x i32]* null, [50 x i32]* %0, [50 x i32]* null, [50 x i32]* %1, [50 x i32]* null, [50 x i32]* %2, [50 x i32]* null, [50 x i32]* %3)
   ret void
 }
 
