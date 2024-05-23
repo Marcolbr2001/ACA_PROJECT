@@ -51,7 +51,7 @@
   </RtlModule>
   <RtlModule CELL="inst/Block_entry2_proc1_U0" DEPTH="1" FILE_NAME="alv_MIMD.v" ORIG_REF_NAME="alv_MIMD_Block_entry2_proc1">
     <SubModules count="12">ALU_operation_MEM_U ALU_operation_fifo_U data_a_fifo_U data_b_fifo_U data_result_fifo_U grp_Block_entry2_proc1_Pipeline_clear_FIFO_a_fu_186 grp_Block_entry2_proc1_Pipeline_clear_FIFO_b_fu_192 grp_Block_entry2_proc1_Pipeline_clear_FIFO_op_fu_198 grp_Block_entry2_proc1_Pipeline_clear_RAM_op_fu_204 grp_data_exe_wb_fu_150 grp_op_data_exe_wb_fu_120 grp_operation_fu_174</SubModules>
-    <Resources BRAM="5" DSP="6" FF="6467" LUT="5351" LogicLUT="4841" RAMB18="5" SRL="510"/>
+    <Resources BRAM="5" DSP="6" FF="6467" LUT="5353" LogicLUT="4843" RAMB18="5" SRL="510"/>
     <LocalResources FF="16" LUT="2" LogicLUT="2"/>
   </RtlModule>
   <RtlModule CELL="inst/Block_entry2_proc1_U0/ALU_operation_MEM_U" BINDMODULE="alv_MIMD_Block_entry2_proc1_ALU_operation_MEM_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="alv_MIMD_Block_entry2_proc1.v" ORIG_REF_NAME="alv_MIMD_Block_entry2_proc1_ALU_operation_MEM_RAM_AUTO_1R1W">
@@ -70,8 +70,8 @@
     <LocalResources FF="29" LUT="32" LogicLUT="32"/>
   </RtlModule>
   <RtlModule CELL="inst/Block_entry2_proc1_U0/data_result_fifo_U" BINDMODULE="alv_MIMD_fifo_w32_d50_A" DEPTH="2" FILE_NAME="alv_MIMD_Block_entry2_proc1.v" ORIG_REF_NAME="alv_MIMD_fifo_w32_d50_A">
-    <Resources BRAM="1" FF="29" LUT="34" LogicLUT="34" RAMB18="1"/>
-    <LocalResources FF="29" LUT="33" LogicLUT="33"/>
+    <Resources BRAM="1" FF="29" LUT="36" LogicLUT="36" RAMB18="1"/>
+    <LocalResources FF="29" LUT="35" LogicLUT="35"/>
   </RtlModule>
   <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_Block_entry2_proc1_Pipeline_clear_FIFO_a_fu_186" DEPTH="2" FILE_NAME="alv_MIMD_Block_entry2_proc1.v" ORIG_REF_NAME="alv_MIMD_Block_entry2_proc1_Pipeline_clear_FIFO_a">
     <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
@@ -147,7 +147,7 @@
     <Resources FF="2" LUT="20" LogicLUT="20"/>
   </RtlModule>
   <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120" DEPTH="2" FILE_NAME="alv_MIMD_Block_entry2_proc1.v" ORIG_REF_NAME="alv_MIMD_op_data_exe_wb">
-    <SubModules count="6">grp_op_data_exe_wb_Pipeline_exe_fu_127 grp_op_data_exe_wb_Pipeline_l_data_a_fu_101 grp_op_data_exe_wb_Pipeline_l_data_b_fu_110 grp_op_data_exe_wb_Pipeline_l_operation_fu_92 grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_119 grp_op_data_exe_wb_Pipeline_write_back_fu_139</SubModules>
+    <SubModules count="6">grp_op_data_exe_wb_Pipeline_exe_fu_127 grp_op_data_exe_wb_Pipeline_l_data_a_fu_109 grp_op_data_exe_wb_Pipeline_l_data_b_fu_118 grp_op_data_exe_wb_Pipeline_l_operation_fu_92 grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_101 grp_op_data_exe_wb_Pipeline_write_back_fu_139</SubModules>
     <Resources DSP="3" FF="3162" LUT="2440" LogicLUT="2185" SRL="255"/>
     <LocalResources FF="24" LUT="6" LogicLUT="6"/>
   </RtlModule>
@@ -166,45 +166,45 @@
     <Resources FF="2051" LUT="1696" LogicLUT="1636" SRL="60"/>
     <LocalResources FF="32" LUT="1054" LogicLUT="1054"/>
   </RtlModule>
-  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_l_data_a_fu_101" DEPTH="3" FILE_NAME="alv_MIMD_op_data_exe_wb.v" ORIG_REF_NAME="alv_MIMD_op_data_exe_wb_Pipeline_l_data_a">
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_l_data_a_fu_109" DEPTH="3" FILE_NAME="alv_MIMD_op_data_exe_wb.v" ORIG_REF_NAME="alv_MIMD_op_data_exe_wb_Pipeline_l_data_a">
     <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
     <Resources FF="113" LUT="23" LogicLUT="22" SRL="1"/>
-    <LocalResources FF="111" LUT="10" LogicLUT="9" SRL="1"/>
+    <LocalResources FF="111" LUT="9" LogicLUT="8" SRL="1"/>
   </RtlModule>
-  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_l_data_a_fu_101/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="alv_MIMD_op_data_exe_wb_Pipeline_l_data_a.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
-    <Resources FF="2" LUT="18" LogicLUT="18"/>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_l_data_a_fu_109/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="alv_MIMD_op_data_exe_wb_Pipeline_l_data_a.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="17" LogicLUT="17"/>
   </RtlModule>
-  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_l_data_b_fu_110" DEPTH="3" FILE_NAME="alv_MIMD_op_data_exe_wb.v" ORIG_REF_NAME="alv_MIMD_op_data_exe_wb_Pipeline_l_data_b">
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_l_data_b_fu_118" DEPTH="3" FILE_NAME="alv_MIMD_op_data_exe_wb.v" ORIG_REF_NAME="alv_MIMD_op_data_exe_wb_Pipeline_l_data_b">
     <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
     <Resources FF="113" LUT="23" LogicLUT="22" SRL="1"/>
-    <LocalResources FF="111" LUT="10" LogicLUT="9" SRL="1"/>
+    <LocalResources FF="111" LUT="9" LogicLUT="8" SRL="1"/>
   </RtlModule>
-  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_l_data_b_fu_110/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="alv_MIMD_op_data_exe_wb_Pipeline_l_data_b.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
-    <Resources FF="2" LUT="18" LogicLUT="18"/>
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_l_data_b_fu_118/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="alv_MIMD_op_data_exe_wb_Pipeline_l_data_b.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="17" LogicLUT="17"/>
   </RtlModule>
   <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_l_operation_fu_92" DEPTH="3" FILE_NAME="alv_MIMD_op_data_exe_wb.v" ORIG_REF_NAME="alv_MIMD_op_data_exe_wb_Pipeline_l_operation">
     <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
     <Resources FF="113" LUT="23" LogicLUT="22" SRL="1"/>
-    <LocalResources FF="111" LUT="10" LogicLUT="9" SRL="1"/>
+    <LocalResources FF="111" LUT="9" LogicLUT="8" SRL="1"/>
   </RtlModule>
   <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_l_operation_fu_92/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="alv_MIMD_op_data_exe_wb_Pipeline_l_operation.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
-    <Resources FF="2" LUT="18" LogicLUT="18"/>
+    <Resources FF="2" LUT="17" LogicLUT="17"/>
   </RtlModule>
-  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_119" DEPTH="3" FILE_NAME="alv_MIMD_op_data_exe_wb.v" ORIG_REF_NAME="alv_MIMD_op_data_exe_wb_Pipeline_s_operation_data_op">
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_101" DEPTH="3" FILE_NAME="alv_MIMD_op_data_exe_wb.v" ORIG_REF_NAME="alv_MIMD_op_data_exe_wb_Pipeline_s_operation_data_op">
     <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
     <Resources FF="15" LUT="19" LogicLUT="19"/>
     <LocalResources FF="13" LUT="4" LogicLUT="4"/>
   </RtlModule>
-  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_119/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="alv_MIMD_op_data_exe_wb_Pipeline_s_operation_data_op.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
+  <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_101/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="alv_MIMD_op_data_exe_wb_Pipeline_s_operation_data_op.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
     <Resources FF="2" LUT="15" LogicLUT="15"/>
   </RtlModule>
   <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_write_back_fu_139" DEPTH="3" FILE_NAME="alv_MIMD_op_data_exe_wb.v" ORIG_REF_NAME="alv_MIMD_op_data_exe_wb_Pipeline_write_back">
     <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
     <Resources FF="110" LUT="26" LogicLUT="25" SRL="1"/>
-    <LocalResources FF="108" LUT="11" LogicLUT="10" SRL="1"/>
+    <LocalResources FF="108" LUT="10" LogicLUT="9" SRL="1"/>
   </RtlModule>
   <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_op_data_exe_wb_fu_120/grp_op_data_exe_wb_Pipeline_write_back_fu_139/flow_control_loop_pipe_sequential_init_U" BINDMODULE="alv_MIMD_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="alv_MIMD_op_data_exe_wb_Pipeline_write_back.v" ORIG_REF_NAME="alv_MIMD_flow_control_loop_pipe_sequential_init">
-    <Resources FF="2" LUT="20" LogicLUT="20"/>
+    <Resources FF="2" LUT="19" LogicLUT="19"/>
   </RtlModule>
   <RtlModule CELL="inst/Block_entry2_proc1_U0/grp_operation_fu_174" DEPTH="2" FILE_NAME="alv_MIMD_Block_entry2_proc1.v" ORIG_REF_NAME="alv_MIMD_operation">
     <SubModules count="2">grp_operation_Pipeline_l_operation_fu_42 grp_operation_Pipeline_s_operation_data_op_fu_51</SubModules>
@@ -237,7 +237,7 @@
     <Resources BRAM="1" FF="730" LUT="476" LogicLUT="413" RAMB18="1" SRL="63"/>
   </RtlModule>
   <RtlModule CELL="inst/gmem2_m_axi_U" BINDMODULE="alv_MIMD_gmem2_m_axi" DEPTH="1" FILE_NAME="alv_MIMD.v" ORIG_REF_NAME="alv_MIMD_gmem2_m_axi">
-    <Resources BRAM="1" FF="966" LUT="699" LogicLUT="527" RAMB18="1" SRL="172"/>
+    <Resources BRAM="1" FF="966" LUT="697" LogicLUT="525" RAMB18="1" SRL="172"/>
   </RtlModule>
   <RtlModule CELL="inst/gmem3_m_axi_U" BINDMODULE="alv_MIMD_gmem3_m_axi" DEPTH="1" FILE_NAME="alv_MIMD.v" ORIG_REF_NAME="alv_MIMD_gmem3_m_axi">
     <Resources BRAM="1" FF="730" LUT="476" LogicLUT="413" RAMB18="1" SRL="63"/>

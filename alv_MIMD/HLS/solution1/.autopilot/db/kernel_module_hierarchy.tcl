@@ -8,15 +8,15 @@ set ModuleHierarchy {[{
 			{"Name" : "grp_op_data_exe_wb_Pipeline_l_operation_fu_92","ID" : "3","Type" : "sequential",
 				"SubLoops" : [
 				{"Name" : "l_operation","ID" : "4","Type" : "pipeline"},]},
-			{"Name" : "grp_op_data_exe_wb_Pipeline_l_data_a_fu_101","ID" : "5","Type" : "sequential",
+			{"Name" : "grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_101","ID" : "5","Type" : "sequential",
 				"SubLoops" : [
-				{"Name" : "l_data_a","ID" : "6","Type" : "pipeline"},]},
-			{"Name" : "grp_op_data_exe_wb_Pipeline_l_data_b_fu_110","ID" : "7","Type" : "sequential",
+				{"Name" : "s_operation_data_op","ID" : "6","Type" : "pipeline"},]},
+			{"Name" : "grp_op_data_exe_wb_Pipeline_l_data_a_fu_109","ID" : "7","Type" : "sequential",
 				"SubLoops" : [
-				{"Name" : "l_data_b","ID" : "8","Type" : "pipeline"},]},
-			{"Name" : "grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_119","ID" : "9","Type" : "sequential",
+				{"Name" : "l_data_a","ID" : "8","Type" : "pipeline"},]},
+			{"Name" : "grp_op_data_exe_wb_Pipeline_l_data_b_fu_118","ID" : "9","Type" : "sequential",
 				"SubLoops" : [
-				{"Name" : "s_operation_data_op","ID" : "10","Type" : "pipeline"},]},
+				{"Name" : "l_data_b","ID" : "10","Type" : "pipeline"},]},
 			{"Name" : "grp_op_data_exe_wb_Pipeline_exe_fu_127","ID" : "11","Type" : "sequential",
 				"SubLoops" : [
 				{"Name" : "exe","ID" : "12","Type" : "pipeline"},]},

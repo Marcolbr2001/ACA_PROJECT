@@ -34,7 +34,7 @@
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>HLS/core.cpp:302</SourceLocation>
+<SourceLocation>HLS/core.cpp:248</SourceLocation>
 </SummaryOfViolations>
 </PerformanceEstimates>
 

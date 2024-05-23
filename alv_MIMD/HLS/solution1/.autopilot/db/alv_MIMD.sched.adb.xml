@@ -100,10 +100,10 @@ entry:30 %a_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %a
 
 <Node id="46" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="64" op_4_bw="32" op_5_bw="64" op_6_bw="32" op_7_bw="64" op_8_bw="32" op_9_bw="64" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32">
 <![CDATA[
-entry:31 %call_ln264 = call void @Block_entry2_proc1, i32 %selec_read, i32 %gmem3, i64 %op_read, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem2, i64 %c_read, i32 %data_a, i32 %data_b, i32 %ALU_operation, i32 %ALU_operation_MEM, i32 %data_result
+entry:31 %call_ln213 = call void @Block_entry2_proc1, i32 %selec_read, i32 %gmem3, i64 %op_read, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem2, i64 %c_read, i32 %data_a, i32 %data_b, i32 %ALU_operation, i32 %ALU_operation_MEM, i32 %data_result
 
 ]]></Node>
-<StgValue><ssdm name="call_ln264"/></StgValue>
+<StgValue><ssdm name="call_ln213"/></StgValue>
 </operation>
 </state>
 
@@ -118,10 +118,10 @@ entry:31 %call_ln264 = call void @Block_entry2_proc1, i32 %selec_read, i32 %gmem
 
 <Node id="15" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0">
 <![CDATA[
-entry:0 %specdataflowpipeline_ln300 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_20
+entry:0 %specdataflowpipeline_ln246 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_20
 
 ]]></Node>
-<StgValue><ssdm name="specdataflowpipeline_ln300"/></StgValue>
+<StgValue><ssdm name="specdataflowpipeline_ln246"/></StgValue>
 </operation>
 
 <operation id="10" st_id="2" stage="1" lat="1">
@@ -133,10 +133,10 @@ entry:0 %specdataflowpipeline_ln300 = specdataflowpipeline void @_ssdm_op_SpecDa
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-entry:1 %spectopmodule_ln264 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_15
+entry:1 %spectopmodule_ln213 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_15
 
 ]]></Node>
-<StgValue><ssdm name="spectopmodule_ln264"/></StgValue>
+<StgValue><ssdm name="spectopmodule_ln213"/></StgValue>
 </operation>
 
 <operation id="11" st_id="2" stage="1" lat="1">
@@ -508,10 +508,10 @@ entry:25 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %d
 
 <Node id="46" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="64" op_4_bw="32" op_5_bw="64" op_6_bw="32" op_7_bw="64" op_8_bw="32" op_9_bw="64" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32">
 <![CDATA[
-entry:31 %call_ln264 = call void @Block_entry2_proc1, i32 %selec_read, i32 %gmem3, i64 %op_read, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem2, i64 %c_read, i32 %data_a, i32 %data_b, i32 %ALU_operation, i32 %ALU_operation_MEM, i32 %data_result
+entry:31 %call_ln213 = call void @Block_entry2_proc1, i32 %selec_read, i32 %gmem3, i64 %op_read, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem2, i64 %c_read, i32 %data_a, i32 %data_b, i32 %ALU_operation, i32 %ALU_operation_MEM, i32 %data_result
 
 ]]></Node>
-<StgValue><ssdm name="call_ln264"/></StgValue>
+<StgValue><ssdm name="call_ln213"/></StgValue>
 </operation>
 
 <operation id="36" st_id="2" stage="1" lat="1">
@@ -523,10 +523,10 @@ entry:31 %call_ln264 = call void @Block_entry2_proc1, i32 %selec_read, i32 %gmem
 
 <Node id="47" bw="0">
 <![CDATA[
-entry:32 %ret_ln331 = ret
+entry:32 %ret_ln277 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln331"/></StgValue>
+<StgValue><ssdm name="ret_ln277"/></StgValue>
 </operation>
 </state>
 </state_list>

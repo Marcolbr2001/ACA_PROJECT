@@ -1,7 +1,7 @@
-# 1 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/HLS/test_bench.cpp"
+# 1 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/HLS/test_bench.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/HLS/test_bench.cpp"
+# 1 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/HLS/test_bench.cpp"
 # 1 "C:/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/stdio.h" 1 3
 # 10 "C:/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/stdio.h" 3
 # 1 "C:/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/crtdefs.h" 1 3
@@ -933,12 +933,12 @@ extern "C" {
 
 # 1 "C:/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/_mingw_print_pop.h" 1 3
 # 1038 "C:/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/stdio.h" 2 3
-# 2 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/HLS/test_bench.cpp" 2
+# 2 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/HLS/test_bench.cpp" 2
 
 
 
 
-# 5 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/HLS/test_bench.cpp"
+# 5 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/HLS/test_bench.cpp"
 void alv_MIMD(volatile int* a, volatile int* b, volatile int* c, volatile int* op, volatile int selec);
 
 int main() {

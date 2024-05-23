@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'alv_MIMD'
 ================================================================
 + General Information: 
-    * Date:           Sun May 19 16:11:32 2024
+    * Date:           Tue May 21 09:39:02 2024
     * Version:        2023.2 (Build 4023990 on Oct 11 2023)
     * Project:        HLS
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -24,12 +24,12 @@
     |  + op_data_exe_wb                                |     -|  0.00|      399|  3.990e+03|         -|      399|     -|        no|        -|  3 (1%)|    3486 (3%)|    3467 (6%)|    -|
     |   + op_data_exe_wb_Pipeline_l_operation          |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|    123 (~0%)|    168 (~0%)|    -|
     |    o l_operation                                 |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|            -|            -|    -|
+    |   + op_data_exe_wb_Pipeline_s_operation_data_op  |     -|  0.46|       52|    520.000|         -|       52|     -|        no|        -|       -|     15 (~0%)|     77 (~0%)|    -|
+    |    o s_operation_data_op                         |     -|  7.30|       50|    500.000|         2|        1|    50|       yes|        -|       -|            -|            -|    -|
     |   + op_data_exe_wb_Pipeline_l_data_a             |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|    123 (~0%)|    168 (~0%)|    -|
     |    o l_data_a                                    |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|            -|            -|    -|
     |   + op_data_exe_wb_Pipeline_l_data_b             |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|    123 (~0%)|    168 (~0%)|    -|
     |    o l_data_b                                    |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|            -|            -|    -|
-    |   + op_data_exe_wb_Pipeline_s_operation_data_op  |     -|  0.46|       52|    520.000|         -|       52|     -|        no|        -|       -|     15 (~0%)|     77 (~0%)|    -|
-    |    o s_operation_data_op                         |     -|  7.30|       50|    500.000|         2|        1|    50|       yes|        -|       -|            -|            -|    -|
     |   + op_data_exe_wb_Pipeline_exe                  |     -|  0.39|       89|    890.000|         -|       89|     -|        no|        -|  3 (1%)|    2961 (2%)|    2426 (4%)|    -|
     |    o exe                                         |     -|  7.30|       87|    870.000|        39|        1|    50|       yes|        -|       -|            -|            -|    -|
     |   + op_data_exe_wb_Pipeline_write_back           |     -|  0.00|       58|    580.000|         -|       58|     -|        no|        -|       -|    117 (~0%)|    177 (~0%)|    -|
@@ -153,11 +153,10 @@
 +--------------+----------+--------------------+-----------+--------------+------------+-------------------------------------------------+
 | HW Interface | Variable | Access Location    | Direction | Burst Status | Resolution | Problem                                         |
 +--------------+----------+--------------------+-----------+--------------+------------+-------------------------------------------------+
-| m_axi_gmem0  | a        | HLS/core.cpp:66:14 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-| m_axi_gmem0  | a        | HLS/core.cpp:80:15 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-| m_axi_gmem1  | b        | HLS/core.cpp:66:14 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-| m_axi_gmem2  | c        | HLS/core.cpp:221:7 | write     | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
-| m_axi_gmem3  | op       | HLS/core.cpp:80:15 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem0  | a        | HLS/core.cpp:72:15 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem1  | b        | HLS/core.cpp:58:14 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem2  | c        | HLS/core.cpp:180:7 | write     | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem3  | op       | HLS/core.cpp:72:15 | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
 +--------------+----------+--------------------+-----------+--------------+------------+-------------------------------------------------+
 
     * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
@@ -172,59 +171,59 @@
 |  + Block_entry2_proc1                            | 6   |        |             |     |        |         |
 |   + op_data_exe_wb                               | 3   |        |             |     |        |         |
 |    + op_data_exe_wb_Pipeline_l_operation         | 0   |        |             |     |        |         |
-|      add_ln76_fu_105_p2                          |     |        | add_ln76    | add | fabric | 0       |
-|      add_ln80_fu_123_p2                          |     |        | add_ln80    | add | fabric | 0       |
-|    + op_data_exe_wb_Pipeline_l_data_a            | 0   |        |             |     |        |         |
-|      add_ln51_fu_105_p2                          |     |        | add_ln51    | add | fabric | 0       |
-|      add_ln55_fu_123_p2                          |     |        | add_ln55    | add | fabric | 0       |
-|    + op_data_exe_wb_Pipeline_l_data_b            | 0   |        |             |     |        |         |
-|      add_ln62_fu_105_p2                          |     |        | add_ln62    | add | fabric | 0       |
-|      add_ln66_fu_123_p2                          |     |        | add_ln66    | add | fabric | 0       |
+|      add_ln68_fu_105_p2                          |     |        | add_ln68    | add | fabric | 0       |
+|      add_ln72_fu_123_p2                          |     |        | add_ln72    | add | fabric | 0       |
 |    + op_data_exe_wb_Pipeline_s_operation_data_op | 0   |        |             |     |        |         |
-|      add_ln112_fu_74_p2                          |     |        | add_ln112   | add | fabric | 0       |
+|      add_ln79_fu_74_p2                           |     |        | add_ln79    | add | fabric | 0       |
+|    + op_data_exe_wb_Pipeline_l_data_a            | 0   |        |             |     |        |         |
+|      add_ln43_fu_105_p2                          |     |        | add_ln43    | add | fabric | 0       |
+|      add_ln47_fu_123_p2                          |     |        | add_ln47    | add | fabric | 0       |
+|    + op_data_exe_wb_Pipeline_l_data_b            | 0   |        |             |     |        |         |
+|      add_ln54_fu_105_p2                          |     |        | add_ln54    | add | fabric | 0       |
+|      add_ln58_fu_123_p2                          |     |        | add_ln58    | add | fabric | 0       |
 |    + op_data_exe_wb_Pipeline_exe                 | 3   |        |             |     |        |         |
-|      add_ln157_fu_121_p2                         |     |        | add_ln157   | add | fabric | 0       |
-|      mul_32s_32s_32_2_1_U12                      | 3   |        | mul_ln201   | mul | auto   | 1       |
-|      sub_ln197_fu_170_p2                         |     |        | sub_ln197   | sub | fabric | 0       |
-|      add_ln193_fu_175_p2                         |     |        | add_ln193   | add | fabric | 0       |
-|      sub_ln189_fu_140_p2                         |     |        | sub_ln189   | sub | fabric | 0       |
-|      sub_ln189_1_fu_190_p2                       |     |        | sub_ln189_1 | sub | fabric | 0       |
-|      sub_ln185_fu_155_p2                         |     |        | sub_ln185   | sub | fabric | 0       |
-|      sub_ln185_1_fu_228_p2                       |     |        | sub_ln185_1 | sub | fabric | 0       |
-|      add_ln172_fu_268_p2                         |     |        | add_ln172   | add | fabric | 0       |
-|      add_ln168_fu_274_p2                         |     |        | add_ln168   | add | fabric | 0       |
+|      add_ln114_fu_121_p2                         |     |        | add_ln114   | add | fabric | 0       |
+|      mul_32s_32s_32_2_1_U12                      | 3   |        | mul_ln160   | mul | auto   | 1       |
+|      sub_ln156_fu_170_p2                         |     |        | sub_ln156   | sub | fabric | 0       |
+|      add_ln152_fu_175_p2                         |     |        | add_ln152   | add | fabric | 0       |
+|      sub_ln148_fu_140_p2                         |     |        | sub_ln148   | sub | fabric | 0       |
+|      sub_ln148_1_fu_190_p2                       |     |        | sub_ln148_1 | sub | fabric | 0       |
+|      sub_ln144_fu_155_p2                         |     |        | sub_ln144   | sub | fabric | 0       |
+|      sub_ln144_1_fu_228_p2                       |     |        | sub_ln144_1 | sub | fabric | 0       |
+|      add_ln131_fu_268_p2                         |     |        | add_ln131   | add | fabric | 0       |
+|      add_ln127_fu_274_p2                         |     |        | add_ln127   | add | fabric | 0       |
 |    + op_data_exe_wb_Pipeline_write_back          | 0   |        |             |     |        |         |
-|      add_ln218_fu_112_p2                         |     |        | add_ln218   | add | fabric | 0       |
-|      add_ln221_fu_130_p2                         |     |        | add_ln221   | add | fabric | 0       |
+|      add_ln177_fu_112_p2                         |     |        | add_ln177   | add | fabric | 0       |
+|      add_ln180_fu_130_p2                         |     |        | add_ln180   | add | fabric | 0       |
 |   + data_exe_wb                                  | 3   |        |             |     |        |         |
 |    + data_exe_wb_Pipeline_l_data_a               | 0   |        |             |     |        |         |
-|      add_ln51_fu_105_p2                          |     |        | add_ln51    | add | fabric | 0       |
-|      add_ln55_fu_123_p2                          |     |        | add_ln55    | add | fabric | 0       |
+|      add_ln43_fu_105_p2                          |     |        | add_ln43    | add | fabric | 0       |
+|      add_ln47_fu_123_p2                          |     |        | add_ln47    | add | fabric | 0       |
 |    + data_exe_wb_Pipeline_l_data_b               | 0   |        |             |     |        |         |
-|      add_ln62_fu_105_p2                          |     |        | add_ln62    | add | fabric | 0       |
-|      add_ln66_fu_123_p2                          |     |        | add_ln66    | add | fabric | 0       |
+|      add_ln54_fu_105_p2                          |     |        | add_ln54    | add | fabric | 0       |
+|      add_ln58_fu_123_p2                          |     |        | add_ln58    | add | fabric | 0       |
 |    + data_exe_wb_Pipeline_exe                    | 3   |        |             |     |        |         |
-|      add_ln157_fu_121_p2                         |     |        | add_ln157   | add | fabric | 0       |
-|      mul_32s_32s_32_2_1_U42                      | 3   |        | mul_ln201   | mul | auto   | 1       |
-|      sub_ln197_fu_170_p2                         |     |        | sub_ln197   | sub | fabric | 0       |
-|      add_ln193_fu_175_p2                         |     |        | add_ln193   | add | fabric | 0       |
-|      sub_ln189_fu_140_p2                         |     |        | sub_ln189   | sub | fabric | 0       |
-|      sub_ln189_2_fu_190_p2                       |     |        | sub_ln189_2 | sub | fabric | 0       |
-|      sub_ln185_fu_155_p2                         |     |        | sub_ln185   | sub | fabric | 0       |
-|      sub_ln185_2_fu_228_p2                       |     |        | sub_ln185_2 | sub | fabric | 0       |
-|      add_ln172_fu_268_p2                         |     |        | add_ln172   | add | fabric | 0       |
-|      add_ln168_fu_274_p2                         |     |        | add_ln168   | add | fabric | 0       |
+|      add_ln114_fu_121_p2                         |     |        | add_ln114   | add | fabric | 0       |
+|      mul_32s_32s_32_2_1_U42                      | 3   |        | mul_ln160   | mul | auto   | 1       |
+|      sub_ln156_fu_170_p2                         |     |        | sub_ln156   | sub | fabric | 0       |
+|      add_ln152_fu_175_p2                         |     |        | add_ln152   | add | fabric | 0       |
+|      sub_ln148_fu_140_p2                         |     |        | sub_ln148   | sub | fabric | 0       |
+|      sub_ln148_2_fu_190_p2                       |     |        | sub_ln148_2 | sub | fabric | 0       |
+|      sub_ln144_fu_155_p2                         |     |        | sub_ln144   | sub | fabric | 0       |
+|      sub_ln144_2_fu_228_p2                       |     |        | sub_ln144_2 | sub | fabric | 0       |
+|      add_ln131_fu_268_p2                         |     |        | add_ln131   | add | fabric | 0       |
+|      add_ln127_fu_274_p2                         |     |        | add_ln127   | add | fabric | 0       |
 |    + data_exe_wb_Pipeline_write_back             | 0   |        |             |     |        |         |
-|      add_ln218_fu_112_p2                         |     |        | add_ln218   | add | fabric | 0       |
-|      add_ln221_fu_130_p2                         |     |        | add_ln221   | add | fabric | 0       |
+|      add_ln177_fu_112_p2                         |     |        | add_ln177   | add | fabric | 0       |
+|      add_ln180_fu_130_p2                         |     |        | add_ln180   | add | fabric | 0       |
 |   + operation                                    | 0   |        |             |     |        |         |
 |    + operation_Pipeline_l_operation              | 0   |        |             |     |        |         |
-|      add_ln76_fu_105_p2                          |     |        | add_ln76    | add | fabric | 0       |
-|      add_ln80_fu_123_p2                          |     |        | add_ln80    | add | fabric | 0       |
+|      add_ln68_fu_105_p2                          |     |        | add_ln68    | add | fabric | 0       |
+|      add_ln72_fu_123_p2                          |     |        | add_ln72    | add | fabric | 0       |
 |    + operation_Pipeline_s_operation_data_op      | 0   |        |             |     |        |         |
-|      add_ln112_fu_74_p2                          |     |        | add_ln112   | add | fabric | 0       |
+|      add_ln79_fu_74_p2                           |     |        | add_ln79    | add | fabric | 0       |
 |   + Block_entry2_proc1_Pipeline_clear_RAM_op     | 0   |        |             |     |        |         |
-|     add_ln41_fu_60_p2                            |     |        | add_ln41    | add | fabric | 0       |
+|     add_ln33_fu_60_p2                            |     |        | add_ln33    | add | fabric | 0       |
 +--------------------------------------------------+-----+--------+-------------+-----+--------+---------+
 
 
@@ -257,7 +256,7 @@
 +----------+---------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Type     | Options | Location                     | Messages                                                                                                                                                                           |
 +----------+---------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| dataflow |         | HLS/core.cpp:300 in alv_mimd | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+| dataflow |         | HLS/core.cpp:246 in alv_mimd | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
 +----------+---------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 * Valid Pragma Syntax
@@ -265,27 +264,27 @@
 | Type      | Options                                               | Location                                    |
 +-----------+-------------------------------------------------------+---------------------------------------------+
 | inline    |                                                       | HLS/core.cpp:16 in reset                    |
-| pipeline  | II=1                                                  | HLS/core.cpp:53 in load_data_a              |
-| pipeline  | II=1                                                  | HLS/core.cpp:64 in load_data_b              |
-| pipeline  | II=1                                                  | HLS/core.cpp:78 in load_op                  |
-| pipeline  | II=1                                                  | HLS/core.cpp:114 in store_op                |
-| inline    |                                                       | HLS/core.cpp:134 in load_data_and_op        |
-| pipeline  | II=1                                                  | HLS/core.cpp:159 in execute                 |
-| pipeline  | II=1                                                  | HLS/core.cpp:220 in write_back              |
-| interface | mode=s_axilite bundle=control port=a                  | HLS/core.cpp:266 in alv_mimd, a             |
-| interface | mode=s_axilite bundle=control port=b                  | HLS/core.cpp:267 in alv_mimd, b             |
-| interface | mode=s_axilite bundle=control port=c                  | HLS/core.cpp:268 in alv_mimd, c             |
-| interface | mode=s_axilite bundle=control port=op                 | HLS/core.cpp:269 in alv_mimd, op            |
-| interface | mode=s_axilite bundle=control port=selec              | HLS/core.cpp:270 in alv_mimd, selec         |
-| interface | mode=s_axilite bundle=control port=return             | HLS/core.cpp:272 in alv_mimd, return        |
-| interface | mode=m_axi port=a bundle=gmem0 depth=50 offset=slave  | HLS/core.cpp:274 in alv_mimd, a             |
-| interface | mode=m_axi port=b bundle=gmem1 depth=50 offset=slave  | HLS/core.cpp:275 in alv_mimd, b             |
-| interface | mode=m_axi port=c bundle=gmem2 depth=50 offset=slave  | HLS/core.cpp:276 in alv_mimd, c             |
-| interface | mode=m_axi port=op bundle=gmem3 depth=50 offset=slave | HLS/core.cpp:277 in alv_mimd, op            |
-| stream    | variable=data_a depth=50                              | HLS/core.cpp:280 in alv_mimd, data_a        |
-| stream    | variable=data_b depth=50                              | HLS/core.cpp:284 in alv_mimd, data_b        |
-| stream    | variable=data_result depth=50                         | HLS/core.cpp:288 in alv_mimd, data_result   |
-| stream    | variable=ALU_operation depth=50                       | HLS/core.cpp:292 in alv_mimd, ALU_operation |
+| pipeline  | II=1                                                  | HLS/core.cpp:45 in load_data_a              |
+| pipeline  | II=1                                                  | HLS/core.cpp:56 in load_data_b              |
+| pipeline  | II=1                                                  | HLS/core.cpp:70 in load_op                  |
+| pipeline  | II=1                                                  | HLS/core.cpp:81 in store_op                 |
+| inline    |                                                       | HLS/core.cpp:101 in load_data_and_op        |
+| pipeline  | II=1                                                  | HLS/core.cpp:116 in execute                 |
+| pipeline  | II=1                                                  | HLS/core.cpp:179 in write_back              |
+| interface | mode=s_axilite bundle=control port=a                  | HLS/core.cpp:215 in alv_mimd, a             |
+| interface | mode=s_axilite bundle=control port=b                  | HLS/core.cpp:216 in alv_mimd, b             |
+| interface | mode=s_axilite bundle=control port=c                  | HLS/core.cpp:217 in alv_mimd, c             |
+| interface | mode=s_axilite bundle=control port=op                 | HLS/core.cpp:218 in alv_mimd, op            |
+| interface | mode=s_axilite bundle=control port=selec              | HLS/core.cpp:219 in alv_mimd, selec         |
+| interface | mode=s_axilite bundle=control port=return             | HLS/core.cpp:221 in alv_mimd, return        |
+| interface | mode=m_axi port=a bundle=gmem0 depth=50 offset=slave  | HLS/core.cpp:223 in alv_mimd, a             |
+| interface | mode=m_axi port=b bundle=gmem1 depth=50 offset=slave  | HLS/core.cpp:224 in alv_mimd, b             |
+| interface | mode=m_axi port=c bundle=gmem2 depth=50 offset=slave  | HLS/core.cpp:225 in alv_mimd, c             |
+| interface | mode=m_axi port=op bundle=gmem3 depth=50 offset=slave | HLS/core.cpp:226 in alv_mimd, op            |
+| stream    | variable=data_a depth=50                              | HLS/core.cpp:229 in alv_mimd, data_a        |
+| stream    | variable=data_b depth=50                              | HLS/core.cpp:233 in alv_mimd, data_b        |
+| stream    | variable=data_result depth=50                         | HLS/core.cpp:237 in alv_mimd, data_result   |
+| stream    | variable=ALU_operation depth=50                       | HLS/core.cpp:241 in alv_mimd, ALU_operation |
 +-----------+-------------------------------------------------------+---------------------------------------------+
 
 

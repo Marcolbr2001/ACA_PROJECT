@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'alv_MIMD'
 ================================================================
-* Date:           Sun May 19 16:11:32 2024
+* Date:           Tue May 21 09:39:02 2024
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        HLS
@@ -350,16 +350,16 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 3.23>
-ST_1 : Operation 3 [1/1] (1.00ns)   --->   "%selec_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %selec" [HLS/core.cpp:264]   --->   Operation 3 'read' 'selec_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 4 [1/1] (1.00ns)   --->   "%op_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %op" [HLS/core.cpp:264]   --->   Operation 4 'read' 'op_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 5 [1/1] (1.00ns)   --->   "%c_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %c" [HLS/core.cpp:264]   --->   Operation 5 'read' 'c_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 6 [1/1] (1.00ns)   --->   "%b_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %b" [HLS/core.cpp:264]   --->   Operation 6 'read' 'b_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 7 [1/1] (1.00ns)   --->   "%a_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %a" [HLS/core.cpp:264]   --->   Operation 7 'read' 'a_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 8 [2/2] (2.23ns)   --->   "%call_ln264 = call void @Block_entry2_proc1, i32 %selec_read, i32 %gmem3, i64 %op_read, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem2, i64 %c_read, i32 %data_a, i32 %data_b, i32 %ALU_operation, i32 %ALU_operation_MEM, i32 %data_result" [HLS/core.cpp:264]   --->   Operation 8 'call' 'call_ln264' <Predicate = true> <Delay = 2.23> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 3 [1/1] (1.00ns)   --->   "%selec_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %selec" [HLS/core.cpp:213]   --->   Operation 3 'read' 'selec_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 4 [1/1] (1.00ns)   --->   "%op_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %op" [HLS/core.cpp:213]   --->   Operation 4 'read' 'op_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 5 [1/1] (1.00ns)   --->   "%c_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %c" [HLS/core.cpp:213]   --->   Operation 5 'read' 'c_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 6 [1/1] (1.00ns)   --->   "%b_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %b" [HLS/core.cpp:213]   --->   Operation 6 'read' 'b_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 7 [1/1] (1.00ns)   --->   "%a_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %a" [HLS/core.cpp:213]   --->   Operation 7 'read' 'a_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 8 [2/2] (2.23ns)   --->   "%call_ln213 = call void @Block_entry2_proc1, i32 %selec_read, i32 %gmem3, i64 %op_read, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem2, i64 %c_read, i32 %data_a, i32 %data_b, i32 %ALU_operation, i32 %ALU_operation_MEM, i32 %data_result" [HLS/core.cpp:213]   --->   Operation 8 'call' 'call_ln213' <Predicate = true> <Delay = 2.23> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 2 <SV = 1> <Delay = 0.00>
-ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln300 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_20" [HLS/core.cpp:300]   --->   Operation 9 'specdataflowpipeline' 'specdataflowpipeline_ln300' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%spectopmodule_ln264 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_15" [HLS/core.cpp:264]   --->   Operation 10 'spectopmodule' 'spectopmodule_ln264' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln246 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_20" [HLS/core.cpp:246]   --->   Operation 9 'specdataflowpipeline' 'specdataflowpipeline_ln246' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%spectopmodule_ln213 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_15" [HLS/core.cpp:213]   --->   Operation 10 'spectopmodule' 'spectopmodule_ln213' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem0, void @empty_19, i32 0, i32 0, void @empty_20, i32 0, i32 50, void @empty_21, void @empty_22, void @empty_20, i32 16, i32 16, i32 16, i32 16, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem0"   --->   Operation 12 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem1, void @empty_19, i32 0, i32 0, void @empty_20, i32 0, i32 50, void @empty_23, void @empty_22, void @empty_20, i32 16, i32 16, i32 16, i32 16, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
@@ -384,8 +384,8 @@ ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface 
 ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_a, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_b, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_result, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 35 [1/2] (0.00ns)   --->   "%call_ln264 = call void @Block_entry2_proc1, i32 %selec_read, i32 %gmem3, i64 %op_read, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem2, i64 %c_read, i32 %data_a, i32 %data_b, i32 %ALU_operation, i32 %ALU_operation_MEM, i32 %data_result" [HLS/core.cpp:264]   --->   Operation 35 'call' 'call_ln264' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%ret_ln331 = ret" [HLS/core.cpp:331]   --->   Operation 36 'ret' 'ret_ln331' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/2] (0.00ns)   --->   "%call_ln213 = call void @Block_entry2_proc1, i32 %selec_read, i32 %gmem3, i64 %op_read, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem2, i64 %c_read, i32 %data_a, i32 %data_b, i32 %ALU_operation, i32 %ALU_operation_MEM, i32 %data_result" [HLS/core.cpp:213]   --->   Operation 35 'call' 'call_ln213' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%ret_ln277 = ret" [HLS/core.cpp:277]   --->   Operation 36 'ret' 'ret_ln277' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -424,8 +424,8 @@ op_read                    (read                ) [ 001]
 c_read                     (read                ) [ 001]
 b_read                     (read                ) [ 001]
 a_read                     (read                ) [ 001]
-specdataflowpipeline_ln300 (specdataflowpipeline) [ 000]
-spectopmodule_ln264        (spectopmodule       ) [ 000]
+specdataflowpipeline_ln246 (specdataflowpipeline) [ 000]
+spectopmodule_ln213        (spectopmodule       ) [ 000]
 specinterface_ln0          (specinterface       ) [ 000]
 specbitsmap_ln0            (specbitsmap         ) [ 000]
 specinterface_ln0          (specinterface       ) [ 000]
@@ -450,8 +450,8 @@ specinterface_ln0          (specinterface       ) [ 000]
 specinterface_ln0          (specinterface       ) [ 000]
 specinterface_ln0          (specinterface       ) [ 000]
 specinterface_ln0          (specinterface       ) [ 000]
-call_ln264                 (call                ) [ 000]
-ret_ln331                  (ret                 ) [ 000]
+call_ln213                 (call                ) [ 000]
+ret_ln277                  (ret                 ) [ 000]
 </LifeTime>
 
 <model>
@@ -926,7 +926,7 @@ ret_ln331                  (ret                 ) [ 000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln264/1 "/>
+<opset="call_ln213/1 "/>
 </bind>
 </comp>
 

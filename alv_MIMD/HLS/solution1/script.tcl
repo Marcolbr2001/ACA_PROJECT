@@ -12,9 +12,9 @@ open_solution "solution1" -flow_target vivado
 set_part {xc7z020-clg400-1}
 create_clock -period 10 -name default
 config_cosim -rtl vhdl -tool xsim
-config_export -display_name alv_MIMD -flow syn -format ip_catalog -output C:/Users/lotto/Desktop -rtl verilog -vivado_clock 10
+config_export -display_name alv_MIMD -flow syn -format ip_catalog -output C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/ip_repo -rtl verilog -vivado_clock 10
 source "./HLS/solution1/directives.tcl"
 csim_design -clean
 csynth_design
 cosim_design -rtl vhdl
-export_design -rtl verilog -format ip_catalog -output C:/Users/lotto/Desktop
+export_design -rtl verilog -format ip_catalog -output C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/ip_repo

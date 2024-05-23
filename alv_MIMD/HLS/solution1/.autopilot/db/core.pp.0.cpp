@@ -6790,7 +6790,7 @@ class stream : public stream<__STREAM_T__, 0> {
 
 
 
-void reset(hls::stream<int>&data_a, hls::stream<int>&data_b, hls::stream<int>&ALU_operation, int data_a_MEM[], int data_b_MEM[], int ALU_operation_MEM[])
+void reset(hls::stream<int>&data_a, hls::stream<int>&data_b, hls::stream<int>&ALU_operation, int ALU_operation_MEM[])
 {
 
 #pragma HLS INLINE
@@ -6809,14 +6809,6 @@ void reset(hls::stream<int>&data_a, hls::stream<int>&data_b, hls::stream<int>&AL
    {
     int x;
     x=ALU_operation.read();
-   }
-  clear_RAM_data_a : for(int i = 0; i < 50; i++)
-   {
-    data_a_MEM[i] = 0;
-   }
-  clear_RAM_data_b : for(int i = 0; i < 50; i++)
-   {
-    data_b_MEM[i] = 0;
    }
   clear_RAM_op : for(int i = 0; i < 50; i++)
    {
@@ -6861,10 +6853,9 @@ void load_op(volatile int op[], hls::stream<int>&ALU_operation)
   ALU_operation.write(tmp_op);
  }
 }
-# 109 "HLS/core.cpp"
+
 void store_op(hls::stream<int>&ALU_operation, int ALU_operation_MEM[])
 {
-
  s_operation_data_op: for(int i = 0; i < 50; i++)
  {
 #pragma HLS PIPELINE II=1
@@ -6894,7 +6885,9 @@ void load_data_and_op(volatile int a[], volatile int b[],volatile int op[], hls:
  load_data_b(b, data_b);
 
 }
-# 154 "HLS/core.cpp"
+
+
+
 void execute(hls::stream<int>&data_a,hls::stream<int>&data_b, int ALU_operation_MEM[], hls::stream<int>&data_result)
 {
 
@@ -6903,8 +6896,10 @@ void execute(hls::stream<int>&data_a,hls::stream<int>&data_b, int ALU_operation_
 #pragma HLS PIPELINE II=1
 
  int a,b;
+
   a=data_a.read();
   b=data_b.read();
+
   switch(ALU_operation_MEM[i])
   {
 
@@ -6966,37 +6961,43 @@ void write_back(hls::stream<int>&data_result, volatile int c[])
  }
 
 }
-# 238 "HLS/core.cpp"
-void data_exe_wb(volatile int a[],volatile int b[], hls::stream<int>&data_a,hls::stream<int>&data_b,int data_a_MEM[],int data_b_MEM[], int ALU_operation_MEM[], hls::stream<int>&data_result, volatile int c[])
+
+
+
+
+void data_exe_wb(volatile int a[],volatile int b[], hls::stream<int>&data_a,hls::stream<int>&data_b, int ALU_operation_MEM[], hls::stream<int>&data_result, volatile int c[])
 {
 
 
 
   load_data_a(a, data_a);
   load_data_b(b, data_b);
-
-
   execute(data_a, data_b, ALU_operation_MEM, data_result);
   write_back(data_result, c);
 
 }
 
-void op_data_exe_wb(volatile int a[],volatile int b[],volatile int op[],hls::stream<int>&data_a,hls::stream<int>&data_b, hls::stream<int>&ALU_operation,int data_a_MEM[],int data_b_MEM[] ,int ALU_operation_MEM[], hls::stream<int>&data_result,volatile int c[])
+void op_data_exe_wb(volatile int a[],volatile int b[],volatile int op[],hls::stream<int>&data_a,hls::stream<int>&data_b, hls::stream<int>&ALU_operation,int ALU_operation_MEM[], hls::stream<int>&data_result,volatile int c[])
 {
 
 
 
-  load_data_and_op(a, b, op, data_a, data_b, ALU_operation);
-  store_op(ALU_operation,ALU_operation_MEM);
+  operation(op,ALU_operation,ALU_operation_MEM);
+  load_data_a(a, data_a);
+  load_data_b(b, data_b);
   execute(data_a, data_b, ALU_operation_MEM, data_result);
   write_back(data_result, c);
 
 }
 
 __attribute__((sdx_kernel("alv_MIMD", 0))) void alv_MIMD(volatile int* a,volatile int* b, volatile int* c,volatile int* op, int selec) {
-#line 17 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/HLS/solution1/csynth.tcl"
+#line 17 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/HLS/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=alv_MIMD
-# 264 "HLS/core.cpp"
+# 213 "HLS/core.cpp"
+
+#line 7 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/HLS/solution1/directives.tcl"
+#pragma HLSDIRECTIVE TOP name=alv_MIMD
+# 213 "HLS/core.cpp"
 
 
 #pragma HLS INTERFACE mode=s_axilite bundle=control port=a
@@ -7029,9 +7030,6 @@ __attribute__((sdx_kernel("alv_MIMD", 0))) void alv_MIMD(volatile int* a,volatil
 
 
  static int ALU_operation_MEM[50] = {0};
- int data_a_MEM[50] = {0};
- int data_b_MEM[50] = {0};
- int data_result_MEM[50] = {0};
 
 #pragma HLS DATAFLOW
 
@@ -7046,19 +7044,19 @@ __attribute__((sdx_kernel("alv_MIMD", 0))) void alv_MIMD(volatile int* a,volatil
 
   case 1:
 
-   data_exe_wb(a, b, data_a, data_b, data_a_MEM, data_b_MEM, ALU_operation_MEM, data_result, c);
+   data_exe_wb(a, b, data_a, data_b, ALU_operation_MEM, data_result, c);
 
   break;
 
   case 2:
 
-   op_data_exe_wb(a, b, op ,data_a, data_b, ALU_operation, data_a_MEM, data_b_MEM, ALU_operation_MEM, data_result, c);
+   op_data_exe_wb(a, b, op ,data_a, data_b, ALU_operation, ALU_operation_MEM, data_result, c);
 
   break;
 
   default :
 
-   reset(data_a, data_b, ALU_operation,data_a_MEM,data_b_MEM, ALU_operation_MEM);
+   reset(data_a, data_b, ALU_operation, ALU_operation_MEM);
 
  }
 

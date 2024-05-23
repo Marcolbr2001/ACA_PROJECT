@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'operation_Pipeline_l_operation'
 ================================================================
-* Date:           Sun May 19 16:11:28 2024
+* Date:           Tue May 21 09:38:58 2024
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        HLS
@@ -94,58 +94,58 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 5.10>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [HLS/core.cpp:76->HLS/core.cpp:124]   --->   Operation 14 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [HLS/core.cpp:68->HLS/core.cpp:91]   --->   Operation 14 'alloca' 'i' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem3, void @empty_19, i32 0, i32 0, void @empty_20, i32 0, i32 50, void @empty_25, void @empty_22, void @empty_20, i32 16, i32 16, i32 16, i32 16, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ALU_operation, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%op_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %op" [HLS/core.cpp:76->HLS/core.cpp:124]   --->   Operation 17 'read' 'op_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (1.58ns)   --->   "%store_ln76 = store i6 0, i6 %i" [HLS/core.cpp:76->HLS/core.cpp:124]   --->   Operation 18 'store' 'store_ln76' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%op_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %op" [HLS/core.cpp:68->HLS/core.cpp:91]   --->   Operation 17 'read' 'op_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (1.58ns)   --->   "%store_ln68 = store i6 0, i6 %i" [HLS/core.cpp:68->HLS/core.cpp:91]   --->   Operation 18 'store' 'store_ln68' <Predicate = true> <Delay = 1.58>
 ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i.i"   --->   Operation 19 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%i_2 = load i6 %i" [HLS/core.cpp:76->HLS/core.cpp:124]   --->   Operation 20 'load' 'i_2' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 21 [1/1] (1.82ns)   --->   "%icmp_ln76 = icmp_eq  i6 %i_2, i6 50" [HLS/core.cpp:76->HLS/core.cpp:124]   --->   Operation 21 'icmp' 'icmp_ln76' <Predicate = true> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 22 [1/1] (1.82ns)   --->   "%add_ln76 = add i6 %i_2, i6 1" [HLS/core.cpp:76->HLS/core.cpp:124]   --->   Operation 22 'add' 'add_ln76' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln76 = br i1 %icmp_ln76, void %for.inc.i.split.i, void %for.inc.i4.i.preheader.exitStub" [HLS/core.cpp:76->HLS/core.cpp:124]   --->   Operation 23 'br' 'br_ln76' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i6.i2, i6 %i_2, i2 0" [HLS/core.cpp:80->HLS/core.cpp:124]   --->   Operation 24 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln76)> <Delay = 0.00>
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%zext_ln80 = zext i8 %shl_ln" [HLS/core.cpp:80->HLS/core.cpp:124]   --->   Operation 25 'zext' 'zext_ln80' <Predicate = (!icmp_ln76)> <Delay = 0.00>
-ST_1 : Operation 26 [1/1] (3.52ns)   --->   "%add_ln80 = add i64 %zext_ln80, i64 %op_read" [HLS/core.cpp:80->HLS/core.cpp:124]   --->   Operation 26 'add' 'add_ln80' <Predicate = (!icmp_ln76)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln80, i32 2, i32 63" [HLS/core.cpp:80->HLS/core.cpp:124]   --->   Operation 27 'partselect' 'trunc_ln' <Predicate = (!icmp_ln76)> <Delay = 0.00>
-ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%sext_ln80 = sext i62 %trunc_ln" [HLS/core.cpp:80->HLS/core.cpp:124]   --->   Operation 28 'sext' 'sext_ln80' <Predicate = (!icmp_ln76)> <Delay = 0.00>
-ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%gmem3_addr = getelementptr i32 %gmem3, i64 %sext_ln80" [HLS/core.cpp:80->HLS/core.cpp:124]   --->   Operation 29 'getelementptr' 'gmem3_addr' <Predicate = (!icmp_ln76)> <Delay = 0.00>
-ST_1 : Operation 30 [1/1] (1.58ns)   --->   "%store_ln76 = store i6 %add_ln76, i6 %i" [HLS/core.cpp:76->HLS/core.cpp:124]   --->   Operation 30 'store' 'store_ln76' <Predicate = (!icmp_ln76)> <Delay = 1.58>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%i_2 = load i6 %i" [HLS/core.cpp:68->HLS/core.cpp:91]   --->   Operation 20 'load' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (1.82ns)   --->   "%icmp_ln68 = icmp_eq  i6 %i_2, i6 50" [HLS/core.cpp:68->HLS/core.cpp:91]   --->   Operation 21 'icmp' 'icmp_ln68' <Predicate = true> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (1.82ns)   --->   "%add_ln68 = add i6 %i_2, i6 1" [HLS/core.cpp:68->HLS/core.cpp:91]   --->   Operation 22 'add' 'add_ln68' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln68 = br i1 %icmp_ln68, void %for.inc.i.split.i, void %for.inc.i4.i.preheader.exitStub" [HLS/core.cpp:68->HLS/core.cpp:91]   --->   Operation 23 'br' 'br_ln68' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i6.i2, i6 %i_2, i2 0" [HLS/core.cpp:72->HLS/core.cpp:91]   --->   Operation 24 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%zext_ln72 = zext i8 %shl_ln" [HLS/core.cpp:72->HLS/core.cpp:91]   --->   Operation 25 'zext' 'zext_ln72' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (3.52ns)   --->   "%add_ln72 = add i64 %zext_ln72, i64 %op_read" [HLS/core.cpp:72->HLS/core.cpp:91]   --->   Operation 26 'add' 'add_ln72' <Predicate = (!icmp_ln68)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln72, i32 2, i32 63" [HLS/core.cpp:72->HLS/core.cpp:91]   --->   Operation 27 'partselect' 'trunc_ln' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%sext_ln72 = sext i62 %trunc_ln" [HLS/core.cpp:72->HLS/core.cpp:91]   --->   Operation 28 'sext' 'sext_ln72' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%gmem3_addr = getelementptr i32 %gmem3, i64 %sext_ln72" [HLS/core.cpp:72->HLS/core.cpp:91]   --->   Operation 29 'getelementptr' 'gmem3_addr' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (1.58ns)   --->   "%store_ln68 = store i6 %add_ln68, i6 %i" [HLS/core.cpp:68->HLS/core.cpp:91]   --->   Operation 30 'store' 'store_ln68' <Predicate = (!icmp_ln68)> <Delay = 1.58>
 
 State 2 <SV = 1> <Delay = 7.30>
-ST_2 : Operation 31 [8/8] (7.30ns)   --->   "%tmp_op_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem3_addr, i32 1" [HLS/core.cpp:80->HLS/core.cpp:124]   --->   Operation 31 'readreq' 'tmp_op_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 31 [8/8] (7.30ns)   --->   "%tmp_op_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem3_addr, i32 1" [HLS/core.cpp:72->HLS/core.cpp:91]   --->   Operation 31 'readreq' 'tmp_op_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 3 <SV = 2> <Delay = 7.30>
-ST_3 : Operation 32 [7/8] (7.30ns)   --->   "%tmp_op_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem3_addr, i32 1" [HLS/core.cpp:80->HLS/core.cpp:124]   --->   Operation 32 'readreq' 'tmp_op_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 32 [7/8] (7.30ns)   --->   "%tmp_op_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem3_addr, i32 1" [HLS/core.cpp:72->HLS/core.cpp:91]   --->   Operation 32 'readreq' 'tmp_op_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 4 <SV = 3> <Delay = 7.30>
-ST_4 : Operation 33 [6/8] (7.30ns)   --->   "%tmp_op_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem3_addr, i32 1" [HLS/core.cpp:80->HLS/core.cpp:124]   --->   Operation 33 'readreq' 'tmp_op_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_4 : Operation 33 [6/8] (7.30ns)   --->   "%tmp_op_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem3_addr, i32 1" [HLS/core.cpp:72->HLS/core.cpp:91]   --->   Operation 33 'readreq' 'tmp_op_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 5 <SV = 4> <Delay = 7.30>
-ST_5 : Operation 34 [5/8] (7.30ns)   --->   "%tmp_op_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem3_addr, i32 1" [HLS/core.cpp:80->HLS/core.cpp:124]   --->   Operation 34 'readreq' 'tmp_op_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 34 [5/8] (7.30ns)   --->   "%tmp_op_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem3_addr, i32 1" [HLS/core.cpp:72->HLS/core.cpp:91]   --->   Operation 34 'readreq' 'tmp_op_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 6 <SV = 5> <Delay = 7.30>
-ST_6 : Operation 35 [4/8] (7.30ns)   --->   "%tmp_op_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem3_addr, i32 1" [HLS/core.cpp:80->HLS/core.cpp:124]   --->   Operation 35 'readreq' 'tmp_op_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 35 [4/8] (7.30ns)   --->   "%tmp_op_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem3_addr, i32 1" [HLS/core.cpp:72->HLS/core.cpp:91]   --->   Operation 35 'readreq' 'tmp_op_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 7 <SV = 6> <Delay = 7.30>
-ST_7 : Operation 36 [3/8] (7.30ns)   --->   "%tmp_op_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem3_addr, i32 1" [HLS/core.cpp:80->HLS/core.cpp:124]   --->   Operation 36 'readreq' 'tmp_op_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 36 [3/8] (7.30ns)   --->   "%tmp_op_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem3_addr, i32 1" [HLS/core.cpp:72->HLS/core.cpp:91]   --->   Operation 36 'readreq' 'tmp_op_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 8 <SV = 7> <Delay = 7.30>
-ST_8 : Operation 37 [2/8] (7.30ns)   --->   "%tmp_op_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem3_addr, i32 1" [HLS/core.cpp:80->HLS/core.cpp:124]   --->   Operation 37 'readreq' 'tmp_op_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 37 [2/8] (7.30ns)   --->   "%tmp_op_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem3_addr, i32 1" [HLS/core.cpp:72->HLS/core.cpp:91]   --->   Operation 37 'readreq' 'tmp_op_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 9 <SV = 8> <Delay = 7.30>
-ST_9 : Operation 38 [1/8] (7.30ns)   --->   "%tmp_op_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem3_addr, i32 1" [HLS/core.cpp:80->HLS/core.cpp:124]   --->   Operation 38 'readreq' 'tmp_op_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 38 [1/8] (7.30ns)   --->   "%tmp_op_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem3_addr, i32 1" [HLS/core.cpp:72->HLS/core.cpp:91]   --->   Operation 38 'readreq' 'tmp_op_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 10 <SV = 9> <Delay = 7.30>
-ST_10 : Operation 39 [1/1] (7.30ns)   --->   "%tmp_op = read i32 @_ssdm_op_Read.m_axi.volatile.i32P1A, i32 %gmem3_addr" [HLS/core.cpp:80->HLS/core.cpp:124]   --->   Operation 39 'read' 'tmp_op' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_10 : Operation 45 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 45 'ret' 'ret_ln0' <Predicate = (icmp_ln76)> <Delay = 0.00>
+ST_10 : Operation 39 [1/1] (7.30ns)   --->   "%tmp_op = read i32 @_ssdm_op_Read.m_axi.volatile.i32P1A, i32 %gmem3_addr" [HLS/core.cpp:72->HLS/core.cpp:91]   --->   Operation 39 'read' 'tmp_op' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_10 : Operation 45 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 45 'ret' 'ret_ln0' <Predicate = (icmp_ln68)> <Delay = 0.00>
 
 State 11 <SV = 10> <Delay = 3.58>
-ST_11 : Operation 40 [1/1] (0.00ns)   --->   "%specpipeline_ln78 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_20" [HLS/core.cpp:78->HLS/core.cpp:124]   --->   Operation 40 'specpipeline' 'specpipeline_ln78' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 41 [1/1] (0.00ns)   --->   "%speclooptripcount_ln76 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 50, i64 50, i64 50" [HLS/core.cpp:76->HLS/core.cpp:124]   --->   Operation 41 'speclooptripcount' 'speclooptripcount_ln76' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 42 [1/1] (0.00ns)   --->   "%specloopname_ln76 = specloopname void @_ssdm_op_SpecLoopName, void @empty_18" [HLS/core.cpp:76->HLS/core.cpp:124]   --->   Operation 42 'specloopname' 'specloopname_ln76' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 43 [1/1] (3.58ns)   --->   "%write_ln81 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %ALU_operation, i32 %tmp_op" [HLS/core.cpp:81->HLS/core.cpp:124]   --->   Operation 43 'write' 'write_ln81' <Predicate = true> <Delay = 3.58> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.58> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 50> <FIFO>
-ST_11 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln76 = br void %for.inc.i.i" [HLS/core.cpp:76->HLS/core.cpp:124]   --->   Operation 44 'br' 'br_ln76' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 40 [1/1] (0.00ns)   --->   "%specpipeline_ln70 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_20" [HLS/core.cpp:70->HLS/core.cpp:91]   --->   Operation 40 'specpipeline' 'specpipeline_ln70' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 41 [1/1] (0.00ns)   --->   "%speclooptripcount_ln68 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 50, i64 50, i64 50" [HLS/core.cpp:68->HLS/core.cpp:91]   --->   Operation 41 'speclooptripcount' 'speclooptripcount_ln68' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 42 [1/1] (0.00ns)   --->   "%specloopname_ln68 = specloopname void @_ssdm_op_SpecLoopName, void @empty_18" [HLS/core.cpp:68->HLS/core.cpp:91]   --->   Operation 42 'specloopname' 'specloopname_ln68' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 43 [1/1] (3.58ns)   --->   "%write_ln73 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %ALU_operation, i32 %tmp_op" [HLS/core.cpp:73->HLS/core.cpp:91]   --->   Operation 43 'write' 'write_ln73' <Predicate = true> <Delay = 3.58> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.58> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 50> <FIFO>
+ST_11 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln68 = br void %for.inc.i.i" [HLS/core.cpp:68->HLS/core.cpp:91]   --->   Operation 44 'br' 'br_ln68' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -155,49 +155,49 @@ Target clock period: 10.000ns, clock uncertainty: 2.700ns.
 
  <State 1>: 5.108ns
 The critical path consists of the following:
-	'store' operation 0 bit ('store_ln76', HLS/core.cpp:76->HLS/core.cpp:124) of constant 0 on local variable 'i', HLS/core.cpp:76->HLS/core.cpp:124 [8]  (1.588 ns)
-	'load' operation 6 bit ('i', HLS/core.cpp:76->HLS/core.cpp:124) on local variable 'i', HLS/core.cpp:76->HLS/core.cpp:124 [11]  (0.000 ns)
-	'add' operation 64 bit ('add_ln80', HLS/core.cpp:80->HLS/core.cpp:124) [21]  (3.520 ns)
+	'store' operation 0 bit ('store_ln68', HLS/core.cpp:68->HLS/core.cpp:91) of constant 0 on local variable 'i', HLS/core.cpp:68->HLS/core.cpp:91 [8]  (1.588 ns)
+	'load' operation 6 bit ('i', HLS/core.cpp:68->HLS/core.cpp:91) on local variable 'i', HLS/core.cpp:68->HLS/core.cpp:91 [11]  (0.000 ns)
+	'add' operation 64 bit ('add_ln72', HLS/core.cpp:72->HLS/core.cpp:91) [21]  (3.520 ns)
 
  <State 2>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('tmp_op_req', HLS/core.cpp:80->HLS/core.cpp:124) on port 'gmem3' (HLS/core.cpp:80->HLS/core.cpp:124) [25]  (7.300 ns)
+	bus request operation ('tmp_op_req', HLS/core.cpp:72->HLS/core.cpp:91) on port 'gmem3' (HLS/core.cpp:72->HLS/core.cpp:91) [25]  (7.300 ns)
 
  <State 3>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('tmp_op_req', HLS/core.cpp:80->HLS/core.cpp:124) on port 'gmem3' (HLS/core.cpp:80->HLS/core.cpp:124) [25]  (7.300 ns)
+	bus request operation ('tmp_op_req', HLS/core.cpp:72->HLS/core.cpp:91) on port 'gmem3' (HLS/core.cpp:72->HLS/core.cpp:91) [25]  (7.300 ns)
 
  <State 4>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('tmp_op_req', HLS/core.cpp:80->HLS/core.cpp:124) on port 'gmem3' (HLS/core.cpp:80->HLS/core.cpp:124) [25]  (7.300 ns)
+	bus request operation ('tmp_op_req', HLS/core.cpp:72->HLS/core.cpp:91) on port 'gmem3' (HLS/core.cpp:72->HLS/core.cpp:91) [25]  (7.300 ns)
 
  <State 5>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('tmp_op_req', HLS/core.cpp:80->HLS/core.cpp:124) on port 'gmem3' (HLS/core.cpp:80->HLS/core.cpp:124) [25]  (7.300 ns)
+	bus request operation ('tmp_op_req', HLS/core.cpp:72->HLS/core.cpp:91) on port 'gmem3' (HLS/core.cpp:72->HLS/core.cpp:91) [25]  (7.300 ns)
 
  <State 6>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('tmp_op_req', HLS/core.cpp:80->HLS/core.cpp:124) on port 'gmem3' (HLS/core.cpp:80->HLS/core.cpp:124) [25]  (7.300 ns)
+	bus request operation ('tmp_op_req', HLS/core.cpp:72->HLS/core.cpp:91) on port 'gmem3' (HLS/core.cpp:72->HLS/core.cpp:91) [25]  (7.300 ns)
 
  <State 7>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('tmp_op_req', HLS/core.cpp:80->HLS/core.cpp:124) on port 'gmem3' (HLS/core.cpp:80->HLS/core.cpp:124) [25]  (7.300 ns)
+	bus request operation ('tmp_op_req', HLS/core.cpp:72->HLS/core.cpp:91) on port 'gmem3' (HLS/core.cpp:72->HLS/core.cpp:91) [25]  (7.300 ns)
 
  <State 8>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('tmp_op_req', HLS/core.cpp:80->HLS/core.cpp:124) on port 'gmem3' (HLS/core.cpp:80->HLS/core.cpp:124) [25]  (7.300 ns)
+	bus request operation ('tmp_op_req', HLS/core.cpp:72->HLS/core.cpp:91) on port 'gmem3' (HLS/core.cpp:72->HLS/core.cpp:91) [25]  (7.300 ns)
 
  <State 9>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('tmp_op_req', HLS/core.cpp:80->HLS/core.cpp:124) on port 'gmem3' (HLS/core.cpp:80->HLS/core.cpp:124) [25]  (7.300 ns)
+	bus request operation ('tmp_op_req', HLS/core.cpp:72->HLS/core.cpp:91) on port 'gmem3' (HLS/core.cpp:72->HLS/core.cpp:91) [25]  (7.300 ns)
 
  <State 10>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('tmp_op', HLS/core.cpp:80->HLS/core.cpp:124) on port 'gmem3' (HLS/core.cpp:80->HLS/core.cpp:124) [26]  (7.300 ns)
+	bus read operation ('tmp_op', HLS/core.cpp:72->HLS/core.cpp:91) on port 'gmem3' (HLS/core.cpp:72->HLS/core.cpp:91) [26]  (7.300 ns)
 
  <State 11>: 3.581ns
 The critical path consists of the following:
-	fifo write operation ('write_ln81', HLS/core.cpp:81->HLS/core.cpp:124) on port 'ALU_operation' (HLS/core.cpp:81->HLS/core.cpp:124) [27]  (3.581 ns)
+	fifo write operation ('write_ln73', HLS/core.cpp:73->HLS/core.cpp:91) on port 'ALU_operation' (HLS/core.cpp:73->HLS/core.cpp:91) [27]  (3.581 ns)
 
 
 ============================================================

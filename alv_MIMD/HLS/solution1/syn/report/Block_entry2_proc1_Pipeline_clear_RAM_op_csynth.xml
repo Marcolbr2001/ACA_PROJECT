@@ -46,13 +46,13 @@
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>HLS/core.cpp:41~HLS/core.cpp:325</SourceLocation>
+<SourceLocation>HLS/core.cpp:33~HLS/core.cpp:271</SourceLocation>
 <SummaryOfLoopViolations>
 <clear_RAM_op>
 <Name>clear_RAM_op</Name>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>HLS/core.cpp:41~HLS/core.cpp:325</SourceLocation>
+<SourceLocation>HLS/core.cpp:33~HLS/core.cpp:271</SourceLocation>
 </clear_RAM_op>
 </SummaryOfLoopViolations>
 </SummaryOfViolations>

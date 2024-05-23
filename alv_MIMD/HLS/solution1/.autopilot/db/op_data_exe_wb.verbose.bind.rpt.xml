@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'op_data_exe_wb'" level="0">
-<item name = "Date">Sun May 19 16:11:27 2024
+<item name = "Date">Tue May 21 09:38:57 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">HLS</item>
@@ -32,9 +32,9 @@
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
 <column name="grp_op_data_exe_wb_Pipeline_l_operation_fu_92">op_data_exe_wb_Pipeline_l_operation, 61, 61, 0.610 us, 0.610 us, 61, 61, no</column>
-<column name="grp_op_data_exe_wb_Pipeline_l_data_a_fu_101">op_data_exe_wb_Pipeline_l_data_a, 61, 61, 0.610 us, 0.610 us, 61, 61, no</column>
-<column name="grp_op_data_exe_wb_Pipeline_l_data_b_fu_110">op_data_exe_wb_Pipeline_l_data_b, 61, 61, 0.610 us, 0.610 us, 61, 61, no</column>
-<column name="grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_119">op_data_exe_wb_Pipeline_s_operation_data_op, 52, 52, 0.520 us, 0.520 us, 52, 52, no</column>
+<column name="grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_101">op_data_exe_wb_Pipeline_s_operation_data_op, 52, 52, 0.520 us, 0.520 us, 52, 52, no</column>
+<column name="grp_op_data_exe_wb_Pipeline_l_data_a_fu_109">op_data_exe_wb_Pipeline_l_data_a, 61, 61, 0.610 us, 0.610 us, 61, 61, no</column>
+<column name="grp_op_data_exe_wb_Pipeline_l_data_b_fu_118">op_data_exe_wb_Pipeline_l_data_b, 61, 61, 0.610 us, 0.610 us, 61, 61, no</column>
 <column name="grp_op_data_exe_wb_Pipeline_exe_fu_127">op_data_exe_wb_Pipeline_exe, 89, 89, 0.890 us, 0.890 us, 89, 89, no</column>
 <column name="grp_op_data_exe_wb_Pipeline_write_back_fu_139">op_data_exe_wb_Pipeline_write_back, 58, 58, 0.580 us, 0.580 us, 58, 58, no</column>
 </table>

@@ -3,26 +3,49 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sun May 19 18:52:50 2024
-# Process ID: 4808
-# Current directory: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22512 C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD\Vivado\alv_MIMD.xpr
-# Log file: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/vivado.log
-# Journal file: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado\vivado.jou
+# Start of session at: Tue May 21 09:45:19 2024
+# Process ID: 11792
+# Current directory: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1732 C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD\Vivado\alv_MIMD.xpr
+# Log file: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/vivado.log
+# Journal file: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado\vivado.jou
 # Running On: MSI, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 10, Host memory: 16870 MB
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.xpr
+open_project C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.xpr
 update_compile_order -fileset sources_1
 set_property  ip_repo_paths  {} [current_project]
 update_ip_catalog
 set_property  ip_repo_paths  C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/ip_repo [current_project]
 update_ip_catalog
-open_bd_design {C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_intf_nets alv_MIMD_0_m_axi_gmem0] [get_bd_intf_nets alv_MIMD_0_m_axi_gmem1] [get_bd_intf_nets alv_MIMD_0_m_axi_gmem2] [get_bd_intf_nets alv_MIMD_0_m_axi_gmem3] [get_bd_cells alv_MIMD_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:alv_MIMD:1.0 alv_MIMD_0
+endgroup
+set_property location {2.5 694 475} [get_bd_cells alv_MIMD_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/alv_MIMD_0/m_axi_gmem0} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins alv_MIMD_0/m_axi_gmem0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/alv_MIMD_0/m_axi_gmem1} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins alv_MIMD_0/m_axi_gmem1]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/alv_MIMD_0/m_axi_gmem2} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins alv_MIMD_0/m_axi_gmem2]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/alv_MIMD_0/m_axi_gmem3} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins alv_MIMD_0/m_axi_gmem3]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/alv_MIMD_0/s_axi_control} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins alv_MIMD_0/s_axi_control]
+endgroup
+undo
+undo
+undo
+undo
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+update_ip_catalog -rebuild
+set_property  ip_repo_paths  C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/ip_repo [current_project]
+update_ip_catalog
 report_ip_status -name ip_status 
 upgrade_ip -vlnv xilinx.com:hls:alv_MIMD:1.0 [get_ips  design_1_alv_MIMD_0_1] -log ip_upgrade.log
 export_ip_user_files -of_objects [get_ips design_1_alv_MIMD_0_1] -no_script -sync -force -quiet
-generate_target all [get_files  C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.srcs/sources_1/bd/design_1/design_1.bd]
+generate_target all [get_files  C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_100M_0] }
+catch { [ delete_ip_run [get_ips -all design_1_rst_ps7_0_100M_0] ] }
 catch { config_ip_cache -export [get_ips -all design_1_alv_MIMD_0_1] }
 catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
 catch { config_ip_cache -export [get_ips -all design_1_auto_pc_1] }
@@ -33,13 +56,13 @@ catch { config_ip_cache -export [get_ips -all design_1_auto_pc_3] }
 catch { config_ip_cache -export [get_ips -all design_1_auto_us_2] }
 catch { config_ip_cache -export [get_ips -all design_1_auto_pc_4] }
 catch { config_ip_cache -export [get_ips -all design_1_auto_us_3] }
-export_ip_user_files -of_objects [get_files C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.srcs/sources_1/bd/design_1/design_1.bd]
-launch_runs design_1_alv_MIMD_0_1_synth_1 -jobs 16
+export_ip_user_files -of_objects [get_files C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_alv_MIMD_0_1_synth_1 design_1_processing_system7_0_0_synth_1 -jobs 16
 wait_on_run design_1_alv_MIMD_0_1_synth_1
-export_simulation -of_objects [get_files C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.ip_user_files -ipstatic_source_dir C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.cache/compile_simlib/modelsim} {questa=C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.cache/compile_simlib/questa} {riviera=C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.cache/compile_simlib/riviera} {activehdl=C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+wait_on_run design_1_processing_system7_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.ip_user_files -ipstatic_source_dir C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.cache/compile_simlib/modelsim} {questa=C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.cache/compile_simlib/questa} {riviera=C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.cache/compile_simlib/riviera} {activehdl=C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 16
 wait_on_run impl_1
-open_run impl_1
-report_ip_status -name ip_status 

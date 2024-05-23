@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'op_data_exe_wb'
 ================================================================
-* Date:           Sun May 19 16:11:27 2024
+* Date:           Tue May 21 09:38:57 2024
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        HLS
@@ -39,9 +39,9 @@
         |                        Instance                        |                    Module                   |   min   |   max   |    min   |    max   | min | max |   Type  |
         +--------------------------------------------------------+---------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
         |grp_op_data_exe_wb_Pipeline_l_operation_fu_92           |op_data_exe_wb_Pipeline_l_operation          |       61|       61|  0.610 us|  0.610 us|   61|   61|       no|
-        |grp_op_data_exe_wb_Pipeline_l_data_a_fu_101             |op_data_exe_wb_Pipeline_l_data_a             |       61|       61|  0.610 us|  0.610 us|   61|   61|       no|
-        |grp_op_data_exe_wb_Pipeline_l_data_b_fu_110             |op_data_exe_wb_Pipeline_l_data_b             |       61|       61|  0.610 us|  0.610 us|   61|   61|       no|
-        |grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_119  |op_data_exe_wb_Pipeline_s_operation_data_op  |       52|       52|  0.520 us|  0.520 us|   52|   52|       no|
+        |grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_101  |op_data_exe_wb_Pipeline_s_operation_data_op  |       52|       52|  0.520 us|  0.520 us|   52|   52|       no|
+        |grp_op_data_exe_wb_Pipeline_l_data_a_fu_109             |op_data_exe_wb_Pipeline_l_data_a             |       61|       61|  0.610 us|  0.610 us|   61|   61|       no|
+        |grp_op_data_exe_wb_Pipeline_l_data_b_fu_118             |op_data_exe_wb_Pipeline_l_data_b             |       61|       61|  0.610 us|  0.610 us|   61|   61|       no|
         |grp_op_data_exe_wb_Pipeline_exe_fu_127                  |op_data_exe_wb_Pipeline_exe                  |       89|       89|  0.890 us|  0.890 us|   89|   89|       no|
         |grp_op_data_exe_wb_Pipeline_write_back_fu_139           |op_data_exe_wb_Pipeline_write_back           |       58|       58|  0.580 us|  0.580 us|   58|   58|       no|
         +--------------------------------------------------------+---------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
@@ -102,47 +102,47 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 0.00>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%c_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %c" [HLS/core.cpp:76->HLS/core.cpp:136->HLS/core.cpp:257]   --->   Operation 19 'read' 'c_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%op_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %op" [HLS/core.cpp:76->HLS/core.cpp:136->HLS/core.cpp:257]   --->   Operation 20 'read' 'op_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%b_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %b" [HLS/core.cpp:76->HLS/core.cpp:136->HLS/core.cpp:257]   --->   Operation 21 'read' 'b_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%a_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %a" [HLS/core.cpp:76->HLS/core.cpp:136->HLS/core.cpp:257]   --->   Operation 22 'read' 'a_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%c_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %c" [HLS/core.cpp:68->HLS/core.cpp:91->HLS/core.cpp:205]   --->   Operation 19 'read' 'c_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%op_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %op" [HLS/core.cpp:68->HLS/core.cpp:91->HLS/core.cpp:205]   --->   Operation 20 'read' 'op_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%b_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %b" [HLS/core.cpp:68->HLS/core.cpp:91->HLS/core.cpp:205]   --->   Operation 21 'read' 'b_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%a_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %a" [HLS/core.cpp:68->HLS/core.cpp:91->HLS/core.cpp:205]   --->   Operation 22 'read' 'a_read' <Predicate = true> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 3.52>
 ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 23 'wait' 'empty' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 24 [2/2] (3.52ns)   --->   "%call_ln76 = call void @op_data_exe_wb_Pipeline_l_operation, i64 %op_read, i32 %gmem3, i32 %ALU_operation" [HLS/core.cpp:76->HLS/core.cpp:136->HLS/core.cpp:257]   --->   Operation 24 'call' 'call_ln76' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 24 [2/2] (3.52ns)   --->   "%call_ln68 = call void @op_data_exe_wb_Pipeline_l_operation, i64 %op_read, i32 %gmem3, i32 %ALU_operation" [HLS/core.cpp:68->HLS/core.cpp:91->HLS/core.cpp:205]   --->   Operation 24 'call' 'call_ln68' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 25 [1/2] (0.00ns)   --->   "%call_ln76 = call void @op_data_exe_wb_Pipeline_l_operation, i64 %op_read, i32 %gmem3, i32 %ALU_operation" [HLS/core.cpp:76->HLS/core.cpp:136->HLS/core.cpp:257]   --->   Operation 25 'call' 'call_ln76' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 25 [1/2] (0.00ns)   --->   "%call_ln68 = call void @op_data_exe_wb_Pipeline_l_operation, i64 %op_read, i32 %gmem3, i32 %ALU_operation" [HLS/core.cpp:68->HLS/core.cpp:91->HLS/core.cpp:205]   --->   Operation 25 'call' 'call_ln68' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 0.00>
 ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%empty_37 = wait i32 @_ssdm_op_Wait"   --->   Operation 26 'wait' 'empty_37' <Predicate = true> <Delay = 0.00>
 
-State 5 <SV = 4> <Delay = 3.52>
+State 5 <SV = 4> <Delay = 0.00>
 ST_5 : Operation 27 [1/1] (0.00ns)   --->   "%empty_38 = wait i32 @_ssdm_op_Wait"   --->   Operation 27 'wait' 'empty_38' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 28 [2/2] (3.52ns)   --->   "%call_ln76 = call void @op_data_exe_wb_Pipeline_l_data_a, i64 %a_read, i32 %gmem0, i32 %data_a" [HLS/core.cpp:76->HLS/core.cpp:136->HLS/core.cpp:257]   --->   Operation 28 'call' 'call_ln76' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 28 [2/2] (0.00ns)   --->   "%call_ln0 = call void @op_data_exe_wb_Pipeline_s_operation_data_op, i32 %ALU_operation_MEM, i32 %ALU_operation"   --->   Operation 28 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 6 <SV = 5> <Delay = 0.00>
-ST_6 : Operation 29 [1/2] (0.00ns)   --->   "%call_ln76 = call void @op_data_exe_wb_Pipeline_l_data_a, i64 %a_read, i32 %gmem0, i32 %data_a" [HLS/core.cpp:76->HLS/core.cpp:136->HLS/core.cpp:257]   --->   Operation 29 'call' 'call_ln76' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 29 [1/2] (0.00ns)   --->   "%call_ln0 = call void @op_data_exe_wb_Pipeline_s_operation_data_op, i32 %ALU_operation_MEM, i32 %ALU_operation"   --->   Operation 29 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 7 <SV = 6> <Delay = 0.00>
 ST_7 : Operation 30 [1/1] (0.00ns)   --->   "%empty_39 = wait i32 @_ssdm_op_Wait"   --->   Operation 30 'wait' 'empty_39' <Predicate = true> <Delay = 0.00>
 
 State 8 <SV = 7> <Delay = 3.52>
 ST_8 : Operation 31 [1/1] (0.00ns)   --->   "%empty_40 = wait i32 @_ssdm_op_Wait"   --->   Operation 31 'wait' 'empty_40' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 32 [2/2] (3.52ns)   --->   "%call_ln76 = call void @op_data_exe_wb_Pipeline_l_data_b, i64 %b_read, i32 %gmem1, i32 %data_b" [HLS/core.cpp:76->HLS/core.cpp:136->HLS/core.cpp:257]   --->   Operation 32 'call' 'call_ln76' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 32 [2/2] (3.52ns)   --->   "%call_ln68 = call void @op_data_exe_wb_Pipeline_l_data_a, i64 %a_read, i32 %gmem0, i32 %data_a" [HLS/core.cpp:68->HLS/core.cpp:91->HLS/core.cpp:205]   --->   Operation 32 'call' 'call_ln68' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 9 <SV = 8> <Delay = 0.00>
-ST_9 : Operation 33 [1/2] (0.00ns)   --->   "%call_ln76 = call void @op_data_exe_wb_Pipeline_l_data_b, i64 %b_read, i32 %gmem1, i32 %data_b" [HLS/core.cpp:76->HLS/core.cpp:136->HLS/core.cpp:257]   --->   Operation 33 'call' 'call_ln76' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 33 [1/2] (0.00ns)   --->   "%call_ln68 = call void @op_data_exe_wb_Pipeline_l_data_a, i64 %a_read, i32 %gmem0, i32 %data_a" [HLS/core.cpp:68->HLS/core.cpp:91->HLS/core.cpp:205]   --->   Operation 33 'call' 'call_ln68' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 10 <SV = 9> <Delay = 0.00>
 ST_10 : Operation 34 [1/1] (0.00ns)   --->   "%empty_41 = wait i32 @_ssdm_op_Wait"   --->   Operation 34 'wait' 'empty_41' <Predicate = true> <Delay = 0.00>
 
-State 11 <SV = 10> <Delay = 0.00>
+State 11 <SV = 10> <Delay = 3.52>
 ST_11 : Operation 35 [1/1] (0.00ns)   --->   "%empty_42 = wait i32 @_ssdm_op_Wait"   --->   Operation 35 'wait' 'empty_42' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 36 [2/2] (0.00ns)   --->   "%call_ln0 = call void @op_data_exe_wb_Pipeline_s_operation_data_op, i32 %ALU_operation_MEM, i32 %ALU_operation"   --->   Operation 36 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 36 [2/2] (3.52ns)   --->   "%call_ln68 = call void @op_data_exe_wb_Pipeline_l_data_b, i64 %b_read, i32 %gmem1, i32 %data_b" [HLS/core.cpp:68->HLS/core.cpp:91->HLS/core.cpp:205]   --->   Operation 36 'call' 'call_ln68' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 12 <SV = 11> <Delay = 0.00>
-ST_12 : Operation 37 [1/2] (0.00ns)   --->   "%call_ln0 = call void @op_data_exe_wb_Pipeline_s_operation_data_op, i32 %ALU_operation_MEM, i32 %ALU_operation"   --->   Operation 37 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 37 [1/2] (0.00ns)   --->   "%call_ln68 = call void @op_data_exe_wb_Pipeline_l_data_b, i64 %b_read, i32 %gmem1, i32 %data_b" [HLS/core.cpp:68->HLS/core.cpp:91->HLS/core.cpp:205]   --->   Operation 37 'call' 'call_ln68' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 13 <SV = 12> <Delay = 0.00>
 ST_13 : Operation 38 [1/1] (0.00ns)   --->   "%empty_43 = wait i32 @_ssdm_op_Wait"   --->   Operation 38 'wait' 'empty_43' <Predicate = true> <Delay = 0.00>
@@ -159,7 +159,7 @@ ST_16 : Operation 42 [1/1] (0.00ns)   --->   "%empty_45 = wait i32 @_ssdm_op_Wai
 
 State 17 <SV = 16> <Delay = 3.52>
 ST_17 : Operation 43 [1/1] (0.00ns)   --->   "%empty_46 = wait i32 @_ssdm_op_Wait"   --->   Operation 43 'wait' 'empty_46' <Predicate = true> <Delay = 0.00>
-ST_17 : Operation 44 [2/2] (3.52ns)   --->   "%call_ln76 = call void @op_data_exe_wb_Pipeline_write_back, i64 %c_read, i32 %gmem2, i32 %data_result" [HLS/core.cpp:76->HLS/core.cpp:136->HLS/core.cpp:257]   --->   Operation 44 'call' 'call_ln76' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_17 : Operation 44 [2/2] (3.52ns)   --->   "%call_ln68 = call void @op_data_exe_wb_Pipeline_write_back, i64 %c_read, i32 %gmem2, i32 %data_result" [HLS/core.cpp:68->HLS/core.cpp:91->HLS/core.cpp:205]   --->   Operation 44 'call' 'call_ln68' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 18 <SV = 17> <Delay = 0.00>
 ST_18 : Operation 45 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ALU_operation, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 45 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
@@ -182,7 +182,7 @@ ST_18 : Operation 61 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface
 ST_18 : Operation 62 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem2, void @empty_19, i32 0, i32 0, void @empty_20, i32 0, i32 50, void @empty_24, void @empty_22, void @empty_20, i32 16, i32 16, i32 16, i32 16, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 62 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_18 : Operation 63 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem1, void @empty_19, i32 0, i32 0, void @empty_20, i32 0, i32 50, void @empty_23, void @empty_22, void @empty_20, i32 16, i32 16, i32 16, i32 16, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 63 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_18 : Operation 64 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem0, void @empty_19, i32 0, i32 0, void @empty_20, i32 0, i32 50, void @empty_21, void @empty_22, void @empty_20, i32 16, i32 16, i32 16, i32 16, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 64 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_18 : Operation 65 [1/2] (0.00ns)   --->   "%call_ln76 = call void @op_data_exe_wb_Pipeline_write_back, i64 %c_read, i32 %gmem2, i32 %data_result" [HLS/core.cpp:76->HLS/core.cpp:136->HLS/core.cpp:257]   --->   Operation 65 'call' 'call_ln76' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_18 : Operation 65 [1/2] (0.00ns)   --->   "%call_ln68 = call void @op_data_exe_wb_Pipeline_write_back, i64 %c_read, i32 %gmem2, i32 %data_result" [HLS/core.cpp:68->HLS/core.cpp:91->HLS/core.cpp:205]   --->   Operation 65 'call' 'call_ln68' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_18 : Operation 66 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 66 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
 
 
@@ -218,19 +218,19 @@ Port [ data_result]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1
 <method=bitvector/>
 c_read            (read         ) [ 0011111111111111111]
 op_read           (read         ) [ 0011000000000000000]
-b_read            (read         ) [ 0011111111000000000]
-a_read            (read         ) [ 0011111000000000000]
+b_read            (read         ) [ 0011111111111000000]
+a_read            (read         ) [ 0011111111000000000]
 empty             (wait         ) [ 0000000000000000000]
-call_ln76         (call         ) [ 0000000000000000000]
+call_ln68         (call         ) [ 0000000000000000000]
 empty_37          (wait         ) [ 0000000000000000000]
 empty_38          (wait         ) [ 0000000000000000000]
-call_ln76         (call         ) [ 0000000000000000000]
+call_ln0          (call         ) [ 0000000000000000000]
 empty_39          (wait         ) [ 0000000000000000000]
 empty_40          (wait         ) [ 0000000000000000000]
-call_ln76         (call         ) [ 0000000000000000000]
+call_ln68         (call         ) [ 0000000000000000000]
 empty_41          (wait         ) [ 0000000000000000000]
 empty_42          (wait         ) [ 0000000000000000000]
-call_ln0          (call         ) [ 0000000000000000000]
+call_ln68         (call         ) [ 0000000000000000000]
 empty_43          (wait         ) [ 0000000000000000000]
 empty_44          (wait         ) [ 0000000000000000000]
 call_ln0          (call         ) [ 0000000000000000000]
@@ -256,7 +256,7 @@ specinterface_ln0 (specinterface) [ 0000000000000000000]
 specinterface_ln0 (specinterface) [ 0000000000000000000]
 specinterface_ln0 (specinterface) [ 0000000000000000000]
 specinterface_ln0 (specinterface) [ 0000000000000000000]
-call_ln76         (call         ) [ 0000000000000000000]
+call_ln68         (call         ) [ 0000000000000000000]
 ret_ln0           (ret          ) [ 0000000000000000000]
 </LifeTime>
 
@@ -413,7 +413,7 @@ ret_ln0           (ret          ) [ 0000000000000000000]
 <pin id="33" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="op_data_exe_wb_Pipeline_l_data_a"/></StgValue>
+<StgValue><ssdm name="op_data_exe_wb_Pipeline_s_operation_data_op"/></StgValue>
 </bind>
 </comp>
 
@@ -422,7 +422,7 @@ ret_ln0           (ret          ) [ 0000000000000000000]
 <pin id="35" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="op_data_exe_wb_Pipeline_l_data_b"/></StgValue>
+<StgValue><ssdm name="op_data_exe_wb_Pipeline_l_data_a"/></StgValue>
 </bind>
 </comp>
 
@@ -431,7 +431,7 @@ ret_ln0           (ret          ) [ 0000000000000000000]
 <pin id="37" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="op_data_exe_wb_Pipeline_s_operation_data_op"/></StgValue>
+<StgValue><ssdm name="op_data_exe_wb_Pipeline_l_data_b"/></StgValue>
 </bind>
 </comp>
 
@@ -598,7 +598,7 @@ ret_ln0           (ret          ) [ 0000000000000000000]
 <pin_list>
 <pin id="81" dir="0" index="0" bw="64" slack="0"/>
 <pin id="82" dir="0" index="1" bw="64" slack="0"/>
-<pin id="83" dir="1" index="2" bw="64" slack="7"/>
+<pin id="83" dir="1" index="2" bw="64" slack="10"/>
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
@@ -610,7 +610,7 @@ ret_ln0           (ret          ) [ 0000000000000000000]
 <pin_list>
 <pin id="87" dir="0" index="0" bw="64" slack="0"/>
 <pin id="88" dir="0" index="1" bw="64" slack="0"/>
-<pin id="89" dir="1" index="2" bw="64" slack="4"/>
+<pin id="89" dir="1" index="2" bw="64" slack="7"/>
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
@@ -628,48 +628,48 @@ ret_ln0           (ret          ) [ 0000000000000000000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln76/2 "/>
+<opset="call_ln68/2 "/>
 </bind>
 </comp>
 
-<comp id="101" class="1004" name="grp_op_data_exe_wb_Pipeline_l_data_a_fu_101">
+<comp id="101" class="1004" name="grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_101">
 <pin_list>
 <pin id="102" dir="0" index="0" bw="0" slack="0"/>
-<pin id="103" dir="0" index="1" bw="64" slack="4"/>
+<pin id="103" dir="0" index="1" bw="32" slack="0"/>
 <pin id="104" dir="0" index="2" bw="32" slack="0"/>
-<pin id="105" dir="0" index="3" bw="32" slack="0"/>
-<pin id="106" dir="1" index="4" bw="0" slack="2147483647"/>
+<pin id="105" dir="1" index="3" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln76/5 "/>
+<opset="call_ln0/5 "/>
 </bind>
 </comp>
 
-<comp id="110" class="1004" name="grp_op_data_exe_wb_Pipeline_l_data_b_fu_110">
+<comp id="109" class="1004" name="grp_op_data_exe_wb_Pipeline_l_data_a_fu_109">
 <pin_list>
-<pin id="111" dir="0" index="0" bw="0" slack="0"/>
-<pin id="112" dir="0" index="1" bw="64" slack="7"/>
-<pin id="113" dir="0" index="2" bw="32" slack="0"/>
-<pin id="114" dir="0" index="3" bw="32" slack="0"/>
-<pin id="115" dir="1" index="4" bw="0" slack="2147483647"/>
+<pin id="110" dir="0" index="0" bw="0" slack="0"/>
+<pin id="111" dir="0" index="1" bw="64" slack="7"/>
+<pin id="112" dir="0" index="2" bw="32" slack="0"/>
+<pin id="113" dir="0" index="3" bw="32" slack="0"/>
+<pin id="114" dir="1" index="4" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln76/8 "/>
+<opset="call_ln68/8 "/>
 </bind>
 </comp>
 
-<comp id="119" class="1004" name="grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_119">
+<comp id="118" class="1004" name="grp_op_data_exe_wb_Pipeline_l_data_b_fu_118">
 <pin_list>
-<pin id="120" dir="0" index="0" bw="0" slack="0"/>
-<pin id="121" dir="0" index="1" bw="32" slack="0"/>
-<pin id="122" dir="0" index="2" bw="32" slack="0"/>
-<pin id="123" dir="1" index="3" bw="0" slack="2147483647"/>
+<pin id="119" dir="0" index="0" bw="0" slack="0"/>
+<pin id="120" dir="0" index="1" bw="64" slack="10"/>
+<pin id="121" dir="0" index="2" bw="32" slack="0"/>
+<pin id="122" dir="0" index="3" bw="32" slack="0"/>
+<pin id="123" dir="1" index="4" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln0/11 "/>
+<opset="call_ln68/11 "/>
 </bind>
 </comp>
 
@@ -698,7 +698,7 @@ ret_ln0           (ret          ) [ 0000000000000000000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln76/17 "/>
+<opset="call_ln68/17 "/>
 </bind>
 </comp>
 
@@ -724,8 +724,8 @@ ret_ln0           (ret          ) [ 0000000000000000000]
 
 <comp id="158" class="1005" name="b_read_reg_158">
 <pin_list>
-<pin id="159" dir="0" index="0" bw="64" slack="7"/>
-<pin id="160" dir="1" index="1" bw="64" slack="7"/>
+<pin id="159" dir="0" index="0" bw="64" slack="10"/>
+<pin id="160" dir="1" index="1" bw="64" slack="10"/>
 </pin_list>
 <bind>
 <opset="b_read "/>
@@ -734,8 +734,8 @@ ret_ln0           (ret          ) [ 0000000000000000000]
 
 <comp id="163" class="1005" name="a_read_reg_163">
 <pin_list>
-<pin id="164" dir="0" index="0" bw="64" slack="4"/>
-<pin id="165" dir="1" index="1" bw="64" slack="4"/>
+<pin id="164" dir="0" index="0" bw="64" slack="7"/>
+<pin id="165" dir="1" index="1" bw="64" slack="7"/>
 </pin_list>
 <bind>
 <opset="a_read "/>
@@ -767,23 +767,23 @@ ret_ln0           (ret          ) [ 0000000000000000000]
 
 <net id="100"><net_src comp="18" pin="0"/><net_sink comp="92" pin=3"/></net>
 
-<net id="107"><net_src comp="32" pin="0"/><net_sink comp="101" pin=0"/></net>
+<net id="106"><net_src comp="32" pin="0"/><net_sink comp="101" pin=0"/></net>
 
-<net id="108"><net_src comp="0" pin="0"/><net_sink comp="101" pin=2"/></net>
+<net id="107"><net_src comp="16" pin="0"/><net_sink comp="101" pin=1"/></net>
 
-<net id="109"><net_src comp="20" pin="0"/><net_sink comp="101" pin=3"/></net>
+<net id="108"><net_src comp="18" pin="0"/><net_sink comp="101" pin=2"/></net>
 
-<net id="116"><net_src comp="34" pin="0"/><net_sink comp="110" pin=0"/></net>
+<net id="115"><net_src comp="34" pin="0"/><net_sink comp="109" pin=0"/></net>
 
-<net id="117"><net_src comp="4" pin="0"/><net_sink comp="110" pin=2"/></net>
+<net id="116"><net_src comp="0" pin="0"/><net_sink comp="109" pin=2"/></net>
 
-<net id="118"><net_src comp="22" pin="0"/><net_sink comp="110" pin=3"/></net>
+<net id="117"><net_src comp="20" pin="0"/><net_sink comp="109" pin=3"/></net>
 
-<net id="124"><net_src comp="36" pin="0"/><net_sink comp="119" pin=0"/></net>
+<net id="124"><net_src comp="36" pin="0"/><net_sink comp="118" pin=0"/></net>
 
-<net id="125"><net_src comp="16" pin="0"/><net_sink comp="119" pin=1"/></net>
+<net id="125"><net_src comp="4" pin="0"/><net_sink comp="118" pin=2"/></net>
 
-<net id="126"><net_src comp="18" pin="0"/><net_sink comp="119" pin=2"/></net>
+<net id="126"><net_src comp="22" pin="0"/><net_sink comp="118" pin=3"/></net>
 
 <net id="134"><net_src comp="38" pin="0"/><net_sink comp="127" pin=0"/></net>
 
@@ -811,11 +811,11 @@ ret_ln0           (ret          ) [ 0000000000000000000]
 
 <net id="161"><net_src comp="80" pin="2"/><net_sink comp="158" pin=0"/></net>
 
-<net id="162"><net_src comp="158" pin="1"/><net_sink comp="110" pin=1"/></net>
+<net id="162"><net_src comp="158" pin="1"/><net_sink comp="118" pin=1"/></net>
 
 <net id="166"><net_src comp="86" pin="2"/><net_sink comp="163" pin=0"/></net>
 
-<net id="167"><net_src comp="163" pin="1"/><net_sink comp="101" pin=1"/></net>
+<net id="167"><net_src comp="163" pin="1"/><net_sink comp="109" pin=1"/></net>
 
 </net_list>
 
@@ -825,21 +825,21 @@ ret_ln0           (ret          ) [ 0000000000000000000]
 * FSMD analyzer results:
   - Output states:
 	Port: gmem2 | {17 18 }
-	Port: ALU_operation_MEM | {11 12 }
+	Port: ALU_operation_MEM | {5 6 }
 	Port: ALU_operation | {2 3 }
-	Port: data_a | {5 6 }
-	Port: data_b | {8 9 }
+	Port: data_a | {8 9 }
+	Port: data_b | {11 12 }
 	Port: data_result | {14 15 }
  - Input state : 
-	Port: op_data_exe_wb : gmem0 | {5 6 }
+	Port: op_data_exe_wb : gmem0 | {8 9 }
 	Port: op_data_exe_wb : a | {1 }
-	Port: op_data_exe_wb : gmem1 | {8 9 }
+	Port: op_data_exe_wb : gmem1 | {11 12 }
 	Port: op_data_exe_wb : b | {1 }
 	Port: op_data_exe_wb : gmem3 | {2 3 }
 	Port: op_data_exe_wb : op | {1 }
 	Port: op_data_exe_wb : c | {1 }
 	Port: op_data_exe_wb : ALU_operation_MEM | {14 15 }
-	Port: op_data_exe_wb : ALU_operation | {11 12 }
+	Port: op_data_exe_wb : ALU_operation | {5 6 }
 	Port: op_data_exe_wb : data_a | {14 15 }
 	Port: op_data_exe_wb : data_b | {14 15 }
 	Port: op_data_exe_wb : data_result | {17 18 }
@@ -873,9 +873,9 @@ ret_ln0           (ret          ) [ 0000000000000000000]
 | Operation|                     Functional Unit                    |   DSP   |  Delay  |    FF   |   LUT   |
 |----------|--------------------------------------------------------|---------|---------|---------|---------|
 |          |      grp_op_data_exe_wb_Pipeline_l_operation_fu_92     |    0    |    0    |    71   |    99   |
-|          |       grp_op_data_exe_wb_Pipeline_l_data_a_fu_101      |    0    |    0    |    71   |    99   |
-|   call   |       grp_op_data_exe_wb_Pipeline_l_data_b_fu_110      |    0    |    0    |    71   |    99   |
-|          | grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_119 |    0    |    0    |    12   |    28   |
+|          | grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_101 |    0    |    0    |    12   |    28   |
+|   call   |       grp_op_data_exe_wb_Pipeline_l_data_a_fu_109      |    0    |    0    |    71   |    99   |
+|          |       grp_op_data_exe_wb_Pipeline_l_data_b_fu_118      |    0    |    0    |    71   |    99   |
 |          |         grp_op_data_exe_wb_Pipeline_exe_fu_127         |    3    |  4.2497 |   2689  |   2258  |
 |          |      grp_op_data_exe_wb_Pipeline_write_back_fu_139     |    0    |  1.588  |    71   |    99   |
 |----------|--------------------------------------------------------|---------|---------|---------|---------|

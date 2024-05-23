@@ -55,4 +55,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_au
 # IP: bd/design_1/ip/design_1_auto_us_3/design_1_auto_us_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_us_3 || ORIG_REF_NAME==design_1_auto_us_3} -quiet] -quiet
 
-# XDC: c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/design_1_ooc.xdc
+# XDC: c:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/design_1_ooc.xdc

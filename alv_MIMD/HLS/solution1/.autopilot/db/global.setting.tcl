@@ -2,7 +2,7 @@
 set TopModule "alv_MIMD"
 set ClockPeriod 10
 set ClockList ap_clk
-set HasVivadoClockPeriod 0
+set HasVivadoClockPeriod 1
 set CombLogicFlag 0
 set PipelineFlag 1
 set DataflowTaskPipelineFlag 1

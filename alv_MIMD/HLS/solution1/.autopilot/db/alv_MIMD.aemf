@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1716127892523">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1716277142327">
   <ports id="1" name="gmem0" type="PortType" coreId="1702129263" bitwidth="32" iftype="IfTypeFifo">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="gmem1" type="PortType" coreId="1701519394" bitwidth="32" iftype="IfTypeFifo">
+  <ports id="2" name="gmem1" type="PortType" coreId="4" bitwidth="32" iftype="IfTypeFifo">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="3" name="gmem2" type="PortType" coreId="0" bitwidth="32" direction="DirOut" iftype="IfTypeFifo">
+  <ports id="3" name="gmem2" type="PortType" coreId="1143094631" bitwidth="32" direction="DirOut" iftype="IfTypeFifo">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="4" name="gmem3" type="PortType" coreId="0" bitwidth="32" iftype="IfTypeFifo">
+  <ports id="4" name="gmem3" type="PortType" coreId="225" bitwidth="32" iftype="IfTypeFifo">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="5" name="a" type="PortType" originalName="a" coreId="1702129263" bitwidth="64">
+  <ports id="5" name="a" type="PortType" originalName="a" coreId="1970037110" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="6" name="b" type="PortType" originalName="b" coreId="0" bitwidth="64">
+  <ports id="6" name="b" type="PortType" originalName="b" coreId="9" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="7" name="c" type="PortType" originalName="c" coreId="0" bitwidth="64">
+  <ports id="7" name="c" type="PortType" originalName="c" coreId="36" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="8" name="op" type="PortType" originalName="op" coreId="1852793632" bitwidth="64">
+  <ports id="8" name="op" type="PortType" originalName="op" coreId="100" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="9" name="selec" type="PortType" originalName="selec" coreId="1617666952" bitwidth="32">
+  <ports id="9" name="selec" type="PortType" originalName="selec" coreId="0" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="51" source_obj="//@ports.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
@@ -48,33 +48,33 @@
   <edges id="76" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
   <regions anchor_node="-1" region_type="16" typeName="Dataflow" iiViolation="" id="109" RegionName="alv_MIMD">
     <basic_blocks id="48" name="alv_MIMD" type="BlockType">
-      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="selec_read" lineNumber="264" fileName="HLS/core.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="alv_MIMD" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="HLS/core.cpp" linenumber="264" fileDirectory="C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD" functionName="alv_MIMD"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="selec_read" lineNumber="213" fileName="HLS/core.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="alv_MIMD" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS/core.cpp" linenumber="213" fileDirectory="C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD" functionName="alv_MIMD"/>
         <dataInputObjs>selec</dataInputObjs>
         <dataOutputObjs>call</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="op_read" lineNumber="264" fileName="HLS/core.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="alv_MIMD" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="HLS/core.cpp" linenumber="264" fileDirectory="C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD" functionName="alv_MIMD"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="op_read" lineNumber="213" fileName="HLS/core.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="alv_MIMD" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS/core.cpp" linenumber="213" fileDirectory="C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD" functionName="alv_MIMD"/>
         <dataInputObjs>op</dataInputObjs>
         <dataOutputObjs>call</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="c_read" lineNumber="264" fileName="HLS/core.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="alv_MIMD" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="3" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="HLS/core.cpp" linenumber="264" fileDirectory="C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD" functionName="alv_MIMD"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="c_read" lineNumber="213" fileName="HLS/core.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="alv_MIMD" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS/core.cpp" linenumber="213" fileDirectory="C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD" functionName="alv_MIMD"/>
         <dataInputObjs>c</dataInputObjs>
         <dataOutputObjs>call</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="b_read" lineNumber="264" fileName="HLS/core.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="alv_MIMD" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="4" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="HLS/core.cpp" linenumber="264" fileDirectory="C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD" functionName="alv_MIMD"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="b_read" lineNumber="213" fileName="HLS/core.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="alv_MIMD" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS/core.cpp" linenumber="213" fileDirectory="C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD" functionName="alv_MIMD"/>
         <dataInputObjs>b</dataInputObjs>
         <dataOutputObjs>call</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="a_read" lineNumber="264" fileName="HLS/core.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="alv_MIMD" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="5" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="HLS/core.cpp" linenumber="264" fileDirectory="C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD" functionName="alv_MIMD"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="a_read" lineNumber="213" fileName="HLS/core.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="alv_MIMD" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS/core.cpp" linenumber="213" fileDirectory="C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD" functionName="alv_MIMD"/>
         <dataInputObjs>a</dataInputObjs>
         <dataOutputObjs>call</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="_ln264" lineNumber="264" fileName="HLS/core.cpp" fileDirectory="../." rtlName="Block_entry2_proc1_U0" coreId="3" contextFuncName="alv_MIMD" opcode="call" nodeLatency="1" m_display="0" m_delay="2.23" m_topoIndex="6" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="HLS/core.cpp" linenumber="264" fileDirectory="C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD" functionName="alv_MIMD"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="_ln213" lineNumber="213" fileName="HLS/core.cpp" fileDirectory="../." rtlName="Block_entry2_proc1_U0" coreId="1702258035" contextFuncName="alv_MIMD" opcode="call" nodeLatency="1" m_display="0" m_delay="2.23" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS/core.cpp" linenumber="213" fileDirectory="C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD" functionName="alv_MIMD"/>
         <dataInputObjs>read</dataInputObjs>
         <dataInputObjs>gmem3</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
@@ -86,12 +86,12 @@
         <dataOutputObjs>gmem2</dataOutputObjs>
         <constName>Block_entry2_proc1</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="_ln331" lineNumber="331" fileName="HLS/core.cpp" fileDirectory="../." coreId="1617638754" contextFuncName="alv_MIMD" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="HLS/core.cpp" linenumber="331" fileDirectory="C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD" functionName="alv_MIMD"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="_ln277" lineNumber="277" fileName="HLS/core.cpp" fileDirectory="../." coreId="825368659" contextFuncName="alv_MIMD" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="HLS/core.cpp" linenumber="277" fileDirectory="C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD" functionName="alv_MIMD"/>
       </node_objs>
       <fileValidLineNumbers fileName="HLS/core.cpp">
-        <validLinenumbers>264</validLinenumbers>
-        <validLinenumbers>331</validLinenumbers>
+        <validLinenumbers>213</validLinenumbers>
+        <validLinenumbers>277</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
   </regions>

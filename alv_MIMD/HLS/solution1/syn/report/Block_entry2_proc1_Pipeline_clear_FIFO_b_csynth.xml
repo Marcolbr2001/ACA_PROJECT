@@ -46,13 +46,13 @@
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>HLS/core.cpp:23~HLS/core.cpp:325</SourceLocation>
+<SourceLocation>HLS/core.cpp:23~HLS/core.cpp:271</SourceLocation>
 <SummaryOfLoopViolations>
 <clear_FIFO_b>
 <Name>clear_FIFO_b</Name>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>HLS/core.cpp:23~HLS/core.cpp:325</SourceLocation>
+<SourceLocation>HLS/core.cpp:23~HLS/core.cpp:271</SourceLocation>
 </clear_FIFO_b>
 </SummaryOfLoopViolations>
 </SummaryOfViolations>

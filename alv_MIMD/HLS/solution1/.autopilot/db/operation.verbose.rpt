@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'operation'
 ================================================================
-* Date:           Sun May 19 16:11:31 2024
+* Date:           Tue May 21 09:39:01 2024
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        HLS
@@ -231,14 +231,14 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%op_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %op" [HLS/core.cpp:76->HLS/core.cpp:124]   --->   Operation 7 'read' 'op_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%op_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %op" [HLS/core.cpp:68->HLS/core.cpp:91]   --->   Operation 7 'read' 'op_read' <Predicate = true> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 3.52>
 ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 8 'wait' 'empty' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 9 [2/2] (3.52ns)   --->   "%call_ln76 = call void @operation_Pipeline_l_operation, i64 %op_read, i32 %gmem3, i32 %ALU_operation" [HLS/core.cpp:76->HLS/core.cpp:124]   --->   Operation 9 'call' 'call_ln76' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 9 [2/2] (3.52ns)   --->   "%call_ln68 = call void @operation_Pipeline_l_operation, i64 %op_read, i32 %gmem3, i32 %ALU_operation" [HLS/core.cpp:68->HLS/core.cpp:91]   --->   Operation 9 'call' 'call_ln68' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 10 [1/2] (0.00ns)   --->   "%call_ln76 = call void @operation_Pipeline_l_operation, i64 %op_read, i32 %gmem3, i32 %ALU_operation" [HLS/core.cpp:76->HLS/core.cpp:124]   --->   Operation 10 'call' 'call_ln76' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 10 [1/2] (0.00ns)   --->   "%call_ln68 = call void @operation_Pipeline_l_operation, i64 %op_read, i32 %gmem3, i32 %ALU_operation" [HLS/core.cpp:68->HLS/core.cpp:91]   --->   Operation 10 'call' 'call_ln68' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 0.00>
 ST_4 : Operation 11 [1/1] (0.00ns)   --->   "%empty_35 = wait i32 @_ssdm_op_Wait"   --->   Operation 11 'wait' 'empty_35' <Predicate = true> <Delay = 0.00>
@@ -280,7 +280,7 @@ Port [ ALU_operation]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static
 <method=bitvector/>
 op_read           (read         ) [ 0011000]
 empty             (wait         ) [ 0000000]
-call_ln76         (call         ) [ 0000000]
+call_ln68         (call         ) [ 0000000]
 empty_35          (wait         ) [ 0000000]
 empty_36          (wait         ) [ 0000000]
 specinterface_ln0 (specinterface) [ 0000000]
@@ -480,7 +480,7 @@ ret_ln0           (ret          ) [ 0000000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln76/2 "/>
+<opset="call_ln68/2 "/>
 </bind>
 </comp>
 

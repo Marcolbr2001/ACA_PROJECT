@@ -4,7 +4,7 @@ Implementation tool: Xilinx Vivado v.2023.2
 Project:             HLS
 Solution:            solution1
 Device target:       xc7z020-clg400-1
-Report date:         Sun May 19 16:20:56 +0200 2024
+Report date:         Tue May 21 09:43:32 +0200 2024
 
 #=== Post-Synthesis Resource usage ===
 SLICE:            0

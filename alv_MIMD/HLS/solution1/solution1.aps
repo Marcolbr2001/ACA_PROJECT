@@ -24,11 +24,14 @@
     <clock default="false" name="default" period="10"/>
   </clockList>
   <config>
-            
+                
+    
     <config_cosim rtl="vhdl" tool="xsim"/>
+                
+    
+    <config_export display_name="alv_MIMD" flow="syn" format="ip_catalog" output="C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/ip_repo" rtl="verilog" vivado_clock="10"/>
             
-    <config_export display_name="alv_MIMD" flow="syn" format="ip_catalog" output="C:/Users/lotto/Desktop" rtl="verilog" vivado_clock="10"/>
-        
+  
   </config>
   <UIConfigurations>
     <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
@@ -61,7 +64,7 @@
       </RTLs>
     </UIAutoSimConf>
   </UIConfigurations>
-  <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="C:/Users/lotto/Desktop" rtl="verilog" rtlButton="true" rtlCombo="verilog">
+  <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/ip_repo" rtl="verilog" rtlButton="true" rtlCombo="verilog">
     <Format formatName="ip_catalog"/>
     <Format formatName="sysgen"/>
     <Format formatName="sysgen_ise"/>

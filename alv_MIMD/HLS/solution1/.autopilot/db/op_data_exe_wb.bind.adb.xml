@@ -199,10 +199,10 @@ entry:24 %empty = wait i32 @_ssdm_op_Wait
 
 <Node id="39" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="32" op_3_bw="32" op_4_bw="0">
 <![CDATA[
-entry:25 %call_ln76 = call void @op_data_exe_wb_Pipeline_l_operation, i64 %op_read, i32 %gmem3, i32 %ALU_operation
+entry:25 %call_ln68 = call void @op_data_exe_wb_Pipeline_l_operation, i64 %op_read, i32 %gmem3, i32 %ALU_operation
 
 ]]></Node>
-<StgValue><ssdm name="call_ln76"/></StgValue>
+<StgValue><ssdm name="call_ln68"/></StgValue>
 </operation>
 </state>
 
@@ -217,10 +217,10 @@ entry:25 %call_ln76 = call void @op_data_exe_wb_Pipeline_l_operation, i64 %op_re
 
 <Node id="39" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="32" op_3_bw="32" op_4_bw="0">
 <![CDATA[
-entry:25 %call_ln76 = call void @op_data_exe_wb_Pipeline_l_operation, i64 %op_read, i32 %gmem3, i32 %ALU_operation
+entry:25 %call_ln68 = call void @op_data_exe_wb_Pipeline_l_operation, i64 %op_read, i32 %gmem3, i32 %ALU_operation
 
 ]]></Node>
-<StgValue><ssdm name="call_ln76"/></StgValue>
+<StgValue><ssdm name="call_ln68"/></StgValue>
 </operation>
 </state>
 
@@ -266,12 +266,12 @@ entry:27 %empty_38 = wait i32 @_ssdm_op_Wait
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="42" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="32" op_3_bw="32" op_4_bw="0">
+<Node id="42" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="0">
 <![CDATA[
-entry:28 %call_ln76 = call void @op_data_exe_wb_Pipeline_l_data_a, i64 %a_read, i32 %gmem0, i32 %data_a
+entry:28 %call_ln0 = call void @op_data_exe_wb_Pipeline_s_operation_data_op, i32 %ALU_operation_MEM, i32 %ALU_operation
 
 ]]></Node>
-<StgValue><ssdm name="call_ln76"/></StgValue>
+<StgValue><ssdm name="call_ln0"/></StgValue>
 </operation>
 </state>
 
@@ -284,12 +284,12 @@ entry:28 %call_ln76 = call void @op_data_exe_wb_Pipeline_l_data_a, i64 %a_read, 
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="42" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="32" op_3_bw="32" op_4_bw="0">
+<Node id="42" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="0">
 <![CDATA[
-entry:28 %call_ln76 = call void @op_data_exe_wb_Pipeline_l_data_a, i64 %a_read, i32 %gmem0, i32 %data_a
+entry:28 %call_ln0 = call void @op_data_exe_wb_Pipeline_s_operation_data_op, i32 %ALU_operation_MEM, i32 %ALU_operation
 
 ]]></Node>
-<StgValue><ssdm name="call_ln76"/></StgValue>
+<StgValue><ssdm name="call_ln0"/></StgValue>
 </operation>
 </state>
 
@@ -337,10 +337,10 @@ entry:30 %empty_40 = wait i32 @_ssdm_op_Wait
 
 <Node id="45" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="32" op_3_bw="32" op_4_bw="0">
 <![CDATA[
-entry:31 %call_ln76 = call void @op_data_exe_wb_Pipeline_l_data_b, i64 %b_read, i32 %gmem1, i32 %data_b
+entry:31 %call_ln68 = call void @op_data_exe_wb_Pipeline_l_data_a, i64 %a_read, i32 %gmem0, i32 %data_a
 
 ]]></Node>
-<StgValue><ssdm name="call_ln76"/></StgValue>
+<StgValue><ssdm name="call_ln68"/></StgValue>
 </operation>
 </state>
 
@@ -355,10 +355,10 @@ entry:31 %call_ln76 = call void @op_data_exe_wb_Pipeline_l_data_b, i64 %b_read, 
 
 <Node id="45" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="32" op_3_bw="32" op_4_bw="0">
 <![CDATA[
-entry:31 %call_ln76 = call void @op_data_exe_wb_Pipeline_l_data_b, i64 %b_read, i32 %gmem1, i32 %data_b
+entry:31 %call_ln68 = call void @op_data_exe_wb_Pipeline_l_data_a, i64 %a_read, i32 %gmem0, i32 %data_a
 
 ]]></Node>
-<StgValue><ssdm name="call_ln76"/></StgValue>
+<StgValue><ssdm name="call_ln68"/></StgValue>
 </operation>
 </state>
 
@@ -404,12 +404,12 @@ entry:33 %empty_42 = wait i32 @_ssdm_op_Wait
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="48" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="0">
+<Node id="48" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="32" op_3_bw="32" op_4_bw="0">
 <![CDATA[
-entry:34 %call_ln0 = call void @op_data_exe_wb_Pipeline_s_operation_data_op, i32 %ALU_operation_MEM, i32 %ALU_operation
+entry:34 %call_ln68 = call void @op_data_exe_wb_Pipeline_l_data_b, i64 %b_read, i32 %gmem1, i32 %data_b
 
 ]]></Node>
-<StgValue><ssdm name="call_ln0"/></StgValue>
+<StgValue><ssdm name="call_ln68"/></StgValue>
 </operation>
 </state>
 
@@ -422,12 +422,12 @@ entry:34 %call_ln0 = call void @op_data_exe_wb_Pipeline_s_operation_data_op, i32
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="48" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="0">
+<Node id="48" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="32" op_3_bw="32" op_4_bw="0">
 <![CDATA[
-entry:34 %call_ln0 = call void @op_data_exe_wb_Pipeline_s_operation_data_op, i32 %ALU_operation_MEM, i32 %ALU_operation
+entry:34 %call_ln68 = call void @op_data_exe_wb_Pipeline_l_data_b, i64 %b_read, i32 %gmem1, i32 %data_b
 
 ]]></Node>
-<StgValue><ssdm name="call_ln0"/></StgValue>
+<StgValue><ssdm name="call_ln68"/></StgValue>
 </operation>
 </state>
 
@@ -544,10 +544,10 @@ entry:39 %empty_46 = wait i32 @_ssdm_op_Wait
 
 <Node id="54" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="32" op_3_bw="32" op_4_bw="0" op_5_bw="0" op_6_bw="0">
 <![CDATA[
-entry:40 %call_ln76 = call void @op_data_exe_wb_Pipeline_write_back, i64 %c_read, i32 %gmem2, i32 %data_result
+entry:40 %call_ln68 = call void @op_data_exe_wb_Pipeline_write_back, i64 %c_read, i32 %gmem2, i32 %data_result
 
 ]]></Node>
-<StgValue><ssdm name="call_ln76"/></StgValue>
+<StgValue><ssdm name="call_ln68"/></StgValue>
 </operation>
 </state>
 
@@ -862,10 +862,10 @@ entry:19 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %g
 
 <Node id="54" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="32" op_3_bw="32" op_4_bw="0" op_5_bw="0" op_6_bw="0">
 <![CDATA[
-entry:40 %call_ln76 = call void @op_data_exe_wb_Pipeline_write_back, i64 %c_read, i32 %gmem2, i32 %data_result
+entry:40 %call_ln68 = call void @op_data_exe_wb_Pipeline_write_back, i64 %c_read, i32 %gmem2, i32 %data_result
 
 ]]></Node>
-<StgValue><ssdm name="call_ln76"/></StgValue>
+<StgValue><ssdm name="call_ln68"/></StgValue>
 </operation>
 
 <operation id="66" st_id="18" stage="1" lat="1">
@@ -949,77 +949,77 @@ entry:41 %ret_ln0 = ret
 </dataflow>
 <dataflow id="107" from="_ssdm_op_Wait" to="empty" fromId="106" toId="23">
 </dataflow>
-<dataflow id="109" from="op_data_exe_wb_Pipeline_l_operation" to="call_ln76" fromId="108" toId="24">
+<dataflow id="109" from="op_data_exe_wb_Pipeline_l_operation" to="call_ln68" fromId="108" toId="24">
 </dataflow>
-<dataflow id="110" from="op_read" to="call_ln76" fromId="20" toId="24">
+<dataflow id="110" from="op_read" to="call_ln68" fromId="20" toId="24">
 </dataflow>
-<dataflow id="111" from="gmem3" to="call_ln76" fromId="88" toId="24">
+<dataflow id="111" from="gmem3" to="call_ln68" fromId="88" toId="24">
 </dataflow>
-<dataflow id="112" from="ALU_operation" to="call_ln76" fromId="93" toId="24">
+<dataflow id="112" from="ALU_operation" to="call_ln68" fromId="93" toId="24">
 </dataflow>
-<dataflow id="113" from="op_data_exe_wb_Pipeline_l_operation" to="call_ln76" fromId="108" toId="25">
+<dataflow id="113" from="op_data_exe_wb_Pipeline_l_operation" to="call_ln68" fromId="108" toId="25">
 </dataflow>
-<dataflow id="114" from="op_read" to="call_ln76" fromId="20" toId="25">
+<dataflow id="114" from="op_read" to="call_ln68" fromId="20" toId="25">
 </dataflow>
-<dataflow id="115" from="gmem3" to="call_ln76" fromId="88" toId="25">
+<dataflow id="115" from="gmem3" to="call_ln68" fromId="88" toId="25">
 </dataflow>
-<dataflow id="116" from="ALU_operation" to="call_ln76" fromId="93" toId="25">
+<dataflow id="116" from="ALU_operation" to="call_ln68" fromId="93" toId="25">
 </dataflow>
 <dataflow id="117" from="_ssdm_op_Wait" to="empty_37" fromId="106" toId="26">
 </dataflow>
 <dataflow id="118" from="_ssdm_op_Wait" to="empty_38" fromId="106" toId="27">
 </dataflow>
-<dataflow id="120" from="op_data_exe_wb_Pipeline_l_data_a" to="call_ln76" fromId="119" toId="28">
+<dataflow id="120" from="op_data_exe_wb_Pipeline_s_operation_data_op" to="call_ln0" fromId="119" toId="28">
 </dataflow>
-<dataflow id="121" from="a_read" to="call_ln76" fromId="22" toId="28">
+<dataflow id="121" from="ALU_operation_MEM" to="call_ln0" fromId="92" toId="28">
 </dataflow>
-<dataflow id="122" from="gmem0" to="call_ln76" fromId="84" toId="28">
+<dataflow id="122" from="ALU_operation" to="call_ln0" fromId="93" toId="28">
 </dataflow>
-<dataflow id="123" from="data_a" to="call_ln76" fromId="94" toId="28">
+<dataflow id="123" from="op_data_exe_wb_Pipeline_s_operation_data_op" to="call_ln0" fromId="119" toId="29">
 </dataflow>
-<dataflow id="124" from="op_data_exe_wb_Pipeline_l_data_a" to="call_ln76" fromId="119" toId="29">
+<dataflow id="124" from="ALU_operation_MEM" to="call_ln0" fromId="92" toId="29">
 </dataflow>
-<dataflow id="125" from="a_read" to="call_ln76" fromId="22" toId="29">
+<dataflow id="125" from="ALU_operation" to="call_ln0" fromId="93" toId="29">
 </dataflow>
-<dataflow id="126" from="gmem0" to="call_ln76" fromId="84" toId="29">
+<dataflow id="126" from="_ssdm_op_Wait" to="empty_39" fromId="106" toId="30">
 </dataflow>
-<dataflow id="127" from="data_a" to="call_ln76" fromId="94" toId="29">
+<dataflow id="127" from="_ssdm_op_Wait" to="empty_40" fromId="106" toId="31">
 </dataflow>
-<dataflow id="128" from="_ssdm_op_Wait" to="empty_39" fromId="106" toId="30">
+<dataflow id="129" from="op_data_exe_wb_Pipeline_l_data_a" to="call_ln68" fromId="128" toId="32">
 </dataflow>
-<dataflow id="129" from="_ssdm_op_Wait" to="empty_40" fromId="106" toId="31">
+<dataflow id="130" from="a_read" to="call_ln68" fromId="22" toId="32">
 </dataflow>
-<dataflow id="131" from="op_data_exe_wb_Pipeline_l_data_b" to="call_ln76" fromId="130" toId="32">
+<dataflow id="131" from="gmem0" to="call_ln68" fromId="84" toId="32">
 </dataflow>
-<dataflow id="132" from="b_read" to="call_ln76" fromId="21" toId="32">
+<dataflow id="132" from="data_a" to="call_ln68" fromId="94" toId="32">
 </dataflow>
-<dataflow id="133" from="gmem1" to="call_ln76" fromId="86" toId="32">
+<dataflow id="133" from="op_data_exe_wb_Pipeline_l_data_a" to="call_ln68" fromId="128" toId="33">
 </dataflow>
-<dataflow id="134" from="data_b" to="call_ln76" fromId="95" toId="32">
+<dataflow id="134" from="a_read" to="call_ln68" fromId="22" toId="33">
 </dataflow>
-<dataflow id="135" from="op_data_exe_wb_Pipeline_l_data_b" to="call_ln76" fromId="130" toId="33">
+<dataflow id="135" from="gmem0" to="call_ln68" fromId="84" toId="33">
 </dataflow>
-<dataflow id="136" from="b_read" to="call_ln76" fromId="21" toId="33">
+<dataflow id="136" from="data_a" to="call_ln68" fromId="94" toId="33">
 </dataflow>
-<dataflow id="137" from="gmem1" to="call_ln76" fromId="86" toId="33">
+<dataflow id="137" from="_ssdm_op_Wait" to="empty_41" fromId="106" toId="34">
 </dataflow>
-<dataflow id="138" from="data_b" to="call_ln76" fromId="95" toId="33">
+<dataflow id="138" from="_ssdm_op_Wait" to="empty_42" fromId="106" toId="35">
 </dataflow>
-<dataflow id="139" from="_ssdm_op_Wait" to="empty_41" fromId="106" toId="34">
+<dataflow id="140" from="op_data_exe_wb_Pipeline_l_data_b" to="call_ln68" fromId="139" toId="36">
 </dataflow>
-<dataflow id="140" from="_ssdm_op_Wait" to="empty_42" fromId="106" toId="35">
+<dataflow id="141" from="b_read" to="call_ln68" fromId="21" toId="36">
 </dataflow>
-<dataflow id="142" from="op_data_exe_wb_Pipeline_s_operation_data_op" to="call_ln0" fromId="141" toId="36">
+<dataflow id="142" from="gmem1" to="call_ln68" fromId="86" toId="36">
 </dataflow>
-<dataflow id="143" from="ALU_operation_MEM" to="call_ln0" fromId="92" toId="36">
+<dataflow id="143" from="data_b" to="call_ln68" fromId="95" toId="36">
 </dataflow>
-<dataflow id="144" from="ALU_operation" to="call_ln0" fromId="93" toId="36">
+<dataflow id="144" from="op_data_exe_wb_Pipeline_l_data_b" to="call_ln68" fromId="139" toId="37">
 </dataflow>
-<dataflow id="145" from="op_data_exe_wb_Pipeline_s_operation_data_op" to="call_ln0" fromId="141" toId="37">
+<dataflow id="145" from="b_read" to="call_ln68" fromId="21" toId="37">
 </dataflow>
-<dataflow id="146" from="ALU_operation_MEM" to="call_ln0" fromId="92" toId="37">
+<dataflow id="146" from="gmem1" to="call_ln68" fromId="86" toId="37">
 </dataflow>
-<dataflow id="147" from="ALU_operation" to="call_ln0" fromId="93" toId="37">
+<dataflow id="147" from="data_b" to="call_ln68" fromId="95" toId="37">
 </dataflow>
 <dataflow id="148" from="_ssdm_op_Wait" to="empty_43" fromId="106" toId="38">
 </dataflow>
@@ -1049,13 +1049,13 @@ entry:41 %ret_ln0 = ret
 </dataflow>
 <dataflow id="162" from="_ssdm_op_Wait" to="empty_46" fromId="106" toId="43">
 </dataflow>
-<dataflow id="164" from="op_data_exe_wb_Pipeline_write_back" to="call_ln76" fromId="163" toId="44">
+<dataflow id="164" from="op_data_exe_wb_Pipeline_write_back" to="call_ln68" fromId="163" toId="44">
 </dataflow>
-<dataflow id="165" from="c_read" to="call_ln76" fromId="19" toId="44">
+<dataflow id="165" from="c_read" to="call_ln68" fromId="19" toId="44">
 </dataflow>
-<dataflow id="166" from="gmem2" to="call_ln76" fromId="90" toId="44">
+<dataflow id="166" from="gmem2" to="call_ln68" fromId="90" toId="44">
 </dataflow>
-<dataflow id="167" from="data_result" to="call_ln76" fromId="96" toId="44">
+<dataflow id="167" from="data_result" to="call_ln68" fromId="96" toId="44">
 </dataflow>
 <dataflow id="169" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="168" toId="45">
 </dataflow>
@@ -1817,13 +1817,13 @@ entry:41 %ret_ln0 = ret
 </dataflow>
 <dataflow id="560" from="StgValue_173" to="specinterface_ln0" fromId="173" toId="64">
 </dataflow>
-<dataflow id="561" from="op_data_exe_wb_Pipeline_write_back" to="call_ln76" fromId="163" toId="65">
+<dataflow id="561" from="op_data_exe_wb_Pipeline_write_back" to="call_ln68" fromId="163" toId="65">
 </dataflow>
-<dataflow id="562" from="c_read" to="call_ln76" fromId="19" toId="65">
+<dataflow id="562" from="c_read" to="call_ln68" fromId="19" toId="65">
 </dataflow>
-<dataflow id="563" from="gmem2" to="call_ln76" fromId="90" toId="65">
+<dataflow id="563" from="gmem2" to="call_ln68" fromId="90" toId="65">
 </dataflow>
-<dataflow id="564" from="data_result" to="call_ln76" fromId="96" toId="65">
+<dataflow id="564" from="data_result" to="call_ln68" fromId="96" toId="65">
 </dataflow>
 </dataflows>
 

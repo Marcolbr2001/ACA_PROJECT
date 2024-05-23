@@ -46,13 +46,13 @@
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>HLS/core.cpp:218~HLS/core.cpp:248</SourceLocation>
+<SourceLocation>HLS/core.cpp:177~HLS/core.cpp:196</SourceLocation>
 <SummaryOfLoopViolations>
 <write_back>
 <Name>write_back</Name>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>HLS/core.cpp:218~HLS/core.cpp:248</SourceLocation>
+<SourceLocation>HLS/core.cpp:177~HLS/core.cpp:196</SourceLocation>
 </write_back>
 </SummaryOfLoopViolations>
 </SummaryOfViolations>

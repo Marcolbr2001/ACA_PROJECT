@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'Block_entry2_proc1'
 ================================================================
-* Date:           Sun May 19 16:11:32 2024
+* Date:           Tue May 21 09:39:01 2024
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        HLS
@@ -490,25 +490,25 @@ ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface 
 ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem1, void @empty_19, i32 0, i32 0, void @empty_20, i32 0, i32 50, void @empty_23, void @empty_22, void @empty_20, i32 16, i32 16, i32 16, i32 16, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem0, void @empty_19, i32 0, i32 0, void @empty_20, i32 0, i32 50, void @empty_21, void @empty_22, void @empty_20, i32 16, i32 16, i32 16, i32 16, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%empty_62 = specchannel i32 @_ssdm_op_SpecChannel, void @data_result_str, i32 1, void @p_str, void @p_str, i32 50, i32 50, i32 %data_result, i32 %data_result"   --->   Operation 21 'specchannel' 'empty_62' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%c_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %c" [HLS/core.cpp:302]   --->   Operation 22 'read' 'c_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%b_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %b" [HLS/core.cpp:302]   --->   Operation 23 'read' 'b_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%a_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %a" [HLS/core.cpp:302]   --->   Operation 24 'read' 'a_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%op_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %op" [HLS/core.cpp:302]   --->   Operation 25 'read' 'op_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%selec_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %selec" [HLS/core.cpp:302]   --->   Operation 26 'read' 'selec_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 27 [1/1] (2.23ns)   --->   "%switch_ln302 = switch i32 %selec_read, void %while.cond.i.preheader, i32 0, void %sw.bb, i32 1, void %sw.bb10, i32 2, void %sw.bb12" [HLS/core.cpp:302]   --->   Operation 27 'switch' 'switch_ln302' <Predicate = true> <Delay = 2.23>
-ST_1 : Operation 28 [2/2] (0.00ns)   --->   "%call_ln319 = call void @op_data_exe_wb, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem3, i64 %op_read, i32 %gmem2, i64 %c_read, i32 %ALU_operation_MEM, i32 %ALU_operation, i32 %data_a, i32 %data_b, i32 %data_result" [HLS/core.cpp:319]   --->   Operation 28 'call' 'call_ln319' <Predicate = (selec_read == 2)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_1 : Operation 29 [2/2] (0.00ns)   --->   "%call_ln313 = call void @data_exe_wb, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem2, i64 %c_read, i32 %ALU_operation_MEM, i32 %data_a, i32 %data_b, i32 %data_result" [HLS/core.cpp:313]   --->   Operation 29 'call' 'call_ln313' <Predicate = (selec_read == 1)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_1 : Operation 30 [2/2] (0.00ns)   --->   "%call_ln307 = call void @operation, i32 %gmem3, i64 %op_read, i32 %ALU_operation_MEM, i32 %ALU_operation" [HLS/core.cpp:307]   --->   Operation 30 'call' 'call_ln307' <Predicate = (selec_read == 0)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%c_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %c" [HLS/core.cpp:248]   --->   Operation 22 'read' 'c_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%b_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %b" [HLS/core.cpp:248]   --->   Operation 23 'read' 'b_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%a_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %a" [HLS/core.cpp:248]   --->   Operation 24 'read' 'a_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%op_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %op" [HLS/core.cpp:248]   --->   Operation 25 'read' 'op_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%selec_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %selec" [HLS/core.cpp:248]   --->   Operation 26 'read' 'selec_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (2.23ns)   --->   "%switch_ln248 = switch i32 %selec_read, void %while.cond.i.preheader, i32 0, void %sw.bb, i32 1, void %sw.bb10, i32 2, void %sw.bb11" [HLS/core.cpp:248]   --->   Operation 27 'switch' 'switch_ln248' <Predicate = true> <Delay = 2.23>
+ST_1 : Operation 28 [2/2] (0.00ns)   --->   "%call_ln265 = call void @op_data_exe_wb, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem3, i64 %op_read, i32 %gmem2, i64 %c_read, i32 %ALU_operation_MEM, i32 %ALU_operation, i32 %data_a, i32 %data_b, i32 %data_result" [HLS/core.cpp:265]   --->   Operation 28 'call' 'call_ln265' <Predicate = (selec_read == 2)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 29 [2/2] (0.00ns)   --->   "%call_ln259 = call void @data_exe_wb, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem2, i64 %c_read, i32 %ALU_operation_MEM, i32 %data_a, i32 %data_b, i32 %data_result" [HLS/core.cpp:259]   --->   Operation 29 'call' 'call_ln259' <Predicate = (selec_read == 1)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 30 [2/2] (0.00ns)   --->   "%call_ln253 = call void @operation, i32 %gmem3, i64 %op_read, i32 %ALU_operation_MEM, i32 %ALU_operation" [HLS/core.cpp:253]   --->   Operation 30 'call' 'call_ln253' <Predicate = (selec_read == 0)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%empty_63 = wait i32 @_ssdm_op_Wait"   --->   Operation 31 'wait' 'empty_63' <Predicate = (selec_read != 0 & selec_read != 1 & selec_read != 2)> <Delay = 0.00>
 ST_1 : Operation 32 [2/2] (0.00ns)   --->   "%call_ln0 = call void @Block_entry2_proc1_Pipeline_clear_FIFO_a, i32 %data_a"   --->   Operation 32 'call' 'call_ln0' <Predicate = (selec_read != 0 & selec_read != 1 & selec_read != 2)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 2 <SV = 1> <Delay = 0.00>
-ST_2 : Operation 33 [1/2] (0.00ns)   --->   "%call_ln319 = call void @op_data_exe_wb, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem3, i64 %op_read, i32 %gmem2, i64 %c_read, i32 %ALU_operation_MEM, i32 %ALU_operation, i32 %data_a, i32 %data_b, i32 %data_result" [HLS/core.cpp:319]   --->   Operation 33 'call' 'call_ln319' <Predicate = (selec_read == 2)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%br_ln321 = br void %sw.epilog" [HLS/core.cpp:321]   --->   Operation 34 'br' 'br_ln321' <Predicate = (selec_read == 2)> <Delay = 0.00>
-ST_2 : Operation 35 [1/2] (0.00ns)   --->   "%call_ln313 = call void @data_exe_wb, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem2, i64 %c_read, i32 %ALU_operation_MEM, i32 %data_a, i32 %data_b, i32 %data_result" [HLS/core.cpp:313]   --->   Operation 35 'call' 'call_ln313' <Predicate = (selec_read == 1)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%br_ln315 = br void %sw.epilog" [HLS/core.cpp:315]   --->   Operation 36 'br' 'br_ln315' <Predicate = (selec_read == 1)> <Delay = 0.00>
-ST_2 : Operation 37 [1/2] (0.00ns)   --->   "%call_ln307 = call void @operation, i32 %gmem3, i64 %op_read, i32 %ALU_operation_MEM, i32 %ALU_operation" [HLS/core.cpp:307]   --->   Operation 37 'call' 'call_ln307' <Predicate = (selec_read == 0)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%br_ln309 = br void %sw.epilog" [HLS/core.cpp:309]   --->   Operation 38 'br' 'br_ln309' <Predicate = (selec_read == 0)> <Delay = 0.00>
+ST_2 : Operation 33 [1/2] (0.00ns)   --->   "%call_ln265 = call void @op_data_exe_wb, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem3, i64 %op_read, i32 %gmem2, i64 %c_read, i32 %ALU_operation_MEM, i32 %ALU_operation, i32 %data_a, i32 %data_b, i32 %data_result" [HLS/core.cpp:265]   --->   Operation 33 'call' 'call_ln265' <Predicate = (selec_read == 2)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%br_ln267 = br void %sw.epilog" [HLS/core.cpp:267]   --->   Operation 34 'br' 'br_ln267' <Predicate = (selec_read == 2)> <Delay = 0.00>
+ST_2 : Operation 35 [1/2] (0.00ns)   --->   "%call_ln259 = call void @data_exe_wb, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem2, i64 %c_read, i32 %ALU_operation_MEM, i32 %data_a, i32 %data_b, i32 %data_result" [HLS/core.cpp:259]   --->   Operation 35 'call' 'call_ln259' <Predicate = (selec_read == 1)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%br_ln261 = br void %sw.epilog" [HLS/core.cpp:261]   --->   Operation 36 'br' 'br_ln261' <Predicate = (selec_read == 1)> <Delay = 0.00>
+ST_2 : Operation 37 [1/2] (0.00ns)   --->   "%call_ln253 = call void @operation, i32 %gmem3, i64 %op_read, i32 %ALU_operation_MEM, i32 %ALU_operation" [HLS/core.cpp:253]   --->   Operation 37 'call' 'call_ln253' <Predicate = (selec_read == 0)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%br_ln255 = br void %sw.epilog" [HLS/core.cpp:255]   --->   Operation 38 'br' 'br_ln255' <Predicate = (selec_read == 0)> <Delay = 0.00>
 
 State 3 <SV = 1> <Delay = 0.00>
 ST_3 : Operation 39 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Block_entry2_proc1_Pipeline_clear_FIFO_a, i32 %data_a"   --->   Operation 39 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
@@ -586,14 +586,14 @@ b_read            (read         ) [ 0010000000]
 a_read            (read         ) [ 0010000000]
 op_read           (read         ) [ 0010000000]
 selec_read        (read         ) [ 0111111111]
-switch_ln302      (switch       ) [ 0000000000]
+switch_ln248      (switch       ) [ 0000000000]
 empty_63          (wait         ) [ 0000000000]
-call_ln319        (call         ) [ 0000000000]
-br_ln321          (br           ) [ 0000000000]
-call_ln313        (call         ) [ 0000000000]
-br_ln315          (br           ) [ 0000000000]
-call_ln307        (call         ) [ 0000000000]
-br_ln309          (br           ) [ 0000000000]
+call_ln265        (call         ) [ 0000000000]
+br_ln267          (br           ) [ 0000000000]
+call_ln259        (call         ) [ 0000000000]
+br_ln261          (br           ) [ 0000000000]
+call_ln253        (call         ) [ 0000000000]
+br_ln255          (br           ) [ 0000000000]
 call_ln0          (call         ) [ 0000000000]
 empty_64          (wait         ) [ 0000000000]
 empty_65          (wait         ) [ 0000000000]
@@ -1095,7 +1095,7 @@ ret_ln0           (ret          ) [ 0000000000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln319/1 "/>
+<opset="call_ln265/1 "/>
 </bind>
 </comp>
 
@@ -1116,7 +1116,7 @@ ret_ln0           (ret          ) [ 0000000000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln313/1 "/>
+<opset="call_ln259/1 "/>
 </bind>
 </comp>
 
@@ -1131,7 +1131,7 @@ ret_ln0           (ret          ) [ 0000000000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln307/1 "/>
+<opset="call_ln253/1 "/>
 </bind>
 </comp>
 

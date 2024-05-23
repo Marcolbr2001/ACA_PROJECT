@@ -337,10 +337,10 @@ newFuncRoot:16 %selec_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %selec
 
 <Node id="32" bw="0" op_0_bw="32" op_1_bw="0" op_2_bw="32" op_3_bw="0" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="0">
 <![CDATA[
-newFuncRoot:17 %switch_ln302 = switch i32 %selec_read, void %while.cond.i.preheader, i32 0, void %sw.bb, i32 1, void %sw.bb10, i32 2, void %sw.bb12
+newFuncRoot:17 %switch_ln248 = switch i32 %selec_read, void %while.cond.i.preheader, i32 0, void %sw.bb, i32 1, void %sw.bb10, i32 2, void %sw.bb11
 
 ]]></Node>
-<StgValue><ssdm name="switch_ln302"/></StgValue>
+<StgValue><ssdm name="switch_ln248"/></StgValue>
 </operation>
 
 <operation id="28" st_id="1" stage="2" lat="2">
@@ -353,10 +353,10 @@ newFuncRoot:17 %switch_ln302 = switch i32 %selec_read, void %while.cond.i.prehea
 
 <Node id="34" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="32" op_4_bw="64" op_5_bw="32" op_6_bw="64" op_7_bw="32" op_8_bw="64" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32">
 <![CDATA[
-sw.bb12:0 %call_ln319 = call void @op_data_exe_wb, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem3, i64 %op_read, i32 %gmem2, i64 %c_read, i32 %ALU_operation_MEM, i32 %ALU_operation, i32 %data_a, i32 %data_b, i32 %data_result
+sw.bb11:0 %call_ln265 = call void @op_data_exe_wb, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem3, i64 %op_read, i32 %gmem2, i64 %c_read, i32 %ALU_operation_MEM, i32 %ALU_operation, i32 %data_a, i32 %data_b, i32 %data_result
 
 ]]></Node>
-<StgValue><ssdm name="call_ln319"/></StgValue>
+<StgValue><ssdm name="call_ln265"/></StgValue>
 </operation>
 
 <operation id="29" st_id="1" stage="2" lat="2">
@@ -369,10 +369,10 @@ sw.bb12:0 %call_ln319 = call void @op_data_exe_wb, i32 %gmem0, i64 %a_read, i32 
 
 <Node id="37" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="32" op_4_bw="64" op_5_bw="32" op_6_bw="64" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32">
 <![CDATA[
-sw.bb10:0 %call_ln313 = call void @data_exe_wb, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem2, i64 %c_read, i32 %ALU_operation_MEM, i32 %data_a, i32 %data_b, i32 %data_result
+sw.bb10:0 %call_ln259 = call void @data_exe_wb, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem2, i64 %c_read, i32 %ALU_operation_MEM, i32 %data_a, i32 %data_b, i32 %data_result
 
 ]]></Node>
-<StgValue><ssdm name="call_ln313"/></StgValue>
+<StgValue><ssdm name="call_ln259"/></StgValue>
 </operation>
 
 <operation id="30" st_id="1" stage="2" lat="2">
@@ -385,10 +385,10 @@ sw.bb10:0 %call_ln313 = call void @data_exe_wb, i32 %gmem0, i64 %a_read, i32 %gm
 
 <Node id="40" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="32" op_4_bw="32">
 <![CDATA[
-sw.bb:0 %call_ln307 = call void @operation, i32 %gmem3, i64 %op_read, i32 %ALU_operation_MEM, i32 %ALU_operation
+sw.bb:0 %call_ln253 = call void @operation, i32 %gmem3, i64 %op_read, i32 %ALU_operation_MEM, i32 %ALU_operation
 
 ]]></Node>
-<StgValue><ssdm name="call_ln307"/></StgValue>
+<StgValue><ssdm name="call_ln253"/></StgValue>
 </operation>
 
 <operation id="31" st_id="1" stage="1" lat="1">
@@ -440,10 +440,10 @@ while.cond.i.preheader:1 %call_ln0 = call void @Block_entry2_proc1_Pipeline_clea
 
 <Node id="34" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="32" op_4_bw="64" op_5_bw="32" op_6_bw="64" op_7_bw="32" op_8_bw="64" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32">
 <![CDATA[
-sw.bb12:0 %call_ln319 = call void @op_data_exe_wb, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem3, i64 %op_read, i32 %gmem2, i64 %c_read, i32 %ALU_operation_MEM, i32 %ALU_operation, i32 %data_a, i32 %data_b, i32 %data_result
+sw.bb11:0 %call_ln265 = call void @op_data_exe_wb, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem3, i64 %op_read, i32 %gmem2, i64 %c_read, i32 %ALU_operation_MEM, i32 %ALU_operation, i32 %data_a, i32 %data_b, i32 %data_result
 
 ]]></Node>
-<StgValue><ssdm name="call_ln319"/></StgValue>
+<StgValue><ssdm name="call_ln265"/></StgValue>
 </operation>
 
 <operation id="34" st_id="2" stage="1" lat="1">
@@ -456,10 +456,10 @@ sw.bb12:0 %call_ln319 = call void @op_data_exe_wb, i32 %gmem0, i64 %a_read, i32 
 
 <Node id="35" bw="0" op_0_bw="0">
 <![CDATA[
-sw.bb12:1 %br_ln321 = br void %sw.epilog
+sw.bb11:1 %br_ln267 = br void %sw.epilog
 
 ]]></Node>
-<StgValue><ssdm name="br_ln321"/></StgValue>
+<StgValue><ssdm name="br_ln267"/></StgValue>
 </operation>
 
 <operation id="35" st_id="2" stage="1" lat="2">
@@ -472,10 +472,10 @@ sw.bb12:1 %br_ln321 = br void %sw.epilog
 
 <Node id="37" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="32" op_4_bw="64" op_5_bw="32" op_6_bw="64" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32">
 <![CDATA[
-sw.bb10:0 %call_ln313 = call void @data_exe_wb, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem2, i64 %c_read, i32 %ALU_operation_MEM, i32 %data_a, i32 %data_b, i32 %data_result
+sw.bb10:0 %call_ln259 = call void @data_exe_wb, i32 %gmem0, i64 %a_read, i32 %gmem1, i64 %b_read, i32 %gmem2, i64 %c_read, i32 %ALU_operation_MEM, i32 %data_a, i32 %data_b, i32 %data_result
 
 ]]></Node>
-<StgValue><ssdm name="call_ln313"/></StgValue>
+<StgValue><ssdm name="call_ln259"/></StgValue>
 </operation>
 
 <operation id="36" st_id="2" stage="1" lat="1">
@@ -488,10 +488,10 @@ sw.bb10:0 %call_ln313 = call void @data_exe_wb, i32 %gmem0, i64 %a_read, i32 %gm
 
 <Node id="38" bw="0" op_0_bw="0">
 <![CDATA[
-sw.bb10:1 %br_ln315 = br void %sw.epilog
+sw.bb10:1 %br_ln261 = br void %sw.epilog
 
 ]]></Node>
-<StgValue><ssdm name="br_ln315"/></StgValue>
+<StgValue><ssdm name="br_ln261"/></StgValue>
 </operation>
 
 <operation id="37" st_id="2" stage="1" lat="2">
@@ -504,10 +504,10 @@ sw.bb10:1 %br_ln315 = br void %sw.epilog
 
 <Node id="40" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="32" op_4_bw="32">
 <![CDATA[
-sw.bb:0 %call_ln307 = call void @operation, i32 %gmem3, i64 %op_read, i32 %ALU_operation_MEM, i32 %ALU_operation
+sw.bb:0 %call_ln253 = call void @operation, i32 %gmem3, i64 %op_read, i32 %ALU_operation_MEM, i32 %ALU_operation
 
 ]]></Node>
-<StgValue><ssdm name="call_ln307"/></StgValue>
+<StgValue><ssdm name="call_ln253"/></StgValue>
 </operation>
 
 <operation id="38" st_id="2" stage="1" lat="1">
@@ -520,10 +520,10 @@ sw.bb:0 %call_ln307 = call void @operation, i32 %gmem3, i64 %op_read, i32 %ALU_o
 
 <Node id="41" bw="0" op_0_bw="0">
 <![CDATA[
-sw.bb:1 %br_ln309 = br void %sw.epilog
+sw.bb:1 %br_ln255 = br void %sw.epilog
 
 ]]></Node>
-<StgValue><ssdm name="br_ln309"/></StgValue>
+<StgValue><ssdm name="br_ln255"/></StgValue>
 </operation>
 </state>
 
@@ -1198,73 +1198,73 @@ sw.epilog:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="300" from="selec" to="selec_read" fromId="67" toId="26">
 </dataflow>
-<dataflow id="301" from="selec_read" to="switch_ln302" fromId="26" toId="27">
+<dataflow id="301" from="selec_read" to="switch_ln248" fromId="26" toId="27">
 </dataflow>
-<dataflow id="302" from="StgValue_120" to="switch_ln302" fromId="120" toId="27">
+<dataflow id="302" from="StgValue_120" to="switch_ln248" fromId="120" toId="27">
 </dataflow>
-<dataflow id="303" from="StgValue_85" to="switch_ln302" fromId="85" toId="27">
+<dataflow id="303" from="StgValue_85" to="switch_ln248" fromId="85" toId="27">
 </dataflow>
-<dataflow id="305" from="StgValue_304" to="switch_ln302" fromId="304" toId="27">
+<dataflow id="305" from="StgValue_304" to="switch_ln248" fromId="304" toId="27">
 </dataflow>
-<dataflow id="307" from="op_data_exe_wb" to="call_ln319" fromId="306" toId="28">
+<dataflow id="307" from="op_data_exe_wb" to="call_ln265" fromId="306" toId="28">
 </dataflow>
-<dataflow id="308" from="gmem0" to="call_ln319" fromId="70" toId="28">
+<dataflow id="308" from="gmem0" to="call_ln265" fromId="70" toId="28">
 </dataflow>
-<dataflow id="309" from="a_read" to="call_ln319" fromId="24" toId="28">
+<dataflow id="309" from="a_read" to="call_ln265" fromId="24" toId="28">
 </dataflow>
-<dataflow id="310" from="gmem1" to="call_ln319" fromId="72" toId="28">
+<dataflow id="310" from="gmem1" to="call_ln265" fromId="72" toId="28">
 </dataflow>
-<dataflow id="311" from="b_read" to="call_ln319" fromId="23" toId="28">
+<dataflow id="311" from="b_read" to="call_ln265" fromId="23" toId="28">
 </dataflow>
-<dataflow id="312" from="gmem3" to="call_ln319" fromId="68" toId="28">
+<dataflow id="312" from="gmem3" to="call_ln265" fromId="68" toId="28">
 </dataflow>
-<dataflow id="313" from="op_read" to="call_ln319" fromId="25" toId="28">
+<dataflow id="313" from="op_read" to="call_ln265" fromId="25" toId="28">
 </dataflow>
-<dataflow id="314" from="gmem2" to="call_ln319" fromId="74" toId="28">
+<dataflow id="314" from="gmem2" to="call_ln265" fromId="74" toId="28">
 </dataflow>
-<dataflow id="315" from="c_read" to="call_ln319" fromId="22" toId="28">
+<dataflow id="315" from="c_read" to="call_ln265" fromId="22" toId="28">
 </dataflow>
-<dataflow id="316" from="ALU_operation_MEM" to="call_ln319" fromId="79" toId="28">
+<dataflow id="316" from="ALU_operation_MEM" to="call_ln265" fromId="79" toId="28">
 </dataflow>
-<dataflow id="317" from="ALU_operation" to="call_ln319" fromId="78" toId="28">
+<dataflow id="317" from="ALU_operation" to="call_ln265" fromId="78" toId="28">
 </dataflow>
-<dataflow id="318" from="data_a" to="call_ln319" fromId="76" toId="28">
+<dataflow id="318" from="data_a" to="call_ln265" fromId="76" toId="28">
 </dataflow>
-<dataflow id="319" from="data_b" to="call_ln319" fromId="77" toId="28">
+<dataflow id="319" from="data_b" to="call_ln265" fromId="77" toId="28">
 </dataflow>
-<dataflow id="320" from="data_result" to="call_ln319" fromId="80" toId="28">
+<dataflow id="320" from="data_result" to="call_ln265" fromId="80" toId="28">
 </dataflow>
-<dataflow id="322" from="data_exe_wb" to="call_ln313" fromId="321" toId="29">
+<dataflow id="322" from="data_exe_wb" to="call_ln259" fromId="321" toId="29">
 </dataflow>
-<dataflow id="323" from="gmem0" to="call_ln313" fromId="70" toId="29">
+<dataflow id="323" from="gmem0" to="call_ln259" fromId="70" toId="29">
 </dataflow>
-<dataflow id="324" from="a_read" to="call_ln313" fromId="24" toId="29">
+<dataflow id="324" from="a_read" to="call_ln259" fromId="24" toId="29">
 </dataflow>
-<dataflow id="325" from="gmem1" to="call_ln313" fromId="72" toId="29">
+<dataflow id="325" from="gmem1" to="call_ln259" fromId="72" toId="29">
 </dataflow>
-<dataflow id="326" from="b_read" to="call_ln313" fromId="23" toId="29">
+<dataflow id="326" from="b_read" to="call_ln259" fromId="23" toId="29">
 </dataflow>
-<dataflow id="327" from="gmem2" to="call_ln313" fromId="74" toId="29">
+<dataflow id="327" from="gmem2" to="call_ln259" fromId="74" toId="29">
 </dataflow>
-<dataflow id="328" from="c_read" to="call_ln313" fromId="22" toId="29">
+<dataflow id="328" from="c_read" to="call_ln259" fromId="22" toId="29">
 </dataflow>
-<dataflow id="329" from="ALU_operation_MEM" to="call_ln313" fromId="79" toId="29">
+<dataflow id="329" from="ALU_operation_MEM" to="call_ln259" fromId="79" toId="29">
 </dataflow>
-<dataflow id="330" from="data_a" to="call_ln313" fromId="76" toId="29">
+<dataflow id="330" from="data_a" to="call_ln259" fromId="76" toId="29">
 </dataflow>
-<dataflow id="331" from="data_b" to="call_ln313" fromId="77" toId="29">
+<dataflow id="331" from="data_b" to="call_ln259" fromId="77" toId="29">
 </dataflow>
-<dataflow id="332" from="data_result" to="call_ln313" fromId="80" toId="29">
+<dataflow id="332" from="data_result" to="call_ln259" fromId="80" toId="29">
 </dataflow>
-<dataflow id="334" from="operation" to="call_ln307" fromId="333" toId="30">
+<dataflow id="334" from="operation" to="call_ln253" fromId="333" toId="30">
 </dataflow>
-<dataflow id="335" from="gmem3" to="call_ln307" fromId="68" toId="30">
+<dataflow id="335" from="gmem3" to="call_ln253" fromId="68" toId="30">
 </dataflow>
-<dataflow id="336" from="op_read" to="call_ln307" fromId="25" toId="30">
+<dataflow id="336" from="op_read" to="call_ln253" fromId="25" toId="30">
 </dataflow>
-<dataflow id="337" from="ALU_operation_MEM" to="call_ln307" fromId="79" toId="30">
+<dataflow id="337" from="ALU_operation_MEM" to="call_ln253" fromId="79" toId="30">
 </dataflow>
-<dataflow id="338" from="ALU_operation" to="call_ln307" fromId="78" toId="30">
+<dataflow id="338" from="ALU_operation" to="call_ln253" fromId="78" toId="30">
 </dataflow>
 <dataflow id="340" from="_ssdm_op_Wait" to="empty_63" fromId="339" toId="31">
 </dataflow>
@@ -1272,65 +1272,65 @@ sw.epilog:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="343" from="data_a" to="call_ln0" fromId="76" toId="32">
 </dataflow>
-<dataflow id="344" from="op_data_exe_wb" to="call_ln319" fromId="306" toId="33">
+<dataflow id="344" from="op_data_exe_wb" to="call_ln265" fromId="306" toId="33">
 </dataflow>
-<dataflow id="345" from="gmem0" to="call_ln319" fromId="70" toId="33">
+<dataflow id="345" from="gmem0" to="call_ln265" fromId="70" toId="33">
 </dataflow>
-<dataflow id="346" from="a_read" to="call_ln319" fromId="24" toId="33">
+<dataflow id="346" from="a_read" to="call_ln265" fromId="24" toId="33">
 </dataflow>
-<dataflow id="347" from="gmem1" to="call_ln319" fromId="72" toId="33">
+<dataflow id="347" from="gmem1" to="call_ln265" fromId="72" toId="33">
 </dataflow>
-<dataflow id="348" from="b_read" to="call_ln319" fromId="23" toId="33">
+<dataflow id="348" from="b_read" to="call_ln265" fromId="23" toId="33">
 </dataflow>
-<dataflow id="349" from="gmem3" to="call_ln319" fromId="68" toId="33">
+<dataflow id="349" from="gmem3" to="call_ln265" fromId="68" toId="33">
 </dataflow>
-<dataflow id="350" from="op_read" to="call_ln319" fromId="25" toId="33">
+<dataflow id="350" from="op_read" to="call_ln265" fromId="25" toId="33">
 </dataflow>
-<dataflow id="351" from="gmem2" to="call_ln319" fromId="74" toId="33">
+<dataflow id="351" from="gmem2" to="call_ln265" fromId="74" toId="33">
 </dataflow>
-<dataflow id="352" from="c_read" to="call_ln319" fromId="22" toId="33">
+<dataflow id="352" from="c_read" to="call_ln265" fromId="22" toId="33">
 </dataflow>
-<dataflow id="353" from="ALU_operation_MEM" to="call_ln319" fromId="79" toId="33">
+<dataflow id="353" from="ALU_operation_MEM" to="call_ln265" fromId="79" toId="33">
 </dataflow>
-<dataflow id="354" from="ALU_operation" to="call_ln319" fromId="78" toId="33">
+<dataflow id="354" from="ALU_operation" to="call_ln265" fromId="78" toId="33">
 </dataflow>
-<dataflow id="355" from="data_a" to="call_ln319" fromId="76" toId="33">
+<dataflow id="355" from="data_a" to="call_ln265" fromId="76" toId="33">
 </dataflow>
-<dataflow id="356" from="data_b" to="call_ln319" fromId="77" toId="33">
+<dataflow id="356" from="data_b" to="call_ln265" fromId="77" toId="33">
 </dataflow>
-<dataflow id="357" from="data_result" to="call_ln319" fromId="80" toId="33">
+<dataflow id="357" from="data_result" to="call_ln265" fromId="80" toId="33">
 </dataflow>
-<dataflow id="358" from="data_exe_wb" to="call_ln313" fromId="321" toId="35">
+<dataflow id="358" from="data_exe_wb" to="call_ln259" fromId="321" toId="35">
 </dataflow>
-<dataflow id="359" from="gmem0" to="call_ln313" fromId="70" toId="35">
+<dataflow id="359" from="gmem0" to="call_ln259" fromId="70" toId="35">
 </dataflow>
-<dataflow id="360" from="a_read" to="call_ln313" fromId="24" toId="35">
+<dataflow id="360" from="a_read" to="call_ln259" fromId="24" toId="35">
 </dataflow>
-<dataflow id="361" from="gmem1" to="call_ln313" fromId="72" toId="35">
+<dataflow id="361" from="gmem1" to="call_ln259" fromId="72" toId="35">
 </dataflow>
-<dataflow id="362" from="b_read" to="call_ln313" fromId="23" toId="35">
+<dataflow id="362" from="b_read" to="call_ln259" fromId="23" toId="35">
 </dataflow>
-<dataflow id="363" from="gmem2" to="call_ln313" fromId="74" toId="35">
+<dataflow id="363" from="gmem2" to="call_ln259" fromId="74" toId="35">
 </dataflow>
-<dataflow id="364" from="c_read" to="call_ln313" fromId="22" toId="35">
+<dataflow id="364" from="c_read" to="call_ln259" fromId="22" toId="35">
 </dataflow>
-<dataflow id="365" from="ALU_operation_MEM" to="call_ln313" fromId="79" toId="35">
+<dataflow id="365" from="ALU_operation_MEM" to="call_ln259" fromId="79" toId="35">
 </dataflow>
-<dataflow id="366" from="data_a" to="call_ln313" fromId="76" toId="35">
+<dataflow id="366" from="data_a" to="call_ln259" fromId="76" toId="35">
 </dataflow>
-<dataflow id="367" from="data_b" to="call_ln313" fromId="77" toId="35">
+<dataflow id="367" from="data_b" to="call_ln259" fromId="77" toId="35">
 </dataflow>
-<dataflow id="368" from="data_result" to="call_ln313" fromId="80" toId="35">
+<dataflow id="368" from="data_result" to="call_ln259" fromId="80" toId="35">
 </dataflow>
-<dataflow id="369" from="operation" to="call_ln307" fromId="333" toId="37">
+<dataflow id="369" from="operation" to="call_ln253" fromId="333" toId="37">
 </dataflow>
-<dataflow id="370" from="gmem3" to="call_ln307" fromId="68" toId="37">
+<dataflow id="370" from="gmem3" to="call_ln253" fromId="68" toId="37">
 </dataflow>
-<dataflow id="371" from="op_read" to="call_ln307" fromId="25" toId="37">
+<dataflow id="371" from="op_read" to="call_ln253" fromId="25" toId="37">
 </dataflow>
-<dataflow id="372" from="ALU_operation_MEM" to="call_ln307" fromId="79" toId="37">
+<dataflow id="372" from="ALU_operation_MEM" to="call_ln253" fromId="79" toId="37">
 </dataflow>
-<dataflow id="373" from="ALU_operation" to="call_ln307" fromId="78" toId="37">
+<dataflow id="373" from="ALU_operation" to="call_ln253" fromId="78" toId="37">
 </dataflow>
 <dataflow id="374" from="Block_entry2_proc1_Pipeline_clear_FIFO_a" to="call_ln0" fromId="341" toId="39">
 </dataflow>
