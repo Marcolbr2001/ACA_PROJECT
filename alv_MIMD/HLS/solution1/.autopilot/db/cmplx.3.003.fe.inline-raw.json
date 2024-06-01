@@ -3,19 +3,19 @@
     "basicblocks": 18,
     "calls": "2 1 3",
     "file": "core.cpp",
-    "fileloc": 213,
-    "instructions": 62,
+    "fileloc": 264,
+    "instructions": 68,
     "name": "alv_MIMD",
     "stores": {
       "G": 1
     },
-    "total_instructions": 229
+    "total_instructions": 235
   },
   "1": {
     "basicblocks": 21,
     "calls": "",
     "file": "core.cpp",
-    "fileloc": 188,
+    "fileloc": 238,
     "instructions": 67,
     "loads": {
       "G": 1,
@@ -31,7 +31,7 @@
     "basicblocks": 5,
     "calls": "",
     "file": "core.cpp",
-    "fileloc": 89,
+    "fileloc": 122,
     "instructions": 17,
     "loads": {
       "L": 1
@@ -46,7 +46,7 @@
     "basicblocks": 25,
     "calls": "",
     "file": "core.cpp",
-    "fileloc": 200,
+    "fileloc": 252,
     "instructions": 83,
     "loads": {
       "G": 1,

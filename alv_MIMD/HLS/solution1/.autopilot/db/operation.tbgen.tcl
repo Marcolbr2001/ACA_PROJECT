@@ -184,8 +184,8 @@ set RtlHierarchyInfo {[
 					{"ID" : "3", "SubInstance" : "grp_operation_Pipeline_s_operation_data_op_fu_51", "Port" : "ALU_operation_MEM", "Inst_start_state" : "5", "Inst_end_state" : "6"}]},
 			{"Name" : "ALU_operation", "Type" : "Fifo", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_operation_Pipeline_l_operation_fu_42", "Port" : "ALU_operation", "Inst_start_state" : "2", "Inst_end_state" : "3"},
-					{"ID" : "3", "SubInstance" : "grp_operation_Pipeline_s_operation_data_op_fu_51", "Port" : "ALU_operation", "Inst_start_state" : "5", "Inst_end_state" : "6"}]}]},
+					{"ID" : "3", "SubInstance" : "grp_operation_Pipeline_s_operation_data_op_fu_51", "Port" : "ALU_operation", "Inst_start_state" : "5", "Inst_end_state" : "6"},
+					{"ID" : "1", "SubInstance" : "grp_operation_Pipeline_l_operation_fu_42", "Port" : "ALU_operation", "Inst_start_state" : "2", "Inst_end_state" : "3"}]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_operation_Pipeline_l_operation_fu_42", "Parent" : "0", "Child" : ["2"],
 		"CDFG" : "operation_Pipeline_l_operation",
 		"Protocol" : "ap_ctrl_hs",

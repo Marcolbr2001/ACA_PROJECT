@@ -2,7 +2,7 @@
 == Vivado RTL Synthesis Results
 ================================================================
 + General Information:
-    * Date:            Tue May 21 09:43:32 +0200 2024
+    * Date:            Sun May 19 16:20:56 +0200 2024
     * Version:         2023.2 (Build 4023990 on Oct 11 2023)
     * Project:         HLS
     * Solution:        solution1 (Vivado IP Flow Target)
@@ -58,13 +58,13 @@ SRL:              874
 +------------------------------------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+--------+
 | inst                                                             | 7820 | 9967 | 6   | 9    |      |     |        |      |         |          |        |
 |   (inst)                                                         | 3    |      |     |      |      |     |        |      |         |          |        |
-|   Block_entry2_proc1_U0                                          | 5353 | 6467 | 6   | 5    |      |     |        |      |         |          |        |
+|   Block_entry2_proc1_U0                                          | 5351 | 6467 | 6   | 5    |      |     |        |      |         |          |        |
 |     (Block_entry2_proc1_U0)                                      | 2    | 16   |     |      |      |     |        |      |         |          |        |
 |     ALU_operation_MEM_U                                          | 1    |      |     | 1    |      |     |        |      |         |          |        |
 |     ALU_operation_fifo_U                                         | 64   | 29   |     | 1    |      |     |        |      |         |          |        |
 |     data_a_fifo_U                                                | 35   | 29   |     | 1    |      |     |        |      |         |          |        |
 |     data_b_fifo_U                                                | 34   | 29   |     | 1    |      |     |        |      |         |          |        |
-|     data_result_fifo_U                                           | 36   | 29   |     | 1    |      |     |        |      |         |          |        |
+|     data_result_fifo_U                                           | 34   | 29   |     | 1    |      |     |        |      |         |          |        |
 |     grp_Block_entry2_proc1_Pipeline_clear_FIFO_a_fu_186          | 1    | 1    |     |      |      |     |        |      |         |          |        |
 |     grp_Block_entry2_proc1_Pipeline_clear_FIFO_b_fu_192          | 1    | 1    |     |      |      |     |        |      |         |          |        |
 |     grp_Block_entry2_proc1_Pipeline_clear_FIFO_op_fu_198         |      | 1    |     |      |      |     |        |      |         |          |        |
@@ -92,21 +92,21 @@ SRL:              874
 |         mul_32s_32s_32_2_1_U12                                   | 15   | 17   | 3   |      |      |     |        |      |         |          |        |
 |         sdiv_32s_32s_32_36_1_U13                                 | 1696 | 2051 |     |      |      |     |        |      |         |          |        |
 |           (sdiv_32s_32s_32_36_1_U13)                             | 1054 | 32   |     |      |      |     |        |      |         |          |        |
-|       grp_op_data_exe_wb_Pipeline_l_data_a_fu_109                | 23   | 113  |     |      |      |     |        |      |         |          |        |
-|         (grp_op_data_exe_wb_Pipeline_l_data_a_fu_109)            | 9    | 111  |     |      |      |     |        |      |         |          |        |
-|         flow_control_loop_pipe_sequential_init_U                 | 17   | 2    |     |      |      |     |        |      |         |          |        |
-|       grp_op_data_exe_wb_Pipeline_l_data_b_fu_118                | 23   | 113  |     |      |      |     |        |      |         |          |        |
-|         (grp_op_data_exe_wb_Pipeline_l_data_b_fu_118)            | 9    | 111  |     |      |      |     |        |      |         |          |        |
-|         flow_control_loop_pipe_sequential_init_U                 | 17   | 2    |     |      |      |     |        |      |         |          |        |
+|       grp_op_data_exe_wb_Pipeline_l_data_a_fu_101                | 23   | 113  |     |      |      |     |        |      |         |          |        |
+|         (grp_op_data_exe_wb_Pipeline_l_data_a_fu_101)            | 10   | 111  |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                 | 18   | 2    |     |      |      |     |        |      |         |          |        |
+|       grp_op_data_exe_wb_Pipeline_l_data_b_fu_110                | 23   | 113  |     |      |      |     |        |      |         |          |        |
+|         (grp_op_data_exe_wb_Pipeline_l_data_b_fu_110)            | 10   | 111  |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                 | 18   | 2    |     |      |      |     |        |      |         |          |        |
 |       grp_op_data_exe_wb_Pipeline_l_operation_fu_92              | 23   | 113  |     |      |      |     |        |      |         |          |        |
-|         (grp_op_data_exe_wb_Pipeline_l_operation_fu_92)          | 9    | 111  |     |      |      |     |        |      |         |          |        |
-|         flow_control_loop_pipe_sequential_init_U                 | 17   | 2    |     |      |      |     |        |      |         |          |        |
-|       grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_101     | 19   | 15   |     |      |      |     |        |      |         |          |        |
-|         (grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_101) | 4    | 13   |     |      |      |     |        |      |         |          |        |
+|         (grp_op_data_exe_wb_Pipeline_l_operation_fu_92)          | 10   | 111  |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                 | 18   | 2    |     |      |      |     |        |      |         |          |        |
+|       grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_119     | 19   | 15   |     |      |      |     |        |      |         |          |        |
+|         (grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_119) | 4    | 13   |     |      |      |     |        |      |         |          |        |
 |         flow_control_loop_pipe_sequential_init_U                 | 15   | 2    |     |      |      |     |        |      |         |          |        |
 |       grp_op_data_exe_wb_Pipeline_write_back_fu_139              | 26   | 110  |     |      |      |     |        |      |         |          |        |
-|         (grp_op_data_exe_wb_Pipeline_write_back_fu_139)          | 10   | 108  |     |      |      |     |        |      |         |          |        |
-|         flow_control_loop_pipe_sequential_init_U                 | 19   | 2    |     |      |      |     |        |      |         |          |        |
+|         (grp_op_data_exe_wb_Pipeline_write_back_fu_139)          | 11   | 108  |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                 | 20   | 2    |     |      |      |     |        |      |         |          |        |
 |     grp_operation_fu_174                                         | 112  | 136  |     |      |      |     |        |      |         |          |        |
 |       (grp_operation_fu_174)                                     | 2    | 8    |     |      |      |     |        |      |         |          |        |
 |       grp_operation_Pipeline_l_operation_fu_42                   | 88   | 113  |     |      |      |     |        |      |         |          |        |
@@ -118,7 +118,7 @@ SRL:              874
 |   control_s_axi_U                                                | 339  | 344  |     |      |      |     |        |      |         |          |        |
 |   gmem0_m_axi_U                                                  | 476  | 730  |     | 1    |      |     |        |      |         |          |        |
 |   gmem1_m_axi_U                                                  | 476  | 730  |     | 1    |      |     |        |      |         |          |        |
-|   gmem2_m_axi_U                                                  | 697  | 966  |     | 1    |      |     |        |      |         |          |        |
+|   gmem2_m_axi_U                                                  | 699  | 966  |     | 1    |      |     |        |      |         |          |        |
 |   gmem3_m_axi_U                                                  | 476  | 730  |     | 1    |      |     |        |      |         |          |        |
 +------------------------------------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+--------+
 

@@ -11,7 +11,7 @@ source -notrace ./extraction.tcl
 set vivado_proj_name project
 set vivado_proj_dir .
 set target_device "${device}${package}${speed}"
-set target_clk_period_ns "10"
+set target_clk_period_ns "10.000"
 set target_clk_freq_hz [expr {floor(1000 / $target_clk_period_ns) * 1000000}]
 set ip_vlnv xilinx.com:hls:alv_MIMD:1.0
 set ip_repo_path ../ip

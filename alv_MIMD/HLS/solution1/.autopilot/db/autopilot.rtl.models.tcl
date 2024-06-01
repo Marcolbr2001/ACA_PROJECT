@@ -4,9 +4,9 @@ set SynModuleInfo {
       {MODELNAME alv_MIMD_flow_control_loop_pipe_sequential_init RTLNAME alv_MIMD_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME alv_MIMD_flow_control_loop_pipe_sequential_init_U}
     }
   }
-  {SRCNAME op_data_exe_wb_Pipeline_s_operation_data_op MODELNAME op_data_exe_wb_Pipeline_s_operation_data_op RTLNAME alv_MIMD_op_data_exe_wb_Pipeline_s_operation_data_op}
   {SRCNAME op_data_exe_wb_Pipeline_l_data_a MODELNAME op_data_exe_wb_Pipeline_l_data_a RTLNAME alv_MIMD_op_data_exe_wb_Pipeline_l_data_a}
   {SRCNAME op_data_exe_wb_Pipeline_l_data_b MODELNAME op_data_exe_wb_Pipeline_l_data_b RTLNAME alv_MIMD_op_data_exe_wb_Pipeline_l_data_b}
+  {SRCNAME op_data_exe_wb_Pipeline_s_operation_data_op MODELNAME op_data_exe_wb_Pipeline_s_operation_data_op RTLNAME alv_MIMD_op_data_exe_wb_Pipeline_s_operation_data_op}
   {SRCNAME op_data_exe_wb_Pipeline_exe MODELNAME op_data_exe_wb_Pipeline_exe RTLNAME alv_MIMD_op_data_exe_wb_Pipeline_exe
     SUBMODULES {
       {MODELNAME alv_MIMD_mul_32s_32s_32_2_1 RTLNAME alv_MIMD_mul_32s_32s_32_2_1 BINDTYPE op TYPE mul IMPL auto LATENCY 1 ALLOW_PRAGMA 1}

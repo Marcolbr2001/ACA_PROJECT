@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Tue May 21 09:49:50 2024
-# Process ID: 19508
-# Current directory: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.runs/design_1_processing_system7_0_0_synth_1
+# Start of session at: Sun May 12 20:05:58 2024
+# Process ID: 5292
+# Current directory: C:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.runs/design_1_processing_system7_0_0_synth_1
 # Command line: vivado.exe -log design_1_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_processing_system7_0_0.tcl
-# Log file: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.runs/design_1_processing_system7_0_0_synth_1/design_1_processing_system7_0_0.vds
-# Journal file: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.runs/design_1_processing_system7_0_0_synth_1\vivado.jou
-# Running On: MSI, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 10, Host memory: 16870 MB
+# Log file: C:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.runs/design_1_processing_system7_0_0_synth_1/design_1_processing_system7_0_0.vds
+# Journal file: C:/Users/marco/Desktop/NECST/NL2/AXI_M/alv_MIMD/Vivado/alv_MIMD.runs/design_1_processing_system7_0_0_synth_1\vivado.jou
+# Running On: PC_di_Marco, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 20, Host memory: 16869 MB
 #-----------------------------------------------------------
 source design_1_processing_system7_0_0.tcl -notrace

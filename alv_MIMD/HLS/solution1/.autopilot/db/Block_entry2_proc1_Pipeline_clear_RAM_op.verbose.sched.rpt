@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'Block_entry2_proc1_Pipeline_clear_RAM_op'
 ================================================================
-* Date:           Tue May 21 09:38:59 2024
+* Date:           Sun May 19 16:11:29 2024
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        HLS
@@ -84,22 +84,22 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 6.66>
-ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [HLS/core.cpp:33->HLS/core.cpp:271]   --->   Operation 4 'alloca' 'i' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 5 [1/1] (1.58ns)   --->   "%store_ln33 = store i6 0, i6 %i" [HLS/core.cpp:33->HLS/core.cpp:271]   --->   Operation 5 'store' 'store_ln33' <Predicate = true> <Delay = 1.58>
-ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.cond.i"   --->   Operation 6 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%i_9 = load i6 %i" [HLS/core.cpp:33->HLS/core.cpp:271]   --->   Operation 7 'load' 'i_9' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 8 [1/1] (1.82ns)   --->   "%icmp_ln33 = icmp_eq  i6 %i_9, i6 50" [HLS/core.cpp:33->HLS/core.cpp:271]   --->   Operation 8 'icmp' 'icmp_ln33' <Predicate = true> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 9 [1/1] (1.82ns)   --->   "%add_ln33 = add i6 %i_9, i6 1" [HLS/core.cpp:33->HLS/core.cpp:271]   --->   Operation 9 'add' 'add_ln33' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%br_ln33 = br i1 %icmp_ln33, void %for.body.i, void %sw.epilog.loopexit.exitStub" [HLS/core.cpp:33->HLS/core.cpp:271]   --->   Operation 10 'br' 'br_ln33' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%zext_ln33 = zext i6 %i_9" [HLS/core.cpp:33->HLS/core.cpp:271]   --->   Operation 11 'zext' 'zext_ln33' <Predicate = (!icmp_ln33)> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specpipeline_ln35 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_20" [HLS/core.cpp:35->HLS/core.cpp:271]   --->   Operation 12 'specpipeline' 'specpipeline_ln35' <Predicate = (!icmp_ln33)> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%speclooptripcount_ln35 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 50, i64 50, i64 50" [HLS/core.cpp:35->HLS/core.cpp:271]   --->   Operation 13 'speclooptripcount' 'speclooptripcount_ln35' <Predicate = (!icmp_ln33)> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specloopname_ln33 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7" [HLS/core.cpp:33->HLS/core.cpp:271]   --->   Operation 14 'specloopname' 'specloopname_ln33' <Predicate = (!icmp_ln33)> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%ALU_operation_MEM_addr = getelementptr i32 %ALU_operation_MEM, i64 0, i64 %zext_ln33" [HLS/core.cpp:35->HLS/core.cpp:271]   --->   Operation 15 'getelementptr' 'ALU_operation_MEM_addr' <Predicate = (!icmp_ln33)> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (3.25ns)   --->   "%store_ln35 = store i32 0, i6 %ALU_operation_MEM_addr" [HLS/core.cpp:35->HLS/core.cpp:271]   --->   Operation 16 'store' 'store_ln35' <Predicate = (!icmp_ln33)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 50> <RAM>
-ST_1 : Operation 17 [1/1] (1.58ns)   --->   "%store_ln33 = store i6 %add_ln33, i6 %i" [HLS/core.cpp:33->HLS/core.cpp:271]   --->   Operation 17 'store' 'store_ln33' <Predicate = (!icmp_ln33)> <Delay = 1.58>
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln33 = br void %for.cond.i" [HLS/core.cpp:33->HLS/core.cpp:271]   --->   Operation 18 'br' 'br_ln33' <Predicate = (!icmp_ln33)> <Delay = 0.00>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 19 'ret' 'ret_ln0' <Predicate = (icmp_ln33)> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [HLS/core.cpp:41->HLS/core.cpp:325]   --->   Operation 4 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (1.58ns)   --->   "%store_ln41 = store i6 0, i6 %i" [HLS/core.cpp:41->HLS/core.cpp:325]   --->   Operation 5 'store' 'store_ln41' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.cond27.i"   --->   Operation 6 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%i_9 = load i6 %i" [HLS/core.cpp:41->HLS/core.cpp:325]   --->   Operation 7 'load' 'i_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (1.82ns)   --->   "%icmp_ln41 = icmp_eq  i6 %i_9, i6 50" [HLS/core.cpp:41->HLS/core.cpp:325]   --->   Operation 8 'icmp' 'icmp_ln41' <Predicate = true> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 9 [1/1] (1.82ns)   --->   "%add_ln41 = add i6 %i_9, i6 1" [HLS/core.cpp:41->HLS/core.cpp:325]   --->   Operation 9 'add' 'add_ln41' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%br_ln41 = br i1 %icmp_ln41, void %for.body30.i, void %sw.epilog.loopexit.exitStub" [HLS/core.cpp:41->HLS/core.cpp:325]   --->   Operation 10 'br' 'br_ln41' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%zext_ln41 = zext i6 %i_9" [HLS/core.cpp:41->HLS/core.cpp:325]   --->   Operation 11 'zext' 'zext_ln41' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specpipeline_ln43 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_20" [HLS/core.cpp:43->HLS/core.cpp:325]   --->   Operation 12 'specpipeline' 'specpipeline_ln43' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%speclooptripcount_ln43 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 50, i64 50, i64 50" [HLS/core.cpp:43->HLS/core.cpp:325]   --->   Operation 13 'speclooptripcount' 'speclooptripcount_ln43' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specloopname_ln41 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7" [HLS/core.cpp:41->HLS/core.cpp:325]   --->   Operation 14 'specloopname' 'specloopname_ln41' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%ALU_operation_MEM_addr = getelementptr i32 %ALU_operation_MEM, i64 0, i64 %zext_ln41" [HLS/core.cpp:43->HLS/core.cpp:325]   --->   Operation 15 'getelementptr' 'ALU_operation_MEM_addr' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (3.25ns)   --->   "%store_ln43 = store i32 0, i6 %ALU_operation_MEM_addr" [HLS/core.cpp:43->HLS/core.cpp:325]   --->   Operation 16 'store' 'store_ln43' <Predicate = (!icmp_ln41)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 50> <RAM>
+ST_1 : Operation 17 [1/1] (1.58ns)   --->   "%store_ln41 = store i6 %add_ln41, i6 %i" [HLS/core.cpp:41->HLS/core.cpp:325]   --->   Operation 17 'store' 'store_ln41' <Predicate = (!icmp_ln41)> <Delay = 1.58>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln41 = br void %for.cond27.i" [HLS/core.cpp:41->HLS/core.cpp:325]   --->   Operation 18 'br' 'br_ln41' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 19 'ret' 'ret_ln0' <Predicate = (icmp_ln41)> <Delay = 0.00>
 
 
 ============================================================
@@ -109,10 +109,10 @@ Target clock period: 10.000ns, clock uncertainty: 2.700ns.
 
  <State 1>: 6.667ns
 The critical path consists of the following:
-	'store' operation 0 bit ('store_ln33', HLS/core.cpp:33->HLS/core.cpp:271) of constant 0 on local variable 'i', HLS/core.cpp:33->HLS/core.cpp:271 [3]  (1.588 ns)
-	'load' operation 6 bit ('i', HLS/core.cpp:33->HLS/core.cpp:271) on local variable 'i', HLS/core.cpp:33->HLS/core.cpp:271 [6]  (0.000 ns)
-	'icmp' operation 1 bit ('icmp_ln33', HLS/core.cpp:33->HLS/core.cpp:271) [7]  (1.825 ns)
-	'store' operation 0 bit ('store_ln35', HLS/core.cpp:35->HLS/core.cpp:271) of constant 0 on array 'ALU_operation_MEM' [16]  (3.254 ns)
+	'store' operation 0 bit ('store_ln41', HLS/core.cpp:41->HLS/core.cpp:325) of constant 0 on local variable 'i', HLS/core.cpp:41->HLS/core.cpp:325 [3]  (1.588 ns)
+	'load' operation 6 bit ('i', HLS/core.cpp:41->HLS/core.cpp:325) on local variable 'i', HLS/core.cpp:41->HLS/core.cpp:325 [6]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln41', HLS/core.cpp:41->HLS/core.cpp:325) [7]  (1.825 ns)
+	'store' operation 0 bit ('store_ln43', HLS/core.cpp:43->HLS/core.cpp:325) of constant 0 on array 'ALU_operation_MEM' [16]  (3.254 ns)
 	blocking operation 8.88178e-16 ns on control path)
 
 

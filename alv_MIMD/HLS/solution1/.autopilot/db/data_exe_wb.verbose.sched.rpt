@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'data_exe_wb'
 ================================================================
-* Date:           Tue May 21 09:38:58 2024
+* Date:           Sun May 19 16:11:28 2024
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        HLS
@@ -86,26 +86,26 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%c_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %c" [HLS/core.cpp:43->HLS/core.cpp:193]   --->   Operation 13 'read' 'c_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%b_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %b" [HLS/core.cpp:43->HLS/core.cpp:193]   --->   Operation 14 'read' 'b_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%a_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %a" [HLS/core.cpp:43->HLS/core.cpp:193]   --->   Operation 15 'read' 'a_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%c_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %c" [HLS/core.cpp:51->HLS/core.cpp:243]   --->   Operation 13 'read' 'c_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%b_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %b" [HLS/core.cpp:51->HLS/core.cpp:243]   --->   Operation 14 'read' 'b_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%a_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %a" [HLS/core.cpp:51->HLS/core.cpp:243]   --->   Operation 15 'read' 'a_read' <Predicate = true> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 3.52>
 ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 16 'wait' 'empty' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 17 [2/2] (3.52ns)   --->   "%call_ln43 = call void @data_exe_wb_Pipeline_l_data_a, i64 %a_read, i32 %gmem0, i32 %data_a" [HLS/core.cpp:43->HLS/core.cpp:193]   --->   Operation 17 'call' 'call_ln43' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 17 [2/2] (3.52ns)   --->   "%call_ln51 = call void @data_exe_wb_Pipeline_l_data_a, i64 %a_read, i32 %gmem0, i32 %data_a" [HLS/core.cpp:51->HLS/core.cpp:243]   --->   Operation 17 'call' 'call_ln51' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 18 [1/2] (0.00ns)   --->   "%call_ln43 = call void @data_exe_wb_Pipeline_l_data_a, i64 %a_read, i32 %gmem0, i32 %data_a" [HLS/core.cpp:43->HLS/core.cpp:193]   --->   Operation 18 'call' 'call_ln43' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 18 [1/2] (0.00ns)   --->   "%call_ln51 = call void @data_exe_wb_Pipeline_l_data_a, i64 %a_read, i32 %gmem0, i32 %data_a" [HLS/core.cpp:51->HLS/core.cpp:243]   --->   Operation 18 'call' 'call_ln51' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 0.00>
 ST_4 : Operation 19 [1/1] (0.00ns)   --->   "%empty_47 = wait i32 @_ssdm_op_Wait"   --->   Operation 19 'wait' 'empty_47' <Predicate = true> <Delay = 0.00>
 
 State 5 <SV = 4> <Delay = 3.52>
 ST_5 : Operation 20 [1/1] (0.00ns)   --->   "%empty_48 = wait i32 @_ssdm_op_Wait"   --->   Operation 20 'wait' 'empty_48' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 21 [2/2] (3.52ns)   --->   "%call_ln43 = call void @data_exe_wb_Pipeline_l_data_b, i64 %b_read, i32 %gmem1, i32 %data_b" [HLS/core.cpp:43->HLS/core.cpp:193]   --->   Operation 21 'call' 'call_ln43' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 21 [2/2] (3.52ns)   --->   "%call_ln51 = call void @data_exe_wb_Pipeline_l_data_b, i64 %b_read, i32 %gmem1, i32 %data_b" [HLS/core.cpp:51->HLS/core.cpp:243]   --->   Operation 21 'call' 'call_ln51' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 6 <SV = 5> <Delay = 0.00>
-ST_6 : Operation 22 [1/2] (0.00ns)   --->   "%call_ln43 = call void @data_exe_wb_Pipeline_l_data_b, i64 %b_read, i32 %gmem1, i32 %data_b" [HLS/core.cpp:43->HLS/core.cpp:193]   --->   Operation 22 'call' 'call_ln43' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 22 [1/2] (0.00ns)   --->   "%call_ln51 = call void @data_exe_wb_Pipeline_l_data_b, i64 %b_read, i32 %gmem1, i32 %data_b" [HLS/core.cpp:51->HLS/core.cpp:243]   --->   Operation 22 'call' 'call_ln51' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 7 <SV = 6> <Delay = 0.00>
 ST_7 : Operation 23 [1/1] (0.00ns)   --->   "%empty_49 = wait i32 @_ssdm_op_Wait"   --->   Operation 23 'wait' 'empty_49' <Predicate = true> <Delay = 0.00>
@@ -122,7 +122,7 @@ ST_10 : Operation 27 [1/1] (0.00ns)   --->   "%empty_51 = wait i32 @_ssdm_op_Wai
 
 State 11 <SV = 10> <Delay = 3.52>
 ST_11 : Operation 28 [1/1] (0.00ns)   --->   "%empty_52 = wait i32 @_ssdm_op_Wait"   --->   Operation 28 'wait' 'empty_52' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 29 [2/2] (3.52ns)   --->   "%call_ln43 = call void @data_exe_wb_Pipeline_write_back, i64 %c_read, i32 %gmem2, i32 %data_result" [HLS/core.cpp:43->HLS/core.cpp:193]   --->   Operation 29 'call' 'call_ln43' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 29 [2/2] (3.52ns)   --->   "%call_ln51 = call void @data_exe_wb_Pipeline_write_back, i64 %c_read, i32 %gmem2, i32 %data_result" [HLS/core.cpp:51->HLS/core.cpp:243]   --->   Operation 29 'call' 'call_ln51' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 12 <SV = 11> <Delay = 0.00>
 ST_12 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_a, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 30 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
@@ -140,7 +140,7 @@ ST_12 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface
 ST_12 : Operation 42 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem2, void @empty_19, i32 0, i32 0, void @empty_20, i32 0, i32 50, void @empty_24, void @empty_22, void @empty_20, i32 16, i32 16, i32 16, i32 16, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 42 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_12 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem1, void @empty_19, i32 0, i32 0, void @empty_20, i32 0, i32 50, void @empty_23, void @empty_22, void @empty_20, i32 16, i32 16, i32 16, i32 16, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_12 : Operation 44 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem0, void @empty_19, i32 0, i32 0, void @empty_20, i32 0, i32 50, void @empty_21, void @empty_22, void @empty_20, i32 16, i32 16, i32 16, i32 16, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 44 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_12 : Operation 45 [1/2] (0.00ns)   --->   "%call_ln43 = call void @data_exe_wb_Pipeline_write_back, i64 %c_read, i32 %gmem2, i32 %data_result" [HLS/core.cpp:43->HLS/core.cpp:193]   --->   Operation 45 'call' 'call_ln43' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 45 [1/2] (0.00ns)   --->   "%call_ln51 = call void @data_exe_wb_Pipeline_write_back, i64 %c_read, i32 %gmem2, i32 %data_result" [HLS/core.cpp:51->HLS/core.cpp:243]   --->   Operation 45 'call' 'call_ln51' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_12 : Operation 46 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 46 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
 
 
@@ -154,7 +154,7 @@ The critical path consists of the following:
 
  <State 2>: 3.520ns
 The critical path consists of the following:
-	'call' operation 0 bit ('call_ln43', HLS/core.cpp:43->HLS/core.cpp:193) to 'data_exe_wb_Pipeline_l_data_a' [30]  (3.520 ns)
+	'call' operation 0 bit ('call_ln51', HLS/core.cpp:51->HLS/core.cpp:243) to 'data_exe_wb_Pipeline_l_data_a' [30]  (3.520 ns)
 
  <State 3>: 0.000ns
 The critical path consists of the following:
@@ -164,7 +164,7 @@ The critical path consists of the following:
 
  <State 5>: 3.520ns
 The critical path consists of the following:
-	'call' operation 0 bit ('call_ln43', HLS/core.cpp:43->HLS/core.cpp:193) to 'data_exe_wb_Pipeline_l_data_b' [33]  (3.520 ns)
+	'call' operation 0 bit ('call_ln51', HLS/core.cpp:51->HLS/core.cpp:243) to 'data_exe_wb_Pipeline_l_data_b' [33]  (3.520 ns)
 
  <State 6>: 0.000ns
 The critical path consists of the following:
@@ -183,7 +183,7 @@ The critical path consists of the following:
 
  <State 11>: 3.520ns
 The critical path consists of the following:
-	'call' operation 0 bit ('call_ln43', HLS/core.cpp:43->HLS/core.cpp:193) to 'data_exe_wb_Pipeline_write_back' [39]  (3.520 ns)
+	'call' operation 0 bit ('call_ln51', HLS/core.cpp:51->HLS/core.cpp:243) to 'data_exe_wb_Pipeline_write_back' [39]  (3.520 ns)
 
  <State 12>: 0.000ns
 The critical path consists of the following:

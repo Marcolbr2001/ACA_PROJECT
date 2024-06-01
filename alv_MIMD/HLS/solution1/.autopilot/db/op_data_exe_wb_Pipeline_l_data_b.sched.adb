@@ -70,7 +70,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1337776699</coreId>
+						<coreId>3379678840</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -128,33 +128,40 @@
 					<Obj>
 						<type>0</type>
 						<id>4</id>
-						<name>i_4</name>
+						<name>i_3</name>
 						<fileName>HLS/core.cpp</fileName>
-						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</fileDirectory>
-						<lineNumber>54</lineNumber>
+						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</fileDirectory>
+						<lineNumber>62</lineNumber>
 						<contextFuncName>load_data_b</contextFuncName>
 						<contextNormFuncName>load_data_b</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="10" tracking_level="0" version="0">
-								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
 								<second class_id="11" tracking_level="0" version="0">
-									<count>2</count>
+									<count>3</count>
 									<item_version>0</item_version>
 									<item class_id="12" tracking_level="0" version="0">
 										<first class_id="13" tracking_level="0" version="0">
 											<first>HLS/core.cpp</first>
+											<second>load_data_and_op</second>
+										</first>
+										<second>138</second>
+									</item>
+									<item>
+										<first>
+											<first>HLS/core.cpp</first>
 											<second>load_data_b</second>
 										</first>
-										<second>54</second>
+										<second>62</second>
 									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>op_data_exe_wb</second>
 										</first>
-										<second>207</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -193,38 +200,38 @@
 						<id>7</id>
 						<name>b_read</name>
 						<fileName>HLS/core.cpp</fileName>
-						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</fileDirectory>
-						<lineNumber>68</lineNumber>
+						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</fileDirectory>
+						<lineNumber>76</lineNumber>
 						<contextFuncName>load_op</contextFuncName>
 						<contextNormFuncName>load_op</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
 								<second>
 									<count>3</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
+											<second>load_data_and_op</second>
+										</first>
+										<second>136</second>
+									</item>
+									<item>
+										<first>
+											<first>HLS/core.cpp</first>
 											<second>load_op</second>
 										</first>
-										<second>68</second>
+										<second>76</second>
 									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>op_data_exe_wb</second>
 										</first>
-										<second>205</second>
-									</item>
-									<item>
-										<first>
-											<first>HLS/core.cpp</first>
-											<second>operation</second>
-										</first>
-										<second>91</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -237,7 +244,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1031040613</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -262,33 +269,40 @@
 					<Obj>
 						<type>0</type>
 						<id>8</id>
-						<name>i_4_write_ln54</name>
+						<name>i_3_write_ln62</name>
 						<fileName>HLS/core.cpp</fileName>
-						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</fileDirectory>
-						<lineNumber>54</lineNumber>
+						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</fileDirectory>
+						<lineNumber>62</lineNumber>
 						<contextFuncName>load_data_b</contextFuncName>
 						<contextNormFuncName>load_data_b</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
 								<second>
-									<count>2</count>
+									<count>3</count>
 									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>HLS/core.cpp</first>
+											<second>load_data_and_op</second>
+										</first>
+										<second>138</second>
+									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>load_data_b</second>
 										</first>
-										<second>54</second>
+										<second>62</second>
 									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>op_data_exe_wb</second>
 										</first>
-										<second>207</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -344,7 +358,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>639633674</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -370,31 +384,38 @@
 						<id>11</id>
 						<name>i</name>
 						<fileName>HLS/core.cpp</fileName>
-						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</fileDirectory>
-						<lineNumber>54</lineNumber>
+						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</fileDirectory>
+						<lineNumber>62</lineNumber>
 						<contextFuncName>load_data_b</contextFuncName>
 						<contextNormFuncName>load_data_b</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
 								<second>
-									<count>2</count>
+									<count>3</count>
 									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>HLS/core.cpp</first>
+											<second>load_data_and_op</second>
+										</first>
+										<second>138</second>
+									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>load_data_b</second>
 										</first>
-										<second>54</second>
+										<second>62</second>
 									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>op_data_exe_wb</second>
 										</first>
-										<second>207</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -432,33 +453,40 @@
 					<Obj>
 						<type>0</type>
 						<id>12</id>
-						<name>icmp_ln54</name>
+						<name>icmp_ln62</name>
 						<fileName>HLS/core.cpp</fileName>
-						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</fileDirectory>
-						<lineNumber>54</lineNumber>
+						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</fileDirectory>
+						<lineNumber>62</lineNumber>
 						<contextFuncName>load_data_b</contextFuncName>
 						<contextNormFuncName>load_data_b</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
 								<second>
-									<count>2</count>
+									<count>3</count>
 									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>HLS/core.cpp</first>
+											<second>load_data_and_op</second>
+										</first>
+										<second>138</second>
+									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>load_data_b</second>
 										</first>
-										<second>54</second>
+										<second>62</second>
 									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>op_data_exe_wb</second>
 										</first>
-										<second>207</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -471,7 +499,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>875650864</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -496,33 +524,40 @@
 					<Obj>
 						<type>0</type>
 						<id>13</id>
-						<name>add_ln54</name>
+						<name>add_ln62</name>
 						<fileName>HLS/core.cpp</fileName>
-						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</fileDirectory>
-						<lineNumber>54</lineNumber>
+						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</fileDirectory>
+						<lineNumber>62</lineNumber>
 						<contextFuncName>load_data_b</contextFuncName>
 						<contextNormFuncName>load_data_b</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
 								<second>
-									<count>2</count>
+									<count>3</count>
 									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>HLS/core.cpp</first>
+											<second>load_data_and_op</second>
+										</first>
+										<second>138</second>
+									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>load_data_b</second>
 										</first>
-										<second>54</second>
+										<second>62</second>
 									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>op_data_exe_wb</second>
 										</first>
-										<second>207</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -535,7 +570,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702130472</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -560,33 +595,40 @@
 					<Obj>
 						<type>0</type>
 						<id>14</id>
-						<name>br_ln54</name>
+						<name>br_ln62</name>
 						<fileName>HLS/core.cpp</fileName>
-						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</fileDirectory>
-						<lineNumber>54</lineNumber>
+						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</fileDirectory>
+						<lineNumber>62</lineNumber>
 						<contextFuncName>load_data_b</contextFuncName>
 						<contextNormFuncName>load_data_b</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
 								<second>
-									<count>2</count>
+									<count>3</count>
 									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>HLS/core.cpp</first>
+											<second>load_data_and_op</second>
+										</first>
+										<second>138</second>
+									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>load_data_b</second>
 										</first>
-										<second>54</second>
+										<second>62</second>
 									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>op_data_exe_wb</second>
 										</first>
-										<second>207</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -627,31 +669,38 @@
 						<id>19</id>
 						<name>shl_ln2</name>
 						<fileName>HLS/core.cpp</fileName>
-						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</fileDirectory>
+						<lineNumber>66</lineNumber>
 						<contextFuncName>load_data_b</contextFuncName>
 						<contextNormFuncName>load_data_b</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
 								<second>
-									<count>2</count>
+									<count>3</count>
 									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>HLS/core.cpp</first>
+											<second>load_data_and_op</second>
+										</first>
+										<second>138</second>
+									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>load_data_b</second>
 										</first>
-										<second>58</second>
+										<second>66</second>
 									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>op_data_exe_wb</second>
 										</first>
-										<second>207</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -690,33 +739,40 @@
 					<Obj>
 						<type>0</type>
 						<id>20</id>
-						<name>zext_ln58</name>
+						<name>zext_ln66</name>
 						<fileName>HLS/core.cpp</fileName>
-						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</fileDirectory>
+						<lineNumber>66</lineNumber>
 						<contextFuncName>load_data_b</contextFuncName>
 						<contextNormFuncName>load_data_b</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
 								<second>
-									<count>2</count>
+									<count>3</count>
 									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>HLS/core.cpp</first>
+											<second>load_data_and_op</second>
+										</first>
+										<second>138</second>
+									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>load_data_b</second>
 										</first>
-										<second>58</second>
+										<second>66</second>
 									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>op_data_exe_wb</second>
 										</first>
-										<second>207</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -729,7 +785,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>909325088</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -753,33 +809,40 @@
 					<Obj>
 						<type>0</type>
 						<id>21</id>
-						<name>add_ln58</name>
+						<name>add_ln66</name>
 						<fileName>HLS/core.cpp</fileName>
-						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</fileDirectory>
+						<lineNumber>66</lineNumber>
 						<contextFuncName>load_data_b</contextFuncName>
 						<contextNormFuncName>load_data_b</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
 								<second>
-									<count>2</count>
+									<count>3</count>
 									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>HLS/core.cpp</first>
+											<second>load_data_and_op</second>
+										</first>
+										<second>138</second>
+									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>load_data_b</second>
 										</first>
-										<second>58</second>
+										<second>66</second>
 									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>op_data_exe_wb</second>
 										</first>
-										<second>207</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -792,7 +855,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>544435823</coreId>
+						<coreId>570453615</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -819,31 +882,38 @@
 						<id>22</id>
 						<name>trunc_ln2</name>
 						<fileName>HLS/core.cpp</fileName>
-						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</fileDirectory>
+						<lineNumber>66</lineNumber>
 						<contextFuncName>load_data_b</contextFuncName>
 						<contextNormFuncName>load_data_b</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
 								<second>
-									<count>2</count>
+									<count>3</count>
 									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>HLS/core.cpp</first>
+											<second>load_data_and_op</second>
+										</first>
+										<second>138</second>
+									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>load_data_b</second>
 										</first>
-										<second>58</second>
+										<second>66</second>
 									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>op_data_exe_wb</second>
 										</first>
-										<second>207</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -856,7 +926,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1730486384</coreId>
+						<coreId>1601204027</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>62</bitwidth>
@@ -883,33 +953,40 @@
 					<Obj>
 						<type>0</type>
 						<id>23</id>
-						<name>sext_ln58</name>
+						<name>sext_ln66</name>
 						<fileName>HLS/core.cpp</fileName>
-						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</fileDirectory>
+						<lineNumber>66</lineNumber>
 						<contextFuncName>load_data_b</contextFuncName>
 						<contextNormFuncName>load_data_b</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
 								<second>
-									<count>2</count>
+									<count>3</count>
 									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>HLS/core.cpp</first>
+											<second>load_data_and_op</second>
+										</first>
+										<second>138</second>
+									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>load_data_b</second>
 										</first>
-										<second>58</second>
+										<second>66</second>
 									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>op_data_exe_wb</second>
 										</first>
-										<second>207</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -922,7 +999,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1850028082</coreId>
+						<coreId>536891206</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -948,31 +1025,38 @@
 						<id>24</id>
 						<name>gmem1_addr</name>
 						<fileName>HLS/core.cpp</fileName>
-						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</fileDirectory>
+						<lineNumber>66</lineNumber>
 						<contextFuncName>load_data_b</contextFuncName>
 						<contextNormFuncName>load_data_b</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
 								<second>
-									<count>2</count>
+									<count>3</count>
 									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>HLS/core.cpp</first>
+											<second>load_data_and_op</second>
+										</first>
+										<second>138</second>
+									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>load_data_b</second>
 										</first>
-										<second>58</second>
+										<second>66</second>
 									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>op_data_exe_wb</second>
 										</first>
-										<second>207</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -1012,31 +1096,38 @@
 						<id>25</id>
 						<name>tmp_b_req</name>
 						<fileName>HLS/core.cpp</fileName>
-						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</fileDirectory>
+						<lineNumber>66</lineNumber>
 						<contextFuncName>load_data_b</contextFuncName>
 						<contextNormFuncName>load_data_b</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
 								<second>
-									<count>2</count>
+									<count>3</count>
 									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>HLS/core.cpp</first>
+											<second>load_data_and_op</second>
+										</first>
+										<second>138</second>
+									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>load_data_b</second>
 										</first>
-										<second>58</second>
+										<second>66</second>
 									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>op_data_exe_wb</second>
 										</first>
-										<second>207</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -1049,7 +1140,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1077,31 +1168,38 @@
 						<id>26</id>
 						<name>tmp_b</name>
 						<fileName>HLS/core.cpp</fileName>
-						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</fileDirectory>
+						<lineNumber>66</lineNumber>
 						<contextFuncName>load_data_b</contextFuncName>
 						<contextNormFuncName>load_data_b</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
 								<second>
-									<count>2</count>
+									<count>3</count>
 									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>HLS/core.cpp</first>
+											<second>load_data_and_op</second>
+										</first>
+										<second>138</second>
+									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>load_data_b</second>
 										</first>
-										<second>58</second>
+										<second>66</second>
 									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>op_data_exe_wb</second>
 										</first>
-										<second>207</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -1114,7 +1212,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1140,33 +1238,40 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>data_b_write_ln59</name>
+						<name>data_b_write_ln67</name>
 						<fileName>HLS/core.cpp</fileName>
-						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</fileDirectory>
-						<lineNumber>59</lineNumber>
+						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</fileDirectory>
+						<lineNumber>67</lineNumber>
 						<contextFuncName>load_data_b</contextFuncName>
 						<contextNormFuncName>load_data_b</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
 								<second>
-									<count>2</count>
+									<count>3</count>
 									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>HLS/core.cpp</first>
+											<second>load_data_and_op</second>
+										</first>
+										<second>138</second>
+									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>load_data_b</second>
 										</first>
-										<second>59</second>
+										<second>67</second>
 									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>op_data_exe_wb</second>
 										</first>
-										<second>207</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -1179,7 +1284,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953708602</coreId>
+						<coreId>790766141</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1205,33 +1310,40 @@
 					<Obj>
 						<type>0</type>
 						<id>28</id>
-						<name>i_4_write_ln54</name>
+						<name>i_3_write_ln62</name>
 						<fileName>HLS/core.cpp</fileName>
-						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</fileDirectory>
-						<lineNumber>54</lineNumber>
+						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</fileDirectory>
+						<lineNumber>62</lineNumber>
 						<contextFuncName>load_data_b</contextFuncName>
 						<contextNormFuncName>load_data_b</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
 								<second>
-									<count>2</count>
+									<count>3</count>
 									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>HLS/core.cpp</first>
+											<second>load_data_and_op</second>
+										</first>
+										<second>138</second>
+									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>load_data_b</second>
 										</first>
-										<second>54</second>
+										<second>62</second>
 									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>op_data_exe_wb</second>
 										</first>
-										<second>207</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -1244,7 +1356,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>544106784</coreId>
+						<coreId>1768714350</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1271,33 +1383,40 @@
 					<Obj>
 						<type>0</type>
 						<id>29</id>
-						<name>br_ln54</name>
+						<name>br_ln62</name>
 						<fileName>HLS/core.cpp</fileName>
-						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</fileDirectory>
-						<lineNumber>54</lineNumber>
+						<fileDirectory>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</fileDirectory>
+						<lineNumber>62</lineNumber>
 						<contextFuncName>load_data_b</contextFuncName>
 						<contextNormFuncName>load_data_b</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+								<first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
 								<second>
-									<count>2</count>
+									<count>3</count>
 									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>HLS/core.cpp</first>
+											<second>load_data_and_op</second>
+										</first>
+										<second>138</second>
+									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>load_data_b</second>
 										</first>
-										<second>54</second>
+										<second>62</second>
 									</item>
 									<item>
 										<first>
 											<first>HLS/core.cpp</first>
 											<second>op_data_exe_wb</second>
 										</first>
-										<second>207</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -1310,7 +1429,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>58</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1352,7 +1471,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1701994853</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1397,7 +1516,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>100</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1428,7 +1547,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1953708602</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -1459,7 +1578,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>544501353</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -1490,7 +1609,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>100</coreId>
+						<coreId>1718511904</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -1521,7 +1640,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1635017060</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -1552,7 +1671,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1936484384</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1583,7 +1702,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3379678840</coreId>
+						<coreId>1953392928</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1617,7 +1736,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>6</coreId>
+					<coreId>539765364</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1633,7 +1752,7 @@
 				<Obj>
 					<type>3</type>
 					<id>15</id>
-					<name>for.inc.i5.i</name>
+					<name>for.inc.i10.i</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1651,7 +1770,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>6</coreId>
+					<coreId>742092909</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1667,7 +1786,7 @@
 				<Obj>
 					<type>3</type>
 					<id>30</id>
-					<name>for.inc.i5.split.i</name>
+					<name>for.inc.i10.split.i</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1708,7 +1827,7 @@
 				<Obj>
 					<type>3</type>
 					<id>32</id>
-					<name>for.body.i.i.preheader.exitStub</name>
+					<name>for.inc.i14.i.preheader.exitStub</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1726,7 +1845,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>105</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>

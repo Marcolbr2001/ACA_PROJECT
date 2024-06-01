@@ -418,12 +418,12 @@ set RtlHierarchyInfo {[
 					{"ID" : "5", "SubInstance" : "grp_data_exe_wb_Pipeline_exe_fu_92", "Port" : "data_a", "Inst_start_state" : "8", "Inst_end_state" : "9"}]},
 			{"Name" : "data_b", "Type" : "Fifo", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_data_exe_wb_Pipeline_l_data_b_fu_83", "Port" : "data_b", "Inst_start_state" : "5", "Inst_end_state" : "6"},
-					{"ID" : "5", "SubInstance" : "grp_data_exe_wb_Pipeline_exe_fu_92", "Port" : "data_b", "Inst_start_state" : "8", "Inst_end_state" : "9"}]},
+					{"ID" : "5", "SubInstance" : "grp_data_exe_wb_Pipeline_exe_fu_92", "Port" : "data_b", "Inst_start_state" : "8", "Inst_end_state" : "9"},
+					{"ID" : "3", "SubInstance" : "grp_data_exe_wb_Pipeline_l_data_b_fu_83", "Port" : "data_b", "Inst_start_state" : "5", "Inst_end_state" : "6"}]},
 			{"Name" : "data_result", "Type" : "Fifo", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "9", "SubInstance" : "grp_data_exe_wb_Pipeline_write_back_fu_104", "Port" : "data_result", "Inst_start_state" : "11", "Inst_end_state" : "12"},
-					{"ID" : "5", "SubInstance" : "grp_data_exe_wb_Pipeline_exe_fu_92", "Port" : "data_result", "Inst_start_state" : "8", "Inst_end_state" : "9"}]}]},
+					{"ID" : "5", "SubInstance" : "grp_data_exe_wb_Pipeline_exe_fu_92", "Port" : "data_result", "Inst_start_state" : "8", "Inst_end_state" : "9"},
+					{"ID" : "9", "SubInstance" : "grp_data_exe_wb_Pipeline_write_back_fu_104", "Port" : "data_result", "Inst_start_state" : "11", "Inst_end_state" : "12"}]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_data_exe_wb_Pipeline_l_data_a_fu_74", "Parent" : "0", "Child" : ["2"],
 		"CDFG" : "data_exe_wb_Pipeline_l_data_a",
 		"Protocol" : "ap_ctrl_hs",

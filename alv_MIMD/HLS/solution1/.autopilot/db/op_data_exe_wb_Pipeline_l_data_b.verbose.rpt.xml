@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'op_data_exe_wb_Pipeline_l_data_b'" level="0">
-<item name = "Date">Tue May 21 09:38:59 2024
+<item name = "Date">Sun May 19 16:11:29 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">HLS</item>
@@ -78,9 +78,9 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln54_fu_105_p2">+, 0, 0, 14, 6, 1</column>
-<column name="add_ln58_fu_123_p2">+, 0, 0, 71, 64, 64</column>
-<column name="icmp_ln54_fu_99_p2">icmp, 0, 0, 14, 6, 5</column>
+<column name="add_ln62_fu_105_p2">+, 0, 0, 14, 6, 1</column>
+<column name="add_ln66_fu_123_p2">+, 0, 0, 71, 64, 64</column>
+<column name="icmp_ln62_fu_99_p2">icmp, 0, 0, 14, 6, 5</column>
 <column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
@@ -94,7 +94,7 @@
 <column name="data_b_blk_n">9, 2, 1, 2</column>
 <column name="gmem1_blk_n_AR">9, 2, 1, 2</column>
 <column name="gmem1_blk_n_R">9, 2, 1, 2</column>
-<column name="i_4_fu_62">9, 2, 6, 12</column>
+<column name="i_3_fu_62">9, 2, 6, 12</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -121,7 +121,7 @@
 <column name="ap_loop_exit_ready_pp0_iter8_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter9_reg">1, 0, 1, 0</column>
 <column name="gmem1_addr_reg_165">64, 0, 64, 0</column>
-<column name="i_4_fu_62">6, 0, 6, 0</column>
+<column name="i_3_fu_62">6, 0, 6, 0</column>
 <column name="tmp_b_reg_171">32, 0, 32, 0</column>
 </table>
 </item>

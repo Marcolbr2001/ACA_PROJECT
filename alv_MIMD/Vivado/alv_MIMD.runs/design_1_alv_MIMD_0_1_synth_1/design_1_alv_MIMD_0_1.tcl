@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.runs/design_1_alv_MIMD_0_1_synth_1/design_1_alv_MIMD_0_1.tcl"
+  variable script "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.runs/design_1_alv_MIMD_0_1_synth_1/design_1_alv_MIMD_0_1.tcl"
   variable category "vivado_synth"
 }
 
@@ -78,21 +78,21 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.cache/wt [current_project]
-set_property parent.project_path C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.cache/wt [current_project]
+set_property parent.project_path C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {C:/Users/lotto/AppData/Roaming/Xilinx/Vivado/2023.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-set_property ip_repo_paths c:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/ip_repo [current_project]
+set_property ip_repo_paths c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/ip_repo [current_project]
 update_ip_catalog
-set_property ip_output_repo c:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.cache/ip [current_project]
+set_property ip_output_repo c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.srcs/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1.xci
-set_property used_in_implementation false [get_files -all c:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/constraints/alv_MIMD_ooc.xdc]
+read_ip -quiet C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.srcs/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1.xci
+set_property used_in_implementation false [get_files -all c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/constraints/alv_MIMD_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -108,7 +108,7 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 OPTRACE "Configure IP Cache" START { }
 
-set cacheID [config_ip_cache -export -no_bom  -dir C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.runs/design_1_alv_MIMD_0_1_synth_1 -new_name design_1_alv_MIMD_0_1 -ip [get_ips design_1_alv_MIMD_0_1]]
+set cacheID [config_ip_cache -export -no_bom  -dir C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.runs/design_1_alv_MIMD_0_1_synth_1 -new_name design_1_alv_MIMD_0_1 -ip [get_ips design_1_alv_MIMD_0_1]]
 
 OPTRACE "Configure IP Cache" END { }
 if { $cacheID == "" } {
@@ -163,32 +163,32 @@ create_report "design_1_alv_MIMD_0_1_synth_1_synth_report_utilization_0" "report
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  file copy -force C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.runs/design_1_alv_MIMD_0_1_synth_1/design_1_alv_MIMD_0_1.dcp c:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1.dcp
+  file copy -force C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.runs/design_1_alv_MIMD_0_1_synth_1/design_1_alv_MIMD_0_1.dcp c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub c:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1_stub.v
+  write_verilog -force -mode synth_stub c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub c:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1_stub.vhdl
+  write_vhdl -force -mode synth_stub c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim c:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1_sim_netlist.v
+  write_verilog -force -mode funcsim c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim c:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -198,32 +198,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.runs/design_1_alv_MIMD_0_1_synth_1/design_1_alv_MIMD_0_1.dcp c:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1.dcp
+  file copy -force C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.runs/design_1_alv_MIMD_0_1_synth_1/design_1_alv_MIMD_0_1.dcp c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.runs/design_1_alv_MIMD_0_1_synth_1/design_1_alv_MIMD_0_1_stub.v c:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1_stub.v
+  file rename -force C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.runs/design_1_alv_MIMD_0_1_synth_1/design_1_alv_MIMD_0_1_stub.v c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.runs/design_1_alv_MIMD_0_1_synth_1/design_1_alv_MIMD_0_1_stub.vhdl c:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1_stub.vhdl
+  file rename -force C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.runs/design_1_alv_MIMD_0_1_synth_1/design_1_alv_MIMD_0_1_stub.vhdl c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.runs/design_1_alv_MIMD_0_1_synth_1/design_1_alv_MIMD_0_1_sim_netlist.v c:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1_sim_netlist.v
+  file rename -force C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.runs/design_1_alv_MIMD_0_1_synth_1/design_1_alv_MIMD_0_1_sim_netlist.v c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.runs/design_1_alv_MIMD_0_1_synth_1/design_1_alv_MIMD_0_1_sim_netlist.vhdl c:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1_sim_netlist.vhdl
+  file rename -force C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.runs/design_1_alv_MIMD_0_1_synth_1/design_1_alv_MIMD_0_1_sim_netlist.vhdl c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -231,15 +231,15 @@ if { [catch {
 close [open .end.used_ip_cache.rst w]
 }; # end if cacheID 
 
-if {[file isdir C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.ip_user_files/ip/design_1_alv_MIMD_0_1]} {
+if {[file isdir C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.ip_user_files/ip/design_1_alv_MIMD_0_1]} {
   catch { 
-    file copy -force c:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1_stub.v C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.ip_user_files/ip/design_1_alv_MIMD_0_1
+    file copy -force c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1_stub.v C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.ip_user_files/ip/design_1_alv_MIMD_0_1
   }
 }
 
-if {[file isdir C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.ip_user_files/ip/design_1_alv_MIMD_0_1]} {
+if {[file isdir C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.ip_user_files/ip/design_1_alv_MIMD_0_1]} {
   catch { 
-    file copy -force c:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1_stub.vhdl C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/Vivado/alv_MIMD.ip_user_files/ip/design_1_alv_MIMD_0_1
+    file copy -force c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.gen/sources_1/bd/design_1/ip/design_1_alv_MIMD_0_1/design_1_alv_MIMD_0_1_stub.vhdl C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/Vivado/alv_MIMD.ip_user_files/ip/design_1_alv_MIMD_0_1
   }
 }
 file delete __synthesis_is_running__

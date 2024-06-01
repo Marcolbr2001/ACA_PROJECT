@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Tue May 21 09:42:38 2024
+| Date         : Sun May 19 16:20:02 2024
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_utilization -file bd_0_hls_inst_0_utilization_synth.rpt -pb bd_0_hls_inst_0_utilization_synth.pb
 | Design       : bd_0_hls_inst_0
@@ -153,14 +153,14 @@ Warning! LUT value is adjusted to account for LUT combining.
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     | 9949 |        Flop & Latch |
-| LUT3     | 3631 |                 LUT |
-| LUT2     | 2563 |                 LUT |
+| LUT3     | 3639 |                 LUT |
+| LUT2     | 2559 |                 LUT |
 | CARRY4   | 1084 |          CarryLogic |
-| LUT4     |  813 |                 LUT |
+| LUT4     |  811 |                 LUT |
 | LUT6     |  793 |                 LUT |
 | SRL16E   |  556 |  Distributed Memory |
 | LUT1     |  544 |                 LUT |
-| LUT5     |  440 |                 LUT |
+| LUT5     |  438 |                 LUT |
 | SRLC32E  |  318 |  Distributed Memory |
 | MUXF7    |   19 |               MuxFx |
 | FDSE     |   18 |        Flop & Latch |

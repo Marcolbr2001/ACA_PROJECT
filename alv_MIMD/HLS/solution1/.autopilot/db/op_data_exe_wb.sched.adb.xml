@@ -199,10 +199,10 @@ entry:24 %empty = wait i32 @_ssdm_op_Wait
 
 <Node id="39" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="32" op_3_bw="32" op_4_bw="0">
 <![CDATA[
-entry:25 %call_ln68 = call void @op_data_exe_wb_Pipeline_l_operation, i64 %op_read, i32 %gmem3, i32 %ALU_operation
+entry:25 %call_ln76 = call void @op_data_exe_wb_Pipeline_l_operation, i64 %op_read, i32 %gmem3, i32 %ALU_operation
 
 ]]></Node>
-<StgValue><ssdm name="call_ln68"/></StgValue>
+<StgValue><ssdm name="call_ln76"/></StgValue>
 </operation>
 </state>
 
@@ -217,10 +217,10 @@ entry:25 %call_ln68 = call void @op_data_exe_wb_Pipeline_l_operation, i64 %op_re
 
 <Node id="39" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="32" op_3_bw="32" op_4_bw="0">
 <![CDATA[
-entry:25 %call_ln68 = call void @op_data_exe_wb_Pipeline_l_operation, i64 %op_read, i32 %gmem3, i32 %ALU_operation
+entry:25 %call_ln76 = call void @op_data_exe_wb_Pipeline_l_operation, i64 %op_read, i32 %gmem3, i32 %ALU_operation
 
 ]]></Node>
-<StgValue><ssdm name="call_ln68"/></StgValue>
+<StgValue><ssdm name="call_ln76"/></StgValue>
 </operation>
 </state>
 
@@ -266,12 +266,12 @@ entry:27 %empty_38 = wait i32 @_ssdm_op_Wait
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="42" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="0">
+<Node id="42" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="32" op_3_bw="32" op_4_bw="0">
 <![CDATA[
-entry:28 %call_ln0 = call void @op_data_exe_wb_Pipeline_s_operation_data_op, i32 %ALU_operation_MEM, i32 %ALU_operation
+entry:28 %call_ln76 = call void @op_data_exe_wb_Pipeline_l_data_a, i64 %a_read, i32 %gmem0, i32 %data_a
 
 ]]></Node>
-<StgValue><ssdm name="call_ln0"/></StgValue>
+<StgValue><ssdm name="call_ln76"/></StgValue>
 </operation>
 </state>
 
@@ -284,12 +284,12 @@ entry:28 %call_ln0 = call void @op_data_exe_wb_Pipeline_s_operation_data_op, i32
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="42" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="0">
+<Node id="42" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="32" op_3_bw="32" op_4_bw="0">
 <![CDATA[
-entry:28 %call_ln0 = call void @op_data_exe_wb_Pipeline_s_operation_data_op, i32 %ALU_operation_MEM, i32 %ALU_operation
+entry:28 %call_ln76 = call void @op_data_exe_wb_Pipeline_l_data_a, i64 %a_read, i32 %gmem0, i32 %data_a
 
 ]]></Node>
-<StgValue><ssdm name="call_ln0"/></StgValue>
+<StgValue><ssdm name="call_ln76"/></StgValue>
 </operation>
 </state>
 
@@ -337,10 +337,10 @@ entry:30 %empty_40 = wait i32 @_ssdm_op_Wait
 
 <Node id="45" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="32" op_3_bw="32" op_4_bw="0">
 <![CDATA[
-entry:31 %call_ln68 = call void @op_data_exe_wb_Pipeline_l_data_a, i64 %a_read, i32 %gmem0, i32 %data_a
+entry:31 %call_ln76 = call void @op_data_exe_wb_Pipeline_l_data_b, i64 %b_read, i32 %gmem1, i32 %data_b
 
 ]]></Node>
-<StgValue><ssdm name="call_ln68"/></StgValue>
+<StgValue><ssdm name="call_ln76"/></StgValue>
 </operation>
 </state>
 
@@ -355,10 +355,10 @@ entry:31 %call_ln68 = call void @op_data_exe_wb_Pipeline_l_data_a, i64 %a_read, 
 
 <Node id="45" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="32" op_3_bw="32" op_4_bw="0">
 <![CDATA[
-entry:31 %call_ln68 = call void @op_data_exe_wb_Pipeline_l_data_a, i64 %a_read, i32 %gmem0, i32 %data_a
+entry:31 %call_ln76 = call void @op_data_exe_wb_Pipeline_l_data_b, i64 %b_read, i32 %gmem1, i32 %data_b
 
 ]]></Node>
-<StgValue><ssdm name="call_ln68"/></StgValue>
+<StgValue><ssdm name="call_ln76"/></StgValue>
 </operation>
 </state>
 
@@ -404,12 +404,12 @@ entry:33 %empty_42 = wait i32 @_ssdm_op_Wait
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="48" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="32" op_3_bw="32" op_4_bw="0">
+<Node id="48" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="0">
 <![CDATA[
-entry:34 %call_ln68 = call void @op_data_exe_wb_Pipeline_l_data_b, i64 %b_read, i32 %gmem1, i32 %data_b
+entry:34 %call_ln0 = call void @op_data_exe_wb_Pipeline_s_operation_data_op, i32 %ALU_operation_MEM, i32 %ALU_operation
 
 ]]></Node>
-<StgValue><ssdm name="call_ln68"/></StgValue>
+<StgValue><ssdm name="call_ln0"/></StgValue>
 </operation>
 </state>
 
@@ -422,12 +422,12 @@ entry:34 %call_ln68 = call void @op_data_exe_wb_Pipeline_l_data_b, i64 %b_read, 
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="48" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="32" op_3_bw="32" op_4_bw="0">
+<Node id="48" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="0">
 <![CDATA[
-entry:34 %call_ln68 = call void @op_data_exe_wb_Pipeline_l_data_b, i64 %b_read, i32 %gmem1, i32 %data_b
+entry:34 %call_ln0 = call void @op_data_exe_wb_Pipeline_s_operation_data_op, i32 %ALU_operation_MEM, i32 %ALU_operation
 
 ]]></Node>
-<StgValue><ssdm name="call_ln68"/></StgValue>
+<StgValue><ssdm name="call_ln0"/></StgValue>
 </operation>
 </state>
 
@@ -544,10 +544,10 @@ entry:39 %empty_46 = wait i32 @_ssdm_op_Wait
 
 <Node id="54" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="32" op_3_bw="32" op_4_bw="0" op_5_bw="0" op_6_bw="0">
 <![CDATA[
-entry:40 %call_ln68 = call void @op_data_exe_wb_Pipeline_write_back, i64 %c_read, i32 %gmem2, i32 %data_result
+entry:40 %call_ln76 = call void @op_data_exe_wb_Pipeline_write_back, i64 %c_read, i32 %gmem2, i32 %data_result
 
 ]]></Node>
-<StgValue><ssdm name="call_ln68"/></StgValue>
+<StgValue><ssdm name="call_ln76"/></StgValue>
 </operation>
 </state>
 
@@ -862,10 +862,10 @@ entry:19 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %g
 
 <Node id="54" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="32" op_3_bw="32" op_4_bw="0" op_5_bw="0" op_6_bw="0">
 <![CDATA[
-entry:40 %call_ln68 = call void @op_data_exe_wb_Pipeline_write_back, i64 %c_read, i32 %gmem2, i32 %data_result
+entry:40 %call_ln76 = call void @op_data_exe_wb_Pipeline_write_back, i64 %c_read, i32 %gmem2, i32 %data_result
 
 ]]></Node>
-<StgValue><ssdm name="call_ln68"/></StgValue>
+<StgValue><ssdm name="call_ln76"/></StgValue>
 </operation>
 
 <operation id="66" st_id="18" stage="1" lat="1">

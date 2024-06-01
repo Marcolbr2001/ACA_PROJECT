@@ -1,7 +1,7 @@
-# 1 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/HLS/core.cpp"
+# 1 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/HLS/core.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/HLS/core.cpp"
+# 1 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/HLS/core.cpp"
 # 1 "C:/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/stdio.h" 1 3
 # 10 "C:/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/stdio.h" 3
 # 1 "C:/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/crtdefs.h" 1 3
@@ -933,7 +933,7 @@ extern "C" {
 
 # 1 "C:/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/_mingw_print_pop.h" 1 3
 # 1038 "C:/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/stdio.h" 2 3
-# 2 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/HLS/core.cpp" 2
+# 2 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/HLS/core.cpp" 2
 # 1 "C:/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/string.h" 1 3
 # 22 "C:/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/string.h" 3
 extern "C" {
@@ -1149,7 +1149,7 @@ extern "C" {
 
 }
 # 192 "C:/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/string.h" 2 3
-# 3 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/HLS/core.cpp" 2
+# 3 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/HLS/core.cpp" 2
 
 
 
@@ -55294,7 +55294,7 @@ inline bool operator!=(
 }
 # 366 "C:/Xilinx/Vitis_HLS/2023.2/include/ap_fixed.h" 2
 # 361 "C:/Xilinx/Vitis_HLS/2023.2/include/ap_int.h" 2
-# 7 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/HLS/core.cpp" 2
+# 7 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/HLS/core.cpp" 2
 # 1 "C:/Xilinx/Vitis_HLS/2023.2/include/hls_stream.h" 1
 # 22 "C:/Xilinx/Vitis_HLS/2023.2/include/hls_stream.h"
 # 1 "C:/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/include/c++/6.2.0/queue" 1 3
@@ -78074,13 +78074,13 @@ public:
 };
 
 }
-# 8 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/HLS/core.cpp" 2
+# 8 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/HLS/core.cpp" 2
 
 
 
 
 
-void reset(hls::stream<int>&data_a, hls::stream<int>&data_b, hls::stream<int>&ALU_operation, int ALU_operation_MEM[])
+void reset(hls::stream<int>&data_a, hls::stream<int>&data_b, hls::stream<int>&ALU_operation, int data_a_MEM[], int data_b_MEM[], int ALU_operation_MEM[])
 {
 
 #pragma HLS INLINE
@@ -78099,6 +78099,14 @@ void reset(hls::stream<int>&data_a, hls::stream<int>&data_b, hls::stream<int>&AL
    {
     int x;
     x=ALU_operation.read();
+   }
+  clear_RAM_data_a : for(int i = 0; i < 50; i++)
+   {
+    data_a_MEM[i] = 0;
+   }
+  clear_RAM_data_b : for(int i = 0; i < 50; i++)
+   {
+    data_b_MEM[i] = 0;
    }
   clear_RAM_op : for(int i = 0; i < 50; i++)
    {
@@ -78143,9 +78151,10 @@ void load_op(volatile int op[], hls::stream<int>&ALU_operation)
   ALU_operation.write(tmp_op);
  }
 }
-
+# 109 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/HLS/core.cpp"
 void store_op(hls::stream<int>&ALU_operation, int ALU_operation_MEM[])
 {
+
  s_operation_data_op: for(int i = 0; i < 50; i++)
  {
 #pragma HLS PIPELINE II=1
@@ -78175,9 +78184,7 @@ void load_data_and_op(volatile int a[], volatile int b[],volatile int op[], hls:
  load_data_b(b, data_b);
 
 }
-
-
-
+# 154 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/HLS/core.cpp"
 void execute(hls::stream<int>&data_a,hls::stream<int>&data_b, int ALU_operation_MEM[], hls::stream<int>&data_result)
 {
 
@@ -78186,10 +78193,8 @@ void execute(hls::stream<int>&data_a,hls::stream<int>&data_b, int ALU_operation_
 #pragma HLS PIPELINE II=1
 
   int a,b;
-
   a=data_a.read();
   b=data_b.read();
-
   switch(ALU_operation_MEM[i])
   {
 
@@ -78251,30 +78256,28 @@ void write_back(hls::stream<int>&data_result, volatile int c[])
  }
 
 }
-
-
-
-
-void data_exe_wb(volatile int a[],volatile int b[], hls::stream<int>&data_a,hls::stream<int>&data_b, int ALU_operation_MEM[], hls::stream<int>&data_result, volatile int c[])
+# 238 "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/HLS/core.cpp"
+void data_exe_wb(volatile int a[],volatile int b[], hls::stream<int>&data_a,hls::stream<int>&data_b,int data_a_MEM[],int data_b_MEM[], int ALU_operation_MEM[], hls::stream<int>&data_result, volatile int c[])
 {
 
 
 
   load_data_a(a, data_a);
   load_data_b(b, data_b);
+
+
   execute(data_a, data_b, ALU_operation_MEM, data_result);
   write_back(data_result, c);
 
 }
 
-void op_data_exe_wb(volatile int a[],volatile int b[],volatile int op[],hls::stream<int>&data_a,hls::stream<int>&data_b, hls::stream<int>&ALU_operation,int ALU_operation_MEM[], hls::stream<int>&data_result,volatile int c[])
+void op_data_exe_wb(volatile int a[],volatile int b[],volatile int op[],hls::stream<int>&data_a,hls::stream<int>&data_b, hls::stream<int>&ALU_operation,int data_a_MEM[],int data_b_MEM[] ,int ALU_operation_MEM[], hls::stream<int>&data_result,volatile int c[])
 {
 
 
 
-  operation(op,ALU_operation,ALU_operation_MEM);
-  load_data_a(a, data_a);
-  load_data_b(b, data_b);
+  load_data_and_op(a, b, op, data_a, data_b, ALU_operation);
+  store_op(ALU_operation,ALU_operation_MEM);
   execute(data_a, data_b, ALU_operation_MEM, data_result);
   write_back(data_result, c);
 
@@ -78312,6 +78315,9 @@ void alv_MIMD(volatile int* a,volatile int* b, volatile int* c,volatile int* op,
 
 
  static int ALU_operation_MEM[50] = {0};
+ int data_a_MEM[50] = {0};
+ int data_b_MEM[50] = {0};
+ int data_result_MEM[50] = {0};
 
 #pragma HLS DATAFLOW
 
@@ -78326,19 +78332,19 @@ void alv_MIMD(volatile int* a,volatile int* b, volatile int* c,volatile int* op,
 
   case 1:
 
-   data_exe_wb(a, b, data_a, data_b, ALU_operation_MEM, data_result, c);
+   data_exe_wb(a, b, data_a, data_b, data_a_MEM, data_b_MEM, ALU_operation_MEM, data_result, c);
 
   break;
 
   case 2:
 
-   op_data_exe_wb(a, b, op ,data_a, data_b, ALU_operation, ALU_operation_MEM, data_result, c);
+   op_data_exe_wb(a, b, op ,data_a, data_b, ALU_operation, data_a_MEM, data_b_MEM, ALU_operation_MEM, data_result, c);
 
   break;
 
   default :
 
-   reset(data_a, data_b, ALU_operation, ALU_operation_MEM);
+   reset(data_a, data_b, ALU_operation,data_a_MEM,data_b_MEM, ALU_operation_MEM);
 
  }
 

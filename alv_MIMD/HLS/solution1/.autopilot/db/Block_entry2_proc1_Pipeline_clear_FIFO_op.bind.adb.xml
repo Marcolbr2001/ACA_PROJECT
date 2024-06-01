@@ -64,7 +64,7 @@ while.cond9.i:0 %tmp_2 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i32P0A, i32 %A
 
 <Node id="6" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-while.cond9.i:1 %br_ln28 = br i1 %tmp_2, void %for.cond.i.preheader.exitStub, void %while.body12.i
+while.cond9.i:1 %br_ln28 = br i1 %tmp_2, void %for.cond27.i.preheader.exitStub, void %while.body12.i
 
 ]]></Node>
 <StgValue><ssdm name="br_ln28"/></StgValue>
@@ -144,7 +144,7 @@ while.body12.i:3 %br_ln28 = br void %while.cond9.i
 
 <Node id="13" bw="0">
 <![CDATA[
-for.cond.i.preheader.exitStub:0 %ret_ln0 = ret
+for.cond27.i.preheader.exitStub:0 %ret_ln0 = ret
 
 ]]></Node>
 <StgValue><ssdm name="ret_ln0"/></StgValue>

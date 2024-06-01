@@ -1,116 +1,131 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-111" msg_severity="WARNING" msg_loc="HLS/core.cpp:244:13" msg_body="Static scalars and arrays declared inside a dataflow region will be treated like local variables"/>
-    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-114" msg_severity="WARNING" msg_loc="HLS/core.cpp:246:9" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-111" msg_severity="WARNING" msg_loc="HLS/core.cpp:295:13" msg_body="Static scalars and arrays declared inside a dataflow region will be treated like local variables"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-114" msg_severity="WARNING" msg_loc="HLS/core.cpp:300:9" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="HLS/core.cpp:238:105" msg_body="unused parameter 'data_a_MEM'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="HLS/core.cpp:238:122" msg_body="unused parameter 'data_b_MEM'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="HLS/core.cpp:252:157" msg_body="unused parameter 'data_a_MEM'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="HLS/core.cpp:252:174" msg_body="unused parameter 'data_b_MEM'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:16:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="reset" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:45:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:53:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="load_data_a" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:56:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:64:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="load_data_b" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:70:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:78:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="load_op" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:81:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:114:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="store_op" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:101:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:134:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="load_data_and_op" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:116:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:159:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="execute" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:179:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:220:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="write_back" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/HLS/solution1/csynth.tcl:17:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/HLS/solution1/csynth.tcl:17:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=alv_MIMD" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/HLS/solution1/directives.tcl:7:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaContext="directive" ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=alv_MIMD" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:215:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:266:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=a" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:216:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:267:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=b" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:217:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:268:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=c" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:218:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:269:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=op" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:219:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:270:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=selec" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:221:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:272:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=control port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:223:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:274:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=a bundle=gmem0 depth=50 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:224:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:275:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=b bundle=gmem1 depth=50 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:225:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:276:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=c bundle=gmem2 depth=50 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:226:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:277:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=op bundle=gmem3 depth=50 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:229:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:280:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=data_a depth=50" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:233:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:284:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=data_b depth=50" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:237:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:288:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=data_result depth=50" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:241:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:292:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=ALU_operation depth=50" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:246:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS/core.cpp:300:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="alv_MIMD" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="HLS/core.cpp:271:4" msg_body="Inlining function 'reset(hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*)' into 'alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)'">
-        <args Callee="reset(hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*)" Callee-DebugLoc="File HLS/core.cpp Line 14 Column 0" Caller="alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)" Caller-DebugLoc="File HLS/core.cpp Line 213 Column 0"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="HLS/core.cpp:257:3" msg_body="Inlining function 'load_data_and_op(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;)' into 'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
+        <args Callee="load_data_and_op(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;)" Callee-DebugLoc="File HLS/core.cpp Line 132 Column 0" Caller="op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 253 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:90:0" msg_body="Inlining function 'load_op(int volatile*, hls::stream&lt;int, 0&gt;&amp;)' into 'operation(int volatile*, hls::stream&lt;int, 0&gt;&amp;, int*)'">
-        <args Callee="load_op(int volatile*, hls::stream&lt;int, 0&gt;&amp;)" Callee-DebugLoc="File HLS/core.cpp Line 66 Column 0" Caller="operation(int volatile*, hls::stream&lt;int, 0&gt;&amp;, int*)" Caller-DebugLoc="File HLS/core.cpp Line 90 Column 0"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="HLS/core.cpp:325:4" msg_body="Inlining function 'reset(hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*)' into 'alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)'">
+        <args Callee="reset(hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*)" Callee-DebugLoc="File HLS/core.cpp Line 14 Column 0" Caller="alv_MIMD(int volatile*, int volatile*, int volatile*, int volatile*, int)" Caller-DebugLoc="File HLS/core.cpp Line 264 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:90:0" msg_body="Inlining function 'store_op(hls::stream&lt;int, 0&gt;&amp;, int*)' into 'operation(int volatile*, hls::stream&lt;int, 0&gt;&amp;, int*)'">
-        <args Callee="store_op(hls::stream&lt;int, 0&gt;&amp;, int*)" Callee-DebugLoc="File HLS/core.cpp Line 78 Column 0" Caller="operation(int volatile*, hls::stream&lt;int, 0&gt;&amp;, int*)" Caller-DebugLoc="File HLS/core.cpp Line 90 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:123:0" msg_body="Inlining function 'load_op(int volatile*, hls::stream&lt;int, 0&gt;&amp;)' into 'operation(int volatile*, hls::stream&lt;int, 0&gt;&amp;, int*)'">
+        <args Callee="load_op(int volatile*, hls::stream&lt;int, 0&gt;&amp;)" Callee-DebugLoc="File HLS/core.cpp Line 74 Column 0" Caller="operation(int volatile*, hls::stream&lt;int, 0&gt;&amp;, int*)" Caller-DebugLoc="File HLS/core.cpp Line 123 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:189:0" msg_body="Inlining function 'load_data_a(int volatile*, hls::stream&lt;int, 0&gt;&amp;)' into 'data_exe_wb(int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
-        <args Callee="load_data_a(int volatile*, hls::stream&lt;int, 0&gt;&amp;)" Callee-DebugLoc="File HLS/core.cpp Line 42 Column 0" Caller="data_exe_wb(int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 189 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:123:0" msg_body="Inlining function 'store_op(hls::stream&lt;int, 0&gt;&amp;, int*)' into 'operation(int volatile*, hls::stream&lt;int, 0&gt;&amp;, int*)'">
+        <args Callee="store_op(hls::stream&lt;int, 0&gt;&amp;, int*)" Callee-DebugLoc="File HLS/core.cpp Line 110 Column 0" Caller="operation(int volatile*, hls::stream&lt;int, 0&gt;&amp;, int*)" Caller-DebugLoc="File HLS/core.cpp Line 123 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:189:0" msg_body="Inlining function 'load_data_b(int volatile*, hls::stream&lt;int, 0&gt;&amp;)' into 'data_exe_wb(int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
-        <args Callee="load_data_b(int volatile*, hls::stream&lt;int, 0&gt;&amp;)" Callee-DebugLoc="File HLS/core.cpp Line 53 Column 0" Caller="data_exe_wb(int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 189 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:239:0" msg_body="Inlining function 'load_data_a(int volatile*, hls::stream&lt;int, 0&gt;&amp;)' into 'data_exe_wb(int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
+        <args Callee="load_data_a(int volatile*, hls::stream&lt;int, 0&gt;&amp;)" Callee-DebugLoc="File HLS/core.cpp Line 50 Column 0" Caller="data_exe_wb(int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 239 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:189:0" msg_body="Inlining function 'execute(hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;)' into 'data_exe_wb(int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
-        <args Callee="execute(hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;)" Callee-DebugLoc="File HLS/core.cpp Line 112 Column 0" Caller="data_exe_wb(int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 189 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:239:0" msg_body="Inlining function 'load_data_b(int volatile*, hls::stream&lt;int, 0&gt;&amp;)' into 'data_exe_wb(int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
+        <args Callee="load_data_b(int volatile*, hls::stream&lt;int, 0&gt;&amp;)" Callee-DebugLoc="File HLS/core.cpp Line 61 Column 0" Caller="data_exe_wb(int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 239 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:189:0" msg_body="Inlining function 'write_back(hls::stream&lt;int, 0&gt;&amp;, int volatile*)' into 'data_exe_wb(int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
-        <args Callee="write_back(hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Callee-DebugLoc="File HLS/core.cpp Line 176 Column 0" Caller="data_exe_wb(int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 189 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:239:0" msg_body="Inlining function 'execute(hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;)' into 'data_exe_wb(int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
+        <args Callee="execute(hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;)" Callee-DebugLoc="File HLS/core.cpp Line 155 Column 0" Caller="data_exe_wb(int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 239 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:201:0" msg_body="Inlining function 'operation(int volatile*, hls::stream&lt;int, 0&gt;&amp;, int*)' into 'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
-        <args Callee="operation(int volatile*, hls::stream&lt;int, 0&gt;&amp;, int*)" Callee-DebugLoc="File HLS/core.cpp Line 90 Column 0" Caller="op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 201 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:239:0" msg_body="Inlining function 'write_back(hls::stream&lt;int, 0&gt;&amp;, int volatile*)' into 'data_exe_wb(int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
+        <args Callee="write_back(hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Callee-DebugLoc="File HLS/core.cpp Line 217 Column 0" Caller="data_exe_wb(int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 239 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:201:0" msg_body="Inlining function 'load_data_a(int volatile*, hls::stream&lt;int, 0&gt;&amp;)' into 'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
-        <args Callee="load_data_a(int volatile*, hls::stream&lt;int, 0&gt;&amp;)" Callee-DebugLoc="File HLS/core.cpp Line 42 Column 0" Caller="op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 201 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:253:0" msg_body="Inlining function 'load_op(int volatile*, hls::stream&lt;int, 0&gt;&amp;)' into 'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
+        <args Callee="load_op(int volatile*, hls::stream&lt;int, 0&gt;&amp;)" Callee-DebugLoc="File HLS/core.cpp Line 74 Column 0" Caller="op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 253 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:201:0" msg_body="Inlining function 'load_data_b(int volatile*, hls::stream&lt;int, 0&gt;&amp;)' into 'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
-        <args Callee="load_data_b(int volatile*, hls::stream&lt;int, 0&gt;&amp;)" Callee-DebugLoc="File HLS/core.cpp Line 53 Column 0" Caller="op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 201 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:253:0" msg_body="Inlining function 'load_data_a(int volatile*, hls::stream&lt;int, 0&gt;&amp;)' into 'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
+        <args Callee="load_data_a(int volatile*, hls::stream&lt;int, 0&gt;&amp;)" Callee-DebugLoc="File HLS/core.cpp Line 50 Column 0" Caller="op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 253 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:201:0" msg_body="Inlining function 'execute(hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;)' into 'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
-        <args Callee="execute(hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;)" Callee-DebugLoc="File HLS/core.cpp Line 112 Column 0" Caller="op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 201 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:253:0" msg_body="Inlining function 'load_data_b(int volatile*, hls::stream&lt;int, 0&gt;&amp;)' into 'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
+        <args Callee="load_data_b(int volatile*, hls::stream&lt;int, 0&gt;&amp;)" Callee-DebugLoc="File HLS/core.cpp Line 61 Column 0" Caller="op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 253 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:201:0" msg_body="Inlining function 'write_back(hls::stream&lt;int, 0&gt;&amp;, int volatile*)' into 'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
-        <args Callee="write_back(hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Callee-DebugLoc="File HLS/core.cpp Line 176 Column 0" Caller="op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 201 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:253:0" msg_body="Inlining function 'store_op(hls::stream&lt;int, 0&gt;&amp;, int*)' into 'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
+        <args Callee="store_op(hls::stream&lt;int, 0&gt;&amp;, int*)" Callee-DebugLoc="File HLS/core.cpp Line 110 Column 0" Caller="op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 253 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:253:0" msg_body="Inlining function 'execute(hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;)' into 'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
+        <args Callee="execute(hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, hls::stream&lt;int, 0&gt;&amp;)" Callee-DebugLoc="File HLS/core.cpp Line 155 Column 0" Caller="op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 253 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="HLS/core.cpp:253:0" msg_body="Inlining function 'write_back(hls::stream&lt;int, 0&gt;&amp;, int volatile*)' into 'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)'">
+        <args Callee="write_back(hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Callee-DebugLoc="File HLS/core.cpp Line 217 Column 0" Caller="op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, int*, int*, int*, hls::stream&lt;int, 0&gt;&amp;, int volatile*)" Caller-DebugLoc="File HLS/core.cpp Line 253 Column 0"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

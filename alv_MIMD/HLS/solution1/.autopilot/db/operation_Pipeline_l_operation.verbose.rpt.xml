@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'operation_Pipeline_l_operation'" level="0">
-<item name = "Date">Tue May 21 09:39:01 2024
+<item name = "Date">Sun May 19 16:11:31 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">HLS</item>
@@ -78,9 +78,9 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln68_fu_105_p2">+, 0, 0, 14, 6, 1</column>
-<column name="add_ln72_fu_123_p2">+, 0, 0, 71, 64, 64</column>
-<column name="icmp_ln68_fu_99_p2">icmp, 0, 0, 14, 6, 5</column>
+<column name="add_ln76_fu_105_p2">+, 0, 0, 14, 6, 1</column>
+<column name="add_ln80_fu_123_p2">+, 0, 0, 71, 64, 64</column>
+<column name="icmp_ln76_fu_99_p2">icmp, 0, 0, 14, 6, 5</column>
 <column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>

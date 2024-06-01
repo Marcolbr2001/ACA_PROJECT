@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'op_data_exe_wb_Pipeline_exe'" level="0">
-<item name = "Date">Tue May 21 09:39:00 2024
+<item name = "Date">Sun May 19 16:11:30 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">HLS</item>
@@ -80,22 +80,22 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln114_fu_121_p2">+, 0, 0, 14, 6, 1</column>
-<column name="add_ln127_fu_274_p2">+, 0, 0, 39, 32, 5</column>
-<column name="add_ln131_fu_268_p2">+, 0, 0, 39, 32, 5</column>
-<column name="add_ln152_fu_175_p2">+, 0, 0, 39, 32, 32</column>
-<column name="sub_ln144_1_fu_228_p2">-, 0, 0, 39, 1, 32</column>
-<column name="sub_ln144_fu_155_p2">-, 0, 0, 39, 1, 32</column>
-<column name="sub_ln148_1_fu_190_p2">-, 0, 0, 39, 1, 32</column>
-<column name="sub_ln148_fu_140_p2">-, 0, 0, 39, 1, 32</column>
-<column name="sub_ln156_fu_170_p2">-, 0, 0, 39, 32, 32</column>
+<column name="add_ln157_fu_121_p2">+, 0, 0, 14, 6, 1</column>
+<column name="add_ln168_fu_274_p2">+, 0, 0, 39, 32, 5</column>
+<column name="add_ln172_fu_268_p2">+, 0, 0, 39, 32, 5</column>
+<column name="add_ln193_fu_175_p2">+, 0, 0, 39, 32, 32</column>
+<column name="sub_ln185_1_fu_228_p2">-, 0, 0, 39, 1, 32</column>
+<column name="sub_ln185_fu_155_p2">-, 0, 0, 39, 1, 32</column>
+<column name="sub_ln189_1_fu_190_p2">-, 0, 0, 39, 1, 32</column>
+<column name="sub_ln189_fu_140_p2">-, 0, 0, 39, 1, 32</column>
+<column name="sub_ln197_fu_170_p2">-, 0, 0, 39, 32, 32</column>
 <column name="ap_predicate_op144_write_state39">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln114_fu_115_p2">icmp, 0, 0, 14, 6, 5</column>
+<column name="icmp_ln157_fu_115_p2">icmp, 0, 0, 14, 6, 5</column>
 <column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state2_pp0_stage0_iter1">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state39_pp0_stage0_iter38">or, 0, 0, 2, 1, 1</column>
-<column name="select_ln144_fu_247_p3">select, 0, 0, 32, 1, 32</column>
-<column name="select_ln148_fu_209_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln185_fu_247_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln189_fu_209_p3">select, 0, 0, 32, 1, 32</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -103,12 +103,12 @@
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
-<column name="ap_sig_allocacmp_i_5">9, 2, 6, 12</column>
+<column name="ap_sig_allocacmp_i">9, 2, 6, 12</column>
 <column name="data_a_blk_n">9, 2, 1, 2</column>
 <column name="data_b_blk_n">9, 2, 1, 2</column>
 <column name="data_result_blk_n">9, 2, 1, 2</column>
 <column name="data_result_din">65, 12, 32, 384</column>
-<column name="i_fu_66">9, 2, 6, 12</column>
+<column name="i_5_fu_66">9, 2, 6, 12</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -203,12 +203,12 @@
 <column name="ap_predicate_pred296_state39">1, 0, 1, 0</column>
 <column name="ap_predicate_pred301_state39">1, 0, 1, 0</column>
 <column name="b_reg_309">32, 0, 32, 0</column>
-<column name="i_5_reg_287">6, 0, 6, 0</column>
-<column name="i_fu_66">6, 0, 6, 0</column>
-<column name="lshr_ln144_1_reg_346">31, 0, 31, 0</column>
-<column name="lshr_ln148_1_reg_341">31, 0, 31, 0</column>
-<column name="mul_ln160_reg_336">32, 0, 32, 0</column>
-<column name="sdiv_ln164_reg_331">32, 0, 32, 0</column>
+<column name="i_5_fu_66">6, 0, 6, 0</column>
+<column name="i_reg_287">6, 0, 6, 0</column>
+<column name="lshr_ln185_1_reg_346">31, 0, 31, 0</column>
+<column name="lshr_ln189_1_reg_341">31, 0, 31, 0</column>
+<column name="mul_ln201_reg_336">32, 0, 32, 0</column>
+<column name="sdiv_ln205_reg_331">32, 0, 32, 0</column>
 <column name="ALU_operation_MEM_load_reg_327">64, 32, 32, 0</column>
 <column name="a_reg_296">64, 32, 32, 0</column>
 <column name="b_reg_309">64, 32, 32, 0</column>

@@ -46,13 +46,13 @@
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>HLS/core.cpp:54~HLS/core.cpp:194</SourceLocation>
+<SourceLocation>HLS/core.cpp:62~HLS/core.cpp:244</SourceLocation>
 <SummaryOfLoopViolations>
 <l_data_b>
 <Name>l_data_b</Name>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>HLS/core.cpp:54~HLS/core.cpp:194</SourceLocation>
+<SourceLocation>HLS/core.cpp:62~HLS/core.cpp:244</SourceLocation>
 </l_data_b>
 </SummaryOfLoopViolations>
 </SummaryOfViolations>

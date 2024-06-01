@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/lotto/Desktop/Alveare/M_AXI_ALU_new/alv_MIMD/HLS/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1'
+HD_PWD='C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_MIMD/HLS/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

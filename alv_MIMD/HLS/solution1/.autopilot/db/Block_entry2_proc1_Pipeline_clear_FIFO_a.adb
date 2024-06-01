@@ -74,7 +74,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>25</coreId>
+              <coreId>807414900</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -108,7 +108,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="11" tracking_level="0" version="0">
-                  <first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+                  <first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
                   <second class_id="12" tracking_level="0" version="0">
                     <count>2</count>
                     <item_version>0</item_version>
@@ -117,7 +117,7 @@
                         <first>HLS/core.cpp</first>
                         <second>alv_MIMD</second>
                       </first>
-                      <second>271</second>
+                      <second>325</second>
                     </item>
                     <item>
                       <first>
@@ -173,7 +173,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+                  <first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -182,7 +182,7 @@
                         <first>HLS/core.cpp</first>
                         <second>alv_MIMD</second>
                       </first>
-                      <second>271</second>
+                      <second>325</second>
                     </item>
                     <item>
                       <first>
@@ -202,7 +202,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1730555936</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -238,7 +238,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+                  <first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -247,7 +247,7 @@
                         <first>HLS/core.cpp</first>
                         <second>alv_MIMD</second>
                       </first>
-                      <second>271</second>
+                      <second>325</second>
                     </item>
                     <item>
                       <first>
@@ -303,7 +303,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU_new\alv_MIMD</first>
+                  <first>C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_MIMD</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -312,7 +312,7 @@
                         <first>HLS/core.cpp</first>
                         <second>alv_MIMD</second>
                       </first>
-                      <second>271</second>
+                      <second>325</second>
                     </item>
                     <item>
                       <first>
@@ -332,7 +332,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1935961711</coreId>
+              <coreId>1869635878</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -374,7 +374,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>876098606</coreId>
+              <coreId>1702129263</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -419,7 +419,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1702129263</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -453,7 +453,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>0</coreId>
+            <coreId>2020173413</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -484,7 +484,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>0</coreId>
+            <coreId>4228300630</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -516,7 +516,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>0</coreId>
+            <coreId>570456436</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
