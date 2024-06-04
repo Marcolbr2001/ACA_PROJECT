@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Jun  4 12:47:48 2024
+# Process ID: 17380
+# Current directory: C:/Users/marco/Desktop/M_AXI_ALU/M_AXI_ALU/template
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20880 C:\Users\marco\Desktop\M_AXI_ALU\M_AXI_ALU\template\template.xpr
+# Log file: C:/Users/marco/Desktop/M_AXI_ALU/M_AXI_ALU/template/vivado.log
+# Journal file: C:/Users/marco/Desktop/M_AXI_ALU/M_AXI_ALU/template\vivado.jou
+#-----------------------------------------------------------
+start_gui
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  4 12:48:18 2024...

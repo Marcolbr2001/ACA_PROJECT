@@ -54,22 +54,22 @@ begin
     data_not_empty              <= data_a_empty_n nor data_b_empty_n;   -- vedere se le fifo hanno dati
     ALU_operation_MEM_address0  <= ALU_operation_MEM_address0_sgn;
 
-    with exe_state select ap_idle <= 
-        '1' when IDLE,
-        '0' when Others;
+    --with exe_state select ap_ready <= 
+    --    '1' when RECEIVE_DATA,
+    --    '0' when Others;
+
+    --with exe_state select ap_idle <= 
+    --    '1' when IDLE,
+    --    '0' when Others;
 
     with exe_state select data_result_write <= 
         '1' when SEND_DATA,
         '0' when Others;
 
-    ap_ready    <= '1' when (exe_state = RECEIVE_DATA) or (exe_state = IDLE) else '0';
- 
-    data_a_read <= '1' when exe_state = RECEIVE_DATA and data_not_empty = '1' else '0'; -- Data Read is performed immediately
-    data_b_read <= '1' when exe_state = RECEIVE_DATA and data_not_empty = '1' else '0'; -- Data Read is performed immediately
-
-    ap_done <= '1' when (exe_state = SEND_DATA) and (data_result_full_n = '0') else '0'; -- Done when processed data is given at the output
+    --ap_done <= '1' when ((exe_state = SEND_DATA) and (data_result_full_n = '0') and (unsigned(ALU_operation_MEM_address0_sgn) = DATA_LENGTH - 1)) else '0';
         
-    with exe_state select data_result_din <=    -- Return occurs contemporary to rising edge of ap_done
+
+    with exe_state select data_result_din <=
         data_result_sgn	    when SEND_DATA,  
         (others => '-')		when Others;
 
@@ -90,24 +90,34 @@ begin
 
                     when IDLE =>
 
-                        if (ap_start = '1') then
+                        --if (ap_start = '1') then
 
-                            exe_state <= RECEIVE_DATA;
+                            exe_state <= DATA_REQUEST;
 
-                        end if;
+                        --end if;
+
+                    when DATA_REQUEST =>
+
+                        data_a_read <= '1';
+                        data_b_read <= '1';
+
+                        exe_state   <= RECEIVE_DATA; 
 
                     when RECEIVE_DATA =>
 
-                        if(data_not_empty = '1') then -- Data Read is performed immediately
-                            
+                        if (data_not_empty = '1') then
+
                             data_a <= data_a_dout;
                             data_b <= data_b_dout;
+
+                            data_a_read <= '0'; -- Do not Read FIFO Anymore
+                            data_b_read <= '0';
 
                             exe_state <= EXECUTION;
 
                         else
 
-                            exe_state <= RECEIVE_DATA;
+                            exe_state <= DATA_REQUEST;
 
                         end if;
 
@@ -133,24 +143,16 @@ begin
                                     
                                     ALU_operation_MEM_address0_sgn <= (Others => '0');
 
+                                    exe_state <= IDLE;
+
                                 else
 
                                     ALU_operation_MEM_address0_sgn <= std_logic_vector(unsigned(ALU_operation_MEM_address0_sgn) + 1);
 
-                                end if;
-
-                                if (ap_start = '1') then
-
-                                    exe_state <= RECEIVE_DATA;  -- If start is high when done is asserted, the 
-                                                                -- design will not enter the idle state and 
-                                                                -- The block starts to execute the next 
-                                                                -- transaction immediately
-
-                                else
-
-                                    exe_state <= IDLE;
+                                    exe_state <= DATA_REQUEST;
 
                                 end if;
+
                             
                             else
                             
