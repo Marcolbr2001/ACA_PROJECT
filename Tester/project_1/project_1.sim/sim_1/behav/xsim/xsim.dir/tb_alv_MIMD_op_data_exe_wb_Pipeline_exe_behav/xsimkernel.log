@@ -1,4 +1,0 @@
-Running: xsim.dir/tb_alv_MIMD_op_data_exe_wb_Pipeline_exe_behav/xsimk.exe -simmode gui -wdb tb_alv_MIMD_op_data_exe_wb_Pipeline_exe_behav.wdb -simrunnum 0 -socket 50366
-Design successfully loaded
-Design Loading Memory Usage: 8104 KB (Peak: 8104 KB)
-Design Loading CPU Usage: 0 ms
