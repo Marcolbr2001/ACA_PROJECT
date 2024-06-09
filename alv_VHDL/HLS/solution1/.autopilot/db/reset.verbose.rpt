@@ -1,0 +1,561 @@
+
+
+================================================================
+== Vitis HLS Report for 'reset'
+================================================================
+* Date:           Sun Jun  9 09:50:18 2024
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        alv_VHDL
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.667 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------+-----------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                       |                             |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                Instance               |            Module           |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +---------------------------------------+-----------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_reset_Pipeline_clear_FIFO_a_fu_28  |reset_Pipeline_clear_FIFO_a  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |grp_reset_Pipeline_clear_FIFO_b_fu_34  |reset_Pipeline_clear_FIFO_b  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |grp_reset_Pipeline_clear_ALU_op_fu_40  |reset_Pipeline_clear_ALU_op  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |grp_reset_Pipeline_clear_RAM_op_fu_46  |reset_Pipeline_clear_RAM_op  |       52|       52|  0.520 us|  0.520 us|   52|   52|       no|
+        +---------------------------------------+-----------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      2|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|      14|    121|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     75|    -|
+|Register         |        -|    -|      12|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      26|    198|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------+-----------------------------+---------+----+---+----+-----+
+    |                Instance               |            Module           | BRAM_18K| DSP| FF| LUT| URAM|
+    +---------------------------------------+-----------------------------+---------+----+---+----+-----+
+    |grp_reset_Pipeline_clear_ALU_op_fu_40  |reset_Pipeline_clear_ALU_op  |        0|   0|  2|  22|    0|
+    |grp_reset_Pipeline_clear_FIFO_a_fu_28  |reset_Pipeline_clear_FIFO_a  |        0|   0|  2|  22|    0|
+    |grp_reset_Pipeline_clear_FIFO_b_fu_34  |reset_Pipeline_clear_FIFO_b  |        0|   0|  2|  22|    0|
+    |grp_reset_Pipeline_clear_RAM_op_fu_46  |reset_Pipeline_clear_RAM_op  |        0|   0|  8|  55|    0|
+    +---------------------------------------+-----------------------------+---------+----+---+----+-----+
+    |Total                                  |                             |        0|   0| 14| 121|    0|
+    +---------------------------------------+-----------------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |          Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state8_on_subcall_done  |        or|   0|  0|   2|           1|           1|
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |Total                            |          |   0|  0|   2|           1|           1|
+    +---------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------+----+-----------+-----+-----------+
+    |        Name        | LUT| Input Size| Bits| Total Bits|
+    +--------------------+----+-----------+-----+-----------+
+    |ALU_operation_read  |   9|          2|    1|          2|
+    |ap_NS_fsm           |  48|          9|    1|          9|
+    |data_a_read         |   9|          2|    1|          2|
+    |data_b_read         |   9|          2|    1|          2|
+    +--------------------+----+-----------+-----+-----------+
+    |Total               |  75|         15|    4|         15|
+    +--------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------+---+----+-----+-----------+
+    |                        Name                        | FF| LUT| Bits| Const Bits|
+    +----------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                           |  8|   0|    8|          0|
+    |grp_reset_Pipeline_clear_ALU_op_fu_40_ap_start_reg  |  1|   0|    1|          0|
+    |grp_reset_Pipeline_clear_FIFO_a_fu_28_ap_start_reg  |  1|   0|    1|          0|
+    |grp_reset_Pipeline_clear_FIFO_b_fu_34_ap_start_reg  |  1|   0|    1|          0|
+    |grp_reset_Pipeline_clear_RAM_op_fu_46_ap_start_reg  |  1|   0|    1|          0|
+    +----------------------------------------------------+---+----+-----+-----------+
+    |Total                                               | 12|   0|   12|          0|
+    +----------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+-------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++----------------------------+-----+-----+------------+-------------------+--------------+
+|ap_clk                      |   in|    1|  ap_ctrl_hs|              reset|  return value|
+|ap_rst                      |   in|    1|  ap_ctrl_hs|              reset|  return value|
+|ap_start                    |   in|    1|  ap_ctrl_hs|              reset|  return value|
+|ap_done                     |  out|    1|  ap_ctrl_hs|              reset|  return value|
+|ap_idle                     |  out|    1|  ap_ctrl_hs|              reset|  return value|
+|ap_ready                    |  out|    1|  ap_ctrl_hs|              reset|  return value|
+|data_a_dout                 |   in|   32|     ap_fifo|             data_a|       pointer|
+|data_a_empty_n              |   in|    1|     ap_fifo|             data_a|       pointer|
+|data_a_read                 |  out|    1|     ap_fifo|             data_a|       pointer|
+|data_b_dout                 |   in|   32|     ap_fifo|             data_b|       pointer|
+|data_b_empty_n              |   in|    1|     ap_fifo|             data_b|       pointer|
+|data_b_read                 |  out|    1|     ap_fifo|             data_b|       pointer|
+|ALU_operation_dout          |   in|   32|     ap_fifo|      ALU_operation|       pointer|
+|ALU_operation_empty_n       |   in|    1|     ap_fifo|      ALU_operation|       pointer|
+|ALU_operation_read          |  out|    1|     ap_fifo|      ALU_operation|       pointer|
+|ALU_operation_MEM_address0  |  out|    6|   ap_memory|  ALU_operation_MEM|         array|
+|ALU_operation_MEM_ce0       |  out|    1|   ap_memory|  ALU_operation_MEM|         array|
+|ALU_operation_MEM_we0       |  out|    1|   ap_memory|  ALU_operation_MEM|         array|
+|ALU_operation_MEM_d0        |  out|   32|   ap_memory|  ALU_operation_MEM|         array|
++----------------------------+-----+-----+------------+-------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 9 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [2/2] (0.00ns)   --->   "%call_ln0 = call void @reset_Pipeline_clear_FIFO_a, i32 %data_a"   --->   Operation 10 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 11 [1/2] (0.00ns)   --->   "%call_ln0 = call void @reset_Pipeline_clear_FIFO_a, i32 %data_a"   --->   Operation 11 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 12 [1/1] (0.00ns)   --->   "%empty_35 = wait i32 @_ssdm_op_Wait"   --->   Operation 12 'wait' 'empty_35' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 13 [1/1] (0.00ns)   --->   "%empty_36 = wait i32 @_ssdm_op_Wait"   --->   Operation 13 'wait' 'empty_36' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 14 [2/2] (0.00ns)   --->   "%call_ln0 = call void @reset_Pipeline_clear_FIFO_b, i32 %data_b"   --->   Operation 14 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 15 [1/2] (0.00ns)   --->   "%call_ln0 = call void @reset_Pipeline_clear_FIFO_b, i32 %data_b"   --->   Operation 15 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 16 [1/1] (0.00ns)   --->   "%empty_37 = wait i32 @_ssdm_op_Wait"   --->   Operation 16 'wait' 'empty_37' <Predicate = true> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 17 [1/1] (0.00ns)   --->   "%empty_38 = wait i32 @_ssdm_op_Wait"   --->   Operation 17 'wait' 'empty_38' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 18 [2/2] (0.00ns)   --->   "%call_ln0 = call void @reset_Pipeline_clear_ALU_op, i32 %ALU_operation"   --->   Operation 18 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 19 [2/2] (0.00ns)   --->   "%call_ln0 = call void @reset_Pipeline_clear_RAM_op, i32 %ALU_operation_MEM"   --->   Operation 19 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ALU_operation, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ALU_operation, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ALU_operation, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ALU_operation, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_a, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_a, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_a, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_a, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_b, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_b, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_b, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 30 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_b, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_b, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_a, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ALU_operation, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 35 [1/2] (0.00ns)   --->   "%call_ln0 = call void @reset_Pipeline_clear_ALU_op, i32 %ALU_operation"   --->   Operation 35 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 36 [1/2] (0.00ns)   --->   "%call_ln0 = call void @reset_Pipeline_clear_RAM_op, i32 %ALU_operation_MEM"   --->   Operation 36 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 37 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 37 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ data_a]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ data_b]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ ALU_operation]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ ALU_operation_MEM]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+empty             (wait         ) [ 000000000]
+call_ln0          (call         ) [ 000000000]
+empty_35          (wait         ) [ 000000000]
+empty_36          (wait         ) [ 000000000]
+call_ln0          (call         ) [ 000000000]
+empty_37          (wait         ) [ 000000000]
+empty_38          (wait         ) [ 000000000]
+specinterface_ln0 (specinterface) [ 000000000]
+specinterface_ln0 (specinterface) [ 000000000]
+specinterface_ln0 (specinterface) [ 000000000]
+specinterface_ln0 (specinterface) [ 000000000]
+specinterface_ln0 (specinterface) [ 000000000]
+specinterface_ln0 (specinterface) [ 000000000]
+specinterface_ln0 (specinterface) [ 000000000]
+specinterface_ln0 (specinterface) [ 000000000]
+specinterface_ln0 (specinterface) [ 000000000]
+specinterface_ln0 (specinterface) [ 000000000]
+specinterface_ln0 (specinterface) [ 000000000]
+specinterface_ln0 (specinterface) [ 000000000]
+specinterface_ln0 (specinterface) [ 000000000]
+specinterface_ln0 (specinterface) [ 000000000]
+specinterface_ln0 (specinterface) [ 000000000]
+call_ln0          (call         ) [ 000000000]
+call_ln0          (call         ) [ 000000000]
+ret_ln0           (ret          ) [ 000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="data_a">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="data_a"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="data_b">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="data_b"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="ALU_operation">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ALU_operation"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="ALU_operation_MEM">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ALU_operation_MEM"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Wait"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reset_Pipeline_clear_FIFO_a"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reset_Pipeline_clear_FIFO_b"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reset_Pipeline_clear_ALU_op"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reset_Pipeline_clear_RAM_op"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_16"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_20"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1004" name="grp_reset_Pipeline_clear_FIFO_a_fu_28">
+<pin_list>
+<pin id="29" dir="0" index="0" bw="0" slack="0"/>
+<pin id="30" dir="0" index="1" bw="32" slack="0"/>
+<pin id="31" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="34" class="1004" name="grp_reset_Pipeline_clear_FIFO_b_fu_34">
+<pin_list>
+<pin id="35" dir="0" index="0" bw="0" slack="0"/>
+<pin id="36" dir="0" index="1" bw="32" slack="0"/>
+<pin id="37" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/4 "/>
+</bind>
+</comp>
+
+<comp id="40" class="1004" name="grp_reset_Pipeline_clear_ALU_op_fu_40">
+<pin_list>
+<pin id="41" dir="0" index="0" bw="0" slack="0"/>
+<pin id="42" dir="0" index="1" bw="32" slack="0"/>
+<pin id="43" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/7 "/>
+</bind>
+</comp>
+
+<comp id="46" class="1004" name="grp_reset_Pipeline_clear_RAM_op_fu_46">
+<pin_list>
+<pin id="47" dir="0" index="0" bw="0" slack="0"/>
+<pin id="48" dir="0" index="1" bw="32" slack="0"/>
+<pin id="49" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/7 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="32"><net_src comp="10" pin="0"/><net_sink comp="28" pin=0"/></net>
+
+<net id="33"><net_src comp="0" pin="0"/><net_sink comp="28" pin=1"/></net>
+
+<net id="38"><net_src comp="12" pin="0"/><net_sink comp="34" pin=0"/></net>
+
+<net id="39"><net_src comp="2" pin="0"/><net_sink comp="34" pin=1"/></net>
+
+<net id="44"><net_src comp="14" pin="0"/><net_sink comp="40" pin=0"/></net>
+
+<net id="45"><net_src comp="4" pin="0"/><net_sink comp="40" pin=1"/></net>
+
+<net id="50"><net_src comp="16" pin="0"/><net_sink comp="46" pin=0"/></net>
+
+<net id="51"><net_src comp="6" pin="0"/><net_sink comp="46" pin=1"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: data_a | {}
+	Port: data_b | {}
+	Port: ALU_operation | {}
+	Port: ALU_operation_MEM | {7 8 }
+ - Input state : 
+	Port: reset : data_a | {1 2 }
+	Port: reset : data_b | {4 5 }
+	Port: reset : ALU_operation | {7 8 }
+	Port: reset : ALU_operation_MEM | {}
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|---------------------------------------|---------|---------|
+| Operation|            Functional Unit            |    FF   |   LUT   |
+|----------|---------------------------------------|---------|---------|
+|          | grp_reset_Pipeline_clear_FIFO_a_fu_28 |    0    |    0    |
+|   call   | grp_reset_Pipeline_clear_FIFO_b_fu_34 |    0    |    0    |
+|          | grp_reset_Pipeline_clear_ALU_op_fu_40 |    0    |    0    |
+|          | grp_reset_Pipeline_clear_RAM_op_fu_46 |    6    |    28   |
+|----------|---------------------------------------|---------|---------|
+|   Total  |                                       |    6    |    28   |
+|----------|---------------------------------------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
+N/A
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+
+|           |   FF   |   LUT  |
++-----------+--------+--------+
+|  Function |    6   |   28   |
+|   Memory  |    -   |    -   |
+|Multiplexer|    -   |    -   |
+|  Register |    -   |    -   |
++-----------+--------+--------+
+|   Total   |    6   |   28   |
++-----------+--------+--------+

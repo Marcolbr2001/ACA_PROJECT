@@ -1,0 +1,164 @@
+{
+  "0": {
+    "basicblocks": 14,
+    "calls": "4 8 10 7",
+    "file": "core.cpp",
+    "fileloc": 222,
+    "instructions": 62,
+    "loads": {
+      "G": 4
+    },
+    "name": "alv_VHDL",
+    "stores": {
+      "G": 4
+    },
+    "total_instructions": 326
+  },
+  "1": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 21,
+    "instructions": 7,
+    "name": "reset_FIFO_b",
+    "total_instructions": 7
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "6 14 9 3 13 12",
+    "file": "core.cpp",
+    "fileloc": 214,
+    "instructions": 7,
+    "name": "op_data_exe_wb",
+    "total_instructions": 113
+  },
+  "11": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 30,
+    "instructions": 7,
+    "name": "reset_ALU_operation",
+    "total_instructions": 7
+  },
+  "12": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 195,
+    "instructions": 12,
+    "name": "write_back",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 12
+  },
+  "13": {
+    "basicblocks": 17,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 131,
+    "instructions": 46,
+    "loads": {
+      "G": 1
+    },
+    "name": "execute",
+    "total_instructions": 46
+  },
+  "14": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 61,
+    "instructions": 12,
+    "loads": {
+      "L": 1
+    },
+    "name": "load_data_a",
+    "total_instructions": 12
+  },
+  "2": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 39,
+    "instructions": 11,
+    "name": "clear_RAM_op",
+    "stores": {
+      "G": 1
+    },
+    "total_instructions": 11
+  },
+  "3": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 98,
+    "instructions": 12,
+    "name": "store_op",
+    "stores": {
+      "G": 1
+    },
+    "total_instructions": 12
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "6 3",
+    "file": "core.cpp",
+    "fileloc": 111,
+    "instructions": 3,
+    "name": "operation",
+    "total_instructions": 27
+  },
+  "5": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 12,
+    "instructions": 7,
+    "name": "reset_FIFO_a",
+    "total_instructions": 7
+  },
+  "6": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 85,
+    "instructions": 12,
+    "loads": {
+      "L": 1
+    },
+    "name": "load_op",
+    "total_instructions": 12
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "5 1 11 2",
+    "file": "core.cpp",
+    "fileloc": 47,
+    "instructions": 5,
+    "name": "reset",
+    "total_instructions": 37
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "14 9 13 12",
+    "file": "core.cpp",
+    "fileloc": 206,
+    "instructions": 5,
+    "name": "data_exe_wb",
+    "total_instructions": 87
+  },
+  "9": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 72,
+    "instructions": 12,
+    "loads": {
+      "L": 1
+    },
+    "name": "load_data_b",
+    "total_instructions": 12
+  }
+}

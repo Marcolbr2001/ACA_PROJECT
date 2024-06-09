@@ -1,0 +1,71 @@
+{
+  "0": {
+    "basicblocks": 6,
+    "calls": "1 3 4 2",
+    "file": "core.cpp",
+    "fileloc": 222,
+    "instructions": 42,
+    "name": "alv_VHDL",
+    "total_instructions": 232
+  },
+  "1": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 111,
+    "instructions": 17,
+    "loads": {
+      "L": 1
+    },
+    "name": "operation",
+    "stores": {
+      "G": 1
+    },
+    "total_instructions": 17
+  },
+  "2": {
+    "basicblocks": 12,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 47,
+    "instructions": 23,
+    "name": "reset",
+    "stores": {
+      "G": 1
+    },
+    "total_instructions": 23
+  },
+  "3": {
+    "basicblocks": 21,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 206,
+    "instructions": 67,
+    "loads": {
+      "G": 1,
+      "L": 2
+    },
+    "name": "data_exe_wb",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 67
+  },
+  "4": {
+    "basicblocks": 25,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 214,
+    "instructions": 83,
+    "loads": {
+      "G": 1,
+      "L": 3
+    },
+    "name": "op_data_exe_wb",
+    "stores": {
+      "G": 1,
+      "L": 1
+    },
+    "total_instructions": 83
+  }
+}

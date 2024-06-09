@@ -1,0 +1,49 @@
+---
+MainSourceFile:  'C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_VHDL/alv_VHDL/solution1/.autopilot/db/core.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1207_1:  '
+    FileOffset:      1207
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.2\common\technology\autopilot\etc\ap_int_base.h'
+    Replacements:    
+      - FilePath:        'C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_VHDL\alv_VHDL\solution1\.autopilot\db\core.pp.0.cpp'
+        Offset:          107404
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1207_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_VHDL\alv_VHDL\solution1\.autopilot\db\core.pp.0.cpp'
+        Offset:          334728
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_VHDL\alv_VHDL\solution1\.autopilot\db\core.pp.0.cpp'
+        Offset:          335192
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_VHDL\alv_VHDL\solution1\.autopilot\db\core.pp.0.cpp'
+        Offset:          335657
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.2\common\technology\autopilot\etc\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\alv_VHDL\alv_VHDL\solution1\.autopilot\db\core.pp.0.cpp'
+        Offset:          618939
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+...

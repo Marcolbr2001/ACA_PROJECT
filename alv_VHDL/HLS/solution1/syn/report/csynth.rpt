@@ -1,0 +1,292 @@
+
+
+================================================================
+== Synthesis Summary Report of 'alv_VHDL'
+================================================================
++ General Information: 
+    * Date:           Sun Jun  9 09:50:18 2024
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        alv_VHDL
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+-------------+-------------+-----+
+    |                      Modules                     | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |        |             |             |     |
+    |                      & Loops                     | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP  |      FF     |     LUT     | URAM|
+    +--------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+-------------+-------------+-----+
+    |+ alv_VHDL*                                       |     -|  0.00|        -|          -|         -|        -|     -|  dataflow|  25 (8%)|  6 (2%)|  11295 (10%)|  12025 (22%)|    -|
+    | + Block_entry1_proc                              |     -|  0.00|        -|          -|         -|        -|     -|        no|   9 (3%)|  6 (2%)|    7621 (7%)|   8473 (15%)|    -|
+    |  + op_data_exe_wb                                |     -|  0.00|      399|  3.990e+03|         -|      399|     -|        no|        -|  3 (1%)|    3486 (3%)|    3467 (6%)|    -|
+    |   + op_data_exe_wb_Pipeline_l_operation          |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|    123 (~0%)|    168 (~0%)|    -|
+    |    o l_operation                                 |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|            -|            -|    -|
+    |   + op_data_exe_wb_Pipeline_l_data_a             |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|    123 (~0%)|    168 (~0%)|    -|
+    |    o l_data_a                                    |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|            -|            -|    -|
+    |   + op_data_exe_wb_Pipeline_l_data_b             |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|    123 (~0%)|    168 (~0%)|    -|
+    |    o l_data_b                                    |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|            -|            -|    -|
+    |   + op_data_exe_wb_Pipeline_s_operation_data_op  |     -|  0.46|       52|    520.000|         -|       52|     -|        no|        -|       -|     15 (~0%)|     77 (~0%)|    -|
+    |    o s_operation_data_op                         |     -|  7.30|       50|    500.000|         2|        1|    50|       yes|        -|       -|            -|            -|    -|
+    |   + op_data_exe_wb_Pipeline_exe                  |     -|  0.39|       89|    890.000|         -|       89|     -|        no|        -|  3 (1%)|    2961 (2%)|    2426 (4%)|    -|
+    |    o exe                                         |     -|  7.30|       87|    870.000|        39|        1|    50|       yes|        -|       -|            -|            -|    -|
+    |   + op_data_exe_wb_Pipeline_write_back           |     -|  0.00|       58|    580.000|         -|       58|     -|        no|        -|       -|    117 (~0%)|    177 (~0%)|    -|
+    |    o write_back                                  |     -|  7.30|       56|    560.000|         8|        1|    50|       yes|        -|       -|            -|            -|    -|
+    |  + data_exe_wb                                   |     -|  0.00|      280|  2.800e+03|         -|      280|     -|        no|        -|  3 (1%)|    3340 (3%)|    3121 (5%)|    -|
+    |   + data_exe_wb_Pipeline_l_data_a                |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|    123 (~0%)|    168 (~0%)|    -|
+    |    o l_data_a                                    |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|            -|            -|    -|
+    |   + data_exe_wb_Pipeline_l_data_b                |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|    123 (~0%)|    168 (~0%)|    -|
+    |    o l_data_b                                    |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|            -|            -|    -|
+    |   + data_exe_wb_Pipeline_exe                     |     -|  0.39|       89|    890.000|         -|       89|     -|        no|        -|  3 (1%)|    2961 (2%)|    2426 (4%)|    -|
+    |    o exe                                         |     -|  7.30|       87|    870.000|        39|        1|    50|       yes|        -|       -|            -|            -|    -|
+    |   + data_exe_wb_Pipeline_write_back              |     -|  0.00|       58|    580.000|         -|       58|     -|        no|        -|       -|    117 (~0%)|    177 (~0%)|    -|
+    |    o write_back                                  |     -|  7.30|       56|    560.000|         8|        1|    50|       yes|        -|       -|            -|            -|    -|
+    |  + operation                                     |     -|  0.00|      118|  1.180e+03|         -|      118|     -|        no|        -|       -|    146 (~0%)|    318 (~0%)|    -|
+    |   + operation_Pipeline_l_operation               |     -|  0.00|       61|    610.000|         -|       61|     -|        no|        -|       -|    123 (~0%)|    168 (~0%)|    -|
+    |    o l_operation                                 |     -|  7.30|       59|    590.000|        11|        1|    50|       yes|        -|       -|            -|            -|    -|
+    |   + operation_Pipeline_s_operation_data_op       |     -|  0.46|       52|    520.000|         -|       52|     -|        no|        -|       -|     15 (~0%)|     77 (~0%)|    -|
+    |    o s_operation_data_op                         |     -|  7.30|       50|    500.000|         2|        1|    50|       yes|        -|       -|            -|            -|    -|
+    |  + reset                                         |     -|  0.63|        -|          -|         -|        -|     -|        no|        -|       -|     26 (~0%)|    198 (~0%)|    -|
+    |   + reset_Pipeline_clear_FIFO_a                  |     -|  3.72|        -|          -|         -|        -|     -|        no|        -|       -|      2 (~0%)|     22 (~0%)|    -|
+    |    o clear_FIFO_a                                |     -|  7.30|        -|          -|         1|        1|     -|       yes|        -|       -|            -|            -|    -|
+    |   + reset_Pipeline_clear_FIFO_b                  |     -|  3.72|        -|          -|         -|        -|     -|        no|        -|       -|      2 (~0%)|     22 (~0%)|    -|
+    |    o clear_FIFO_b                                |     -|  7.30|        -|          -|         1|        1|     -|       yes|        -|       -|            -|            -|    -|
+    |   + reset_Pipeline_clear_ALU_op                  |     -|  3.72|        -|          -|         -|        -|     -|        no|        -|       -|      2 (~0%)|     22 (~0%)|    -|
+    |    o clear_ALU_op                                |     -|  7.30|        -|          -|         1|        1|     -|       yes|        -|       -|            -|            -|    -|
+    |   + reset_Pipeline_clear_RAM_op                  |     -|  0.63|       52|    520.000|         -|       52|     -|        no|        -|       -|      8 (~0%)|     55 (~0%)|    -|
+    |    o clear_RAM_op                                |     -|  7.30|       50|    500.000|         1|        1|    50|       yes|        -|       -|            -|            -|    -|
+    +--------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem0 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem1 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem2 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem3 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | a_1      | 0x10   | 32    | W      | Data signal of a                 |                                                                      |
+| s_axi_control | a_2      | 0x14   | 32    | W      | Data signal of a                 |                                                                      |
+| s_axi_control | b_1      | 0x1c   | 32    | W      | Data signal of b                 |                                                                      |
+| s_axi_control | b_2      | 0x20   | 32    | W      | Data signal of b                 |                                                                      |
+| s_axi_control | c_1      | 0x28   | 32    | W      | Data signal of c                 |                                                                      |
+| s_axi_control | c_2      | 0x2c   | 32    | W      | Data signal of c                 |                                                                      |
+| s_axi_control | op_1     | 0x34   | 32    | W      | Data signal of op                |                                                                      |
+| s_axi_control | op_2     | 0x38   | 32    | W      | Data signal of op                |                                                                      |
+| s_axi_control | selec    | 0x40   | 32    | W      | Data signal of selec             |                                                                      |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| a        | in        | pointer  |
+| b        | in        | pointer  |
+| c        | out       | pointer  |
+| op       | in        | pointer  |
+| selec    | in        | int      |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+---------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                         |
++----------+---------------+-----------+----------+---------------------------------+
+| a        | m_axi_gmem0   | interface |          |                                 |
+| a        | s_axi_control | register  | offset   | name=a_1 offset=0x10 range=32   |
+| a        | s_axi_control | register  | offset   | name=a_2 offset=0x14 range=32   |
+| b        | m_axi_gmem1   | interface |          |                                 |
+| b        | s_axi_control | register  | offset   | name=b_1 offset=0x1c range=32   |
+| b        | s_axi_control | register  | offset   | name=b_2 offset=0x20 range=32   |
+| c        | m_axi_gmem2   | interface |          |                                 |
+| c        | s_axi_control | register  | offset   | name=c_1 offset=0x28 range=32   |
+| c        | s_axi_control | register  | offset   | name=c_2 offset=0x2c range=32   |
+| op       | m_axi_gmem3   | interface |          |                                 |
+| op       | s_axi_control | register  | offset   | name=op_1 offset=0x34 range=32  |
+| op       | s_axi_control | register  | offset   | name=op_2 offset=0x38 range=32  |
+| selec    | s_axi_control | register  |          | name=selec offset=0x40 range=32 |
++----------+---------------+-----------+----------+---------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* All M_AXI Variable Accesses
++--------------+----------+-----------------+-----------+--------------+------------+-------------------------------------------------+
+| HW Interface | Variable | Access Location | Direction | Burst Status | Resolution | Problem                                         |
++--------------+----------+-----------------+-----------+--------------+------------+-------------------------------------------------+
+| m_axi_gmem0  | a        | core.cpp:78:14  | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem0  | a        | core.cpp:92:15  | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem1  | b        | core.cpp:78:14  | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem2  | c        | core.cpp:200:7  | write     | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
+| m_axi_gmem3  | op       | core.cpp:92:15  | read      | Fail         | 214-227    | Volatile or Atomic access cannot be transformed |
++--------------+----------+-----------------+-----------+--------------+------------+-------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                                             | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++--------------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| + alv_VHDL                                       | 6   |        |             |     |        |         |
+|  + Block_entry1_proc                             | 6   |        |             |     |        |         |
+|   + op_data_exe_wb                               | 3   |        |             |     |        |         |
+|    + op_data_exe_wb_Pipeline_l_operation         | 0   |        |             |     |        |         |
+|      add_ln88_fu_105_p2                          |     |        | add_ln88    | add | fabric | 0       |
+|      add_ln92_fu_123_p2                          |     |        | add_ln92    | add | fabric | 0       |
+|    + op_data_exe_wb_Pipeline_l_data_a            | 0   |        |             |     |        |         |
+|      add_ln63_fu_105_p2                          |     |        | add_ln63    | add | fabric | 0       |
+|      add_ln67_fu_123_p2                          |     |        | add_ln67    | add | fabric | 0       |
+|    + op_data_exe_wb_Pipeline_l_data_b            | 0   |        |             |     |        |         |
+|      add_ln74_fu_105_p2                          |     |        | add_ln74    | add | fabric | 0       |
+|      add_ln78_fu_123_p2                          |     |        | add_ln78    | add | fabric | 0       |
+|    + op_data_exe_wb_Pipeline_s_operation_data_op | 0   |        |             |     |        |         |
+|      add_ln101_fu_74_p2                          |     |        | add_ln101   | add | fabric | 0       |
+|    + op_data_exe_wb_Pipeline_exe                 | 3   |        |             |     |        |         |
+|      add_ln134_fu_121_p2                         |     |        | add_ln134   | add | fabric | 0       |
+|      mul_32s_32s_32_2_1_U12                      | 3   |        | mul_ln180   | mul | auto   | 1       |
+|      sub_ln176_fu_170_p2                         |     |        | sub_ln176   | sub | fabric | 0       |
+|      add_ln172_fu_175_p2                         |     |        | add_ln172   | add | fabric | 0       |
+|      sub_ln168_fu_140_p2                         |     |        | sub_ln168   | sub | fabric | 0       |
+|      sub_ln168_1_fu_190_p2                       |     |        | sub_ln168_1 | sub | fabric | 0       |
+|      sub_ln164_fu_155_p2                         |     |        | sub_ln164   | sub | fabric | 0       |
+|      sub_ln164_1_fu_228_p2                       |     |        | sub_ln164_1 | sub | fabric | 0       |
+|      add_ln151_fu_268_p2                         |     |        | add_ln151   | add | fabric | 0       |
+|      add_ln147_fu_274_p2                         |     |        | add_ln147   | add | fabric | 0       |
+|    + op_data_exe_wb_Pipeline_write_back          | 0   |        |             |     |        |         |
+|      add_ln197_fu_112_p2                         |     |        | add_ln197   | add | fabric | 0       |
+|      add_ln200_fu_130_p2                         |     |        | add_ln200   | add | fabric | 0       |
+|   + data_exe_wb                                  | 3   |        |             |     |        |         |
+|    + data_exe_wb_Pipeline_l_data_a               | 0   |        |             |     |        |         |
+|      add_ln63_fu_105_p2                          |     |        | add_ln63    | add | fabric | 0       |
+|      add_ln67_fu_123_p2                          |     |        | add_ln67    | add | fabric | 0       |
+|    + data_exe_wb_Pipeline_l_data_b               | 0   |        |             |     |        |         |
+|      add_ln74_fu_105_p2                          |     |        | add_ln74    | add | fabric | 0       |
+|      add_ln78_fu_123_p2                          |     |        | add_ln78    | add | fabric | 0       |
+|    + data_exe_wb_Pipeline_exe                    | 3   |        |             |     |        |         |
+|      add_ln134_fu_121_p2                         |     |        | add_ln134   | add | fabric | 0       |
+|      mul_32s_32s_32_2_1_U42                      | 3   |        | mul_ln180   | mul | auto   | 1       |
+|      sub_ln176_fu_170_p2                         |     |        | sub_ln176   | sub | fabric | 0       |
+|      add_ln172_fu_175_p2                         |     |        | add_ln172   | add | fabric | 0       |
+|      sub_ln168_fu_140_p2                         |     |        | sub_ln168   | sub | fabric | 0       |
+|      sub_ln168_2_fu_190_p2                       |     |        | sub_ln168_2 | sub | fabric | 0       |
+|      sub_ln164_fu_155_p2                         |     |        | sub_ln164   | sub | fabric | 0       |
+|      sub_ln164_2_fu_228_p2                       |     |        | sub_ln164_2 | sub | fabric | 0       |
+|      add_ln151_fu_268_p2                         |     |        | add_ln151   | add | fabric | 0       |
+|      add_ln147_fu_274_p2                         |     |        | add_ln147   | add | fabric | 0       |
+|    + data_exe_wb_Pipeline_write_back             | 0   |        |             |     |        |         |
+|      add_ln197_fu_112_p2                         |     |        | add_ln197   | add | fabric | 0       |
+|      add_ln200_fu_130_p2                         |     |        | add_ln200   | add | fabric | 0       |
+|   + operation                                    | 0   |        |             |     |        |         |
+|    + operation_Pipeline_l_operation              | 0   |        |             |     |        |         |
+|      add_ln88_fu_105_p2                          |     |        | add_ln88    | add | fabric | 0       |
+|      add_ln92_fu_123_p2                          |     |        | add_ln92    | add | fabric | 0       |
+|    + operation_Pipeline_s_operation_data_op      | 0   |        |             |     |        |         |
+|      add_ln101_fu_74_p2                          |     |        | add_ln101   | add | fabric | 0       |
+|   + reset                                        | 0   |        |             |     |        |         |
+|    + reset_Pipeline_clear_RAM_op                 | 0   |        |             |     |        |         |
+|      add_ln41_fu_60_p2                           |     |        | add_ln41    | add | fabric | 0       |
++--------------------------------------------------+-----+--------+-------------+-----+--------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++-------------------------+-----------+-----------+------+------+--------+-------------------+--------+---------+------------------+
+| Name                    | Usage     | Type      | BRAM | URAM | Pragma | Variable          | Impl   | Latency | Bitwidth, Depth, |
+|                         |           |           |      |      |        |                   |        |         | Banks            |
++-------------------------+-----------+-----------+------+------+--------+-------------------+--------+---------+------------------+
+| + alv_VHDL              |           |           | 25   | 0    |        |                   |        |         |                  |
+|   control_s_axi_U       | interface | s_axilite |      |      |        |                   |        |         |                  |
+|   gmem0_m_axi_U         | interface | m_axi     | 4    |      |        |                   |        |         |                  |
+|   gmem1_m_axi_U         | interface | m_axi     | 4    |      |        |                   |        |         |                  |
+|   gmem2_m_axi_U         | interface | m_axi     | 4    |      |        |                   |        |         |                  |
+|   gmem3_m_axi_U         | interface | m_axi     | 4    |      |        |                   |        |         |                  |
+|  + Block_entry1_proc    |           |           | 9    | 0    |        |                   |        |         |                  |
+|    ALU_operation_MEM_U  | ram_1p    |           | 1    |      |        | ALU_operation_MEM | auto   | 1       | 32, 50, 1        |
+|    ALU_operation_fifo_U | fifo      |           | 2    |      |        | ALU_operation     | memory | 0       | 32, 50, 1        |
+|    data_a_fifo_U        | fifo      |           | 2    |      |        | data_a            | memory | 0       | 32, 50, 1        |
+|    data_b_fifo_U        | fifo      |           | 2    |      |        | data_b            | memory | 0       | 32, 50, 1        |
+|    data_result_fifo_U   | fifo      |           | 2    |      |        | data_result       | memory | 0       | 32, 50, 1        |
++-------------------------+-----------+-----------+------+------+--------+-------------------+--------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++----------+---------+--------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type     | Options | Location                 | Messages                                                                                                                                                                           |
++----------+---------+--------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dataflow |         | core.cpp:256 in alv_vhdl | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
++----------+---------+--------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------+-------------------------------------------------------+-----------------------------------------+
+| Type      | Options                                               | Location                                |
++-----------+-------------------------------------------------------+-----------------------------------------+
+| pipeline  | II=1                                                  | core.cpp:65 in load_data_a              |
+| pipeline  | II=1                                                  | core.cpp:76 in load_data_b              |
+| pipeline  | II=1                                                  | core.cpp:90 in load_op                  |
+| pipeline  | II=1                                                  | core.cpp:103 in store_op                |
+| inline    |                                                       | core.cpp:123 in load_data_and_op        |
+| pipeline  | II=1                                                  | core.cpp:136 in execute                 |
+| pipeline  | II=1                                                  | core.cpp:199 in write_back              |
+| interface | mode=s_axilite bundle=control port=a                  | core.cpp:224 in alv_vhdl, a             |
+| interface | mode=s_axilite bundle=control port=b                  | core.cpp:225 in alv_vhdl, b             |
+| interface | mode=s_axilite bundle=control port=c                  | core.cpp:226 in alv_vhdl, c             |
+| interface | mode=s_axilite bundle=control port=op                 | core.cpp:227 in alv_vhdl, op            |
+| interface | mode=s_axilite bundle=control port=selec              | core.cpp:228 in alv_vhdl, selec         |
+| interface | mode=s_axilite bundle=control port=return             | core.cpp:230 in alv_vhdl, return        |
+| interface | mode=m_axi port=a bundle=gmem0 depth=50 offset=slave  | core.cpp:232 in alv_vhdl, a             |
+| interface | mode=m_axi port=b bundle=gmem1 depth=50 offset=slave  | core.cpp:233 in alv_vhdl, b             |
+| interface | mode=m_axi port=c bundle=gmem2 depth=50 offset=slave  | core.cpp:234 in alv_vhdl, c             |
+| interface | mode=m_axi port=op bundle=gmem3 depth=50 offset=slave | core.cpp:235 in alv_vhdl, op            |
+| stream    | variable=data_a depth=50                              | core.cpp:238 in alv_vhdl, data_a        |
+| stream    | variable=data_b depth=50                              | core.cpp:242 in alv_vhdl, data_b        |
+| stream    | variable=data_result depth=50                         | core.cpp:246 in alv_vhdl, data_result   |
+| stream    | variable=ALU_operation depth=50                       | core.cpp:250 in alv_vhdl, ALU_operation |
++-----------+-------------------------------------------------------+-----------------------------------------+
+
+
