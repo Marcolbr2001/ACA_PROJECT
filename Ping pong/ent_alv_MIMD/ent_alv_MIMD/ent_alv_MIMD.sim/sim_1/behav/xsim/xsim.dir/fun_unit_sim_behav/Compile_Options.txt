@@ -1,1 +1,0 @@
---incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" -L "xpm" --snapshot "fun_unit_sim_behav" "xil_defaultlib.fun_unit_sim" -log "elaborate.log" 

@@ -1,1 +1,0 @@
---incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" -L "xpm" --snapshot "tb_alv_MIMD_op_data_exe_wb_Pipeline_exe_behav" "xil_defaultlib.tb_alv_MIMD_op_data_exe_wb_Pipeline_exe" -log "elaborate.log" 
