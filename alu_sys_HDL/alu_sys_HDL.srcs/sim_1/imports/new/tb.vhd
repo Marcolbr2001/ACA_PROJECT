@@ -6,7 +6,7 @@ entity tb_alv_MIMD_op_data_exe_wb_Pipeline_exe is
 end tb_alv_MIMD_op_data_exe_wb_Pipeline_exe;
 
 architecture tb of tb_alv_MIMD_op_data_exe_wb_Pipeline_exe is
-
+   
     component alv_MIMD_op_data_exe_wb_Pipeline_exe
         port (ap_clk                     : in std_logic;
               ap_rst                     : in std_logic;
@@ -34,18 +34,18 @@ architecture tb of tb_alv_MIMD_op_data_exe_wb_Pipeline_exe is
     signal ap_done                    : std_logic:='0';
     signal ap_idle                    : std_logic:='0';
     signal ap_ready                   : std_logic:='0';
-    signal data_a_dout                : std_logic_vector (31 downto 0);
+    signal data_a_dout                : std_logic_vector (31 downto 0):=(Others=>'0');
     signal data_a_empty_n             : std_logic:='0';
     signal data_a_read                : std_logic:='0';
-    signal data_b_dout                : std_logic_vector (31 downto 0);
+    signal data_b_dout                : std_logic_vector (31 downto 0):=(Others=>'0');
     signal data_b_empty_n             : std_logic:='0';
     signal data_b_read                : std_logic:='0';
-    signal data_result_din            : std_logic_vector (31 downto 0);
+    signal data_result_din            : std_logic_vector (31 downto 0):=(Others=>'0');
     signal data_result_full_n         : std_logic:='0';
     signal data_result_write          : std_logic:='0';
-    signal ALU_operation_MEM_address0 : std_logic_vector (5 downto 0);
+    signal ALU_operation_MEM_address0 : std_logic_vector (5 downto 0):=(Others=>'0');
     signal ALU_operation_MEM_ce0      : std_logic:='0';
-    signal ALU_operation_MEM_q0       : std_logic_vector (31 downto 0);
+    signal ALU_operation_MEM_q0       : std_logic_vector (31 downto 0):=(Others=>'0');
 
     constant TbPeriod : time := 1000 ns; -- EDIT Put right period here
     signal TbClock : std_logic := '0';
@@ -77,7 +77,7 @@ begin
               ALU_operation_MEM_q0       => ALU_operation_MEM_q0);
 
     -- Clock generation
-    ap_clk <= not ap_clk after 10ns;
+    ap_clk <= not ap_clk after 5ns;
 
     stimuli : process
     begin
@@ -95,7 +95,7 @@ begin
         -- EDIT: Check that ap_rst is really your reset signal
         ap_rst <= '1';
         
-        wait for 100 ns;
+        wait for 105 ns;
         
         ap_rst <= '0';
         data_a_empty_n <= '1';
@@ -106,23 +106,23 @@ begin
         
         ap_start <= '1';
         ALU_operation_MEM_q0 <= std_logic_vector(to_unsigned(0,32));
-        wait for 100ns;
-        ALU_operation_MEM_q0 <= std_logic_vector(to_unsigned(2,32));
-        wait for 100ns;
-        ALU_operation_MEM_q0 <= std_logic_vector(to_unsigned(3,32));
+        wait for 400ns;
+--        ALU_operation_MEM_q0 <= std_logic_vector(to_unsigned(2,32));
         wait for 100ns;
         ALU_operation_MEM_q0 <= std_logic_vector(to_unsigned(1,32));
         wait for 100ns;
-        ALU_operation_MEM_q0 <= std_logic_vector(to_unsigned(3,32));
+--        ALU_operation_MEM_q0 <= std_logic_vector(to_unsigned(1,32));
         wait for 100ns;
+--        ALU_operation_MEM_q0 <= std_logic_vector(to_unsigned(3,32));
+        wait for 500ns;
         ALU_operation_MEM_q0 <= std_logic_vector(to_unsigned(0,32));
-        wait for 1000ns;
+--        wait for 1000ns;
         wait;
     end process;
     
     process(ap_clk)
     begin
-        
+        if(rising_edge (ap_clk)) then
         if(data_a_empty_n='1' and data_a_read='1') then
             
                 i<=i+1;
@@ -134,7 +134,8 @@ begin
             
                 j<=j+1;
             
-            data_b_dout          <= std_logic_vector(to_unsigned(j/2,32));
+            data_b_dout          <= std_logic_vector(to_unsigned(j,32));
+        end if;
         end if;
           
     

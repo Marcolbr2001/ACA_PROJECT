@@ -12,13 +12,10 @@ entity div is
 
         data_id         : in std_logic_vector(5 downto 0);
 
-		s_axis_tvalid_a	: in std_logic;
+		s_axis_tvalid	: in std_logic;
 		s_axis_tdata_a	: in std_logic_vector(TDATA_WIDTH-1 downto 0);
-		s_axis_tready_a	: out std_logic;
-
-        s_axis_tvalid_b	: in std_logic;
 		s_axis_tdata_b	: in std_logic_vector(TDATA_WIDTH-1 downto 0);
-		s_axis_tready_b	: out std_logic;
+		s_axis_tready	: out std_logic;
 
 		m_axis_tvalid	: out std_logic;
 		m_axis_tdata	: out std_logic_vector(TDATA_WIDTH-1 downto 0);
@@ -47,13 +44,9 @@ architecture Behavioral of div is
 begin
 
     -- SLAVE --
-    with fsm_state select s_axis_tready_a <= 
+    with fsm_state select s_axis_tready <= 
         '1' when RECEIVE,
-        '0' when Others;
-
-    with fsm_state select s_axis_tready_b <= 
-        '1' when RECEIVE,
-        '0' when Others;        
+        '0' when Others;    
     
     -- MASTER --
     with fsm_state select m_axis_tvalid <=
@@ -88,7 +81,7 @@ data_id_sgn <= data_id;
 
                     when RECEIVE =>	
 
-                        if (s_axis_tvalid_a = '1' and s_axis_tvalid_b = '1') then
+                        if (s_axis_tvalid = '1') then
 
                             data_in_a	<= s_axis_tdata_a;
                             data_in_b	<= s_axis_tdata_b;
