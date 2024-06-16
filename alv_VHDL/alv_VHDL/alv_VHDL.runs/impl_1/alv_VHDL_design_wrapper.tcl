@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_VHDL/alv_VHDL/alv_VHDL.runs/impl_1/alv_VHDL_design_wrapper.tcl"
+  variable script "C:/Users/marco/Desktop/NECST/NL2/M_AXI_ALU/alv_VHDL/alv_VHDL/alv_VHDL.runs/impl_1/alv_VHDL_design_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -115,6 +115,8 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -122,29 +124,30 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 4
-  set_param runs.launchOptions { -jobs 16  }
+  set_param checkpoint.writeSynthRtdsInDcp 1
+  set_param chipscope.maxJobs 7
+  set_param runs.launchOptions { -jobs 28  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg400-1
-  set_property board_part_repo_paths {C:/Users/lotto/AppData/Roaming/Xilinx/Vivado/2023.2/xhub/board_store/xilinx_board_store} [current_project]
+  set_property board_part_repo_paths {C:/Users/marco/AppData/Roaming/Xilinx/Vivado/2023.2/xhub/board_store/xilinx_board_store} [current_project]
   set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_VHDL/alv_VHDL/alv_VHDL.cache/wt [current_project]
-  set_property parent.project_path C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_VHDL/alv_VHDL/alv_VHDL.xpr [current_project]
-  set_property ip_repo_paths C:/Users/lotto/Downloads/AXI_FIFO/AXI_FIFO/ip_repo [current_project]
+  set_property webtalk.parent_dir C:/Users/marco/Desktop/NECST/NL2/M_AXI_ALU/alv_VHDL/alv_VHDL/alv_VHDL.cache/wt [current_project]
+  set_property parent.project_path C:/Users/marco/Desktop/NECST/NL2/M_AXI_ALU/alv_VHDL/alv_VHDL/alv_VHDL.xpr [current_project]
+  set_property ip_repo_paths C:/Users/marco/Desktop/Downloads/AXI_FIFO/AXI_FIFO/ip_repo [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_VHDL/alv_VHDL/alv_VHDL.cache/ip [current_project]
+  set_property ip_output_repo C:/Users/marco/Desktop/NECST/NL2/M_AXI_ALU/alv_VHDL/alv_VHDL/alv_VHDL.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_VHDL/alv_VHDL/alv_VHDL.runs/synth_1/alv_VHDL_design_wrapper.dcp
+  add_files -quiet C:/Users/marco/Desktop/NECST/NL2/M_AXI_ALU/alv_VHDL/alv_VHDL/alv_VHDL.runs/synth_1/alv_VHDL_design_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_VHDL/alv_VHDL/alv_VHDL.srcs/sources_1/bd/alv_VHDL_design/alv_VHDL_design.bd
+  add_files C:/Users/marco/Desktop/NECST/NL2/M_AXI_ALU/alv_VHDL/alv_VHDL/alv_VHDL.srcs/sources_1/bd/alv_VHDL_design/alv_VHDL_design.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
 OPTRACE "read constraints: implementation" END { }

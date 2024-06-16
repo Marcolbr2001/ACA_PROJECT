@@ -48,8 +48,12 @@ end dispatcher;
 
 architecture Behavioral of dispatcher is
 
-    signal data_a	      : std_logic_vector(TDATA_WIDTH-1 downto 0) := (Others=>'0');
-    signal data_b	      : std_logic_vector(TDATA_WIDTH-1 downto 0) := (Others=>'0');
+    signal data_a	          : std_logic_vector(TDATA_WIDTH-1 downto 0) := (Others=>'0');
+    signal data_b	          : std_logic_vector(TDATA_WIDTH-1 downto 0) := (Others=>'0');
+    signal RAM_value_sgn      :  std_logic_vector(TDATA_WIDTH-1 downto 0);
+    signal RAM_address_sgn    :  std_logic_vector(5 downto 0);
+
+
     --signal RAM_address    : std_logic_vector(5 downto 0) := (Others=>'0');
 
     -------------  State variable -----------
@@ -118,6 +122,7 @@ begin
         '1'	when MUL,
         '0' when Others;
 
+    RAM_address <= RAM_address_sgn;
 
     FSM_MUTE : process (ap_clk)
     begin
@@ -141,7 +146,7 @@ begin
                             data_a	        <= s_axis_tdata_a;
                             data_b	        <= s_axis_tdata_b;
 
-                            RAM_address     <= s_axis_tid;
+                            RAM_address_sgn     <= s_axis_tid;
 
                             fsm_state 		<= STAND_BY;
 
@@ -157,26 +162,52 @@ begin
 
                     when DISPATCHER =>
 
-                        if      (RAM_value = "00000000000000000000000000000001") then
-                        
-                            m_axis_tid_sub  <= s_axis_tid;
-                            fsm_state       <= SUB;
+                        RAM_value_sgn <= RAM_value;
 
-                        elsif   (RAM_value = "00000000000000000000000000000010") then
-
-                            m_axis_tid_div  <= s_axis_tid;
-                            fsm_state <= DIV;
-
-                        elsif   (RAM_value = "00000000000000000000000000000011") then
-                        
-                            m_axis_tid_mul  <= s_axis_tid;
-                            fsm_state <= MUL;
-
-                        else -- if   (RAM_value = "0000000000000000000000000000000") then
-
-                            m_axis_tid_sum  <= s_axis_tid;
-                            fsm_state <= SUM;
-
+                        if(RAM_value_sgn /= RAM_value) then
+                            if      (RAM_value_sgn = "00000000000000000000000000000001") then
+                            
+                                m_axis_tid_sub  <= s_axis_tid;
+                                fsm_state       <= SUB;
+    
+                            elsif   (RAM_value_sgn = "00000000000000000000000000000010") then
+    
+                                m_axis_tid_div  <= s_axis_tid;
+                                fsm_state <= DIV;
+    
+                            elsif   (RAM_value_sgn = "00000000000000000000000000000011") then
+                            
+                                m_axis_tid_mul  <= s_axis_tid;
+                                fsm_state <= MUL;
+    
+                            else -- if   (RAM_value = "0000000000000000000000000000000") then
+    
+                                m_axis_tid_sum  <= s_axis_tid;
+                                fsm_state <= SUM;
+    
+                            end if;
+                        else
+                            if      (RAM_value = "00000000000000000000000000000001") then
+                            
+                                m_axis_tid_sub  <= s_axis_tid;
+                                fsm_state       <= SUB;
+    
+                            elsif   (RAM_value = "00000000000000000000000000000010") then
+    
+                                m_axis_tid_div  <= s_axis_tid;
+                                fsm_state <= DIV;
+    
+                            elsif   (RAM_value = "00000000000000000000000000000011") then
+                            
+                                m_axis_tid_mul  <= s_axis_tid;
+                                fsm_state <= MUL;
+    
+                            else -- if   (RAM_value = "0000000000000000000000000000000") then
+    
+                                m_axis_tid_sum  <= s_axis_tid;
+                                fsm_state <= SUM;
+    
+                            end if;
                         end if;
 
                     when SUM =>                                                                
@@ -191,8 +222,8 @@ begin
                         
                         if (m_axis_tready_sub = '1') then 
 
-                            m_axis_tdata_sub_a  <=data_a;
-                            m_axis_tdata_sub_b  <=data_b;
+                            --m_axis_tdata_sub_a  <=data_a;
+                            --m_axis_tdata_sub_b  <=data_b;
                                        	   
                             fsm_state           <= ASK_RAM;
 
@@ -202,8 +233,8 @@ begin
                         
                         if (m_axis_tready_div = '1') then 
 
-                            m_axis_tdata_div_a  <=data_a;
-                            m_axis_tdata_div_b  <=data_b;
+                            --m_axis_tdata_div_a  <=data_a;
+                            --m_axis_tdata_div_b  <=data_b;
                                        	   
                             fsm_state           <= ASK_RAM;
 
@@ -213,8 +244,8 @@ begin
                         
                         if (m_axis_tready_mul = '1') then 
                             
-                            m_axis_tdata_mul_a  <=data_a;
-                            m_axis_tdata_mul_b  <=data_b;
+                            --m_axis_tdata_mul_a  <=data_a;
+                            --m_axis_tdata_mul_b  <=data_b;
                                        	   
                             fsm_state           <= ASK_RAM;
 

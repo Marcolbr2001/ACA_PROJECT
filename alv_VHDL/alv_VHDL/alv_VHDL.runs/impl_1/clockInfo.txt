@@ -1,7 +1,7 @@
 -------------------------------------
 | Tool Version : Vivado v.2023.2
-| Date         : Sun Jun  9 10:47:00 2024
-| Host         : MSI
+| Date         : Sun Jun  9 15:27:45 2024
+| Host         : PC_di_Marco
 | Design       : design_1
 | Device       : xc7z020-clg400-1--
 -------------------------------------

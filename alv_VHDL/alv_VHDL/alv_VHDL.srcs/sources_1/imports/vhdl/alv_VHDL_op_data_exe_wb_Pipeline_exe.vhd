@@ -38,6 +38,8 @@ architecture behav of alv_VHDL_op_data_exe_wb_Pipeline_exe is
     signal data_b : STD_LOGIC_VECTOR (31 downto 0);                         -- Signal of input data_b
     
     signal data_result_sgn : STD_LOGIC_VECTOR (31 downto 0);                -- Output register for storing ALU result
+    signal data_result_sgn_2 : STD_LOGIC_VECTOR (63 downto 0);                -- Output register for storing ALU result
+
     
     signal ALU_operation_MEM_address0_sgn : STD_LOGIC_VECTOR (5 downto 0);  -- Signal of RAM address (operations are stored here)
 
@@ -60,9 +62,10 @@ begin
         '1' when SEND_DATA,
         '0' when Others;
         
-    with exe_state select data_result_din <=        -- Immediately output data when FSM is in SEND_DATA
-        data_result_sgn	    when SEND_DATA,  
-        (others => '-')		when Others;
+     -- Immediately output data when FSM is in SEND_DATA
+    data_result_din <= data_result_sgn_2(31 downto 0) when (exe_state = SEND_DATA and ALU_operation_MEM_q0 = "00000000000000000000000000001000") else
+                       data_result_sgn  when (exe_state = SEND_DATA) else
+                       (Others => '-');
     
     with exe_state select ap_ready <=               -- FSM is ready to accept data when in RECEIVE_DATA
         '1' when RECEIVE_DATA,
@@ -127,11 +130,47 @@ begin
 
                         if (ALU_operation_MEM_q0 = "00000000000000000000000000000000") then 
 
-                            data_result_sgn <= std_logic_vector(signed(data_a) + signed(data_b));
+                            data_result_sgn <= std_logic_vector(signed(data_a) + 27);
                             
-                        else
+                        elsif (ALU_operation_MEM_q0 = "00000000000000000000000000000001") then
+                            
+                            data_result_sgn <= std_logic_vector(signed(data_b) + 27);
+                        
+                        elsif (ALU_operation_MEM_q0 = "00000000000000000000000000000010") then
+                            
+                            data_result_sgn <= std_logic_vector(shift_left(signed(data_a), 1));
+                        
+                        elsif (ALU_operation_MEM_q0 = "00000000000000000000000000000011") then
+                            
+                            data_result_sgn <= std_logic_vector(shift_left(signed(data_b), 1));
+                        
+                        elsif (ALU_operation_MEM_q0 = "00000000000000000000000000000100") then
+                            
+                            data_result_sgn <= std_logic_vector(shift_right(signed(data_a), 1));
+                        
+                        elsif (ALU_operation_MEM_q0 = "00000000000000000000000000000101") then
+                            
+                            data_result_sgn <= std_logic_vector(shift_right(signed(data_b), 1));
+                        
+                        elsif (ALU_operation_MEM_q0 = "00000000000000000000000000000110") then
+                            
+                            data_result_sgn <= std_logic_vector(signed(data_a) + signed(data_b));
+                        
+                        elsif (ALU_operation_MEM_q0 = "00000000000000000000000000000111") then
                             
                             data_result_sgn <= std_logic_vector(signed(data_a) - signed(data_b));
+
+                        elsif (ALU_operation_MEM_q0 = "00000000000000000000000000001000") then
+                            
+                            data_result_sgn_2 <= std_logic_vector(signed(data_a)*signed(data_b));
+                        
+                        elsif (ALU_operation_MEM_q0 = "00000000000000000000000000001001") then
+                            
+                            data_result_sgn <= std_logic_vector(signed(data_a)/signed(data_b));
+
+                        else
+
+                            data_result_sgn <= "00000000000000000000000000000000";
 
                         end if;
 

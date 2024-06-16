@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sun Jun  9 10:45:37 2024
-# Process ID: 10872
-# Current directory: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_VHDL/alv_VHDL/alv_VHDL.runs/synth_1
+# Start of session at: Sun Jun  9 15:26:17 2024
+# Process ID: 16324
+# Current directory: C:/Users/marco/Desktop/NECST/NL2/M_AXI_ALU/alv_VHDL/alv_VHDL/alv_VHDL.runs/synth_1
 # Command line: vivado.exe -log alv_VHDL_design_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source alv_VHDL_design_wrapper.tcl
-# Log file: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_VHDL/alv_VHDL/alv_VHDL.runs/synth_1/alv_VHDL_design_wrapper.vds
-# Journal file: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_VHDL/alv_VHDL/alv_VHDL.runs/synth_1\vivado.jou
-# Running On: MSI, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 10, Host memory: 16870 MB
+# Log file: C:/Users/marco/Desktop/NECST/NL2/M_AXI_ALU/alv_VHDL/alv_VHDL/alv_VHDL.runs/synth_1/alv_VHDL_design_wrapper.vds
+# Journal file: C:/Users/marco/Desktop/NECST/NL2/M_AXI_ALU/alv_VHDL/alv_VHDL/alv_VHDL.runs/synth_1\vivado.jou
+# Running On: PC_di_Marco, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 20, Host memory: 14721 MB
 #-----------------------------------------------------------
 source alv_VHDL_design_wrapper.tcl -notrace

@@ -34,46 +34,49 @@ end;
 
 architecture behav of alv_VHDL_data_exe_wb_Pipeline_exe is 
 
+    signal data_a : STD_LOGIC_VECTOR (31 downto 0);                         -- Signal of input data_a
+    signal data_b : STD_LOGIC_VECTOR (31 downto 0);                         -- Signal of input data_b
+    
+    signal data_result_sgn : STD_LOGIC_VECTOR (31 downto 0);                -- Output register for storing ALU result
+    signal data_result_sgn_2 : STD_LOGIC_VECTOR (63 downto 0);                -- Output register for storing ALU result
+
+    
+    signal ALU_operation_MEM_address0_sgn : STD_LOGIC_VECTOR (5 downto 0);  -- Signal of RAM address (operations are stored here)
+
+    signal data_not_empty : std_logic := '0';                               -- Signal that guarantees both FIFOs are not empty  
+
     -------------  State variable -----------
-    type state is (IDLE, DATA_REQUEST, RECEIVE_DATA, EXECUTION, SEND_DATA);  
+    type state is (IDLE, DATA_REQUEST, RECEIVE_DATA, COMPUTATION, SEND_DATA);  
     signal exe_state : state := IDLE;
     -----------------------------------------
 
-    signal data_a : STD_LOGIC_VECTOR (31 downto 0);
-    signal data_b : STD_LOGIC_VECTOR (31 downto 0);
-    
-    signal data_result_sgn : STD_LOGIC_VECTOR (31 downto 0);
-    
-    signal ALU_operation_MEM_address0_sgn : STD_LOGIC_VECTOR (5 downto 0);
-
-    signal data_not_empty : std_logic := '0';
-
-    signal i_prova : integer :=0;
-
 begin
 
-    ALU_operation_MEM_ce0       <= '1';                                 -- always activate register at the RAM output
-    data_not_empty              <= data_a_empty_n and data_b_empty_n;   -- vedere se le fifo hanno dati
-    ALU_operation_MEM_address0  <= ALU_operation_MEM_address0_sgn;
+    ALU_operation_MEM_ce0       <= '1';                                 -- Keep always enabled the register at the RAM output
 
-    with exe_state select ap_ready <= 
+    data_not_empty              <= data_a_empty_n and data_b_empty_n;   -- Check if both FIFOs are not empty 
+
+    ALU_operation_MEM_address0  <= ALU_operation_MEM_address0_sgn;      -- Output current RAM address
+
+    with exe_state select data_result_write <=      -- Immediately tell to output FIFO that has to be written
+        '1' when SEND_DATA,
+        '0' when Others;
+        
+     -- Immediately output data when FSM is in SEND_DATA
+    data_result_din <= data_result_sgn_2(31 downto 0) when (exe_state = SEND_DATA and ALU_operation_MEM_q0 = "00000000000000000000000000001000") else
+                       data_result_sgn  when (exe_state = SEND_DATA) else
+                       (Others => '-');
+    
+    with exe_state select ap_ready <=               -- FSM is ready to accept data when in RECEIVE_DATA
         '1' when RECEIVE_DATA,
         '0' when Others;
 
-    with exe_state select ap_idle <= 
+    with exe_state select ap_idle <=                -- ap_idle is asserted when FSM is in IDLE state, ALU goes in IDLE when a burst has been completed
         '1' when IDLE,
         '0' when Others;
 
-    with exe_state select data_result_write <= 
-        '1' when SEND_DATA,
-        '0' when Others;
-
+    -- ap_done is asserted when FSM is in SEND_DATA and a burst has been completed
     ap_done <= '1' when ((exe_state = SEND_DATA) and ((data_result_full_n = '0') or (unsigned(ALU_operation_MEM_address0_sgn) = DATA_LENGTH - 1))) else '0';
-        
-
-    with exe_state select data_result_din <=
-        data_result_sgn	    when SEND_DATA,  
-        (others => '-')		when Others;
 
     exe_engine : process(ap_clk)
     begin
@@ -98,24 +101,24 @@ begin
 
                         end if;
 
-                    when DATA_REQUEST =>
+                    when DATA_REQUEST =>                -- Inform both FIFOs that have to be read
 
                         data_a_read <= '1';
                         data_b_read <= '1';
 
                         exe_state   <= RECEIVE_DATA; 
 
-                    when RECEIVE_DATA =>
+                    when RECEIVE_DATA =>                -- Store FIFOs data in registers, then go to computation 
 
                         if (data_not_empty = '1') then
 
                             data_a <= data_a_dout;
                             data_b <= data_b_dout;
 
-                            data_a_read <= '0'; -- Do not Read FIFO Anymore
-                            data_b_read <= '0';
+                            data_a_read <= '0'; -- Do not Read FIFO "a" Anymore
+                            data_b_read <= '0'; -- Do not Read FIFO "b" Anymore
 
-                            exe_state <= EXECUTION;
+                            exe_state <= COMPUTATION;
 
                         else
 
@@ -123,32 +126,67 @@ begin
 
                         end if;
 
-                    when EXECUTION =>
+                    when COMPUTATION =>                 -- Compute a sum or a subtraction depending on current RAM cell value
 
                         if (ALU_operation_MEM_q0 = "00000000000000000000000000000000") then 
 
-                            data_result_sgn <= std_logic_vector(signed(data_a) + signed(data_b));
+                            data_result_sgn <= std_logic_vector(signed(data_a) + 27);
                             
-
-                        else
+                        elsif (ALU_operation_MEM_q0 = "00000000000000000000000000000001") then
+                            
+                            data_result_sgn <= std_logic_vector(signed(data_b) + 27);
+                        
+                        elsif (ALU_operation_MEM_q0 = "00000000000000000000000000000010") then
+                            
+                            data_result_sgn <= std_logic_vector(shift_left(signed(data_a), 1));
+                        
+                        elsif (ALU_operation_MEM_q0 = "00000000000000000000000000000011") then
+                            
+                            data_result_sgn <= std_logic_vector(shift_left(signed(data_b), 1));
+                        
+                        elsif (ALU_operation_MEM_q0 = "00000000000000000000000000000100") then
+                            
+                            data_result_sgn <= std_logic_vector(shift_right(signed(data_a), 1));
+                        
+                        elsif (ALU_operation_MEM_q0 = "00000000000000000000000000000101") then
+                            
+                            data_result_sgn <= std_logic_vector(shift_right(signed(data_b), 1));
+                        
+                        elsif (ALU_operation_MEM_q0 = "00000000000000000000000000000110") then
+                            
+                            data_result_sgn <= std_logic_vector(signed(data_a) + signed(data_b));
+                        
+                        elsif (ALU_operation_MEM_q0 = "00000000000000000000000000000111") then
                             
                             data_result_sgn <= std_logic_vector(signed(data_a) - signed(data_b));
 
+                        elsif (ALU_operation_MEM_q0 = "00000000000000000000000000001000") then
+                            
+                            data_result_sgn_2 <= std_logic_vector(signed(data_a)*signed(data_b));
+                        
+                        elsif (ALU_operation_MEM_q0 = "00000000000000000000000000001001") then
+                            
+                            data_result_sgn <= std_logic_vector(signed(data_a)/signed(data_b));
+
+                        else
+
+                            data_result_sgn <= "00000000000000000000000000000000";
+
                         end if;
-                            i_prova<=i_prova+1;
+
                         exe_state <= SEND_DATA;
 
-                    when SEND_DATA =>
+                    when SEND_DATA =>                   -- Send data to output FIFO
 
-                            if (data_result_full_n = '1') then -- if not full
+                            if (data_result_full_n = '1') then -- if output FIFO is not full store result into it
                                 
-                                if (unsigned(ALU_operation_MEM_address0_sgn) = DATA_LENGTH - 1) then -- Read Next Operation in RAM
+                                if (unsigned(ALU_operation_MEM_address0_sgn) = DATA_LENGTH - 1) then    -- Burst is completed, reset RAM index to top (0)
                                     
                                     ALU_operation_MEM_address0_sgn <= (Others => '0');
 
                                     exe_state <= IDLE;
 
-                                else
+                                else                                                                    -- If burst is not completed, read next operation in RAM
 
                                     ALU_operation_MEM_address0_sgn <= std_logic_vector(unsigned(ALU_operation_MEM_address0_sgn) + 1);
 
@@ -156,7 +194,6 @@ begin
 
                                 end if;
 
-                            
                             else
                             
                                 exe_state <= SEND_DATA;

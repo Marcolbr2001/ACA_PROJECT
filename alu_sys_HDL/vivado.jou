@@ -1,100 +1,12 @@
 #-----------------------------------------------------------
-# Vivado v2023.2 (64-bit)
-# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
-# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
-# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sun Jun 16 22:41:56 2024
-# Process ID: 21360
-# Current directory: C:/Users/lotto/Desktop/Alveare/alu_sys_HDL
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20888 C:\Users\lotto\Desktop\Alveare\alu_sys_HDL\alu_sys_HDL.xpr
-# Log file: C:/Users/lotto/Desktop/Alveare/alu_sys_HDL/vivado.log
-# Journal file: C:/Users/lotto/Desktop/Alveare/alu_sys_HDL\vivado.jou
-# Running On: MSI, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 10, Host memory: 16870 MB
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Jun 16 23:39:35 2024
+# Process ID: 33452
+# Current directory: C:/Users/marco/Desktop/NECST/NL2/M_AXI_ALU/alu_sys_HDL
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27176 C:\Users\marco\Desktop\NECST\NL2\M_AXI_ALU\alu_sys_HDL\alu_sys_HDL.xpr
+# Log file: C:/Users/marco/Desktop/NECST/NL2/M_AXI_ALU/alu_sys_HDL/vivado.log
+# Journal file: C:/Users/marco/Desktop/NECST/NL2/M_AXI_ALU/alu_sys_HDL\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/lotto/Desktop/Alveare/alu_sys_HDL/alu_sys_HDL.xpr
-launch_simulation
-open_wave_config C:/Users/lotto/Desktop/Alveare/alu_sys_HDL/tb_alv_MIMD_op_data_exe_wb_Pipeline_exe_behav.wcfg
-source tb_alv_MIMD_op_data_exe_wb_Pipeline_exe.tcl
-update_compile_order -fileset sources_1
-run 2 us
-run 2 us
-run 2 us
-close_sim
-launch_simulation
-open_wave_config C:/Users/lotto/Desktop/Alveare/alu_sys_HDL/tb_alv_MIMD_op_data_exe_wb_Pipeline_exe_behav.wcfg
-source tb_alv_MIMD_op_data_exe_wb_Pipeline_exe.tcl
-run 2 us
-relaunch_sim
-save_wave_config {C:/Users/lotto/Desktop/Alveare/alu_sys_HDL/tb_alv_MIMD_op_data_exe_wb_Pipeline_exe_behav.wcfg}
-close_sim
-launch_simulation
-open_wave_config C:/Users/lotto/Desktop/Alveare/alu_sys_HDL/tb_alv_MIMD_op_data_exe_wb_Pipeline_exe_behav.wcfg
-source tb_alv_MIMD_op_data_exe_wb_Pipeline_exe.tcl
-run 2 us
-relaunch_sim
-save_wave_config {C:/Users/lotto/Desktop/Alveare/alu_sys_HDL/tb_alv_MIMD_op_data_exe_wb_Pipeline_exe_behav.wcfg}
-close_sim
-launch_simulation
-open_wave_config C:/Users/lotto/Desktop/Alveare/alu_sys_HDL/tb_alv_MIMD_op_data_exe_wb_Pipeline_exe_behav.wcfg
-source tb_alv_MIMD_op_data_exe_wb_Pipeline_exe.tcl
-relaunch_sim
-run 2 us
-relaunch_sim
-save_wave_config {C:/Users/lotto/Desktop/Alveare/alu_sys_HDL/tb_alv_MIMD_op_data_exe_wb_Pipeline_exe_behav.wcfg}
-close_sim
-launch_simulation
-open_wave_config C:/Users/lotto/Desktop/Alveare/alu_sys_HDL/tb_alv_MIMD_op_data_exe_wb_Pipeline_exe_behav.wcfg
-source tb_alv_MIMD_op_data_exe_wb_Pipeline_exe.tcl
-close_sim
-launch_simulation
-open_wave_config C:/Users/lotto/Desktop/Alveare/alu_sys_HDL/tb_alv_MIMD_op_data_exe_wb_Pipeline_exe_behav.wcfg
-source tb_alv_MIMD_op_data_exe_wb_Pipeline_exe.tcl
-close_sim
-launch_simulation
-open_wave_config C:/Users/lotto/Desktop/Alveare/alu_sys_HDL/tb_alv_MIMD_op_data_exe_wb_Pipeline_exe_behav.wcfg
-source tb_alv_MIMD_op_data_exe_wb_Pipeline_exe.tcl
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-close_design
-close_sim
-launch_simulation
-open_wave_config C:/Users/lotto/Desktop/Alveare/alu_sys_HDL/tb_alv_MIMD_op_data_exe_wb_Pipeline_exe_behav.wcfg
-source tb_alv_MIMD_op_data_exe_wb_Pipeline_exe.tcl
-run 2 us
-run 2 us
-run 2 us
-run 2 us
-run 2 us
-run 2 us
-run 2 us
-run 2 us
-run 2 us
-run 2 us
-close_sim
-launch_simulation
-open_wave_config C:/Users/lotto/Desktop/Alveare/alu_sys_HDL/tb_alv_MIMD_op_data_exe_wb_Pipeline_exe_behav.wcfg
-source tb_alv_MIMD_op_data_exe_wb_Pipeline_exe.tcl
-run 2 us
-run 2 us
-run 2 us
-run 2 us
-run 2 us
-run 2 us
-close_sim
-launch_simulation
-open_wave_config C:/Users/lotto/Desktop/Alveare/alu_sys_HDL/tb_alv_MIMD_op_data_exe_wb_Pipeline_exe_behav.wcfg
-source tb_alv_MIMD_op_data_exe_wb_Pipeline_exe.tcl
-run 2 us
-save_wave_config {C:/Users/lotto/Desktop/Alveare/alu_sys_HDL/tb_alv_MIMD_op_data_exe_wb_Pipeline_exe_behav.wcfg}
-close_sim
-launch_simulation
-open_wave_config C:/Users/lotto/Desktop/Alveare/alu_sys_HDL/tb_alv_MIMD_op_data_exe_wb_Pipeline_exe_behav.wcfg
-source tb_alv_MIMD_op_data_exe_wb_Pipeline_exe.tcl
-run 2 us
-save_wave_config {C:/Users/lotto/Desktop/Alveare/alu_sys_HDL/tb_alv_MIMD_op_data_exe_wb_Pipeline_exe_behav.wcfg}
-close_sim
-launch_simulation
-open_wave_config C:/Users/lotto/Desktop/Alveare/alu_sys_HDL/tb_alv_MIMD_op_data_exe_wb_Pipeline_exe_behav.wcfg
-source tb_alv_MIMD_op_data_exe_wb_Pipeline_exe.tcl
-run 2 us
-close_sim

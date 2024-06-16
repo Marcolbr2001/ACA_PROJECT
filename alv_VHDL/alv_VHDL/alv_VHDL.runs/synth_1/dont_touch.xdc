@@ -13,23 +13,11 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_de
 # IP: bd/alv_VHDL_design/ip/alv_VHDL_design_rst_ps7_0_100M_0/alv_VHDL_design_rst_ps7_0_100M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_design_rst_ps7_0_100M_0 || ORIG_REF_NAME==alv_VHDL_design_rst_ps7_0_100M_0} -quiet] -quiet
 
-# IP: bd/alv_VHDL_design/ip/alv_VHDL_design_ps7_0_axi_periph_0/alv_VHDL_design_ps7_0_axi_periph_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_design_ps7_0_axi_periph_0 || ORIG_REF_NAME==alv_VHDL_design_ps7_0_axi_periph_0} -quiet] -quiet
-
-# IP: bd/alv_VHDL_design/ip/alv_VHDL_design_axi_mem_intercon_0/alv_VHDL_design_axi_mem_intercon_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_design_axi_mem_intercon_0 || ORIG_REF_NAME==alv_VHDL_design_axi_mem_intercon_0} -quiet] -quiet
-
-# IP: bd/alv_VHDL_design/ip/alv_VHDL_design_axi_mem_intercon_1_0/alv_VHDL_design_axi_mem_intercon_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_design_axi_mem_intercon_1_0 || ORIG_REF_NAME==alv_VHDL_design_axi_mem_intercon_1_0} -quiet] -quiet
-
-# IP: bd/alv_VHDL_design/ip/alv_VHDL_design_axi_mem_intercon_2_0/alv_VHDL_design_axi_mem_intercon_2_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_design_axi_mem_intercon_2_0 || ORIG_REF_NAME==alv_VHDL_design_axi_mem_intercon_2_0} -quiet] -quiet
-
-# IP: bd/alv_VHDL_design/ip/alv_VHDL_design_axi_mem_intercon_3_0/alv_VHDL_design_axi_mem_intercon_3_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_design_axi_mem_intercon_3_0 || ORIG_REF_NAME==alv_VHDL_design_axi_mem_intercon_3_0} -quiet] -quiet
-
 # IP: bd/alv_VHDL_design/ip/alv_VHDL_design_auto_pc_0/alv_VHDL_design_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_design_auto_pc_0 || ORIG_REF_NAME==alv_VHDL_design_auto_pc_0} -quiet] -quiet
+
+# IP: bd/alv_VHDL_design/ip/alv_VHDL_design_ps7_0_axi_periph_0/alv_VHDL_design_ps7_0_axi_periph_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_design_ps7_0_axi_periph_0 || ORIG_REF_NAME==alv_VHDL_design_ps7_0_axi_periph_0} -quiet] -quiet
 
 # IP: bd/alv_VHDL_design/ip/alv_VHDL_design_auto_pc_1/alv_VHDL_design_auto_pc_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_design_auto_pc_1 || ORIG_REF_NAME==alv_VHDL_design_auto_pc_1} -quiet] -quiet
@@ -37,11 +25,17 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_de
 # IP: bd/alv_VHDL_design/ip/alv_VHDL_design_auto_us_0/alv_VHDL_design_auto_us_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_design_auto_us_0 || ORIG_REF_NAME==alv_VHDL_design_auto_us_0} -quiet] -quiet
 
+# IP: bd/alv_VHDL_design/ip/alv_VHDL_design_axi_mem_intercon_0/alv_VHDL_design_axi_mem_intercon_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_design_axi_mem_intercon_0 || ORIG_REF_NAME==alv_VHDL_design_axi_mem_intercon_0} -quiet] -quiet
+
 # IP: bd/alv_VHDL_design/ip/alv_VHDL_design_auto_pc_2/alv_VHDL_design_auto_pc_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_design_auto_pc_2 || ORIG_REF_NAME==alv_VHDL_design_auto_pc_2} -quiet] -quiet
 
 # IP: bd/alv_VHDL_design/ip/alv_VHDL_design_auto_us_1/alv_VHDL_design_auto_us_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_design_auto_us_1 || ORIG_REF_NAME==alv_VHDL_design_auto_us_1} -quiet] -quiet
+
+# IP: bd/alv_VHDL_design/ip/alv_VHDL_design_axi_mem_intercon_1_0/alv_VHDL_design_axi_mem_intercon_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_design_axi_mem_intercon_1_0 || ORIG_REF_NAME==alv_VHDL_design_axi_mem_intercon_1_0} -quiet] -quiet
 
 # IP: bd/alv_VHDL_design/ip/alv_VHDL_design_auto_pc_3/alv_VHDL_design_auto_pc_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_design_auto_pc_3 || ORIG_REF_NAME==alv_VHDL_design_auto_pc_3} -quiet] -quiet
@@ -49,10 +43,16 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_de
 # IP: bd/alv_VHDL_design/ip/alv_VHDL_design_auto_us_2/alv_VHDL_design_auto_us_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_design_auto_us_2 || ORIG_REF_NAME==alv_VHDL_design_auto_us_2} -quiet] -quiet
 
+# IP: bd/alv_VHDL_design/ip/alv_VHDL_design_axi_mem_intercon_2_0/alv_VHDL_design_axi_mem_intercon_2_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_design_axi_mem_intercon_2_0 || ORIG_REF_NAME==alv_VHDL_design_axi_mem_intercon_2_0} -quiet] -quiet
+
 # IP: bd/alv_VHDL_design/ip/alv_VHDL_design_auto_pc_4/alv_VHDL_design_auto_pc_4.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_design_auto_pc_4 || ORIG_REF_NAME==alv_VHDL_design_auto_pc_4} -quiet] -quiet
 
 # IP: bd/alv_VHDL_design/ip/alv_VHDL_design_auto_us_3/alv_VHDL_design_auto_us_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_design_auto_us_3 || ORIG_REF_NAME==alv_VHDL_design_auto_us_3} -quiet] -quiet
 
-# XDC: c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/alv_VHDL/alv_VHDL/alv_VHDL.gen/sources_1/bd/alv_VHDL_design/alv_VHDL_design_ooc.xdc
+# IP: bd/alv_VHDL_design/ip/alv_VHDL_design_axi_mem_intercon_3_0/alv_VHDL_design_axi_mem_intercon_3_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==alv_VHDL_design_axi_mem_intercon_3_0 || ORIG_REF_NAME==alv_VHDL_design_axi_mem_intercon_3_0} -quiet] -quiet
+
+# XDC: c:/Users/marco/Desktop/NECST/NL2/M_AXI_ALU/alv_VHDL/alv_VHDL/alv_VHDL.gen/sources_1/bd/alv_VHDL_design/alv_VHDL_design_ooc.xdc
