@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "ALU_sys_HDL",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "ALU_sys_HDL"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/marco/Desktop/ALU_sys_HDL/ALU_sys_HDL/solution1/csynth.tcl",
+    "sourceLine": 16,
+    "success": true
+  }
+]

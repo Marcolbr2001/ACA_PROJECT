@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sat Jun 22 22:39:32 2024
+# Process ID: 2732
+# Current directory: C:/Users/marco/Desktop/ALU_sys_HDL/ALU_sys_HDL/solution1/sim/vhdl
+# Command line: xsim.exe -mode tcl -source {xsim.dir/ALU_sys_HDL/xsim_script.tcl}
+# Log file: C:/Users/marco/Desktop/ALU_sys_HDL/ALU_sys_HDL/solution1/sim/vhdl/xsim.log
+# Journal file: C:/Users/marco/Desktop/ALU_sys_HDL/ALU_sys_HDL/solution1/sim/vhdl\xsim.jou
+# Running On: PC_di_Marco, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 20, Host memory: 14721 MB
+#-----------------------------------------------------------
+source xsim.dir/ALU_sys_HDL/xsim_script.tcl
+# xsim {ALU_sys_HDL} -autoloadwcfg -tclbatch {ALU_sys_HDL.tcl}
+Time resolution is 1 ps
+source ALU_sys_HDL.tcl
+## run all
+Note: simulation done!
+Time: 200595 ns  Iteration: 1  Process: /apatb_ALU_sys_HDL_top/generate_sim_done_proc  File: C:/Users/marco/Desktop/ALU_sys_HDL/ALU_sys_HDL/solution1/sim/vhdl/ALU_sys_HDL.autotb.vhd
+Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+Time: 200595 ns  Iteration: 1  Process: /apatb_ALU_sys_HDL_top/generate_sim_done_proc  File: C:/Users/marco/Desktop/ALU_sys_HDL/ALU_sys_HDL/solution1/sim/vhdl/ALU_sys_HDL.autotb.vhd
+$finish called at time : 200595 ns
+## quit
+INFO: [Common 17-206] Exiting xsim at Sat Jun 22 22:39:37 2024...

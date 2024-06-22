@@ -1,0 +1,522 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 185, Column: 3 }
+Function:        _Z14op_data_exe_wbPViS0_S0_RN3hls6streamIiLi0EEES4_S4_PiS4_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'load_data_and_op(int volatile*, int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 114, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, int*, hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 184, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 105, Column: 0 }
+Function:        _Z9operationPViRN3hls6streamIiLi0EEEPi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'load_op(int volatile*, hls::stream<int, 0>&)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 79, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'operation(int volatile*, hls::stream<int, 0>&, int*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 105, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 105, Column: 0 }
+Function:        _Z9operationPViRN3hls6streamIiLi0EEEPi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'store_op(hls::stream<int, 0>&, int*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 92, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'operation(int volatile*, hls::stream<int, 0>&, int*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 105, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 176, Column: 0 }
+Function:        _Z11data_exe_wbPViS0_RN3hls6streamIiLi0EEES4_PiS4_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'load_data_a(int volatile*, hls::stream<int, 0>&)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 55, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'data_exe_wb(int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&, int*, hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 176, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 176, Column: 0 }
+Function:        _Z11data_exe_wbPViS0_RN3hls6streamIiLi0EEES4_PiS4_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'load_data_b(int volatile*, hls::stream<int, 0>&)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 66, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'data_exe_wb(int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&, int*, hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 176, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 176, Column: 0 }
+Function:        _Z11data_exe_wbPViS0_RN3hls6streamIiLi0EEES4_PiS4_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'execute(hls::stream<int, 0>&, hls::stream<int, 0>&, int*, hls::stream<int, 0>&)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 125, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'data_exe_wb(int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&, int*, hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 176, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 176, Column: 0 }
+Function:        _Z11data_exe_wbPViS0_RN3hls6streamIiLi0EEES4_PiS4_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'write_back(hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 165, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'data_exe_wb(int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&, int*, hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 176, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 184, Column: 0 }
+Function:        _Z14op_data_exe_wbPViS0_S0_RN3hls6streamIiLi0EEES4_S4_PiS4_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'load_op(int volatile*, hls::stream<int, 0>&)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 79, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, int*, hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 184, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 184, Column: 0 }
+Function:        _Z14op_data_exe_wbPViS0_S0_RN3hls6streamIiLi0EEES4_S4_PiS4_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'load_data_a(int volatile*, hls::stream<int, 0>&)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 55, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, int*, hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 184, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 184, Column: 0 }
+Function:        _Z14op_data_exe_wbPViS0_S0_RN3hls6streamIiLi0EEES4_S4_PiS4_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'load_data_b(int volatile*, hls::stream<int, 0>&)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 66, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, int*, hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 184, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 184, Column: 0 }
+Function:        _Z14op_data_exe_wbPViS0_S0_RN3hls6streamIiLi0EEES4_S4_PiS4_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'store_op(hls::stream<int, 0>&, int*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 92, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, int*, hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 184, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 184, Column: 0 }
+Function:        _Z14op_data_exe_wbPViS0_S0_RN3hls6streamIiLi0EEES4_S4_PiS4_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'execute(hls::stream<int, 0>&, hls::stream<int, 0>&, int*, hls::stream<int, 0>&)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 125, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, int*, hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 184, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 184, Column: 0 }
+Function:        _Z14op_data_exe_wbPViS0_S0_RN3hls6streamIiLi0EEES4_S4_PiS4_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'write_back(hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 165, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, int*, hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 184, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 44, Column: 0 }
+Function:        _Z5resetRN3hls6streamIiLi0EEES2_S2_Pi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'reset_FIFO_a(hls::stream<int, 0>&)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 9, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'reset(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, int*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 44, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 44, Column: 0 }
+Function:        _Z5resetRN3hls6streamIiLi0EEES2_S2_Pi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'reset_FIFO_b(hls::stream<int, 0>&)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 18, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'reset(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, int*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 44, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 44, Column: 0 }
+Function:        _Z5resetRN3hls6streamIiLi0EEES2_S2_Pi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'reset_ALU_operation(hls::stream<int, 0>&)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 27, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'reset(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, int*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 44, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 44, Column: 0 }
+Function:        _Z5resetRN3hls6streamIiLi0EEES2_S2_Pi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'clear_RAM_op(int*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 36, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'reset(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, int*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 44, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 10, Column: 17 }
+Function:        _Z5resetRN3hls6streamIiLi0EEES2_S2_Pi
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        clear_FIFO_a
+  - String:          ' '
+  - LoopLoc:         'ALU_sys_HDL/core.cpp:10:17'
+  - String:          ' '
+  - Function:        'reset(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, int*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 44, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 19, Column: 17 }
+Function:        _Z5resetRN3hls6streamIiLi0EEES2_S2_Pi
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        clear_FIFO_b
+  - String:          ' '
+  - LoopLoc:         'ALU_sys_HDL/core.cpp:19:17'
+  - String:          ' '
+  - Function:        'reset(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, int*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 44, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 28, Column: 17 }
+Function:        _Z5resetRN3hls6streamIiLi0EEES2_S2_Pi
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        clear_ALU_op
+  - String:          ' '
+  - LoopLoc:         'ALU_sys_HDL/core.cpp:28:17'
+  - String:          ' '
+  - Function:        'reset(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, int*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 44, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 85, Column: 15 }
+Function:        _Z9operationPViRN3hls6streamIiLi0EEEPi
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      tmp_op
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 85, Column: 15 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i.load.3
+  - ArrayName:       op
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - Function:        'operation(int volatile*, hls::stream<int, 0>&, int*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 105, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 60, Column: 14 }
+Function:        _Z11data_exe_wbPViS0_RN3hls6streamIiLi0EEES4_PiS4_S0_
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      tmp_a
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 60, Column: 14 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i.load.3
+  - ArrayName:       a
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'data_exe_wb(int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&, int*, hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 176, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 71, Column: 14 }
+Function:        _Z11data_exe_wbPViS0_RN3hls6streamIiLi0EEES4_PiS4_S0_
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      tmp_b
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 71, Column: 14 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i5.load.3
+  - ArrayName:       b
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - Function:        'data_exe_wb(int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&, int*, hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 176, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 169, Column: 7 }
+Function:        _Z11data_exe_wbPViS0_RN3hls6streamIiLi0EEES4_PiS4_S0_
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 169, Column: 7 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.i14.store.4
+  - ArrayName:       c
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - Function:        'data_exe_wb(int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&, int*, hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 176, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 85, Column: 15 }
+Function:        _Z14op_data_exe_wbPViS0_S0_RN3hls6streamIiLi0EEES4_S4_PiS4_S0_
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      tmp_op
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 85, Column: 15 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i.load.3
+  - ArrayName:       op
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - Function:        'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, int*, hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 184, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 60, Column: 14 }
+Function:        _Z14op_data_exe_wbPViS0_S0_RN3hls6streamIiLi0EEES4_S4_PiS4_S0_
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      tmp_a
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 60, Column: 14 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i5.load.3
+  - ArrayName:       a
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, int*, hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 184, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 71, Column: 14 }
+Function:        _Z14op_data_exe_wbPViS0_S0_RN3hls6streamIiLi0EEES4_S4_PiS4_S0_
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      tmp_b
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 71, Column: 14 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i10.load.3
+  - ArrayName:       b
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - Function:        'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, int*, hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 184, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 169, Column: 7 }
+Function:        _Z14op_data_exe_wbPViS0_S0_RN3hls6streamIiLi0EEES4_S4_PiS4_S0_
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 169, Column: 7 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.i23.store.4
+  - ArrayName:       c
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - Function:        'op_data_exe_wb(int volatile*, int volatile*, int volatile*, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, int*, hls::stream<int, 0>&, int volatile*)'
+    DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 184, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 28, Column: 17 }
+Function:        _Z5resetRN3hls6streamIiLi0EEES2_S2_Pi
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        clear_ALU_op
+  - String:          '''('
+  - LoopLoc:         'ALU_sys_HDL/core.cpp:28:17'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 19, Column: 17 }
+Function:        _Z5resetRN3hls6streamIiLi0EEES2_S2_Pi
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        clear_FIFO_b
+  - String:          '''('
+  - LoopLoc:         'ALU_sys_HDL/core.cpp:19:17'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ALU_sys_HDL/core.cpp, Line: 10, Column: 17 }
+Function:        _Z5resetRN3hls6streamIiLi0EEES2_S2_Pi
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        clear_FIFO_a
+  - String:          '''('
+  - LoopLoc:         'ALU_sys_HDL/core.cpp:10:17'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        clear_FIFO_a
+  - String:          '> at '
+  - LoopLoc:         'ALU_sys_HDL/core.cpp:10:17'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        clear_FIFO_b
+  - String:          '> at '
+  - LoopLoc:         'ALU_sys_HDL/core.cpp:19:17'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        clear_ALU_op
+  - String:          '> at '
+  - LoopLoc:         'ALU_sys_HDL/core.cpp:28:17'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        clear_RAM_op
+  - String:          '> at '
+  - LoopLoc:         'ALU_sys_HDL/core.cpp:37:17'
+  - String:          ' '
+...

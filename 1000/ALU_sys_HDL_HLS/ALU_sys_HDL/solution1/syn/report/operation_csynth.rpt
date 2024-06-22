@@ -1,0 +1,192 @@
+
+
+================================================================
+== Vitis HLS Report for 'operation'
+================================================================
+* Date:           Sat Jun 22 22:38:55 2024
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        ALU_sys_HDL
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     2018|     2018|  20.180 us|  20.180 us|  2018|  2018|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------+----------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |                                                  |                                        |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+        |                     Instance                     |                 Module                 |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+        +--------------------------------------------------+----------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |grp_operation_Pipeline_l_operation_fu_42          |operation_Pipeline_l_operation          |     1011|     1011|  10.110 us|  10.110 us|  1011|  1011|       no|
+        |grp_operation_Pipeline_s_operation_data_op_fu_51  |operation_Pipeline_s_operation_data_op  |     1002|     1002|  10.020 us|  10.020 us|  1002|  1002|       no|
+        +--------------------------------------------------+----------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       -|      -|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|     150|    241|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     73|    -|
+|Register         |        -|    -|       8|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     158|    314|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------+----------------------------------------+---------+----+-----+-----+-----+
+    |                     Instance                     |                 Module                 | BRAM_18K| DSP|  FF | LUT | URAM|
+    +--------------------------------------------------+----------------------------------------+---------+----+-----+-----+-----+
+    |grp_operation_Pipeline_l_operation_fu_42          |operation_Pipeline_l_operation          |        0|   0|  127|  166|    0|
+    |grp_operation_Pipeline_s_operation_data_op_fu_51  |operation_Pipeline_s_operation_data_op  |        0|   0|   23|   75|    0|
+    +--------------------------------------------------+----------------------------------------+---------+----+-----+-----+-----+
+    |Total                                             |                                        |        0|   0|  150|  241|    0|
+    +--------------------------------------------------+----------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +---------------------+----+-----------+-----+-----------+
+    |         Name        | LUT| Input Size| Bits| Total Bits|
+    +---------------------+----+-----------+-----+-----------+
+    |ALU_operation_read   |   9|          2|    1|          2|
+    |ALU_operation_write  |   9|          2|    1|          2|
+    |ap_NS_fsm            |  37|          7|    1|          7|
+    |m_axi_gmem3_ARVALID  |   9|          2|    1|          2|
+    |m_axi_gmem3_RREADY   |   9|          2|    1|          2|
+    +---------------------+----+-----------+-----+-----------+
+    |Total                |  73|         15|    5|         15|
+    +---------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------+---+----+-----+-----------+
+    |                              Name                             | FF| LUT| Bits| Const Bits|
+    +---------------------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                                      |  6|   0|    6|          0|
+    |grp_operation_Pipeline_l_operation_fu_42_ap_start_reg          |  1|   0|    1|          0|
+    |grp_operation_Pipeline_s_operation_data_op_fu_51_ap_start_reg  |  1|   0|    1|          0|
+    +---------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                          |  8|   0|    8|          0|
+    +---------------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+-------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++----------------------------+-----+-----+------------+-------------------+--------------+
+|ap_clk                      |   in|    1|  ap_ctrl_hs|          operation|  return value|
+|ap_rst                      |   in|    1|  ap_ctrl_hs|          operation|  return value|
+|ap_start                    |   in|    1|  ap_ctrl_hs|          operation|  return value|
+|ap_done                     |  out|    1|  ap_ctrl_hs|          operation|  return value|
+|ap_idle                     |  out|    1|  ap_ctrl_hs|          operation|  return value|
+|ap_ready                    |  out|    1|  ap_ctrl_hs|          operation|  return value|
+|m_axi_gmem3_AWVALID         |  out|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_AWREADY         |   in|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_AWADDR          |  out|   64|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_AWID            |  out|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_AWLEN           |  out|   32|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_AWSIZE          |  out|    3|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_AWBURST         |  out|    2|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_AWLOCK          |  out|    2|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_AWCACHE         |  out|    4|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_AWPROT          |  out|    3|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_AWQOS           |  out|    4|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_AWREGION        |  out|    4|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_AWUSER          |  out|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_WVALID          |  out|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_WREADY          |   in|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_WDATA           |  out|   32|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_WSTRB           |  out|    4|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_WLAST           |  out|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_WID             |  out|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_WUSER           |  out|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_ARVALID         |  out|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_ARREADY         |   in|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_ARADDR          |  out|   64|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_ARID            |  out|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_ARLEN           |  out|   32|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_ARSIZE          |  out|    3|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_ARBURST         |  out|    2|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_ARLOCK          |  out|    2|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_ARCACHE         |  out|    4|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_ARPROT          |  out|    3|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_ARQOS           |  out|    4|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_ARREGION        |  out|    4|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_ARUSER          |  out|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_RVALID          |   in|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_RREADY          |  out|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_RDATA           |   in|   32|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_RLAST           |   in|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_RID             |   in|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_RFIFONUM        |   in|    9|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_RUSER           |   in|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_RRESP           |   in|    2|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_BVALID          |   in|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_BREADY          |  out|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_BRESP           |   in|    2|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_BID             |   in|    1|       m_axi|              gmem3|       pointer|
+|m_axi_gmem3_BUSER           |   in|    1|       m_axi|              gmem3|       pointer|
+|op                          |   in|   64|     ap_none|                 op|        scalar|
+|ALU_operation_MEM_address0  |  out|   10|   ap_memory|  ALU_operation_MEM|         array|
+|ALU_operation_MEM_ce0       |  out|    1|   ap_memory|  ALU_operation_MEM|         array|
+|ALU_operation_MEM_we0       |  out|    1|   ap_memory|  ALU_operation_MEM|         array|
+|ALU_operation_MEM_d0        |  out|   32|   ap_memory|  ALU_operation_MEM|         array|
+|ALU_operation_dout          |   in|   32|     ap_fifo|      ALU_operation|       pointer|
+|ALU_operation_empty_n       |   in|    1|     ap_fifo|      ALU_operation|       pointer|
+|ALU_operation_read          |  out|    1|     ap_fifo|      ALU_operation|       pointer|
+|ALU_operation_din           |  out|   32|     ap_fifo|      ALU_operation|       pointer|
+|ALU_operation_full_n        |   in|    1|     ap_fifo|      ALU_operation|       pointer|
+|ALU_operation_write         |  out|    1|     ap_fifo|      ALU_operation|       pointer|
++----------------------------+-----+-----+------------+-------------------+--------------+
+

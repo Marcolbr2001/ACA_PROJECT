@@ -1,0 +1,71 @@
+{
+  "0": {
+    "basicblocks": 6,
+    "calls": "4 2 3 1",
+    "file": "core.cpp",
+    "fileloc": 191,
+    "instructions": 32,
+    "name": "ALU_sys_HDL",
+    "total_instructions": 186
+  },
+  "1": {
+    "basicblocks": 12,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 43,
+    "instructions": 23,
+    "name": "reset",
+    "stores": {
+      "G": 1
+    },
+    "total_instructions": 23
+  },
+  "2": {
+    "basicblocks": 15,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 175,
+    "instructions": 49,
+    "loads": {
+      "G": 1,
+      "L": 2
+    },
+    "name": "data_exe_wb",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 49
+  },
+  "3": {
+    "basicblocks": 19,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 183,
+    "instructions": 65,
+    "loads": {
+      "G": 1,
+      "L": 3
+    },
+    "name": "op_data_exe_wb",
+    "stores": {
+      "G": 1,
+      "L": 1
+    },
+    "total_instructions": 65
+  },
+  "4": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "core.cpp",
+    "fileloc": 104,
+    "instructions": 17,
+    "loads": {
+      "L": 1
+    },
+    "name": "operation",
+    "stores": {
+      "G": 1
+    },
+    "total_instructions": 17
+  }
+}

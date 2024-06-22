@@ -1,0 +1,277 @@
+
+
+================================================================
+== Vitis HLS Report for 'op_data_exe_wb'
+================================================================
+* Date:           Sat Jun 22 22:38:52 2024
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        ALU_sys_HDL
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     6099|     6099|  60.990 us|  60.990 us|  6099|  6099|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 18
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%c_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %c" [ALU_sys_HDL/core.cpp:81->ALU_sys_HDL/core.cpp:118->ALU_sys_HDL/core.cpp:185]   --->   Operation 19 'read' 'c_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%op_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %op" [ALU_sys_HDL/core.cpp:81->ALU_sys_HDL/core.cpp:118->ALU_sys_HDL/core.cpp:185]   --->   Operation 20 'read' 'op_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%b_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %b" [ALU_sys_HDL/core.cpp:81->ALU_sys_HDL/core.cpp:118->ALU_sys_HDL/core.cpp:185]   --->   Operation 21 'read' 'b_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%a_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %a" [ALU_sys_HDL/core.cpp:81->ALU_sys_HDL/core.cpp:118->ALU_sys_HDL/core.cpp:185]   --->   Operation 22 'read' 'a_read' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.52>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 23 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [2/2] (3.52ns)   --->   "%call_ln81 = call void @op_data_exe_wb_Pipeline_l_operation, i64 %op_read, i32 %gmem3, i32 %ALU_operation" [ALU_sys_HDL/core.cpp:81->ALU_sys_HDL/core.cpp:118->ALU_sys_HDL/core.cpp:185]   --->   Operation 24 'call' 'call_ln81' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 25 [1/2] (0.00ns)   --->   "%call_ln81 = call void @op_data_exe_wb_Pipeline_l_operation, i64 %op_read, i32 %gmem3, i32 %ALU_operation" [ALU_sys_HDL/core.cpp:81->ALU_sys_HDL/core.cpp:118->ALU_sys_HDL/core.cpp:185]   --->   Operation 25 'call' 'call_ln81' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%empty_39 = wait i32 @_ssdm_op_Wait"   --->   Operation 26 'wait' 'empty_39' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 3.52>
+ST_5 : Operation 27 [1/1] (0.00ns)   --->   "%empty_40 = wait i32 @_ssdm_op_Wait"   --->   Operation 27 'wait' 'empty_40' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 28 [2/2] (3.52ns)   --->   "%call_ln81 = call void @op_data_exe_wb_Pipeline_l_data_a, i64 %a_read, i32 %gmem0, i32 %data_a" [ALU_sys_HDL/core.cpp:81->ALU_sys_HDL/core.cpp:118->ALU_sys_HDL/core.cpp:185]   --->   Operation 28 'call' 'call_ln81' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 29 [1/2] (0.00ns)   --->   "%call_ln81 = call void @op_data_exe_wb_Pipeline_l_data_a, i64 %a_read, i32 %gmem0, i32 %data_a" [ALU_sys_HDL/core.cpp:81->ALU_sys_HDL/core.cpp:118->ALU_sys_HDL/core.cpp:185]   --->   Operation 29 'call' 'call_ln81' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 30 [1/1] (0.00ns)   --->   "%empty_41 = wait i32 @_ssdm_op_Wait"   --->   Operation 30 'wait' 'empty_41' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 7> <Delay = 3.52>
+ST_8 : Operation 31 [1/1] (0.00ns)   --->   "%empty_42 = wait i32 @_ssdm_op_Wait"   --->   Operation 31 'wait' 'empty_42' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 32 [2/2] (3.52ns)   --->   "%call_ln81 = call void @op_data_exe_wb_Pipeline_l_data_b, i64 %b_read, i32 %gmem1, i32 %data_b" [ALU_sys_HDL/core.cpp:81->ALU_sys_HDL/core.cpp:118->ALU_sys_HDL/core.cpp:185]   --->   Operation 32 'call' 'call_ln81' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 33 [1/2] (0.00ns)   --->   "%call_ln81 = call void @op_data_exe_wb_Pipeline_l_data_b, i64 %b_read, i32 %gmem1, i32 %data_b" [ALU_sys_HDL/core.cpp:81->ALU_sys_HDL/core.cpp:118->ALU_sys_HDL/core.cpp:185]   --->   Operation 33 'call' 'call_ln81' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 34 [1/1] (0.00ns)   --->   "%empty_43 = wait i32 @_ssdm_op_Wait"   --->   Operation 34 'wait' 'empty_43' <Predicate = true> <Delay = 0.00>
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 35 [1/1] (0.00ns)   --->   "%empty_44 = wait i32 @_ssdm_op_Wait"   --->   Operation 35 'wait' 'empty_44' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 36 [2/2] (0.00ns)   --->   "%call_ln0 = call void @op_data_exe_wb_Pipeline_s_operation_data_op, i32 %ALU_operation_MEM, i32 %ALU_operation"   --->   Operation 36 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 37 [1/2] (0.00ns)   --->   "%call_ln0 = call void @op_data_exe_wb_Pipeline_s_operation_data_op, i32 %ALU_operation_MEM, i32 %ALU_operation"   --->   Operation 37 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 0.00>
+ST_13 : Operation 38 [1/1] (0.00ns)   --->   "%empty_45 = wait i32 @_ssdm_op_Wait"   --->   Operation 38 'wait' 'empty_45' <Predicate = true> <Delay = 0.00>
+
+State 14 <SV = 13> <Delay = 0.00>
+ST_14 : Operation 39 [1/1] (0.00ns)   --->   "%empty_46 = wait i32 @_ssdm_op_Wait"   --->   Operation 39 'wait' 'empty_46' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 40 [2/2] (0.00ns)   --->   "%call_ln0 = call void @op_data_exe_wb_Pipeline_exe, i32 %ALU_operation_MEM, i32 %data_result, i32 %data_a, i32 %data_b"   --->   Operation 40 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 0.00>
+ST_15 : Operation 41 [1/2] (0.00ns)   --->   "%call_ln0 = call void @op_data_exe_wb_Pipeline_exe, i32 %ALU_operation_MEM, i32 %data_result, i32 %data_a, i32 %data_b"   --->   Operation 41 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 0.00>
+ST_16 : Operation 42 [1/1] (0.00ns)   --->   "%empty_47 = wait i32 @_ssdm_op_Wait"   --->   Operation 42 'wait' 'empty_47' <Predicate = true> <Delay = 0.00>
+
+State 17 <SV = 16> <Delay = 3.52>
+ST_17 : Operation 43 [1/1] (0.00ns)   --->   "%empty_48 = wait i32 @_ssdm_op_Wait"   --->   Operation 43 'wait' 'empty_48' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 44 [2/2] (3.52ns)   --->   "%call_ln81 = call void @op_data_exe_wb_Pipeline_write_back, i64 %c_read, i32 %gmem2, i32 %data_result" [ALU_sys_HDL/core.cpp:81->ALU_sys_HDL/core.cpp:118->ALU_sys_HDL/core.cpp:185]   --->   Operation 44 'call' 'call_ln81' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 17> <Delay = 0.00>
+ST_18 : Operation 45 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ALU_operation, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 45 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 46 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ALU_operation, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 46 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 47 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ALU_operation, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 47 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 48 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ALU_operation, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 48 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 49 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_a, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 49 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 50 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_a, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 50 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 51 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_a, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 51 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 52 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_a, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 52 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 53 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_b, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 53 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 54 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_b, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 54 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 55 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_b, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 55 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 56 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_b, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 56 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 57 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_result, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 57 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 58 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_result, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 58 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 59 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_result, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 59 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 60 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_result, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 60 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 61 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_b, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 61 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 62 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_a, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 62 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 63 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ALU_operation, void @empty_16, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 63 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 64 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem3, void @empty_19, i32 0, i32 0, void @empty_20, i32 0, i32 1000, void @empty_25, void @empty_22, void @empty_20, i32 16, i32 16, i32 16, i32 16, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 64 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 65 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem2, void @empty_19, i32 0, i32 0, void @empty_20, i32 0, i32 1000, void @empty_24, void @empty_22, void @empty_20, i32 16, i32 16, i32 16, i32 16, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 65 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 66 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem1, void @empty_19, i32 0, i32 0, void @empty_20, i32 0, i32 1000, void @empty_23, void @empty_22, void @empty_20, i32 16, i32 16, i32 16, i32 16, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 66 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 67 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem0, void @empty_19, i32 0, i32 0, void @empty_20, i32 0, i32 1000, void @empty_21, void @empty_22, void @empty_20, i32 16, i32 16, i32 16, i32 16, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 67 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 68 [1/2] (0.00ns)   --->   "%call_ln81 = call void @op_data_exe_wb_Pipeline_write_back, i64 %c_read, i32 %gmem2, i32 %data_result" [ALU_sys_HDL/core.cpp:81->ALU_sys_HDL/core.cpp:118->ALU_sys_HDL/core.cpp:185]   --->   Operation 68 'call' 'call_ln81' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_18 : Operation 69 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 69 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 3.520ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln81', ALU_sys_HDL/core.cpp:81->ALU_sys_HDL/core.cpp:118->ALU_sys_HDL/core.cpp:185) to 'op_data_exe_wb_Pipeline_l_operation' [42]  (3.520 ns)
+
+ <State 3>: 0.000ns
+The critical path consists of the following:
+
+ <State 4>: 0.000ns
+The critical path consists of the following:
+
+ <State 5>: 3.520ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln81', ALU_sys_HDL/core.cpp:81->ALU_sys_HDL/core.cpp:118->ALU_sys_HDL/core.cpp:185) to 'op_data_exe_wb_Pipeline_l_data_a' [45]  (3.520 ns)
+
+ <State 6>: 0.000ns
+The critical path consists of the following:
+
+ <State 7>: 0.000ns
+The critical path consists of the following:
+
+ <State 8>: 3.520ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln81', ALU_sys_HDL/core.cpp:81->ALU_sys_HDL/core.cpp:118->ALU_sys_HDL/core.cpp:185) to 'op_data_exe_wb_Pipeline_l_data_b' [48]  (3.520 ns)
+
+ <State 9>: 0.000ns
+The critical path consists of the following:
+
+ <State 10>: 0.000ns
+The critical path consists of the following:
+
+ <State 11>: 0.000ns
+The critical path consists of the following:
+
+ <State 12>: 0.000ns
+The critical path consists of the following:
+
+ <State 13>: 0.000ns
+The critical path consists of the following:
+
+ <State 14>: 0.000ns
+The critical path consists of the following:
+
+ <State 15>: 0.000ns
+The critical path consists of the following:
+
+ <State 16>: 0.000ns
+The critical path consists of the following:
+
+ <State 17>: 3.520ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln81', ALU_sys_HDL/core.cpp:81->ALU_sys_HDL/core.cpp:118->ALU_sys_HDL/core.cpp:185) to 'op_data_exe_wb_Pipeline_write_back' [57]  (3.520 ns)
+
+ <State 18>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
