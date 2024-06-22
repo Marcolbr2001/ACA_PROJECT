@@ -1,0 +1,6 @@
+<pragmas>
+<pragma file="sisd/core.cpp" line="8" pragmaType="interface" parentfunction="sisd" mode="s_axilite" port="op" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="sisd/core.cpp" line="9" pragmaType="interface" parentfunction="sisd" mode="s_axilite" port="a" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="sisd/core.cpp" line="10" pragmaType="interface" parentfunction="sisd" mode="s_axilite" port="b" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="sisd/core.cpp" line="12" pragmaType="interface" parentfunction="sisd" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+</pragmas>

@@ -1,0 +1,304 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/Vitis_HLS/2023.2/tps/win64/msys64/mingw64/bin/g++"
+   Compiling core.cpp_pre.cpp.tb.cpp
+   Compiling test.cpp_pre.cpp.tb.cpp
+   Compiling apatb_sisd.cpp
+   Compiling apatb_sisd_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-322] Starting VHDL simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+A = 0 B = 0 RES = 0, OP = 0 
+A = 2 B = 1 RES = 0, OP = 0 
+A = 4 B = 2 RES = 0, OP = 0 
+A = 6 B = 3 RES = 0, OP = 0 
+A = 8 B = 4 RES = 0, OP = 0 
+A = 10 B = 5 RES = 0, OP = 0 
+A = 12 B = 6 RES = 0, OP = 0 
+A = 14 B = 7 RES = 0, OP = 0 
+A = 16 B = 8 RES = 0, OP = 0 
+A = 18 B = 9 RES = 0, OP = 0 
+A = 20 B = 10 RES = 0, OP = 0 
+A = 22 B = 11 RES = 0, OP = 0 
+A = 24 B = 12 RES = 0, OP = 0 
+A = 26 B = 13 RES = 0, OP = 1 
+A = 28 B = 14 RES = 0, OP = 1 
+A = 30 B = 15 RES = 0, OP = 1 
+A = 32 B = 16 RES = 0, OP = 1 
+A = 34 B = 17 RES = 0, OP = 1 
+A = 36 B = 18 RES = 0, OP = 1 
+A = 38 B = 19 RES = 0, OP = 1 
+A = 40 B = 20 RES = 0, OP = 1 
+A = 42 B = 21 RES = 0, OP = 1 
+A = 44 B = 22 RES = 0, OP = 1 
+A = 46 B = 23 RES = 0, OP = 1 
+A = 48 B = 24 RES = 0, OP = 1 
+A = 50 B = 25 RES = 0, OP = 1 
+A = 52 B = 26 RES = 0, OP = 2 
+A = 54 B = 27 RES = 0, OP = 2 
+A = 56 B = 28 RES = 0, OP = 2 
+A = 58 B = 29 RES = 0, OP = 2 
+A = 60 B = 30 RES = 0, OP = 2 
+A = 62 B = 31 RES = 0, OP = 2 
+A = 64 B = 32 RES = 0, OP = 2 
+A = 66 B = 33 RES = 0, OP = 2 
+A = 68 B = 34 RES = 0, OP = 2 
+A = 70 B = 35 RES = 0, OP = 2 
+A = 72 B = 36 RES = 0, OP = 2 
+A = 74 B = 37 RES = 0, OP = 2 
+A = 76 B = 38 RES = 0, OP = 2 
+A = 78 B = 39 RES = 0, OP = 3 
+A = 80 B = 40 RES = 0, OP = 3 
+A = 82 B = 41 RES = 0, OP = 3 
+A = 84 B = 42 RES = 0, OP = 3 
+A = 86 B = 43 RES = 0, OP = 3 
+A = 88 B = 44 RES = 0, OP = 3 
+A = 90 B = 45 RES = 0, OP = 3 
+A = 92 B = 46 RES = 0, OP = 3 
+A = 94 B = 47 RES = 0, OP = 3 
+A = 96 B = 48 RES = 0, OP = 3 
+A = 98 B = 49 RES = 0, OP = 3 
+
+
+
+
+
+
+
+
+A = 0 B = 0 RES = 0, OP = 0 
+A = 2 B = 1 RES = 3, OP = 0 
+A = 4 B = 2 RES = 6, OP = 0 
+A = 6 B = 3 RES = 9, OP = 0 
+A = 8 B = 4 RES = 12, OP = 0 
+A = 10 B = 5 RES = 15, OP = 0 
+A = 12 B = 6 RES = 18, OP = 0 
+A = 14 B = 7 RES = 21, OP = 0 
+A = 16 B = 8 RES = 24, OP = 0 
+A = 18 B = 9 RES = 27, OP = 0 
+A = 20 B = 10 RES = 30, OP = 0 
+A = 22 B = 11 RES = 33, OP = 0 
+A = 24 B = 12 RES = 36, OP = 0 
+A = 26 B = 13 RES = 13, OP = 1 
+A = 28 B = 14 RES = 14, OP = 1 
+A = 30 B = 15 RES = 15, OP = 1 
+A = 32 B = 16 RES = 16, OP = 1 
+A = 34 B = 17 RES = 17, OP = 1 
+A = 36 B = 18 RES = 18, OP = 1 
+A = 38 B = 19 RES = 19, OP = 1 
+A = 40 B = 20 RES = 20, OP = 1 
+A = 42 B = 21 RES = 21, OP = 1 
+A = 44 B = 22 RES = 22, OP = 1 
+A = 46 B = 23 RES = 23, OP = 1 
+A = 48 B = 24 RES = 24, OP = 1 
+A = 50 B = 25 RES = 25, OP = 1 
+A = 52 B = 26 RES = 2, OP = 2 
+A = 54 B = 27 RES = 2, OP = 2 
+A = 56 B = 28 RES = 2, OP = 2 
+A = 58 B = 29 RES = 2, OP = 2 
+A = 60 B = 30 RES = 2, OP = 2 
+A = 62 B = 31 RES = 2, OP = 2 
+A = 64 B = 32 RES = 2, OP = 2 
+A = 66 B = 33 RES = 2, OP = 2 
+A = 68 B = 34 RES = 2, OP = 2 
+A = 70 B = 35 RES = 2, OP = 2 
+A = 72 B = 36 RES = 2, OP = 2 
+A = 74 B = 37 RES = 2, OP = 2 
+A = 76 B = 38 RES = 2, OP = 2 
+A = 78 B = 39 RES = 3042, OP = 3 
+A = 80 B = 40 RES = 3200, OP = 3 
+A = 82 B = 41 RES = 3362, OP = 3 
+A = 84 B = 42 RES = 3528, OP = 3 
+A = 86 B = 43 RES = 3698, OP = 3 
+A = 88 B = 44 RES = 3872, OP = 3 
+A = 90 B = 45 RES = 4050, OP = 3 
+A = 92 B = 46 RES = 4232, OP = 3 
+A = 94 B = 47 RES = 4418, OP = 3 
+A = 96 B = 48 RES = 4608, OP = 3 
+A = 98 B = 49 RES = 4802, OP = 3 
+
+C:\Users\lotto\Desktop\sisd\solution1\sim\vhdl>set PATH= 
+
+C:\Users\lotto\Desktop\sisd\solution1\sim\vhdl>call C:/Xilinx/Vivado/2023.2/bin/xelab xil_defaultlib.apatb_sisd_top glbl -Oenable_linking_all_libraries  -prj sisd.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims -L unisims_ver -L xpm  -L floating_point_v7_1_16 -L floating_point_v7_0_21 --lib "ieee_proposed=./ieee_proposed" -s sisd  
+ECHO disattivato.
+ECHO disattivato.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_sisd_top glbl -Oenable_linking_all_libraries -prj sisd.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims -L unisims_ver -L xpm -L floating_point_v7_1_16 -L floating_point_v7_0_21 --lib ieee_proposed=./ieee_proposed -s sisd 
+Multi-threading is on. Using 14 slave threads.
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lotto/Desktop/sisd/solution1/sim/vhdl/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/lotto/Desktop/sisd/solution1/sim/vhdl/AESL_sim_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/lotto/Desktop/sisd/solution1/sim/vhdl/AESL_axi_slave_control.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AESL_axi_slave_control'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/lotto/Desktop/sisd/solution1/sim/vhdl/sisd.autotb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'apatb_sisd_top'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/lotto/Desktop/sisd/solution1/sim/vhdl/sisd.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sisd'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/lotto/Desktop/sisd/solution1/sim/vhdl/sisd_control_s_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sisd_control_s_axi'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/lotto/Desktop/sisd/solution1/sim/vhdl/sisd_mul_32s_32s_32_2_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sisd_mul_32s_32s_32_2_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/lotto/Desktop/sisd/solution1/sim/vhdl/sisd_sdiv_32s_32s_32_36_seq_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sisd_sdiv_32s_32s_32_36_seq_1_divseq'
+INFO: [VRFC 10-3107] analyzing entity 'sisd_sdiv_32s_32s_32_36_seq_1'
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling module work.glbl
+Compiling architecture behave of entity xil_defaultlib.sisd_control_s_axi [sisd_control_s_axi_default]
+Compiling architecture behav of entity xil_defaultlib.sisd_mul_32s_32s_32_2_1 [\sisd_mul_32s_32s_32_2_1(num_sta...]
+Compiling architecture rtl of entity xil_defaultlib.sisd_sdiv_32s_32s_32_36_seq_1_divseq [sisd_sdiv_32s_32s_32_36_seq_1_di...]
+Compiling architecture rtl of entity xil_defaultlib.sisd_sdiv_32s_32s_32_36_seq_1 [\sisd_sdiv_32s_32s_32_36_seq_1(n...]
+Compiling architecture behav of entity xil_defaultlib.sisd [sisd_default]
+Compiling architecture behav of entity xil_defaultlib.AESL_axi_slave_control [aesl_axi_slave_control_default]
+Compiling architecture behav of entity xil_defaultlib.apatb_sisd_top
+Built simulation snapshot sisd
+ECHO disattivato.
+ECHO disattivato.
+
+****** xsim v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/sisd/xsim_script.tcl
+# xsim {sisd} -autoloadwcfg -tclbatch {sisd.tcl}
+Time resolution is 1 ps
+source sisd.tcl
+## run all
+Note: simulation done!
+Time: 33545 ns  Iteration: 1  Process: /apatb_sisd_top/generate_sim_done_proc  File: C:/Users/lotto/Desktop/sisd/solution1/sim/vhdl/sisd.autotb.vhd
+Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+Time: 33545 ns  Iteration: 1  Process: /apatb_sisd_top/generate_sim_done_proc  File: C:/Users/lotto/Desktop/sisd/solution1/sim/vhdl/sisd.autotb.vhd
+$finish called at time : 33545 ns
+## quit
+INFO: [Common 17-206] Exiting xsim at Sat Jun 22 22:10:39 2024...
+A = 0 B = 0 RES = 0, OP = 0 
+A = 2 B = 1 RES = 0, OP = 0 
+A = 4 B = 2 RES = 0, OP = 0 
+A = 6 B = 3 RES = 0, OP = 0 
+A = 8 B = 4 RES = 0, OP = 0 
+A = 10 B = 5 RES = 0, OP = 0 
+A = 12 B = 6 RES = 0, OP = 0 
+A = 14 B = 7 RES = 0, OP = 0 
+A = 16 B = 8 RES = 0, OP = 0 
+A = 18 B = 9 RES = 0, OP = 0 
+A = 20 B = 10 RES = 0, OP = 0 
+A = 22 B = 11 RES = 0, OP = 0 
+A = 24 B = 12 RES = 0, OP = 0 
+A = 26 B = 13 RES = 0, OP = 1 
+A = 28 B = 14 RES = 0, OP = 1 
+A = 30 B = 15 RES = 0, OP = 1 
+A = 32 B = 16 RES = 0, OP = 1 
+A = 34 B = 17 RES = 0, OP = 1 
+A = 36 B = 18 RES = 0, OP = 1 
+A = 38 B = 19 RES = 0, OP = 1 
+A = 40 B = 20 RES = 0, OP = 1 
+A = 42 B = 21 RES = 0, OP = 1 
+A = 44 B = 22 RES = 0, OP = 1 
+A = 46 B = 23 RES = 0, OP = 1 
+A = 48 B = 24 RES = 0, OP = 1 
+A = 50 B = 25 RES = 0, OP = 1 
+A = 52 B = 26 RES = 0, OP = 2 
+A = 54 B = 27 RES = 0, OP = 2 
+A = 56 B = 28 RES = 0, OP = 2 
+A = 58 B = 29 RES = 0, OP = 2 
+A = 60 B = 30 RES = 0, OP = 2 
+A = 62 B = 31 RES = 0, OP = 2 
+A = 64 B = 32 RES = 0, OP = 2 
+A = 66 B = 33 RES = 0, OP = 2 
+A = 68 B = 34 RES = 0, OP = 2 
+A = 70 B = 35 RES = 0, OP = 2 
+A = 72 B = 36 RES = 0, OP = 2 
+A = 74 B = 37 RES = 0, OP = 2 
+A = 76 B = 38 RES = 0, OP = 2 
+A = 78 B = 39 RES = 0, OP = 3 
+A = 80 B = 40 RES = 0, OP = 3 
+A = 82 B = 41 RES = 0, OP = 3 
+A = 84 B = 42 RES = 0, OP = 3 
+A = 86 B = 43 RES = 0, OP = 3 
+A = 88 B = 44 RES = 0, OP = 3 
+A = 90 B = 45 RES = 0, OP = 3 
+A = 92 B = 46 RES = 0, OP = 3 
+A = 94 B = 47 RES = 0, OP = 3 
+A = 96 B = 48 RES = 0, OP = 3 
+A = 98 B = 49 RES = 0, OP = 3 
+
+
+
+
+
+
+
+
+A = 0 B = 0 RES = 0, OP = 0 
+A = 2 B = 1 RES = 3, OP = 0 
+A = 4 B = 2 RES = 6, OP = 0 
+A = 6 B = 3 RES = 9, OP = 0 
+A = 8 B = 4 RES = 12, OP = 0 
+A = 10 B = 5 RES = 15, OP = 0 
+A = 12 B = 6 RES = 18, OP = 0 
+A = 14 B = 7 RES = 21, OP = 0 
+A = 16 B = 8 RES = 24, OP = 0 
+A = 18 B = 9 RES = 27, OP = 0 
+A = 20 B = 10 RES = 30, OP = 0 
+A = 22 B = 11 RES = 33, OP = 0 
+A = 24 B = 12 RES = 36, OP = 0 
+A = 26 B = 13 RES = 13, OP = 1 
+A = 28 B = 14 RES = 14, OP = 1 
+A = 30 B = 15 RES = 15, OP = 1 
+A = 32 B = 16 RES = 16, OP = 1 
+A = 34 B = 17 RES = 17, OP = 1 
+A = 36 B = 18 RES = 18, OP = 1 
+A = 38 B = 19 RES = 19, OP = 1 
+A = 40 B = 20 RES = 20, OP = 1 
+A = 42 B = 21 RES = 21, OP = 1 
+A = 44 B = 22 RES = 22, OP = 1 
+A = 46 B = 23 RES = 23, OP = 1 
+A = 48 B = 24 RES = 24, OP = 1 
+A = 50 B = 25 RES = 25, OP = 1 
+A = 52 B = 26 RES = 2, OP = 2 
+A = 54 B = 27 RES = 2, OP = 2 
+A = 56 B = 28 RES = 2, OP = 2 
+A = 58 B = 29 RES = 2, OP = 2 
+A = 60 B = 30 RES = 2, OP = 2 
+A = 62 B = 31 RES = 2, OP = 2 
+A = 64 B = 32 RES = 2, OP = 2 
+A = 66 B = 33 RES = 2, OP = 2 
+A = 68 B = 34 RES = 2, OP = 2 
+A = 70 B = 35 RES = 2, OP = 2 
+A = 72 B = 36 RES = 2, OP = 2 
+A = 74 B = 37 RES = 2, OP = 2 
+A = 76 B = 38 RES = 2, OP = 2 
+A = 78 B = 39 RES = 3042, OP = 3 
+A = 80 B = 40 RES = 3200, OP = 3 
+A = 82 B = 41 RES = 3362, OP = 3 
+A = 84 B = 42 RES = 3528, OP = 3 
+A = 86 B = 43 RES = 3698, OP = 3 
+A = 88 B = 44 RES = 3872, OP = 3 
+A = 90 B = 45 RES = 4050, OP = 3 
+A = 92 B = 46 RES = 4232, OP = 3 
+A = 94 B = 47 RES = 4418, OP = 3 
+A = 96 B = 48 RES = 4608, OP = 3 
+A = 98 B = 49 RES = 4802, OP = 3 
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***

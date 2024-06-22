@@ -1,0 +1,160 @@
+
+
+================================================================
+== Vitis HLS Report for 'sisd'
+================================================================
+* Date:           Sat Jun 22 22:09:47 2024
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        sisd
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.912 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        1|       35|  10.000 ns|  0.350 us|    2|   36|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     78|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        0|    3|     741|    584|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    237|    -|
+|Register         |        -|    -|     298|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    3|    1039|    899|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    1|      ~0|      1|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------+--------------------------+---------+----+-----+-----+-----+
+    |           Instance          |          Module          | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-----------------------------+--------------------------+---------+----+-----+-----+-----+
+    |control_s_axi_U              |control_s_axi             |        0|   0|  182|  296|    0|
+    |mul_32s_32s_32_2_1_U1        |mul_32s_32s_32_2_1        |        0|   3|  165|   50|    0|
+    |sdiv_32s_32s_32_36_seq_1_U2  |sdiv_32s_32s_32_36_seq_1  |        0|   0|  394|  238|    0|
+    +-----------------------------+--------------------------+---------+----+-----+-----+-----+
+    |Total                        |                          |        0|   3|  741|  584|    0|
+    +-----------------------------+--------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |data_result_fu_132_p2    |         +|   0|  0|  39|          32|          32|
+    |data_result_1_fu_128_p2  |         -|   0|  0|  39|          32|          32|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |Total                    |          |   0|  0|  78|          64|          64|
+    +-------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------+-----+-----------+-----+-----------+
+    |                  Name                  | LUT | Input Size| Bits| Total Bits|
+    +----------------------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                               |  181|         41|    1|         41|
+    |ap_phi_mux_data_result_3_phi_fu_80_p10  |    9|          2|   32|         64|
+    |ap_sig_allocacmp_ALU_operation          |    9|          2|   32|         64|
+    |ap_sig_allocacmp_data_a                 |    9|          2|   32|         64|
+    |ap_sig_allocacmp_data_b                 |    9|          2|   32|         64|
+    |data_result_3_reg_76                    |   20|          4|   32|        128|
+    +----------------------------------------+-----+-----------+-----+-----------+
+    |Total                                   |  237|         53|  161|        425|
+    +----------------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------+----+----+-----+-----------+
+    |             Name             | FF | LUT| Bits| Const Bits|
+    +------------------------------+----+----+-----+-----------+
+    |ALU_operation_reg_170         |  32|   0|   32|          0|
+    |a_assign_fu_46                |  32|   0|   32|          0|
+    |ap_CS_fsm                     |  40|   0|   40|          0|
+    |ap_predicate_pred126_state40  |   1|   0|    1|          0|
+    |ap_predicate_pred133_state40  |   1|   0|    1|          0|
+    |b_assign_fu_50                |  32|   0|   32|          0|
+    |data_a_reg_154                |  32|   0|   32|          0|
+    |data_b_reg_162                |  32|   0|   32|          0|
+    |data_result_2_reg_174         |  32|   0|   32|          0|
+    |data_result_3_reg_76          |  32|   0|   32|          0|
+    |op_assign_fu_54               |  32|   0|   32|          0|
+    +------------------------------+----+----+-----+-----------+
+    |Total                         | 298|   0|  298|          0|
+    +------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------------+-----+-----+------------+--------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_AWREADY  |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_AWADDR   |   in|    6|       s_axi|       control|        scalar|
+|s_axi_control_WVALID   |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_WREADY   |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_WDATA    |   in|   32|       s_axi|       control|        scalar|
+|s_axi_control_WSTRB    |   in|    4|       s_axi|       control|        scalar|
+|s_axi_control_ARVALID  |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_ARREADY  |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_ARADDR   |   in|    6|       s_axi|       control|        scalar|
+|s_axi_control_RVALID   |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_RREADY   |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_RDATA    |  out|   32|       s_axi|       control|        scalar|
+|s_axi_control_RRESP    |  out|    2|       s_axi|       control|        scalar|
+|s_axi_control_BVALID   |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_BREADY   |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_BRESP    |  out|    2|       s_axi|       control|        scalar|
+|ap_clk                 |   in|    1|  ap_ctrl_hs|          sisd|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_hs|          sisd|  return value|
+|interrupt              |  out|    1|  ap_ctrl_hs|          sisd|  return value|
++-----------------------+-----+-----+------------+--------------+--------------+
+
