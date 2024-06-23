@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Jun 23 17:22:51 2024
+# Process ID: 19556
+# Current directory: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/Vivado/ALU_sys_HDL.runs/ALU_sys_HDL_design_auto_pc_3_synth_1
+# Command line: vivado.exe -log ALU_sys_HDL_design_auto_pc_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ALU_sys_HDL_design_auto_pc_3.tcl
+# Log file: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/Vivado/ALU_sys_HDL.runs/ALU_sys_HDL_design_auto_pc_3_synth_1/ALU_sys_HDL_design_auto_pc_3.vds
+# Journal file: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/Vivado/ALU_sys_HDL.runs/ALU_sys_HDL_design_auto_pc_3_synth_1\vivado.jou
+# Running On: MSI, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 10, Host memory: 16870 MB
+#-----------------------------------------------------------
+source ALU_sys_HDL_design_auto_pc_3.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 486.340 ; gain = 183.910
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ALU_sys_HDL_design_auto_pc_3
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 8f283b24f1fde08c to dir: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/Vivado/ALU_sys_HDL.runs/ALU_sys_HDL_design_auto_pc_3_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/Vivado/ALU_sys_HDL.cache/ip/2023.2/8/f/8f283b24f1fde08c/ALU_sys_HDL_design_auto_pc_4.dcp to C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/Vivado/ALU_sys_HDL.runs/ALU_sys_HDL_design_auto_pc_3_synth_1/ALU_sys_HDL_design_auto_pc_3.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/Vivado/ALU_sys_HDL.cache/ip/2023.2/8/f/8f283b24f1fde08c/ALU_sys_HDL_design_auto_pc_4_sim_netlist.v to C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/Vivado/ALU_sys_HDL.runs/ALU_sys_HDL_design_auto_pc_3_synth_1/ALU_sys_HDL_design_auto_pc_3_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/Vivado/ALU_sys_HDL.cache/ip/2023.2/8/f/8f283b24f1fde08c/ALU_sys_HDL_design_auto_pc_4_sim_netlist.vhdl to C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/Vivado/ALU_sys_HDL.runs/ALU_sys_HDL_design_auto_pc_3_synth_1/ALU_sys_HDL_design_auto_pc_3_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/Vivado/ALU_sys_HDL.cache/ip/2023.2/8/f/8f283b24f1fde08c/ALU_sys_HDL_design_auto_pc_4_stub.v to C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/Vivado/ALU_sys_HDL.runs/ALU_sys_HDL_design_auto_pc_3_synth_1/ALU_sys_HDL_design_auto_pc_3_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/Vivado/ALU_sys_HDL.cache/ip/2023.2/8/f/8f283b24f1fde08c/ALU_sys_HDL_design_auto_pc_4_stub.vhdl to C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/Vivado/ALU_sys_HDL.runs/ALU_sys_HDL_design_auto_pc_3_synth_1/ALU_sys_HDL_design_auto_pc_3_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP ALU_sys_HDL_design_auto_pc_3, cache-ID = 8f283b24f1fde08c.
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 23 17:23:22 2024...

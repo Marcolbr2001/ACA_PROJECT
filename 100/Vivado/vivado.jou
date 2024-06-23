@@ -1,0 +1,55 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Jun 23 17:10:00 2024
+# Process ID: 4472
+# Current directory: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent404 C:\Users\lotto\Desktop\Alveare\M_AXI_ALU\100\Vivado\ALU_sys_HDL.xpr
+# Log file: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/Vivado/vivado.log
+# Journal file: C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/Vivado\vivado.jou
+# Running On: MSI, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 10, Host memory: 16870 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/Vivado/ALU_sys_HDL.xpr
+update_compile_order -fileset sources_1
+create_bd_design "ALU_sys_HDL_design"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+create_bd_cell -type module -reference ALU_sys_HDL ALU_sys_HDL_0
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins ALU_sys_HDL_0/ap_clk]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/ALU_sys_HDL_0/s_axi_control} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins ALU_sys_HDL_0/s_axi_control]
+endgroup
+startgroup
+set_property -dict [list \
+  CONFIG.PCW_USE_S_AXI_HP0 {1} \
+  CONFIG.PCW_USE_S_AXI_HP1 {1} \
+  CONFIG.PCW_USE_S_AXI_HP2 {1} \
+  CONFIG.PCW_USE_S_AXI_HP3 {1} \
+] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/ALU_sys_HDL_0/m_axi_gmem0} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/ALU_sys_HDL_0/m_axi_gmem1} Slave {/processing_system7_0/S_AXI_HP1} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins processing_system7_0/S_AXI_HP1]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/ALU_sys_HDL_0/m_axi_gmem2} Slave {/processing_system7_0/S_AXI_HP2} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins processing_system7_0/S_AXI_HP2]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/ALU_sys_HDL_0/m_axi_gmem3} Slave {/processing_system7_0/S_AXI_HP3} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins processing_system7_0/S_AXI_HP3]
+endgroup
+regenerate_bd_layout
+save_bd_design
+make_wrapper -files [get_files C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/Vivado/ALU_sys_HDL.srcs/sources_1/bd/ALU_sys_HDL_design/ALU_sys_HDL_design.bd] -top
+add_files -norecurse c:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/Vivado/ALU_sys_HDL.gen/sources_1/bd/ALU_sys_HDL_design/hdl/ALU_sys_HDL_design_wrapper.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top ALU_sys_HDL_design_wrapper [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_run impl_1

@@ -1,0 +1,44 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "ALU_sys_HDL",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "ALU_sys_HDL"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/ALU_sys_HDL/solution1/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "ALU_sys_HDL",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "ALU_sys_HDL"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/ALU_sys_HDL/solution1/csynth.tcl",
+    "sourceLine": 17,
+    "success": true
+  }
+]

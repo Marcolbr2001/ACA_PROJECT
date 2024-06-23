@@ -1,0 +1,12 @@
+---
+MainSourceFile:  'C:/Users/lotto/Desktop/Alveare/M_AXI_ALU/100/ALU_sys_HDL/solution1/.autopilot/db/core.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-8] Static scalars and arrays declared inside a dataflow region will be treated like local variables'
+    FileOffset:      '222:13'
+    FilePath:        core.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-11] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region'
+    FileOffset:      '225:9'
+    FilePath:        core.cpp
+...

@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'op_data_exe_wb'" level="0">
+<item name = "Date">Sun Jun 23 13:22:50 2024
+</item>
+<item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
+<item name = "Project">ALU_sys_HDL</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">699, 699, 6.990 us, 6.990 us, 699, 699, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_op_data_exe_wb_Pipeline_l_operation_fu_92">op_data_exe_wb_Pipeline_l_operation, 111, 111, 1.110 us, 1.110 us, 111, 111, no</column>
+<column name="grp_op_data_exe_wb_Pipeline_l_data_a_fu_101">op_data_exe_wb_Pipeline_l_data_a, 111, 111, 1.110 us, 1.110 us, 111, 111, no</column>
+<column name="grp_op_data_exe_wb_Pipeline_l_data_b_fu_110">op_data_exe_wb_Pipeline_l_data_b, 111, 111, 1.110 us, 1.110 us, 111, 111, no</column>
+<column name="grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_119">op_data_exe_wb_Pipeline_s_operation_data_op, 102, 102, 1.020 us, 1.020 us, 102, 102, no</column>
+<column name="grp_op_data_exe_wb_Pipeline_exe_fu_127">op_data_exe_wb_Pipeline_exe, 139, 139, 1.390 us, 1.390 us, 139, 139, no</column>
+<column name="grp_op_data_exe_wb_Pipeline_write_back_fu_139">op_data_exe_wb_Pipeline_write_back, 108, 108, 1.080 us, 1.080 us, 108, 108, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

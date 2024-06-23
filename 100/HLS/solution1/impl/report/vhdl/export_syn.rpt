@@ -1,0 +1,264 @@
+================================================================
+== Vivado RTL Synthesis Results
+================================================================
++ General Information:
+    * Date:            Sun Jun 23 13:37:59 +0200 2024
+    * Version:         2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:         ALU_sys_HDL
+    * Solution:        solution1 (Vivado IP Flow Target)
+    * Product family:  zynq
+    * Target device:   xc7z020-clg400-1
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * RTL Synthesis target clock:  10 ns
+    * C-Synthesis target clock:    10 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== RTL Synthesis Resource Summary
+================================================================
+LUT:              7368
+FF:               9732
+DSP:              6
+BRAM:             9
+URAM:             0
+SRL:              878
+
+
+================================================================
+== RTL Synthesis Timing Summary
+================================================================
+* Timing was met
++----------------+-------------+
+| Timing         | Period (ns) |
++----------------+-------------+
+| Target         | 10.000      |
+| Post-Synthesis | 6.562       |
++----------------+-------------+
+
+
+================================================================
+== RTL Synthesis Resources
+================================================================
++------------------------------------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+--------+
+| Name                                                             | LUT  | FF   | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
++------------------------------------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+--------+
+| U0                                                               | 7368 | 9732 | 6   | 9    |      |     |        |      |         |          |        |
+|   (U0)                                                           | 3    |      |     |      |      |     |        |      |         |          |        |
+|   Block_entry1_proc_U0                                           | 4915 | 6232 | 6   | 5    |      |     |        |      |         |          |        |
+|     (Block_entry1_proc_U0)                                       | 1    | 6    |     |      |      |     |        |      |         |          |        |
+|     ALU_operation_MEM_U                                          |      |      |     | 1    |      |     |        |      |         |          |        |
+|     ALU_operation_fifo_U                                         | 76   | 33   |     | 1    |      |     |        |      |         |          |        |
+|     data_a_fifo_U                                                | 39   | 33   |     | 1    |      |     |        |      |         |          |        |
+|     data_b_fifo_U                                                | 38   | 33   |     | 1    |      |     |        |      |         |          |        |
+|     data_result_fifo_U                                           | 36   | 33   |     | 1    |      |     |        |      |         |          |        |
+|     grp_data_exe_wb_fu_142                                       | 2161 | 2896 | 3   |      |      |     |        |      |         |          |        |
+|       (grp_data_exe_wb_fu_142)                                   | 3    | 16   |     |      |      |     |        |      |         |          |        |
+|         mul_32s_32s_32_2_1_U42                                   | 15   | 17   | 3   |      |      |     |        |      |         |          |        |
+|         sdiv_32s_32s_32_36_1_U43                                 | 1696 | 2051 |     |      |      |     |        |      |         |          |        |
+|           (sdiv_32s_32s_32_36_1_U43)                             | 1054 | 32   |     |      |      |     |        |      |         |          |        |
+|       grp_data_exe_wb_Pipeline_l_data_a_fu_74                    | 26   | 114  |     |      |      |     |        |      |         |          |        |
+|         (grp_data_exe_wb_Pipeline_l_data_a_fu_74)                | 10   | 112  |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                 | 20   | 2    |     |      |      |     |        |      |         |          |        |
+|       grp_data_exe_wb_Pipeline_l_data_b_fu_83                    | 26   | 114  |     |      |      |     |        |      |         |          |        |
+|         (grp_data_exe_wb_Pipeline_l_data_b_fu_83)                | 10   | 112  |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                 | 20   | 2    |     |      |      |     |        |      |         |          |        |
+|       grp_data_exe_wb_Pipeline_write_back_fu_104                 | 34   | 111  |     |      |      |     |        |      |         |          |        |
+|         (grp_data_exe_wb_Pipeline_write_back_fu_104)             | 14   | 109  |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                 | 24   | 2    |     |      |      |     |        |      |         |          |        |
+|     grp_op_data_exe_wb_fu_112                                    | 2469 | 3035 | 3   |      |      |     |        |      |         |          |        |
+|       (grp_op_data_exe_wb_fu_112)                                | 7    | 24   |     |      |      |     |        |      |         |          |        |
+|       grp_op_data_exe_wb_Pipeline_exe_fu_127                     | 2077 | 2541 | 3   |      |      |     |        |      |         |          |        |
+|         (grp_op_data_exe_wb_Pipeline_exe_fu_127)                 | 349  | 471  |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                 | 17   | 2    |     |      |      |     |        |      |         |          |        |
+|         mul_32s_32s_32_2_1_U12                                   | 15   | 17   | 3   |      |      |     |        |      |         |          |        |
+|         sdiv_32s_32s_32_36_1_U13                                 | 1696 | 2051 |     |      |      |     |        |      |         |          |        |
+|           (sdiv_32s_32s_32_36_1_U13)                             | 1054 | 32   |     |      |      |     |        |      |         |          |        |
+|       grp_op_data_exe_wb_Pipeline_l_data_a_fu_101                | 92   | 114  |     |      |      |     |        |      |         |          |        |
+|         (grp_op_data_exe_wb_Pipeline_l_data_a_fu_101)            | 73   | 112  |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                 | 20   | 2    |     |      |      |     |        |      |         |          |        |
+|       grp_op_data_exe_wb_Pipeline_l_data_b_fu_110                | 92   | 114  |     |      |      |     |        |      |         |          |        |
+|         (grp_op_data_exe_wb_Pipeline_l_data_b_fu_110)            | 73   | 112  |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                 | 20   | 2    |     |      |      |     |        |      |         |          |        |
+|       grp_op_data_exe_wb_Pipeline_l_operation_fu_92              | 89   | 114  |     |      |      |     |        |      |         |          |        |
+|         (grp_op_data_exe_wb_Pipeline_l_operation_fu_92)          | 70   | 112  |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                 | 20   | 2    |     |      |      |     |        |      |         |          |        |
+|       grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_119     | 18   | 17   |     |      |      |     |        |      |         |          |        |
+|         (grp_op_data_exe_wb_Pipeline_s_operation_data_op_fu_119) | 2    | 15   |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                 | 16   | 2    |     |      |      |     |        |      |         |          |        |
+|       grp_op_data_exe_wb_Pipeline_write_back_fu_139              | 94   | 111  |     |      |      |     |        |      |         |          |        |
+|         (grp_op_data_exe_wb_Pipeline_write_back_fu_139)          | 73   | 109  |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                 | 22   | 2    |     |      |      |     |        |      |         |          |        |
+|     grp_operation_fu_166                                         | 58   | 139  |     |      |      |     |        |      |         |          |        |
+|       (grp_operation_fu_166)                                     | 2    | 8    |     |      |      |     |        |      |         |          |        |
+|       grp_operation_Pipeline_l_operation_fu_42                   | 29   | 114  |     |      |      |     |        |      |         |          |        |
+|         (grp_operation_Pipeline_l_operation_fu_42)               | 17   | 112  |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                 | 19   | 2    |     |      |      |     |        |      |         |          |        |
+|       grp_operation_Pipeline_s_operation_data_op_fu_51           | 27   | 17   |     |      |      |     |        |      |         |          |        |
+|         (grp_operation_Pipeline_s_operation_data_op_fu_51)       | 8    | 15   |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                 | 19   | 2    |     |      |      |     |        |      |         |          |        |
+|     grp_reset_fu_178                                             | 37   | 24   |     |      |      |     |        |      |         |          |        |
+|       (grp_reset_fu_178)                                         | 8    | 12   |     |      |      |     |        |      |         |          |        |
+|       grp_reset_Pipeline_clear_ALU_op_fu_40                      | 2    | 1    |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                 | 2    | 1    |     |      |      |     |        |      |         |          |        |
+|       grp_reset_Pipeline_clear_FIFO_a_fu_28                      | 2    | 1    |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                 | 2    | 1    |     |      |      |     |        |      |         |          |        |
+|       grp_reset_Pipeline_clear_FIFO_b_fu_34                      | 2    | 1    |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                 | 2    | 1    |     |      |      |     |        |      |         |          |        |
+|       grp_reset_Pipeline_clear_RAM_op_fu_46                      | 23   | 9    |     |      |      |     |        |      |         |          |        |
+|         (grp_reset_Pipeline_clear_RAM_op_fu_46)                  |      | 7    |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                 | 23   | 2    |     |      |      |     |        |      |         |          |        |
+|   control_s_axi_U                                                | 351  | 344  |     |      |      |     |        |      |         |          |        |
+|   gmem0_m_axi_U                                                  | 469  | 730  |     | 1    |      |     |        |      |         |          |        |
+|   gmem1_m_axi_U                                                  | 469  | 730  |     | 1    |      |     |        |      |         |          |        |
+|   gmem2_m_axi_U                                                  | 693  | 966  |     | 1    |      |     |        |      |         |          |        |
+|   gmem3_m_axi_U                                                  | 469  | 730  |     | 1    |      |     |        |      |         |          |        |
++------------------------------------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+--------+
+
+
+================================================================
+== RTL Synthesis Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 13.85% | OK     |
+| FD                                                        | 50%       | 9.15%  | OK     |
+| LUTRAM+SRL                                                | 25%       | 5.05%  | OK     |
+| MUXF7                                                     | 15%       | 0.00%  | OK     |
+| DSP                                                       | 80%       | 2.73%  | OK     |
+| RAMB/FIFO                                                 | 80%       | 3.21%  | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 2.97%  | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 998       | 171    | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 2.37   | OK     |
+| Max Average Fanout for modules > 100k cells               | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.575ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.403ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== RTL Synthesis Timing Paths
+================================================================
+* Timing was met
++-------+-------+-------------------------------------+-----------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN                      | ENDPOINT PIN                                                    | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                                     |                                                                 |              |            |                |          DELAY |        DELAY |
++-------+-------+-------------------------------------+-----------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 3.438 | control_s_axi_U/int_selec_reg[12]/C | Block_entry1_proc_U0/data_a_fifo_U/num_data_cnt_reg[6]/D        |            7 |         59 |          6.587 |          2.275 |        4.312 |
+| Path2 | 3.439 | control_s_axi_U/int_selec_reg[12]/C | Block_entry1_proc_U0/data_a_fifo_U/mOutPtr_reg[6]/D             |            7 |         19 |          6.586 |          2.283 |        4.303 |
+| Path3 | 3.446 | control_s_axi_U/int_selec_reg[12]/C | Block_entry1_proc_U0/data_b_fifo_U/mOutPtr_reg[6]/D             |            7 |         59 |          6.579 |          2.267 |        4.312 |
+| Path4 | 3.460 | control_s_axi_U/int_selec_reg[12]/C | Block_entry1_proc_U0/ALU_operation_fifo_U/mOutPtr_reg[6]/D      |            7 |         59 |          6.565 |          2.267 |        4.298 |
+| Path5 | 3.470 | control_s_axi_U/int_selec_reg[12]/C | Block_entry1_proc_U0/ALU_operation_fifo_U/num_data_cnt_reg[6]/D |            7 |         19 |          6.555 |          2.283 |        4.272 |
++-------+-------+-------------------------------------+-----------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +-------------------------------------------------------------+----------------------+
+    | Path1 Cells                                                 | Primitive Type       |
+    +-------------------------------------------------------------+----------------------+
+    | control_s_axi_U/int_selec_reg[12]                           | FLOP_LATCH.flop.FDRE |
+    | control_s_axi_U/mem_reg_i_49__0                             | LUT.others.LUT4      |
+    | control_s_axi_U/mem_reg_i_45                                | LUT.others.LUT4      |
+    | control_s_axi_U/num_data_cnt[7]_i_3__0                      | LUT.others.LUT4      |
+    | Block_entry1_proc_U0/grp_reset_fu_178/mem_reg_i_35__1       | LUT.others.LUT4      |
+    | Block_entry1_proc_U0/data_a_fifo_U/p_0_out__18_carry_i_5__1 | LUT.others.LUT5      |
+    | Block_entry1_proc_U0/data_a_fifo_U/p_0_out__18_carry        | CARRY.others.CARRY4  |
+    | Block_entry1_proc_U0/data_a_fifo_U/p_0_out__18_carry__0     | CARRY.others.CARRY4  |
+    | Block_entry1_proc_U0/data_a_fifo_U/num_data_cnt_reg[6]      | FLOP_LATCH.flop.FDRE |
+    +-------------------------------------------------------------+----------------------+
+
+    +---------------------------------------------------------+----------------------+
+    | Path2 Cells                                             | Primitive Type       |
+    +---------------------------------------------------------+----------------------+
+    | control_s_axi_U/int_selec_reg[12]                       | FLOP_LATCH.flop.FDRE |
+    | control_s_axi_U/mem_reg_i_49__0                         | LUT.others.LUT4      |
+    | control_s_axi_U/mem_reg_i_45                            | LUT.others.LUT4      |
+    | control_s_axi_U/mem_reg_i_39                            | LUT.others.LUT2      |
+    | control_s_axi_U/mem_reg_i_36__0                         | LUT.others.LUT6      |
+    | Block_entry1_proc_U0/data_a_fifo_U/p_0_out_carry_i_5__1 | LUT.others.LUT6      |
+    | Block_entry1_proc_U0/data_a_fifo_U/p_0_out_carry        | CARRY.others.CARRY4  |
+    | Block_entry1_proc_U0/data_a_fifo_U/p_0_out_carry__0     | CARRY.others.CARRY4  |
+    | Block_entry1_proc_U0/data_a_fifo_U/mOutPtr_reg[6]       | FLOP_LATCH.flop.FDRE |
+    +---------------------------------------------------------+----------------------+
+
+    +---------------------------------------------------------+----------------------+
+    | Path3 Cells                                             | Primitive Type       |
+    +---------------------------------------------------------+----------------------+
+    | control_s_axi_U/int_selec_reg[12]                       | FLOP_LATCH.flop.FDRE |
+    | control_s_axi_U/mem_reg_i_49__0                         | LUT.others.LUT4      |
+    | control_s_axi_U/mem_reg_i_45                            | LUT.others.LUT4      |
+    | control_s_axi_U/num_data_cnt[7]_i_3__0                  | LUT.others.LUT4      |
+    | Block_entry1_proc_U0/grp_reset_fu_178/mem_reg_i_35__0   | LUT.others.LUT4      |
+    | Block_entry1_proc_U0/data_b_fifo_U/p_0_out_carry_i_5__0 | LUT.others.LUT6      |
+    | Block_entry1_proc_U0/data_b_fifo_U/p_0_out_carry        | CARRY.others.CARRY4  |
+    | Block_entry1_proc_U0/data_b_fifo_U/p_0_out_carry__0     | CARRY.others.CARRY4  |
+    | Block_entry1_proc_U0/data_b_fifo_U/mOutPtr_reg[6]       | FLOP_LATCH.flop.FDRE |
+    +---------------------------------------------------------+----------------------+
+
+    +----------------------------------------------------------------+----------------------+
+    | Path4 Cells                                                    | Primitive Type       |
+    +----------------------------------------------------------------+----------------------+
+    | control_s_axi_U/int_selec_reg[12]                              | FLOP_LATCH.flop.FDRE |
+    | control_s_axi_U/mem_reg_i_49__0                                | LUT.others.LUT4      |
+    | control_s_axi_U/mem_reg_i_45                                   | LUT.others.LUT4      |
+    | control_s_axi_U/num_data_cnt[7]_i_3__0                         | LUT.others.LUT4      |
+    | Block_entry1_proc_U0/ALU_operation_fifo_U/p_0_out_carry_i_6    | LUT.others.LUT5      |
+    | Block_entry1_proc_U0/ALU_operation_fifo_U/p_0_out_carry_i_5__2 | LUT.others.LUT6      |
+    | Block_entry1_proc_U0/ALU_operation_fifo_U/p_0_out_carry        | CARRY.others.CARRY4  |
+    | Block_entry1_proc_U0/ALU_operation_fifo_U/p_0_out_carry__0     | CARRY.others.CARRY4  |
+    | Block_entry1_proc_U0/ALU_operation_fifo_U/mOutPtr_reg[6]       | FLOP_LATCH.flop.FDRE |
+    +----------------------------------------------------------------+----------------------+
+
+    +--------------------------------------------------------------------+----------------------+
+    | Path5 Cells                                                        | Primitive Type       |
+    +--------------------------------------------------------------------+----------------------+
+    | control_s_axi_U/int_selec_reg[12]                                  | FLOP_LATCH.flop.FDRE |
+    | control_s_axi_U/mem_reg_i_49__0                                    | LUT.others.LUT4      |
+    | control_s_axi_U/mem_reg_i_45                                       | LUT.others.LUT4      |
+    | control_s_axi_U/mem_reg_i_39                                       | LUT.others.LUT2      |
+    | Block_entry1_proc_U0/ALU_operation_fifo_U/num_data_cnt[7]_i_2__0   | LUT.others.LUT6      |
+    | Block_entry1_proc_U0/ALU_operation_fifo_U/p_0_out__18_carry_i_5__2 | LUT.others.LUT6      |
+    | Block_entry1_proc_U0/ALU_operation_fifo_U/p_0_out__18_carry        | CARRY.others.CARRY4  |
+    | Block_entry1_proc_U0/ALU_operation_fifo_U/p_0_out__18_carry__0     | CARRY.others.CARRY4  |
+    | Block_entry1_proc_U0/ALU_operation_fifo_U/num_data_cnt_reg[6]      | FLOP_LATCH.flop.FDRE |
+    +--------------------------------------------------------------------+----------------------+
+
+
+================================================================
+== RTL Synthesis Vivado Reports
+================================================================
++--------------------------+-----------------------------------------------------------------+
+| Report Type              | Report Location                                                 |
++--------------------------+-----------------------------------------------------------------+
+| design_analysis          | impl/vhdl/report/ALU_sys_HDL_design_analysis_synth.rpt          |
+| failfast                 | impl/vhdl/report/ALU_sys_HDL_failfast_synth.rpt                 |
+| timing                   | impl/vhdl/report/ALU_sys_HDL_timing_synth.rpt                   |
+| timing_paths             | impl/vhdl/report/ALU_sys_HDL_timing_paths_synth.rpt             |
+| utilization              | impl/vhdl/report/ALU_sys_HDL_utilization_synth.rpt              |
+| utilization_hierarchical | impl/vhdl/report/ALU_sys_HDL_utilization_hierarchical_synth.rpt |
++--------------------------+-----------------------------------------------------------------+
+
+
