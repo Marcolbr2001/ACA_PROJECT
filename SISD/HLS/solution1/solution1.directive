@@ -5,6 +5,11 @@
                 <option name="name" value="sisd"/>
             </pragma>
         </directive>
+        <directive functionName="sisd" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="sisd"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

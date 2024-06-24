@@ -1,7 +1,0 @@
-Running: xsim.dir/ALU_sys_HDL/xsimk.exe -simmode gui -wdb ALU_sys_HDL.wdb -simrunnum 0 -socket 58041
-Design successfully loaded
-Design Loading Memory Usage: 11980 KB (Peak: 11980 KB)
-Design Loading CPU Usage: 31 ms
-Simulation completed
-Simulation Memory Usage: 14316 KB (Peak: 14316 KB)
-Simulation CPU Usage: 827 ms

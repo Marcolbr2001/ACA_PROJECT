@@ -1,0 +1,29 @@
+
+*** Running vivado
+    with args -log ALU_sys_HDL_BD_auto_pc_2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ALU_sys_HDL_BD_auto_pc_2.tcl
+
+
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source ALU_sys_HDL_BD_auto_pc_2.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 484.316 ; gain = 184.273
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/marco/Desktop/ALU_sys_HDL_BD/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/ProgramData/Xilinx/Vivado/2023.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ALU_sys_HDL_BD_auto_pc_2
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 0d0bd372a6cd561d to dir: C:/Users/marco/Desktop/ALU_sys_HDL_BD/ALU_sys_HDL_BD.runs/ALU_sys_HDL_BD_auto_pc_2_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/marco/Desktop/ALU_sys_HDL_BD/ALU_sys_HDL_BD.cache/ip/2023.2/0/d/0d0bd372a6cd561d/ALU_sys_HDL_BD_auto_pc_4.dcp to C:/Users/marco/Desktop/ALU_sys_HDL_BD/ALU_sys_HDL_BD.runs/ALU_sys_HDL_BD_auto_pc_2_synth_1/ALU_sys_HDL_BD_auto_pc_2.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/marco/Desktop/ALU_sys_HDL_BD/ALU_sys_HDL_BD.cache/ip/2023.2/0/d/0d0bd372a6cd561d/ALU_sys_HDL_BD_auto_pc_4_sim_netlist.v to C:/Users/marco/Desktop/ALU_sys_HDL_BD/ALU_sys_HDL_BD.runs/ALU_sys_HDL_BD_auto_pc_2_synth_1/ALU_sys_HDL_BD_auto_pc_2_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/marco/Desktop/ALU_sys_HDL_BD/ALU_sys_HDL_BD.cache/ip/2023.2/0/d/0d0bd372a6cd561d/ALU_sys_HDL_BD_auto_pc_4_sim_netlist.vhdl to C:/Users/marco/Desktop/ALU_sys_HDL_BD/ALU_sys_HDL_BD.runs/ALU_sys_HDL_BD_auto_pc_2_synth_1/ALU_sys_HDL_BD_auto_pc_2_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/marco/Desktop/ALU_sys_HDL_BD/ALU_sys_HDL_BD.cache/ip/2023.2/0/d/0d0bd372a6cd561d/ALU_sys_HDL_BD_auto_pc_4_stub.v to C:/Users/marco/Desktop/ALU_sys_HDL_BD/ALU_sys_HDL_BD.runs/ALU_sys_HDL_BD_auto_pc_2_synth_1/ALU_sys_HDL_BD_auto_pc_2_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/marco/Desktop/ALU_sys_HDL_BD/ALU_sys_HDL_BD.cache/ip/2023.2/0/d/0d0bd372a6cd561d/ALU_sys_HDL_BD_auto_pc_4_stub.vhdl to C:/Users/marco/Desktop/ALU_sys_HDL_BD/ALU_sys_HDL_BD.runs/ALU_sys_HDL_BD_auto_pc_2_synth_1/ALU_sys_HDL_BD_auto_pc_2_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP ALU_sys_HDL_BD_auto_pc_2, cache-ID = 0d0bd372a6cd561d.
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 23 18:29:07 2024...

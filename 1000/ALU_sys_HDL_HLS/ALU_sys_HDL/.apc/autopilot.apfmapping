@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
-  <source>
-    <originFiles name="core.cpp" path="C:\Users\marco\Desktop\ALU_sys_HDL\ALU_sys_HDL\core.cpp"/>
-  </source>
-  <testbench>
-    <originFiles name="tb.cpp" path="C:\Users\marco\Desktop\ALU_sys_HDL\ALU_sys_HDL\tb.cpp"/>
-  </testbench>
-</autopilotfilemapping:AutoPilotFileMapping>

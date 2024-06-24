@@ -1,55 +1,34 @@
 #include <stdio.h>
 #include <string.h>
 
-#define DATA_LENGTH 50
+void sisd(int a, int b, int op, int& c) {
 
-int sisd(volatile int a, volatile int b, volatile int op) {
+	#pragma HLS INTERFACE ap_ctrl_none port=return
 
-	#pragma HLS INTERFACE mode=s_axilite bundle=control port=op
-	#pragma HLS INTERFACE mode=s_axilite bundle=control port=a
-	#pragma HLS INTERFACE mode=s_axilite bundle=control port=b
+	#pragma HLS INTERFACE s_axilite port=a
+	#pragma HLS INTERFACE s_axilite port=b
+	#pragma HLS INTERFACE s_axilite port=op
 
-	#pragma HLS INTERFACE mode=s_axilite bundle=control port=return
+	#pragma HLS INTERFACE s_axilite port=c
 
-    int data_a; //first operand
-    int data_b; //second operand
-
-    int data_result; //result
-
-    int ALU_operation; //operation
-
-
-	// ----- Taking Data and operation ------------------ //
-
-		data_a = a;
-		data_b = b;
-
-		ALU_operation=op;
 
 	// ----- Doing chosen operation ----- //
 
 
-		if(ALU_operation==0)
+	if(op == 0)
 
-				data_result = data_a + data_b;
+			c = a + b;
 
-		else if (ALU_operation==1)
+	else if (op== 1)
 
-				data_result  = data_a - data_b;
+			c  = a - b;
 
-		else if (ALU_operation==3)
+	else if (op == 3)
 
-				data_result  = data_a  * data_b ;
+			c  = a * b;
 
-		else if (ALU_operation==2)
+	else if (op == 2)
 
-				data_result  = data_a  / data_b ;
-
-
-
-    // ----- Outputting results -------- //
-
-		return data_result ;
-
+			c  = a / b;
 
 }

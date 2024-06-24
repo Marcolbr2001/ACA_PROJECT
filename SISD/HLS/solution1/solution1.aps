@@ -11,7 +11,7 @@
         <config_export description="alv_sisd" display_name="alv_sisd" flow="syn" format="ip_catalog" output="C:/Users/lotto/Desktop/sisd" rtl="vhdl" vivado_clock="10"/>
     </config>
     <UIConfigurations>
-        <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
+        <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="true" isStopAskAgain="false" showDetailDesignViewer="false">
             <Platform>xilinx/zynq/zynq</Platform>
             <customLibs/>
         </UIAutosynConf>
@@ -60,7 +60,7 @@
         <value string="solution1"/>
     </name>
     <project>
-        <value string="sisd"/>
+        <value string="HLS"/>
     </project>
     <flowTarget value="vivado"/>
     <targetInfo>
@@ -70,7 +70,7 @@
         <library value="xilinx/zynq/zynq" name="DefaultPlatform"/>
     </libraryList>
     <clockList>
-        <clock name="default" default="false" period="10"/>
+        <clock default="false" name="default" period="10"/>
     </clockList>
 </solution>
 
