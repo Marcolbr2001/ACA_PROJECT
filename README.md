@@ -22,7 +22,7 @@
 >├─ First list item
 >├─ First list item
 >├─ First list item
->  <pre>hello       world</pre> └─ First nested list item
+  <pre>hello       world</pre> └─ First nested list item
 >|  Second nested list item
 >└─ End
 
