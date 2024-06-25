@@ -1,6 +1,6 @@
-| First Header  | Second Header |
+| First Header  | Information   |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
+| Team Number   | AOHW-329      |
 | Content Cell  | Content Cell  |
 
 
