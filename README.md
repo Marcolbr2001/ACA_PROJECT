@@ -18,7 +18,10 @@
 
 ## Description of Archive
 
-<pre>├─ First list item </pre>
+<pre>├─ First list item
+      ├─ First list item
+
+</pre>
 <pre>├─ First list item </pre>
 <pre>├─ First list item </pre>
 <pre>├─ First list item </pre>
