@@ -28,7 +28,7 @@
 
 <blockquote>
 <h1>Foo</h1>
-<p>├─ First list item
+<p>├─ First list item <br>
   ├─ First list item
 baz</p>
 </blockquote>
