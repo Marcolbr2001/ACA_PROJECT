@@ -32,7 +32,7 @@
       ├─ First list item <br>
       ├─ First list item <br>
       ├─ First list item <br>
-      ├─ First list item <br>
+         └─ First nested list item <br>
       ├─ First list item <br>
       ├─ First list item
 </p>
