@@ -6,7 +6,7 @@
 | Team Number             | AOHW-329      |
 | Project Name            | AXI4 High Speed Communication for Microprocessors and RegEx Architectures  |
 | YouTube's Video         | link...      |
-| Project's Repository    | (https://github.com/Marcolbr2001/M_AXI_ALU)      |
+| Project's Repository    | https://github.com/Marcolbr2001/M_AXI_ALU      |
 | University Name         | Politecnico di Milano      |
 | Participant (email)     | Filippo Carloni (filippo.carloni@polimi.it)      |
 | Participant (email)     | Marco La Barbera (marco.labarbera@mail.polimi.it)      |
