@@ -1,7 +1,15 @@
-|               | Information   |
-| ------------- | ------------- |
-| Team Number   | AOHW-329      |
-| Project Name  | AXI4 High Speed Communication for Microprocessors and RegEx Architectures  |
+|                         | Information   |
+| -------------           | ------------- |
+| Team Number             | AOHW-329      |
+| Project Name            | AXI4 High Speed Communication for Microprocessors and RegEx Architectures  |
+| YouTube's Video         | AOHW-329      |
+| Project's Repository    | AOHW-329      |
+| Team Number             | AOHW-329      |
+| Team Number             | AOHW-329      |
+| Team Number             | AOHW-329      |
+| Team Number             | AOHW-329      |
+| Team Number             | AOHW-329      |
+
 
 
 
