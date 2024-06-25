@@ -28,7 +28,11 @@
 └─ End
 </pre>
 
+## Instructions to build and test project
 
+### Step - 1
+
+compra un gelato
 
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
