@@ -21,15 +21,12 @@
 <pre>
 ├─ First list item
 ├─ First list item
-
+├─ First list item
+├─ First list item
+      └─ First nested list item
+| First list item
+└─ End
 </pre>
-<pre>├─ First list item </pre>
-<pre>├─ First list item </pre>
-<pre>├─ First list item </pre>
-<pre>├─ First list item </pre>
-<pre>   └─ First nested list item </pre>
-<pre>| First list item </pre>
-<pre>└─ End </pre>
 
 <blockquote>
 <h1>Foo</h1>
