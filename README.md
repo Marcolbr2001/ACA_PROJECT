@@ -1,4 +1,4 @@
-| First Header  | Information   |
+|               | Information   |
 | ------------- | ------------- |
 | Team Number   | AOHW-329      |
 | Project Name  | AXI4 High Speed Communication for Microprocessors and RegEx Architectures  |
