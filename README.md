@@ -18,13 +18,14 @@
 
 ## Description of Archive
 
->├─ First list item   #
->├─ First list item
->├─ First list item
->├─ First list item
-  <pre>hello       world</pre> └─ First nested list item
->|  Second nested list item
->└─ End
+<pre>├─ First list item </pre>
+<pre>├─ First list item </pre>
+<pre>├─ First list item </pre>
+<pre>├─ First list item </pre>
+<pre>├─ First list item </pre>
+<pre>   └─ First nested list item </pre>
+<pre>| First list item </pre>
+<pre>└─ End </pre>
 
 <blockquote>
 <h1>Foo</h1>
