@@ -23,7 +23,7 @@
 ├─ First list item
 ├─ First list item
 ├─ First list item
-      └─ First nested list item
+ └─ First nested list item
 | First list item
 └─ End
 </pre>
