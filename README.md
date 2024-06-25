@@ -18,13 +18,13 @@
 
 ## Description of Archive
 
-├─ First list item   #
-├─ First list item
-├─ First list item
-├─ First list item
-   └─ First nested list item
-|  Second nested list item
-└─ End
+>├─ First list item   #
+>├─ First list item
+>├─ First list item
+>├─ First list item
+>   └─ First nested list item
+>|  Second nested list item
+>└─ End
 
 ├─ aie/                  # AIE kernel for transfomation
 ├─ data_movers/         # PL kernels for setting up the AIE and for fetching
