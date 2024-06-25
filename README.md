@@ -34,6 +34,11 @@
 
 compra un gelato
 
+### Step - 2
+
+comprane un altro
+
+
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
 
