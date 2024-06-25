@@ -2,13 +2,16 @@
 | -------------           | ------------- |
 | Team Number             | AOHW-329      |
 | Project Name            | AXI4 High Speed Communication for Microprocessors and RegEx Architectures  |
-| YouTube's Video         | AOHW-329      |
-| Project's Repository    | AOHW-329      |
-| Team Number             | AOHW-329      |
-| Team Number             | AOHW-329      |
-| Team Number             | AOHW-329      |
-| Team Number             | AOHW-329      |
-| Team Number             | AOHW-329      |
+| YouTube's Video         | link...      |
+| Project's Repository    | (https://github.com/Marcolbr2001/M_AXI_ALU)      |
+| University Name         | Politecnico di Milano      |
+| Participant (email)     | Filippo Carloni (filippo.carloni@polimi.it)      |
+| Participant (email)     | Marco La Barbera (marco.labarbera@mail.polimi.it)      |
+| Participant (email)     | Giulio Lotto (giulio.lotto@mail.polimi.it)      |
+| Supervisor name         | Davide Conficconi      |
+| Supervisor email        | davide.conficconi@mail.polimi.it |
+| Board used              | PYNQ Z2 |
+| Software version        | ? |
 
 
 
