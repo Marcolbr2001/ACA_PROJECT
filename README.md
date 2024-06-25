@@ -16,6 +16,16 @@
 | Board used              | PYNQ Z2 |
 | Software version        | ? |
 
+## Description of Archive
+
+├─ aie/                # AIE kernel for transfomation
+├─ data_movers/        # PL kernels for setting up the AIE and for fetching
+├─ mutual_info/        # PL Kernel for computing mutual information
+├─ common/             # Common codes and variables
+├─ hw/                 # System integration
+├─ sw/                 # Host application and dataset
+|  └─ dataset/         # Dataset that can be used for testing
+└─ Makefile/           # Top-level Makefile to build and run
 
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
@@ -31,13 +41,3 @@
 
 > [!CAUTION]
 > Advises about risks or negative outcomes of certain actions.
-
-
-├─ aie/                # AIE kernel for transfomation
-├─ data_movers/        # PL kernels for setting up the AIE and for fetching
-├─ mutual_info/        # PL Kernel for computing mutual information
-├─ common/             # Common codes and variables
-├─ hw/                 # System integration
-├─ sw/                 # Host application and dataset
-|  └─ dataset/         # Dataset that can be used for testing
-└─ Makefile/           # Top-level Makefile to build and run
