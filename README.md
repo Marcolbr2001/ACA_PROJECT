@@ -5,7 +5,7 @@
 | -------------           | ------------- |
 | Team Number             | AOHW-329      |
 | Project Name            | AXI4 High Speed Communication for Microprocessors and RegEx Architectures  |
-| YouTube's Video         | link...      |
+| YouTube's Video         | https://www.youtube.com/watch?v=APLu9YeusYE |
 | Project's Repository    | https://github.com/Marcolbr2001/M_AXI_ALU      |
 | University Name         | Politecnico di Milano      |
 | Participant (email)     | Filippo Carloni (filippo.carloni@polimi.it)      |
@@ -14,18 +14,25 @@
 | Supervisor name         | Davide Conficconi      |
 | Supervisor email        | davide.conficconi@mail.polimi.it |
 | Board used              | PYNQ Z2 |
-| Software version        | ? |
+| Software version        | Vivado 2023.2 |
 
 ## Description of Archive
 
 <pre>
-├─ First list item                  #bla bla bla bla bla bla bla giulio gay
-├─ First list item                  #bla bla bla bla bla bla bla giulio gay
-├─ First list item                  #bla bla bla bla bla bla bla giulio gay
-├─ First list item                  #bla bla bla bla bla bla bla giulio gay
-   └─ First nested list item        #bla bla bla bla bla bla bla giulio gay
-| First list item                   #bla bla bla bla bla bla bla giulio gay
-└─ End
+├─ ALU_sys_HDL                      # It contains the core project
+   └─ ALU_sys_HDL_BD                # It is the Burst = 100 default implementation
+   └─ Archived_Project              # The Archived project of the Burst = 100 Default implementation
+   └─ Bitstream                     # The various bitstreams (50, 100, 200, 400)
+   └─ HLS                           # Folder of the HLS implementation
+   └─ ip_repo                       # The VHDL ip_repo used to generate ALU_sys_HD
+   └─ py                            # Python script for PYNQ testing
+├─ SISD                             # The ALVEARE State-Of-Art
+   └─ Bitstream                     # The SISD Bitstream
+   └─ HLS                           # Folder of the HLS implementation
+   └─ ip_repo                       # The HLS ip_repo used to generate SISD
+   └─ py                            # Python script for PYNQ testing
+└─ z_history                        # The history of the entire project
+
 </pre>
 
 ## Instructions to build and test project
