@@ -37,7 +37,7 @@
 
 ## Instructions to build and test project
    
-
+<pre>
 └─Open VITIS HLS 2023.2
 
 └─Create HLS project
@@ -84,6 +84,7 @@
 --Insert the files in the folder in the Pynq
 --Open Jupiter notebook, paste the Python code following the cell order
 --Run the programm
+</pre>
 
 ### Step - 2
 
