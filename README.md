@@ -33,11 +33,11 @@
    └─ py                            # Python script for PYNQ testing
 └─ z_history                        # The history of the entire project
 
-
+</pre>
 
 ## Instructions to build and test project
    
-</pre>
+
 └─Open VITIS HLS 2023.2
 
 └─Create HLS project
@@ -80,7 +80,11 @@
 --create HDL wrapper
 --Select the HDL wrapper as top_sim
 --generate bitstream
-</pre>
+--Copy .bit file, .tcl file (the first one), .hwh file and change their names in ALU_sys_HDL_400.bit, ALU_sys_HDL_400.tcl , ALU_sys_HDL_400.hwh and copy them
+--Insert the files in the folder in the Pynq
+--Open Jupiter notebook, paste the Python code following the cell order
+--Run the programm
+
 ### Step - 2
 
 comprane un altro
