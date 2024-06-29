@@ -39,9 +39,9 @@
 
 ### Step - 1
 
---Open VITIS HLS 2023.2|
---Create HLS project
---Type as top_function ALU_sys_HDL and add
+└─Open VITIS HLS 2023.2|
+└─Create HLS project
+└─Type as top_function ALU_sys_HDL and add
 --Type as part xc7z020clg400-1 and add
 --Right click on SOURCES and then ADD SOURCE FILE
 --Add core.cpp (Alu_sys_HDL->HLS->HLS_project)
