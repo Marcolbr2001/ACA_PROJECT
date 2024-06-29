@@ -20,18 +20,14 @@
 
 <pre>
 ├─ ALU_sys_HDL                      # It contains the core project
-   └─ ALU_sys_HDL_BD                # It is the Burst = 100 default implementation
-   └─ Archived_Project              # The Archived project of the Burst = 100 Default implementation
-   └─ Bitstream                     # The various bitstreams (50, 100, 200, 400)
-   └─ HLS                           # Folder of the HLS implementation
-   └─ ip_repo                       # The VHDL ip_repo used to generate ALU_sys_HD
-   └─ py                            # Python script for PYNQ testing
-├─ SISD                             # The ALVEARE State-Of-Art
-   └─ Bitstream                     # The SISD Bitstream
-   └─ HLS                           # Folder of the HLS implementation
-   └─ ip_repo                       # The HLS ip_repo used to generate SISD
-   └─ py                            # Python script for PYNQ testing
-└─ z_history                        # The history of the entire project
+   └─ files                         # All the files stage by stage that had been used to build the entire project
+   └─ Py                            # Python code to test the Hardware
+   └─ ALU_sys_HDL.xpr.zip           # Vivado Archived Project, it has the block design already implemented (synthesis, implementation and bitstream has to be done)
+   └─ ALU_sys_HDL.zip               # HLS Archived Project, it has the HLS generated file before our VHDL insertion
+├─ SISD                             # The ALVEARE State-Of-Art communication protocol
+   └─ files                         # HLS core.cpp and tb
+   └─ SISD.xpr.zip                  # The SISD implementation
+└─ ASH_Paper                        # Project documentation 
 
 </pre>
 
