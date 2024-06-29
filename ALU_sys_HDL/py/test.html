@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ALU_sys_HDL</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>ALU_sys vs SISD</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14582,12 +14582,15 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pynq</span>
 <span class="kn">from</span> <span class="nn">pynq</span> <span class="kn">import</span> <span class="n">Overlay</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">pynq</span> <span class="kn">import</span> <span class="n">allocate</span>
 
 <span class="kn">from</span> <span class="nn">pynq</span> <span class="kn">import</span> <span class="n">PL</span>
 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">PL</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span> <span class="c1"># Clear Programmable Logic</span>
+<span class="n">first</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># It is a constant, It&#39;s &#39;1&#39; if you are running the first test ever</span>
 </pre></div>
 
      </div>
@@ -14603,7 +14606,17 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">PL</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ---- Choose what the hardware has to do ---- #</span>
+
+<span class="n">burst_size</span>          <span class="o">=</span> <span class="mi">400</span>       <span class="c1"># A single Burst size</span>
+<span class="n">transactions</span>        <span class="o">=</span> <span class="mi">10</span>         <span class="c1"># Total Number of Bursts you want to do</span>
+
+<span class="n">selec</span> <span class="o">=</span> <span class="mi">2</span>       <span class="c1"># selec = 0      --&gt; Store New Operation</span>
+                <span class="c1"># selec = 1      --&gt; Load New Data and Execute</span>
+                <span class="c1"># selec = 2      --&gt; Run Entire Program</span>
+                <span class="c1"># selec = Others --&gt; Reset</span>
+            
+<span class="c1"># -------------------------------------------- #</span>
 </pre></div>
 
      </div>
@@ -14619,7 +14632,336 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span> <span class="o">=</span> <span class="n">Overlay</span><span class="p">(</span><span class="s1">&#39;/home/xilinx/pynq/overlays/AXI_ALU/ALU_sys_HDL/ALU_sys_HDL.bit&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#  ----- ALU_sys Software implementation ------ #</span>
+
+<span class="k">def</span> <span class="nf">golden</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="n">res</span><span class="p">):</span>    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">burst_size</span><span class="p">):</span>        
+        <span class="k">match</span> <span class="n">op</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">/</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">res</span> 
+
+<span class="c1">#  -------------------------------------------- #</span>
+
+
+<span class="c1">#  ------ SISD Software implementation -------- #</span>
+
+<span class="k">def</span> <span class="nf">golden_SISD</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">op</span><span class="p">):</span>    
+    <span class="k">match</span> <span class="n">op</span><span class="p">:</span>
+        <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+        <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">a</span><span class="o">//</span><span class="n">b</span>
+        <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span>
+        <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+            
+    <span class="k">return</span> <span class="n">res</span> 
+
+<span class="c1">#  -------------------------------------------- #</span>
+
+
+<span class="c1">#  ---- ALU_sys and SW function comparator ---- #</span>
+
+<span class="k">def</span> <span class="nf">eye</span><span class="p">(</span><span class="n">res_sw</span><span class="p">,</span> <span class="n">res_hw</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">res_sw</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">res_sw</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">res_hw</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+
+    <span class="k">return</span> <span class="mi">1</span>  
+
+<span class="c1">#  -------------------------------------------- #</span>
+
+
+<span class="c1"># ------ SISD and SW function comparator ------ #</span>
+
+<span class="k">def</span> <span class="nf">eye_SISD</span><span class="p">(</span><span class="n">res_sw</span><span class="p">,</span> <span class="n">res_hw</span><span class="p">):</span>
+    
+    <span class="k">if</span> <span class="n">res_sw</span> <span class="o">==</span> <span class="n">res_hw</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+    <span class="k">return</span> <span class="mi">1</span>
+
+<span class="c1">#  -------------------------------------------- #</span>
+
+<span class="c1"># -------- Create data and operations -------- #</span>
+
+<span class="n">seed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="mi">99999</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+
+<span class="n">data_a_np</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">16383</span><span class="p">,</span> <span class="mi">32767</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">transactions</span><span class="p">,</span> <span class="n">burst_size</span><span class="p">))</span>
+<span class="n">data_b_np</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16383</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">transactions</span><span class="p">,</span> <span class="n">burst_size</span><span class="p">))</span>
+
+<span class="n">operation_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">transactions</span><span class="p">,</span> <span class="n">burst_size</span><span class="p">))</span>
+
+<span class="n">data_a</span> <span class="o">=</span> <span class="n">data_a_np</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">data_b</span> <span class="o">=</span> <span class="n">data_b_np</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="n">operation</span> <span class="o">=</span> <span class="n">operation_np</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="c1"># -------------------------------------------- #</span>
+
+
+<span class="c1"># ----------------------------------------- SISD PL ------------------------------------------------- #</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">first</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+
+    <span class="n">PL</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span> <span class="c1"># Clear Programmable Logic</span>
+
+    <span class="n">test_2</span> <span class="o">=</span> <span class="n">Overlay</span><span class="p">(</span><span class="s1">&#39;/home/xilinx/pynq/overlays/AXI_ALU/SISD/ALU_sisd.bit&#39;</span><span class="p">)</span> <span class="c1"># Load SISD implementation, the State of The Art</span>
+
+
+    <span class="n">AXI_ALU</span> <span class="o">=</span> <span class="n">test_2</span><span class="o">.</span><span class="n">ALU_sisd</span>   <span class="c1"># Save Hierarchy</span>
+
+    <span class="n">time_list_SISD</span> <span class="o">=</span> <span class="p">[]</span>         <span class="c1"># List of the Equivalent time taken to complete the same number of transactions to as many as ALU_sys Burst has</span>
+
+    <span class="n">compare_SISD</span> <span class="o">=</span> <span class="p">[]</span>           <span class="c1"># Keep track if there are mismatches between HW and SW results</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">transactions</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">burst_size</span><span class="p">):</span>
+            
+            <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+            <span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x10</span><span class="p">,</span> <span class="n">data_a</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+            <span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x18</span><span class="p">,</span> <span class="n">data_b</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+            <span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x20</span><span class="p">,</span> <span class="n">operation</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+
+            <span class="n">c</span> <span class="o">=</span> <span class="n">AXI_ALU</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mh">0x28</span><span class="p">)</span>
+
+            <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+            <span class="n">res</span> <span class="o">=</span> <span class="n">golden_SISD</span><span class="p">(</span><span class="n">data_a</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">data_b</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">operation</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+
+            <span class="n">compare_SISD</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">eye_SISD</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span>
+
+            <span class="n">time_list_SISD</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">end</span><span class="o">-</span><span class="n">start</span><span class="p">)</span>
+
+<span class="c1"># ------------------------------------ End of SISD PL ----------------------------------------------- #</span>
+
+
+<span class="c1"># --------------------------------------- ALU_sys PL ------------------------------------------------ #</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">first</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+    
+    <span class="c1">#test_1    = Overlay(&#39;/home/xilinx/pynq/overlays/AXI_ALU/ALU_sys_HDL/50/ALU_sys_HDL_50.bit&#39;)      # Load this bitstream if you choose to send a 50 data burst</span>
+    <span class="c1">#test_1    = Overlay(&#39;/home/xilinx/pynq/overlays/AXI_ALU/ALU_sys_HDL/100/ALU_sys_HDL_100.bit&#39;)     # Load this bitstream if you choose to send a 100 data burst</span>
+    <span class="c1">#test_1    = Overlay(&#39;/home/xilinx/pynq/overlays/AXI_ALU/ALU_sys_HDL/200/ALU_sys_HDL_200.bit&#39;)    # Load this bitstream if you choose to send a 200 data burst</span>
+    <span class="n">test_1</span>    <span class="o">=</span> <span class="n">Overlay</span><span class="p">(</span><span class="s1">&#39;/home/xilinx/pynq/overlays/AXI_ALU/ALU_sys_HDL/400/ALU_sys_HDL_400.bit&#39;</span><span class="p">)</span>    <span class="c1"># Load this bitstream if you choose to send a 400 data burst</span>
+
+    <span class="n">AXI_ALU</span> <span class="o">=</span> <span class="n">test_1</span><span class="o">.</span><span class="n">ALU_sys_HDL_0</span>  <span class="c1"># Save Hierarchy</span>
+    
+    <span class="n">first</span> <span class="o">=</span> <span class="mi">0</span>
+    
+<span class="n">time_list_ALU_sys</span>   <span class="o">=</span> <span class="p">[]</span>        <span class="c1"># List of the time taken to complete a single ALU_sys burst</span>
+<span class="n">time_list_sw</span>        <span class="o">=</span> <span class="p">[]</span>        <span class="c1"># List of Equivalent time taken by the Software to achieve the same number of transaction</span>
+
+<span class="n">compare_ALU_sys</span>     <span class="o">=</span> <span class="p">[]</span>        <span class="c1"># Keep track if there are mismatches between HW and SW results</span>
+
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">transactions</span><span class="p">):</span>      
+    
+    <span class="c1"># --- Buffering in order to mimic ALU_sys --- #</span>
+
+    <span class="n">start_sw</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="c1"># Software Time counter starts here</span>
+    
+    <span class="n">selec_sw</span>     <span class="o">=</span> <span class="n">selec</span>
+    
+    <span class="n">output_sw</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">burst_size</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+    
+    <span class="c1"># -------------------------------------------- #</span>
+
+
+    <span class="c1"># ------------- SW function call ------------- #</span>
+    
+    <span class="k">match</span><span class="p">(</span><span class="n">selec</span><span class="p">):</span>
+
+        <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+            
+            <span class="n">operation_sw</span> <span class="o">=</span> <span class="n">operation</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">sw_result</span>    <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">burst_size</span><span class="p">,</span> <span class="s1">&#39;int32&#39;</span><span class="p">)</span>
+
+        <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+            
+            <span class="n">data_a_sw</span>    <span class="o">=</span> <span class="n">data_a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">data_b_sw</span>    <span class="o">=</span> <span class="n">data_b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            
+            <span class="n">sw_result</span>    <span class="o">=</span> <span class="n">golden</span><span class="p">(</span><span class="n">data_a_sw</span><span class="p">,</span> <span class="n">data_b_sw</span><span class="p">,</span> <span class="n">operation_sw</span><span class="p">,</span> <span class="n">output_sw</span><span class="p">)</span>
+
+
+        <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+            
+            <span class="n">data_a_sw</span>    <span class="o">=</span> <span class="n">data_a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">data_b_sw</span>    <span class="o">=</span> <span class="n">data_b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">operation_sw</span> <span class="o">=</span> <span class="n">operation</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            
+            <span class="n">sw_result</span>    <span class="o">=</span> <span class="n">golden</span><span class="p">(</span><span class="n">data_a_sw</span><span class="p">,</span> <span class="n">data_b_sw</span><span class="p">,</span> <span class="n">operation_sw</span><span class="p">,</span> <span class="n">output_sw</span><span class="p">)</span>
+
+        <span class="k">case</span> <span class="n">others</span><span class="p">:</span> 
+
+            <span class="n">sw_result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">burst_size</span><span class="p">,</span> <span class="s1">&#39;int32&#39;</span><span class="p">)</span>
+
+    <span class="c1"># -------------------------------------------- #</span>
+
+
+    <span class="n">end_sw</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="c1"># Software Time counter ends here</span>
+
+    <span class="n">time_list_sw</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">end_sw</span> <span class="o">-</span> <span class="n">start_sw</span><span class="p">)</span> <span class="c1"># Store this SW time value into the SW list</span>
+
+
+    <span class="c1"># -- Allocating and preparing pynq buffers --- #</span>
+
+    <span class="n">input_a</span>     <span class="o">=</span> <span class="n">pynq</span><span class="o">.</span><span class="n">allocate</span><span class="p">(</span><span class="n">burst_size</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+    <span class="n">input_b</span>     <span class="o">=</span> <span class="n">pynq</span><span class="o">.</span><span class="n">allocate</span><span class="p">(</span><span class="n">burst_size</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+
+    <span class="n">input_op</span>    <span class="o">=</span> <span class="n">pynq</span><span class="o">.</span><span class="n">allocate</span><span class="p">(</span><span class="n">burst_size</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span>
+
+    <span class="n">output</span>      <span class="o">=</span> <span class="n">pynq</span><span class="o">.</span><span class="n">allocate</span><span class="p">(</span><span class="n">burst_size</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="p">(</span><span class="n">selec</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">selec</span> <span class="o">==</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="n">operation_hw</span> <span class="o">=</span> <span class="n">operation</span>
+        
+    <span class="n">input_a</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">data_a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">input_b</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">data_b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">input_op</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">operation_hw</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+    <span class="n">input_a</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+    <span class="n">input_b</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+    <span class="n">input_op</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+
+    <span class="c1"># -------------------------------------------- #</span>
+
+
+    <span class="c1"># ----------- Write into registers ----------- #</span>
+
+    <span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x10</span><span class="p">,</span> <span class="n">input_a</span><span class="o">.</span><span class="n">physical_address</span><span class="p">)</span>   <span class="c1">#0x10 a      address port</span>
+    <span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x1c</span><span class="p">,</span> <span class="n">input_b</span><span class="o">.</span><span class="n">physical_address</span><span class="p">)</span>   <span class="c1">#0x1c b      address port</span>
+    <span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="n">input_op</span><span class="o">.</span><span class="n">physical_address</span><span class="p">)</span>  <span class="c1">#0x34 op     address port </span>
+    <span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x40</span><span class="p">,</span> <span class="n">selec</span><span class="p">)</span>                      <span class="c1">#0x40 selec  address port</span>
+    <span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x28</span><span class="p">,</span> <span class="n">output</span><span class="o">.</span><span class="n">physical_address</span><span class="p">)</span>    <span class="c1">#0x28 output address port </span>
+
+    <span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x00</span><span class="p">,</span><span class="mh">0x1</span><span class="p">)</span>  <span class="c1"># ALU_sys IP starts (ap_start = 1)</span>
+
+    <span class="c1"># -------------------------------------------- #</span>
+
+
+    <span class="c1"># ---- polling ----- #</span>
+
+    <span class="n">start_hw</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>  <span class="c1"># Hardware Time counter starts here</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">AXI_ALU</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mh">0x00</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x4</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">4</span><span class="p">:</span> <span class="c1">#0x4 != 4 --&gt; exit when in idle (better) </span>
+            <span class="k">pass</span>                           <span class="c1">#0x2 != 2 --&gt; exit when ap_done high </span>
+
+    <span class="n">end_hw</span>   <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>  <span class="c1"># Hardware Time counter ends here</span>
+
+    <span class="c1"># ----------------- #</span>
+    
+    <span class="n">time_list_ALU_sys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">end_hw</span> <span class="o">-</span> <span class="n">start_hw</span><span class="p">)</span> <span class="c1"># Store this HW time value into the HW list</span>
+
+    <span class="n">output</span><span class="o">.</span><span class="n">sync_from_device</span><span class="p">()</span>
+
+    <span class="n">compare_ALU_sys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">eye</span><span class="p">(</span><span class="n">sw_result</span><span class="p">,</span> <span class="n">output</span><span class="p">))</span> <span class="c1"># Check if Hardware and Software results are equal</span>
+    
+<span class="c1"># -------------------------------------- End of ALU_sys PL ------------------------------------------- #</span>
+
+
+<span class="c1"># ------ ALU_sys behavior ----- #</span>
+
+<span class="n">mismatch</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">selec</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">compare_ALU_sys</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">mismatch</span> <span class="o">+=</span> <span class="mi">1</span>
+            
+    <span class="k">if</span> <span class="n">mismatch</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ALU_sys Hardware Behaved CORRECTLY&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There are&quot;</span><span class="p">,</span> <span class="n">mismatch</span><span class="p">,</span> <span class="s2">&quot;WRONG transactions.&quot;</span><span class="p">)</span>
+
+<span class="c1"># ---------------------------- #</span>
+
+
+<span class="c1"># ------- SISD behavior ------- # </span>
+
+<span class="n">mismatch</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">selec</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">compare_SISD</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">mismatch</span> <span class="o">+=</span> <span class="mi">1</span>
+            
+    <span class="k">if</span> <span class="n">mismatch</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SISD Hardware Behaved CORRECTLY</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There are &quot;</span><span class="p">,</span> <span class="n">mismatch</span><span class="p">,</span> <span class="s2">&quot; WRONG computation.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># ---------------------------- #</span>
+
+
+<span class="c1"># ------ ALU_sys timing ------ # </span>
+
+<span class="n">time_sum</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">time_list_ALU_sys</span><span class="p">:</span>
+    <span class="n">time_sum</span> <span class="o">+=</span> <span class="n">i</span>
+    
+<span class="n">average_hw</span> <span class="o">=</span> <span class="n">time_sum</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">time_list_ALU_sys</span><span class="p">)</span>
+
+<span class="c1"># ---------------------------- #</span>
+
+
+<span class="c1"># ----- Software timing ----- # </span>
+
+<span class="n">time_sum</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">time_list_sw</span><span class="p">:</span>
+    <span class="n">time_sum</span> <span class="o">+=</span> <span class="n">i</span>
+
+<span class="n">average_sw</span> <span class="o">=</span> <span class="n">time_sum</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">time_list_sw</span><span class="p">)</span>
+
+<span class="c1"># ---------------------------- #</span>
+
+
+<span class="c1"># ------- SISD timing ------- # </span>
+
+<span class="n">time_sum</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">time_list_SISD</span><span class="p">:</span>
+    <span class="n">time_sum</span> <span class="o">+=</span> <span class="n">i</span>
+    
+<span class="n">average_SISD</span> <span class="o">=</span> <span class="p">(</span><span class="n">time_sum</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">time_list_SISD</span><span class="p">))</span><span class="o">*</span><span class="p">(</span><span class="n">burst_size</span><span class="p">)</span>
+
+<span class="c1"># ---------------------------- #</span>
+
+
+<span class="c1"># ----- Printing Results ---- #</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SOFTWARE average time: &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">average_sw</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="s2">&quot;s&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SISD     average time: &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">average_SISD</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span><span class="s2">&quot;s&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ALU_sys  average time: &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">average_hw</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="s2">&quot;s</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SISD    Speed-Up on Python: &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">average_sw</span><span class="o">/</span><span class="n">average_SISD</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ALU_sys Speed-Up on Python: &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">average_sw</span><span class="o">/</span><span class="n">average_hw</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ALU_sys Speed-Up on   SISD: &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">average_SISD</span><span class="o">/</span><span class="n">average_hw</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;x</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># ---------------------------- #</span>
 </pre></div>
 
      </div>
@@ -14642,9 +14984,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 
-<div id="3540490e-aa3b-483d-9735-4dc89886b9fa" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
+<div id="3ca1ddb1-771d-4d8a-9c34-7f10c4ded025" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
 <script type="text/javascript">
-var element = document.getElementById('3540490e-aa3b-483d-9735-4dc89886b9fa');
+var element = document.getElementById('3ca1ddb1-771d-4d8a-9c34-7f10c4ded025');
 
 try {
 require(['notebook/js/codecell'], function(codecell) {
@@ -14670,9 +15012,9 @@ require(['notebook/js/codecell'], function(codecell) {
 
 
 
-<div id="3540490e-aa3b-483d-9735-4dc89886b9fa" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
+<div id="3ca1ddb1-771d-4d8a-9c34-7f10c4ded025" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
 <script type="text/javascript">
-var element = document.getElementById('3540490e-aa3b-483d-9735-4dc89886b9fa');
+var element = document.getElementById('3ca1ddb1-771d-4d8a-9c34-7f10c4ded025');
 
 try {
 require(['notebook/js/codecell'], function(codecell) {
@@ -14690,243 +15032,6 @@ require(['notebook/js/codecell'], function(codecell) {
 
 </div>
 
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">AXI_ALU</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">ALU_sys_HDL_0</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">golden</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="n">res</span><span class="p">):</span>    
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">op</span><span class="p">)):</span>        
-        <span class="k">match</span> <span class="n">op</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-            <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-            <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
-                <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">/</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-            <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
-                <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-            <span class="k">case</span> <span class="k">_</span><span class="p">:</span>
-                <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    
-    <span class="k">return</span> <span class="n">res</span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># HW and SW function comparison</span>
-<span class="k">def</span> <span class="nf">eye</span><span class="p">(</span><span class="n">res_sw</span><span class="p">,</span> <span class="n">res_hw</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">res_sw</span><span class="p">)):</span>
-        <span class="k">if</span> <span class="n">res_sw</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">res_hw</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-            <span class="k">pass</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="mi">0</span>
-
-    <span class="k">return</span> <span class="mi">1</span>    
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">v_size</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># Burst size</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">time_list</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">time_list_sw</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">compare_results_list</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="n">repetition</span> <span class="o">=</span> <span class="mi">10000</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">repetition</span><span class="p">):</span>
-    
-    <span class="n">seed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">99999</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-
-    <span class="n">start_sw</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-    
-    <span class="c1"># salvare i dati</span>
-    <span class="n">data_a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">v_size</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int32&#39;</span><span class="p">)</span>
-    <span class="n">data_b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">v_size</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int32&#39;</span><span class="p">)</span>
-
-    <span class="c1">#salvare le operazioni</span>
-    <span class="n">operation</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">v_size</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int32&#39;</span><span class="p">)</span>
-
-    <span class="n">data_a_old</span> <span class="o">=</span> <span class="n">data_a</span>
-    <span class="n">data_b_old</span> <span class="o">=</span> <span class="n">data_b</span>
-
-    <span class="n">operation_old</span> <span class="o">=</span> <span class="n">operation</span>
-    <span class="n">operation_hw</span> <span class="o">=</span> <span class="n">operation</span>
-
-    <span class="c1"># Choose what the hardware has to do</span>
-    <span class="n">selec</span> <span class="o">=</span> <span class="mi">2</span>
-
-    <span class="c1"># selec = 0      --&gt; Store New Operation</span>
-    <span class="c1"># selec = 1      --&gt; Load New Data and Execute</span>
-    <span class="c1"># selec = 2      --&gt; Run Entire Program</span>
-    <span class="c1"># selec = Others --&gt; Reset</span>
-
-    <span class="n">output_sw</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">v_size</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
-    
-    <span class="c1"># SW function (it represent also the outside)</span>
-    <span class="k">match</span><span class="p">(</span><span class="n">selec</span><span class="p">):</span>
-        <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">sw_result</span> <span class="o">=</span> <span class="n">golden</span><span class="p">(</span><span class="n">data_a_old</span><span class="p">,</span> <span class="n">data_b_old</span><span class="p">,</span> <span class="n">operation_old</span><span class="p">,</span> <span class="n">output_sw</span><span class="p">)</span>
-        <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="n">sw_result</span> <span class="o">=</span> <span class="n">golden</span><span class="p">(</span><span class="n">data_a</span><span class="p">,</span> <span class="n">data_b</span><span class="p">,</span> <span class="n">operation_old</span><span class="p">,</span> <span class="n">output_sw</span><span class="p">)</span>
-        <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
-            <span class="n">sw_result</span> <span class="o">=</span> <span class="n">golden</span><span class="p">(</span><span class="n">data_a</span><span class="p">,</span> <span class="n">data_b</span><span class="p">,</span> <span class="n">operation</span><span class="p">,</span> <span class="n">output_sw</span><span class="p">)</span>
-        <span class="k">case</span> <span class="n">others</span><span class="p">:</span> 
-            <span class="n">sw_result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">v_size</span><span class="p">,</span> <span class="s1">&#39;int32&#39;</span><span class="p">)</span>
-        
-    <span class="n">end_sw</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-
-    <span class="n">tempo_sw</span> <span class="o">=</span> <span class="n">end_sw</span> <span class="o">-</span> <span class="n">start_sw</span>
-
-    <span class="n">time_list_sw</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tempo_sw</span><span class="p">)</span>
-
-    <span class="n">input_a</span> <span class="o">=</span> <span class="n">pynq</span><span class="o">.</span><span class="n">allocate</span><span class="p">(</span><span class="n">v_size</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
-    <span class="n">input_b</span> <span class="o">=</span> <span class="n">pynq</span><span class="o">.</span><span class="n">allocate</span><span class="p">(</span><span class="n">v_size</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
-
-    <span class="n">input_op</span> <span class="o">=</span> <span class="n">pynq</span><span class="o">.</span><span class="n">allocate</span><span class="p">(</span><span class="n">v_size</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span>
-
-    <span class="n">output</span> <span class="o">=</span> <span class="n">pynq</span><span class="o">.</span><span class="n">allocate</span><span class="p">(</span><span class="n">v_size</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
-
-    <span class="n">input_a</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">data_a</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-    <span class="n">input_b</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">data_b</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-    <span class="n">input_op</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">operation_hw</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-
-    <span class="n">input_a</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-    <span class="n">input_b</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-    <span class="n">input_op</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-
-    <span class="c1"># Write into registers</span>
-    <span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x10</span><span class="p">,</span> <span class="n">input_a</span><span class="o">.</span><span class="n">physical_address</span><span class="p">)</span>   <span class="c1">#0x10 address port a1 or a2</span>
-    <span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x1c</span><span class="p">,</span> <span class="n">input_b</span><span class="o">.</span><span class="n">physical_address</span><span class="p">)</span>   <span class="c1">#0x1c address port a1 or b2</span>
-    <span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="n">input_op</span><span class="o">.</span><span class="n">physical_address</span><span class="p">)</span>  <span class="c1">#0x34 address port op1 or op2</span>
-    <span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x40</span><span class="p">,</span> <span class="n">selec</span><span class="p">)</span>  <span class="c1">#0x40 address port selec /0 new data/1 new op/2 new data and op/</span>
-    <span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x28</span><span class="p">,</span> <span class="n">output</span><span class="o">.</span><span class="n">physical_address</span><span class="p">)</span> <span class="c1">#0x28 address port a</span>
-
-    <span class="c1"># IP starts</span>
-    <span class="n">AXI_ALU</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x00</span><span class="p">,</span><span class="mh">0x1</span><span class="p">)</span> <span class="c1"># ap_start = 1 --&gt; Start IP computation: write(control sign, ap_start)</span>
-
-    <span class="c1"># ---- polling ----- #</span>
-
-    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-
-    <span class="k">while</span> <span class="p">(</span><span class="n">AXI_ALU</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mh">0x00</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x4</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">4</span><span class="p">:</span> <span class="c1">#0x4 != 4 --&gt; exit when in idle (better) </span>
-            <span class="k">pass</span>                           <span class="c1">#0x2 != 2 --&gt; exit when ap_done high </span>
-
-    <span class="n">end</span>   <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-
-    <span class="c1"># ----------------- #</span>
-    
-    <span class="n">tot_time</span> <span class="o">=</span> <span class="n">end</span><span class="o">-</span><span class="n">start</span>
-
-    <span class="n">time_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tot_time</span><span class="p">)</span>
-
-    <span class="n">output</span><span class="o">.</span><span class="n">sync_from_device</span><span class="p">()</span>
-
-    <span class="c1"># Check if Hardware and Software results are equal</span>
-    <span class="n">compare</span> <span class="o">=</span> <span class="n">eye</span><span class="p">(</span><span class="n">sw_result</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
-
-    <span class="n">compare_results_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">compare</span><span class="p">)</span>
-
-    
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mismatch</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">compare_results_list</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">mismatch</span> <span class="o">+=</span> <span class="mi">1</span>
-        
-<span class="k">if</span> <span class="n">mismatch</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hardware Behaves CORRECTLY&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There are&quot;</span><span class="p">,</span> <span class="n">mismatch</span><span class="p">,</span> <span class="s2">&quot;WRONG computation.&quot;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
 
     
@@ -14934,158 +15039,23 @@ require(['notebook/js/codecell'], function(codecell) {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Hardware Behaves CORRECTLY
+<pre>ALU_sys Hardware Behaved CORRECTLY
+SISD Hardware Behaved CORRECTLY
+
+SOFTWARE average time:  0.001883 s
+SISD     average time:  0.039746 s
+ALU_sys  average time:  0.0001515 s
+
+SISD    Speed-Up on Python:  0.05 x
+ALU_sys Speed-Up on Python:  12.43 x
+ALU_sys Speed-Up on   SISD:  262.37 x
+
 </pre>
 </div>
 </div>
 
 </div>
 
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">time_sum</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">time_list</span><span class="p">:</span>
-    <span class="n">time_sum</span> <span class="o">+=</span> <span class="n">i</span>
-    
-<span class="n">average_hw</span> <span class="o">=</span> <span class="n">time_sum</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">time_list</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;HARDWARE average: &quot;</span><span class="p">,</span> <span class="n">average_hw</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>HARDWARE average:  6.542665958404542e-05
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">time_sum</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">time_list_sw</span><span class="p">:</span>
-    <span class="n">time_sum</span> <span class="o">+=</span> <span class="n">i</span>
-<span class="n">average_sw</span> <span class="o">=</span> <span class="n">time_sum</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">time_list_sw</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SOFTWARE average: &quot;</span><span class="p">,</span> <span class="n">average_sw</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>SOFTWARE average:  0.002031456160545349
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Speed-Up: &quot;</span><span class="p">,</span> <span class="n">average_sw</span><span class="o">/</span><span class="n">average_hw</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Speed-Up:  31.04936387491696
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
 </div>
 
 </div>

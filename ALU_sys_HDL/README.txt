@@ -1,15 +1,14 @@
-----------------------------------------------------------------------------------
+In this folder you can find:
 
-ALU_sys_HDL_BD		--> 	Final project Implemented as a ip_repo into the Block Design
+----------------------------------------------------------------------------------------------------------
 
-Archived_Project 	-->	ALU_sys_HDL_BD Project Archived (Better to open this file)
+files			-->	
 
-Bitstream		-->	ALU_sys_HDL Bitstream
+py			-->	Python code to test the Hardware
 
-HLS			-->	HLS generated Design
+ALU_sys_HDL.xpr.zip	-->	Vivado Archived Project, it has the block design already implemented 
+				(synthesis, implementation and bitstream has to be done)
 
-ip_repo			-->	Our IP (HDL AXI4 generated with HLS and VHDL ALU substitution with scheduling and double cache)
+ALU_sys_HDL.zip		-->	HLS Archived Project, it has the HLS generated file before our VHDL insertion
 
-py			-->	Python file for PYNQ hardware testing and an output of a test
-
-----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
