@@ -33,11 +33,11 @@
    └─ py                            # Python script for PYNQ testing
 └─ z_history                        # The history of the entire project
 
-</pre>
+
 
 ## Instructions to build and test project
-
-
+   
+</pre>
 └─Open VITIS HLS 2023.2|
 └─Create HLS project
 └─Type as top_function ALU_sys_HDL and add
