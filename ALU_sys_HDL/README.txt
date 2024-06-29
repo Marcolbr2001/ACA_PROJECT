@@ -2,7 +2,7 @@ In this folder you can find:
 
 ----------------------------------------------------------------------------------------------------------
 
-files			-->	
+files			-->	All the files stage by stage that had been used to build the entire project
 
 py			-->	Python code to test the Hardware
 
