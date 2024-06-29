@@ -39,7 +39,46 @@
 
 ### Step - 1
 
-compra un gelato
+--Open VITIS HLS 2023.2
+--Create HLS project
+--Type as top_function ALU_sys_HDL and add
+--Type as part xc7z020clg400-1 and add
+--Right click on SOURCES and then ADD SOURCE FILE
+--Add core.cpp (Alu_sys_HDL->HLS->HLS_project)
+--Right click onTEST BENCH and ADD TEST BENCH FILE
+--Add test.cpp (Alu_sys_HDL->HLS->HLS_project)
+--Click RUN C SIMULATION
+--Wait for the results
+--Click RUN C SYNTHESIS
+--Wait for the synthesis to finish
+(Optional
+--Click RUN COSIMULATION
+--Click on VHDL e select VIVADO XSIM and select OK
+--Wait for the results)
+--Click on IMPLEMENTATION
+--Select VHDL and press OK
+--Wait for the implementation to finish
+--Click on RUN EXPORT RTL
+--Select as display format Vivado, type as display name ALU_sys_HDL and click OK
+--Unzip export folder created in the previous step
+--Open 400 folder and copy all the files
+--Open the export folder and paste the files copied in the previous step, replacing the old files
+--Open Vivado 2023.2
+--Create a new project named ALU_sys_HDL
+--Select as target language VHDL and select ADD FILES: select all the files that are in the export folder and click OK
+--Select as Board PYNQZ2 and click OK
+--Once the new project is created select TOOLS->PACKAGE YOUR CURRENT PROJECT->CLICK NEXT->SELECT THE LOCATION WHERE TO SAVE THE ip_repo
+--In the window Package IP click Review Package and click package IP
+--Import the ip_repo created in the project
+--Create block design
+--Import in the block design ZYNQ processing system and RUN BLOCK AUTOMATION
+--Import in the block design ALU_sys_HDL
+--Add 4 HP slave
+--Run connection automation specifying axi-gmem_1,2 and 3 for HP slaves 1,2 and 3
+--Save bd
+--create HDL wrapper
+--Select the HDL wrapper as top_sim
+--generate bitstream
 
 ### Step - 2
 
