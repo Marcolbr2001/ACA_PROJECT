@@ -37,7 +37,6 @@
 
 ## Instructions to build and test project
 
-### Step - 1
 
 └─Open VITIS HLS 2023.2|
 └─Create HLS project
@@ -79,7 +78,7 @@
 --create HDL wrapper
 --Select the HDL wrapper as top_sim
 --generate bitstream
-
+</pre>
 ### Step - 2
 
 comprane un altro
