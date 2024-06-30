@@ -4,7 +4,7 @@
 |                         | Information   |
 | -------------           | ------------- |
 | Team Number             | AOHW-329      |
-| Project Name            | High-Speed System Communication and Caching Enhancement for RegEx Matching  |
+| Project Name            | AXI4 High-Speed Communication for Microprocessors and RegEx Architectures |
 | YouTube's Video         | https://youtu.be/B9i5I3WfR30 |
 | Project's Repository    | https://github.com/Marcolbr2001/AOHW-329.git    |
 | University Name         | Politecnico di Milano      |
