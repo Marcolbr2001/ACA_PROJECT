@@ -1,4 +1,4 @@
-# AOHW24-329 Registration
+# Project Resume
 ## Info & Description
 
 |                         | Information   |
